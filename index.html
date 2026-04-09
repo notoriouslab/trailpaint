@@ -52,7 +52,7 @@ function haversine(a,b,c,d){var R=6371,x=(c-a)*Math.PI/180,y=(d-b)*Math.PI/180;v
 function parseGPX(xml){var doc=new DOMParser().parseFromString(xml,"text/xml"),pts=[];doc.querySelectorAll("trkpt,rtept").forEach(function(el){pts.push({lat:+el.getAttribute("lat"),lon:+el.getAttribute("lon"),ele:el.querySelector("ele")?+el.querySelector("ele").textContent:null})});if(!pts.length)doc.querySelectorAll("wpt").forEach(function(el){pts.push({lat:+el.getAttribute("lat"),lon:+el.getAttribute("lon"),ele:el.querySelector("ele")?+el.querySelector("ele").textContent:null})});if(!pts.length)return null;if(pts.length>300){var step=(pts.length-1)/299,s=[];for(var i=0;i<299;i++)s.push(pts[Math.round(i*step)]);s.push(pts[pts.length-1]);pts=s}var dist=0,gain=0;for(var i=1;i<pts.length;i++){dist+=haversine(pts[i-1].lat,pts[i-1].lon,pts[i].lat,pts[i].lon);if(pts[i].ele!=null&&pts[i-1].ele!=null&&pts[i].ele>pts[i-1].ele)gain+=pts[i].ele-pts[i-1].ele}return{pts:pts,dist:Math.round(dist*10)/10,gain:Math.round(gain)}}
 function gpxToImage(gpx,w,h){var lats=gpx.pts.map(function(p){return p.lat}),lons=gpx.pts.map(function(p){return p.lon});var a=Math.min.apply(null,lats),b=Math.max.apply(null,lats),c=Math.min.apply(null,lons),d=Math.max.apply(null,lons);var mid=(a+b)/2,cos=Math.cos(mid*Math.PI/180);var gW=(d-c)*cos||.001,gH=(b-a)||.001;var p=.12,sc=Math.min(w*(1-2*p)/gW,h*(1-2*p)/gH);var cx=w/2,cy=h/2,gcx=(c+d)/2*cos,gcy=mid;return gpx.pts.map(function(pt){return{x:cx+(pt.lon*cos-gcx)*sc,y:cy-(pt.lat-gcy)*sc}})}
 
-var I18N={zh:{upload:"\u4E0A\u50B3",route:"\u8DEF\u7DDA",marker:"\u666F\u9EDE",select:"\u9078\u53D6",cover:"\u906E\u84CB",fresh:"\u6E05\u723D",watermark:"\u6D6E\u6C34\u5370",exp:"\u532F\u51FA",save:"\u5B58\u6A94",load:"\u8F09\u5165",undo:"\u5FA9\u539F",redo:"\u91CD\u505A",busy:"\u8655\u7406\u4E2D",saving:"\u5B58\u4E2D\u2026",hintRouteStart:"\u9EDE\u64CA\u5730\u5716\u6A19\u8A18\u8DEF\u7DDA\u8D77\u9EDE",hintRouteN:function(n){return n+" \u500B\u9EDE \u2014 \u7E7C\u7E8C\u9EDE\u64CA\u6216\u6309\u300C\u5B8C\u6210\u8DEF\u7DDA\u300D"},hintMarker:"\u9EDE\u64CA\u5730\u5716\u653E\u7F6E\u666F\u9EDE\u6A19\u8A18",hintCover:"\u62D6\u66F3\u9078\u53D6\u8981\u906E\u84CB\u7684\u5340\u57DF",hintSelect:"\u9EDE\u64CA\u6A19\u8A18\u7DE8\u8F2F \u00B7 \u9577\u6309\u65B0\u589E\u666F\u9EDE \u00B7 \u62D6\u66F3\u5E73\u79FB",hintEdit:"\u9EDE\u64CA\u666F\u9EDE\u6A19\u8A18\u9032\u884C\u7DE8\u8F2F",uploadHint:"\u4E0A\u50B3\u5730\u5716\u622A\u5716\u958B\u59CB\u88FD\u4F5C",formatHint:"\u652F\u63F4 PNG / JPG",zoomReset:"\u7E2E\u653E\u91CD\u7F6E",editN:function(n){return "\u666F\u9EDE "+n+" \u7DE8\u8F2F"},iconLabel:"\u9078\u64C7\u5716\u793A",nameLabel:"\u666F\u9EDE\u540D\u7A31",namePh:"\u666F\u9EDE\u540D\u7A31\u2026",descLabel:"\u751F\u614B\u8AAA\u660E",descPh:"\u690D\u7269\u3001\u52D5\u7269\u3001\u751F\u614B\u7279\u8272\u3001\u6CE8\u610F\u4E8B\u9805\u2026",photoLabel:"\u73FE\u5834\u7167\u7247",removePhoto:"\u79FB\u9664",addPhoto:"\uD83D\uDCF7 \u4E0A\u50B3\u7167\u7247",delMarker:"\uD83D\uDDD1\uFE0F \u522A\u9664\u6B64\u666F\u9EDE",needBg:"\u8ACB\u5148\u4E0A\u50B3\u5E95\u5716",gpxFail:"\u7121\u6CD5\u89E3\u6790 GPX",langBtn:"EN"},en:{upload:"Upload",route:"Route",marker:"Marker",select:"Select",cover:"Cover",fresh:"Filter",watermark:"WM",exp:"Export",save:"Save",load:"Load",undo:"Undo",redo:"Redo",busy:"Working",saving:"Saving",hintRouteStart:"Click map to set route start",hintRouteN:function(n){return n+' pts \u2014 click more or "Finish Route"'},hintMarker:"Click map to place a marker",hintCover:"Drag to select area to cover",hintSelect:"Click marker \u00B7 long-press to add \u00B7 drag to pan",hintEdit:"Click a marker to edit",uploadHint:"Upload a map screenshot",formatHint:"PNG / JPG",zoomReset:"Reset Zoom",editN:function(n){return "Marker "+n},iconLabel:"Icon",nameLabel:"Name",namePh:"Name\u2026",descLabel:"Description",descPh:"Plants, animals, ecology notes\u2026",photoLabel:"Photo",removePhoto:"Remove",addPhoto:"\uD83D\uDCF7 Add Photo",delMarker:"\uD83D\uDDD1\uFE0F Delete Marker",needBg:"Upload a map first",gpxFail:"Cannot parse GPX",langBtn:"\u4E2D"}};
+var I18N={zh:{upload:"\u4E0A\u50B3",route:"\u8DEF\u7DDA",marker:"\u666F\u9EDE",select:"\u9078\u53D6",cover:"\u906E\u84CB",fresh:"\u6E05\u723D",watermark:"\u6D6E\u6C34\u5370",exp:"\u532F\u51FA",save:"\u5B58\u6A94",load:"\u8F09\u5165",undo:"\u5FA9\u539F",redo:"\u91CD\u505A",busy:"\u8655\u7406\u4E2D",saving:"\u5B58\u4E2D\u2026",hintRouteStart:"\u9EDE\u64CA\u5730\u5716\u6A19\u8A18\u8DEF\u7DDA\u8D77\u9EDE",hintRouteN:function(n){return n+" \u500B\u9EDE \u2014 \u7E7C\u7E8C\u9EDE\u64CA\u6216\u6309\u300C\u5B8C\u6210\u8DEF\u7DDA\u300D"},hintMarker:"\u9EDE\u64CA\u5730\u5716\u653E\u7F6E\u666F\u9EDE\u6A19\u8A18",hintCover:"\u62D6\u66F3\u9078\u53D6\u8981\u906E\u84CB\u7684\u5340\u57DF",hintSelect:"\u9EDE\u64CA\u6A19\u8A18\u7DE8\u8F2F \u00B7 \u9577\u6309\u65B0\u589E\u666F\u9EDE \u00B7 \u62D6\u66F3\u5E73\u79FB",hintEdit:"\u9EDE\u64CA\u666F\u9EDE\u6A19\u8A18\u9032\u884C\u7DE8\u8F2F",uploadHint:"\u4E0A\u50B3\u5730\u5716\u622A\u5716\u958B\u59CB\u88FD\u4F5C",formatHint:"\u652F\u63F4 PNG / JPG",zoomReset:"\u7E2E\u653E\u91CD\u7F6E",editN:function(n){return "\u666F\u9EDE "+n+" \u7DE8\u8F2F"},iconLabel:"\u9078\u64C7\u5716\u793A",nameLabel:"\u666F\u9EDE\u540D\u7A31",namePh:"\u666F\u9EDE\u540D\u7A31\u2026",descLabel:"\u751F\u614B\u8AAA\u660E",descPh:"\u690D\u7269\u3001\u52D5\u7269\u3001\u751F\u614B\u7279\u8272\u3001\u6CE8\u610F\u4E8B\u9805\u2026",photoLabel:"\u73FE\u5834\u7167\u7247",removePhoto:"\u79FB\u9664",addPhoto:"\uD83D\uDCF7 \u4E0A\u50B3\u7167\u7247",delMarker:"\uD83D\uDDD1\uFE0F \u522A\u9664\u6B64\u666F\u9EDE",freshLabel:"\u6E05\u723D",wmLabel:"\u6D6E\u6C34\u5370",freshMode:"\uD83C\uDFA8 \u6E05\u723D\u6A21\u5F0F",coverLabel:"\u906E\u84CB\u98A8\u683C",frost:"\u78E8\u7802",soft:"\u67D4\u908A",paper:"\u7D19\u7D0B",coverUndo:"\u21A9 \u64A4\u92B7",undoPoint:"\u21A9 \u64A4\u92B7",finishRoute:function(n){return "\u2713 \u5B8C\u6210\u8DEF\u7DDA\uFF08"+n+"\u9EDE\uFF09"},allMarkers:"\u6240\u6709\u666F\u9EDE",markerList:"\u666F\u9EDE\u5217\u8868",expPreview:"\uD83C\uDFA8 \u532F\u51FA\u9810\u89BD \u2014 \u53F3\u9375\u5716\u7247\u53EF\u5132\u5B58",dlPng:"\u2B07 \u4E0B\u8F09 PNG",back:"\u2190 \u8FD4\u56DE\u7DE8\u8F2F",needBg:"\u8ACB\u5148\u4E0A\u50B3\u5E95\u5716",gpxFail:"\u7121\u6CD5\u89E3\u6790 GPX",langBtn:"EN"},en:{upload:"Upload",route:"Route",marker:"Marker",select:"Select",cover:"Cover",fresh:"Filter",watermark:"WM",exp:"Export",save:"Save",load:"Load",undo:"Undo",redo:"Redo",busy:"Working",saving:"Saving",hintRouteStart:"Click map to set route start",hintRouteN:function(n){return n+' pts \u2014 click more or "Finish Route"'},hintMarker:"Click map to place a marker",hintCover:"Drag to select area to cover",hintSelect:"Click marker \u00B7 long-press to add \u00B7 drag to pan",hintEdit:"Click a marker to edit",uploadHint:"Upload a map screenshot",formatHint:"PNG / JPG",zoomReset:"Reset Zoom",editN:function(n){return "Marker "+n},iconLabel:"Icon",nameLabel:"Name",namePh:"Name\u2026",descLabel:"Description",descPh:"Plants, animals, ecology notes\u2026",photoLabel:"Photo",removePhoto:"Remove",addPhoto:"\uD83D\uDCF7 Add Photo",delMarker:"\uD83D\uDDD1\uFE0F Delete Marker",freshLabel:"Filter",wmLabel:"WM",freshMode:"\uD83C\uDFA8 Filter ON",coverLabel:"Cover Style",frost:"Frosted",soft:"Soft",paper:"Paper",coverUndo:"\u21A9 Undo",undoPoint:"\u21A9 Undo",finishRoute:function(n){return "\u2713 Finish ("+n+" pts)"},allMarkers:"All Markers",markerList:"Markers",expPreview:"\uD83C\uDFA8 Export Preview",dlPng:"\u2B07 Download PNG",back:"\u2190 Back to Edit",needBg:"Upload a map first",gpxFail:"Cannot parse GPX",langBtn:"\u4E2D"}};
 const MODE = {
   ROUTE: "route",
   MARKER: "marker",
@@ -1077,7 +1077,7 @@ function EcoMap() {
       fontSize: 16,
       flex: 1
     }
-  }, "\uD83C\uDFA8 \u532F\u51FA\u9810\u89BD \u2014 \u53F3\u9375\u5716\u7247\u53EF\u5132\u5B58"), /*#__PURE__*/React.createElement("a", {
+  }, t("expPreview")), /*#__PURE__*/React.createElement("a", {
     href: expUrl,
     download: "trailpaint-map.png",
     style: {
@@ -1089,7 +1089,7 @@ function EcoMap() {
       fontSize: 14,
       textDecoration: "none"
     }
-  }, "\u2B07 \u4E0B\u8F09 PNG"), /*#__PURE__*/React.createElement("button", {
+  }, t("dlPng")), /*#__PURE__*/React.createElement("button", {
     onClick: () => { if (expUrl) URL.revokeObjectURL(expUrl); setExpUrl(null); },
     style: {
       padding: "9px 20px",
@@ -1101,7 +1101,7 @@ function EcoMap() {
       fontWeight: 700,
       fontSize: 14
     }
-  }, "\u2190 \u8FD4\u56DE\u7DE8\u8F2F")), /*#__PURE__*/React.createElement("div", {
+  }, t("back"))), /*#__PURE__*/React.createElement("div", {
     style: {
       flex: 1,
       overflow: "auto",
@@ -1194,14 +1194,14 @@ function EcoMap() {
       fontSize: 8,
       fontWeight: 700
     }
-  }, "\u6E05\u723D"), /*#__PURE__*/React.createElement("span", {
+  }, t("freshLabel")), /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: 8,
       color: hd ? "#fde68a" : "#555"
     }
   }, hd ? "ON" : "OFF")), /*#__PURE__*/React.createElement("button", {
     onClick: () => setWatermark(v => !v),
-    title: "\u6D6E\u6C34\u5370",
+    title: t("wmLabel"),
     style: {
       width: 56,
       height: 56,
@@ -1266,7 +1266,7 @@ function EcoMap() {
     }
   }), /*#__PURE__*/React.createElement(TB, {
     icon: busy ? "⏳" : "💾",
-    label: busy ? "處理中" : "匯出",
+    label: busy ? t("busy") : t("exp"),
     onClick: doExport,
     disabled: !bg || busy
   }), /*#__PURE__*/React.createElement("div", {
@@ -1278,7 +1278,7 @@ function EcoMap() {
     }
   }), /*#__PURE__*/React.createElement(TB, {
     icon: saving ? "⏳" : "📋",
-    label: saving ? "存中…" : "存檔",
+    label: saving ? t("saving") : t("save"),
     onClick: doSave,
     disabled: !bg || saving
   }), /*#__PURE__*/React.createElement(TB, {
@@ -1613,7 +1613,7 @@ function EcoMap() {
       fontWeight: 700,
       zIndex: 10
     }
-  }, "\uD83C\uDFA8 \u6E05\u723D\u6A21\u5F0F"), mode === MODE.COVER && bg && /*#__PURE__*/React.createElement("div", {
+  }, t("freshMode")), mode === MODE.COVER && bg && /*#__PURE__*/React.createElement("div", {
     style: {
       position: "absolute",
       bottom: 20,
@@ -1635,7 +1635,7 @@ function EcoMap() {
       alignSelf: "center",
       marginRight: 4
     }
-  }, "\u906E\u84CB\u98A8\u683C"), [["frost", "磨砂"], ["soft", "柔邊"], ["paper", "紙紋"]].map(_ref3 => {
+  }, t("coverLabel")), [["frost", "磨砂"], ["soft", "柔邊"], ["paper", "紙紋"]].map(_ref3 => {
     let [v, label] = _ref3;
     return /*#__PURE__*/React.createElement("button", {
       key: v,
@@ -1664,7 +1664,7 @@ function EcoMap() {
       cursor: "pointer",
       marginLeft: 4
     }
-  }, "\u21A9 \u64A4\u92B7")), marks.length > 0 && /*#__PURE__*/React.createElement("button", {
+  }, t("coverUndo"))), marks.length > 0 && /*#__PURE__*/React.createElement("button", {
     onClick: () => setPanelOpen(v => !v),
     style: {
       position: "absolute",
@@ -2124,7 +2124,7 @@ function EcoMap() {
       fontSize: 14,
       color: "white"
     }
-  }, "\u2713 \u5B8C\u6210\u8DEF\u7DDA\uFF08", cur.length, "\u9EDE\uFF09"))), panelOpen && sel ? /*#__PURE__*/React.createElement("div", {
+  }, t("finishRoute")(cur.length)))), panelOpen && sel ? /*#__PURE__*/React.createElement("div", {
     style: {
       width: isMobile ? '100%' : 300,
       maxWidth: isMobile ? undefined : 300,
@@ -2336,7 +2336,7 @@ function EcoMap() {
       marginBottom: 5,
       letterSpacing: .8
     }
-  }, "\u6240\u6709\u666F\u9EDE"), /*#__PURE__*/React.createElement("div", {
+  }, t("allMarkers")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       flexDirection: "column",
@@ -2392,7 +2392,7 @@ function EcoMap() {
       fontWeight: 700,
       marginBottom: 8
     }
-  }, "\u666F\u9EDE\u5217\u8868"), marks.map(m => {
+  }, t("markerList")), marks.map(m => {
     const ic = ICONS.find(x => x.id === m.icon) || ICONS[11];
     return /*#__PURE__*/React.createElement("div", {
       key: m.id,
