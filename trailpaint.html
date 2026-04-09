@@ -794,6 +794,8 @@ function EcoMap() {
   const panRef = useRef(null); // single-finger pan state
   const longPressRef = useRef(null); // long-press timer
   const [selId, setSelId] = useState(null);
+  const [selRouteId, setSelRouteId] = useState(null);
+  const dragNodeRef = useRef(null); // {routeId, ptIndex, startX, startY}
   const [hd, setHd] = useState(false);
   const [busy, setBusy] = useState(false);
   const [expUrl, setExpUrl] = useState(null);
@@ -985,6 +987,18 @@ function EcoMap() {
     setCur([]);
   };
   const delRoute = id => setRoutes(r => r.filter(x => x.id !== id));
+  const updateRoutePt = (routeId, ptIdx, newPt) => {
+    setRoutes(rs => rs.map(r => r.id !== routeId ? r : {
+      ...r, pts: r.pts.map((p, i) => i === ptIdx ? newPt : p)
+    }));
+  };
+  const deleteRoutePt = (routeId, ptIdx) => {
+    setRoutes(rs => rs.map(r => {
+      if (r.id !== routeId) return r;
+      const pts = r.pts.filter((_, i) => i !== ptIdx);
+      return pts.length < 2 ? null : { ...r, pts };
+    }).filter(Boolean));
+  };
   const moveMark = (id, dir) => {
     setMarks(ms => {
       const idx = ms.findIndex(m => m.id === id);
@@ -1391,6 +1405,10 @@ function EcoMap() {
     },
     onMouseMove: e => {
       const pos = imgXY(e);
+      if (dragNodeRef.current) {
+        updateRoutePt(dragNodeRef.current.routeId, dragNodeRef.current.ptIndex, pos);
+        return;
+      }
       if (dragging) upd(dragging.id, {
         cardOffset: {
           x: dragging.ox + (pos.x - dragging.sx),
@@ -1435,12 +1453,14 @@ function EcoMap() {
         setDrawing(null);
       }
       setDragging(null);
+      dragNodeRef.current = null;
       panRef.current = null;
       setPanning(false);
     },
     onMouseLeave: () => {
       setDragging(null);
       setDrawing(null);
+      dragNodeRef.current = null;
       panRef.current = null;
       setPanning(false);
     },
@@ -1558,7 +1578,9 @@ function EcoMap() {
         clientX: t.clientX,
         clientY: t.clientY
       });
-      if (dragging) upd(dragging.id, {
+      if (dragNodeRef.current) {
+        updateRoutePt(dragNodeRef.current.routeId, dragNodeRef.current.ptIndex, pos);
+      } else if (dragging) upd(dragging.id, {
         cardOffset: {
           x: dragging.ox + (pos.x - dragging.sx),
           y: dragging.oy + (pos.y - dragging.sy)
@@ -1586,6 +1608,7 @@ function EcoMap() {
       }
       pinchRef.current = null;
       panRef.current = null;
+      dragNodeRef.current = null;
       setPanning(false);
       if (drawing) {
         const {
@@ -1898,7 +1921,25 @@ function EcoMap() {
     opacity: .92,
     markerEnd: "url(#arr)",
     filter: "url(#wob)"
-  }))}), cur.length >= 2 && /*#__PURE__*/React.createElement("path", {
+  }), mode === MODE.SELECT && /*#__PURE__*/React.createElement("path", {
+    d: pts2path(r.pts),
+    fill: "none",
+    stroke: "transparent",
+    strokeWidth: 20,
+    style: { cursor: "pointer" },
+    onClick: function(e) { e.stopPropagation(); setSelRouteId(r.id === selRouteId ? null : r.id); setSelId(null); }
+  }), selRouteId === r.id && r.pts.map(function(p, pi) { return /*#__PURE__*/React.createElement("circle", {
+    key: pi,
+    cx: p.x,
+    cy: p.y,
+    r: 7,
+    fill: "white",
+    stroke: rc.stroke,
+    strokeWidth: 2.5,
+    style: { cursor: "grab" },
+    onMouseDown: function(e) { e.stopPropagation(); dragNodeRef.current = { routeId: r.id, ptIndex: pi }; },
+    onTouchStart: function(e) { e.stopPropagation(); e.preventDefault(); dragNodeRef.current = { routeId: r.id, ptIndex: pi }; }
+  })}))}), cur.length >= 2 && /*#__PURE__*/React.createElement("path", {
     d: pts2path(cur),
     fill: "none",
     stroke: "#d97706",
