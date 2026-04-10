@@ -11,20 +11,16 @@ interface ElevationProfileProps {
 export default function ElevationProfile({ route, onHoverPoint }: ElevationProfileProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const elevations = route.elevations;
-
-  if (!elevations) return null;
-
   const colorDef = getRouteColor(route.color);
-  const stats = elevationStats(elevations);
-  const distKm = polylineDistance(route.pts);
-  const dists = cumulativeDistances(route.pts);
-  const time = estimateTime(distKm, stats.ascent);
 
   const draw = useCallback(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas || !elevations) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
+
+    const dists = cumulativeDistances(route.pts);
+    const stats = elevationStats(elevations);
 
     const dpr = window.devicePixelRatio || 1;
     const w = canvas.clientWidth;
@@ -47,11 +43,9 @@ export default function ElevationProfile({ route, onHoverPoint }: ElevationProfi
     const toX = (d: number) => pad.left + (d / maxDist) * plotW;
     const toY = (e: number) => pad.top + plotH - ((e - minEle) / eleSpan) * plotH;
 
-    // Background
     ctx.fillStyle = '#fdf8ef';
     ctx.fillRect(0, 0, w, h);
 
-    // Grid lines
     ctx.strokeStyle = '#e5d5c0';
     ctx.lineWidth = 0.5;
     for (let i = 0; i <= 4; i++) {
@@ -62,7 +56,6 @@ export default function ElevationProfile({ route, onHoverPoint }: ElevationProfi
       ctx.stroke();
     }
 
-    // Y axis labels
     ctx.fillStyle = '#8b6a40';
     ctx.font = '9px Georgia, serif';
     ctx.textAlign = 'right';
@@ -73,7 +66,6 @@ export default function ElevationProfile({ route, onHoverPoint }: ElevationProfi
       ctx.fillText(`${Math.round(ele)}`, pad.left - 4, y);
     }
 
-    // X axis labels
     ctx.textAlign = 'center';
     ctx.textBaseline = 'top';
     const xSteps = Math.min(4, Math.floor(maxDist));
@@ -82,7 +74,6 @@ export default function ElevationProfile({ route, onHoverPoint }: ElevationProfi
       ctx.fillText(formatDistance(d), toX(d), h - pad.bottom + 4);
     }
 
-    // Fill area
     ctx.beginPath();
     ctx.moveTo(toX(dists[0]), toY(elevations[0]));
     for (let i = 1; i < elevations.length; i++) {
@@ -94,7 +85,6 @@ export default function ElevationProfile({ route, onHoverPoint }: ElevationProfi
     ctx.fillStyle = colorDef.glow;
     ctx.fill();
 
-    // Line
     ctx.beginPath();
     ctx.moveTo(toX(dists[0]), toY(elevations[0]));
     for (let i = 1; i < elevations.length; i++) {
@@ -103,7 +93,7 @@ export default function ElevationProfile({ route, onHoverPoint }: ElevationProfi
     ctx.strokeStyle = colorDef.stroke;
     ctx.lineWidth = 2;
     ctx.stroke();
-  }, [elevations, dists, stats, colorDef]);
+  }, [elevations, route.pts, colorDef]);
 
   useEffect(() => {
     draw();
@@ -111,19 +101,18 @@ export default function ElevationProfile({ route, onHoverPoint }: ElevationProfi
     return () => window.removeEventListener('resize', draw);
   }, [draw]);
 
-  // Hover handler
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLCanvasElement>) => {
-    if (!onHoverPoint) return;
+    if (!onHoverPoint || !elevations) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
+    const dists = cumulativeDistances(route.pts);
     const rect = canvas.getBoundingClientRect();
     const x = e.clientX - rect.left;
-    const pad = 36;
-    const plotW = rect.width - pad - 8;
+    const padLeft = 36;
+    const plotW = rect.width - padLeft - 8;
     const maxDist = dists[dists.length - 1] || 1;
-    const dist = ((x - pad) / plotW) * maxDist;
+    const dist = ((x - padLeft) / plotW) * maxDist;
 
-    // Find closest point
     let closest = 0;
     let minDiff = Infinity;
     for (let i = 0; i < dists.length; i++) {
@@ -131,11 +120,18 @@ export default function ElevationProfile({ route, onHoverPoint }: ElevationProfi
       if (diff < minDiff) { minDiff = diff; closest = i; }
     }
     onHoverPoint(route.pts[closest]);
-  }, [onHoverPoint, dists, route.pts]);
+  }, [onHoverPoint, elevations, route.pts]);
 
   const handleMouseLeave = useCallback(() => {
     if (onHoverPoint) onHoverPoint(null);
   }, [onHoverPoint]);
+
+  // Render nothing if no elevation data, but hooks are always called above
+  if (!elevations) return null;
+
+  const stats = elevationStats(elevations);
+  const distKm = polylineDistance(route.pts);
+  const time = estimateTime(distKm, stats.ascent);
 
   return (
     <div className="elevation-profile">
