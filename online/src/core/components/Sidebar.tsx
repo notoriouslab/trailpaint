@@ -130,7 +130,10 @@ export default function Sidebar({ onFlyTo, onExport, onSave, onLoad, onImportGpx
             {isImageMode ? '🗺️' : '📷'}
           </button>
           {isImageMode && (
-            <button className="sidebar__tool-btn" onClick={clearBackgroundImage} title={t('bg.backToMap')}>
+            <button className="sidebar__tool-btn" onClick={() => {
+              const hasData = spots.length > 0 || routes.length > 0;
+              if (!hasData || confirm('回到地圖模式會清除現有景點和路線，確定嗎？')) clearBackgroundImage();
+            }} title={t('bg.backToMap')}>
               ↩ {t('bg.backToMap')}
             </button>
           )}

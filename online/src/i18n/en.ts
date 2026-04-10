@@ -44,6 +44,7 @@ export default {
   'route.namePlaceholder': 'Route name (auto-detected)',
   'route.fetchEle': '⛰️ Fetch Elevation',
   'route.fetchingEle': 'Fetching...',
+  'route.fetchEleFailed': 'Elevation query failed, please try again later',
   'route.delete': 'Delete Route',
   'route.deleteConfirm': 'Delete this route?',
 

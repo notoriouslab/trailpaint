@@ -44,6 +44,7 @@ export default {
   'route.namePlaceholder': 'ルート名（自動検出）',
   'route.fetchEle': '⛰️ 標高を取得',
   'route.fetchingEle': '取得中...',
+  'route.fetchEleFailed': '標高の取得に失敗しました。後でもう一度お試しください',
   'route.delete': 'ルートを削除',
   'route.deleteConfirm': 'このルートを削除しますか？',
 

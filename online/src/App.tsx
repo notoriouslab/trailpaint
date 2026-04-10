@@ -12,6 +12,10 @@ import './core/components/Sidebar.css';
 import './App.css';
 
 function loadImageFile(file: File) {
+  const state = useProjectStore.getState();
+  const hasData = state.project.spots.length > 0 || state.project.routes.length > 0;
+  if (hasData && !confirm('切換底圖會清除現有景點和路線，確定嗎？')) return;
+
   const reader = new FileReader();
   reader.onload = () => {
     const img = new Image();

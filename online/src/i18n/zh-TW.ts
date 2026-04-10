@@ -44,6 +44,7 @@ export default {
   'route.namePlaceholder': '路線名稱（自動偵測）',
   'route.fetchEle': '⛰️ 查詢海拔',
   'route.fetchingEle': '查詢中...',
+  'route.fetchEleFailed': '海拔查詢失敗，請稍後再試',
   'route.delete': '刪除路線',
   'route.deleteConfirm': '確定刪除此路線？',
 

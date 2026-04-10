@@ -309,6 +309,7 @@ export const useProjectStore = create<ProjectState>()(
       }));
     } catch (err) {
       console.error('Elevation fetch failed:', err);
+      alert(t('route.fetchEleFailed'));
     }
   },
 
