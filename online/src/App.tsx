@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import MapView from './map/MapView';
 import ImageMapView from './map/ImageMapView';
 import Sidebar from './core/components/Sidebar';
@@ -28,9 +28,11 @@ function loadImageFile(file: File) {
 export default function App() {
   useUndoRedoKeys();
   const baseMode = useProjectStore((s) => s.baseMode);
+  const [dragOver, setDragOver] = useState(false);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
+    setDragOver(false);
     const file = e.dataTransfer.files[0];
     if (file && file.type.startsWith('image/')) {
       loadImageFile(file);
@@ -39,10 +41,20 @@ export default function App() {
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();
+    setDragOver(true);
+  }, []);
+
+  const handleDragLeave = useCallback(() => {
+    setDragOver(false);
   }, []);
 
   return (
-    <div className="app" onDrop={handleDrop} onDragOver={handleDragOver}>
+    <div
+      className={`app${dragOver ? ' app--drag-over' : ''}`}
+      onDrop={handleDrop}
+      onDragOver={handleDragOver}
+      onDragLeave={handleDragLeave}
+    >
       <Sidebar
         onFlyTo={flyTo}
         onExport={exportPng}

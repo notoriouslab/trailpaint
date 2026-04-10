@@ -11,3 +11,31 @@
   height: 100%;
   position: relative;
 }
+
+/* Drag-over visual feedback */
+.app--drag-over .map-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(253, 230, 138, 0.15);
+  border: 3px dashed #d97706;
+  border-radius: 8px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Leaflet control styling — match TrailPaint warm tone */
+.leaflet-control-zoom a {
+  font-family: Georgia, serif !important;
+  color: #78350f !important;
+  border-color: #d4a574 !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #fef3d8 !important;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px !important;
+  opacity: 0.6;
+}
