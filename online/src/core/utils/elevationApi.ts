@@ -1,6 +1,6 @@
 const BATCH_SIZE = 100;
+const TIMEOUT_MS = 15000; // 15 seconds per batch
 
-/** Fetch elevations via Open-Meteo API (free, CORS-friendly, no auth) */
 export async function fetchElevations(pts: [number, number][]): Promise<number[]> {
   const elevations: number[] = [];
 
@@ -9,17 +9,30 @@ export async function fetchElevations(pts: [number, number][]): Promise<number[]
     const lats = batch.map((p) => p[0]).join(',');
     const lngs = batch.map((p) => p[1]).join(',');
 
-    const res = await fetch(
-      `https://api.open-meteo.com/v1/elevation?latitude=${lats}&longitude=${lngs}`
-    );
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
 
-    if (!res.ok) throw new Error(`Elevation API error: ${res.status}`);
+    try {
+      const res = await fetch(
+        `https://api.open-meteo.com/v1/elevation?latitude=${lats}&longitude=${lngs}`,
+        { signal: controller.signal }
+      );
+      clearTimeout(timer);
 
-    const data = await res.json();
-    if (!Array.isArray(data.elevation)) throw new Error('Invalid elevation API response');
+      if (!res.ok) throw new Error(`Elevation API error: ${res.status}`);
 
-    for (const ele of data.elevation) {
-      elevations.push(typeof ele === 'number' ? ele : 0);
+      const data = await res.json();
+      if (!Array.isArray(data.elevation)) throw new Error('Invalid elevation API response');
+
+      for (const ele of data.elevation) {
+        elevations.push(typeof ele === 'number' ? ele : 0);
+      }
+    } catch (err) {
+      clearTimeout(timer);
+      if (err instanceof DOMException && err.name === 'AbortError') {
+        throw new Error('Elevation API timeout');
+      }
+      throw err;
     }
   }
 

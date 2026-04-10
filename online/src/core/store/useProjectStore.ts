@@ -192,47 +192,50 @@ export const useProjectStore = create<ProjectState>()(
   addDrawingPoint: (latlng) =>
     set((s) => ({ currentDrawing: [...s.currentDrawing, latlng] })),
 
-  finishRoute: () =>
-    set((s) => {
-      if (s.currentDrawing.length < 2) return { currentDrawing: [], mode: 'select' };
-      const colorId = ROUTE_COLORS[s.project.routes.length % ROUTE_COLORS.length].id;
-      const routeId = crypto.randomUUID();
-      const pts = [...s.currentDrawing];
-      const route: Route = {
-        id: routeId,
-        name: '',
-        pts,
-        color: colorId,
-        elevations: null,
-      };
+  finishRoute: () => {
+    const s = get();
+    if (s.currentDrawing.length < 2) {
+      set({ currentDrawing: [], mode: 'select' as Mode });
+      return;
+    }
+    const colorId = ROUTE_COLORS[s.project.routes.length % ROUTE_COLORS.length].id;
+    const routeId = crypto.randomUUID();
+    const pts = [...s.currentDrawing];
+    const route: Route = {
+      id: routeId,
+      name: '',
+      pts,
+      color: colorId,
+      elevations: null,
+    };
 
-      // Async: reverse geocode the midpoint to get a name
-      const mid = pts[Math.floor(pts.length / 2)];
-      reverseGeocode(mid).then((name) => {
-        if (name) {
-          const state = get();
-          const r = state.project.routes.find((r) => r.id === routeId);
-          if (r && !r.name) {
-            set((s2) => ({
-              project: {
-                ...s2.project,
-                routes: s2.project.routes.map((r2) =>
-                  r2.id === routeId ? { ...r2, name } : r2
-                ),
-              },
-            }));
-          }
+    set({
+      project: { ...s.project, routes: [...s.project.routes, route] },
+      currentDrawing: [],
+      mode: 'select' as Mode,
+      selectedRouteId: routeId,
+      selectedSpotId: null,
+    });
+
+    // Async side effect outside of set()
+    const mid = pts[Math.floor(pts.length / 2)];
+    reverseGeocode(mid).then((name) => {
+      if (name) {
+        const curr = get();
+        const r = curr.project.routes.find((r) => r.id === routeId);
+        if (r && !r.name) {
+          set((s2) => ({
+            project: {
+              ...s2.project,
+              routes: s2.project.routes.map((r2) =>
+                r2.id === routeId ? { ...r2, name } : r2
+              ),
+            },
+          }));
         }
-      });
-
-      return {
-        project: { ...s.project, routes: [...s.project.routes, route] },
-        currentDrawing: [],
-        mode: 'select' as Mode,
-        selectedRouteId: routeId,
-        selectedSpotId: null,
-      };
-    }),
+      }
+    });
+  },
 
   cancelDrawing: () => set({ currentDrawing: [], mode: 'select' }),
 
@@ -319,77 +322,76 @@ export const useProjectStore = create<ProjectState>()(
 
   // ── GPX ──
 
-  importGpx: (data) =>
-    set((s) => {
-      const newRoutes: Route[] = data.tracks.map((trackPts, i) => {
-        const hasEle = trackPts.some((p) => p.ele !== null);
-        const routeId = crypto.randomUUID();
-        const pts = trackPts.map((p) => p.latlng);
-
-        // Async name lookup
-        const mid = pts[Math.floor(pts.length / 2)];
-        reverseGeocode(mid).then((name) => {
-          if (name) {
-            const curr = get();
-            if (curr.project.routes.find((r) => r.id === routeId && !r.name)) {
-              set((s2) => ({
-                project: {
-                  ...s2.project,
-                  routes: s2.project.routes.map((r) =>
-                    r.id === routeId ? { ...r, name } : r
-                  ),
-                },
-              }));
-            }
-          }
-        });
-
-        return {
-          id: routeId,
-          name: '',
-          pts,
-          color: ROUTE_COLORS[(s.project.routes.length + i) % ROUTE_COLORS.length].id,
-          elevations: hasEle ? trackPts.map((p) => p.ele ?? 0) : null,
-        };
-      });
-
-      const baseNum = s.project.spots.length;
-      const newSpots: Spot[] = data.waypoints.map((wp, i) => ({
-        id: crypto.randomUUID(),
-        latlng: wp.latlng,
-        num: baseNum + i + 1,
-        title: wp.name || `${t('spot.defaultTitle')} ${baseNum + i + 1}`,
-        desc: '',
-        photo: null,
-        iconId: 'pin',
-        cardOffset: { ...DEFAULT_CARD_OFFSET },
-      }));
-
-      const allPts = [
-        ...newRoutes.flatMap((r) => r.pts),
-        ...newSpots.map((sp) => sp.latlng),
-      ];
-      let center = s.project.center;
-      let zoom = s.project.zoom;
-      if (allPts.length > 0) {
-        const lats = allPts.map((p) => p[0]);
-        const lngs = allPts.map((p) => p[1]);
-        center = [
-          (Math.min(...lats) + Math.max(...lats)) / 2,
-          (Math.min(...lngs) + Math.max(...lngs)) / 2,
-        ];
-        zoom = 12;
-      }
-
+  importGpx: (data) => {
+    const s = get();
+    const newRoutes: Route[] = data.tracks.map((trackPts, i) => {
+      const hasEle = trackPts.some((p) => p.ele !== null);
       return {
-        project: {
-          ...s.project,
-          spots: [...s.project.spots, ...newSpots],
-          routes: [...s.project.routes, ...newRoutes],
-        },
-        pendingFlyTo: { center, zoom },
+        id: crypto.randomUUID(),
+        name: '',
+        pts: trackPts.map((p) => p.latlng),
+        color: ROUTE_COLORS[(s.project.routes.length + i) % ROUTE_COLORS.length].id,
+        elevations: hasEle ? trackPts.map((p) => p.ele ?? 0) : null,
       };
-    }),
+    });
+
+    const baseNum = s.project.spots.length;
+    const newSpots: Spot[] = data.waypoints.map((wp, i) => ({
+      id: crypto.randomUUID(),
+      latlng: wp.latlng,
+      num: baseNum + i + 1,
+      title: wp.name || `${t('spot.defaultTitle')} ${baseNum + i + 1}`,
+      desc: '',
+      photo: null,
+      iconId: 'pin',
+      cardOffset: { ...DEFAULT_CARD_OFFSET },
+    }));
+
+    const allPts = [
+      ...newRoutes.flatMap((r) => r.pts),
+      ...newSpots.map((sp) => sp.latlng),
+    ];
+    let center = s.project.center;
+    let zoom = s.project.zoom;
+    if (allPts.length > 0) {
+      const lats = allPts.map((p) => p[0]);
+      const lngs = allPts.map((p) => p[1]);
+      center = [
+        (Math.min(...lats) + Math.max(...lats)) / 2,
+        (Math.min(...lngs) + Math.max(...lngs)) / 2,
+      ];
+      zoom = 12;
+    }
+
+    set({
+      project: {
+        ...s.project,
+        spots: [...s.project.spots, ...newSpots],
+        routes: [...s.project.routes, ...newRoutes],
+      },
+      pendingFlyTo: { center, zoom },
+    });
+
+    // Async side effects: reverse geocode route names (outside set)
+    for (const route of newRoutes) {
+      const mid = route.pts[Math.floor(route.pts.length / 2)];
+      reverseGeocode(mid).then((name) => {
+        if (name) {
+          const curr = get();
+          if (curr.project.routes.find((r) => r.id === route.id && !r.name)) {
+            set((s2) => ({
+              project: {
+                ...s2.project,
+                routes: s2.project.routes.map((r) =>
+                  r.id === route.id ? { ...r, name } : r
+                ),
+              },
+            }));
+          }
+        }
+      });
+    }
+  },
 
   // ── UI ──
 

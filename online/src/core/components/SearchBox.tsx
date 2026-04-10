@@ -107,7 +107,10 @@ export default function SearchBox({ onSelect }: SearchBoxProps) {
   };
 
   const handleSelect = (r: SearchResult) => {
-    onSelect([parseFloat(r.lat), parseFloat(r.lon)], r.display_name);
+    const lat = parseFloat(r.lat);
+    const lon = parseFloat(r.lon);
+    if (!isFinite(lat) || !isFinite(lon)) return;
+    onSelect([lat, lon], r.display_name);
     setQuery('');
     setResults([]);
     setSearched(false);

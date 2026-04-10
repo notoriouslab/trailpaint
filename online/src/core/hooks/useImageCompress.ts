@@ -4,7 +4,7 @@ const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
 export function compressImage(file: File): Promise<string> {
   if (file.size > MAX_FILE_SIZE) {
-    return Promise.reject(new Error(`檔案太大（${Math.round(file.size / 1024 / 1024)}MB），上限 20MB`));
+    return Promise.reject(new Error(`檔案太大（${Math.round(file.size / 1024 / 1024)}MB），上限 ${MAX_FILE_SIZE / 1024 / 1024}MB`));
   }
   return new Promise((resolve, reject) => {
     const reader = new FileReader();

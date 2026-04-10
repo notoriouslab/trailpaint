@@ -316,7 +316,7 @@ export function importGpxFile() {
       const data = parseGpx(text);
       useProjectStore.getState().importGpx(data);
     } catch (err) {
-      alert(`${t('gpx.importFailed')}: ${(err as Error).message}`);
+      alert(`${t('gpx.importFailed')}: ${err instanceof Error ? err.message : String(err)}`);
     }
   };
   input.click();
