@@ -4,6 +4,7 @@ import type { Project, Spot, Mode } from '../models/types';
 import { DEFAULT_CARD_OFFSET, DEFAULT_CENTER, DEFAULT_ZOOM } from '../models/types';
 import type { Route } from '../models/routes';
 import { ROUTE_COLORS } from '../models/routes';
+import { reverseGeocode } from '../utils/reverseGeocode';
 import { t } from '../../i18n';
 
 import type { GpxData } from '../utils/gpxParser';
@@ -103,7 +104,9 @@ function migrateProject(data: Record<string, unknown>): Project {
   if (!p.routes || !Array.isArray(p.routes)) {
     return { ...p, version: 2, routes: [] };
   }
-  return { ...p, version: 2 };
+  // Ensure all routes have name field
+  const routes = p.routes.map((r: Route) => r.name !== undefined ? r : { ...r, name: '' });
+  return { ...p, version: 2, routes };
 }
 
 export const useProjectStore = create<ProjectState>()(
@@ -186,17 +189,40 @@ export const useProjectStore = create<ProjectState>()(
     set((s) => {
       if (s.currentDrawing.length < 2) return { currentDrawing: [], mode: 'select' };
       const colorId = ROUTE_COLORS[s.project.routes.length % ROUTE_COLORS.length].id;
+      const routeId = crypto.randomUUID();
+      const pts = [...s.currentDrawing];
       const route: Route = {
-        id: crypto.randomUUID(),
-        pts: [...s.currentDrawing],
+        id: routeId,
+        name: '',
+        pts,
         color: colorId,
         elevations: null,
       };
+
+      // Async: reverse geocode the midpoint to get a name
+      const mid = pts[Math.floor(pts.length / 2)];
+      reverseGeocode(mid).then((name) => {
+        if (name) {
+          const state = get();
+          const r = state.project.routes.find((r) => r.id === routeId);
+          if (r && !r.name) {
+            set((s2) => ({
+              project: {
+                ...s2.project,
+                routes: s2.project.routes.map((r2) =>
+                  r2.id === routeId ? { ...r2, name } : r2
+                ),
+              },
+            }));
+          }
+        }
+      });
+
       return {
         project: { ...s.project, routes: [...s.project.routes, route] },
         currentDrawing: [],
-        mode: 'select',
-        selectedRouteId: route.id,
+        mode: 'select' as Mode,
+        selectedRouteId: routeId,
         selectedSpotId: null,
       };
     }),
@@ -263,9 +289,31 @@ export const useProjectStore = create<ProjectState>()(
     set((s) => {
       const newRoutes: Route[] = data.tracks.map((trackPts, i) => {
         const hasEle = trackPts.some((p) => p.ele !== null);
+        const routeId = crypto.randomUUID();
+        const pts = trackPts.map((p) => p.latlng);
+
+        // Async name lookup
+        const mid = pts[Math.floor(pts.length / 2)];
+        reverseGeocode(mid).then((name) => {
+          if (name) {
+            const curr = get();
+            if (curr.project.routes.find((r) => r.id === routeId && !r.name)) {
+              set((s2) => ({
+                project: {
+                  ...s2.project,
+                  routes: s2.project.routes.map((r) =>
+                    r.id === routeId ? { ...r, name } : r
+                  ),
+                },
+              }));
+            }
+          }
+        });
+
         return {
-          id: crypto.randomUUID(),
-          pts: trackPts.map((p) => p.latlng),
+          id: routeId,
+          name: '',
+          pts,
           color: ROUTE_COLORS[(s.project.routes.length + i) % ROUTE_COLORS.length].id,
           elevations: hasEle ? trackPts.map((p) => p.ele ?? 0) : null,
         };

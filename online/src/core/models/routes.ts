@@ -1,5 +1,6 @@
 export interface Route {
   id: string;
+  name: string;                  // display name (auto-filled via reverse geocode)
   pts: [number, number][];       // [lat, lng][]
   color: string;                 // ROUTE_COLORS id
   elevations: number[] | null;   // meters, same length as pts; null if no elevation data

@@ -163,14 +163,24 @@ export default function Sidebar({ onFlyTo, onExport, onSave, onLoad, onImportGpx
                 <div className="route-summary__title">{t('route.listTitle')}</div>
                 {routes.map((r) => {
                   const color = getRouteColor(r.color);
+                  // Calculate route bounds center for flyTo
+                  const lats = r.pts.map((p) => p[0]);
+                  const lngs = r.pts.map((p) => p[1]);
+                  const center: [number, number] = [
+                    (Math.min(...lats) + Math.max(...lats)) / 2,
+                    (Math.min(...lngs) + Math.max(...lngs)) / 2,
+                  ];
                   return (
                     <div
                       key={r.id}
                       className="route-summary__item"
-                      onClick={() => setSelectedRoute(r.id)}
+                      onClick={() => { setSelectedRoute(r.id); onFlyTo(center, 13); }}
                     >
                       <span className="route-summary__color" style={{ background: color.stroke }} />
-                      <span className="route-summary__dist">{formatDistance(polylineDistance(r.pts))}</span>
+                      <div className="route-summary__info">
+                        {r.name && <span className="route-summary__name">{r.name}</span>}
+                        <span className="route-summary__dist">{formatDistance(polylineDistance(r.pts))}</span>
+                      </div>
                     </div>
                   );
                 })}

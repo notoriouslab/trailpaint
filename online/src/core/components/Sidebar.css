@@ -775,8 +775,22 @@
   flex-shrink: 0;
 }
 
+.route-summary__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.route-summary__name {
+  font-size: 13px;
+  color: #3b1a06;
+  font-weight: bold;
+}
+
 .route-summary__dist {
   font-family: Georgia, serif;
+  font-size: 12px;
+  color: #8b6a40;
 }
 
 /* ── Mobile: overlay mode ── */
