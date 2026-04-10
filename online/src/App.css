@@ -1,6 +1,7 @@
 .app {
   width: 100%;
   height: 100vh;
+  height: 100dvh; /* iOS Chrome: exclude address bar */
   display: flex;
   overflow: hidden;
   background: #1c0a00;
@@ -22,6 +23,11 @@
   border-radius: 8px;
   z-index: 9999;
   pointer-events: none;
+}
+
+/* Leaflet bottom-right controls: offset for iOS Chrome bottom bar */
+.leaflet-bottom.leaflet-right {
+  bottom: env(safe-area-inset-bottom, 0px);
 }
 
 /* Leaflet control styling — match TrailPaint warm tone */

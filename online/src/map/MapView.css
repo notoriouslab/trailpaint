@@ -89,7 +89,7 @@
 
 .locate-button {
   position: absolute;
-  bottom: 130px;
+  bottom: calc(130px + env(safe-area-inset-bottom, 0px));
   right: 10px;
   z-index: 700;
 }
@@ -138,7 +138,7 @@
 
 .basemap-switcher {
   position: absolute;
-  bottom: 90px;
+  bottom: calc(90px + env(safe-area-inset-bottom, 0px));
   right: 10px;
   z-index: 700;
 }
