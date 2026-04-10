@@ -3,6 +3,18 @@ import { useProjectStore } from '../core/store/useProjectStore';
 import { parseGpx } from '../core/utils/gpxParser';
 import { t } from '../i18n';
 
+function drawExportBorder(ctx: CanvasRenderingContext2D, w: number, h: number) {
+  const lw = Math.max(2, Math.round(Math.min(w, h) * 0.005));
+  const p1 = lw * 3;
+  const p2 = p1 + lw * 4;
+  ctx.strokeStyle = 'rgba(80,110,140,0.38)';
+  ctx.lineWidth = lw;
+  ctx.strokeRect(p1, p1, w - p1 * 2, h - p1 * 2);
+  ctx.strokeStyle = 'rgba(80,110,140,0.15)';
+  ctx.lineWidth = 1;
+  ctx.strokeRect(p2, p2, w - p2 * 2, h - p2 * 2);
+}
+
 export function exportPng(pixelRatio = 2) {
   const projectName = useProjectStore.getState().project.name;
   const mapEl = document.querySelector('.leaflet-container') as HTMLElement | null;
@@ -21,10 +33,23 @@ export function exportPng(pixelRatio = 2) {
           return true;
         },
       });
+
+      // Add border overlay
+      const img = new Image();
+      img.src = dataUrl;
+      await new Promise<void>((resolve) => { img.onload = () => resolve(); });
+      const canvas = document.createElement('canvas');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext('2d')!;
+      ctx.drawImage(img, 0, 0);
+      drawExportBorder(ctx, img.width, img.height);
+      const finalUrl = canvas.toDataURL('image/png');
+
       const link = document.createElement('a');
       const date = new Date().toISOString().slice(0, 10);
       link.download = `trailpaint-${projectName}-${date}-${pixelRatio}x.png`;
-      link.href = dataUrl;
+      link.href = finalUrl;
       link.click();
     } catch (err) {
       console.error('Export failed:', err);

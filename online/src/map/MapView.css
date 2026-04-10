@@ -74,15 +74,14 @@
 .watermark__text {
   font-family: Georgia, serif;
   font-size: 11px;
-  color: #fde68a;
+  color: rgba(120,120,120,0.55);
   font-weight: bold;
 }
 
 .watermark__sub {
   font-family: Georgia, serif;
   font-size: 9px;
-  color: #fde68a;
-  opacity: 0.6;
+  color: rgba(120,120,120,0.40);
   margin-left: 4px;
 }
 
