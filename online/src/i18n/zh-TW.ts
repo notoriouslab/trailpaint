@@ -18,7 +18,7 @@ export default {
   // SpotList
   'spot.empty': '📍 點「加景點」在地圖上標記\n🖊️ 點「畫路線」繪製路線\n📷 拖曳圖片到畫面換底圖',
   'spot.defaultTitle': '景點',
-  'spot.loadSample': '載入範例：陽明山七星山步道',
+  'spot.loadSample': '載入範例步道 ▼',
 
   // SpotEditor
   'editor.name': '名稱',
@@ -60,6 +60,28 @@ export default {
   'export.border.classic': '經典雙框',
   'export.border.paper': '紙感手繪',
   'export.border.minimal': '極簡細框',
+
+  // Export Preview
+  'export.preview.title': '匯出預覽',
+  'export.preview.capturing': '擷取中...',
+  'export.preview.format': '比例',
+  'export.preview.filter': '風格濾鏡',
+  'export.preview.resolution': '解析度',
+  'export.preview.download': '下載 PNG',
+  'export.preview.downloading': '匯出中...',
+  'export.preview.shareLink': '複製分享連結',
+  'export.preview.shareCopied': '已複製分享連結！',
+  'export.preview.aiPrompt': '複製 AI 提示詞',
+  'export.preview.aiCopied': '已複製 AI 提示詞！',
+  'export.format.full': '原始',
+  'export.format.1:1': '1:1 (IG)',
+  'export.format.9:16': '9:16 (Story)',
+  'export.format.4:3': '4:3',
+  'export.filter.original': '原始',
+  'export.filter.watercolor': '水彩',
+  'export.filter.sketch': '素描',
+  'export.filter.vintage': '復古',
+  'export.filter.comic': '漫畫',
 
   // Background
   'bg.upload': '上傳底圖',

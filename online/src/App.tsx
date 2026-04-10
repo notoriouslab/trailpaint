@@ -1,13 +1,16 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useEffect } from 'react';
 import MapView from './map/MapView';
 import ImageMapView from './map/ImageMapView';
 import Sidebar from './core/components/Sidebar';
 import ModeToolbar from './core/components/ModeToolbar';
 import OnboardingOverlay from './core/components/OnboardingOverlay';
-import { exportPng, saveProject, loadProject, importGpxFile } from './map/ExportButton';
+import ExportPreview from './core/components/ExportPreview';
+import { captureMap, saveProject, loadProject, importGpxFile } from './map/ExportButton';
+import { decodeShareLink } from './core/utils/shareLink';
 import { flyTo } from './map/useMapRef';
 import { useUndoRedoKeys } from './core/hooks/useUndoRedo';
 import { useProjectStore } from './core/store/useProjectStore';
+import { t } from './i18n';
 import './core/components/Sidebar.css';
 import './App.css';
 
@@ -42,6 +45,29 @@ export default function App() {
   const baseMode = useProjectStore((s) => s.baseMode);
   const sidebarOpen = useProjectStore((s) => s.sidebarOpen);
   const [dragOver, setDragOver] = useState(false);
+  const [exportPreviewImage, setExportPreviewImage] = useState<HTMLImageElement | null>(null);
+
+  // Handle share link on load
+  useEffect(() => {
+    if (!window.location.hash.startsWith('#share=')) return;
+    decodeShareLink(window.location.hash).then((project) => {
+      if (project) {
+        useProjectStore.getState().importJSON(JSON.stringify(project));
+        // Clean hash after loading
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+    });
+  }, []);
+
+  const handleOpenExportPreview = useCallback(async () => {
+    try {
+      const img = await captureMap(2);
+      setExportPreviewImage(img);
+    } catch (err) {
+      console.error('Capture failed:', err);
+      alert(t('export.failed'));
+    }
+  }, []);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -70,7 +96,7 @@ export default function App() {
     >
       <Sidebar
         onFlyTo={flyTo}
-        onExport={exportPng}
+        onOpenExportPreview={handleOpenExportPreview}
         onSave={saveProject}
         onLoad={loadProject}
         onImportGpx={importGpxFile}
@@ -95,6 +121,13 @@ export default function App() {
         )}
       </div>
       <OnboardingOverlay />
+      {exportPreviewImage && (
+        <ExportPreview
+          baseImage={exportPreviewImage}
+          onClose={() => setExportPreviewImage(null)}
+          onRecapture={captureMap}
+        />
+      )}
     </div>
   );
 }

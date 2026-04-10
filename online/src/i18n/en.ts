@@ -18,7 +18,7 @@ export default {
   // SpotList
   'spot.empty': '📍 Tap "Add Spot" to mark the map\n🖊️ Tap "Draw Route" to trace a path\n📷 Drag an image to change the basemap',
   'spot.defaultTitle': 'Spot',
-  'spot.loadSample': 'Load sample: Yangmingshan Qixing Trail',
+  'spot.loadSample': 'Load sample trail ▼',
 
   // SpotEditor
   'editor.name': 'Name',
@@ -60,6 +60,28 @@ export default {
   'export.border.classic': 'Classic double',
   'export.border.paper': 'Paper hand-drawn',
   'export.border.minimal': 'Minimal thin',
+
+  // Export Preview
+  'export.preview.title': 'Export Preview',
+  'export.preview.capturing': 'Capturing...',
+  'export.preview.format': 'Aspect Ratio',
+  'export.preview.filter': 'Style Filter',
+  'export.preview.resolution': 'Resolution',
+  'export.preview.download': 'Download PNG',
+  'export.preview.downloading': 'Exporting...',
+  'export.preview.shareLink': 'Copy Share Link',
+  'export.preview.shareCopied': 'Share link copied!',
+  'export.preview.aiPrompt': 'Copy AI Prompt',
+  'export.preview.aiCopied': 'AI prompt copied!',
+  'export.format.full': 'Original',
+  'export.format.1:1': '1:1 (IG)',
+  'export.format.9:16': '9:16 (Story)',
+  'export.format.4:3': '4:3',
+  'export.filter.original': 'Original',
+  'export.filter.watercolor': 'Watercolor',
+  'export.filter.sketch': 'Sketch',
+  'export.filter.vintage': 'Vintage',
+  'export.filter.comic': 'Comic',
 
   // Background
   'bg.upload': 'Upload image',

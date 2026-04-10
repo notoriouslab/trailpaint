@@ -10,18 +10,16 @@ import { polylineDistance, formatDistance } from '../utils/geo';
 import { getRouteColor } from '../models/routes';
 import { t } from '../../i18n';
 
-import type { ExportFormat, ExportBorderStyle } from '../../map/ExportButton';
-
 interface SidebarProps {
   onFlyTo: (latlng: [number, number], zoom?: number) => void;
-  onExport: (pixelRatio: number, format?: ExportFormat, borderStyle?: ExportBorderStyle) => void;
+  onOpenExportPreview: () => void;
   onSave: () => void;
   onLoad: () => void;
   onImportGpx: () => void;
   onUploadBg: () => void;
 }
 
-export default function Sidebar({ onFlyTo, onExport, onSave, onLoad, onImportGpx, onUploadBg }: SidebarProps) {
+export default function Sidebar({ onFlyTo, onOpenExportPreview, onSave, onLoad, onImportGpx, onUploadBg }: SidebarProps) {
   const spots = useProjectStore((s) => s.project.spots);
   const routes = useProjectStore((s) => s.project.routes);
   const selectedSpotId = useProjectStore((s) => s.selectedSpotId);
@@ -39,7 +37,6 @@ export default function Sidebar({ onFlyTo, onExport, onSave, onLoad, onImportGpx
   const projectName = useProjectStore((s) => s.project.name);
   const setProjectName = useProjectStore((s) => s.setProjectName);
   const [showSettings, setShowSettings] = useState(false);
-  const [borderStyle, setBorderStyle] = useState<ExportBorderStyle>('classic');
 
   const isImageMode = baseMode === 'image';
   const selectedSpot = spots.find((s) => s.id === selectedSpotId) ?? null;
@@ -84,37 +81,7 @@ export default function Sidebar({ onFlyTo, onExport, onSave, onLoad, onImportGpx
 
         {/* Toolbar row 1 */}
         <div className="sidebar__toolbar">
-          <div className="sidebar__export-group">
-            <button className="sidebar__tool-btn" onClick={() => onExport(2, 'full', borderStyle)}>{t('app.export')}</button>
-            <select
-              className="sidebar__export-format"
-              onChange={(e) => {
-                if (!e.target.value) return;
-                const [fmt, dpi] = e.target.value.split('|');
-                onExport(Number(dpi) || 2, (fmt || 'full') as ExportFormat, borderStyle);
-                e.target.value = '';
-              }}
-              defaultValue=""
-            >
-              <option value="" disabled>▼</option>
-              <option value="full|2">2x 原始比例</option>
-              <option value="1:1|2">2x 1:1 (IG)</option>
-              <option value="9:16|2">2x 9:16 (Story)</option>
-              <option value="4:3|2">2x 4:3</option>
-              <option value="full|1">1x 標準</option>
-              <option value="full|3">3x 超清</option>
-            </select>
-            <select
-              className="sidebar__export-format"
-              title={t('export.borderStyle')}
-              value={borderStyle}
-              onChange={(e) => setBorderStyle(e.target.value as ExportBorderStyle)}
-            >
-              <option value="classic">{t('export.border.classic')}</option>
-              <option value="paper">{t('export.border.paper')}</option>
-              <option value="minimal">{t('export.border.minimal')}</option>
-            </select>
-          </div>
+          <button className="sidebar__tool-btn" onClick={onOpenExportPreview}>{t('app.export')}</button>
           <button className="sidebar__tool-btn" onClick={onSave}>{t('app.save')}</button>
           <button className="sidebar__tool-btn" onClick={onLoad}>{t('app.load')}</button>
           {!isImageMode && (

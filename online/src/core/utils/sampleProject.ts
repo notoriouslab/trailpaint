@@ -1,84 +1,35 @@
-import type { Project } from '../models/types';
-import { DEFAULT_CARD_OFFSET } from '../models/types';
+/**
+ * Example routes available in public/examples/.
+ * Each entry maps to a .trailpaint.json file.
+ */
+export const EXAMPLE_ROUTES = [
+  { file: '陽明山七星山步道.trailpaint.json', name: '陽明山七星山步道', icon: '🌋' },
+  { file: '合歡山主峰步道.trailpaint.json', name: '合歡山主峰步道', icon: '⛰️' },
+  { file: '嘉明湖步道.trailpaint.json', name: '嘉明湖步道', icon: '💧' },
+  { file: '抹茶山聖母山莊步道.trailpaint.json', name: '抹茶山聖母山莊步道', icon: '🍵' },
+  { file: '九份金瓜石步道.trailpaint.json', name: '九份金瓜石步道', icon: '🏮' },
+  { file: '阿朗壹古道.trailpaint.json', name: '阿朗壹古道', icon: '🌊' },
+] as const;
 
 /**
- * 陽明山步道範例專案
- * 路線：小油坑 → 七星山東峰 → 七星山主峰 → 擎天崗
+ * Fetch an example route JSON from public/examples/.
+ * Returns the raw JSON string for importJSON(), or null on failure.
  */
-export const SAMPLE_PROJECT: Project = {
-  version: 2,
-  name: '陽明山七星山步道',
-  center: [25.175, 121.545],
-  zoom: 14,
-  spots: [
-    {
-      id: 'sample-spot-1',
-      latlng: [25.1667, 121.5344],
-      num: 1,
-      title: '小油坑遊客服務站',
-      desc: '步道起點，可欣賞火山噴氣孔地貌，設有廁所與解說站。',
-      photo: null,
-      iconId: 'info',
-      cardOffset: DEFAULT_CARD_OFFSET,
-    },
-    {
-      id: 'sample-spot-2',
-      latlng: [25.1744, 121.5431],
-      num: 2,
-      title: '七星山東峰',
-      desc: '海拔約 1,108 公尺，視野開闊，可遠眺台北盆地與淡水河口。',
-      photo: null,
-      iconId: 'sun',
-      cardOffset: DEFAULT_CARD_OFFSET,
-    },
-    {
-      id: 'sample-spot-3',
-      latlng: [25.1795, 121.5385],
-      num: 3,
-      title: '七星山主峰',
-      desc: '海拔 1,120 公尺，北台灣最高火山，天氣晴朗時可見基隆嶼。',
-      photo: null,
-      iconId: 'rock',
-      cardOffset: DEFAULT_CARD_OFFSET,
-    },
-    {
-      id: 'sample-spot-4',
-      latlng: [25.1928, 121.5614],
-      num: 4,
-      title: '擎天崗草原',
-      desc: '廣闊青翠的高山草原，牛群自由漫步，是陽明山最具代表性的景致。',
-      photo: null,
-      iconId: 'leaf',
-      cardOffset: DEFAULT_CARD_OFFSET,
-    },
-  ],
-  routes: [
-    {
-      id: 'sample-route-1',
-      name: '七星山縱走步道',
-      color: 'green',
-      elevations: null,
-      pts: [
-        [25.1667, 121.5344],
-        [25.1688, 121.5362],
-        [25.1710, 121.5378],
-        [25.1730, 121.5405],
-        [25.1744, 121.5431],
-        [25.1762, 121.5415],
-        [25.1778, 121.5400],
-        [25.1795, 121.5385],
-        [25.1820, 121.5420],
-        [25.1855, 121.5480],
-        [25.1890, 121.5545],
-        [25.1928, 121.5614],
-      ],
-    },
-  ],
-};
+export async function loadExampleRoute(filename: string): Promise<string | null> {
+  try {
+    const base = import.meta.env.BASE_URL ?? '/';
+    const res = await fetch(`${base}examples/${encodeURIComponent(filename)}`);
+    if (!res.ok) return null;
+    return await res.text();
+  } catch {
+    return null;
+  }
+}
 
 /**
- * 將範例專案載入到 store 的 importJSON 方法
+ * @deprecated Use EXAMPLE_ROUTES + loadExampleRoute instead.
+ * Kept for OnboardingOverlay backward compat — loads the first example.
  */
-export function getSampleProjectJSON(): string {
-  return JSON.stringify(SAMPLE_PROJECT);
+export async function getSampleProjectJSON(): Promise<string | null> {
+  return loadExampleRoute(EXAMPLE_ROUTES[0].file);
 }

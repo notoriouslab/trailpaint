@@ -535,11 +535,18 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.12s, border-color 0.12s;
+  text-align: center;
 }
 
 .spot-list__sample-btn:hover {
   background: #fde68a;
   border-color: #b45309;
+}
+
+.spot-list__sample-btn option {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  padding: 6px 8px;
 }
 
 .spot-list__item {

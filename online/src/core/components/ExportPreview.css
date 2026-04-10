@@ -1,0 +1,242 @@
+/* ── Export Preview Overlay ── */
+
+.export-preview__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.export-preview {
+  background: #fdf8ef;
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+  max-width: 960px;
+  max-height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Header */
+.export-preview__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5d5c0;
+}
+
+.export-preview__header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #78350f;
+}
+
+.export-preview__close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: #a08060;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.export-preview__close:hover {
+  background: #efe2d0;
+  color: #78350f;
+}
+
+/* Body: preview + controls */
+.export-preview__body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Preview canvas area */
+.export-preview__canvas-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: #f0e8d8;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.export-preview__canvas {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Controls panel */
+.export-preview__controls {
+  width: 260px;
+  flex-shrink: 0;
+  padding: 16px;
+  overflow-y: auto;
+  border-left: 1px solid #e5d5c0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Section */
+.export-preview__section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.export-preview__label {
+  font-size: 11px;
+  font-weight: bold;
+  color: #8b6a40;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Chips (pill buttons) */
+.export-preview__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.export-preview__chip {
+  font-family: Georgia, serif;
+  font-size: 12px;
+  padding: 5px 10px;
+  border: 1.5px solid #d4a574;
+  background: #fdf8ef;
+  color: #78350f;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+  white-space: nowrap;
+}
+
+.export-preview__chip:hover {
+  background: #fef3d8;
+}
+
+.export-preview__chip--active {
+  background: #fde68a;
+  border-color: #b45309;
+}
+
+/* Action buttons */
+.export-preview__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #e5d5c0;
+}
+
+.export-preview__btn {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  padding: 10px 12px;
+  border: 1.5px solid #d4a574;
+  background: #fdf8ef;
+  color: #78350f;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.12s;
+  text-align: center;
+}
+
+.export-preview__btn:hover {
+  background: #fef3d8;
+}
+
+.export-preview__btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.export-preview__btn--primary {
+  background: #78350f;
+  color: #fef9e7;
+  border-color: #78350f;
+  font-weight: bold;
+}
+
+.export-preview__btn--primary:hover {
+  background: #92400e;
+}
+
+/* Toast */
+.export-preview__toast {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #78350f;
+  color: #fef9e7;
+  font-size: 13px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  animation: export-toast-in 0.2s ease;
+  pointer-events: none;
+}
+
+@keyframes export-toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* ── Mobile: stack vertically ── */
+
+@media (max-width: 768px) {
+  .export-preview {
+    max-height: 95vh;
+  }
+
+  .export-preview__body {
+    flex-direction: column;
+  }
+
+  .export-preview__canvas-wrap {
+    max-height: 35vh;
+    min-height: 160px;
+  }
+
+  .export-preview__controls {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #e5d5c0;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+
+  .export-preview__actions {
+    margin-top: 4px;
+    padding-top: 8px;
+  }
+}

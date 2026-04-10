@@ -18,7 +18,7 @@ export default {
   // SpotList
   'spot.empty': '📍「スポット追加」で地図にマーク\n🖊️「ルート描画」でルートを描く\n📷 画像をドラッグして背景を変更',
   'spot.defaultTitle': 'スポット',
-  'spot.loadSample': 'サンプルを読込：陽明山七星山コース',
+  'spot.loadSample': 'サンプルルートを読込 ▼',
 
   // SpotEditor
   'editor.name': '名前',
@@ -60,6 +60,28 @@ export default {
   'export.border.classic': 'クラシック二重枠',
   'export.border.paper': '紙感手描き',
   'export.border.minimal': 'ミニマル細枠',
+
+  // Export Preview
+  'export.preview.title': '書き出しプレビュー',
+  'export.preview.capturing': 'キャプチャ中...',
+  'export.preview.format': 'アスペクト比',
+  'export.preview.filter': 'スタイルフィルター',
+  'export.preview.resolution': '解像度',
+  'export.preview.download': 'PNG ダウンロード',
+  'export.preview.downloading': '書き出し中...',
+  'export.preview.shareLink': '共有リンクをコピー',
+  'export.preview.shareCopied': '共有リンクをコピーしました！',
+  'export.preview.aiPrompt': 'AIプロンプトをコピー',
+  'export.preview.aiCopied': 'AIプロンプトをコピーしました！',
+  'export.format.full': 'オリジナル',
+  'export.format.1:1': '1:1 (IG)',
+  'export.format.9:16': '9:16 (ストーリー)',
+  'export.format.4:3': '4:3',
+  'export.filter.original': 'オリジナル',
+  'export.filter.watercolor': '水彩',
+  'export.filter.sketch': 'スケッチ',
+  'export.filter.vintage': 'ヴィンテージ',
+  'export.filter.comic': 'コミック',
 
   // Background
   'bg.upload': '背景画像をアップロード',

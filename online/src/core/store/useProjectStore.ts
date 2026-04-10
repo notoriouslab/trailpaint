@@ -458,6 +458,8 @@ export const useProjectStore = create<ProjectState>()(
       selectedRouteId: null,
       pendingFlyTo: { center: data.center, zoom: data.zoom },
     });
+    // Clear undo history — "undo entire project load" is confusing, not useful
+    useProjectStore.temporal.getState().clear();
   },
 }),
   {

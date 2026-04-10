@@ -1,7 +1,7 @@
 import type { Spot } from '../models/types';
 import { getIcon } from '../icons';
 import { useProjectStore } from '../store/useProjectStore';
-import { getSampleProjectJSON } from '../utils/sampleProject';
+import { EXAMPLE_ROUTES, loadExampleRoute } from '../utils/sampleProject';
 import { t } from '../../i18n';
 
 interface SpotListProps {
@@ -20,12 +20,22 @@ export default function SpotList({ spots, selectedSpotId, onSelect, onSwap }: Sp
         {t('spot.empty').split('\n').map((line, i) => (
           <div key={i}>{line}</div>
         ))}
-        <button
+        <select
           className="spot-list__sample-btn"
-          onClick={() => importJSON(getSampleProjectJSON())}
+          value=""
+          onChange={async (e) => {
+            const file = e.target.value;
+            if (!file) return;
+            const json = await loadExampleRoute(file);
+            if (json) importJSON(json);
+            e.target.value = '';
+          }}
         >
-          🌿 {t('spot.loadSample')}
-        </button>
+          <option value="">🌿 {t('spot.loadSample')}</option>
+          {EXAMPLE_ROUTES.map((ex) => (
+            <option key={ex.file} value={ex.file}>{ex.icon} {ex.name}</option>
+          ))}
+        </select>
       </div>
     );
   }

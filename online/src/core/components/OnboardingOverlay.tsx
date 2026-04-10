@@ -78,8 +78,9 @@ export default function OnboardingOverlay() {
     }
   }
 
-  function handleLoadSample() {
-    importJSON(getSampleProjectJSON());
+  async function handleLoadSample() {
+    const json = await getSampleProjectJSON();
+    if (json) importJSON(json);
     dismiss();
   }
 

@@ -2,10 +2,16 @@
 export async function reverseGeocode(latlng: [number, number]): Promise<string> {
   try {
     const [lat, lng] = latlng;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 8000);
     const res = await fetch(
       `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=12&addressdetails=1`,
-      { headers: { 'Accept-Language': 'zh-TW,en', 'User-Agent': 'TrailPaint/1.0 (https://github.com/notoriouslab/trailpaint)' } }
+      {
+        headers: { 'Accept-Language': 'zh-TW,en', 'User-Agent': 'TrailPaint/1.0 (https://github.com/notoriouslab/trailpaint)' },
+        signal: controller.signal,
+      },
     );
+    clearTimeout(timer);
     if (!res.ok) return '';
     const data = await res.json();
     // Build a short name from address parts
