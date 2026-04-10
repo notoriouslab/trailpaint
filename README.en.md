@@ -1,149 +1,166 @@
-# TrailPaint
+# TrailPaint 路小繪
 
-[中文](README.md) | [日本語](README.ja.md) | 🌐 [Launch App](https://notoriouslab.github.io/trailpaint/trailpaint-en.html)
+[中文](README.md) | [日本語](README.ja.md)
 
-> Turn any map into a beautiful educational or guided ecological map in minutes
+> The most beautiful trail map export tool — export as illustration, simple and easy to use
 
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
-[![No Install](https://img.shields.io/badge/No%20Install-Just%20Open-orange.svg)](#)
 
 ---
 
-## What is this?
+## Use It Now
 
-TrailPaint is a **zero-install, browser-only** hand-drawn map maker.
+### Online Version (Recommended)
+
+**[Open TrailPaint](https://notoriouslab.github.io/trailpaint/app/)**
+
+Create hand-drawn trail illustrations on a real map. Supports PWA — installable to your phone's home screen.
+
+### Offline Version
+
+Download [`trailpaint.html`](trailpaint.html) as a single file, open it in any browser. No internet required.
+
+> ⚠️ iOS cannot open local HTML files directly from the Files app. Use the online version instead.
+
+---
+
+## What is This?
+
+TrailPaint is a hand-drawn style trail map creation tool. Upload a screenshot or use the online map to produce a beautiful shareable illustrated map in minutes.
 
 ![trailpaint/examples/trailpaint-map.jpg](./examples/trailpaint-map.jpg)
 
-Upload a screenshot from Google Maps / OpenStreetMap / Apple Maps and create a map with:
-
-- 🟠 **Hand-drawn routes** — dashed lines + arrows, easy to follow at a glance
-- 📍 **Point-of-interest cards** — draggable, with name, description, and on-site photos
-- 🩹 **Cover-up tool** — hide ads, business info, or anything you don't want shown
-- 🎨 **Watercolor filter** — one click to give the base map a soft, muted look
-- 💾 **High-res export** — full-resolution PNG ready for print or sharing
-
 ## Who is it for?
 
-| Audience | Use case |
+| Audience | Use Case |
 |----------|----------|
-| 🌲 National parks, forestry agencies, nature reserves | Signage, guidebook illustrations |
-| 🦋 Ecotourism operators, B&Bs, tour guides | Itinerary maps, custom trail guides |
-| 🎒 Hiking clubs, environmental education NGOs, schools | Teaching materials, event maps |
-| 🏡 Community organizers, independent trail builders | Community guides, trail documentation |
+| 🎒 Hiking & Trekking | Route planning, GPX import, elevation profile |
+| 🚲 Cycling | Route marking, distance statistics |
+| 📸 Travel Bloggers | IG / Story share card export |
+| 🌲 Ecology Guides | POI markers, info cards, photos |
+| 🏫 Educational Institutions | Environmental education, course materials |
 
-## Getting Started
+---
 
-**Online (recommended)**
+## Two Versions Compared
 
-Just open the URL — no installation needed:
+| | Online Version | Offline Version |
+|---|----------------|-----------------|
+| Base Map | OpenStreetMap live map + screenshot upload | Screenshot upload only |
+| GPS Coordinates | Yes (lat/lon) | No (pixel coordinates) |
+| GPX Import | Yes | No |
+| Elevation Data | Yes (GPX or API query) | No |
+| Place Search | Yes | No |
+| Map Style Switch | Standard / Satellite / Contour / Dark | No |
+| Area Cover-up | No | Yes (frosted / soft / paper) |
+| Watercolor Filter | No | Yes |
+| PWA Install | Yes | No |
+| Offline Use | Requires prior connection for caching | Fully offline |
+| Tech Stack | React + TypeScript + Leaflet | Single HTML + compiled JSX |
 
-```
-https://notoriouslab.github.io/trailpaint/
-```
+---
 
-**Offline**
+## Online Version Features
 
-Download [`trailpaint.html`](trailpaint.html) and open it in any browser. **No internet required.**
+### Core
 
-> ⚠️ Opening local HTML files directly on iOS may be restricted by Safari security policies. Use the online version or a local HTTP server instead.
+- 🖊️ **Route Drawing** — Hand-drawn dashed lines + directional arrows, 5-color auto-cycle
+- 📍 **POI Cards** — Paper-textured hand-drawn style, with photos, 21 icon types, drag-to-position
+- 📷 **Screenshot Base Map** — Drag an image onto the screen to switch automatically, supports Google Maps screenshots
+- 🗺️ **Map Style Switch** — Standard / Satellite / Contour / Dark
+
+### Export
+
+- 📐 **Multi-ratio Export** — 1:1 (IG) / 9:16 (Story) / 4:3 / Original
+- 🖼️ **3 Border Styles** — Classic double-frame / Paper hand-drawn / Minimal thin-frame
+- 📊 **Stats Overlay** — Distance, time, and elevation gain automatically printed on the image
+- 🔍 **High Resolution** — 1x / 2x / 3x pixelRatio
+
+### Data
+
+- 📥 **GPX Import** — Parse tracks + waypoints, auto-simplify large point sets
+- ⛰️ **Elevation Profile** — Canvas polyline chart with distance / time / gain / loss
+- 🔭 **Elevation Query** — Manually drawn routes can also query elevation (Open-Meteo API)
+- 💾 **Save / Load** — JSON format, backward compatible
+
+### Experience
+
+- ↩️ **Undo/Redo** — Cmd+Z keyboard shortcut
+- 🌊 **Hand-drawn Wobble** — SVG filter effect, togglable
+- 🌐 **Three Languages** — Chinese / English / Japanese, auto-detected
+- 📱 **PWA** — Installable to phone home screen
+- 🎓 **User Onboarding** — 3-step tutorial on first launch + example project
+
+### POI Icons
+
+🌿 Plant 🌸 Flower 🌲 Tree 🐦 Bird 🦋 Insect 💧 Water 🐟 Fish 🍄 Mushroom ⛰️ Rock  
+🚻 Restroom 🚌 Bus Stop 🪑 Rest Area 🥤 Food & Drink 🚲 Bicycle 🅿️ Parking 🩺 First Aid  
+🔭 Viewpoint 📷 Photo Spot ⚠️ Caution ℹ️ Info 📍 Pin
+
+---
 
 ## How to Use
 
 ```
-1. Upload  →  Take a screenshot of Google Maps / OpenStreetMap / Apple Maps and upload it
-2. Route   →  Click points on the map to draw a path, then press "Finish Route"
-3. Markers →  Click to place numbered markers, fill in name, description, and photos
-4. Cover   →  Drag to select areas you want to hide
-5. Export  →  Press "Export" to get a high-resolution PNG
+1. Search for a location  or  drag a screenshot onto the screen
+2. Click "Add POI" to place a marker on the map, fill in name and photo
+3. Click "Draw Route" to trace a path, then click "Finish Route"
+4. Choose export ratio and border style, download PNG
 ```
 
-![trailpaint/examples/trailpaint-map.jpg](./examples/trailpaint-map-01.jpg)
-
-**Mobile / Tablet Gestures**
-
-| Gesture | Action |
-|---------|--------|
-| Single tap | Place route point / marker |
-| Long press (650ms) | Quick-add a marker |
-| Single-finger drag (Select mode) | Pan the map |
-| Pinch | Zoom in/out |
-| Drag info card | Reposition the card |
-
-## Features
-
-| Feature | Description |
-|---------|-------------|
-| **Route Drawing** | Click to place points; auto-connected with hand-drawn dashed lines + arrows. Multiple routes supported |
-| **Markers** | Numbered circle markers with title card, description text, and photo attachment |
-| **Card Dragging** | Drag info cards freely to avoid overlapping important areas |
-| **Area Cover-up** | Select regions to hide (ads, irrelevant text). Three cover styles: frosted / soft / paper |
-| **Watercolor Filter** | One-click pastel tone — desaturates, softens contrast, adds subtle vignette |
-| **Hi-Res Export** | Outputs full-resolution PNG, print-ready |
-| **Project Save/Load** | Save to JSON file; reload later to continue editing (includes base map and photos) |
-| **Undo / Redo** | Ctrl+Z / Cmd+Z supported — all edits are reversible |
-| **Desktop Zoom** | Scroll wheel zoom, centered on cursor position |
-| **Watermark Toggle** | The "TrailPaint" watermark on exported images can be turned off |
-| **21 Icons** | Ecology (plants, birds, insects...) + facilities (restroom, parking, first aid...) |
-| **Zero Install** | Single HTML file, runs in any browser, no backend or network needed |
-
-## Marker Icons
-
-21 built-in ecology and facility icons:
-
-🌿 Plant 🌸 Flower 🌲 Tree 🐦 Bird 🦋 Insect  
-💧 Water 🐟 Fish 🍄 Mushroom ⛰️ Rock  
-🚻 Restroom 🚌 Bus Stop 🪑 Rest Area 🥤 Food 🚲 Bicycle  
-🅿️ Parking 🩺 First Aid 🔭 Viewpoint 📷 Photo Spot ⚠️ Caution ℹ️ Info 📍 Pin
+---
 
 ## Technical Architecture
 
-- **Frontend**: Preact (React compat mode) + pure Browser API (no backend, no database)
-- **Map Rendering**: SVG overlay + Canvas export
-- **Hand-drawn Effect**: Canvas pixel manipulation (desaturation + grain + vignette)
-- **Cover-up**: Canvas clipping + Gaussian blur
-- **Offline Support**: Single HTML file with embedded Preact UMD bundle
+### Online Version (`online/`)
+
+- **Framework**: Vite + React 19 + TypeScript
+- **Map**: Leaflet + react-leaflet (Carto Voyager tiles)
+- **State**: Zustand + zundo (temporal undo/redo)
+- **PWA**: vite-plugin-pwa + Workbox
+- **Export**: html-to-image + Canvas post-processing
+- **i18n**: Lightweight custom t() + runtime locale detection
+- **Structure**: core/ (Leaflet-independent) + map/ (Leaflet integration layer)
+
+### Offline Version (root directory)
+
+- **Framework**: Preact (React compat) + pure Browser API
+- **Rendering**: SVG overlay + Canvas export
+- **Single File**: All JS/CSS embedded in HTML
 
 ## Development
 
 ```bash
-git clone https://github.com/notoriouslab/trailpaint.git
-cd trailpaint
+# Online version
+cd online
+npm install
+npm run dev        # Dev server
+npm run build      # Build to ../app/
 
-# Open directly (no build needed)
+# Offline version (no build needed)
 open trailpaint.html
-
-# Or start a local server (recommended for iOS development)
-python3 -m http.server 8080
 ```
-
-Source code lives directly in `trailpaint.html` — no build tools required.
 
 ## Known Limitations
 
-- Opening local HTML files on iOS may have limited JavaScript functionality
-- Marker photos use `URL.createObjectURL()` and are released when the tab is closed
-- Large photos may take 1–2 seconds to decode during export
+- Online version requires internet to load map tiles (PWA cache allows offline browsing of cached areas)
+- Switching between screenshot and map mode clears all POIs and routes (different coordinate systems)
+- iOS cannot open local HTML files (platform limitation — use the online version)
 
 ## Want a More Hand-Drawn Look?
 
-You can take the exported image from TrailPaint and feed it to ChatGPT / Google Gemini with a prompt like "turn this into a cartoon-style map" to get an even more hand-drawn aesthetic!
+Take the exported image and feed it to ChatGPT / Gemini with a prompt like "create a comic-style map" to produce an even more hand-crafted aesthetic:
 
 ![Gemini_Generated_Image.jpg](./examples/Gemini_Generated_Image.jpg)
 
 ## Contributing
 
-PRs and issues are welcome! We'd especially love:
-
-- [ ] More hand-drawn themes (forest, ocean, mountain)
-- [ ] Multi-language support (Japanese, etc.)
-- [ ] Export marker descriptions as a companion PDF
-- [ ] Export to GeoJSON / KML format
+PRs and Issues are welcome!
 
 ## License
 
-GPL-3.0 License — free to use and modify. Derivative works must also be open-sourced under GPL-3.0. **No closed-source commercial use.**
+GPL-3.0 License — free to use and modify. Derivative works must also be open-sourced under GPL-3.0.
 
 ---
 
-*TrailPaint was originally inspired by the park ecology exploration course at Taipei Bread of Life Church's Zhifu Yiren Academy and professional outdoor ecology guide needs — we hope it helps more people easily create beautiful nature education maps. 🌿*
+*TrailPaint was originally inspired by the park ecology exploration course at Taipei Bread of Life Church's Zhifu Yiren Academy and professional outdoor ecology guide needs. 🌿*
