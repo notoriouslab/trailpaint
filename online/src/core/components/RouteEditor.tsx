@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { Route } from '../models/routes';
 import { ROUTE_COLORS } from '../models/routes';
 import { useProjectStore } from '../store/useProjectStore';
@@ -12,11 +13,22 @@ interface RouteEditorProps {
 
 export default function RouteEditor({ route, onClose }: RouteEditorProps) {
   const setRouteColor = useProjectStore((s) => s.setRouteColor);
+  const setRouteName = useProjectStore((s) => s.setRouteName);
   const deleteRoute = useProjectStore((s) => s.deleteRoute);
+  const fetchRouteElevation = useProjectStore((s) => s.fetchRouteElevation);
+  const baseMode = useProjectStore((s) => s.baseMode);
+  const [fetching, setFetching] = useState(false);
+
   const distKm = polylineDistance(route.pts);
   const hasEle = !!route.elevations;
   const stats = hasEle ? elevationStats(route.elevations!) : null;
   const time = stats ? estimateTime(distKm, stats.ascent) : null;
+
+  const handleFetchElevation = async () => {
+    setFetching(true);
+    await fetchRouteElevation(route.id);
+    setFetching(false);
+  };
 
   return (
     <div className="route-editor">
@@ -24,6 +36,15 @@ export default function RouteEditor({ route, onClose }: RouteEditorProps) {
         <span className="route-editor__title">{t('route.editTitle')}</span>
         <button className="spot-editor__close" onClick={onClose}>✕</button>
       </div>
+
+      {/* Route name (editable) */}
+      <input
+        className="sidebar__project-name"
+        value={route.name}
+        onChange={(e) => setRouteName(route.id, e.target.value)}
+        placeholder={t('route.namePlaceholder')}
+        style={{ fontSize: '14px' }}
+      />
 
       <div className="route-editor__info">
         {formatDistance(distKm)} · {route.pts.length} {t('route.points')}
@@ -39,8 +60,18 @@ export default function RouteEditor({ route, onClose }: RouteEditorProps) {
         </div>
       )}
 
-      {/* Elevation profile chart */}
       <ElevationProfile route={route} />
+
+      {/* Fetch elevation button — only for map mode routes without elevation */}
+      {!hasEle && baseMode === 'map' && (
+        <button
+          className="spot-editor__btn"
+          onClick={handleFetchElevation}
+          disabled={fetching}
+        >
+          {fetching ? t('route.fetchingEle') : t('route.fetchEle')}
+        </button>
+      )}
 
       <div className="spot-editor__label">{t('route.color')}</div>
       <div className="route-editor__colors">

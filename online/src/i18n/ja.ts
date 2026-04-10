@@ -40,6 +40,9 @@ export default {
   'route.color': 'ルートの色',
   'route.editHint': 'ノードをドラッグして調整 · ダブルクリックで削除',
   'route.listTitle': 'ルート',
+  'route.namePlaceholder': 'ルート名（自動検出）',
+  'route.fetchEle': '⛰️ 標高を取得',
+  'route.fetchingEle': '取得中...',
   'route.delete': 'ルートを削除',
   'route.deleteConfirm': 'このルートを削除しますか？',
 

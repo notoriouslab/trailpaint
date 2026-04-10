@@ -5,6 +5,7 @@ import { DEFAULT_CARD_OFFSET, DEFAULT_CENTER, DEFAULT_ZOOM } from '../models/typ
 import type { Route } from '../models/routes';
 import { ROUTE_COLORS } from '../models/routes';
 import { reverseGeocode } from '../utils/reverseGeocode';
+import { fetchElevations } from '../utils/elevationApi';
 import { t } from '../../i18n';
 
 import type { GpxData } from '../utils/gpxParser';
@@ -39,7 +40,9 @@ interface ProjectState {
   deleteRoutePt: (routeId: string, ptIndex: number) => void;
   deleteRoute: (id: string) => void;
   setRouteColor: (id: string, color: string) => void;
+  setRouteName: (id: string, name: string) => void;
   setSelectedRoute: (id: string | null) => void;
+  fetchRouteElevation: (id: string) => Promise<void>;
 
   // GPX
   importGpx: (data: GpxData) => void;
@@ -281,7 +284,33 @@ export const useProjectStore = create<ProjectState>()(
       },
     })),
 
+  setRouteName: (id, name) =>
+    set((s) => ({
+      project: {
+        ...s.project,
+        routes: s.project.routes.map((r) => r.id !== id ? r : { ...r, name }),
+      },
+    })),
+
   setSelectedRoute: (id) => set({ selectedRouteId: id, selectedSpotId: null }),
+
+  fetchRouteElevation: async (id) => {
+    const route = get().project.routes.find((r) => r.id === id);
+    if (!route || route.elevations) return; // already has elevation
+    try {
+      const elevations = await fetchElevations(route.pts);
+      set((s) => ({
+        project: {
+          ...s.project,
+          routes: s.project.routes.map((r) =>
+            r.id !== id ? r : { ...r, elevations }
+          ),
+        },
+      }));
+    } catch (err) {
+      console.error('Elevation fetch failed:', err);
+    }
+  },
 
   // ── GPX ──
 
