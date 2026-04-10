@@ -88,6 +88,11 @@ export default {
   'bg.backToMap': '地図に戻る',
   'bg.dropHint': '画像をここにドロップ',
 
+  // Locate
+  'locate.title': '現在地',
+  'locate.denied': '位置情報のアクセスが拒否されました。ブラウザの設定で許可してください。',
+  'locate.unavailable': '現在地を取得できません。位置情報サービスが有効か確認してください。',
+
   // Basemap
   'basemap.switch': '地図を切替',
   'basemap.voyager': '標準地図',

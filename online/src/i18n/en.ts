@@ -88,6 +88,11 @@ export default {
   'bg.backToMap': 'Back to map',
   'bg.dropHint': 'Drop image here',
 
+  // Locate
+  'locate.title': 'Locate me',
+  'locate.denied': 'Location permission denied. Please allow in browser settings.',
+  'locate.unavailable': 'Unable to get current location. Check that location services are enabled.',
+
   // Basemap
   'basemap.switch': 'Switch basemap',
   'basemap.voyager': 'Standard',

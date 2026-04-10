@@ -88,6 +88,11 @@ export default {
   'bg.backToMap': '回到地圖',
   'bg.dropHint': '拖曳圖片到此處',
 
+  // Locate
+  'locate.title': '定位',
+  'locate.denied': '定位權限被拒絕，請在瀏覽器設定中允許。',
+  'locate.unavailable': '無法取得目前位置，請確認定位服務已開啟。',
+
   // Basemap
   'basemap.switch': '切換底圖',
   'basemap.voyager': '標準地圖',

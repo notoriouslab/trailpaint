@@ -6,6 +6,7 @@ import RouteLayer from './RouteLayer';
 import DrawingPreview from './DrawingPreview';
 import HandDrawnFilter from './HandDrawnFilter';
 import BasemapSwitcher from './BasemapSwitcher';
+import LocateButton from './LocateButton';
 import Watermark from './Watermark';
 import { setMapInstance } from './useMapRef';
 import 'leaflet/dist/leaflet.css';
@@ -91,6 +92,7 @@ export default function MapView() {
     >
       <ZoomControl position="bottomright" />
       <BasemapSwitcher />
+      <LocateButton />
       <HandDrawnFilter />
       <MapClickHandler />
       <MapSync />
