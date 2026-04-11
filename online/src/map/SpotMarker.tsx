@@ -102,14 +102,12 @@ function CardOverlay({ spot, selected, map, onSelect, onUpdateOffset }: CardOver
     // Set CSS variable for pin circle scale
     map.getContainer().style.setProperty('--spot-scale', String(scale));
 
-    // Connector line: pin point relative to card top-left (unscaled coords)
+    // Connector line: divide by scale to compensate transform scale on the SVG
     if (line) {
-      const dx = -spot.cardOffset.x + halfW;
-      const dy = -spot.cardOffset.y;
       line.setAttribute('x1', String(halfW));
       line.setAttribute('y1', '0');
-      line.setAttribute('x2', String(dx));
-      line.setAttribute('y2', String(dy));
+      line.setAttribute('x2', String(-spot.cardOffset.x / scale + halfW));
+      line.setAttribute('y2', String(-spot.cardOffset.y / scale));
     }
   }, [map, spot.latlng, spot.cardOffset]);
 
