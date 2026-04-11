@@ -54,7 +54,7 @@ export default function FloatingActions({ onExport, onSave, onLoad, onImportGpx,
       </button>
       {open && (
         <div className="floating-actions__menu">
-          <button className="floating-actions__item" onClick={() => doAction(onExport)}>📷 {t('app.export')}</button>
+          <button className="floating-actions__item" onClick={() => doAction(onExport)}>{t('app.export')}</button>
           <button className="floating-actions__item" onClick={() => doAction(onSave)}>{t('app.save')}</button>
           <button className="floating-actions__item" onClick={() => doAction(onLoad)}>{t('app.load')}</button>
           <button className="floating-actions__item" onClick={() => doAction(onImportGpx)}>{t('gpx.import')}</button>
