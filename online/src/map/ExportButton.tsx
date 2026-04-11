@@ -69,7 +69,7 @@ export async function captureMap(pixelRatio = 2): Promise<HTMLImageElement> {
   canvas.width = w;
   canvas.height = h;
   const ctx = canvas.getContext('2d')!;
-  drawTilesToCanvas(ctx, mapEl, containerRect, pixelRatio);
+  drawTilesToCanvas(ctx, mapEl, containerRect, dpi);
 
   // Step 2: Capture with html-to-image (DON'T filter tiles — let it try)
   // Make map background transparent so on iOS where tiles fail in foreignObject,

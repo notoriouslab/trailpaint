@@ -23,11 +23,15 @@ const FILTERS: StyleFilter[] = ['original', 'watercolor', 'sketch', 'vintage', '
 const RESOLUTIONS = [1, 2, 3] as const;
 
 /** Copy text to clipboard with iOS Safari fallback */
-function copyToClipboard(text: string): boolean {
+async function copyToClipboard(text: string): Promise<boolean> {
   // Try modern API first
   if (navigator.clipboard?.writeText) {
-    navigator.clipboard.writeText(text).catch(() => {});
-    return true;
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      // Fall through to execCommand fallback
+    }
   }
   // Fallback: hidden textarea + execCommand (works on iOS without async)
   const ta = document.createElement('textarea');
@@ -173,17 +177,18 @@ export default function ExportPreview({ baseImage, onClose, onRecapture }: Expor
   const handleCopyShareLink = useCallback(async () => {
     try {
       const url = await encodeShareLink(project);
-      copyToClipboard(url);
-      showToast(t('export.preview.shareCopied'));
+      const ok = await copyToClipboard(url);
+      if (ok) showToast(t('export.preview.shareCopied'));
     } catch (err) {
       console.error('Share link failed:', err);
     }
   }, [project, showToast]);
 
-  const handleCopyAiPrompt = useCallback(() => {
+  const handleCopyAiPrompt = useCallback(async () => {
     const routeName = routes[0]?.name?.trim() ?? projectName;
     const text = getAiPrompt(routeName, filter);
-    if (copyToClipboard(text)) {
+    const ok = await copyToClipboard(text);
+    if (ok) {
       showToast(t('export.preview.aiCopied'));
     } else {
       window.prompt('Copy this prompt:', text);
