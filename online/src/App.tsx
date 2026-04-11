@@ -5,6 +5,7 @@ import Sidebar from './core/components/Sidebar';
 import ModeToolbar from './core/components/ModeToolbar';
 import OnboardingOverlay from './core/components/OnboardingOverlay';
 import ExportPreview from './core/components/ExportPreview';
+import FloatingActions from './core/components/FloatingActions';
 import { captureMap, saveProject, loadProject, importGpxFile } from './map/ExportButton';
 import { decodeShareLink } from './core/utils/shareLink';
 import { flyTo } from './map/useMapRef';
@@ -119,6 +120,13 @@ export default function App() {
         {!sidebarOpen && (
           <div className="floating-mode-toolbar">
             <ModeToolbar />
+            <FloatingActions
+              onExport={handleOpenExportPreview}
+              onSave={saveProject}
+              onLoad={loadProject}
+              onImportGpx={importGpxFile}
+              onToggleSettings={() => useProjectStore.getState().setSidebarOpen(true)}
+            />
           </div>
         )}
       </div>

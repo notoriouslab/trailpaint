@@ -106,6 +106,9 @@ export default {
   'basemap.topo': 'Topographic',
   'basemap.dark': 'Dark',
 
+  // Floating menu
+  'floating.more': 'More actions',
+
   // Undo/Redo
   'undo': 'Undo',
   'redo': 'Redo',

@@ -1,0 +1,68 @@
+/* ── Floating Actions (mobile ☰ menu) ── */
+
+.floating-actions {
+  position: relative;
+  display: inline-block;
+}
+
+.floating-actions__toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1.5px solid #d4a574;
+  background: #fdf8ef;
+  color: #78350f;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s;
+}
+
+.floating-actions__toggle:hover,
+.floating-actions__toggle--active {
+  background: #fde68a;
+  border-color: #b45309;
+}
+
+.floating-actions__menu {
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  background: #fdf8ef;
+  border: 1.5px solid #d4a574;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  min-width: 160px;
+  animation: floating-menu-in 0.15s ease;
+}
+
+@keyframes floating-menu-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.floating-actions__item {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  color: #78350f;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  border-bottom: 1px solid #efe2d0;
+  white-space: nowrap;
+}
+
+.floating-actions__item:last-child {
+  border-bottom: none;
+}
+
+.floating-actions__item:hover {
+  background: #fef3d8;
+}

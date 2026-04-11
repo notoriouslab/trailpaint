@@ -106,6 +106,9 @@ export default {
   'basemap.topo': '等高線',
   'basemap.dark': '暗色地圖',
 
+  // Floating menu
+  'floating.more': '更多功能',
+
   // Undo/Redo
   'undo': '復原',
   'redo': '重做',

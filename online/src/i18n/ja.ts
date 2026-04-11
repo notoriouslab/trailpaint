@@ -106,6 +106,9 @@ export default {
   'basemap.topo': '等高線',
   'basemap.dark': 'ダークモード',
 
+  // Floating menu
+  'floating.more': 'その他の機能',
+
   // Undo/Redo
   'undo': '元に戻す',
   'redo': 'やり直す',

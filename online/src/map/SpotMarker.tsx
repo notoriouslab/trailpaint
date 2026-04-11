@@ -6,11 +6,20 @@ import SpotCard from '../core/components/SpotCard';
 import '../core/components/SpotCard.css';
 import type { Spot } from '../core/models/types';
 import { getIcon } from '../core/icons';
+import { useProjectStore } from '../core/store/useProjectStore';
 
 function escapeHtml(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
-import { useProjectStore } from '../core/store/useProjectStore';
+
+/** Zoom-aware scale: linear, clamped 0.5–1.3, baseZoom=14 */
+function getZoomScale(zoom: number): number {
+  return Math.max(0.5, Math.min(1.3, 1 + (zoom - 14) * 0.12));
+}
+
+const MOBILE_MQ = '(max-width: 768px)';
+const CARD_W_DESKTOP = 180;
+const CARD_W_MOBILE = 150;
 
 export default function SpotMarker({ spot }: { spot: Spot }) {
   const map = useMap();
@@ -77,22 +86,27 @@ function CardOverlay({ spot, selected, map, onSelect, onUpdateOffset }: CardOver
   const lineRef = useRef<SVGLineElement>(null);
   const dragRef = useRef<{ mx: number; my: number; ox: number; oy: number } | null>(null);
 
-  // Reposition card + line on every map move
+  // Reposition card + line on every map move/zoom
   const reposition = useCallback(() => {
     const wrap = wrapRef.current;
     const line = lineRef.current;
     if (!wrap) return;
 
-    const pt = map.latLngToContainerPoint(spot.latlng);
-    // Card position = pin screen point + cardOffset, shift left by half card width
-    wrap.style.transform = `translate(${pt.x + spot.cardOffset.x - 90}px, ${pt.y + spot.cardOffset.y}px)`;
+    const isMobile = window.matchMedia(MOBILE_MQ).matches;
+    const halfW = isMobile ? CARD_W_MOBILE / 2 : CARD_W_DESKTOP / 2;
+    const scale = getZoomScale(map.getZoom());
 
-    // Connector line endpoints (relative to wrap's SVG)
+    const pt = map.latLngToContainerPoint(spot.latlng);
+    wrap.style.transform = `translate(${pt.x + spot.cardOffset.x - halfW}px, ${pt.y + spot.cardOffset.y}px) scale(${scale})`;
+
+    // Set CSS variable for pin circle scale
+    map.getContainer().style.setProperty('--spot-scale', String(scale));
+
+    // Connector line: pin point relative to card top-left (unscaled coords)
     if (line) {
-      // Pin point relative to card top-left (card is centered at offset, width=180 → shift back 90)
-      const dx = -spot.cardOffset.x + 90; // pin is at (90 - offset.x) relative to card left
-      const dy = -spot.cardOffset.y;       // pin is at (-offset.y) relative to card top
-      line.setAttribute('x1', String(90)); // card center-x
+      const dx = -spot.cardOffset.x + halfW;
+      const dy = -spot.cardOffset.y;
+      line.setAttribute('x1', String(halfW));
       line.setAttribute('y1', '0');
       line.setAttribute('x2', String(dx));
       line.setAttribute('y2', String(dy));
@@ -102,7 +116,14 @@ function CardOverlay({ spot, selected, map, onSelect, onUpdateOffset }: CardOver
   useEffect(() => {
     reposition();
     map.on('move zoom viewreset', reposition);
-    return () => { map.off('move zoom viewreset', reposition); };
+    // Listen for viewport resize (desktop ↔ mobile)
+    const mq = window.matchMedia(MOBILE_MQ);
+    const onResize = () => reposition();
+    mq.addEventListener('change', onResize);
+    return () => {
+      map.off('move zoom viewreset', reposition);
+      mq.removeEventListener('change', onResize);
+    };
   }, [map, reposition]);
 
   // Card dragging
@@ -134,11 +155,49 @@ function CardOverlay({ spot, selected, map, onSelect, onUpdateOffset }: CardOver
     window.addEventListener('blur', onUp);
   }, [map, spot.cardOffset, onUpdateOffset]);
 
+  // Touch drag (parallel to mouse drag)
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    if (e.touches.length !== 1) return; // only single-finger drag
+    e.stopPropagation();
+    map.dragging.disable();
+    const touch = e.touches[0];
+    dragRef.current = {
+      mx: touch.clientX, my: touch.clientY,
+      ox: spot.cardOffset.x, oy: spot.cardOffset.y,
+    };
+
+    const onMove = (ev: TouchEvent) => {
+      if (!dragRef.current) return;
+      if (ev.touches.length > 1) {
+        // Multi-finger: cancel drag, let map handle pinch-zoom
+        cleanup();
+        return;
+      }
+      ev.preventDefault();
+      const t = ev.touches[0];
+      onUpdateOffset({
+        x: dragRef.current.ox + (t.clientX - dragRef.current.mx),
+        y: dragRef.current.oy + (t.clientY - dragRef.current.my),
+      });
+    };
+    const cleanup = () => {
+      dragRef.current = null;
+      map.dragging.enable();
+      window.removeEventListener('touchmove', onMove);
+      window.removeEventListener('touchend', cleanup);
+      window.removeEventListener('touchcancel', cleanup);
+    };
+    window.addEventListener('touchmove', onMove, { passive: false });
+    window.addEventListener('touchend', cleanup);
+    window.addEventListener('touchcancel', cleanup);
+  }, [map, spot.cardOffset, onUpdateOffset]);
+
   return createPortal(
     <div
       ref={wrapRef}
       className="spot-overlay"
       onMouseDown={onMouseDown}
+      onTouchStart={onTouchStart}
       onClick={(e) => { e.stopPropagation(); onSelect(); }}
     >
       {/* Connector */}

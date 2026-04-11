@@ -54,9 +54,11 @@
 
 @media (max-width: 768px) {
   .floating-mode-toolbar {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 6px;
     position: absolute;
-    bottom: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
     left: 50%;
     transform: translateX(-50%);
     z-index: 800;

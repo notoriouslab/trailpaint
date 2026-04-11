@@ -119,6 +119,15 @@
   transform: rotate(-0.3deg);
 }
 
+/* ── Mobile: smaller card ── */
+@media (max-width: 768px) {
+  .spot-card { width: 150px; }
+  .spot-card__title-tag { padding: 6px 10px; }
+  .spot-card__title { font-size: 13px; }
+  .spot-card__desc { padding: 5px 8px; font-size: 12px; }
+  .spot-card__photo { max-height: 90px; }
+}
+
 /* Number badge (top-right of title tag) */
 .spot-card__badge {
   position: absolute;

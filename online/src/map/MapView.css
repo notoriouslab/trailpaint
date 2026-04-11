@@ -32,10 +32,17 @@
   z-index: 600;
   pointer-events: auto;
   cursor: grab;
+  transform-origin: top center;
 }
 
 .spot-overlay:active {
   cursor: grabbing;
+}
+
+/* Pin circle scales with zoom */
+.spot-pin__circle {
+  transform: scale(var(--spot-scale, 1));
+  transform-origin: center;
 }
 
 /* ── Hand-drawn filter on route paths ── */
