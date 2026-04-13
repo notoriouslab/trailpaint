@@ -22,8 +22,12 @@ export async function compressImage(file: File): Promise<string> {
   canvas.height = height;
   const ctx = canvas.getContext('2d');
   if (!ctx) { bitmap.close(); throw new Error('Canvas context unavailable'); }
-  ctx.drawImage(bitmap, 0, 0, width, height);
-  bitmap.close(); // release GPU memory immediately
+
+  try {
+    ctx.drawImage(bitmap, 0, 0, width, height);
+  } finally {
+    bitmap.close(); // release GPU memory even if drawImage throws
+  }
 
   const dataUrl = canvas.toDataURL('image/jpeg', QUALITY);
   // Release canvas memory (important on iOS where total canvas budget is limited)

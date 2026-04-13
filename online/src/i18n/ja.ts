@@ -28,6 +28,7 @@ export default {
   'editor.uploadPhoto': '写真をアップロード',
   'editor.changePhoto': '写真を変更',
   'editor.removePhoto': '写真を削除',
+  'editor.photoFailed': '写真の処理に失敗しました',
   'editor.delete': 'スポットを削除',
   'editor.deleteConfirm': 'このスポットを削除しますか？',
 
@@ -122,6 +123,7 @@ export default {
   'basemap.satellite': '衛星写真',
   'basemap.topo': '等高線',
   'basemap.dark': 'ダークモード',
+  'basemap.multilingual': '多言語地図',
 
   // Floating menu
   'floating.more': 'その他の機能',

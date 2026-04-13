@@ -17,8 +17,12 @@ export default function SpotEditor({ spot, onUpdate, onDelete, onClose }: SpotEd
   const handlePhoto = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    const dataUrl = await compressImage(file);
-    onUpdate({ photo: dataUrl });
+    try {
+      const dataUrl = await compressImage(file);
+      onUpdate({ photo: dataUrl });
+    } catch (err) {
+      alert(err instanceof Error ? err.message : t('editor.photoFailed'));
+    }
     e.target.value = '';
   };
 

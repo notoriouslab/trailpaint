@@ -28,6 +28,7 @@ export default {
   'editor.uploadPhoto': 'Upload Photo',
   'editor.changePhoto': 'Change Photo',
   'editor.removePhoto': 'Remove Photo',
+  'editor.photoFailed': 'Photo processing failed',
   'editor.delete': 'Delete Spot',
   'editor.deleteConfirm': 'Delete this spot?',
 
@@ -122,6 +123,7 @@ export default {
   'basemap.satellite': 'Satellite',
   'basemap.topo': 'Topographic',
   'basemap.dark': 'Dark',
+  'basemap.multilingual': 'Multilingual',
 
   // Floating menu
   'floating.more': 'More actions',

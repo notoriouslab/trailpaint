@@ -29,24 +29,17 @@ function applyWatercolor(canvas: HTMLCanvasElement) {
   const w = canvas.width;
   const h = canvas.height;
 
-  // Step 1: Desaturate + slight brightness boost via pixel manipulation
-  const imageData = ctx.getImageData(0, 0, w, h);
-  const d = imageData.data;
-  for (let i = 0; i < d.length; i += 4) {
-    const r = d[i], g = d[i + 1], b = d[i + 2];
-    const gray = 0.299 * r + 0.587 * g + 0.114 * b;
-    // Mix 55% original + 45% gray → soft desaturation
-    d[i] = Math.min(255, r * 0.55 + gray * 0.45 + 8);
-    d[i + 1] = Math.min(255, g * 0.55 + gray * 0.45 + 8);
-    d[i + 2] = Math.min(255, b * 0.55 + gray * 0.45 + 8);
-  }
-  ctx.putImageData(imageData, 0, 0);
-
-  // Step 2: Soft blur via canvas filter (well-supported)
+  // Step 1: Desaturate + slight brightness boost via CSS filter
+  // (replaces per-pixel loop — orders of magnitude faster on large canvases)
   const temp = document.createElement('canvas');
   temp.width = w;
   temp.height = h;
   const tctx = temp.getContext('2d')!;
+  tctx.filter = 'saturate(55%) brightness(103%)';
+  tctx.drawImage(canvas, 0, 0);
+  ctx.drawImage(temp, 0, 0);
+
+  // Step 2: Soft blur via canvas filter (well-supported)
   tctx.filter = 'blur(1.5px)';
   tctx.drawImage(canvas, 0, 0);
   // Blend: 70% blurred + 30% original for a soft-focus look
@@ -64,6 +57,10 @@ function applyWatercolor(canvas: HTMLCanvasElement) {
     gd[i + 2] = clamp(gd[i + 2] + noise);
   }
   ctx.putImageData(grain, 0, 0);
+
+  // Release temp canvas memory (important on iOS)
+  temp.width = 1;
+  temp.height = 1;
 }
 
 /* ── Sketch: 灰階 + Sobel 邊緣偵測 ── */
@@ -135,16 +132,16 @@ function applyVintage(canvas: HTMLCanvasElement) {
   const w = canvas.width;
   const h = canvas.height;
 
-  // Step 1: Sepia tone
-  const imageData = ctx.getImageData(0, 0, w, h);
-  const d = imageData.data;
-  for (let i = 0; i < d.length; i += 4) {
-    const r = d[i], g = d[i + 1], b = d[i + 2];
-    d[i] = clamp(r * 0.393 + g * 0.769 + b * 0.189);
-    d[i + 1] = clamp(r * 0.349 + g * 0.686 + b * 0.168);
-    d[i + 2] = clamp(r * 0.272 + g * 0.534 + b * 0.131);
-  }
-  ctx.putImageData(imageData, 0, 0);
+  // Step 1: Sepia tone via CSS filter (replaces per-pixel matrix)
+  const temp = document.createElement('canvas');
+  temp.width = w;
+  temp.height = h;
+  const tctx = temp.getContext('2d')!;
+  tctx.filter = 'sepia(100%)';
+  tctx.drawImage(canvas, 0, 0);
+  ctx.drawImage(temp, 0, 0);
+  temp.width = 1;
+  temp.height = 1;
 
   // Step 2: Subtle paper noise
   const noiseData = ctx.getImageData(0, 0, w, h);

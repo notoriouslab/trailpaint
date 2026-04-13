@@ -82,6 +82,18 @@ export default defineConfig({
               },
             },
           },
+          // Protomaps vector tiles
+          {
+            urlPattern: /^https:\/\/api\.protomaps\.com\/tiles\/.*/i,
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'protomaps-tiles',
+              expiration: {
+                maxEntries: 500,
+                maxAgeSeconds: 60 * 60 * 24 * 30,
+              },
+            },
+          },
           // Nominatim 搜尋 API
           {
             urlPattern: /^https:\/\/nominatim\.openstreetmap\.org\/.*/i,

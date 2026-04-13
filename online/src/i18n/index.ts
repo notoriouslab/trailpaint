@@ -33,6 +33,9 @@ function detectLocale(): string {
 const locale = detectLocale();
 const messages: Messages = localeMap[locale] ?? zhTW;
 
+/** The resolved locale (e.g. 'zh-TW', 'en', 'ja'). Stable for the app lifetime. */
+export const currentLocale = locale;
+
 export function t(key: MessageKeys): string {
   return messages[key] ?? key;
 }

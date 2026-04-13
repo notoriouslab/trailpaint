@@ -28,6 +28,7 @@ export default {
   'editor.uploadPhoto': '上傳照片',
   'editor.changePhoto': '更換照片',
   'editor.removePhoto': '移除照片',
+  'editor.photoFailed': '照片處理失敗',
   'editor.delete': '刪除景點',
   'editor.deleteConfirm': '確定刪除此景點？',
 
@@ -122,6 +123,7 @@ export default {
   'basemap.satellite': '衛星圖',
   'basemap.topo': '等高線',
   'basemap.dark': '暗色地圖',
+  'basemap.multilingual': '多語地圖',
 
   // Floating menu
   'floating.more': '更多功能',

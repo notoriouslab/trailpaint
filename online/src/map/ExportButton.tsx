@@ -18,13 +18,14 @@ function drawTilesToCanvas(
   containerRect: DOMRect,
   pixelRatio: number,
 ) {
-  const tiles = mapEl.querySelectorAll<HTMLImageElement>('.leaflet-tile-pane img');
+  // Support both raster <img> tiles and vector <canvas> tiles (protomaps-leaflet)
+  const tiles = mapEl.querySelectorAll<HTMLElement>('.leaflet-tile-pane img, .leaflet-tile-pane canvas');
   for (const tile of tiles) {
-    if (!tile.complete || !tile.naturalWidth) continue;
+    if (tile instanceof HTMLImageElement && (!tile.complete || !tile.naturalWidth)) continue;
     const r = tile.getBoundingClientRect();
     try {
       ctx.drawImage(
-        tile,
+        tile as CanvasImageSource,
         (r.left - containerRect.left) * pixelRatio,
         (r.top - containerRect.top) * pixelRatio,
         r.width * pixelRatio,
@@ -54,6 +55,7 @@ function drawPhotosToCanvas(
     if (!img.complete || !img.naturalWidth) continue;
 
     const r = img.getBoundingClientRect();
+    if (r.width <= 0 || r.height <= 0) continue;
     const dx = (r.left - containerRect.left) * pixelRatio;
     const dy = (r.top - containerRect.top) * pixelRatio;
     const dw = r.width * pixelRatio;
@@ -104,8 +106,25 @@ export async function captureMap(pixelRatio = 2): Promise<HTMLImageElement> {
   const mapEl = document.querySelector('.leaflet-container') as HTMLElement;
   if (!mapEl) throw new Error('Map element not found');
 
-  // Wait for any pending image loads to settle (fixes x1 re-capture timing on iOS)
+  // Wait for pending tile loads to settle.
+  // Raster tiles need ~200ms; vector tiles (protomaps-leaflet) render to canvas
+  // asynchronously and may need longer. Poll until no new tiles appear or timeout.
   await new Promise((r) => setTimeout(r, 200));
+  const hasPendingCanvasTiles = () => {
+    const canvases = mapEl.querySelectorAll<HTMLCanvasElement>('.leaflet-tile-pane canvas');
+    for (const c of canvases) {
+      // A blank canvas has all-zero pixels; check one pixel as a quick heuristic
+      try {
+        const px = c.getContext('2d')?.getImageData(0, 0, 1, 1).data;
+        if (px && px[3] === 0) return true; // fully transparent → not yet rendered
+      } catch { /* tainted or unavailable — skip */ }
+    }
+    return false;
+  };
+  // Wait up to 1.5s extra for vector tiles (3 checks × 500ms)
+  for (let i = 0; i < 3 && hasPendingCanvasTiles(); i++) {
+    await new Promise((r) => setTimeout(r, 500));
+  }
 
   const containerRect = mapEl.getBoundingClientRect();
   // Auto-downgrade if canvas would exceed iOS limit
@@ -148,6 +167,9 @@ export async function captureMap(pixelRatio = 2): Promise<HTMLImageElement> {
         // Exclude card photos — they are drawn directly to canvas below
         // to avoid iOS Safari foreignObject decode failures at high pixelRatio.
         if (el.tagName === 'IMG' && el.closest('.spot-card__photo-wrap')) return false;
+        // Exclude vector tile canvases (protomaps-leaflet) — already drawn in Step 1.
+        // foreignObject cannot serialize canvas content, so they'd appear blank.
+        if (el.tagName === 'CANVAS' && el.closest('.leaflet-tile-pane')) return false;
         return true;
       },
     });
