@@ -29,6 +29,7 @@ export default {
   'editor.changePhoto': '写真を変更',
   'editor.removePhoto': '写真を削除',
   'editor.photoFailed': '写真の処理に失敗しました',
+  'photo.tooLarge': '写真が大きすぎます（上限5MB）',
   'editor.delete': 'スポットを削除',
   'editor.deleteConfirm': 'このスポットを削除しますか？',
 

@@ -1,6 +1,7 @@
 import { toPng } from 'html-to-image';
 import { useProjectStore } from '../core/store/useProjectStore';
 import { parseGpx } from '../core/utils/gpxParser';
+import { roundRectPath } from '../core/utils/exportRenderer';
 import { t } from '../i18n';
 
 function sanitizeFilename(name: string): string {
@@ -83,7 +84,7 @@ function drawPhotosToCanvas(
     const radius = 4 * pixelRatio;
     ctx.save();
     ctx.beginPath();
-    ctx.roundRect(dx, dy, dw, dh, radius);
+    roundRectPath(ctx, dx, dy, dw, dh, radius);
     ctx.clip();
     ctx.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh);
     ctx.restore();

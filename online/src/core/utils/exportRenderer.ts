@@ -5,7 +5,7 @@ export type ExportBorderStyle = 'classic' | 'paper' | 'minimal';
 export type ExportFormat = '1:1' | '9:16' | '4:3' | 'full';
 
 /** roundRect with fallback for Safari < 16 / Chrome < 112 */
-function roundRectPath(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) {
+export function roundRectPath(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) {
   if (ctx.roundRect) {
     ctx.roundRect(x, y, w, h, r);
   } else {

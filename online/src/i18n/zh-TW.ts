@@ -29,6 +29,7 @@ export default {
   'editor.changePhoto': '更換照片',
   'editor.removePhoto': '移除照片',
   'editor.photoFailed': '照片處理失敗',
+  'photo.tooLarge': '照片檔案太大（上限 5MB）',
   'editor.delete': '刪除景點',
   'editor.deleteConfirm': '確定刪除此景點？',
 

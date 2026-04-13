@@ -29,6 +29,7 @@ export default {
   'editor.changePhoto': 'Change Photo',
   'editor.removePhoto': 'Remove Photo',
   'editor.photoFailed': 'Photo processing failed',
+  'photo.tooLarge': 'Photo too large (max 5MB)',
   'editor.delete': 'Delete Spot',
   'editor.deleteConfirm': 'Delete this spot?',
 

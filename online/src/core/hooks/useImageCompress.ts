@@ -1,10 +1,12 @@
+import { t } from '../../i18n';
+
 const MAX_SIDE = 800;
 const QUALITY = 0.7;
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
 export async function compressImage(file: File): Promise<string> {
   if (file.size > MAX_FILE_SIZE) {
-    throw new Error(`檔案太大（${Math.round(file.size / 1024 / 1024)}MB），上限 ${MAX_FILE_SIZE / 1024 / 1024}MB`);
+    throw new Error(t('photo.tooLarge'));
   }
 
   // createImageBitmap decodes at the engine level — avoids expanding
