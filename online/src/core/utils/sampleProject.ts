@@ -9,6 +9,7 @@ export const EXAMPLE_ROUTES = [
   { file: '抹茶山聖母山莊步道.trailpaint.json', name: '抹茶山聖母山莊步道', icon: '🍵' },
   { file: '九份金瓜石步道.trailpaint.json', name: '九份金瓜石步道', icon: '🏮' },
   { file: '阿朗壹古道.trailpaint.json', name: '阿朗壹古道', icon: '🌊' },
+  { file: '白石湖步道半日遊.trailpaint.json', name: '白石湖步道半日遊', icon: '🌸' },
 ] as const;
 
 /**
