@@ -107,7 +107,7 @@ Click "Import" → "🤖 Create trail JSON with AI" → copy the prompt template
 
 ## Want a More Hand-Drawn Look?
 
-Choose a style filter when exporting (Watercolor, Sketch, Vintage), or feed the exported image to ChatGPT / Gemini with a prompt like "create a hand-drawn style map":
+After exporting, use the "Copy AI Prompt" button and paste it along with your exported image into ChatGPT / Gemini or any AI agent's image generation feature:
 
 ![Gemini_Generated_Image.jpg](./examples/Gemini_Generated_Image.jpg)
 

@@ -107,7 +107,7 @@ PWA 対応でスマホのホーム画面にインストール可能。中文 / E
 
 ## より手描き風のスタイルに
 
-書き出し時にスタイルフィルター（水彩、スケッチ、ヴィンテージ）を選ぶか、書き出した画像を ChatGPT / Gemini に渡して「手描き風の地図を作成してください」とプロンプトを入力：
+書き出し後、「AI プロンプトをコピー」ボタンで取得したプロンプトと書き出した画像を、ChatGPT / Gemini などの AI Agent の画像生成機能に渡すだけで完成：
 
 ![Gemini_Generated_Image.jpg](./examples/Gemini_Generated_Image.jpg)
 
