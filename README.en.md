@@ -14,7 +14,7 @@
 
 TrailPaint is a hand-drawn style trail map creation tool. Use the online map or upload a screenshot to produce a beautiful shareable illustrated map in minutes.
 
-Supports PWA — installable to your phone's home screen. Auto-detects Chinese / English / Japanese.
+Supports PWA — installable to your phone's home screen like a native app. Auto-detects Chinese / English / Japanese.
 
 ![trailpaint/examples/trailpaint-map.jpg](./examples/trailpaint-map.jpg)
 
@@ -78,7 +78,7 @@ Click "Import" → "🤖 Create trail JSON with AI" → copy the prompt template
 - 🎯 **Composition Adjust** — Pan and zoom controls in preview to fine-tune framing
 - 📐 **Multi-Ratio** — 1:1 (IG) / 9:16 (Story) / 4:3 / Original
 - 🖼️ **3 Border Styles** — Classic double / Paper hand-drawn / Minimal thin
-- 🎨 **4 Style Filters** — Original / Watercolor / Sketch / Vintage
+- 🎨 **Style Filters** — Original / Sketch
 - 📊 **Stats Overlay** — Distance, time, elevation gain printed on image
 - 🔗 **Share Link** — Generate shareable URL (optional short link)
 - 🤖 **AI Prompt** — Copy a stylized prompt for AI image generation
@@ -93,7 +93,7 @@ Click "Import" → "🤖 Create trail JSON with AI" → copy the prompt template
 
 - ↩️ **Undo/Redo** — Cmd+Z / Ctrl+Z
 - 🌊 **Hand-drawn Wobble** — SVG filter effect
-- 📱 **PWA** — Installable, offline cache
+- 📱 **PWA** — Installable to home screen, works like a native app
 - 🌐 **Three Languages** — Chinese / English / Japanese, auto-detected
 - ☰ **Mobile Bottom Menu** — Floating action menu when sidebar is closed
 

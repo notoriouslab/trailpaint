@@ -6,58 +6,11 @@ import type { StyleFilter } from './exportRenderer';
  */
 export function applyStyleFilter(canvas: HTMLCanvasElement, filter: StyleFilter): void {
   switch (filter) {
-    case 'watercolor':
-      applyWatercolor(canvas);
-      break;
     case 'sketch':
       applySketch(canvas);
       break;
-    case 'vintage':
-      applyVintage(canvas);
-      break;
     // 'original' — no-op
   }
-}
-
-/* ── Watercolor: 降飽和 + blur + grain ── */
-
-function applyWatercolor(canvas: HTMLCanvasElement) {
-  const ctx = canvas.getContext('2d', { willReadFrequently: true })!;
-  const w = canvas.width;
-  const h = canvas.height;
-
-  // Step 1: Desaturate + slight brightness boost via CSS filter
-  // (replaces per-pixel loop — orders of magnitude faster on large canvases)
-  const temp = document.createElement('canvas');
-  temp.width = w;
-  temp.height = h;
-  const tctx = temp.getContext('2d')!;
-  tctx.filter = 'saturate(55%) brightness(103%)';
-  tctx.drawImage(canvas, 0, 0);
-  ctx.drawImage(temp, 0, 0);
-
-  // Step 2: Soft blur via canvas filter (well-supported)
-  tctx.filter = 'blur(1.5px)';
-  tctx.drawImage(canvas, 0, 0);
-  // Blend: 70% blurred + 30% original for a soft-focus look
-  ctx.globalAlpha = 0.7;
-  ctx.drawImage(temp, 0, 0);
-  ctx.globalAlpha = 1.0;
-
-  // Step 3: Paper grain overlay
-  const grain = ctx.getImageData(0, 0, w, h);
-  const gd = grain.data;
-  for (let i = 0; i < gd.length; i += 4) {
-    const noise = (Math.random() - 0.5) * 18;
-    gd[i] = clamp(gd[i] + noise);
-    gd[i + 1] = clamp(gd[i + 1] + noise);
-    gd[i + 2] = clamp(gd[i + 2] + noise);
-  }
-  ctx.putImageData(grain, 0, 0);
-
-  // Release temp canvas memory (important on iOS)
-  temp.width = 1;
-  temp.height = 1;
 }
 
 /* ── Sketch: 灰階 + Sobel 邊緣偵測 ── */
@@ -120,53 +73,6 @@ function applySketch(canvas: HTMLCanvasElement) {
   }
 
   ctx.putImageData(output, 0, 0);
-}
-
-/* ── Vintage: sepia + vignette + 紙紋 ── */
-
-function applyVintage(canvas: HTMLCanvasElement) {
-  const ctx = canvas.getContext('2d', { willReadFrequently: true })!;
-  const w = canvas.width;
-  const h = canvas.height;
-
-  // Step 1: Gentle sepia + slight desaturation + warm brightness
-  const temp = document.createElement('canvas');
-  temp.width = w;
-  temp.height = h;
-  const tctx = temp.getContext('2d')!;
-  tctx.filter = 'sepia(40%) saturate(85%) brightness(102%)';
-  tctx.drawImage(canvas, 0, 0);
-  ctx.drawImage(temp, 0, 0);
-  temp.width = 1;
-  temp.height = 1;
-
-  // Step 2: Warm tint overlay (subtle cream wash)
-  ctx.globalAlpha = 0.08;
-  ctx.fillStyle = '#d4a060';
-  ctx.fillRect(0, 0, w, h);
-  ctx.globalAlpha = 1.0;
-
-  // Step 3: Fine paper grain
-  const noiseData = ctx.getImageData(0, 0, w, h);
-  const nd = noiseData.data;
-  for (let i = 0; i < nd.length; i += 4) {
-    const noise = (Math.random() - 0.5) * 10;
-    nd[i] = clamp(nd[i] + noise);
-    nd[i + 1] = clamp(nd[i + 1] + noise);
-    nd[i + 2] = clamp(nd[i + 2] + noise);
-  }
-  ctx.putImageData(noiseData, 0, 0);
-
-  // Step 4: Soft vignette (subtle darkening at edges)
-  const cx = w / 2;
-  const cy = h / 2;
-  const radius = Math.sqrt(cx * cx + cy * cy);
-  const vignette = ctx.createRadialGradient(cx, cy, radius * 0.5, cx, cy, radius);
-  vignette.addColorStop(0, 'rgba(0,0,0,0)');
-  vignette.addColorStop(0.75, 'rgba(0,0,0,0.08)');
-  vignette.addColorStop(1, 'rgba(0,0,0,0.25)');
-  ctx.fillStyle = vignette;
-  ctx.fillRect(0, 0, w, h);
 }
 
 /* ── Helpers ── */

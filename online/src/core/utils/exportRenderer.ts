@@ -21,7 +21,7 @@ export function roundRectPath(ctx: CanvasRenderingContext2D, x: number, y: numbe
     ctx.closePath();
   }
 }
-export type StyleFilter = 'original' | 'watercolor' | 'sketch' | 'vintage';
+export type StyleFilter = 'original' | 'sketch';
 
 /* ── Crop ── */
 
