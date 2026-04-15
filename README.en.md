@@ -162,6 +162,10 @@ Share your `.trailpaint.json` via [Issue](https://github.com/notoriouslab/trailp
 
 PRs and Issues are welcome!
 
+## Disclaimer
+
+TrailPaint is a route recording and sharing tool, not navigation software. Distance, time, elevation, and other data are automatically estimated from map and GPX data and may differ from actual conditions — for reference only. Basemap data is provided by third-party services such as OpenStreetMap and is not guaranteed to be up-to-date or fully accurate. Please plan your outdoor activities independently and always defer to actual on-site conditions.
+
 ## License
 
 GPL-3.0 License — free to use and modify. Derivative works must also be open-sourced under GPL-3.0.
