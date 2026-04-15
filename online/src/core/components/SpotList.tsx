@@ -24,16 +24,16 @@ export default function SpotList({ spots, selectedSpotId, onSelect, onSwap }: Sp
           className="spot-list__sample-btn"
           value=""
           onChange={async (e) => {
-            const file = e.target.value;
-            if (!file) return;
-            const json = await loadExampleRoute(file);
+            const name = e.target.value;
+            if (!name) return;
+            const json = await loadExampleRoute(name);
             if (json) importJSON(json);
             e.target.value = '';
           }}
         >
           <option value="">🌿 {t('spot.loadSample')}</option>
           {EXAMPLE_ROUTES.map((ex) => (
-            <option key={ex.file} value={ex.file}>{ex.icon} {ex.name}</option>
+            <option key={ex.name} value={ex.name}>{ex.icon} {ex.name}</option>
           ))}
         </select>
       </div>
