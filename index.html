@@ -3,23 +3,136 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>TrailPaint 路小繪</title>
-  <meta name="description" content="最漂亮的路線圖產出工具 — 匯出即插畫，簡單好用不複雜"/>
+  <title>TrailPaint 路小繪 — 手繪風路線地圖工具</title>
+  <meta name="description" content="在真實地圖上製作手繪風格的路線插畫。景點卡片、照片標記、GPX 匯入，匯出可分享的漂亮地圖。"/>
   <meta property="og:title" content="TrailPaint 路小繪"/>
   <meta property="og:description" content="手繪風路線地圖工具 — 景點卡片 · 路線繪製 · GPX 匯入 · 漂亮匯出"/>
-  <meta property="og:image" content="https://trailpaint.org/app/favicon.svg"/>
-  <meta http-equiv="refresh" content="0;url=app/"/>
+  <meta property="og:image" content="https://trailpaint.org/examples/trailpaint-map.jpg"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="icon" type="image/svg+xml" href="/app/favicon.svg"/>
   <style>
-    body { margin:0; background:#1c0a00; color:#fde68a; font-family:Georgia,serif; display:flex; align-items:center; justify-content:center; height:100vh; text-align:center; }
-    a { color:#fde68a; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background:#1c0a00;
+      color:#fde68a;
+      font-family: Georgia, 'Noto Serif TC', serif;
+      min-height:100vh;
+    }
+
+    .hero {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      padding:2rem 1.5rem;
+      text-align:center;
+    }
+
+    .logo { font-size:64px; margin-bottom:0.5rem; }
+
+    h1 {
+      font-size:2.2rem;
+      font-weight:700;
+      margin-bottom:0.5rem;
+      letter-spacing:0.02em;
+    }
+
+    .tagline {
+      font-size:1.1rem;
+      color:#d4a574;
+      margin-bottom:2rem;
+      line-height:1.6;
+    }
+
+    .example-img {
+      width:100%;
+      max-width:560px;
+      border-radius:12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      margin-bottom:2rem;
+    }
+
+    .features {
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem;
+      justify-content:center;
+      margin-bottom:2.5rem;
+      max-width:560px;
+    }
+
+    .feat {
+      background:rgba(253,230,138,0.08);
+      border:1px solid rgba(253,230,138,0.15);
+      border-radius:8px;
+      padding:0.5rem 1rem;
+      font-size:0.95rem;
+      color:#fde68a;
+    }
+
+    .cta {
+      display:inline-block;
+      background:#78350f;
+      color:#fde68a;
+      text-decoration:none;
+      font-size:1.2rem;
+      font-weight:700;
+      padding:0.9rem 2.5rem;
+      border-radius:10px;
+      transition: background 0.2s, transform 0.15s;
+      margin-bottom:1.5rem;
+    }
+    .cta:hover { background:#92400e; transform:translateY(-1px); }
+
+    .links {
+      font-size:0.9rem;
+      color:#a08060;
+    }
+    .links a {
+      color:#d4a574;
+      text-decoration:none;
+      border-bottom:1px solid rgba(212,165,116,0.3);
+    }
+    .links a:hover { border-bottom-color:#d4a574; }
+
+    .footer {
+      padding:1.5rem;
+      text-align:center;
+      font-size:0.8rem;
+      color:#6b5540;
+    }
   </style>
 </head>
 <body>
-  <div>
-    <p style="font-size:48px">🌿</p>
+  <div class="hero">
+    <div class="logo">🌿</div>
     <h1>TrailPaint 路小繪</h1>
-    <p>正在跳轉到線上版...</p>
-    <p><a href="app/">前往線上版</a> · <a href="trailpaint.html">下載離線版</a></p>
+    <p class="tagline">在真實地圖上畫出手繪風路線插畫<br/>匯出即作品，簡單好用不複雜</p>
+
+    <img class="example-img" src="examples/trailpaint-map.jpg"
+         alt="TrailPaint 範例 — 白石湖步道路線圖"/>
+
+    <div class="features">
+      <span class="feat">📍 景點卡片</span>
+      <span class="feat">📷 照片標記</span>
+      <span class="feat">🗺️ GPX 匯入</span>
+      <span class="feat">🎨 手繪風濾鏡</span>
+      <span class="feat">📤 高品質匯出</span>
+    </div>
+
+    <a class="cta" href="app/">開始使用</a>
+
+    <p class="links">
+      <a href="https://github.com/notoriouslab/trailpaint">GitHub</a>
+      &nbsp;·&nbsp;
+      <a href="trailpaint.html">離線版下載</a>
+    </p>
+  </div>
+
+  <div class="footer">
+    NotoriousLab
   </div>
 </body>
 </html>
