@@ -26,6 +26,9 @@ export const ICONS: IconDef[] = [
   { id: 'firstaid', emoji: '🩺', label: '急救' },
   { id: 'beach',    emoji: '🏖️', label: '海邊' },
   { id: 'amusement', emoji: '🎠', label: '遊樂' },
+  // 登山
+  { id: 'trigo',    emoji: '△',  label: '三角點' },
+  { id: 'trailhead', emoji: '🚩', label: '集合點' },
   // 通用
   { id: 'sun',      emoji: '🔍', label: '觀景' },
   { id: 'stargazing', emoji: '🔭', label: '星空' },

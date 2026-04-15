@@ -23,21 +23,28 @@ const FILTERS: StyleFilter[] = ['original', 'sketch'];
 
 /** Copy text to clipboard with iOS Safari fallback */
 async function copyToClipboard(text: string): Promise<boolean> {
-  // Try modern API first
+  // Try ClipboardItem API (better iOS PWA support)
+  if (navigator.clipboard?.write) {
+    try {
+      await navigator.clipboard.write([
+        new ClipboardItem({ 'text/plain': new Blob([text], { type: 'text/plain' }) }),
+      ]);
+      return true;
+    } catch { /* fall through */ }
+  }
+  // Try writeText
   if (navigator.clipboard?.writeText) {
     try {
       await navigator.clipboard.writeText(text);
       return true;
-    } catch {
-      // Fall through to execCommand fallback
-    }
+    } catch { /* fall through */ }
   }
-  // Fallback: hidden textarea + execCommand (works on iOS without async)
+  // Fallback: hidden textarea + execCommand
   const ta = document.createElement('textarea');
   ta.value = text;
   ta.style.cssText = 'position:fixed;opacity:0;left:-9999px';
   document.body.appendChild(ta);
-  ta.select();
+  ta.focus();
   ta.setSelectionRange(0, text.length);
   const ok = document.execCommand('copy');
   document.body.removeChild(ta);

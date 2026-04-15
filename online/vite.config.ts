@@ -33,6 +33,7 @@ export default defineConfig({
         ],
       },
       workbox: {
+        globIgnores: ['**/examples/**', '**/*.trailpaint-*'],
         runtimeCaching: [
           // Carto 圖磚
           {

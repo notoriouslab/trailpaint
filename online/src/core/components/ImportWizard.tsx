@@ -36,6 +36,14 @@ color 選項：orange, blue, green, red, purple
 座標請用真實 GPS 座標（可用 Google Maps 查）。每個景點的 cardOffset 請設不同的 x 值（如 80, -100, 90, -80）避免卡片重疊。`;
 
 async function copyToClipboard(text: string): Promise<boolean> {
+  if (navigator.clipboard?.write) {
+    try {
+      await navigator.clipboard.write([
+        new ClipboardItem({ 'text/plain': new Blob([text], { type: 'text/plain' }) }),
+      ]);
+      return true;
+    } catch { /* fall through */ }
+  }
   if (navigator.clipboard?.writeText) {
     try {
       await navigator.clipboard.writeText(text);
@@ -46,7 +54,7 @@ async function copyToClipboard(text: string): Promise<boolean> {
   ta.value = text;
   ta.style.cssText = 'position:fixed;opacity:0;left:-9999px';
   document.body.appendChild(ta);
-  ta.select();
+  ta.focus();
   ta.setSelectionRange(0, text.length);
   const ok = document.execCommand('copy');
   document.body.removeChild(ta);
