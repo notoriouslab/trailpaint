@@ -1,5 +1,6 @@
 import { useEffect, useRef, useCallback, useState, useMemo } from 'react';
 import { usePlayerStore } from './usePlayerStore';
+import { t } from '../i18n';
 
 const FLY_DURATION = 800; // ms
 
@@ -124,7 +125,7 @@ export default function PlaybackControl() {
       {showSettings && (
         <div className="playback__settings">
           <div className="playback__setting-group">
-            <span className="playback__setting-label">間隔</span>
+            <span className="playback__setting-label">{t('player.playback.interval')}</span>
             {DWELL_OPTIONS.map((opt) => (
               <button
                 key={opt.value}
@@ -136,7 +137,7 @@ export default function PlaybackControl() {
             ))}
           </div>
           <div className="playback__setting-group">
-            <span className="playback__setting-label">循環</span>
+            <span className="playback__setting-label">{t('player.playback.loop')}</span>
             {LOOP_OPTIONS.map((opt) => (
               <button
                 key={opt.value}
@@ -154,7 +155,7 @@ export default function PlaybackControl() {
           <button
             className="playback__btn"
             onClick={toggleFullscreen}
-            title={isFullscreen ? '退出全螢幕' : '全螢幕'}
+            title={isFullscreen ? t('player.fullscreen.exit') : t('player.fullscreen.enter')}
           >
             {isFullscreen ? '⊡' : '⛶'}
           </button>
@@ -162,7 +163,7 @@ export default function PlaybackControl() {
         <button
           className="playback__btn"
           onClick={handlePlayPause}
-          title={playing ? '暫停' : '播放'}
+          title={playing ? t('player.playback.pause') : t('player.playback.play')}
         >
           {playing ? '⏸' : '▶'}
         </button>
@@ -182,7 +183,7 @@ export default function PlaybackControl() {
         <button
           className={`playback__gear${showSettings ? ' playback__gear--active' : ''}`}
           onClick={() => setShowSettings(!showSettings)}
-          title="播放設定"
+          title={t('player.playback.settings')}
         >
           ⚙
         </button>

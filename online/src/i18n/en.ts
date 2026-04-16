@@ -182,6 +182,27 @@ export default {
   'onboarding.start': 'Get Started',
   'onboarding.skip': 'Skip',
 
+  // Player
+  'player.title': 'TrailPaint Story Player',
+  'player.landing.desc': 'Drop a .trailpaint.json file here, or choose a file to load',
+  'player.landing.btn': 'Choose File',
+  'player.error.timeout': 'Loading timed out, please refresh',
+  'player.error.load': 'Failed to load',
+  'player.error.share': 'Unable to parse share link',
+  'player.error.format': 'Invalid link format',
+  'player.error.tooLarge': 'File too large (max 20MB)',
+  'player.error.parse': 'Invalid file format',
+  'player.error.read': 'Failed to read file',
+  'player.spots': 'Spots',
+  'player.playback.interval': 'Interval',
+  'player.playback.loop': 'Loop',
+  'player.playback.settings': 'Playback settings',
+  'player.playback.play': 'Play',
+  'player.playback.pause': 'Pause',
+  'player.fullscreen.enter': 'Fullscreen',
+  'player.fullscreen.exit': 'Exit fullscreen',
+  'player.embed.empty': 'No story loaded',
+
   // Icons
   'icon.leaf': 'Plant',
   'icon.flower': 'Flower',

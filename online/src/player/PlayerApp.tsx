@@ -2,6 +2,7 @@ import { useEffect, useCallback, useState } from 'react';
 import { usePlayerStore } from './usePlayerStore';
 import { migrateProject } from '../core/utils/migrateProject';
 import { decodeShareLink } from '../core/utils/shareLink';
+import { t } from '../i18n';
 import PlayerMap from './PlayerMap';
 import SpotListPanel from './SpotListPanel';
 import PlaybackControl from './PlaybackControl';
@@ -43,7 +44,7 @@ export default function PlayerApp() {
         })
         .catch((e) => {
           const msg = e instanceof Error && e.name === 'TimeoutError'
-            ? '載入逾時，請重新整理' : '載入失敗';
+            ? t('player.error.timeout') : t('player.error.load');
           setError(msg);
         });
       return;
@@ -65,8 +66,8 @@ export default function PlayerApp() {
     if (!hash || !hash.startsWith('#share=')) return;
     decodeShareLink(hash).then((p) => {
       if (p) loadProject(p);
-      else setError('無法解析分享連結');
-    }).catch(() => setError('連結格式錯誤'));
+      else setError(t('player.error.share'));
+    }).catch(() => setError(t('player.error.format')));
   }, [params, loadProject, setError]);
 
   // Autoplay: trigger after project loads
@@ -79,7 +80,7 @@ export default function PlayerApp() {
   // Handle file drop / file input
   const handleFile = useCallback((file: File) => {
     if (file.size > 20 * 1024 * 1024) {
-      setError('檔案太大（上限 20MB）');
+      setError(t('player.error.tooLarge'));
       return;
     }
     const reader = new FileReader();
@@ -89,10 +90,10 @@ export default function PlayerApp() {
         const data = migrateProject(raw);
         loadProject(data);
       } catch (e) {
-        setError(`載入失敗：${e instanceof Error ? e.message : '檔案格式不正確'}`);
+        setError(`${t('player.error.load')}：${e instanceof Error ? e.message : t('player.error.parse')}`);
       }
     };
-    reader.onerror = () => setError('讀取檔案失敗');
+    reader.onerror = () => setError(t('player.error.read'));
     reader.readAsText(file);
   }, [loadProject, setError]);
 
@@ -120,7 +121,7 @@ export default function PlayerApp() {
           <div className="player-embed-empty">
             {error
               ? <span className="player-embed-empty__text">{error}</span>
-              : <span className="player-embed-empty__text">No story loaded</span>}
+              : <span className="player-embed-empty__text">{t('player.embed.empty')}</span>}
           </div>
         </div>
       );
@@ -135,12 +136,12 @@ export default function PlayerApp() {
           onDragOver={handleDragOver}
         >
           <div className="player-landing__card">
-            <h1 className="player-landing__title">TrailPaint Story Player</h1>
+            <h1 className="player-landing__title">{t('player.title')}</h1>
             <p className="player-landing__desc">
-              拖曳 .trailpaint.json 到這裡，或選擇檔案載入
+              {t('player.landing.desc')}
             </p>
             <label className="player-landing__btn">
-              選擇檔案
+              {t('player.landing.btn')}
               <input
                 type="file"
                 accept=".json,.trailpaint.json"

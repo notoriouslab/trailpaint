@@ -182,6 +182,27 @@ export default {
   'onboarding.start': 'はじめる',
   'onboarding.skip': 'スキップ',
 
+  // Player
+  'player.title': 'TrailPaint ストーリープレイヤー',
+  'player.landing.desc': '.trailpaint.json ファイルをここにドロップ、またはファイルを選択',
+  'player.landing.btn': 'ファイルを選択',
+  'player.error.timeout': '読み込みがタイムアウトしました。再読み込みしてください',
+  'player.error.load': '読み込みに失敗しました',
+  'player.error.share': '共有リンクを解析できません',
+  'player.error.format': 'リンクの形式が正しくありません',
+  'player.error.tooLarge': 'ファイルが大きすぎます（上限 20MB）',
+  'player.error.parse': 'ファイル形式が正しくありません',
+  'player.error.read': 'ファイルの読み取りに失敗しました',
+  'player.spots': 'スポット',
+  'player.playback.interval': '間隔',
+  'player.playback.loop': 'ループ',
+  'player.playback.settings': '再生設定',
+  'player.playback.play': '再生',
+  'player.playback.pause': '一時停止',
+  'player.fullscreen.enter': 'フルスクリーン',
+  'player.fullscreen.exit': 'フルスクリーン終了',
+  'player.embed.empty': 'No story loaded',
+
   // Icons
   'icon.leaf': '植物',
   'icon.flower': '花',

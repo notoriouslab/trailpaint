@@ -182,6 +182,27 @@ export default {
   'onboarding.start': '開始使用',
   'onboarding.skip': '跳過引導',
 
+  // Player
+  'player.title': 'TrailPaint Story Player',
+  'player.landing.desc': '拖曳 .trailpaint.json 到這裡，或選擇檔案載入',
+  'player.landing.btn': '選擇檔案',
+  'player.error.timeout': '載入逾時，請重新整理',
+  'player.error.load': '載入失敗',
+  'player.error.share': '無法解析分享連結',
+  'player.error.format': '連結格式錯誤',
+  'player.error.tooLarge': '檔案太大（上限 20MB）',
+  'player.error.parse': '檔案格式不正確',
+  'player.error.read': '讀取檔案失敗',
+  'player.spots': '景點',
+  'player.playback.interval': '間隔',
+  'player.playback.loop': '循環',
+  'player.playback.settings': '播放設定',
+  'player.playback.play': '播放',
+  'player.playback.pause': '暫停',
+  'player.fullscreen.enter': '全螢幕',
+  'player.fullscreen.exit': '退出全螢幕',
+  'player.embed.empty': 'No story loaded',
+
   // Icons
   'icon.leaf': '植物',
   'icon.flower': '花卉',

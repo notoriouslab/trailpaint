@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { usePlayerStore } from './usePlayerStore';
 import { ICONS } from '../core/icons';
+import { t } from '../i18n';
 
 export default function SpotListPanel() {
   const project = usePlayerStore((s) => s.project)!;
@@ -20,7 +21,7 @@ export default function SpotListPanel() {
     <div className="spot-panel">
       <div className="spot-panel__header">
         <h2 className="spot-panel__title">{project.name}</h2>
-        <span className="spot-panel__count">{project.spots.length} 景點</span>
+        <span className="spot-panel__count">{project.spots.length} {t('player.spots')}</span>
       </div>
       <div className="spot-panel__list" ref={listRef}>
         {project.spots.map((spot, i) => {
