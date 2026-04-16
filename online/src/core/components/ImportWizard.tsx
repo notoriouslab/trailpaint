@@ -150,6 +150,7 @@ export default function ImportWizard({ onClose, onLoadImage }: ImportWizardProps
 
   const [dragOver, setDragOver] = useState(false);
 
+<<<<<<< HEAD
   const handleWizardDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
     setDragOver(false);
@@ -169,22 +170,61 @@ export default function ImportWizard({ onClose, onLoadImage }: ImportWizardProps
   }, [importGpx, importJSON, onClose, onLoadImage]);
 
   const handleWizardDragOver = useCallback((e: React.DragEvent) => {
+=======
+  const handleDrop = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setDragOver(false);
+    const file = e.dataTransfer.files?.[0];
+    if (file) {
+      if (file.type.startsWith('image/')) {
+        onLoadImage(file);
+        onClose();
+      } else if (file.name.endsWith('.json')) {
+        file.text().then(text => {
+          importJSON(text);
+          onClose();
+        });
+      } else if (file.name.endsWith('.gpx')) {
+        file.text().then(text => {
+          const data = parseGpx(text);
+          importGpx(data);
+          onClose();
+        });
+      }
+    }
+  }, [importGpx, importJSON, onClose, onLoadImage]);
+
+  const handleDragOver = useCallback((e: React.DragEvent) => {
+>>>>>>> 54551e3 (feat: enhance UI/UX and add guidebook playback functionality)
     e.preventDefault();
     setDragOver(true);
   }, []);
 
+<<<<<<< HEAD
   const handleWizardDragLeave = useCallback(() => {
+=======
+  const handleDragLeave = useCallback(() => {
+>>>>>>> 54551e3 (feat: enhance UI/UX and add guidebook playback functionality)
     setDragOver(false);
   }, []);
 
   return (
     <div className="import-wizard__backdrop" onClick={onClose}>
+<<<<<<< HEAD
       <div
         className={`import-wizard${dragOver ? ' import-wizard--drag-over' : ''}`}
         onClick={(e) => e.stopPropagation()}
         onDrop={handleWizardDrop}
         onDragOver={handleWizardDragOver}
         onDragLeave={handleWizardDragLeave}
+=======
+      <div 
+        className={`import-wizard${dragOver ? ' import-wizard--drag-over' : ''}`}
+        onClick={(e) => e.stopPropagation()}
+        onDrop={handleDrop}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+>>>>>>> 54551e3 (feat: enhance UI/UX and add guidebook playback functionality)
       >
         {/* Header */}
         <div className="import-wizard__header">

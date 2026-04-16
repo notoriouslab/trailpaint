@@ -29,7 +29,11 @@ interface ProjectState {
   updateSpot: (id: string, patch: Partial<Spot>) => void;
   removeSpot: (id: string) => void;
   swapSpots: (index: number, direction: 'up' | 'down') => void;
+<<<<<<< HEAD
   reorderSpots: (fromIndex: number, toIndex: number) => void;
+=======
+  reorderSpots: (startIndex: number, endIndex: number) => void;
+>>>>>>> 54551e3 (feat: enhance UI/UX and add guidebook playback functionality)
   setSelectedSpot: (id: string | null) => void;
 
   // Route actions
@@ -64,6 +68,19 @@ interface ProjectState {
   watermark: boolean;
   toggleHandDrawn: () => void;
   toggleWatermark: () => void;
+
+  // Slideshow / Playback
+  playing: boolean;
+  playIndex: number;
+  playMode: 'manual' | 'auto';
+  playInterval: number; // in ms
+  playLoop: boolean;
+  togglePlay: () => void;
+  setPlayMode: (mode: 'manual' | 'auto') => void;
+  setPlayInterval: (ms: number) => void;
+  setPlayLoop: (loop: boolean) => void;
+  nextSpot: () => void;
+  prevSpot: () => void;
 
   // Persistence
   exportJSON: () => string;
@@ -118,6 +135,8 @@ function migrateProject(data: Record<string, unknown>): Project {
     spots.push({
       ...(s as unknown as Spot),
       photo: safePhoto,
+      photoY: typeof s.photoY === 'number' ? Math.max(0, Math.min(100, s.photoY)) : undefined,
+      customEmoji: typeof s.customEmoji === 'string' ? s.customEmoji : undefined,
       num: typeof s.num === 'number' && s.num > 0 ? Math.round(s.num) : spots.length + 1,
       cardOffset: s.cardOffset && typeof (s.cardOffset as Record<string, unknown>).x === 'number'
         && typeof (s.cardOffset as Record<string, unknown>).y === 'number'
@@ -128,7 +147,7 @@ function migrateProject(data: Record<string, unknown>): Project {
 
   const p = { ...(data as unknown as Project), spots };
   if (!p.routes || !Array.isArray(p.routes)) {
-    return { ...p, version: 2, routes: [] };
+    p.routes = [];
   }
   if (p.routes.length > 50) throw new Error('Too many routes (max 50)');
   const validColorIds = ROUTE_COLORS.map((c) => c.id);
@@ -150,7 +169,16 @@ function migrateProject(data: Record<string, unknown>): Project {
       elevations: Array.isArray(r.elevations) ? (r.elevations as number[]) : null,
     });
   }
-  return { ...p, version: 2, routes };
+
+  // Handle playback settings
+  const playback = data.playback as Record<string, unknown> | undefined;
+  const safePlayback = playback ? {
+    mode: (playback.mode === 'manual' ? 'manual' : 'auto') as 'auto' | 'manual',
+    interval: typeof playback.interval === 'number' ? Math.max(1000, Math.min(60000, playback.interval)) : 2000,
+    loop: typeof playback.loop === 'boolean' ? playback.loop : true,
+  } : undefined;
+
+  return { ...p, version: 2, routes, playback: safePlayback };
 }
 
 export const useProjectStore = create<ProjectState>()(
@@ -168,6 +196,66 @@ export const useProjectStore = create<ProjectState>()(
   bgImageSize: null as { w: number; h: number } | null,
   handDrawn: true,
   watermark: true,
+  playing: false,
+  playIndex: -1,
+  playMode: 'auto',
+  playInterval: 2000,
+  playLoop: true,
+
+  togglePlay: () => {
+    const s = get();
+    if (s.playing) {
+      set({ playing: false, playIndex: -1, selectedSpotId: null });
+    } else {
+      const idx = s.project.spots.length > 0 ? 0 : -1;
+      set({ playing: true, playIndex: idx, mode: 'select' });
+      if (idx !== -1) {
+        const spot = s.project.spots[idx];
+        set({ selectedSpotId: spot.id });
+        // Trigger flyto if needed
+        const currentZoom = s.project.zoom;
+        const targetZoom = Math.max(currentZoom, 15); // ensure detail is visible
+        set({ pendingFlyTo: { center: spot.latlng, zoom: targetZoom } });
+      }
+    }
+  },
+
+  setPlayMode: (playMode) => set({ playMode }),
+  setPlayInterval: (playInterval) => set({ playInterval }),
+  setPlayLoop: (playLoop) => set({ playLoop }),
+
+  nextSpot: () => {
+    const s = get();
+    if (s.project.spots.length === 0) return;
+    let nextIdx = s.playIndex + 1;
+    if (nextIdx >= s.project.spots.length) {
+      if (s.playLoop) {
+        nextIdx = 0;
+      } else {
+        set({ playing: false, playIndex: -1, selectedSpotId: null });
+        return;
+      }
+    }
+    const spot = s.project.spots[nextIdx];
+    set({ playIndex: nextIdx, selectedSpotId: spot.id });
+    
+    // Zoom/Pan logic: fly to spot if zoomed out or if user wants detail
+    const currentZoom = s.project.zoom;
+    const targetZoom = Math.max(currentZoom, 15.5);
+    set({ pendingFlyTo: { center: spot.latlng, zoom: targetZoom } });
+  },
+
+  prevSpot: () => {
+    const s = get();
+    if (s.project.spots.length === 0) return;
+    let nextIdx = s.playIndex - 1;
+    if (nextIdx < 0) {
+      nextIdx = s.project.spots.length - 1;
+    }
+    const spot = s.project.spots[nextIdx];
+    set({ playIndex: nextIdx, selectedSpotId: spot.id });
+    set({ pendingFlyTo: { center: spot.latlng, zoom: Math.max(s.project.zoom, 15.5) } });
+  },
 
   // ── Spot actions ──
 
@@ -222,11 +310,19 @@ export const useProjectStore = create<ProjectState>()(
       return { project: { ...s.project, spots: renumber(spots) } };
     }),
 
+<<<<<<< HEAD
   reorderSpots: (fromIndex, toIndex) =>
     set((s) => {
       const spots = [...s.project.spots];
       const [moved] = spots.splice(fromIndex, 1);
       spots.splice(toIndex, 0, moved);
+=======
+  reorderSpots: (startIndex, endIndex) =>
+    set((s) => {
+      const spots = [...s.project.spots];
+      const [removed] = spots.splice(startIndex, 1);
+      spots.splice(endIndex, 0, removed);
+>>>>>>> 54551e3 (feat: enhance UI/UX and add guidebook playback functionality)
       return { project: { ...s.project, spots: renumber(spots) } };
     }),
 

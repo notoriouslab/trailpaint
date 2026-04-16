@@ -107,22 +107,8 @@ export default function App() {
     }
   }, []);
 
-  const handleDragOver = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    setDragOver(true);
-  }, []);
-
-  const handleDragLeave = useCallback(() => {
-    setDragOver(false);
-  }, []);
-
   return (
-    <div
-      className={`app${dragOver ? ' app--drag-over' : ''}`}
-      onDrop={handleDrop}
-      onDragOver={handleDragOver}
-      onDragLeave={handleDragLeave}
-    >
+    <div className="app">
       <Sidebar
         onFlyTo={flyTo}
         onOpenExportPreview={handleOpenExportPreview}

@@ -48,7 +48,7 @@ function splitName(displayName: string): { name: string; address: string } {
 }
 
 interface SearchBoxProps {
-  onSelect: (latlng: [number, number], name: string) => void;
+  onSelect: (latlng: [number, number], name: string, addSpot: boolean) => void;
 }
 
 export default function SearchBox({ onSelect }: SearchBoxProps) {
@@ -106,11 +106,11 @@ export default function SearchBox({ onSelect }: SearchBoxProps) {
     timerRef.current = setTimeout(() => search(value), 400);
   };
 
-  const handleSelect = (r: SearchResult) => {
+  const handleSelect = (r: SearchResult, isPinClick: boolean) => {
     const lat = parseFloat(r.lat);
     const lon = parseFloat(r.lon);
     if (!isFinite(lat) || !isFinite(lon)) return;
-    onSelect([lat, lon], r.display_name);
+    onSelect([lat, lon], r.display_name, isPinClick);
     setQuery('');
     setResults([]);
     setSearched(false);
@@ -153,9 +153,19 @@ export default function SearchBox({ onSelect }: SearchBoxProps) {
               <div
                 key={i}
                 className="search-box__item"
-                onClick={() => handleSelect(r)}
+                onClick={() => handleSelect(r, false)}
               >
-                <span className="search-box__item-icon">{icon}</span>
+                <span
+                  className="search-box__item-icon"
+                  style={{ cursor: 'copy', background: 'rgba(0,0,0,0.05)', borderRadius: '4px' }}
+                  title="Add as spot"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleSelect(r, true);
+                  }}
+                >
+                  {icon}
+                </span>
                 <div className="search-box__item-text">
                   <div className="search-box__item-name">{name}</div>
                   {address && <div className="search-box__item-addr">{address}</div>}

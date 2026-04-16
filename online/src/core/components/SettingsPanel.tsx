@@ -1,6 +1,13 @@
+import { useProjectStore } from '../store/useProjectStore';
 import { t } from '../../i18n';
 
 export default function SettingsPanel() {
+  const { 
+    playMode, setPlayMode, 
+    playInterval, setPlayInterval, 
+    playLoop, setPlayLoop 
+  } = useProjectStore();
+
   return (
     <div className="settings-panel">
       {/* Quick guide */}
@@ -9,6 +16,47 @@ export default function SettingsPanel() {
         <p>📍 {t('info.step1')}</p>
         <p>🖊️ {t('info.step2')}</p>
         <p>📷 {t('info.step3')}</p>
+      </div>
+
+      {/* Playback Settings */}
+      <div className="settings-panel__title">{t('playback.title')}</div>
+      <div className="settings-panel__playback">
+        <div className="settings-panel__row">
+          <label>{t('playback.mode')}</label>
+          <select 
+            className="settings-panel__select"
+            value={playMode}
+            onChange={(e) => setPlayMode(e.target.value as 'auto' | 'manual')}
+          >
+            <option value="auto">{t('playback.mode.auto')}</option>
+            <option value="manual">{t('playback.mode.manual')}</option>
+          </select>
+        </div>
+        
+        {playMode === 'auto' && (
+          <div className="settings-panel__row">
+            <label>{t('playback.interval')}</label>
+            <div className="settings-panel__input-group">
+              <input 
+                type="number" 
+                min="0.5" 
+                step="0.5"
+                max="60"
+                value={playInterval / 1000}
+                onChange={(e) => setPlayInterval(Number(e.target.value) * 1000)}
+              />
+            </div>
+          </div>
+        )}
+
+        <label className="settings-panel__toggle">
+          <input 
+            type="checkbox" 
+            checked={playLoop}
+            onChange={(e) => setPlayLoop(e.target.checked)}
+          />
+          {t('playback.loop')}
+        </label>
       </div>
 
       {/* Services */}

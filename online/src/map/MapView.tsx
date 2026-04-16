@@ -8,6 +8,7 @@ import HandDrawnFilter from './HandDrawnFilter';
 import BasemapSwitcher from './BasemapSwitcher';
 import LocateButton from './LocateButton';
 import FitAllButton from './FitAllButton';
+import PlaybackManager from './PlaybackManager';
 import Watermark from './Watermark';
 import { setMapInstance } from './useMapRef';
 import 'leaflet/dist/leaflet.css';
@@ -20,9 +21,16 @@ function MapClickHandler() {
   const addDrawingPoint = useProjectStore((s) => s.addDrawingPoint);
   const setSelectedSpot = useProjectStore((s) => s.setSelectedSpot);
   const setSelectedRoute = useProjectStore((s) => s.setSelectedRoute);
+  const playing = useProjectStore((s) => s.playing);
+  const playMode = useProjectStore((s) => s.playMode);
+  const nextSpot = useProjectStore((s) => s.nextSpot);
 
   useMapEvents({
     click(e) {
+      if (playing && playMode === 'manual') {
+        nextSpot();
+        return;
+      }
       const latlng: [number, number] = [e.latlng.lat, e.latlng.lng];
       switch (mode) {
         case 'select':
@@ -62,7 +70,7 @@ function MapSync() {
 
   useEffect(() => {
     if (pendingFlyTo) {
-      map.flyTo(pendingFlyTo.center, pendingFlyTo.zoom, { duration: 0.8 });
+      map.flyTo(pendingFlyTo.center, pendingFlyTo.zoom, { duration: 1 });
       clearPendingFlyTo();
     }
   }, [pendingFlyTo, map, clearPendingFlyTo]);
@@ -98,6 +106,7 @@ export default function MapView() {
       <HandDrawnFilter />
       <MapClickHandler />
       <MapSync />
+      <PlaybackManager />
       <RouteLayer />
       <DrawingPreview />
       <SpotMarkers />

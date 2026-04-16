@@ -19,7 +19,7 @@ export const ICONS: IconDef[] = [
   { id: 'toilet',   emoji: '🚻', label: '廁所' },
   { id: 'bus',      emoji: '🚌', label: '站牌' },
   { id: 'rest',     emoji: '🛋️', label: '休憩' },
-  { id: 'camp',     emoji: '⛺', label: '住宿' },
+  { id: 'camp',     emoji: '⛺', label: '露營' },
   { id: 'food',     emoji: '🥤', label: '餐廳' },
   { id: 'beer',     emoji: '🍺', label: '酒吧' },
   { id: 'hotspring', emoji: '♨️', label: '溫泉' },
@@ -42,6 +42,9 @@ export const ICONS: IconDef[] = [
   { id: 'pin',      emoji: '📍', label: '標記' },
 ];
 
-export function getIcon(id: string): IconDef {
-  return ICONS.find(i => i.id === id) ?? ICONS[ICONS.length - 1];
+export function getIcon(id: string, customEmoji?: string): IconDef {
+  if (id === 'custom' && customEmoji) {
+    return { id: 'custom', emoji: customEmoji, label: '自訂' };
+  }
+  return ICONS.find(i => i.id === id) ?? ICONS.find(i => i.id === 'pin') ?? ICONS[0];
 }

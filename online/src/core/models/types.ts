@@ -7,7 +7,9 @@ export interface Spot {
   title: string;
   desc: string;
   photo: string | null; // base64 data URL (compressed)
+  photoY?: number; // 0-100 vertical object-position percentage
   iconId: string;       // key into ICONS
+  customEmoji?: string; // fallback if iconId is 'custom'
   cardOffset: { x: number; y: number }; // pixel offset from pin (screen coords)
 }
 
@@ -18,6 +20,11 @@ export interface Project {
   zoom: number;
   spots: Spot[];
   routes: Route[];
+  playback?: {
+    mode: 'auto' | 'manual';
+    interval: number;
+    loop: boolean;
+  };
 }
 
 export type Mode = 'select' | 'addSpot' | 'drawRoute';

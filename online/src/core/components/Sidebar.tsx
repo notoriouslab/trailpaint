@@ -29,6 +29,8 @@ export default function Sidebar({ onFlyTo, onOpenExportPreview, onSave, onOpenIm
   const updateSpot = useProjectStore((s) => s.updateSpot);
   const removeSpot = useProjectStore((s) => s.removeSpot);
   const swapSpots = useProjectStore((s) => s.swapSpots);
+  const playing = useProjectStore((s) => s.playing);
+  const togglePlay = useProjectStore((s) => s.togglePlay);
   const baseMode = useProjectStore((s) => s.baseMode);
   const clearBackgroundImage = useProjectStore((s) => s.clearBackgroundImage);
 
@@ -40,14 +42,27 @@ export default function Sidebar({ onFlyTo, onOpenExportPreview, onSave, onOpenIm
   const selectedSpot = spots.find((s) => s.id === selectedSpotId) ?? null;
   const selectedRoute = routes.find((r) => r.id === selectedRouteId) ?? null;
 
+  const addSpot = useProjectStore((s) => s.addSpot);
+  const spotsCount = useProjectStore((s) => s.project.spots.length);
+
   const handleSelect = (id: string) => {
     setSelectedSpot(id);
     const spot = spots.find((s) => s.id === id);
     if (spot) onFlyTo(spot.latlng);
   };
 
-  const handleSearchSelect = (latlng: [number, number]) => {
+  const handleSearchSelect = (latlng: [number, number], name: string, shouldAdd: boolean) => {
     onFlyTo(latlng, 14);
+    if (shouldAdd) {
+      addSpot(latlng);
+      setTimeout(() => {
+        const state = useProjectStore.getState();
+        const newSpotId = state.selectedSpotId;
+        if (newSpotId) {
+          updateSpot(newSpotId, { title: name.split(',')[0] });
+        }
+      }, 0);
+    }
   };
 
   const handleUndo = () => useProjectStore.temporal.getState().undo();
@@ -55,26 +70,36 @@ export default function Sidebar({ onFlyTo, onOpenExportPreview, onSave, onOpenIm
 
   return (
     <>
-      <button
-        className="sidebar-toggle"
-        onClick={() => setSidebarOpen(!sidebarOpen)}
-      >
-        {sidebarOpen ? '◀' : '▶'}
-      </button>
-
-      {sidebarOpen && (
-        <div className="sidebar-backdrop" onClick={() => setSidebarOpen(false)} />
+      {!sidebarOpen && (
+        <button
+          className="sidebar-toggle"
+          onClick={() => setSidebarOpen(true)}
+        >
+          ▶
+        </button>
       )}
+
+      {sidebarOpen && <div className="sidebar-backdrop" onClick={() => setSidebarOpen(false)} />}
 
       <div className={`sidebar${sidebarOpen ? '' : ' sidebar--closed'}`}>
         <div className="sidebar__header">
-          <span className="sidebar__logo">🌿</span>
-          <input
-            className="sidebar__project-name"
-            value={projectName}
-            onChange={(e) => setProjectName(e.target.value)}
-            placeholder="Untitled"
-          />
+          <div className="sidebar__title-row">
+            <span className="sidebar__logo">🌿</span>
+            <input
+              className="sidebar__project-name"
+              value={projectName}
+              onChange={(e) => setProjectName(e.target.value)}
+              placeholder="Trail Name"
+            />
+            {sidebarOpen && (
+              <button
+                className="sidebar-toggle-inline"
+                onClick={() => setSidebarOpen(false)}
+              >
+                ◀
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Toolbar row 1 */}
@@ -88,6 +113,13 @@ export default function Sidebar({ onFlyTo, onOpenExportPreview, onSave, onOpenIm
         <div className="sidebar__toolbar sidebar__toolbar--secondary">
           <button className="sidebar__tool-btn" onClick={handleUndo} title={t('undo')}>↩</button>
           <button className="sidebar__tool-btn" onClick={handleRedo} title={t('redo')}>↪</button>
+          <button 
+            className={`sidebar__tool-btn${playing ? ' sidebar__tool-btn--active' : ''}`}
+            onClick={togglePlay} 
+            title={playing ? t('playback.stop') : t('playback.play')}
+          >
+            {playing ? '⏹️' : '▶️'}
+          </button>
           {isImageMode && (
             <button className="sidebar__tool-btn" onClick={() => {
               const hasData = spots.length > 0 || routes.length > 0;

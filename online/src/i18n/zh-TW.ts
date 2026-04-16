@@ -105,13 +105,23 @@ export default {
   'import.loadJsonDesc': '開啟 .trailpaint.json 檔案',
   'import.importGpx': '匯入 GPX',
   'import.importGpxDesc': '匯入 GPS 軌跡檔',
+  'import.dragHint': '💡 也可以直接拖曳檔案到此視窗匯入',
   'import.ai.title': '🤖 用 AI 製作路線 JSON',
   'import.ai.desc': '把行程描述貼給 ChatGPT 或 Claude，它會幫你生成可匯入的 JSON 檔案。',
   'import.ai.copyPrompt': '複製提示詞模板',
   'import.ai.promptCopied': '已複製！',
   'import.ai.schemaTitle': 'JSON 格式說明',
-  'import.dragHint': '💡 也可以直接拖曳檔案到此視窗匯入',
   'map.fitAll': '縮放至全域',
+
+  // Playback
+  'playback.title': '播放設定',
+  'playback.mode': '播放模式',
+  'playback.mode.auto': '自動播放',
+  'playback.mode.manual': '手動點選',
+  'playback.interval': '間隔秒數',
+  'playback.loop': '循環播放',
+  'playback.play': '播放',
+  'playback.stop': '停止',
 
   // Background
   'bg.upload': '上傳底圖',
@@ -186,6 +196,7 @@ export default {
   'icon.toilet': '廁所',
   'icon.bus': '站牌',
   'icon.rest': '休憩',
+  'icon.camp': '露營',
   'icon.food': '餐廳',
   'icon.beer': '酒吧',
   'icon.hotspring': '溫泉',
@@ -199,4 +210,6 @@ export default {
   'icon.warning': '注意',
   'icon.info': '說明',
   'icon.pin': '標記',
+  'icon.custom': '自訂',
+  'editor.customEmoji': '自訂 Emoji',
 } as const;

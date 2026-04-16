@@ -67,6 +67,21 @@
   transform: rotate(0.5deg);
 }
 
+.spot-card__title-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  color: #3b1a06;
+  text-align: center;
+  padding: 0;
+  outline: none;
+  border-bottom: 2px dashed #c96a00;
+  transform: rotate(0.5deg);
+}
+
 /* Photo area */
 .spot-card__photo-wrap {
   margin-top: 2px;

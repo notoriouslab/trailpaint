@@ -46,14 +46,20 @@
 /* Header */
 .sidebar__header {
   display: flex;
+  padding: 12px;
+  border-bottom: 1.5px solid #d4a574;
+}
+
+.sidebar__title-row {
+  display: flex;
   align-items: center;
   gap: 8px;
-  padding: 16px 16px 12px;
-  border-bottom: 1px solid #e5d5c0;
+  width: 100%;
 }
 
 .sidebar__logo {
-  font-size: 28px;
+  font-size: 20px;
+  flex-shrink: 0;
 }
 
 .sidebar__title {
@@ -65,17 +71,34 @@
 
 .sidebar__project-name {
   flex: 1;
-  font-family: Georgia, serif;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  font-family: inherit;
   font-size: 18px;
   font-weight: bold;
   color: #78350f;
-  background: transparent;
-  border: 1.5px solid transparent;
-  border-radius: 4px;
-  padding: 2px 6px;
   outline: none;
-  transition: border-color 0.15s;
-  min-width: 0;
+}
+
+.sidebar-toggle-inline {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #d4a574;
+  background: #fdf8ef;
+  color: #78350f;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.sidebar-toggle-inline:hover {
+  background: #fef3c7;
 }
 
 .sidebar__project-name:hover {
@@ -742,22 +765,72 @@
   min-height: 60px;
 }
 
-/* Icon grid */
-.spot-editor__icons {
+/* Icon Picker */
+.spot-editor__icon-picker {
+  margin-top: 4px;
+}
+
+.spot-editor__icon-toggle {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: #fff;
+  border: 1.5px solid #d4a574;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.spot-editor__icon-toggle:hover {
+  background: #fef8ef;
+  border-color: #b45309;
+}
+
+.spot-editor__current-emoji {
+  font-size: 20px;
+}
+
+.spot-editor__current-label {
+  flex: 1;
+  text-align: left;
+  font-size: 14px;
+  color: #78350f;
+  font-weight: normal;
+}
+
+.spot-editor__caret {
+  font-size: 10px;
+  color: #d4a574;
+}
+
+.spot-editor__icons-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: 4px;
+  padding: 8px;
+  background: #fff;
+  border: 1.5px solid #d4a574;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .spot-editor__icon-btn {
-  width: 36px;
-  height: 36px;
+  aspect-ratio: 1;
+  width: 100%;
   font-size: 18px;
+  padding: 0;
   border: 1.5px solid transparent;
   background: #fef9e7;
   border-radius: 6px;
   cursor: pointer;
   transition: border-color 0.12s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .spot-editor__icon-btn:hover {
@@ -769,16 +842,35 @@
   background: #fde68a;
 }
 
-/* Photo preview */
 .spot-editor__photo-preview {
   position: relative;
 }
 
-.spot-editor__photo-preview img {
+.spot-editor__photo-container {
   width: 100%;
-  max-height: 160px;
-  object-fit: cover;
+  height: 160px;
   border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+  border: 1.5px solid #d4a574;
+}
+
+.spot-editor__photo-container:active {
+  cursor: grabbing;
+}
+
+.spot-editor__photo-container--dragging {
+  border-color: #b45309;
+  box-shadow: 0 0 0 2px rgba(180, 83, 9, 0.2);
+}
+
+.spot-editor__photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  transition: object-position 0.1s;
 }
 
 .spot-editor__photo-remove {
@@ -926,3 +1018,56 @@
     z-index: 899;
   }
 }
+
+/* Playback Settings */
+.settings-panel__playback {
+  margin: 8px 0 20px 0;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1.5px solid #efe2d0;
+}
+
+.settings-panel__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.settings-panel__row label {
+  font-size: 13px;
+  color: #3b1a06;
+  white-space: nowrap;
+}
+
+.settings-panel__select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #d4a574;
+  background: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  color: #3b1a06;
+  outline: none;
+}
+
+.settings-panel__input-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.settings-panel__input-group input {
+  width: 60px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #d4a574;
+  background: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  color: #3b1a06;
+  outline: none;
+}
+

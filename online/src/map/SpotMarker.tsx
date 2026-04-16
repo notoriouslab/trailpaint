@@ -28,11 +28,14 @@ export default function SpotMarker({ spot }: { spot: Spot }) {
   const updateSpot = useProjectStore((s) => s.updateSpot);
   const markerRef = useRef<L.Marker | null>(null);
 
+  const playing = useProjectStore((s) => s.playing);
   const selected = selectedSpotId === spot.id;
-  const icon = getIcon(spot.iconId);
+  const icon = getIcon(spot.iconId, spot.customEmoji);
+
+  const opacity = playing ? (selected ? 1 : 0.3) : 1;
 
   const pinIcon = L.divIcon({
-    className: 'spot-pin',
+    className: `spot-pin${playing && !selected ? ' spot-pin--dimmed' : ''}`,
     html: `<div class="spot-pin__circle"><span>${escapeHtml(icon.emoji)}</span></div>`,
     iconSize: [32, 32],
     iconAnchor: [16, 16],
@@ -50,11 +53,13 @@ export default function SpotMarker({ spot }: { spot: Spot }) {
       <Marker
         position={spot.latlng}
         icon={pinIcon}
-        draggable
+        opacity={opacity}
+        draggable={!playing}
         ref={markerRef}
         eventHandlers={{
           dragend: onMarkerDragEnd,
           click: (e) => {
+            if (playing) return;
             L.DomEvent.stopPropagation(e);
             setSelectedSpot(spot.id);
           },
@@ -63,8 +68,10 @@ export default function SpotMarker({ spot }: { spot: Spot }) {
       <CardOverlay
         spot={spot}
         selected={selected}
+        playing={playing}
         map={map}
         onSelect={() => setSelectedSpot(spot.id)}
+        onUpdate={(patch) => updateSpot(spot.id, patch)}
         onUpdateOffset={(offset) => updateSpot(spot.id, { cardOffset: offset })}
       />
     </>
@@ -76,12 +83,14 @@ export default function SpotMarker({ spot }: { spot: Spot }) {
 interface CardOverlayProps {
   spot: Spot;
   selected: boolean;
+  playing: boolean;
   map: L.Map;
   onSelect: () => void;
+  onUpdate: (patch: Partial<Spot>) => void;
   onUpdateOffset: (offset: { x: number; y: number }) => void;
 }
 
-function CardOverlay({ spot, selected, map, onSelect, onUpdateOffset }: CardOverlayProps) {
+function CardOverlay({ spot, selected, playing, map, onSelect, onUpdate, onUpdateOffset }: CardOverlayProps) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<SVGLineElement>(null);
   const dragRef = useRef<{ mx: number; my: number; ox: number; oy: number } | null>(null);
@@ -193,10 +202,14 @@ function CardOverlay({ spot, selected, map, onSelect, onUpdateOffset }: CardOver
   return createPortal(
     <div
       ref={wrapRef}
-      className="spot-overlay"
+      className={`spot-overlay${playing && !selected ? ' spot-overlay--dimmed' : ''}`}
       onMouseDown={onMouseDown}
       onTouchStart={onTouchStart}
-      onClick={(e) => { e.stopPropagation(); onSelect(); }}
+      onClick={(e) => { 
+        if (playing) return;
+        e.stopPropagation(); 
+        onSelect(); 
+      }}
     >
       {/* Connector */}
       <svg className="spot-connector">
@@ -207,7 +220,7 @@ function CardOverlay({ spot, selected, map, onSelect, onUpdateOffset }: CardOver
           strokeDasharray="6 4"
         />
       </svg>
-      <SpotCard spot={spot} selected={selected} onSelect={onSelect} />
+      <SpotCard spot={spot} selected={selected} onSelect={onSelect} onUpdate={onUpdate} />
     </div>,
     map.getContainer(),
   );

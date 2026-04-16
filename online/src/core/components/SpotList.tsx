@@ -16,7 +16,11 @@ export default function SpotList({ spots, selectedSpotId, onSelect, onSwap }: Sp
   const reorderSpots = useProjectStore((s) => s.reorderSpots);
 
   const handleDragStart = (e: React.DragEvent, index: number) => {
+<<<<<<< HEAD
     e.dataTransfer.setData('text/plain', index.toString());
+=======
+    e.dataTransfer.setData('index', index.toString());
+>>>>>>> 54551e3 (feat: enhance UI/UX and add guidebook playback functionality)
     e.dataTransfer.effectAllowed = 'move';
   };
 
@@ -27,7 +31,11 @@ export default function SpotList({ spots, selectedSpotId, onSelect, onSwap }: Sp
 
   const handleDrop = (e: React.DragEvent, targetIndex: number) => {
     e.preventDefault();
+<<<<<<< HEAD
     const sourceIndex = parseInt(e.dataTransfer.getData('text/plain'), 10);
+=======
+    const sourceIndex = parseInt(e.dataTransfer.getData('index'), 10);
+>>>>>>> 54551e3 (feat: enhance UI/UX and add guidebook playback functionality)
     if (!isNaN(sourceIndex) && sourceIndex !== targetIndex) {
       reorderSpots(sourceIndex, targetIndex);
     }
@@ -62,7 +70,7 @@ export default function SpotList({ spots, selectedSpotId, onSelect, onSwap }: Sp
   return (
     <div className="spot-list">
       {spots.map((spot, i) => {
-        const icon = getIcon(spot.iconId);
+        const icon = getIcon(spot.iconId, spot.customEmoji);
         const active = spot.id === selectedSpotId;
         return (
           <div

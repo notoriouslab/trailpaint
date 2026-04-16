@@ -15,6 +15,8 @@ function compactProject(project: Project): Record<string, unknown> {
       };
       if (s.desc) o.d = s.desc;
       if (s.cardOffset.x !== 0 || s.cardOffset.y !== 0) o.o = [s.cardOffset.x, s.cardOffset.y];
+      if (s.photoY !== undefined) o.y = s.photoY;
+      if (s.customEmoji) o.e = s.customEmoji;
       return o;
     }),
     r: project.routes.map((r) => {
@@ -25,6 +27,11 @@ function compactProject(project: Project): Record<string, unknown> {
       if (r.elevations) o.e = r.elevations;
       return o;
     }),
+    pb: project.playback ? {
+      m: project.playback.mode,
+      t: project.playback.interval,
+      l: project.playback.loop,
+    } : undefined,
   };
 }
 
@@ -39,7 +46,9 @@ function expandProject(c: Record<string, unknown>): Project {
     title: s.t as string,
     desc: (s.d as string) ?? '',
     photo: null,
+    photoY: s.y as number | undefined,
     iconId: s.k as string,
+    customEmoji: s.e as string | undefined,
     cardOffset: s.o ? { x: (s.o as number[])[0], y: (s.o as number[])[1] } : { x: 0, y: -60 },
   })) ?? [];
   const routes = (c.r as Record<string, unknown>[])?.map((r) => ({
@@ -49,6 +58,12 @@ function expandProject(c: Record<string, unknown>): Project {
     color: r.c as string,
     elevations: (r.e as number[] | null) ?? null,
   })) ?? [];
+  const playback = c.pb ? {
+    mode: (c.pb as any).m as 'auto' | 'manual',
+    interval: (c.pb as any).t as number,
+    loop: (c.pb as any).l as boolean,
+  } : undefined;
+
   return {
     version: (c.v as 1 | 2) ?? 2,
     name: c.n as string,
@@ -56,6 +71,7 @@ function expandProject(c: Record<string, unknown>): Project {
     zoom: c.z as number,
     spots,
     routes,
+    playback,
   };
 }
 
