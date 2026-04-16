@@ -47,6 +47,8 @@
       "AI 提示詞 4 種風格",
       "分享連結",
       "海拔剖面圖與路線統計",
+      "Story Player 故事播放器（自動播放、嵌入、全螢幕）",
+      "Story Page 故事集合展示（台灣宣教士腳蹤等）",
       "多語支援（繁中/英/日）"
     ],
     "author": {
@@ -193,13 +195,19 @@
       <span class="feat">🗺️ GPX 匯入</span>
       <span class="feat">🎨 手繪風濾鏡</span>
       <span class="feat">📤 高品質匯出</span>
+      <span class="feat">▶ 故事播放器</span>
     </div>
 
-    <a class="cta" href="app/">開始使用</a>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:1.5rem;">
+      <a class="cta" href="app/">開始繪製</a>
+      <a class="cta" href="stories/" style="background:#3b1a06;">探索故事地圖</a>
+    </div>
+
+    <p style="font-size:0.85rem;color:#a08060;margin-bottom:1.5rem;">
+      或直接開啟 <a href="app/player/" style="color:#d4a574;border-bottom:1px solid rgba(212,165,116,0.3);">Story Player</a> 播放你的 .trailpaint.json
+    </p>
 
     <p class="links">
-      <a href="stories/">探索故事地圖</a>
-      &nbsp;·&nbsp;
       <a href="https://github.com/notoriouslab/trailpaint">GitHub</a>
       &nbsp;·&nbsp;
       <a href="trailpaint.html">離線版下載</a>
@@ -228,8 +236,18 @@
       <li>手機、平板、電腦都能使用</li>
     </ul>
 
+    <h2>Story Player 故事播放器</h2>
+    <p>用 TrailPaint 製作的路線地圖，可以透過 Story Player 以動態播放模式呈現：地圖自動飛到每個景點，依序展示照片與說明，搭配歷史地圖疊加，讓路線變成一段故事旅程。</p>
+    <ul>
+      <li>自動播放：fly-to 動畫 + popup 卡片 + 可設定間隔與循環</li>
+      <li>可嵌入：用 iframe 嵌入任何網頁、部落格、教會網站</li>
+      <li>故事集合：多條路線組合成主題故事（如台灣宣教士腳蹤）</li>
+      <li>全螢幕：適合展場、教學投影使用</li>
+    </ul>
+
     <h2>怎麼開始？</h2>
-    <p>點擊上方「開始使用」進入線上版，搜尋地點、畫路線、放景點卡片，完成後匯出你的手繪地圖。也可以從範例步道開始體驗，或是把行程描述丟給 ChatGPT / Claude，讓 AI 幫你產生景點資料再匯入。完全免費，資料儲存在你的瀏覽器本地，不會上傳到任何伺服器。</p>
+    <p>點擊上方「開始繪製」進入線上版，搜尋地點、畫路線、放景點卡片，完成後匯出你的手繪地圖。也可以從範例步道開始體驗，或是把行程描述丟給 ChatGPT / Claude，讓 AI 幫你產生景點資料再匯入。完全免費，資料儲存在你的瀏覽器本地，不會上傳到任何伺服器。</p>
+    <p>想看動態播放？在編輯器的選單中點「▶ 故事模式」，或直接開啟 <a href="stories/" style="color:#d4a574;">故事地圖</a> 瀏覽精選內容。</p>
   </section>
 
   <footer class="footer">

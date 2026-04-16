@@ -219,9 +219,30 @@ a:hover { text-decoration: underline; }
   color: #6b5c4c;
   line-height: 1.5;
   border-bottom: 1px solid #e5dcc8;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  max-height: 40px; /* ~2 lines */
+  cursor: pointer;
+  transition: max-height 0.2s ease;
+  position: relative;
+}
+
+.story-desc::after {
+  content: '...more';
+  position: absolute;
+  right: 24px;
+  bottom: 4px;
+  font-size: 11px;
+  color: #b45309;
+  background: #fdf8ef;
+  padding-left: 4px;
+}
+
+.story-desc--expanded {
+  max-height: 200px;
+}
+
+.story-desc--expanded::after {
+  content: none;
 }
 
 .story-content {

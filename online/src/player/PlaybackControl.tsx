@@ -150,6 +150,15 @@ export default function PlaybackControl() {
         </div>
       )}
       <div className="playback">
+        {canFullscreen && (
+          <button
+            className="playback__btn"
+            onClick={toggleFullscreen}
+            title={isFullscreen ? '退出全螢幕' : '全螢幕'}
+          >
+            {isFullscreen ? '⊡' : '⛶'}
+          </button>
+        )}
         <button
           className="playback__btn"
           onClick={handlePlayPause}
@@ -177,15 +186,6 @@ export default function PlaybackControl() {
         >
           ⚙
         </button>
-        {canFullscreen && (
-          <button
-            className="playback__gear"
-            onClick={toggleFullscreen}
-            title={isFullscreen ? '退出全螢幕' : '全螢幕'}
-          >
-            {isFullscreen ? '⊡' : '⛶'}
-          </button>
-        )}
       </div>
     </>
   );

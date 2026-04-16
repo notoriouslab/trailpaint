@@ -58,8 +58,11 @@ async function renderStoryPage(opts) {
       var src = playerBase + '?embed=1&src=' + storyBase + s.data + useAutoplay;
       iframe.src = src;
 
-      // Update description
-      if (descEl) descEl.textContent = s.description;
+      // Update description (collapse when switching)
+      if (descEl) {
+        descEl.textContent = s.description;
+        descEl.classList.remove('story-desc--expanded');
+      }
 
       // Update tabs active state
       if (tabsEl) {
@@ -82,6 +85,13 @@ async function renderStoryPage(opts) {
       tabsEl.addEventListener('click', function (e) {
         var btn = e.target.closest('.story-tab');
         if (btn) activate(Number(btn.dataset.index));
+      });
+    }
+
+    // Description click to expand/collapse
+    if (descEl) {
+      descEl.addEventListener('click', function () {
+        descEl.classList.toggle('story-desc--expanded');
       });
     }
 

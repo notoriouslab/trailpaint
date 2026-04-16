@@ -11,7 +11,7 @@
 [![i18n](https://img.shields.io/badge/i18n-中文%20%7C%20EN%20%7C%20日本語-green.svg)](https://trailpaint.org/app/)
 [![Deploy](https://img.shields.io/badge/deploy-GitHub%20Pages-222.svg)](https://trailpaint.org/app/)
 
-**[Try it now →](https://trailpaint.org/app/)**
+**[Try it now →](https://trailpaint.org/app/)** · **[Explore Stories →](https://trailpaint.org/stories/)** · **[Story Player →](https://trailpaint.org/app/player/)**
 
 ---
 
@@ -106,6 +106,23 @@ Click "Import" → "🤖 Create trail JSON with AI" → copy the prompt template
 
 - 🏁 **Fit All** — One-click zoom to show all spots and routes (including card bounds calculation)
 - ↕️ **Drag Reorder** — Drag spots in the list to reorder
+
+### Story Player
+
+- ▶ **Auto-play** — Fly-to animation with popup cards showing photos and descriptions
+- ⚙ **Playback settings** — Interval (2s/4s/6s/8s), loop count (1×/2×/3×/∞)
+- 🗺️ **Historical map overlay** — Three historical map layers from Academia Sinica (1897/1921/1966)
+- 📺 **Fullscreen** — Ideal for exhibitions, teaching, and presentations
+- 🔗 **iframe embed** — `?embed=1&src=path` to embed in any webpage
+- ▶ **Story mode** — One-click jump from Editor to Player
+
+### Story Page
+
+- 📖 **Story collections** — `/stories/` showcases curated story maps
+- 👤 **Character switching** — Horizontal tabs to switch between routes
+- 🌏 **OG preview** — Auto-generates title + thumbnail when shared on social media
+- 📱 **Responsive** — Desktop / tablet / mobile adaptive layout
+- 🇹🇼 **Taiwan Missionaries** — Mackay, Barclay, Landsborough, Maxwell, Brougham — 5 missionaries' footprints
 
 ### POI Icons (31 types)
 

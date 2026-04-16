@@ -82,6 +82,17 @@ export default function Sidebar({ onFlyTo, onOpenExportPreview, onSave, onOpenIm
           <button className="sidebar__tool-btn" onClick={onOpenExportPreview}>{t('app.export')}</button>
           <button className="sidebar__tool-btn" onClick={onSave}>{t('app.save')}</button>
           <button className="sidebar__tool-btn" onClick={onOpenImportWizard}>{t('app.import')}</button>
+          {spots.length > 0 && (
+            <button className="sidebar__tool-btn" onClick={() => {
+              const project = useProjectStore.getState().project;
+              try {
+                localStorage.setItem('trailpaint-player-project', JSON.stringify(project));
+                window.open('/app/player/', '_blank');
+              } catch {
+                window.open('/app/player/', '_blank');
+              }
+            }}>{t('app.storyMode')}</button>
+          )}
         </div>
 
         {/* Toolbar row 2 */}
