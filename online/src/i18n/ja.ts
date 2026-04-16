@@ -2,6 +2,7 @@ export default {
   // App
   'app.title': 'TrailPaint トレイルペイント',
   'app.export': '📷 書き出し',
+  'app.storyMode': '▶ ストーリーモード',
   'app.save': '💾 保存',
   'app.load': '📂 読み込み',
 
@@ -133,6 +134,14 @@ export default {
   'basemap.topo': '等高線',
   'basemap.dark': 'ダークモード',
   'basemap.multilingual': '多言語地図',
+
+  // Overlay
+  'overlay.title': '歴史地図',
+  'overlay.none': 'なし',
+  'overlay.opacity': '透明度',
+  'overlay.jm200k1897': '臺灣輿図 1897',
+  'overlay.jm20k1921': '堡図 1921',
+  'overlay.corona1966': '衛星画像 1966',
 
   // Floating menu
   'floating.more': 'その他の機能',

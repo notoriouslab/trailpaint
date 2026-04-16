@@ -4,7 +4,7 @@ import type { Project } from '../models/types';
  * Compact a project for sharing: strip photos, shorten keys, omit defaults.
  */
 function compactProject(project: Project): Record<string, unknown> {
-  return {
+  const out: Record<string, unknown> = {
     v: project.version,
     n: project.name,
     c: project.center,
@@ -26,6 +26,10 @@ function compactProject(project: Project): Record<string, unknown> {
       return o;
     }),
   };
+  if (project.overlay) {
+    out.ov = { i: project.overlay.id, o: project.overlay.opacity };
+  }
+  return out;
 }
 
 /**
@@ -49,7 +53,7 @@ function expandProject(c: Record<string, unknown>): Project {
     color: r.c as string,
     elevations: (r.e as number[] | null) ?? null,
   })) ?? [];
-  return {
+  const project: Project = {
     version: (c.v as 1 | 2) ?? 2,
     name: c.n as string,
     center: c.c as [number, number],
@@ -57,14 +61,24 @@ function expandProject(c: Record<string, unknown>): Project {
     spots,
     routes,
   };
+  if (c.ov && typeof c.ov === 'object') {
+    const ov = c.ov as Record<string, unknown>;
+    if (typeof ov.i === 'string' && typeof ov.o === 'number') {
+      project.overlay = { id: ov.i, opacity: ov.o };
+    }
+  }
+  return project;
 }
 
 /**
  * Encode a project into a compressed URL hash (long URL, no third-party).
  */
-export async function encodeShareLink(project: Project): Promise<string> {
+export async function encodeShareLink(project: Project, targetPath?: string): Promise<string> {
   const compact = compactProject(project);
   const json = JSON.stringify(compact);
+  const basePath = targetPath
+    ? `${window.location.origin}${targetPath}`
+    : `${window.location.origin}${window.location.pathname}`;
 
   try {
     const blob = new Blob([new TextEncoder().encode(json)]);
@@ -72,10 +86,10 @@ export async function encodeShareLink(project: Project): Promise<string> {
     const compressed = blob.stream().pipeThrough(cs);
     const buffer = await new Response(compressed).arrayBuffer();
     const base64 = uint8ToBase64(new Uint8Array(buffer));
-    return `${window.location.origin}${window.location.pathname}#share=${base64}`;
+    return `${basePath}#share=${base64}`;
   } catch {
     const base64 = uint8ToBase64(new TextEncoder().encode(json));
-    return `${window.location.origin}${window.location.pathname}#share=raw.${base64}`;
+    return `${basePath}#share=raw.${base64}`;
   }
 }
 

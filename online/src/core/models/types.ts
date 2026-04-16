@@ -11,6 +11,11 @@ export interface Spot {
   cardOffset: { x: number; y: number }; // pixel offset from pin (screen coords)
 }
 
+export interface OverlaySetting {
+  id: string;
+  opacity: number;
+}
+
 export interface Project {
   version: 1 | 2;
   name: string;
@@ -18,6 +23,7 @@ export interface Project {
   zoom: number;
   spots: Spot[];
   routes: Route[];
+  overlay?: OverlaySetting;
 }
 
 export type Mode = 'select' | 'addSpot' | 'drawRoute';

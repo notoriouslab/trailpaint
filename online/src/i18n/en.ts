@@ -2,6 +2,7 @@ export default {
   // App
   'app.title': 'TrailPaint',
   'app.export': '📷 Export',
+  'app.storyMode': '▶ Story Mode',
   'app.save': '💾 Save',
   'app.load': '📂 Load',
 
@@ -133,6 +134,14 @@ export default {
   'basemap.topo': 'Topographic',
   'basemap.dark': 'Dark',
   'basemap.multilingual': 'Multilingual',
+
+  // Overlay
+  'overlay.title': 'Historical Overlay',
+  'overlay.none': 'None',
+  'overlay.opacity': 'Opacity',
+  'overlay.jm200k1897': 'Taiwan Map 1897',
+  'overlay.jm20k1921': 'Colonial Map 1921',
+  'overlay.corona1966': 'Satellite 1966',
 
   // Floating menu
   'floating.more': 'More actions',

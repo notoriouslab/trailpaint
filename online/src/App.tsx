@@ -8,7 +8,7 @@ import ExportPreview from './core/components/ExportPreview';
 import ImportWizard from './core/components/ImportWizard';
 import FloatingActions from './core/components/FloatingActions';
 import { captureMap, saveProject } from './map/ExportButton';
-import { decodeShareLink } from './core/utils/shareLink';
+import { decodeShareLink, encodeShareLink } from './core/utils/shareLink';
 import { flyTo, panBy, zoomBy } from './map/useMapRef';
 import { useUndoRedoKeys } from './core/hooks/useUndoRedo';
 import { useProjectStore } from './core/store/useProjectStore';
@@ -139,6 +139,19 @@ export default function App() {
               onSave={saveProject}
               onImport={handleOpenImportWizard}
               onToggleSettings={() => useProjectStore.getState().setSidebarOpen(true)}
+              onStoryMode={useProjectStore.getState().project.spots.length > 0 ? () => {
+                const project = useProjectStore.getState().project;
+                try {
+                  localStorage.setItem('trailpaint-player-project', JSON.stringify(project));
+                  window.open('/app/player/', '_blank');
+                } catch {
+                  // localStorage full — fallback to share link (no photos)
+                  const w = window.open('about:blank', '_blank');
+                  if (w) {
+                    encodeShareLink(project, '/app/player/').then(url => { w.location.href = url; });
+                  }
+                }
+              } : undefined}
             />
           </div>
         )}

@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -34,6 +35,7 @@ export default defineConfig({
       },
       workbox: {
         globIgnores: ['**/examples/**', '**/*.trailpaint-*'],
+        navigateFallbackDenylist: [/^\/app\/player/],
         runtimeCaching: [
           // Carto 圖磚
           {
@@ -125,5 +127,11 @@ export default defineConfig({
   build: {
     outDir: '../app',
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        app: resolve(__dirname, 'index.html'),
+        player: resolve(__dirname, 'player/index.html'),
+      },
+    },
   },
 })

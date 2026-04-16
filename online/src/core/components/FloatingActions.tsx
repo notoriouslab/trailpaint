@@ -7,9 +7,10 @@ interface FloatingActionsProps {
   onSave: () => void;
   onImport: () => void;
   onToggleSettings: () => void;
+  onStoryMode?: () => void;
 }
 
-export default function FloatingActions({ onExport, onSave, onImport, onToggleSettings }: FloatingActionsProps) {
+export default function FloatingActions({ onExport, onSave, onImport, onToggleSettings, onStoryMode }: FloatingActionsProps) {
   const [open, setOpen] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
 
@@ -56,6 +57,9 @@ export default function FloatingActions({ onExport, onSave, onImport, onToggleSe
           <button className="floating-actions__item" onClick={() => doAction(onExport)}>{t('app.export')}</button>
           <button className="floating-actions__item" onClick={() => doAction(onSave)}>{t('app.save')}</button>
           <button className="floating-actions__item" onClick={() => doAction(onImport)}>{t('app.import')}</button>
+          {onStoryMode && (
+            <button className="floating-actions__item" onClick={() => doAction(onStoryMode)}>{t('app.storyMode')}</button>
+          )}
           <button className="floating-actions__item" onClick={() => doAction(onToggleSettings)}>⚙️ {t('settings.title')}</button>
         </div>
       )}

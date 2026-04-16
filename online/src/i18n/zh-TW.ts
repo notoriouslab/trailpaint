@@ -2,6 +2,7 @@ export default {
   // App
   'app.title': 'TrailPaint 路小繪',
   'app.export': '📷 匯出',
+  'app.storyMode': '▶ 故事模式',
   'app.save': '💾 存檔',
   'app.load': '📂 載入',
 
@@ -133,6 +134,14 @@ export default {
   'basemap.topo': '等高線',
   'basemap.dark': '暗色地圖',
   'basemap.multilingual': '多語地圖',
+
+  // Overlay
+  'overlay.title': '歷史圖層',
+  'overlay.none': '無',
+  'overlay.opacity': '透明度',
+  'overlay.jm200k1897': '臺灣輿圖 1897',
+  'overlay.jm20k1921': '堡圖 1921',
+  'overlay.corona1966': '衛星影像 1966',
 
   // Floating menu
   'floating.more': '更多功能',

@@ -171,8 +171,10 @@
   background: #fff;
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  overflow: hidden;
-  min-width: 120px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-width: 160px;
+  max-height: 60vh;
 }
 
 .basemap-switcher__option {
@@ -200,6 +202,68 @@
 .basemap-switcher__option--active {
   background: #fde68a;
   font-weight: bold;
+}
+
+/* ── Overlay section ── */
+
+.basemap-switcher__toggle--overlay {
+  border-color: #b85a00;
+  box-shadow: 0 0 0 2px rgba(184, 90, 0, 0.3), 0 1px 5px rgba(0,0,0,0.15);
+}
+
+.basemap-switcher__separator {
+  padding: 6px 14px 4px;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  color: #8b6914;
+  letter-spacing: 0.5px;
+  border-top: 1px solid #e5dcc8;
+  background: #faf5eb;
+}
+
+.basemap-switcher__slider-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px 10px;
+  border-top: 1px solid #f0e6d6;
+}
+
+.basemap-switcher__slider-label {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  color: #8b6914;
+  white-space: nowrap;
+}
+
+.basemap-switcher__slider {
+  flex: 1;
+  height: 4px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #e5dcc8;
+  border-radius: 2px;
+  outline: none;
+}
+
+.basemap-switcher__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #b85a00;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.basemap-switcher__slider-value {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  color: #3b1a06;
+  min-width: 32px;
+  text-align: right;
 }
 
 /* Connector SVG — sized to overflow so line can reach pin */

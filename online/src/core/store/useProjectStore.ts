@@ -1,7 +1,8 @@
 import { create } from 'zustand';
 import { temporal } from 'zundo';
-import type { Project, Spot, Mode } from '../models/types';
+import type { Project, Spot, Mode, OverlaySetting } from '../models/types';
 import { DEFAULT_CARD_OFFSET, DEFAULT_CENTER, DEFAULT_ZOOM } from '../models/types';
+import { migrateProject } from '../utils/migrateProject';
 import type { Route } from '../models/routes';
 import { ROUTE_COLORS } from '../models/routes';
 import { reverseGeocode } from '../utils/reverseGeocode';
@@ -59,6 +60,9 @@ interface ProjectState {
   setBackgroundImage: (dataUrl: string, width: number, height: number) => void;
   clearBackgroundImage: () => void;
 
+  // Overlay
+  setOverlay: (overlay: OverlaySetting | null) => void;
+
   // Settings
   handDrawn: boolean;
   watermark: boolean;
@@ -83,74 +87,6 @@ function createEmptyProject(): Project {
     spots: [],
     routes: [],
   };
-}
-
-// Validate and migrate project data
-function migrateProject(data: Record<string, unknown>): Project {
-  // Basic schema validation
-  if (!data || typeof data !== 'object') throw new Error('Invalid project data');
-  if (!Array.isArray(data.spots)) throw new Error('Missing or invalid spots');
-  if (!Array.isArray(data.center) || data.center.length !== 2) throw new Error('Missing or invalid center');
-  // Clamp center to valid lat/lng range
-  data.center = [
-    Math.max(-90, Math.min(90, Number(data.center[0]) || 0)),
-    Math.max(-180, Math.min(180, Number(data.center[1]) || 0)),
-  ];
-  if (typeof data.zoom !== 'number' || isNaN(data.zoom)) throw new Error('Missing or invalid zoom');
-  if (typeof data.name !== 'string') data.name = 'Untitled';
-
-  // Semantic limits — prevent UI freeze from absurd data
-  if (data.spots.length > 200) throw new Error('Too many spots (max 200)');
-
-  // Validate each spot — skip invalid ones instead of rejecting entire import
-  const spots: Spot[] = [];
-  for (const raw of data.spots as unknown[]) {
-    if (!raw || typeof raw !== 'object') continue;
-    const s = raw as Record<string, unknown>;
-    if (!s.id || typeof s.id !== 'string') continue;
-    if (!Array.isArray(s.latlng) || s.latlng.length !== 2) continue;
-    if (typeof s.latlng[0] !== 'number' || typeof s.latlng[1] !== 'number'
-      || !isFinite(s.latlng[0] as number) || !isFinite(s.latlng[1] as number)) continue;
-    // Only allow null or data:image/ base64 photos (block external URLs / tracking pixels)
-    const rawPhoto = (s as Record<string, unknown>).photo;
-    const safePhoto = typeof rawPhoto === 'string' && rawPhoto.startsWith('data:image/') ? rawPhoto : null;
-
-    spots.push({
-      ...(s as unknown as Spot),
-      photo: safePhoto,
-      num: typeof s.num === 'number' && s.num > 0 ? Math.round(s.num) : spots.length + 1,
-      cardOffset: s.cardOffset && typeof (s.cardOffset as Record<string, unknown>).x === 'number'
-        && typeof (s.cardOffset as Record<string, unknown>).y === 'number'
-        ? (s.cardOffset as Spot['cardOffset'])
-        : { ...DEFAULT_CARD_OFFSET },
-    });
-  }
-
-  const p = { ...(data as unknown as Project), spots };
-  if (!p.routes || !Array.isArray(p.routes)) {
-    return { ...p, version: 2, routes: [] };
-  }
-  if (p.routes.length > 50) throw new Error('Too many routes (max 50)');
-  const validColorIds = ROUTE_COLORS.map((c) => c.id);
-  const routes: Route[] = [];
-  for (const raw of p.routes as unknown as unknown[]) {
-    if (!raw || typeof raw !== 'object') continue;
-    const r = raw as Record<string, unknown>;
-    if (!r.id || typeof r.id !== 'string') continue;
-    if (!Array.isArray(r.pts) || r.pts.length < 2 || r.pts.length > 5000) continue;
-    const validPts = (r.pts as unknown[]).every(
-      (pt) => Array.isArray(pt) && pt.length === 2 && typeof pt[0] === 'number' && typeof pt[1] === 'number'
-        && isFinite(pt[0] as number) && isFinite(pt[1] as number),
-    );
-    if (!validPts) continue;
-    routes.push({
-      ...(r as unknown as Route),
-      name: (r.name as string) ?? '',
-      color: validColorIds.includes(r.color as string) ? (r.color as string) : ROUTE_COLORS[0].id,
-      elevations: Array.isArray(r.elevations) ? (r.elevations as number[]) : null,
-    });
-  }
-  return { ...p, version: 2, routes };
 }
 
 export const useProjectStore = create<ProjectState>()(
@@ -484,6 +420,11 @@ export const useProjectStore = create<ProjectState>()(
       // Clear spots/routes from pixel coordinate system
       project: { ...s.project, spots: [], routes: [] },
     })),
+
+  // ── Overlay ──
+
+  setOverlay: (overlay) =>
+    set((s) => ({ project: { ...s.project, overlay: overlay ?? undefined } })),
 
   // ── Settings ──
 
