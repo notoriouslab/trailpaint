@@ -210,6 +210,4 @@ export default {
   'icon.warning': 'Caution',
   'icon.info': 'Info',
   'icon.pin': 'Marker',
-  'icon.custom': 'Custom',
-  'editor.customEmoji': 'Custom Emoji',
 } as const;

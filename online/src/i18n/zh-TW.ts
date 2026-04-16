@@ -210,6 +210,4 @@ export default {
   'icon.warning': '注意',
   'icon.info': '說明',
   'icon.pin': '標記',
-  'icon.custom': '自訂',
-  'editor.customEmoji': '自訂 Emoji',
 } as const;
