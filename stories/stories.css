@@ -276,6 +276,40 @@ a:hover { text-decoration: underline; }
   .story-desc { padding: 6px 16px; }
 }
 
+/* ── Music Button ── */
+
+.story-music-btn {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #d4a574;
+  background: rgba(253, 248, 239, 0.9);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  z-index: 1000;
+  transition: all 0.2s;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.story-music-btn:hover {
+  border-color: #b45309;
+  transform: scale(1.1);
+}
+
+.story-music-btn--playing {
+  background: #b45309;
+  border-color: #b45309;
+  color: #fff;
+}
+
 /* ── Loading / Error ── */
 
 .stories-loading {

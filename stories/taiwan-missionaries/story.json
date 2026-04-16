@@ -5,6 +5,12 @@
   "description": "十九世紀下半葉，一群來自歐美的宣教士踏上台灣這片土地。他們建立教會、設立醫院與學校、翻譯聖經、創造白話字，深刻影響了台灣的現代化進程。這張互動地圖帶你沿著他們的足跡，走過淡水、台南、彰化，看見那個年代的故事。",
   "locale": "zh-TW",
   "cover": "cover.jpg",
+  "music": {
+    "src": "../music/lasting-hope.m4a",
+    "title": "Lasting Hope — Kevin MacLeod",
+    "credit": "Kevin MacLeod (incompetech.com)",
+    "license": "CC BY 3.0"
+  },
   "og": {
     "title": "台灣宣教士腳蹤 — TrailPaint Stories",
     "description": "探索十九世紀宣教士在台灣的足跡互動地圖",

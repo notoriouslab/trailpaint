@@ -98,7 +98,44 @@ async function renderStoryPage(opts) {
     // Load first story
     activate(0);
 
+    // Background music (optional, configured in story.json)
+    if (story.music && story.music.src) {
+      initStoryMusic(story.music, storyBase);
+    }
+
   } catch (e) {
     if (descEl) descEl.textContent = '無法載入故事資料';
   }
+}
+
+/* ── Background Music ── */
+
+function initStoryMusic(music, storyBase) {
+  var audio = document.createElement('audio');
+  audio.src = (storyBase || '') + music.src;
+  audio.loop = true;
+  audio.preload = 'none';
+  audio.volume = 0.3;
+
+  var btn = document.createElement('button');
+  btn.className = 'story-music-btn';
+  btn.title = music.title || 'Background Music';
+  btn.textContent = '\uD83C\uDFB5'; // 🎵
+  btn.setAttribute('aria-label', 'Toggle background music');
+  document.body.appendChild(btn);
+
+  var playing = false;
+
+  btn.addEventListener('click', function () {
+    if (playing) {
+      audio.pause();
+      btn.textContent = '\uD83C\uDFB5'; // 🎵
+      btn.classList.remove('story-music-btn--playing');
+    } else {
+      audio.play().catch(function () {});
+      btn.textContent = '\uD83D\uDD07'; // 🔇
+      btn.classList.add('story-music-btn--playing');
+    }
+    playing = !playing;
+  });
 }
