@@ -31,10 +31,33 @@
 | 4 彰化教會 | 蘭大衛與連瑪玉結婚照 c.1912 | [Wikimedia](https://commons.wikimedia.org/wiki/File:Marriage_of_Marjorie_Learner_and_David_Landsborough_1912.jpg) | Public Domain |
 | 7 大社 | 搭台車醫療傳道 1901 | 同景點 2 | Public Domain |
 
+## 馬雅各 maxwell.trailpaint.json
+
+| 景點 | 照片 | 來源 | 授權 |
+|------|------|------|------|
+| 1 打狗港 | Takow harbour | [Wikimedia](https://commons.wikimedia.org/wiki/File:Takow_harbour_(Takao,_Kaohsiung),_Formosa_(Taiwan)_Wellcome_L0055884.jpg), John Thomson 1871 | CC BY 4.0 (Wellcome Collection) |
+| 2,4,7,9 | 馬雅各牧師肖像 | [Wikimedia](https://commons.wikimedia.org/wiki/File:%E8%8B%B1%E5%9C%8B%E9%95%B7%E8%80%81%E6%95%99%E6%9C%83%E7%AC%AC%E4%B8%80%E4%BD%8D%E9%A7%90%E8%87%BA%E7%81%A3%E5%AE%A3%E6%95%99%E5%B8%AB%E9%A6%AC%E9%9B%85%E5%90%84%E7%89%A7%E5%B8%AB%EF%BC%88James_Laidlaw_Maxwell%2C_MD%EF%BC%89.jpg) | Public Domain |
+| 3 旗後教會 | Dr Maxwell's house, Takow | [Wikimedia](https://commons.wikimedia.org/wiki/File:Dr_John_Preston_Maxwell%27s_house,_Takow,_Taiwan.jpg) | Public Domain |
+| 5 木柵教會 | Baksa village 1871 | [Wikimedia](https://commons.wikimedia.org/wiki/File:Baksa,_Formosa_(Taiwan)._Photograph_by_John_Thomson,_1871._Wellcome_V0036866.jpg), John Thomson | CC BY 4.0 |
+| 6 拔馬教會 | Poah-be chapel group 1871 | [Wikimedia](https://commons.wikimedia.org/wiki/File:A_group_of_Pepohoan_natives_standing_outside_a_Poah-be_chapel_Wellcome_L0018465.jpg), John Thomson | CC BY 4.0 |
+| 8 太平境教會 | 太平境馬雅各紀念教會 | [Wikimedia](https://commons.wikimedia.org/wiki/File:Tainan_Taiwan_Thai-Peng-Keng-Maxwell-Memorial-Church-01.jpg), Uwe Aranas 2015 | CC BY-SA 4.0 |
+
+## 彭蒙惠 brougham.trailpaint.json
+
+| 景點 | 照片 | 來源 | 授權 |
+|------|------|------|------|
+| 1-4,7 | 彭蒙惠錄音室肖像 | [Wikimedia](https://commons.wikimedia.org/wiki/File:JEF03314.jpg), Ahliang Jeff Chao 2018 | CC BY-SA 4.0 |
+| 5,6 救世傳播/空中英語 | 2030 雙語國家政策會議 | [Wikimedia](https://commons.wikimedia.org/wiki/File:Doris_Brougham_20201123.jpg), 中華民國總統府 | CC BY 2.0 |
+| 8 紀念音樂會 | 2023 國家祈禱早餐會 | [Wikimedia](https://commons.wikimedia.org/wiki/Category:Doris_M._Brougham), 中華民國總統府 | CC BY 2.0 |
+
 ## Story Page 素材
 
 | 檔名 | 來源 | 授權 |
 |------|------|------|
-| cover.svg | TrailPaint placeholder | 自有 |
-| og.svg | TrailPaint placeholder | 自有 |
-| mackay-thumb.svg | TrailPaint placeholder | 自有 |
+| cover.jpg | 1896 北福爾摩沙宣教站地圖 | Public Domain |
+| og.jpg | 同上 | Public Domain |
+| mackay-thumb.jpg | 馬偕肖像（從 JSON 擷取） | Public Domain |
+| barclay-thumb.jpg | 巴克禮肖像（從 JSON 擷取） | Public Domain |
+| landsborough-thumb.jpg | 蘭大衛肖像（從 JSON 擷取） | Public Domain |
+| maxwell-thumb.jpg | 馬雅各肖像 | Public Domain |
+| brougham-thumb.jpg | 彭蒙惠肖像 | CC BY-SA 4.0 |

@@ -17,7 +17,7 @@
       "subtitle": "北部宣教之父 1872-1901",
       "description": "來自加拿大安大略省的長老教會宣教師。1872 年抵達淡水，以此為據點深入北台灣各地傳教、行醫、拔牙、設學。創辦牛津學堂（今真理大學前身）與滬尾偕醫館（今馬偕紀念醫院前身），足跡遍及基隆、宜蘭、新竹、花蓮，是北台灣最具影響力的宣教士。",
       "data": "mackay.trailpaint.json",
-      "thumbnail": "mackay-thumb.svg",
+      "thumbnail": "mackay-thumb.jpg",
       "color": "#b45309"
     },
     {
@@ -26,7 +26,7 @@
       "subtitle": "台語白話字之父 1875-1935",
       "description": "來自蘇格蘭的長老教會宣教師。1875 年抵達打狗（今高雄），以台南為據點深耕南台灣六十年。創辦台南神學院、翻譯台語聖經、創刊台灣教會公報（台灣歷史最悠久的報紙）。1895 年日軍攻台時，巴克禮代表台南市民開城門迎接乃木希典，保全五萬市民免於戰火。",
       "data": "barclay.trailpaint.json",
-      "thumbnail": "mackay-thumb.svg",
+      "thumbnail": "barclay-thumb.jpg",
       "color": "#1e40af"
     },
     {
@@ -35,7 +35,7 @@
       "subtitle": "切膚之愛 1895-1936",
       "description": "來自蘇格蘭的醫療宣教師。1895 年抵達台灣，在彰化行醫四十年，創辦彰化基督教醫院。其妻連瑪玉 1928 年割下自己的皮膚移植給病人周金耀，「切膚之愛」的故事傳為佳話。蘭大衛搭台車深入原住民部落巡迴醫療，被譽為「彰化的乃木大將」。",
       "data": "landsborough.trailpaint.json",
-      "thumbnail": "mackay-thumb.svg",
+      "thumbnail": "landsborough-thumb.jpg",
       "color": "#047857"
     },
     {
@@ -44,7 +44,7 @@
       "subtitle": "台灣醫療宣教先驅 1865-1871",
       "description": "來自蘇格蘭的長老教會醫療宣教師，1865年抵台，是台灣第一位基督教宣教師。在台南創設看西街醫館——台灣第一間西式醫院，遭民眾暴動驅逐後退至旗後（高雄旗津）繼續行醫傳道。深入內門、左鎮等地向平埔族宣教，建立木柵、拔馬等教會。重返台南後設立二老口醫館，為新樓醫院前身。今太平境馬雅各紀念教會即以他命名。",
       "data": "maxwell.trailpaint.json",
-      "thumbnail": "mackay-thumb.svg",
+      "thumbnail": "maxwell-thumb.jpg",
       "color": "#9333ea"
     },
     {
@@ -53,7 +53,7 @@
       "subtitle": "台灣英語教育之母 1951-2024",
       "description": "來自美國西雅圖的宣教師與教育家。1948年前往中國上海宣教，1951年轉赴台灣花蓮，深入原住民部落服事。1960年在台北創辦救世傳播協會，1962年開播空中英語教室，以創新的對話式教學法教導數百萬台灣人學英文。1963年創立天韻合唱團，製作台灣第一個福音電視節目。2023年歸化中華民國國籍，2024年安息主懷，享壽98歲。",
       "data": "brougham.trailpaint.json",
-      "thumbnail": "mackay-thumb.svg",
+      "thumbnail": "brougham-thumb.jpg",
       "color": "#e11d48"
     }
   ],
