@@ -1,4 +1,4 @@
-import { useEffect, useRef, useCallback, useState } from 'react';
+import { useEffect, useRef, useCallback, useState, useMemo } from 'react';
 import { usePlayerStore } from './usePlayerStore';
 
 const FLY_DURATION = 800; // ms
@@ -31,6 +31,8 @@ export default function PlaybackControl() {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const currentLoopRef = useRef(0);
   const [showSettings, setShowSettings] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const canFullscreen = useMemo(() => !!document.documentElement.requestFullscreen, []);
 
   const spots = project.spots;
   const total = spots.length;
@@ -100,6 +102,21 @@ export default function PlaybackControl() {
     currentLoopRef.current = 0;
   };
 
+  // Listen for fullscreen changes (e.g. user presses Escape)
+  useEffect(() => {
+    const handler = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener('fullscreenchange', handler);
+    return () => document.removeEventListener('fullscreenchange', handler);
+  }, []);
+
+  const toggleFullscreen = useCallback(() => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else {
+      document.documentElement.requestFullscreen();
+    }
+  }, []);
+
   if (total === 0) return null;
 
   return (
@@ -160,6 +177,15 @@ export default function PlaybackControl() {
         >
           ⚙
         </button>
+        {canFullscreen && (
+          <button
+            className="playback__gear"
+            onClick={toggleFullscreen}
+            title={isFullscreen ? '退出全螢幕' : '全螢幕'}
+          >
+            {isFullscreen ? '⊡' : '⛶'}
+          </button>
+        )}
       </div>
     </>
   );

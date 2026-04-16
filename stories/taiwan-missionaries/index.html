@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>台灣宣教士腳蹤 — TrailPaint Stories</title>
+  <meta name="description" content="探索十九世紀宣教士在台灣的足跡互動地圖。馬偕、巴克禮、蘭大衛等宣教士的故事。" />
+  <meta property="og:title" content="台灣宣教士腳蹤 — TrailPaint Stories" />
+  <meta property="og:description" content="探索十九世紀宣教士在台灣的足跡互動地圖" />
+  <meta property="og:image" content="https://trailpaint.org/stories/taiwan-missionaries/og.svg" />
+  <meta property="og:url" content="https://trailpaint.org/stories/taiwan-missionaries/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="/app/favicon.svg" />
+  <link rel="canonical" href="https://trailpaint.org/stories/taiwan-missionaries/" />
+  <link rel="stylesheet" href="../stories.css" />
+</head>
+<body>
+  <div class="stories-page stories-page--fixed">
+    <header class="stories-header stories-header--compact">
+      <a class="stories-header__back" href="../">← 返回</a>
+      <h1 class="stories-header__title">台灣宣教士腳蹤</h1>
+      <p class="stories-header__subtitle">1865-1923</p>
+    </header>
+
+    <!-- Horizontal tabs (desktop + mobile) -->
+    <div id="tabs" class="story-tabs"></div>
+
+    <!-- Active person description -->
+    <div id="desc" class="story-desc"></div>
+
+    <!-- Player iframe -->
+    <div class="story-content">
+      <iframe id="player" class="story-iframe" title="TrailPaint Story Player"></iframe>
+    </div>
+
+  </div>
+
+  <script src="../stories.js"></script>
+  <script>
+    renderStoryPage({
+      tabsId: 'tabs',
+      iframeId: 'player',
+      descId: 'desc',
+      playerBase: '/app/player/',
+      storyBase: '/stories/taiwan-missionaries/',
+      autoplay: true
+    });
+  </script>
+</body>
+</html>

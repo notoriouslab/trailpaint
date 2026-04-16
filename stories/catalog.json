@@ -1,0 +1,13 @@
+{
+  "stories": [
+    {
+      "id": "taiwan-missionaries",
+      "title": "台灣宣教士腳蹤",
+      "subtitle": "1865-1923",
+      "description": "探索十九世紀宣教士在台灣的足跡",
+      "thumbnail": "taiwan-missionaries/cover.svg",
+      "path": "taiwan-missionaries/",
+      "count": 1
+    }
+  ]
+}

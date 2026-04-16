@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fdf8ef"/>
+  <rect x="40" y="40" width="1120" height="550" rx="16" fill="none" stroke="#d4a574" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="600" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="48" fill="#78350f">台灣宣教士腳蹤</text>
+  <text x="600" y="340" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#92400e">1865-1923 西方宣教士在台灣的故事</text>
+  <text x="600" y="400" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#b45309">TrailPaint Stories</text>
+</svg>

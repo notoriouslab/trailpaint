@@ -1,0 +1,267 @@
+/* ── TrailPaint Stories — Shared Styles ── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+
+html, body {
+  height: 100%;
+  font-family: Georgia, serif;
+  background: #fdf8ef;
+  color: #3b1a06;
+}
+
+a { color: #78350f; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Layout ── */
+
+.stories-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Story page (Level 1): lock to viewport, no scroll */
+.stories-page--fixed {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.stories-header {
+  padding: 10px 24px;
+  border-bottom: 1px solid #e5dcc8;
+  flex-shrink: 0;
+}
+
+/* Compact header for story page (back + title inline) */
+.stories-header--compact {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 8px 24px;
+}
+
+.stories-header--compact .stories-header__title {
+  font-size: 16px;
+  margin: 0;
+}
+
+.stories-header--compact .stories-header__subtitle {
+  font-size: 12px;
+}
+
+.stories-header__back {
+  font-size: 12px;
+  color: #92400e;
+  display: inline-block;
+  margin-bottom: 4px;
+  flex-shrink: 0;
+}
+
+.stories-header--compact .stories-header__back {
+  margin-bottom: 0;
+}
+
+.stories-header__title {
+  font-size: 22px;
+  color: #78350f;
+  margin: 0 0 2px;
+}
+
+.stories-header__subtitle {
+  font-size: 13px;
+  color: #92400e;
+  margin: 0;
+}
+
+.stories-header__desc {
+  font-size: 12px;
+  color: #6b5c4c;
+  margin: 6px 0 0;
+  line-height: 1.6;
+  max-width: 640px;
+}
+
+.stories-footer {
+  padding: 20px 24px;
+  border-top: 1px solid #e5dcc8;
+  text-align: center;
+  font-size: 13px;
+  color: #92400e;
+}
+
+.stories-footer a {
+  color: #b45309;
+  font-weight: bold;
+}
+
+/* ── Level 0: Catalog Cards ── */
+
+.catalog-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 24px;
+}
+
+.catalog-card {
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.catalog-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  text-decoration: none;
+}
+
+.catalog-card__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  background: #fef3d8;
+}
+
+.catalog-card__body {
+  padding: 16px;
+}
+
+.catalog-card__title {
+  font-size: 18px;
+  color: #78350f;
+  margin: 0 0 4px;
+}
+
+.catalog-card__subtitle {
+  font-size: 13px;
+  color: #92400e;
+  margin: 0 0 8px;
+}
+
+.catalog-card__desc {
+  font-size: 12px;
+  color: #6b5c4c;
+  line-height: 1.5;
+}
+
+.catalog-card__count {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 11px;
+  color: #b45309;
+  background: #fef3d8;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* ── Level 1: Story Page ── */
+
+/* Horizontal tabs (desktop + mobile) */
+.story-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 8px 24px;
+  overflow-x: auto;
+  border-bottom: 1px solid #e5dcc8;
+  background: #fdf8ef;
+  -webkit-overflow-scrolling: touch;
+}
+
+.story-tab {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1.5px solid #d4a574;
+  background: none;
+  color: #78350f;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.story-tab:hover { border-color: #b45309; }
+
+.story-tab--active {
+  background: #b45309;
+  color: #fff;
+  border-color: #b45309;
+}
+
+.story-tab__thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fef3d8;
+}
+
+.story-tab--active .story-tab__thumb {
+  border: 2px solid #fff;
+}
+
+.story-desc {
+  padding: 6px 24px;
+  font-size: 12px;
+  color: #6b5c4c;
+  line-height: 1.5;
+  border-bottom: 1px solid #e5dcc8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.story-content {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-iframe {
+  position: absolute;
+  inset: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Mobile adjustments ── */
+
+@media (max-width: 768px) {
+  .stories-header__title { font-size: 18px; }
+  .stories-header { padding: 8px 16px; }
+
+  .catalog-grid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .story-tabs { padding: 8px 16px; }
+  .story-desc { padding: 8px 16px; }
+
+  .story-desc { padding: 6px 16px; }
+}
+
+/* ── Loading / Error ── */
+
+.stories-loading {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #92400e;
+}

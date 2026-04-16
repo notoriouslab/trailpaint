@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 import { usePlayerStore } from './usePlayerStore';
 import { migrateProject } from '../core/utils/migrateProject';
 import { decodeShareLink } from '../core/utils/shareLink';
@@ -6,15 +6,50 @@ import PlayerMap from './PlayerMap';
 import SpotListPanel from './SpotListPanel';
 import PlaybackControl from './PlaybackControl';
 
+/** Validate ?src= param: only allow /stories/*.json, no traversal */
+function isValidSrc(src: string): boolean {
+  return /^\/stories\/[\w-]+\/[\w\-.]+\.json$/.test(src) && !src.includes('..');
+}
+
 export default function PlayerApp() {
   const project = usePlayerStore((s) => s.project);
   const error = usePlayerStore((s) => s.error);
   const loadProject = usePlayerStore((s) => s.loadProject);
   const setError = usePlayerStore((s) => s.setError);
+  const setPlaying = usePlayerStore((s) => s.setPlaying);
 
-  // Load project on mount: localStorage (from Editor, includes photos) → URL hash (share link)
+  // URL params
+  const [params] = useState(() => new URLSearchParams(window.location.search));
+  const isEmbed = params.get('embed') === '1';
+  const autoplay = params.get('autoplay') === '1';
+
+  // Load project on mount: ?src= → localStorage → #share=
   useEffect(() => {
-    // 1. Check localStorage (from Editor "Story Mode" button)
+    // 1. Check ?src= param (embed mode — fetch same-origin JSON)
+    const src = params.get('src');
+    if (src) {
+      if (!isValidSrc(src)) {
+        console.warn('Invalid embed source: only /stories/*.json allowed');
+        return;
+      }
+      fetch(src, { signal: AbortSignal.timeout(30000) })
+        .then((r) => {
+          if (!r.ok) throw new Error(`HTTP ${r.status}`);
+          return r.json();
+        })
+        .then((raw) => {
+          const data = migrateProject(raw);
+          loadProject(data);
+        })
+        .catch((e) => {
+          const msg = e instanceof Error && e.name === 'TimeoutError'
+            ? '載入逾時，請重新整理' : '載入失敗';
+          setError(msg);
+        });
+      return;
+    }
+
+    // 2. Check localStorage (from Editor "Story Mode" button)
     const stored = localStorage.getItem('trailpaint-player-project');
     if (stored) {
       localStorage.removeItem('trailpaint-player-project');
@@ -25,14 +60,21 @@ export default function PlayerApp() {
       } catch { /* fall through to hash */ }
     }
 
-    // 2. Check URL hash (share link — photos stripped)
+    // 3. Check URL hash (share link — photos stripped)
     const hash = window.location.hash;
     if (!hash || !hash.startsWith('#share=')) return;
     decodeShareLink(hash).then((p) => {
       if (p) loadProject(p);
       else setError('無法解析分享連結');
     }).catch(() => setError('連結格式錯誤'));
-  }, [loadProject, setError]);
+  }, [params, loadProject, setError]);
+
+  // Autoplay: trigger after project loads
+  useEffect(() => {
+    if (autoplay && project && project.spots.length > 0) {
+      setPlaying(true);
+    }
+  }, [autoplay, project, setPlaying]);
 
   // Handle file drop / file input
   const handleFile = useCallback((file: File) => {
@@ -69,8 +111,22 @@ export default function PlayerApp() {
     if (file) handleFile(file);
   }, [handleFile]);
 
-  // Landing page (no project loaded)
+  // No project loaded
   if (!project) {
+    // Embed mode: show empty map placeholder (no landing page)
+    if (isEmbed) {
+      return (
+        <div className="player-app">
+          <div className="player-embed-empty">
+            {error
+              ? <span className="player-embed-empty__text">{error}</span>
+              : <span className="player-embed-empty__text">No story loaded</span>}
+          </div>
+        </div>
+      );
+    }
+
+    // Standalone mode: full landing page with drop zone
     return (
       <div className="player-app">
         <div

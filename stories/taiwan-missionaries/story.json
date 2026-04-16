@@ -1,0 +1,28 @@
+{
+  "id": "taiwan-missionaries",
+  "title": "台灣宣教士腳蹤",
+  "subtitle": "1865-1923 西方宣教士在台灣的故事",
+  "description": "十九世紀下半葉，一群來自歐美的宣教士踏上台灣這片土地。他們建立教會、設立醫院與學校、翻譯聖經、創造白話字，深刻影響了台灣的現代化進程。這張互動地圖帶你沿著他們的足跡，走過淡水、台南、彰化，看見那個年代的故事。",
+  "locale": "zh-TW",
+  "cover": "cover.svg",
+  "og": {
+    "title": "台灣宣教士腳蹤 — TrailPaint Stories",
+    "description": "探索十九世紀宣教士在台灣的足跡互動地圖",
+    "image": "og.svg"
+  },
+  "stories": [
+    {
+      "id": "mackay",
+      "title": "馬偕博士 George Leslie Mackay",
+      "subtitle": "北部宣教之父 1872-1901",
+      "description": "來自加拿大安大略省的長老教會宣教師。1872 年抵達淡水，以此為據點深入北台灣各地傳教、行醫、拔牙、設學。創辦牛津學堂（今真理大學前身）與滬尾偕醫館（今馬偕紀念醫院前身），足跡遍及基隆、宜蘭、新竹、花蓮，是北台灣最具影響力的宣教士。",
+      "data": "mackay.trailpaint.json",
+      "thumbnail": "mackay-thumb.svg",
+      "color": "#b45309"
+    }
+  ],
+  "footer": {
+    "cta": "在 TrailPaint 中建立你自己的故事地圖",
+    "url": "https://trailpaint.org/app/"
+  }
+}
