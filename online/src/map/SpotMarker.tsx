@@ -1,4 +1,4 @@
-import { useRef, useEffect, useCallback } from 'react';
+import { useRef, useEffect, useCallback, useState } from 'react';
 import { Marker, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { createPortal } from 'react-dom';
@@ -133,71 +133,77 @@ function CardOverlay({ spot, selected, playing, map, onSelect, onUpdate, onUpdat
     };
   }, [map, reposition]);
 
-  // Card dragging
-  const onMouseDown = useCallback((e: React.MouseEvent) => {
-    e.stopPropagation();
-    e.preventDefault();
-    map.dragging.disable();
-    dragRef.current = {
-      mx: e.clientX, my: e.clientY,
-      ox: spot.cardOffset.x, oy: spot.cardOffset.y,
-    };
+  const [isDragging, setIsDragging] = useState(false);
 
-    const onMove = (ev: MouseEvent) => {
+
+  // Unified Drag Handler
+  useEffect(() => {
+    if (!isDragging || !dragRef.current) return;
+
+    const onMove = (clientX: number, clientY: number) => {
       if (!dragRef.current) return;
       onUpdateOffset({
-        x: dragRef.current.ox + (ev.clientX - dragRef.current.mx),
-        y: dragRef.current.oy + (ev.clientY - dragRef.current.my),
+        x: dragRef.current.ox + (clientX - dragRef.current.mx),
+        y: dragRef.current.oy + (clientY - dragRef.current.my),
       });
     };
-    const onUp = () => {
-      dragRef.current = null;
-      map.dragging.enable();
-      window.removeEventListener('mousemove', onMove);
-      window.removeEventListener('mouseup', onUp);
-      window.removeEventListener('blur', onUp);
-    };
-    window.addEventListener('mousemove', onMove);
-    window.addEventListener('mouseup', onUp);
-    window.addEventListener('blur', onUp);
-  }, [map, spot.cardOffset, onUpdateOffset]);
 
-  // Touch drag (parallel to mouse drag)
-  const onTouchStart = useCallback((e: React.TouchEvent) => {
-    if (e.touches.length !== 1) return; // only single-finger drag
-    e.stopPropagation();
-    map.dragging.disable();
-    const touch = e.touches[0];
-    dragRef.current = {
-      mx: touch.clientX, my: touch.clientY,
-      ox: spot.cardOffset.x, oy: spot.cardOffset.y,
-    };
-
-    const onMove = (ev: TouchEvent) => {
-      if (!dragRef.current) return;
-      if (ev.touches.length > 1) {
-        // Multi-finger: cancel drag, let map handle pinch-zoom
-        cleanup();
+    const handleMouseMove = (e: MouseEvent) => onMove(e.clientX, e.clientY);
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 1) {
+        setIsDragging(false);
         return;
       }
-      ev.preventDefault();
-      const t = ev.touches[0];
-      onUpdateOffset({
-        x: dragRef.current.ox + (t.clientX - dragRef.current.mx),
-        y: dragRef.current.oy + (t.clientY - dragRef.current.my),
-      });
+      e.preventDefault();
+      onMove(e.touches[0].clientX, e.touches[0].clientY);
     };
-    const cleanup = () => {
-      dragRef.current = null;
+
+    const handleUp = () => setIsDragging(false);
+
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleUp);
+    window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    window.addEventListener('touchend', handleUp);
+    window.addEventListener('touchcancel', handleUp);
+    window.addEventListener('blur', handleUp);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleUp);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleUp);
+      window.removeEventListener('touchcancel', handleUp);
+      window.removeEventListener('blur', handleUp);
       map.dragging.enable();
-      window.removeEventListener('touchmove', onMove);
-      window.removeEventListener('touchend', cleanup);
-      window.removeEventListener('touchcancel', cleanup);
     };
-    window.addEventListener('touchmove', onMove, { passive: false });
-    window.addEventListener('touchend', cleanup);
-    window.addEventListener('touchcancel', cleanup);
-  }, [map, spot.cardOffset, onUpdateOffset]);
+  }, [isDragging, map, onUpdateOffset]);
+
+  const onStart = (clientX: number, clientY: number) => {
+    map.dragging.disable();
+    dragRef.current = {
+      mx: clientX, my: clientY,
+      ox: spot.cardOffset.x, oy: spot.cardOffset.y,
+    };
+    setIsDragging(true);
+  };
+
+  const onMouseDown = (e: React.MouseEvent) => {
+    if (e.button !== 0) return;
+    e.stopPropagation();
+    e.preventDefault();
+    onStart(e.clientX, e.clientY);
+  };
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    if (e.touches.length !== 1) return;
+    e.stopPropagation();
+    onStart(e.touches[0].clientX, e.touches[0].clientY);
+  };
+
+
+
+  const container = map.getContainer();
+  if (!container) return null;
 
   return createPortal(
     <div
@@ -222,6 +228,6 @@ function CardOverlay({ spot, selected, playing, map, onSelect, onUpdate, onUpdat
       </svg>
       <SpotCard spot={spot} selected={selected} onSelect={onSelect} onUpdate={onUpdate} />
     </div>,
-    map.getContainer(),
+    container,
   );
 }

@@ -2,6 +2,8 @@ import type L from 'leaflet';
 
 let mapInstance: L.Map | null = null;
 
+export function getMapInstance() { return mapInstance; }
+
 export function setMapInstance(map: L.Map | null) {
   mapInstance = map;
 }

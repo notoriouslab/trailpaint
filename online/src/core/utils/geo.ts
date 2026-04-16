@@ -31,10 +31,13 @@ export function formatDistance(km: number): string {
 
 /** Calculate cumulative ascent and descent from elevation array */
 export function elevationStats(elevations: number[]): { ascent: number; descent: number; min: number; max: number } {
+  if (elevations.length === 0) {
+    return { ascent: 0, descent: 0, min: 0, max: 0 };
+  }
   let ascent = 0;
   let descent = 0;
-  let min = elevations[0] ?? 0;
-  let max = elevations[0] ?? 0;
+  let min = elevations[0];
+  let max = elevations[0];
   for (let i = 1; i < elevations.length; i++) {
     const diff = elevations[i] - elevations[i - 1];
     if (diff > 0) ascent += diff;

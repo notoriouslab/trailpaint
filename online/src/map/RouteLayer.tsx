@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useRef, useEffect } from 'react';
 import { Polyline, CircleMarker, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { useProjectStore } from '../core/store/useProjectStore';
@@ -76,7 +76,7 @@ function RoutePolyline({ route, selected }: { route: Route; selected: boolean })
       {selected &&
         route.pts.map((pt, i) => (
           <DraggableNode
-            key={i}
+            key={`${pt[0]},${pt[1]}`}
             position={pt}
             color={colorDef.stroke}
             onDrag={(latlng) => updateRoutePt(route.id, i, latlng)}
@@ -99,6 +99,8 @@ function DraggableNode({
   onDblClick: () => void;
 }) {
   const map = useMap();
+  const onDragRef = useRef(onDrag);
+  useEffect(() => { onDragRef.current = onDrag; }, [onDrag]);
 
   return (
     <CircleMarker
@@ -118,7 +120,7 @@ function DraggableNode({
           const onMove = (ev: MouseEvent) => {
             const rect = map.getContainer().getBoundingClientRect();
             const pt = map.containerPointToLatLng(L.point(ev.clientX - rect.left, ev.clientY - rect.top));
-            onDrag([pt.lat, pt.lng]);
+            onDragRef.current([pt.lat, pt.lng]);
           };
           const onUp = () => {
             map.dragging.enable();

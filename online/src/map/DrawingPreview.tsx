@@ -21,7 +21,7 @@ export default function DrawingPreview() {
       )}
       {currentDrawing.map((pt, i) => (
         <CircleMarker
-          key={i}
+          key={`draw-${i}`}
           center={pt}
           radius={5}
           pathOptions={{ color, fillColor: '#fff', fillOpacity: 1, weight: 2 }}

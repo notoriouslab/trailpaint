@@ -39,36 +39,51 @@ function compactProject(project: Project): Record<string, unknown> {
  * Expand a compact project back to full Project structure.
  */
 function expandProject(c: Record<string, unknown>): Project {
-  const spots = (c.s as Record<string, unknown>[])?.map((s) => ({
-    id: s.i as string,
-    latlng: s.l as [number, number],
-    num: s.u as number,
-    title: s.t as string,
-    desc: (s.d as string) ?? '',
-    photo: null,
-    photoY: s.y as number | undefined,
-    iconId: s.k as string,
-    customEmoji: s.e as string | undefined,
-    cardOffset: s.o ? { x: (s.o as number[])[0], y: (s.o as number[])[1] } : { x: 0, y: -60 },
-  })) ?? [];
-  const routes = (c.r as Record<string, unknown>[])?.map((r) => ({
-    id: r.i as string,
-    name: (r.n as string) ?? '',
-    pts: r.p as [number, number][],
-    color: r.c as string,
-    elevations: (r.e as number[] | null) ?? null,
-  })) ?? [];
-  const playback = c.pb ? {
-    mode: (c.pb as any).m as 'auto' | 'manual',
-    interval: (c.pb as any).t as number,
-    loop: (c.pb as any).l as boolean,
+  const safeArray = (arr: unknown) => (Array.isArray(arr) ? arr : []);
+  const safeNum = (n: unknown, def = 0) => (typeof n === 'number' ? n : def);
+  const safeStr = (s: unknown, def = '') => (typeof s === 'string' ? s : def);
+
+  const spots = safeArray(c.s).map((raw) => {
+    const s = raw as Record<string, unknown>;
+    return {
+      id: safeStr(s.i, crypto.randomUUID()),
+      latlng: (Array.isArray(s.l) && s.l.length === 2 ? s.l : [0, 0]) as [number, number],
+      num: safeNum(s.u, 1),
+      title: safeStr(s.t, 'Spot'),
+      desc: safeStr(s.d, ''),
+      photo: null,
+      photoY: typeof s.y === 'number' ? Math.max(0, Math.min(100, s.y)) : undefined,
+      iconId: safeStr(s.k, 'pin'),
+      customEmoji: typeof s.e === 'string' ? s.e : undefined,
+      cardOffset: Array.isArray(s.o) && s.o.length === 2
+        ? { x: safeNum(s.o[0]), y: safeNum(s.o[1]) }
+        : { x: 0, y: -60 },
+    };
+  });
+
+  const routes = safeArray(c.r).map((raw) => {
+    const r = raw as Record<string, unknown>;
+    return {
+      id: safeStr(r.i, crypto.randomUUID()),
+      name: safeStr(r.n, ''),
+      pts: (Array.isArray(r.p) ? r.p : []) as [number, number][],
+      color: safeStr(r.c, 'orange'),
+      elevations: Array.isArray(r.e) ? (r.e as number[]) : null,
+    };
+  });
+
+  const pb = c.pb as Record<string, unknown> | undefined;
+  const playback = pb ? {
+    mode: (pb.m === 'manual' ? 'manual' : 'auto') as 'auto' | 'manual',
+    interval: safeNum(pb.t, 2000),
+    loop: typeof pb.l === 'boolean' ? pb.l : true,
   } : undefined;
 
   return {
-    version: (c.v as 1 | 2) ?? 2,
-    name: c.n as string,
-    center: c.c as [number, number],
-    zoom: c.z as number,
+    version: safeNum(c.v, 2) as 1 | 2,
+    name: safeStr(c.n, 'Shared Trail'),
+    center: (Array.isArray(c.c) && c.c.length === 2 ? c.c : [0, 0]) as [number, number],
+    zoom: safeNum(c.z, 14),
     spots,
     routes,
     playback,

@@ -10,7 +10,7 @@ import LocateButton from './LocateButton';
 import FitAllButton from './FitAllButton';
 import PlaybackManager from './PlaybackManager';
 import Watermark from './Watermark';
-import { setMapInstance } from './useMapRef';
+import { setMapInstance, getMapInstance } from './useMapRef';
 import 'leaflet/dist/leaflet.css';
 import './MapView.css';
 
@@ -63,8 +63,11 @@ function MapSync() {
     };
     map.on('moveend', handler);
     return () => {
-      map.off('moveend', handler);
-      setMapInstance(null);
+      if (map.off) map.off('moveend', handler);
+      // Only clear global instance if it's still us (prevents race during mode switch)
+      if (getMapInstance() === map) {
+        setMapInstance(null);
+      }
     };
   }, [map, setMapView]);
 
@@ -81,6 +84,20 @@ function MapSync() {
 function SpotMarkers() {
   const spots = useProjectStore((s) => s.project.spots);
   return <>{spots.map((spot) => <SpotMarker key={spot.id} spot={spot} />)}</>;
+}
+
+function CursorHandler() {
+  const mode = useProjectStore((s) => s.mode);
+  const map = useMap();
+
+  useEffect(() => {
+    const container = map.getContainer();
+    container.classList.remove('cursor-add-spot', 'cursor-draw-route');
+    if (mode === 'addSpot') container.classList.add('cursor-add-spot');
+    else if (mode === 'drawRoute') container.classList.add('cursor-draw-route');
+  }, [mode, map]);
+
+  return null;
 }
 
 export default function MapView() {
@@ -106,6 +123,7 @@ export default function MapView() {
       <HandDrawnFilter />
       <MapClickHandler />
       <MapSync />
+      <CursorHandler />
       <PlaybackManager />
       <RouteLayer />
       <DrawingPreview />

@@ -17,8 +17,6 @@ export async function fetchElevations(pts: [number, number][]): Promise<number[]
         `https://api.open-meteo.com/v1/elevation?latitude=${lats}&longitude=${lngs}`,
         { signal: controller.signal }
       );
-      clearTimeout(timer);
-
       if (!res.ok) throw new Error(`Elevation API error: ${res.status}`);
 
       const data = await res.json();
@@ -28,11 +26,13 @@ export async function fetchElevations(pts: [number, number][]): Promise<number[]
         elevations.push(typeof ele === 'number' ? ele : 0);
       }
     } catch (err) {
-      clearTimeout(timer);
-      if (err instanceof DOMException && err.name === 'AbortError') {
-        throw new Error('Elevation API timeout');
+      console.warn('Elevation batch failed:', err);
+      // Fill batch with 0s to maintain array mapping
+      for (let j = 0; j < batch.length; j++) {
+        elevations.push(0);
       }
-      throw err;
+    } finally {
+      clearTimeout(timer);
     }
   }
 

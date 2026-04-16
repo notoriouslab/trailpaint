@@ -25,9 +25,10 @@ export default function PlaybackManager() {
       if (timerRef.current) clearTimeout(timerRef.current);
       
       timerRef.current = setTimeout(() => {
-        if (playing && playMode === 'auto') {
-          nextSpot();
-          scheduleNext(); // Recursive call for next frame
+        const state = useProjectStore.getState();
+        if (state.playing && state.playMode === 'auto') {
+          state.nextSpot();
+          scheduleNext();
         }
       }, playInterval);
     };
@@ -44,9 +45,10 @@ export default function PlaybackManager() {
     return () => {
       if (timerRef.current) {
         clearTimeout(timerRef.current);
+        timerRef.current = null;
       }
     };
-  }, [playing, playMode, playInterval, nextSpot, spotsCount, togglePlay]);
+  }, [playing, playMode, playInterval, spotsCount, togglePlay]);
 
   return null;
 }

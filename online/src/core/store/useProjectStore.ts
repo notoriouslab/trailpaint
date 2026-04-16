@@ -29,11 +29,7 @@ interface ProjectState {
   updateSpot: (id: string, patch: Partial<Spot>) => void;
   removeSpot: (id: string) => void;
   swapSpots: (index: number, direction: 'up' | 'down') => void;
-<<<<<<< HEAD
   reorderSpots: (fromIndex: number, toIndex: number) => void;
-=======
-  reorderSpots: (startIndex: number, endIndex: number) => void;
->>>>>>> 54551e3 (feat: enhance UI/UX and add guidebook playback functionality)
   setSelectedSpot: (id: string | null) => void;
 
   // Route actions
@@ -133,7 +129,10 @@ function migrateProject(data: Record<string, unknown>): Project {
     const safePhoto = typeof rawPhoto === 'string' && rawPhoto.startsWith('data:image/') ? rawPhoto : null;
 
     spots.push({
-      ...(s as unknown as Spot),
+      id: s.id as string,
+      latlng: s.latlng as [number, number],
+      title: s.title as string,
+      desc: (s.desc as string) ?? '',
       photo: safePhoto,
       photoY: typeof s.photoY === 'number' ? Math.max(0, Math.min(100, s.photoY)) : undefined,
       customEmoji: typeof s.customEmoji === 'string' ? s.customEmoji : undefined,
@@ -163,8 +162,9 @@ function migrateProject(data: Record<string, unknown>): Project {
     );
     if (!validPts) continue;
     routes.push({
-      ...(r as unknown as Route),
+      id: r.id as string,
       name: (r.name as string) ?? '',
+      pts: r.pts as [number, number][],
       color: validColorIds.includes(r.color as string) ? (r.color as string) : ROUTE_COLORS[0].id,
       elevations: Array.isArray(r.elevations) ? (r.elevations as number[]) : null,
     });
@@ -220,9 +220,18 @@ export const useProjectStore = create<ProjectState>()(
     }
   },
 
-  setPlayMode: (playMode) => set({ playMode }),
-  setPlayInterval: (playInterval) => set({ playInterval }),
-  setPlayLoop: (playLoop) => set({ playLoop }),
+  setPlayMode: (mode) => set((s) => ({
+    playMode: mode,
+    project: { ...s.project, playback: { ...(s.project.playback || { interval: 2000, loop: true }), mode } }
+  })),
+  setPlayInterval: (interval) => set((s) => ({
+    playInterval: interval,
+    project: { ...s.project, playback: { ...(s.project.playback || { mode: 'auto', loop: true }), interval } }
+  })),
+  setPlayLoop: (loop) => set((s) => ({
+    playLoop: loop,
+    project: { ...s.project, playback: { ...(s.project.playback || { mode: 'auto', interval: 2000 }), loop } }
+  })),
 
   nextSpot: () => {
     const s = get();
@@ -253,12 +262,17 @@ export const useProjectStore = create<ProjectState>()(
 
   prevSpot: () => {
     const s = get();
-    if (s.project.spots.length === 0) return;
-    let nextIdx = s.playIndex - 1;
+    const spots = s.project.spots;
+    if (spots.length === 0) return;
+    
+    let currentIdx = s.playIndex;
+    if (currentIdx < 0 || currentIdx >= spots.length) currentIdx = 0;
+
+    let nextIdx = currentIdx - 1;
     if (nextIdx < 0) {
-      nextIdx = s.project.spots.length - 1;
+      nextIdx = spots.length - 1;
     }
-    const spot = s.project.spots[nextIdx];
+    const spot = spots[nextIdx];
     set({ playIndex: nextIdx, selectedSpotId: spot.id });
     set({ pendingFlyTo: { center: spot.latlng, zoom: Math.max(s.project.zoom, 15.5) } });
   },
@@ -316,19 +330,11 @@ export const useProjectStore = create<ProjectState>()(
       return { project: { ...s.project, spots: renumber(spots) } };
     }),
 
-<<<<<<< HEAD
   reorderSpots: (fromIndex, toIndex) =>
     set((s) => {
       const spots = [...s.project.spots];
       const [moved] = spots.splice(fromIndex, 1);
       spots.splice(toIndex, 0, moved);
-=======
-  reorderSpots: (startIndex, endIndex) =>
-    set((s) => {
-      const spots = [...s.project.spots];
-      const [removed] = spots.splice(startIndex, 1);
-      spots.splice(endIndex, 0, removed);
->>>>>>> 54551e3 (feat: enhance UI/UX and add guidebook playback functionality)
       return { project: { ...s.project, spots: renumber(spots) } };
     }),
 
@@ -599,11 +605,15 @@ export const useProjectStore = create<ProjectState>()(
   importJSON: (json) => {
     const raw = JSON.parse(json);
     const data = migrateProject(raw);
+    const pm = data.playback?.mode;
     set({
       project: data,
       selectedSpotId: null,
       selectedRouteId: null,
       pendingFlyTo: { center: data.center, zoom: data.zoom },
+      playMode: (pm === 'auto' || pm === 'manual') ? pm : 'auto',
+      playInterval: data.playback?.interval ?? 2000,
+      playLoop: data.playback?.loop ?? true,
     });
     // Clear undo history — "undo entire project load" is confusing, not useful
     useProjectStore.temporal.getState().clear();

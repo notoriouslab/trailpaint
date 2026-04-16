@@ -1,3 +1,4 @@
+import { useState, useRef } from 'react';
 import type { Spot } from '../models/types';
 import { getIcon } from '../icons';
 import { useProjectStore } from '../store/useProjectStore';
@@ -16,11 +17,7 @@ export default function SpotList({ spots, selectedSpotId, onSelect, onSwap }: Sp
   const reorderSpots = useProjectStore((s) => s.reorderSpots);
 
   const handleDragStart = (e: React.DragEvent, index: number) => {
-<<<<<<< HEAD
     e.dataTransfer.setData('text/plain', index.toString());
-=======
-    e.dataTransfer.setData('index', index.toString());
->>>>>>> 54551e3 (feat: enhance UI/UX and add guidebook playback functionality)
     e.dataTransfer.effectAllowed = 'move';
   };
 
@@ -31,15 +28,14 @@ export default function SpotList({ spots, selectedSpotId, onSelect, onSwap }: Sp
 
   const handleDrop = (e: React.DragEvent, targetIndex: number) => {
     e.preventDefault();
-<<<<<<< HEAD
     const sourceIndex = parseInt(e.dataTransfer.getData('text/plain'), 10);
-=======
-    const sourceIndex = parseInt(e.dataTransfer.getData('index'), 10);
->>>>>>> 54551e3 (feat: enhance UI/UX and add guidebook playback functionality)
     if (!isNaN(sourceIndex) && sourceIndex !== targetIndex) {
       reorderSpots(sourceIndex, targetIndex);
     }
   };
+
+  const [loadingSample, setLoadingSample] = useState(false);
+  const sampleRef = useRef(0);
 
   if (spots.length === 0) {
     return (
@@ -50,15 +46,24 @@ export default function SpotList({ spots, selectedSpotId, onSelect, onSwap }: Sp
         <select
           className="spot-list__sample-btn"
           value=""
+          disabled={loadingSample}
           onChange={async (e) => {
             const name = e.target.value;
             if (!name) return;
-            const json = await loadExampleRoute(name);
-            if (json) importJSON(json);
-            e.target.value = '';
+            const reqId = ++sampleRef.current;
+            setLoadingSample(true);
+            try {
+              const json = await loadExampleRoute(name);
+              if (reqId === sampleRef.current && json) {
+                importJSON(json);
+              }
+            } finally {
+              if (reqId === sampleRef.current) setLoadingSample(false);
+              e.target.value = '';
+            }
           }}
         >
-          <option value="">🌿 {t('spot.loadSample')}</option>
+          <option value="">{loadingSample ? '⏳ ...' : `🌿 ${t('spot.loadSample')}`}</option>
           {EXAMPLE_ROUTES.map((ex) => (
             <option key={ex.name} value={ex.name}>{ex.icon} {ex.name}</option>
           ))}
