@@ -38,9 +38,8 @@
   transition: left 0.25s ease;
 }
 
-.sidebar:not(.sidebar--closed) ~ .sidebar-toggle,
-.sidebar-toggle:has(~ .sidebar:not(.sidebar--closed)) {
-  /* adjust when open — handled in App */
+.sidebar-toggle--open {
+  left: 268px;
 }
 
 /* Header */

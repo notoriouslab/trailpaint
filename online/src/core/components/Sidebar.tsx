@@ -56,7 +56,7 @@ export default function Sidebar({ onFlyTo, onOpenExportPreview, onSave, onOpenIm
   return (
     <>
       <button
-        className="sidebar-toggle"
+        className={`sidebar-toggle${sidebarOpen ? ' sidebar-toggle--open' : ''}`}
         onClick={() => setSidebarOpen(!sidebarOpen)}
       >
         {sidebarOpen ? '◀' : '▶'}
