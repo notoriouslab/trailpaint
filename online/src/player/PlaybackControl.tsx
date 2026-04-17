@@ -178,6 +178,7 @@ export default function PlaybackControl() {
           </div>
           <div className="playback__setting-group playback__setting-group--music">
             <span className="playback__setting-label">{t('player.music.url')}</span>
+            <span className="playback__setting-hint">{t('player.music.urlHint')}</span>
             <input
               className="playback__setting-input"
               type="url"

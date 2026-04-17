@@ -207,6 +207,7 @@ export default {
   'player.music.on': 'Play background music',
   'player.music.off': 'Stop background music',
   'player.music.url': 'Music URL',
+  'player.music.urlHint': 'Paste a direct MP3/M4A link, e.g. free tracks from incompetech.com',
   'player.music.autoplay': 'Autoplay music',
   'player.embed.copy': 'Copy Player embed code',
 

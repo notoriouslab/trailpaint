@@ -339,6 +339,14 @@ html, body {
 .playback__setting-group--music {
   flex: 1;
   min-width: 0;
+  flex-wrap: wrap;
+}
+
+.playback__setting-hint {
+  width: 100%;
+  font-size: 10px;
+  color: #8b5e3c;
+  margin-top: -2px;
 }
 
 .playback__setting-input {

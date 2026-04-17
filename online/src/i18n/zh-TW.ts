@@ -207,6 +207,7 @@ export default {
   'player.music.on': '播放背景音樂',
   'player.music.off': '關閉背景音樂',
   'player.music.url': '音樂網址',
+  'player.music.urlHint': '貼上 MP3/M4A 直連網址，例如 incompetech.com 的免費配樂',
   'player.music.autoplay': '自動播放音樂',
   'player.embed.copy': '複製 Player 嵌入碼',
 

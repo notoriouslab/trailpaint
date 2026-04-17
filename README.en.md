@@ -111,9 +111,10 @@ Click "Import" → "🤖 Create trail JSON with AI" → copy the prompt template
 
 - ▶ **Auto-play** — Fly-to animation with popup cards showing photos and descriptions
 - ⚙ **Playback settings** — Interval (2s/4s/6s/8s), loop count (1×/2×/3×/∞)
-- 🗺️ **Historical map overlay** — Three historical map layers from Academia Sinica (1897/1921/1966)
+- 🗺️ **Basemap switcher + historical overlay** — 5 basemaps + three historical layers from Academia Sinica (1897/1921/1966)
+- 🎵 **Background music** — Paste any direct MP3/M4A URL in settings, with autoplay option (try free CC BY tracks from [incompetech.com](https://incompetech.com/music/royalty-free/music.html))
 - 📺 **Fullscreen** — Ideal for exhibitions, teaching, and presentations
-- 🔗 **iframe embed** — `?embed=1&src=path` to embed in any webpage
+- 📋 **Copy Player embed code** — One-click copy `<iframe>` HTML with full project data
 - ▶ **Story mode** — One-click jump from Editor to Player
 
 ### Story Page

@@ -207,6 +207,7 @@ export default {
   'player.music.on': 'BGMを再生',
   'player.music.off': 'BGMを停止',
   'player.music.url': 'BGM URL',
+  'player.music.urlHint': 'MP3/M4Aの直リンクを貼り付け（例：incompetech.comの無料BGM）',
   'player.music.autoplay': 'BGM自動再生',
   'player.embed.copy': 'Player埋め込みコードをコピー',
 
