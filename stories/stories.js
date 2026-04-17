@@ -52,13 +52,20 @@ async function renderStoryPage(opts) {
     if (stories.length === 0) return;
 
     var useAutoplay = opts.autoplay ? '&autoplay=1' : '';
-    var musicParam = story.music && story.music.src
-      ? '&music=' + encodeURIComponent(storyBase + story.music.src)
-      : '';
+    var defaultMusic = story.music && story.music.src ? story.music.src : '';
+
+    function getMusicParam(s) {
+      // Story-level music overrides collection-level default
+      var musicSrc = s.music || defaultMusic;
+      if (!musicSrc) return '';
+      // Absolute URLs pass through, relative URLs resolve from storyBase
+      var url = musicSrc.startsWith('http') ? musicSrc : storyBase + musicSrc;
+      return '&music=' + encodeURIComponent(url);
+    }
 
     function activate(index) {
       var s = stories[index];
-      var src = playerBase + '?embed=1&src=' + storyBase + s.data + useAutoplay + musicParam;
+      var src = playerBase + '?embed=1&src=' + storyBase + s.data + useAutoplay + getMusicParam(s);
       iframe.src = src;
 
       // Update description (collapse when switching)

@@ -258,7 +258,7 @@ export default function PlaybackControl() {
           }}
           title={musicPlaying ? t('player.music.off') : t('player.music.on')}
         >
-          {musicPlaying ? '♪' : '♫'}
+          {musicPlaying ? '❚❚' : '♫'}
         </button>
         <button
           className={`playback__btn${showSettings ? ' playback__btn--active' : ''}`}
