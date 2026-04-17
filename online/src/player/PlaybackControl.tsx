@@ -53,7 +53,7 @@ export default function PlaybackControl() {
     const audio = new Audio(effectiveMusicUrl);
     audio.loop = true;
     audio.volume = 0.3;
-    audio.preload = 'none';
+    audio.preload = 'auto';
     audioRef.current = audio;
     if (effectiveAutoplay) {
       audio.play().catch(() => {});
