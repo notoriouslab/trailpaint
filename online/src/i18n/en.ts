@@ -79,8 +79,8 @@ export default {
   'export.preview.shortFailed': 'Shortening failed, use original link',
   'export.preview.aiPrompt': 'Copy AI Prompt',
   'export.preview.aiCopied': 'AI prompt copied!',
-  'export.preview.embedCode': 'Copy Embed Code',
-  'export.preview.embedCopied': 'Embed code copied!',
+  'export.preview.embedCode': 'Copy Player Embed Code',
+  'export.preview.embedCopied': 'Player embed code copied!',
   'export.ai.japanese': 'Japanese Hand-drawn',
   'export.ai.treasure': 'Treasure Map',
   'export.ai.kawaii': 'Kawaii Cartoon',
@@ -204,7 +204,9 @@ export default {
   'player.fullscreen.enter': 'Fullscreen',
   'player.fullscreen.exit': 'Exit fullscreen',
   'player.embed.empty': 'No story loaded',
-  'player.embed.copy': 'Copy embed code',
+  'player.music.on': 'Play background music',
+  'player.music.off': 'Stop background music',
+  'player.embed.copy': 'Copy Player embed code',
 
   // Icons
   'icon.leaf': 'Plant',

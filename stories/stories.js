@@ -52,10 +52,13 @@ async function renderStoryPage(opts) {
     if (stories.length === 0) return;
 
     var useAutoplay = opts.autoplay ? '&autoplay=1' : '';
+    var musicParam = story.music && story.music.src
+      ? '&music=' + encodeURIComponent(storyBase + story.music.src)
+      : '';
 
     function activate(index) {
       var s = stories[index];
-      var src = playerBase + '?embed=1&src=' + storyBase + s.data + useAutoplay;
+      var src = playerBase + '?embed=1&src=' + storyBase + s.data + useAutoplay + musicParam;
       iframe.src = src;
 
       // Update description (collapse when switching)
@@ -98,51 +101,9 @@ async function renderStoryPage(opts) {
     // Load first story
     activate(0);
 
-    // Background music (optional, configured in story.json)
-    if (story.music && story.music.src) {
-      initStoryMusic(story.music, storyBase);
-    }
+    // Music is now handled by Player via ?music= parameter
 
   } catch (e) {
     if (descEl) descEl.textContent = '無法載入故事資料';
   }
-}
-
-/* ── Background Music ── */
-
-function initStoryMusic(music, storyBase) {
-  var audio = document.createElement('audio');
-  audio.src = (storyBase || '') + music.src;
-  audio.loop = true;
-  audio.preload = 'none';
-  audio.volume = 0.3;
-
-  var btn = document.createElement('button');
-  btn.className = 'story-music-btn';
-  btn.title = music.title || 'Background Music';
-  btn.textContent = '\uD83C\uDFB5'; // 🎵
-  btn.setAttribute('aria-label', 'Toggle background music');
-  // Place inside header bar (avoids overlapping Player controls)
-  var header = document.querySelector('.stories-header');
-  if (header) {
-    header.style.position = 'relative';
-    header.appendChild(btn);
-  } else {
-    document.body.appendChild(btn);
-  }
-
-  var playing = false;
-
-  btn.addEventListener('click', function () {
-    if (playing) {
-      audio.pause();
-      btn.textContent = '\uD83C\uDFB5'; // 🎵
-      btn.classList.remove('story-music-btn--playing');
-    } else {
-      audio.play().catch(function () {});
-      btn.textContent = '\uD83D\uDD07'; // 🔇
-      btn.classList.add('story-music-btn--playing');
-    }
-    playing = !playing;
-  });
 }

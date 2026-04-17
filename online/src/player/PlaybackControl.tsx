@@ -31,11 +31,27 @@ export default function PlaybackControl() {
 
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const currentLoopRef = useRef(0);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const [showSettings, setShowSettings] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [embedCopied, setEmbedCopied] = useState(false);
+  const [musicPlaying, setMusicPlaying] = useState(false);
   const canFullscreen = useMemo(() => !!document.documentElement.requestFullscreen, []);
-  const isEmbed = useMemo(() => new URLSearchParams(window.location.search).get('embed') === '1', []);
+
+  const params = useMemo(() => new URLSearchParams(window.location.search), []);
+  const isEmbed = params.get('embed') === '1';
+  const musicUrl = params.get('music');
+
+  // Initialize audio element for background music
+  useEffect(() => {
+    if (!musicUrl) return;
+    const audio = new Audio(musicUrl);
+    audio.loop = true;
+    audio.volume = 0.3;
+    audio.preload = 'none';
+    audioRef.current = audio;
+    return () => { audio.pause(); audio.src = ''; };
+  }, [musicUrl]);
 
   const spots = project.spots;
   const total = spots.length;
@@ -182,37 +198,50 @@ export default function PlaybackControl() {
         <span className="playback__counter">
           {activeIndex !== null && activeIndex >= 0 ? activeIndex + 1 : 0}/{total}
         </span>
-        {!isEmbed && (
+        {musicUrl && (
           <button
-            className={`playback__gear${embedCopied ? ' playback__gear--active' : ''}`}
-            onClick={async () => {
-              const params = new URLSearchParams(window.location.search);
-              const src = params.get('src');
-              const origin = window.location.origin;
-              let html: string;
-              if (src) {
-                // Loaded via ?src= (story JSON) — simple iframe
-                html = `<iframe src="${origin}/app/player/?embed=1&src=${encodeURIComponent(src)}" width="100%" height="500" style="border:none;border-radius:8px" allowfullscreen></iframe>`;
+            className="playback__btn"
+            onClick={() => {
+              if (!audioRef.current) return;
+              if (musicPlaying) {
+                audioRef.current.pause();
               } else {
-                // Loaded from localStorage or share — use postMessage with full data
-                const json = JSON.stringify(project);
-                html = `<div id="tp-embed"></div>\n<script>\n(function(){\n  var d=${json};\n  var f=document.createElement('iframe');\n  f.src='${origin}/app/player/?embed=1';\n  f.style.cssText='width:100%;height:500px;border:none;border-radius:8px';\n  f.allowFullscreen=true;\n  document.getElementById('tp-embed').appendChild(f);\n  window.addEventListener('message',function h(e){if(e.data&&e.data.type==='trailpaint-ready'){f.contentWindow.postMessage({type:'trailpaint-project',data:d},'${origin}');window.removeEventListener('message',h);}});\n})();\n<\/script>`;
+                audioRef.current.play().catch(() => {});
               }
-              await navigator.clipboard.writeText(html);
-              setEmbedCopied(true);
-              setTimeout(() => setEmbedCopied(false), 2000);
+              setMusicPlaying(!musicPlaying);
             }}
-            title={t('player.embed.copy')}
+            title={musicPlaying ? t('player.music.off') : t('player.music.on')}
           >
-            {embedCopied ? '✓' : '⟨/⟩'}
+            {musicPlaying ? '🔇' : '🎵'}
           </button>
         )}
         <button
-          className={`playback__gear${showSettings ? ' playback__gear--active' : ''}`}
+          className={`playback__btn${showSettings ? ' playback__btn--active' : ''}`}
           onClick={() => setShowSettings(!showSettings)}
           title={t('player.playback.settings')}
         >
           ⚙
+        </button>
+        <button
+          className={`playback__btn${embedCopied ? ' playback__btn--active' : ''}`}
+          onClick={async () => {
+            const src = params.get('src');
+            const origin = window.location.origin;
+            let html: string;
+            if (src) {
+              const musicParam = musicUrl ? `&music=${encodeURIComponent(musicUrl)}` : '';
+              html = `<iframe src="${origin}/app/player/?embed=1&src=${encodeURIComponent(src)}${musicParam}" width="100%" height="500" style="border:none;border-radius:8px" allowfullscreen></iframe>`;
+            } else {
+              const json = JSON.stringify(project);
+              html = `<div id="tp-embed"></div>\n<script>\n(function(){\n  var d=${json};\n  var f=document.createElement('iframe');\n  f.src='${origin}/app/player/?embed=1';\n  f.style.cssText='width:100%;height:500px;border:none;border-radius:8px';\n  f.allowFullscreen=true;\n  document.getElementById('tp-embed').appendChild(f);\n  window.addEventListener('message',function h(e){if(e.data&&e.data.type==='trailpaint-ready'){f.contentWindow.postMessage({type:'trailpaint-project',data:d},'${origin}');window.removeEventListener('message',h);}});\n})();\n<\/script>`;
+            }
+            await navigator.clipboard.writeText(html);
+            setEmbedCopied(true);
+            setTimeout(() => setEmbedCopied(false), 2000);
+          }}
+          title={t('player.embed.copy')}
+        >
+          {embedCopied ? '✓' : '📋'}
         </button>
       </div>
     </>

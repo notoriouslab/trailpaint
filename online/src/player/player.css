@@ -217,6 +217,11 @@ html, body {
   background: rgba(253, 230, 138, 0.15);
 }
 
+.playback__btn--active {
+  background: rgba(253, 230, 138, 0.2);
+  color: #fde68a;
+}
+
 .playback__dots {
   display: flex;
   gap: 6px;
