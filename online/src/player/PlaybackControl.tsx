@@ -38,13 +38,14 @@ export default function PlaybackControl() {
   const [musicPlaying, setMusicPlaying] = useState(false);
   const canFullscreen = useMemo(() => !!document.documentElement.requestFullscreen, []);
 
-  const [musicUrlInput, setMusicUrlInput] = useState(project.music?.url ?? '');
+  const DEFAULT_MUSIC = 'https://trailpaint.org/stories/music/redeemed.mp3';
+  const [musicUrlInput, setMusicUrlInput] = useState(project.music?.url || DEFAULT_MUSIC);
   const [musicAutoplay, setMusicAutoplay] = useState(project.music?.autoplay ?? false);
 
   const params = useMemo(() => new URLSearchParams(window.location.search), []);
   const isEmbed = params.get('embed') === '1';
-  // Priority: ?music= param > project.music.url
-  const effectiveMusicUrl = params.get('music') || project.music?.url || '';
+  // Priority: ?music= param > project.music.url > default
+  const effectiveMusicUrl = params.get('music') || project.music?.url || DEFAULT_MUSIC;
   const effectiveAutoplay = params.get('music') ? true : project.music?.autoplay ?? false;
 
   // Initialize audio element for background music
