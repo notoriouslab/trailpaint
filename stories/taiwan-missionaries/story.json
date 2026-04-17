@@ -6,7 +6,7 @@
   "locale": "zh-TW",
   "cover": "cover.jpg",
   "music": {
-    "src": "https://dn711506.ca.archive.org/0/items/jamendo-168826/03-1453034-Ronny%20Matthes%20-%20Pianist%20und%20Komponist%20_GEMA-frei%20_%20Royalty%20Free_-Voller%20Hoffnung%20_Gemafreie%20Klaviermusik_.mp3",
+    "src": "../music/voller-hoffnung.mp3",
     "title": "Voller Hoffnung — Ronny Matthes",
     "credit": "Ronny Matthes (Jamendo / Internet Archive)",
     "license": "CC"
@@ -25,7 +25,7 @@
       "data": "mackay.trailpaint.json",
       "thumbnail": "mackay-thumb.jpg",
       "color": "#b45309",
-      "music": "https://dn711506.ca.archive.org/0/items/jamendo-168826/03-1453034-Ronny%20Matthes%20-%20Pianist%20und%20Komponist%20_GEMA-frei%20_%20Royalty%20Free_-Voller%20Hoffnung%20_Gemafreie%20Klaviermusik_.mp3"
+      "music": "../music/voller-hoffnung.mp3"
     },
     {
       "id": "barclay",
@@ -35,7 +35,7 @@
       "data": "barclay.trailpaint.json",
       "thumbnail": "barclay-thumb.jpg",
       "color": "#1e40af",
-      "music": "https://dn711506.ca.archive.org/0/items/jamendo-168826/04-1453033-Ronny%20Matthes%20-%20Pianist%20und%20Komponist%20_GEMA-frei%20_%20Royalty%20Free_-Morgenstimmung%20_%20Mornig%20Mood%20-%20Edvard%20Grieg.mp3"
+      "music": "../music/morning-mood.mp3"
     },
     {
       "id": "landsborough",
@@ -45,7 +45,7 @@
       "data": "landsborough.trailpaint.json",
       "thumbnail": "landsborough-thumb.jpg",
       "color": "#047857",
-      "music": "https://dn711506.ca.archive.org/0/items/jamendo-168826/05-1453030-Ronny%20Matthes%20-%20Pianist%20und%20Komponist%20_GEMA-frei%20_%20Royalty%20Free_-Sorrow%20And%20Love%20__Royalty%20Free%20Piano%20Music_.mp3"
+      "music": "../music/sorrow-and-love.mp3"
     },
     {
       "id": "maxwell",
@@ -55,7 +55,7 @@
       "data": "maxwell.trailpaint.json",
       "thumbnail": "maxwell-thumb.jpg",
       "color": "#9333ea",
-      "music": "https://dn711506.ca.archive.org/0/items/jamendo-168826/09-1453038-Ronny%20Matthes%20-%20Pianist%20und%20Komponist%20_GEMA-frei%20_%20Royalty%20Free_-The%20Servant%20King%20%20_Royalty%20Free%20Piano%20Music_.mp3"
+      "music": "../music/the-servant-king.mp3"
     },
     {
       "id": "brougham",
@@ -65,7 +65,7 @@
       "data": "brougham.trailpaint.json",
       "thumbnail": "brougham-thumb.jpg",
       "color": "#e11d48",
-      "music": "https://ia600906.us.archive.org/16/items/jamendo-168826/12-1453040-Ronny%20Matthes%20-%20Pianist%20und%20Komponist%20_GEMA-frei%20_%20Royalty%20Free_-Redeemed%20%20_Royalty%20Free%20Piano%20Music_.mp3"
+      "music": "../music/redeemed.mp3"
     }
   ],
   "footer": {
