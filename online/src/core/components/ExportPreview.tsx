@@ -363,8 +363,9 @@ export default function ExportPreview({ baseImage, onClose, onAdjust }: ExportPr
                 className="export-preview__btn"
                 onClick={async () => {
                   const project = useProjectStore.getState().project;
-                  const shareUrl = await encodeShareLink(project, '/app/player/');
-                  const embedHtml = `<iframe src="${shareUrl}" width="100%" height="500" style="border:none;border-radius:8px" allowfullscreen></iframe>`;
+                  const json = JSON.stringify(project);
+                  const origin = window.location.origin;
+                  const embedHtml = `<div id="tp-embed"></div>\n<script>\n(function(){\n  var f=document.createElement('iframe');\n  f.src='${origin}/app/player/?embed=1';\n  f.style.cssText='width:100%;height:500px;border:none;border-radius:8px';\n  f.allowFullscreen=true;\n  document.getElementById('tp-embed').appendChild(f);\n  f.onload=function(){f.contentWindow.postMessage({type:'trailpaint-project',data:${json}},'${origin}');};\n})();\n<\/script>`;
                   await navigator.clipboard.writeText(embedHtml);
                   showToast(t('export.preview.embedCopied'));
                 }}

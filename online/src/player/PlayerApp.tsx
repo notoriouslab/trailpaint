@@ -63,12 +63,27 @@ export default function PlayerApp() {
 
     // 3. Check URL hash (share link — photos stripped)
     const hash = window.location.hash;
-    if (!hash || !hash.startsWith('#share=')) return;
-    decodeShareLink(hash).then((p) => {
-      if (p) loadProject(p);
-      else setError(t('player.error.share'));
-    }).catch(() => setError(t('player.error.format')));
-  }, [params, loadProject, setError]);
+    if (hash && hash.startsWith('#share=')) {
+      decodeShareLink(hash).then((p) => {
+        if (p) loadProject(p);
+        else setError(t('player.error.share'));
+      }).catch(() => setError(t('player.error.format')));
+      return;
+    }
+
+    // 4. Listen for postMessage (embed with full project data including photos)
+    if (isEmbed) {
+      const handler = (e: MessageEvent) => {
+        if (e.data?.type !== 'trailpaint-project' || !e.data?.data) return;
+        try {
+          const data = migrateProject(e.data.data);
+          loadProject(data);
+        } catch { /* invalid data, ignore */ }
+      };
+      window.addEventListener('message', handler);
+      return () => window.removeEventListener('message', handler);
+    }
+  }, [params, loadProject, setError, isEmbed]);
 
   // Autoplay: trigger after project loads
   useEffect(() => {

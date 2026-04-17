@@ -188,19 +188,16 @@ export default function PlaybackControl() {
             onClick={async () => {
               const params = new URLSearchParams(window.location.search);
               const src = params.get('src');
-              let embedUrl: string;
+              const origin = window.location.origin;
+              let html: string;
               if (src) {
-                // Loaded via ?src= (story JSON) — use same src in embed
-                embedUrl = `${window.location.origin}/app/player/?embed=1&src=${encodeURIComponent(src)}`;
-              } else if (window.location.hash.startsWith('#share=')) {
-                // Loaded via share link — reuse hash
-                embedUrl = `${window.location.origin}/app/player/${window.location.hash}`;
+                // Loaded via ?src= (story JSON) — simple iframe
+                html = `<iframe src="${origin}/app/player/?embed=1&src=${encodeURIComponent(src)}" width="100%" height="500" style="border:none;border-radius:8px" allowfullscreen></iframe>`;
               } else {
-                // Loaded from localStorage — encode current project as share link
-                const { encodeShareLink } = await import('../core/utils/shareLink');
-                embedUrl = await encodeShareLink(project, '/app/player/');
+                // Loaded from localStorage or share — use postMessage with full data
+                const json = JSON.stringify(project);
+                html = `<div id="tp-embed"></div>\n<script>\n(function(){\n  var f=document.createElement('iframe');\n  f.src='${origin}/app/player/?embed=1';\n  f.style.cssText='width:100%;height:500px;border:none;border-radius:8px';\n  f.allowFullscreen=true;\n  document.getElementById('tp-embed').appendChild(f);\n  f.onload=function(){f.contentWindow.postMessage({type:'trailpaint-project',data:${json}},'${origin}');};\n})();\n<\/script>`;
               }
-              const html = `<iframe src="${embedUrl}" width="100%" height="500" style="border:none;border-radius:8px" allowfullscreen></iframe>`;
               await navigator.clipboard.writeText(html);
               setEmbedCopied(true);
               setTimeout(() => setEmbedCopied(false), 2000);
