@@ -79,6 +79,8 @@ export default {
   'export.preview.shortFailed': '縮短連結失敗，請使用原始連結',
   'export.preview.aiPrompt': '複製 AI 提示詞',
   'export.preview.aiCopied': '已複製 AI 提示詞！',
+  'export.preview.embedCode': '複製嵌入碼',
+  'export.preview.embedCopied': '已複製嵌入碼！',
   'export.ai.japanese': '日系手繪風',
   'export.ai.treasure': '藏寶圖風',
   'export.ai.kawaii': '療癒卡通風',
@@ -202,6 +204,7 @@ export default {
   'player.fullscreen.enter': '全螢幕',
   'player.fullscreen.exit': '退出全螢幕',
   'player.embed.empty': 'No story loaded',
+  'player.embed.copy': '複製嵌入碼',
 
   // Icons
   'icon.leaf': '植物',

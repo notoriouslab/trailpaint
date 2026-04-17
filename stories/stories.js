@@ -122,7 +122,14 @@ function initStoryMusic(music, storyBase) {
   btn.title = music.title || 'Background Music';
   btn.textContent = '\uD83C\uDFB5'; // 🎵
   btn.setAttribute('aria-label', 'Toggle background music');
-  document.body.appendChild(btn);
+  // Place inside header bar (avoids overlapping Player controls)
+  var header = document.querySelector('.stories-header');
+  if (header) {
+    header.style.position = 'relative';
+    header.appendChild(btn);
+  } else {
+    document.body.appendChild(btn);
+  }
 
   var playing = false;
 

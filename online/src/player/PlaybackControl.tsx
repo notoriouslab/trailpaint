@@ -33,7 +33,9 @@ export default function PlaybackControl() {
   const currentLoopRef = useRef(0);
   const [showSettings, setShowSettings] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [embedCopied, setEmbedCopied] = useState(false);
   const canFullscreen = useMemo(() => !!document.documentElement.requestFullscreen, []);
+  const isEmbed = useMemo(() => new URLSearchParams(window.location.search).get('embed') === '1', []);
 
   const spots = project.spots;
   const total = spots.length;
@@ -180,6 +182,23 @@ export default function PlaybackControl() {
         <span className="playback__counter">
           {activeIndex !== null && activeIndex >= 0 ? activeIndex + 1 : 0}/{total}
         </span>
+        {!isEmbed && (
+          <button
+            className={`playback__gear${embedCopied ? ' playback__gear--active' : ''}`}
+            onClick={() => {
+              const src = window.location.pathname + '?embed=1&src=' + (new URLSearchParams(window.location.search).get('src') || '');
+              const url = window.location.origin + src;
+              const html = `<iframe src="${url}" width="100%" height="500" style="border:none;border-radius:8px" allowfullscreen></iframe>`;
+              navigator.clipboard.writeText(html).then(() => {
+                setEmbedCopied(true);
+                setTimeout(() => setEmbedCopied(false), 2000);
+              });
+            }}
+            title={t('player.embed.copy')}
+          >
+            {embedCopied ? '✓' : '⟨/⟩'}
+          </button>
+        )}
         <button
           className={`playback__gear${showSettings ? ' playback__gear--active' : ''}`}
           onClick={() => setShowSettings(!showSettings)}

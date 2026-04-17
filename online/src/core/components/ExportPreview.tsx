@@ -359,6 +359,15 @@ export default function ExportPreview({ baseImage, onClose, onAdjust }: ExportPr
                   🤖 {t('export.preview.aiPrompt')}
                 </button>
               </div>
+              <button
+                className="export-preview__btn"
+                onClick={() => {
+                  const embedHtml = `<iframe src="${window.location.origin}/app/player/?embed=1" width="100%" height="500" style="border:none;border-radius:8px" allowfullscreen></iframe>`;
+                  navigator.clipboard.writeText(embedHtml).then(() => showToast(t('export.preview.embedCopied')));
+                }}
+              >
+                📋 {t('export.preview.embedCode')}
+              </button>
             </div>
           </div>
         </div>

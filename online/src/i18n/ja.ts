@@ -79,6 +79,8 @@ export default {
   'export.preview.shortFailed': '短縮に失敗しました。元のリンクをご利用ください',
   'export.preview.aiPrompt': 'AIプロンプトをコピー',
   'export.preview.aiCopied': 'AIプロンプトをコピーしました！',
+  'export.preview.embedCode': '埋め込みコードをコピー',
+  'export.preview.embedCopied': '埋め込みコードをコピーしました！',
   'export.ai.japanese': '和風手描き',
   'export.ai.treasure': '宝の地図',
   'export.ai.kawaii': 'カワイイ',
@@ -202,6 +204,7 @@ export default {
   'player.fullscreen.enter': 'フルスクリーン',
   'player.fullscreen.exit': 'フルスクリーン終了',
   'player.embed.empty': 'No story loaded',
+  'player.embed.copy': '埋め込みコードをコピー',
 
   // Icons
   'icon.leaf': '植物',

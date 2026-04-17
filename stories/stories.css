@@ -279,24 +279,23 @@ a:hover { text-decoration: underline; }
 /* ── Music Button ── */
 
 .story-music-btn {
-  position: fixed;
-  bottom: 16px;
-  left: 16px;
-  width: 40px;
-  height: 40px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  border: 2px solid #d4a574;
-  background: rgba(253, 248, 239, 0.9);
-  font-size: 18px;
+  border: 1.5px solid #d4a574;
+  background: rgba(253, 248, 239, 0.85);
+  font-size: 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  z-index: 1000;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  z-index: 10;
   transition: all 0.2s;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
 }
 
 .story-music-btn:hover {
