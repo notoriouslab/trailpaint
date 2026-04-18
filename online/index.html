@@ -4,26 +4,51 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>TrailPaint 路小繪 — 手繪風路線地圖工具</title>
-    <meta name="description" content="在真實地圖上製作手繪風格的路線插畫。景點卡片、照片標記、GPX 匯入，匯出可分享的漂亮地圖。" />
-    <meta property="og:title" content="TrailPaint 路小繪" />
-    <meta property="og:description" content="手繪風路線地圖工具 — 景點卡片 · 路線繪製 · GPX 匯入 · 漂亮匯出" />
+    <title>TrailPaint 路小繪 Editor — 手繪風路線地圖製作工具</title>
+    <meta name="description" content="TrailPaint 線上編輯器。從照片 EXIF、KML、GPX 建立路線，匯出 PNG、備份、GeoJSON/KML 互通格式。純瀏覽器、零後端、無需註冊。" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="NotoriousLab" />
+    <meta name="keywords" content="手繪風路線地圖, 路線地圖製作, 登山地圖編輯器, 旅遊地圖工具, GPX 匯入, 照片 EXIF 匯入, KML 匯出, GeoJSON 匯出, TrailPaint editor, trail map maker" />
+    <meta property="og:title" content="TrailPaint 路小繪 Editor" />
+    <meta property="og:description" content="手繪風路線地圖編輯器 — 從照片、KML、GPX 建立路線，一鍵匯出 PNG、備份、GeoJSON/KML" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://trailpaint.org/examples/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://trailpaint.org/app/" />
     <meta property="og:locale" content="zh_TW" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="ja_JP" />
     <meta property="og:site_name" content="TrailPaint 路小繪" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="TrailPaint 路小繪" />
-    <meta name="twitter:description" content="手繪風路線地圖工具 — 景點卡片 · 路線繪製 · GPX 匯入 · 漂亮匯出" />
+    <meta name="twitter:title" content="TrailPaint 路小繪 Editor" />
+    <meta name="twitter:description" content="手繪風路線地圖編輯器 — 從照片、KML、GPX 建立路線，一鍵匯出 PNG、備份、GeoJSON/KML" />
     <meta name="twitter:image" content="https://trailpaint.org/examples/og-image.jpg" />
     <link rel="canonical" href="https://trailpaint.org/app/" />
     <link rel="apple-touch-icon" href="/app/favicon.svg" />
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- SEO fallback: JS-disabled or text-only crawlers see this static content -->
+    <noscript>
+      <section style="max-width:720px;margin:2rem auto;padding:1.5rem;font-family:Georgia,serif;color:#78350f;">
+        <h1>TrailPaint 路小繪 — Editor</h1>
+        <p>TrailPaint 是一個<strong>手繪風路線地圖製作工具</strong>。Editor 在真實地圖上畫路線、放景點、加照片，匯出手繪插畫風地圖。</p>
+        <h2>三種建立路線的方式</h2>
+        <ul>
+          <li><strong>從照片</strong>：拖 20 張照片進來，EXIF GPS 自動建景點（JPEG/HEIC）</li>
+          <li><strong>在地圖上手動</strong>：搜尋地點、畫路線、放景點卡片</li>
+          <li><strong>用 AI 生成</strong>：複製提示詞給 ChatGPT / Claude，產出可匯入的 JSON</li>
+        </ul>
+        <h2>匯入格式</h2>
+        <p>.trailpaint 專案檔、照片 EXIF（JPEG/HEIC）、KML（Google My Maps）、GeoJSON（geojson.io / Google Takeout）、GPX 軌跡、截圖底圖。</p>
+        <h2>輸出格式</h2>
+        <p>PNG 多比例插畫（IG / Story / 4:3）、.trailpaint 完整備份、GeoJSON / KML（給 Google Earth / Gaia GPS）、分享連結、Player 嵌入碼。</p>
+        <p>請啟用 JavaScript 以使用完整 Editor 功能，或前往 <a href="https://trailpaint.org/">TrailPaint 首頁</a> 了解更多。</p>
+      </section>
+    </noscript>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
