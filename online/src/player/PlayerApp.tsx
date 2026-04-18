@@ -73,7 +73,12 @@ export default function PlayerApp() {
 
     // 4. Listen for postMessage (embed with full project data including photos)
     if (isEmbed) {
+      // Same-origin only: embed HTML lives on the same origin as Player (see Embed Code builder).
+      // Rejects third-party iframes trying to inject project data.
+      const expectedOrigin = window.location.origin;
       const handler = (e: MessageEvent) => {
+        if (e.origin !== expectedOrigin) return;
+        if (e.source !== window.parent) return;
         if (e.data?.type !== 'trailpaint-project' || !e.data?.data) return;
         try {
           const data = migrateProject(e.data.data);
@@ -81,8 +86,8 @@ export default function PlayerApp() {
         } catch { /* invalid data, ignore */ }
       };
       window.addEventListener('message', handler);
-      // Tell parent we're ready to receive data
-      window.parent.postMessage({ type: 'trailpaint-ready' }, '*');
+      // Tell parent we're ready — use specific origin, not wildcard
+      window.parent.postMessage({ type: 'trailpaint-ready' }, expectedOrigin);
       return () => window.removeEventListener('message', handler);
     }
   }, [params, loadProject, setError, isEmbed]);

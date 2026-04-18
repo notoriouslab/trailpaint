@@ -8,6 +8,7 @@ import {
 } from '../utils/exportRenderer';
 import { applyStyleFilter } from '../utils/styleFilters';
 import { encodeShareLink, shortenUrl } from '../utils/shareLink';
+import { buildProjectEmbedHtml } from '../utils/embedCode';
 import { t, currentLocale } from '../../i18n';
 import './ExportPreview.css';
 
@@ -363,9 +364,7 @@ export default function ExportPreview({ baseImage, onClose, onAdjust }: ExportPr
                 className="export-preview__btn"
                 onClick={async () => {
                   const project = useProjectStore.getState().project;
-                  const json = JSON.stringify(project);
-                  const origin = window.location.origin;
-                  const embedHtml = `<div id="tp-embed"></div>\n<script>\n(function(){\n  var d=${json};\n  var f=document.createElement('iframe');\n  f.src='${origin}/app/player/?embed=1';\n  f.style.cssText='width:100%;height:500px;border:none;border-radius:8px';\n  f.allowFullscreen=true;\n  document.getElementById('tp-embed').appendChild(f);\n  window.addEventListener('message',function h(e){if(e.data&&e.data.type==='trailpaint-ready'){f.contentWindow.postMessage({type:'trailpaint-project',data:d},'${origin}');window.removeEventListener('message',h);}});\n})();\n<\/script>`;
+                  const embedHtml = buildProjectEmbedHtml(project, window.location.origin);
                   await navigator.clipboard.writeText(embedHtml);
                   showToast(t('export.preview.embedCopied'));
                 }}

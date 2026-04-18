@@ -1,6 +1,7 @@
 import { useEffect, useRef, useCallback, useState, useMemo } from 'react';
 import { usePlayerStore } from './usePlayerStore';
 import { t } from '../i18n';
+import { buildProjectEmbedHtml, isAllowedMediaUrl } from '../core/utils/embedCode';
 
 const FLY_DURATION = 800; // ms
 
@@ -43,9 +44,12 @@ export default function PlaybackControl() {
   const [musicAutoplay, setMusicAutoplay] = useState(project.music?.autoplay ?? false);
 
   const params = useMemo(() => new URLSearchParams(window.location.search), []);
-  // Priority: ?music= param > project.music.url > default
-  const effectiveMusicUrl = params.get('music') || project.music?.url || DEFAULT_MUSIC;
-  const effectiveAutoplay = params.get('music') ? true : project.music?.autoplay ?? false;
+  // Priority: ?music= param (whitelist-checked) > project.music.url > default
+  // Same whitelist as migrateProject — prevents tracking pixels / mixed content via URL param
+  const rawMusicParam = params.get('music');
+  const musicParam = rawMusicParam && isAllowedMediaUrl(rawMusicParam) ? rawMusicParam : null;
+  const effectiveMusicUrl = musicParam || project.music?.url || DEFAULT_MUSIC;
+  const effectiveAutoplay = musicParam ? true : project.music?.autoplay ?? false;
 
   // Initialize audio element for background music
   useEffect(() => {
@@ -277,8 +281,7 @@ export default function PlaybackControl() {
               const musicParam = effectiveMusicUrl ? `&music=${encodeURIComponent(effectiveMusicUrl)}` : '';
               html = `<iframe src="${origin}/app/player/?embed=1&src=${encodeURIComponent(src)}${musicParam}" width="100%" height="500" style="border:none;border-radius:8px" allowfullscreen></iframe>`;
             } else {
-              const json = JSON.stringify(project);
-              html = `<div id="tp-embed"></div>\n<script>\n(function(){\n  var d=${json};\n  var f=document.createElement('iframe');\n  f.src='${origin}/app/player/?embed=1';\n  f.style.cssText='width:100%;height:500px;border:none;border-radius:8px';\n  f.allowFullscreen=true;\n  document.getElementById('tp-embed').appendChild(f);\n  window.addEventListener('message',function h(e){if(e.data&&e.data.type==='trailpaint-ready'){f.contentWindow.postMessage({type:'trailpaint-project',data:d},'${origin}');window.removeEventListener('message',h);}});\n})();\n<\/script>`;
+              html = buildProjectEmbedHtml(project, origin);
             }
             await navigator.clipboard.writeText(html);
             setEmbedCopied(true);

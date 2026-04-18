@@ -2,6 +2,7 @@ import type { Project, Spot, OverlaySetting, MusicSetting } from '../models/type
 import { DEFAULT_CARD_OFFSET } from '../models/types';
 import type { Route } from '../models/routes';
 import { ROUTE_COLORS } from '../models/routes';
+import { isAllowedMediaUrl } from './embedCode';
 
 /**
  * Validate and migrate raw JSON data to a Project.
@@ -122,13 +123,19 @@ export function migrateProject(data: Record<string, unknown>): Project {
   }
   // Validate optional basemapId (capped at 50 chars to prevent memory waste)
   const basemapId = typeof data.basemapId === 'string' ? data.basemapId.slice(0, 50) : undefined;
-  // Validate optional music setting
+  // Validate optional music setting via shared whitelist (see isAllowedMediaUrl)
   let music: MusicSetting | undefined;
   if (data.music && typeof data.music === 'object') {
     const m = data.music as Record<string, unknown>;
-    if (typeof m.url === 'string' && m.url.length > 0 && m.url.length <= 2000) {
+    if (typeof m.url === 'string' && isAllowedMediaUrl(m.url)) {
       music = { url: m.url, autoplay: !!m.autoplay };
     }
   }
-  return { ...p, version: 3, routes, ...(overlay ? { overlay } : {}), ...(basemapId ? { basemapId } : {}), ...(music ? { music } : {}) };
+  // Explicit optional-field handling: ...p spread would carry raw input values through
+  // even when validation rejects them. Delete = input overridden by sanitized result.
+  const result: Project = { ...p, version: 3, routes };
+  if (overlay) result.overlay = overlay; else delete result.overlay;
+  if (basemapId) result.basemapId = basemapId; else delete result.basemapId;
+  if (music) result.music = music; else delete result.music;
+  return result;
 }

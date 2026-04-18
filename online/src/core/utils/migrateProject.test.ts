@@ -111,6 +111,34 @@ describe('migrateProject — baseline (Task 2)', () => {
     expect(p.spots[0].photo).toBeNull();
   });
 
+  describe('music URL scheme whitelist (S3 privacy fix)', () => {
+    const allowed = [
+      'https://cdn.example.com/song.mp3',
+      '/stories/music/song.mp3',
+      './song.mp3',
+      '../music/song.mp3',
+    ];
+    const blocked = [
+      'http://tracker.example.com/ping.mp3',   // mixed content + tracking
+      'javascript:alert(1)',
+      'data:audio/mp3;base64,AAAA',
+      'ftp://example.com/song.mp3',
+      '//evil.com/song.mp3',                    // protocol-relative could become http:
+    ];
+    for (const url of allowed) {
+      it(`accepts ${url}`, () => {
+        const p = migrateProject({ ...validBase, music: { url, autoplay: false } });
+        expect(p.music?.url).toBe(url);
+      });
+    }
+    for (const url of blocked) {
+      it(`rejects ${url}`, () => {
+        const p = migrateProject({ ...validBase, music: { url, autoplay: false } });
+        expect(p.music).toBeUndefined();
+      });
+    }
+  });
+
   it('enforces 50 MB aggregate photo cap (later spots lose photos, data preserved)', () => {
     // 60 spots × 900 KB ≈ 54 MB — should drop photos after ~56th spot
     const photo = 'data:image/jpeg;base64,' + 'A'.repeat(900 * 1024);
