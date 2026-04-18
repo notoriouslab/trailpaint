@@ -106,6 +106,19 @@ export default {
   'export.adjust.zoomIn': 'ズームイン',
   'export.adjust.zoomOut': 'ズームアウト',
 
+  // Export Wizard tabs (011)
+  'export.tab.image': '画像',
+  'export.tab.backup': 'バックアップ',
+  'export.tab.interop': '他形式',
+  'export.backup.saveTitle': 'プロジェクト保存をダウンロード',
+  'export.backup.saveDesc': 'すべての地点・ルート・写真を保持。再インポートで編集可能。',
+  'export.backup.importTitle': '.trailpaint をインポート',
+  'export.interop.title': '地理構造エクスポート',
+  'export.interop.desc': 'Google My Maps・Google Earth・Gaia GPS 等で使用。写真は含まれません。',
+  'export.interop.geojson': 'GeoJSON エクスポート',
+  'export.interop.kml': 'KML エクスポート',
+  'export.interop.empty': 'エクスポート可能な地点・ルートがありません',
+
   // Import
   'app.import': '📥 インポート',
   'import.tooLarge': 'ファイルが大きすぎます（上限 20MB）',

@@ -2,7 +2,7 @@ import type { Project } from '../models/types';
 
 /**
  * Build the HTML snippet for embedding a full project (including photos) via <script>.
- * Used by both Player's "copy embed" button and ExportPreview.
+ * Used by both Player's "copy embed" button and ExportWizard.
  *
  * Safety: JSON is escaped to prevent </script> / HTML comment breakouts + U+2028/2029
  * line separators that would corrupt the inline script. Without this, a spot title

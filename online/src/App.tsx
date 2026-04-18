@@ -4,7 +4,7 @@ import ImageMapView from './map/ImageMapView';
 import Sidebar from './core/components/Sidebar';
 import ModeToolbar from './core/components/ModeToolbar';
 import OnboardingOverlay from './core/components/OnboardingOverlay';
-import ExportPreview from './core/components/ExportPreview';
+import ExportWizard from './core/components/ExportWizard';
 import ImportWizard from './core/components/ImportWizard';
 import FloatingActions from './core/components/FloatingActions';
 import { captureMap, saveProject, exportGeojson, exportKml } from './map/ExportButton';
@@ -48,7 +48,8 @@ export default function App() {
   const baseMode = useProjectStore((s) => s.baseMode);
   const sidebarOpen = useProjectStore((s) => s.sidebarOpen);
   const [dragOver, setDragOver] = useState(false);
-  const [exportPreviewImage, setExportPreviewImage] = useState<HTMLImageElement | null>(null);
+  const [exportWizardOpen, setExportWizardOpen] = useState(false);
+  const [capturedImage, setCapturedImage] = useState<HTMLImageElement | null>(null);
   const [importWizardOpen, setImportWizardOpen] = useState(false);
 
   // Handle share link on load
@@ -65,20 +66,27 @@ export default function App() {
     });
   }, []);
 
-  const handleOpenExportPreview = useCallback(async () => {
+  const handleOpenExportWizard = useCallback(() => {
+    // Dismiss any open on-screen keyboard (e.g. iOS when focus is on project name input)
+    // so it doesn't cover the Wizard bottom area.
+    (document.activeElement as HTMLElement | null)?.blur?.();
+    setExportWizardOpen(true);
+  }, []);
+
+  // Lazy capture: triggered by ExportWizard useEffect on first entry to image tab.
+  // MUST be useCallback with stable deps — if onCapture ref changes on every App
+  // render, the Wizard's useEffect dependency diff would retrigger captureMap in
+  // an infinite loop.
+  const handleCaptureRequest = useCallback(async () => {
     try {
-      // Collapse sidebar so the map expands to full width before capture.
-      // Pan the map left by half the sidebar width so the original composition
-      // center stays in the middle of the now-wider map.
       if (useProjectStore.getState().sidebarOpen) {
         useProjectStore.getState().setSidebarOpen(false);
-        // Wait for sidebar slide animation (250ms) + Leaflet resize settle
         await new Promise((r) => setTimeout(r, 350));
-        panBy(-150, 0); // sidebar is 300px → shift left by half
+        panBy(-150, 0);
         await new Promise((r) => setTimeout(r, 100));
       }
       const img = await captureMap(2);
-      setExportPreviewImage(img);
+      setCapturedImage(img);
     } catch (err) {
       console.error('Capture failed:', err);
       alert(t('export.failed'));
@@ -91,7 +99,7 @@ export default function App() {
     // Wait for tiles to load after adjustment
     await new Promise((r) => setTimeout(r, 400));
     const img = await captureMap(2);
-    setExportPreviewImage(img);
+    setCapturedImage(img);
     return img;
   }, []);
 
@@ -126,11 +134,8 @@ export default function App() {
     >
       <Sidebar
         onFlyTo={flyTo}
-        onOpenExportPreview={handleOpenExportPreview}
-        onSave={saveProject}
+        onOpenExportWizard={handleOpenExportWizard}
         onOpenImportWizard={handleOpenImportWizard}
-        onExportGeojson={exportGeojson}
-        onExportKml={exportKml}
       />
       <div className="map-container">
         {baseMode === 'map' ? <MapView /> : <ImageMapView />}
@@ -138,8 +143,7 @@ export default function App() {
           <div className="floating-mode-toolbar">
             <ModeToolbar />
             <FloatingActions
-              onExport={handleOpenExportPreview}
-              onSave={saveProject}
+              onExport={handleOpenExportWizard}
               onImport={handleOpenImportWizard}
               onToggleSettings={() => useProjectStore.getState().setSidebarOpen(true)}
               onStoryMode={useProjectStore.getState().project.spots.length > 0 ? () => {
@@ -150,11 +154,16 @@ export default function App() {
         )}
       </div>
       <OnboardingOverlay />
-      {exportPreviewImage && (
-        <ExportPreview
-          baseImage={exportPreviewImage}
-          onClose={() => setExportPreviewImage(null)}
+      {exportWizardOpen && (
+        <ExportWizard
+          baseImage={capturedImage}
+          onClose={() => { setExportWizardOpen(false); setCapturedImage(null); }}
           onAdjust={handleAdjustView}
+          onCapture={handleCaptureRequest}
+          onSave={saveProject}
+          onOpenImportWizard={handleOpenImportWizard}
+          onExportGeojson={exportGeojson}
+          onExportKml={exportKml}
         />
       )}
       {importWizardOpen && (

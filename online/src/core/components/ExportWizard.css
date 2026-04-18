@@ -287,7 +287,7 @@
 /* Toast */
 .export-preview__toast {
   position: absolute;
-  bottom: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   left: 50%;
   transform: translateX(-50%);
   background: #78350f;
@@ -350,4 +350,91 @@
     padding-top: 8px;
   }
 
+}
+
+/* ──────────────────────────────────────────────
+ * Wizard tabs (011)
+ * ────────────────────────────────────────────── */
+.export-preview__tabs {
+  display: flex;
+  gap: 4px;
+  padding: 8px 20px 0;
+  border-bottom: 1px solid #e5d5c0;
+}
+
+.export-preview__tab {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #a08060;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.export-preview__tab:hover {
+  color: #78350f;
+}
+
+.export-preview__tab--active {
+  color: #78350f;
+  border-bottom-color: #a0522d;
+}
+
+.export-preview__tab-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.export-preview__pane-title {
+  margin: 0;
+  font-size: 16px;
+  color: #78350f;
+}
+
+.export-preview__desc {
+  margin: 0;
+  font-size: 13px;
+  color: #8a7362;
+  line-height: 1.5;
+}
+
+.export-preview__divider {
+  height: 1px;
+  background: #e5d5c0;
+  margin: 8px 0;
+}
+
+.export-preview__empty {
+  padding: 24px;
+  text-align: center;
+  color: #a08060;
+  font-size: 14px;
+  background: #faf6ef;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .export-preview__tabs {
+    padding: 6px 12px 0;
+  }
+  .export-preview__tab {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  .export-preview__tab-pane {
+    padding: 16px;
+  }
 }

@@ -106,6 +106,19 @@ export default {
   'export.exportGeojson': '🌐 GeoJSON',
   'export.exportKml': '🌐 KML',
 
+  // Export Wizard tabs (011)
+  'export.tab.image': '圖片',
+  'export.tab.backup': '備份',
+  'export.tab.interop': '互通格式',
+  'export.backup.saveTitle': '下載專案存檔',
+  'export.backup.saveDesc': '完整保留景點、路線、照片，可重新匯入繼續編輯',
+  'export.backup.importTitle': '匯入 .trailpaint 檔案',
+  'export.interop.title': '地理結構匯出',
+  'export.interop.desc': '匯出給 Google My Maps / Google Earth / Gaia GPS 等工具使用。不含照片。',
+  'export.interop.geojson': '匯出 GeoJSON',
+  'export.interop.kml': '匯出 KML',
+  'export.interop.empty': '目前沒有景點或路線可匯出',
+
   // Import
   'app.import': '📥 匯入',
   'import.tooLarge': '檔案太大（上限 20MB）',

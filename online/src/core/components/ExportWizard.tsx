@@ -10,13 +10,21 @@ import { applyStyleFilter } from '../utils/styleFilters';
 import { encodeShareLink, shortenUrl } from '../utils/shareLink';
 import { buildProjectEmbedHtml } from '../utils/embedCode';
 import { t, currentLocale } from '../../i18n';
-import './ExportPreview.css';
+import './ExportWizard.css';
 
-interface ExportPreviewProps {
+interface ExportWizardProps {
   baseImage: HTMLImageElement | null;
   onClose: () => void;
   onAdjust: (dx: number, dy: number, dZoom: number) => Promise<HTMLImageElement>;
+  onCapture: () => Promise<void>;
+  onSave: () => void;
+  onOpenImportWizard: () => void;
+  onExportGeojson: () => void;
+  onExportKml: () => void;
 }
+
+type WizardTab = 'image' | 'backup' | 'interop';
+const WIZARD_TABS: WizardTab[] = ['image', 'backup', 'interop'];
 
 const FORMATS: ExportFormat[] = ['full', '1:1', '9:16', '4:3'];
 const BORDERS: ExportBorderStyle[] = ['classic', 'paper', 'minimal'];
@@ -100,16 +108,32 @@ function getAiPrompt(routeName: string, aiStyle: AiStyle): string {
 
 const PAN_STEP = 80; // pixels per click
 
-export default function ExportPreview({ baseImage, onClose, onAdjust }: ExportPreviewProps) {
+export default function ExportWizard({
+  baseImage,
+  onClose,
+  onAdjust,
+  onCapture,
+  onSave,
+  onOpenImportWizard,
+  onExportGeojson,
+  onExportKml,
+}: ExportWizardProps) {
+  const spots = useProjectStore((s) => s.project.spots);
   const routes = useProjectStore((s) => s.project.routes);
   const projectName = useProjectStore((s) => s.project.name);
   const showWatermark = useProjectStore((s) => s.watermark);
   const project = useProjectStore((s) => s.project);
+  const hasData = spots.length > 0 || routes.length > 0;
 
+  const [activeTab, setActiveTab] = useState<WizardTab>('image');
   const [format, setFormat] = useState<ExportFormat>('full');
   const [borderStyle, setBorderStyle] = useState<ExportBorderStyle>('classic');
   const [filter, setFilter] = useState<StyleFilter>('original');
   const [downloading, setDownloading] = useState(false);
+  const [saving, setSaving] = useState(false);
+  // `capturing` = first-time lazy capture when entering image tab;
+  // `adjusting` = re-capture after user pan/zoom. Intentionally separate.
+  const [capturing, setCapturing] = useState(false);
   const [adjusting, setAdjusting] = useState(false);
   const [toast, setToast] = useState('');
   const [aiStyle, setAiStyle] = useState<AiStyle>('japanese');
@@ -134,6 +158,16 @@ export default function ExportPreview({ baseImage, onClose, onAdjust }: ExportPr
       setAdjusting(false);
     }
   }, [adjusting, onAdjust]);
+
+  // Lazy capture: first time user enters image tab without baseImage,
+  // trigger onCapture (which collapses sidebar + panBy + captureMap in App.tsx).
+  useEffect(() => {
+    if (activeTab !== 'image') return;
+    if (baseImage) return;
+    if (capturing) return;
+    setCapturing(true);
+    onCapture().finally(() => setCapturing(false));
+  }, [activeTab, baseImage, capturing, onCapture]);
 
   // Render preview whenever settings change
   useEffect(() => {
@@ -199,6 +233,7 @@ export default function ExportPreview({ baseImage, onClose, onAdjust }: ExportPr
       if (ok) showToast(t('export.preview.shareCopied'));
     } catch (err) {
       console.error('Share link failed:', err);
+      showToast(t('export.preview.shortFailed'));
     }
   }, [project, showToast]);
 
@@ -235,8 +270,6 @@ export default function ExportPreview({ baseImage, onClose, onAdjust }: ExportPr
     return () => window.removeEventListener('keydown', onKey);
   }, [onClose]);
 
-  if (!baseImage) return null;
-
   return (
     <div className="export-preview__backdrop" onClick={onClose}>
       <div className="export-preview" onClick={(e) => e.stopPropagation()}>
@@ -246,24 +279,41 @@ export default function ExportPreview({ baseImage, onClose, onAdjust }: ExportPr
           <button className="export-preview__close" onClick={onClose}>✕</button>
         </div>
 
+        {/* Tab bar */}
+        <div className="export-preview__tabs" role="tablist">
+          {WIZARD_TABS.map((tab) => (
+            <button
+              key={tab}
+              role="tab"
+              aria-selected={activeTab === tab}
+              className={`export-preview__tab${activeTab === tab ? ' export-preview__tab--active' : ''}`}
+              onClick={() => setActiveTab(tab)}
+            >
+              {t(`export.tab.${tab}`)}
+            </button>
+          ))}
+        </div>
+
         <div className="export-preview__body">
+          {activeTab === 'image' && (
+            <>
           {/* Preview area */}
           <div className="export-preview__canvas-wrap">
-            <canvas ref={previewRef} className="export-preview__canvas" />
-            {adjusting && <div className="export-preview__loading">{t('export.preview.capturing')}</div>}
+            {baseImage && <canvas ref={previewRef} className="export-preview__canvas" />}
+            {(adjusting || capturing) && <div className="export-preview__loading">{t('export.preview.capturing')}</div>}
             {/* View adjustment controls */}
             <div className="export-preview__adjust">
               <div className="export-preview__adjust-pad">
-                <button className="export-preview__adjust-btn" disabled={adjusting} onClick={() => handleAdjust(0, -PAN_STEP, 0)} title={t('export.adjust.up')}>▲</button>
+                <button className="export-preview__adjust-btn" disabled={!baseImage || adjusting || capturing} onClick={() => handleAdjust(0, -PAN_STEP, 0)} title={t('export.adjust.up')}>▲</button>
                 <div className="export-preview__adjust-row">
-                  <button className="export-preview__adjust-btn" disabled={adjusting} onClick={() => handleAdjust(-PAN_STEP, 0, 0)} title={t('export.adjust.left')}>◀</button>
-                  <button className="export-preview__adjust-btn" disabled={adjusting} onClick={() => handleAdjust(PAN_STEP, 0, 0)} title={t('export.adjust.right')}>▶</button>
+                  <button className="export-preview__adjust-btn" disabled={!baseImage || adjusting || capturing} onClick={() => handleAdjust(-PAN_STEP, 0, 0)} title={t('export.adjust.left')}>◀</button>
+                  <button className="export-preview__adjust-btn" disabled={!baseImage || adjusting || capturing} onClick={() => handleAdjust(PAN_STEP, 0, 0)} title={t('export.adjust.right')}>▶</button>
                 </div>
-                <button className="export-preview__adjust-btn" disabled={adjusting} onClick={() => handleAdjust(0, PAN_STEP, 0)} title={t('export.adjust.down')}>▼</button>
+                <button className="export-preview__adjust-btn" disabled={!baseImage || adjusting || capturing} onClick={() => handleAdjust(0, PAN_STEP, 0)} title={t('export.adjust.down')}>▼</button>
               </div>
               <div className="export-preview__adjust-zoom">
-                <button className="export-preview__adjust-btn" disabled={adjusting} onClick={() => handleAdjust(0, 0, 0.5)} title={t('export.adjust.zoomIn')}>+</button>
-                <button className="export-preview__adjust-btn" disabled={adjusting} onClick={() => handleAdjust(0, 0, -0.5)} title={t('export.adjust.zoomOut')}>−</button>
+                <button className="export-preview__adjust-btn" disabled={!baseImage || adjusting || capturing} onClick={() => handleAdjust(0, 0, 0.5)} title={t('export.adjust.zoomIn')}>+</button>
+                <button className="export-preview__adjust-btn" disabled={!baseImage || adjusting || capturing} onClick={() => handleAdjust(0, 0, -0.5)} title={t('export.adjust.zoomOut')}>−</button>
               </div>
             </div>
           </div>
@@ -323,7 +373,7 @@ export default function ExportPreview({ baseImage, onClose, onAdjust }: ExportPr
               <button
                 className="export-preview__btn export-preview__btn--primary"
                 onClick={handleDownload}
-                disabled={downloading}
+                disabled={downloading || !baseImage}
               >
                 {downloading ? t('export.preview.downloading') : t('export.preview.download')}
               </button>
@@ -373,6 +423,53 @@ export default function ExportPreview({ baseImage, onClose, onAdjust }: ExportPr
               </button>
             </div>
           </div>
+            </>
+          )}
+
+          {activeTab === 'backup' && (
+            <div className="export-preview__tab-pane">
+              <button
+                className="export-preview__btn export-preview__btn--primary"
+                disabled={saving}
+                onClick={() => {
+                  if (saving) return;
+                  setSaving(true);
+                  try { onSave(); } finally {
+                    setTimeout(() => setSaving(false), 600);
+                  }
+                }}
+              >
+                💾 {t('export.backup.saveTitle')}
+              </button>
+              <p className="export-preview__desc">{t('export.backup.saveDesc')}</p>
+              <div className="export-preview__divider" />
+              <button
+                className="export-preview__btn"
+                onClick={() => { onClose(); onOpenImportWizard(); }}
+              >
+                📂 {t('export.backup.importTitle')}
+              </button>
+            </div>
+          )}
+
+          {activeTab === 'interop' && (
+            <div className="export-preview__tab-pane">
+              <h3 className="export-preview__pane-title">{t('export.interop.title')}</h3>
+              <p className="export-preview__desc">{t('export.interop.desc')}</p>
+              {hasData ? (
+                <>
+                  <button className="export-preview__btn" onClick={onExportGeojson}>
+                    🌐 {t('export.interop.geojson')}
+                  </button>
+                  <button className="export-preview__btn" onClick={onExportKml}>
+                    🌐 {t('export.interop.kml')}
+                  </button>
+                </>
+              ) : (
+                <div className="export-preview__empty">{t('export.interop.empty')}</div>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Toast */}

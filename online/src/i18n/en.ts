@@ -106,6 +106,19 @@ export default {
   'export.adjust.zoomIn': 'Zoom in',
   'export.adjust.zoomOut': 'Zoom out',
 
+  // Export Wizard tabs (011)
+  'export.tab.image': 'Image',
+  'export.tab.backup': 'Backup',
+  'export.tab.interop': 'Interop',
+  'export.backup.saveTitle': 'Download project backup',
+  'export.backup.saveDesc': 'Preserves all spots, routes, and photos. Re-importable for editing.',
+  'export.backup.importTitle': 'Import .trailpaint file',
+  'export.interop.title': 'Geographic export',
+  'export.interop.desc': 'Export for Google My Maps, Google Earth, Gaia GPS, etc. Photos excluded.',
+  'export.interop.geojson': 'Export GeoJSON',
+  'export.interop.kml': 'Export KML',
+  'export.interop.empty': 'No spots or routes to export',
+
   // Import
   'app.import': '📥 Import',
   'import.tooLarge': 'File too large (max 20MB)',
