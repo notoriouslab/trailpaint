@@ -15,9 +15,18 @@ interface SidebarProps {
   onOpenExportPreview: () => void;
   onSave: () => void;
   onOpenImportWizard: () => void;
+  onExportGeojson: () => void;
+  onExportKml: () => void;
 }
 
-export default function Sidebar({ onFlyTo, onOpenExportPreview, onSave, onOpenImportWizard }: SidebarProps) {
+export default function Sidebar({
+  onFlyTo,
+  onOpenExportPreview,
+  onSave,
+  onOpenImportWizard,
+  onExportGeojson,
+  onExportKml,
+}: SidebarProps) {
   const spots = useProjectStore((s) => s.project.spots);
   const routes = useProjectStore((s) => s.project.routes);
   const selectedSpotId = useProjectStore((s) => s.selectedSpotId);
@@ -83,6 +92,12 @@ export default function Sidebar({ onFlyTo, onOpenExportPreview, onSave, onOpenIm
           <button className="sidebar__tool-btn" onClick={onSave}>{t('app.save')}</button>
           <button className="sidebar__tool-btn" onClick={onOpenImportWizard}>{t('app.import')}</button>
         </div>
+        {spots.length > 0 && (
+          <div className="sidebar__toolbar">
+            <button className="sidebar__tool-btn" onClick={onExportGeojson}>{t('export.exportGeojson')}</button>
+            <button className="sidebar__tool-btn" onClick={onExportKml}>{t('export.exportKml')}</button>
+          </div>
+        )}
         {spots.length > 0 && (
           <div className="sidebar__toolbar">
             <button className="sidebar__tool-btn sidebar__tool-btn--story" onClick={() => {

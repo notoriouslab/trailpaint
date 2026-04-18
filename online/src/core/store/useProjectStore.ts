@@ -13,6 +13,7 @@ import type { GpxData } from '../utils/gpxParser';
 import type { ImportResult } from '../utils/geojsonImport';
 import { computeBoundingBoxCenter, renumberSpots } from './storeHelpers';
 import { compressImage } from '../hooks/useImageCompress';
+import { enqueueGeocode } from '../utils/geocodeQueue';
 
 export type BaseMode = 'map' | 'image';
 
@@ -431,7 +432,32 @@ export const useProjectStore = create<ProjectState>()(
       }
     }
 
-    // geocodeQueue integration added in Task 5; importPOIs spots currently keep their initial title
+    // Background reverseGeocode — per spot, queued at 1 req/s with dedup.
+    // Skip pendingLocation spots: their coordinate is mapCenter, not the real
+    // photo location, so the resolved place name would be misleading.
+    for (const newSpot of result.spots) {
+      if (newSpot.pendingLocation) continue;
+      enqueueGeocode({
+        spotId: newSpot.id,
+        latlng: newSpot.latlng,
+        originalTitle: newSpot.title,
+        onResult: (spotId, placeName, origTitle) => {
+          const curr = get();
+          const target = curr.project.spots.find((sp) => sp.id === spotId);
+          // checkAndSet: only overwrite if user hasn't edited the title
+          if (target && target.title === origTitle) {
+            set((s2) => ({
+              project: {
+                ...s2.project,
+                spots: s2.project.spots.map((sp) =>
+                  sp.id === spotId ? { ...sp, title: placeName } : sp
+                ),
+              },
+            }));
+          }
+        },
+      });
+    }
   },
 
   // ── UI ──

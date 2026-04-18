@@ -19,6 +19,8 @@ export default {
   // SpotList
   'spot.empty': '📍「スポット追加」で地図にマーク\n🖊️「ルート描画」でルートを描く\n📷 画像をドラッグして背景を変更',
   'spot.defaultTitle': 'スポット',
+  'spot.pendingLocationGroup': '位置未設定',
+  'spot.locatedGroup': '位置設定済み',
   'spot.loadSample': 'サンプルルートを読込 ▼',
 
   // Popup
@@ -98,6 +100,8 @@ export default {
   'export.adjust.down': '下に移動',
   'export.adjust.left': '左に移動',
   'export.adjust.right': '右に移動',
+  'export.exportGeojson': '🌐 GeoJSON',
+  'export.exportKml': '🌐 KML',
   'export.adjust.zoomIn': 'ズームイン',
   'export.adjust.zoomOut': 'ズームアウト',
 
@@ -111,6 +115,20 @@ export default {
   'import.loadJsonDesc': '.trailpaint.json ファイルを開く',
   'import.importGpx': 'GPX をインポート',
   'import.importGpxDesc': 'GPS トラックファイルをインポート',
+  'import.importPhotos': '写真をインポート',
+  'import.importPhotosDesc': '写真の EXIF GPS からスポットを自動生成',
+  'import.importKmlGeojson': 'KML / GeoJSON をインポート',
+  'import.importKmlGeojsonDesc': 'Google My Maps 等から',
+  'import.photoPreview.title': 'インポート確認',
+  'import.photoPreview.confirm': '確認',
+  'import.photoPreview.back': '戻る',
+  'import.photoPreview.stats': '{total} 枚 · GPS あり {withGps} · 位置未設定 {pending}',
+  'import.photoBatchLimit': '一度に {limit} 枚が上限です。先の {limit} 枚を処理しました',
+  'import.photoTooLarge': '{name} は {mb}MB を超えたためスキップしました',
+  'import.kmlParseError': 'KML ファイルが無効です',
+  'import.geojsonParseError': 'GeoJSON ファイルが無効です',
+  'import.unsupportedFeatures': '非対応要素を {count} 個スキップしました（面・入れ子）',
+  'import.noFeaturesImported': 'インポート可能なスポットや経路が見つかりません',
   'import.ai.title': '🤖 AI でルート JSON を作成',
   'import.ai.desc': '旅程の説明を ChatGPT や Claude に貼り付けると、インポート可能な JSON ファイルを生成します。',
   'import.ai.copyPrompt': 'プロンプトテンプレートをコピー',

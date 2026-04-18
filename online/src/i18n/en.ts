@@ -19,6 +19,8 @@ export default {
   // SpotList
   'spot.empty': '📍 Tap "Add Spot" to mark the map\n🖊️ Tap "Draw Route" to trace a path\n📷 Drag an image to change the basemap',
   'spot.defaultTitle': 'Spot',
+  'spot.pendingLocationGroup': 'Awaiting location',
+  'spot.locatedGroup': 'Located',
   'spot.loadSample': 'Load sample trail ▼',
 
   // Popup
@@ -98,6 +100,8 @@ export default {
   'export.adjust.down': 'Pan down',
   'export.adjust.left': 'Pan left',
   'export.adjust.right': 'Pan right',
+  'export.exportGeojson': '🌐 GeoJSON',
+  'export.exportKml': '🌐 KML',
   'export.adjust.zoomIn': 'Zoom in',
   'export.adjust.zoomOut': 'Zoom out',
 
@@ -111,6 +115,20 @@ export default {
   'import.loadJsonDesc': 'Open a .trailpaint.json file',
   'import.importGpx': 'Import GPX',
   'import.importGpxDesc': 'Import GPS track file',
+  'import.importPhotos': 'Import Photos',
+  'import.importPhotosDesc': 'Auto-create spots from photo EXIF GPS',
+  'import.importKmlGeojson': 'Import KML / GeoJSON',
+  'import.importKmlGeojsonDesc': 'From Google My Maps or other platforms',
+  'import.photoPreview.title': 'Confirm import',
+  'import.photoPreview.confirm': 'Confirm',
+  'import.photoPreview.back': 'Back',
+  'import.photoPreview.stats': '{total} photos · {withGps} with GPS · {pending} awaiting location',
+  'import.photoBatchLimit': 'Batch limit is {limit} photos. First {limit} processed; please split the rest.',
+  'import.photoTooLarge': '{name} exceeds {mb}MB limit — skipped',
+  'import.kmlParseError': 'Invalid KML file',
+  'import.geojsonParseError': 'Invalid GeoJSON file',
+  'import.unsupportedFeatures': 'Skipped {count} unsupported elements (polygons / nested)',
+  'import.noFeaturesImported': 'No importable spots or routes in file',
   'import.ai.title': '🤖 Create trail JSON with AI',
   'import.ai.desc': 'Paste your trip description to ChatGPT or Claude, it will generate an importable JSON file.',
   'import.ai.copyPrompt': 'Copy prompt template',

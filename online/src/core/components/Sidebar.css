@@ -629,6 +629,28 @@
   background: #fde68a;
 }
 
+/* 010 D5: pending-location spots (no GPS in EXIF). Faded so the user can
+   see at a glance which spots still need to be dragged onto the map. */
+.spot-list__item--pending .spot-list__title,
+.spot-list__item--pending .spot-list__emoji,
+.spot-list__item--pending .spot-list__num {
+  opacity: 0.55;
+}
+
+.spot-list__group-header {
+  padding: 8px 16px 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #8b6f3a;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: #fdf8ef;
+  border-bottom: 1px solid #efe2d0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 .spot-list__num {
   width: 24px;
   height: 24px;

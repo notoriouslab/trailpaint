@@ -11,6 +11,11 @@ vi.mock('../utils/reverseGeocode', () => ({
   reverseGeocode: vi.fn(async () => null),
 }));
 
+// Mock geocodeQueue so we can assert enqueue + trigger onResult synchronously
+vi.mock('../utils/geocodeQueue', () => ({
+  enqueueGeocode: vi.fn(),
+}));
+
 // Mock i18n t() used by addSpot / importGpx
 vi.mock('../../i18n', () => ({
   t: (key: string) => key,
@@ -21,6 +26,8 @@ import type { Spot } from '../models/types';
 import type { Route } from '../models/routes';
 import type { ImportResult } from '../utils/geojsonImport';
 import { DEFAULT_CARD_OFFSET } from '../models/types';
+import { enqueueGeocode } from '../utils/geocodeQueue';
+const mockEnqueueGeocode = enqueueGeocode as unknown as ReturnType<typeof vi.fn>;
 
 function resetStore() {
   useProjectStore.setState({
@@ -119,6 +126,68 @@ describe('importPOIs — append + renumber + flyTo (010 D6)', () => {
     await new Promise((r) => setTimeout(r, 0));
     const saved = useProjectStore.getState().project.spots.find((s) => s.title === 'photo spot');
     expect(saved?.photo).toBe('data:image/jpeg;base64,MOCK-pic.jpg');
+  });
+});
+
+describe('importPOIs — geocodeQueue integration (010 D4 / Task 5)', () => {
+  beforeEach(() => {
+    resetStore();
+    mockEnqueueGeocode.mockClear();
+  });
+
+  it('enqueues a geocode job per new non-pending spot', async () => {
+    const result: ImportResult = {
+      spots: [
+        mkSpot({ latlng: [25, 121], title: '2026-04-18 14:30' }),
+        mkSpot({ latlng: [24, 120], title: '2026-04-18 14:31' }),
+      ],
+      routes: [],
+    };
+    await useProjectStore.getState().importPOIs(result);
+    expect(mockEnqueueGeocode).toHaveBeenCalledTimes(2);
+    const firstCall = mockEnqueueGeocode.mock.calls[0][0];
+    expect(firstCall.spotId).toBe(result.spots[0].id);
+    expect(firstCall.originalTitle).toBe('2026-04-18 14:30');
+    expect(firstCall.latlng).toEqual([25, 121]);
+    expect(typeof firstCall.onResult).toBe('function');
+  });
+
+  it('skips pendingLocation spots (coord is mapCenter, not real)', async () => {
+    const result: ImportResult = {
+      spots: [
+        mkSpot({ latlng: [0, 0], title: 'pending', pendingLocation: true }),
+        mkSpot({ latlng: [25, 121], title: 'real' }),
+      ],
+      routes: [],
+    };
+    await useProjectStore.getState().importPOIs(result);
+    expect(mockEnqueueGeocode).toHaveBeenCalledTimes(1);
+    const call = mockEnqueueGeocode.mock.calls[0][0];
+    expect(call.originalTitle).toBe('real');
+  });
+
+  it('callback overwrites title only if user has not edited it (checkAndSet)', async () => {
+    const spot = mkSpot({ latlng: [25, 121], title: '2026-04-18 14:30' });
+    const result: ImportResult = { spots: [spot], routes: [] };
+    await useProjectStore.getState().importPOIs(result);
+
+    const job = mockEnqueueGeocode.mock.calls[0][0];
+    // Simulate queue firing callback — title still matches original → overwrite
+    job.onResult(spot.id, '台北 101', '2026-04-18 14:30');
+    expect(useProjectStore.getState().project.spots.find((s) => s.id === spot.id)?.title).toBe('台北 101');
+  });
+
+  it('callback skips when originalTitle no longer matches (user edited)', async () => {
+    const spot = mkSpot({ latlng: [25, 121], title: '2026-04-18 14:30' });
+    const result: ImportResult = { spots: [spot], routes: [] };
+    await useProjectStore.getState().importPOIs(result);
+    // User renames the spot before geocode resolves
+    useProjectStore.getState().updateSpot(spot.id, { title: 'my custom name' });
+
+    const job = mockEnqueueGeocode.mock.calls[0][0];
+    job.onResult(spot.id, '台北 101', '2026-04-18 14:30');
+
+    expect(useProjectStore.getState().project.spots.find((s) => s.id === spot.id)?.title).toBe('my custom name');
   });
 });
 

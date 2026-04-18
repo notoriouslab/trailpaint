@@ -19,6 +19,8 @@ export default {
   // SpotList
   'spot.empty': '📍 點「加景點」在地圖上標記\n🖊️ 點「畫路線」繪製路線\n📷 拖曳圖片到畫面換底圖',
   'spot.defaultTitle': '景點',
+  'spot.pendingLocationGroup': '待定位',
+  'spot.locatedGroup': '已定位',
   'spot.loadSample': '載入範例步道 ▼',
 
   // Popup
@@ -100,6 +102,8 @@ export default {
   'export.adjust.right': '右移',
   'export.adjust.zoomIn': '放大',
   'export.adjust.zoomOut': '縮小',
+  'export.exportGeojson': '🌐 GeoJSON',
+  'export.exportKml': '🌐 KML',
 
   // Import
   'app.import': '📥 匯入',
@@ -111,6 +115,20 @@ export default {
   'import.loadJsonDesc': '開啟 .trailpaint.json 檔案',
   'import.importGpx': '匯入 GPX',
   'import.importGpxDesc': '匯入 GPS 軌跡檔',
+  'import.importPhotos': '匯入照片',
+  'import.importPhotosDesc': '讀照片 EXIF GPS 自動建景點',
+  'import.importKmlGeojson': '匯入 KML / GeoJSON',
+  'import.importKmlGeojsonDesc': '從 Google My Maps 或其他平台',
+  'import.photoPreview.title': '確認匯入',
+  'import.photoPreview.confirm': '確認匯入',
+  'import.photoPreview.back': '返回',
+  'import.photoPreview.stats': '{total} 張 · {withGps} 有 GPS · {pending} 待定位',
+  'import.photoBatchLimit': '單次上限 {limit} 張，已處理前 {limit} 張，其餘請分批匯入',
+  'import.photoTooLarge': '{name} 超過 {mb}MB 上限，已略過',
+  'import.kmlParseError': 'KML 格式錯誤，請確認檔案完整',
+  'import.geojsonParseError': 'GeoJSON 格式錯誤，請確認檔案完整',
+  'import.unsupportedFeatures': '偵測到 {count} 個不支援的元素（面型/嵌套），已略過',
+  'import.noFeaturesImported': '檔案內沒有可匯入的景點或路線',
   'import.ai.title': '🤖 用 AI 製作路線 JSON',
   'import.ai.desc': '把行程描述貼給 ChatGPT 或 Claude，它會幫你生成可匯入的 JSON 檔案。',
   'import.ai.copyPrompt': '複製提示詞模板',

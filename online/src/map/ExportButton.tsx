@@ -2,6 +2,8 @@ import { toPng } from 'html-to-image';
 import { useProjectStore } from '../core/store/useProjectStore';
 import { parseGpx } from '../core/utils/gpxParser';
 import { roundRectPath } from '../core/utils/exportRenderer';
+import { projectToGeojson } from '../core/utils/geojsonExport';
+import { projectToKml } from '../core/utils/kmlExport';
 import { t } from '../i18n';
 
 function sanitizeFilename(name: string): string {
@@ -218,6 +220,28 @@ export function saveProject() {
   link.href = url;
   link.click();
   URL.revokeObjectURL(url);
+}
+
+function downloadText(text: string, filename: string, mime: string) {
+  const blob = new Blob([text], { type: mime });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.download = filename;
+  link.href = url;
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
+export function exportGeojson() {
+  const project = useProjectStore.getState().project;
+  const text = projectToGeojson(project);
+  downloadText(text, `${sanitizeFilename(project.name)}.geojson`, 'application/geo+json');
+}
+
+export function exportKml() {
+  const project = useProjectStore.getState().project;
+  const text = projectToKml(project);
+  downloadText(text, `${sanitizeFilename(project.name)}.kml`, 'application/vnd.google-earth.kml+xml');
 }
 
 const MAX_PROJECT_SIZE = 20 * 1024 * 1024; // 20MB

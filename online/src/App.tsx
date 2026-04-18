@@ -7,7 +7,7 @@ import OnboardingOverlay from './core/components/OnboardingOverlay';
 import ExportPreview from './core/components/ExportPreview';
 import ImportWizard from './core/components/ImportWizard';
 import FloatingActions from './core/components/FloatingActions';
-import { captureMap, saveProject } from './map/ExportButton';
+import { captureMap, saveProject, exportGeojson, exportKml } from './map/ExportButton';
 import { decodeShareLink, encodeShareLink } from './core/utils/shareLink';
 import { flyTo, panBy, zoomBy } from './map/useMapRef';
 import { useUndoRedoKeys } from './core/hooks/useUndoRedo';
@@ -128,6 +128,8 @@ export default function App() {
         onOpenExportPreview={handleOpenExportPreview}
         onSave={saveProject}
         onOpenImportWizard={handleOpenImportWizard}
+        onExportGeojson={exportGeojson}
+        onExportKml={exportKml}
       />
       <div className="map-container">
         {baseMode === 'map' ? <MapView /> : <ImageMapView />}

@@ -23,6 +23,13 @@
   cursor: grabbing;
 }
 
+/* 010 D5: pending-location spots (no GPS in EXIF) render at reduced opacity
+   so the user can see which pins still need to be dragged to a real place. */
+.spot-pin--pending .spot-pin__circle {
+  opacity: 0.5;
+  border-style: dashed;
+}
+
 /* ── Card overlay ── */
 
 .spot-overlay {

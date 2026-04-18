@@ -31,8 +31,9 @@ export default function SpotMarker({ spot }: { spot: Spot }) {
   const selected = selectedSpotId === spot.id;
   const icon = getIcon(spot.iconId);
 
+  const pendingClass = spot.pendingLocation ? ' spot-pin--pending' : '';
   const pinIcon = L.divIcon({
-    className: 'spot-pin',
+    className: `spot-pin${pendingClass}`,
     html: `<div class="spot-pin__circle"><span>${escapeHtml(icon.emoji)}</span></div>`,
     iconSize: [32, 32],
     iconAnchor: [16, 16],

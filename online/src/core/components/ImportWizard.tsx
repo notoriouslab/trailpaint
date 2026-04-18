@@ -1,6 +1,11 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useProjectStore } from '../store/useProjectStore';
 import { parseGpx } from '../utils/gpxParser';
+import { exifToGeojson, MAX_PHOTO_BATCH } from '../utils/exifToGeojson';
+import { parseKml } from '../utils/kmlParser';
+import { parseGeoJson } from '../utils/geojsonParser';
+import { geojsonToImport, type ImportBundle } from '../utils/geojsonImport';
+import type { ExifStats } from '../utils/exifToGeojson';
 import { t } from '../../i18n';
 import './ImportWizard.css';
 
@@ -61,11 +66,22 @@ async function copyToClipboard(text: string): Promise<boolean> {
   return ok;
 }
 
+type SubView = 'main' | 'photoPreview';
+
+interface PhotoPreviewState {
+  files: File[];
+  stats: ExifStats;
+  bundle: ImportBundle;
+}
+
 export default function ImportWizard({ onClose, onLoadImage }: ImportWizardProps) {
   const importJSON = useProjectStore((s) => s.importJSON);
   const importGpx = useProjectStore((s) => s.importGpx);
+  const importPOIs = useProjectStore((s) => s.importPOIs);
   const [toast, setToast] = useState('');
   const [schemaOpen, setSchemaOpen] = useState(false);
+  const [subView, setSubView] = useState<SubView>('main');
+  const [preview, setPreview] = useState<PhotoPreviewState | null>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   const showToast = useCallback((msg: string) => {
@@ -119,6 +135,88 @@ export default function ImportWizard({ onClose, onLoadImage }: ImportWizardProps
     };
     input.click();
   }, [importJSON, onClose]);
+
+  const runImport = useCallback(async (bundle: ImportBundle) => {
+    const state = useProjectStore.getState();
+    const result = geojsonToImport(bundle, {
+      startingSpotNum: state.project.spots.length,
+      startingRouteColorIdx: state.project.routes.length,
+      mapCenter: state.project.center,
+    });
+    if (result.spots.length === 0 && result.routes.length === 0) {
+      alert(t('import.noFeaturesImported'));
+      return false;
+    }
+    if (result.unsupportedCount && result.unsupportedCount > 0) {
+      showToast(t('import.unsupportedFeatures').replace('{count}', String(result.unsupportedCount)));
+    }
+    await importPOIs(result);
+    return true;
+  }, [importPOIs, showToast]);
+
+  const handleImportPhotos = useCallback(() => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.multiple = true;
+    input.onchange = async () => {
+      const all = Array.from(input.files ?? []);
+      if (all.length === 0) return;
+      const files = all.slice(0, MAX_PHOTO_BATCH);
+      const overLimit = all.length > MAX_PHOTO_BATCH;
+      try {
+        const state = useProjectStore.getState();
+        const bundle = await exifToGeojson(files, state.project.center);
+        setPreview({ files, stats: bundle.stats, bundle });
+        setSubView('photoPreview');
+        if (overLimit) {
+          showToast(
+            t('import.photoBatchLimit').replace(/\{limit\}/g, String(MAX_PHOTO_BATCH)),
+          );
+        }
+      } catch {
+        alert(t('import.failed'));
+      }
+    };
+    input.click();
+  }, [showToast]);
+
+  const handleConfirmPhotos = useCallback(async () => {
+    if (!preview) return;
+    const ok = await runImport(preview.bundle);
+    if (ok) onClose();
+  }, [preview, runImport, onClose]);
+
+  const handleBackFromPreview = useCallback(() => {
+    setSubView('main');
+    setPreview(null);
+  }, []);
+
+  const handleImportKmlGeojson = useCallback(() => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.kml,.geojson,.json';
+    input.onchange = async () => {
+      const file = input.files?.[0];
+      if (!file) return;
+      if (file.size > MAX_PROJECT_SIZE) {
+        alert(t('import.tooLarge'));
+        return;
+      }
+      const isKml = file.name.toLowerCase().endsWith('.kml');
+      try {
+        const text = await file.text();
+        const bundle = isKml ? parseKml(text) : parseGeoJson(text);
+        const ok = await runImport(bundle);
+        if (ok) onClose();
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        const errKey = isKml ? 'import.kmlParseError' : 'import.geojsonParseError';
+        alert(`${t(errKey)}: ${msg}`);
+      }
+    };
+    input.click();
+  }, [runImport, onClose]);
 
   const handleImportGpx = useCallback(() => {
     const input = document.createElement('input');
@@ -193,8 +291,26 @@ export default function ImportWizard({ onClose, onLoadImage }: ImportWizardProps
         </div>
 
         <div className="import-wizard__body">
-          {/* Three import cards */}
+          {subView === 'photoPreview' && preview ? (
+            <PhotoPreview
+              state={preview}
+              onConfirm={handleConfirmPhotos}
+              onBack={handleBackFromPreview}
+            />
+          ) : (
+          <>
+          {/* Import cards */}
           <div className="import-wizard__cards">
+            <button className="import-wizard__card" onClick={handleImportPhotos}>
+              <span className="import-wizard__card-icon">📸</span>
+              <span className="import-wizard__card-title">{t('import.importPhotos')}</span>
+              <span className="import-wizard__card-desc">{t('import.importPhotosDesc')}</span>
+            </button>
+            <button className="import-wizard__card" onClick={handleImportKmlGeojson}>
+              <span className="import-wizard__card-icon">🌐</span>
+              <span className="import-wizard__card-title">{t('import.importKmlGeojson')}</span>
+              <span className="import-wizard__card-desc">{t('import.importKmlGeojsonDesc')}</span>
+            </button>
             <button className="import-wizard__card" onClick={handleUploadBg}>
               <span className="import-wizard__card-icon">🗺️</span>
               <span className="import-wizard__card-title">{t('import.uploadBg')}</span>
@@ -269,10 +385,75 @@ export default function ImportWizard({ onClose, onLoadImage }: ImportWizardProps
               </div>
             )}
           </div>
+          </>
+          )}
         </div>
 
         {/* Toast */}
         {toast && <div className="import-wizard__toast">{toast}</div>}
+      </div>
+    </div>
+  );
+}
+
+function PhotoPreview({
+  state,
+  onConfirm,
+  onBack,
+}: {
+  state: PhotoPreviewState;
+  onConfirm: () => void;
+  onBack: () => void;
+}) {
+  // Build object URLs for thumbnails + revoke on unmount to avoid leaks
+  const [urls, setUrls] = useState<string[]>([]);
+  useEffect(() => {
+    const next = state.files.map((f) => URL.createObjectURL(f));
+    setUrls(next);
+    return () => { next.forEach((u) => URL.revokeObjectURL(u)); };
+  }, [state.files]);
+
+  const stats = state.stats;
+  const statsText = t('import.photoPreview.stats')
+    .replace('{total}', String(stats.total))
+    .replace('{withGps}', String(stats.withGps))
+    .replace('{pending}', String(stats.withoutGps));
+
+  // Map feature index ↔ file index by photoRef key
+  const pendingByRef = new Set(
+    state.bundle.featureCollection.features
+      .filter((f) => f.properties?.pendingLocation === true)
+      .map((f) => f.properties?.photoRef as string),
+  );
+
+  return (
+    <div className="import-wizard__photo-preview">
+      <div className="import-wizard__photo-stats">{statsText}</div>
+      <div className="import-wizard__photo-grid">
+        {state.files.map((file, i) => {
+          const photoRef = `${file.name}::${i}`;
+          const isPending = pendingByRef.has(photoRef);
+          return (
+            <div
+              key={photoRef}
+              className={`import-wizard__photo-thumb${isPending ? ' import-wizard__photo-thumb--pending' : ''}`}
+              title={file.name}
+            >
+              {urls[i] && <img src={urls[i]} alt={file.name} />}
+              <span className="import-wizard__photo-badge">
+                {isPending ? '❓' : '📍'}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+      <div className="import-wizard__photo-actions">
+        <button className="import-wizard__card" onClick={onBack}>
+          {t('import.photoPreview.back')}
+        </button>
+        <button className="import-wizard__card import-wizard__card--primary" onClick={onConfirm}>
+          {t('import.photoPreview.confirm')}
+        </button>
       </div>
     </div>
   );
