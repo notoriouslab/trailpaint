@@ -28,10 +28,13 @@ export async function parseExif(file: File): Promise<ExifData> {
 
   let takenAt: Date | null = null;
   if (data?.DateTimeOriginal) {
-    takenAt =
+    const candidate =
       data.DateTimeOriginal instanceof Date
         ? data.DateTimeOriginal
         : new Date(data.DateTimeOriginal);
+    // Reject Invalid Date (e.g. EXIF with garbage timestamp); formatDateTime
+    // would otherwise emit "NaN-NaN-NaN NaN:NaN" as the spot title.
+    if (!isNaN(candidate.getTime())) takenAt = candidate;
   }
 
   return { file, latlng, takenAt };

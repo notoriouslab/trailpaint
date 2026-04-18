@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { exifToGeojson, MAX_PHOTO_BATCH } from './exifToGeojson';
+import { exifToGeojson, MAX_PHOTO_BATCH, MAX_PHOTO_BYTES } from './exifToGeojson';
 
 // Mock parseExif so we can control EXIF data per file
 vi.mock('./exifParser', () => ({
@@ -185,6 +185,19 @@ describe('exifToGeojson', () => {
     expect(result.stats.total).toBe(0);
     expect(result.stats.withGps).toBe(0);
     expect(result.photoFiles).toBeUndefined();
+  });
+
+  it('rejects files over MAX_PHOTO_BYTES without calling parseExif (OOM defence)', async () => {
+    // Create a File whose .size reports >10MB without actually allocating it
+    const oversized = new File(['tiny'], 'huge.jpg', { type: 'image/jpeg' });
+    Object.defineProperty(oversized, 'size', { value: MAX_PHOTO_BYTES + 1 });
+
+    const result = await exifToGeojson([oversized], [25, 121]);
+
+    expect(mockParseExif).not.toHaveBeenCalled();
+    expect(result.featureCollection.features).toHaveLength(0);
+    expect(result.stats.unreadable).toBe(1);
+    expect(result.stats.total).toBe(1);
   });
 
   it('counts unreadable files in stats + skips them (no feature produced)', async () => {

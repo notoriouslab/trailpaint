@@ -2,6 +2,9 @@ import type { ImportBundle } from './geojsonImport';
 import { parseExif } from './exifParser';
 
 export const MAX_PHOTO_BATCH = 20;
+// Per-photo size cap before EXIF parsing — reject 50MB payloads that would OOM the tab.
+// Camera JPEGs are typically 2–5MB; 10MB is generous without inviting abuse.
+export const MAX_PHOTO_BYTES = 10 * 1024 * 1024;
 
 export interface ExifStats {
   total: number;
@@ -23,6 +26,7 @@ type PointFeature = {
 /**
  * Convert a batch of photos to a GeoJSON FeatureCollection via EXIF parsing.
  * - Processes up to MAX_PHOTO_BATCH photos (caller truncates or surfaces toast)
+ * - Files larger than MAX_PHOTO_BYTES are counted unreadable (skip EXIF to avoid OOM)
  * - Photos with GPS become Points at their real location
  * - Photos without GPS become Points at mapCenter + pendingLocation=true
  * - Unreadable files (parseExif throws) are counted in stats.unreadable and produce no feature
@@ -47,6 +51,12 @@ export async function exifToGeojson(
     const file = filesToProcess[i];
     // Yield to the event loop so the UI stays responsive for 20 photos (D2)
     await new Promise((r) => setTimeout(r, 0));
+
+    // Reject oversized files up-front; exifr on 50MB+ payloads OOMs the tab.
+    if (file.size > MAX_PHOTO_BYTES) {
+      stats.unreadable++;
+      continue;
+    }
 
     let exifData;
     try {

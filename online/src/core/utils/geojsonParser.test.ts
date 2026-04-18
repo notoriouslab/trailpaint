@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from 'vitest';
-import { parseGeoJson } from './geojsonParser';
+import { parseGeoJson, MAX_IMPORT_FEATURES } from './geojsonParser';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
@@ -100,6 +100,48 @@ describe('geojsonParser', () => {
     const pointFeature = result.featureCollection.features.find((f) => f.geometry.type === 'Point');
     expect(pointFeature!.properties).toBeDefined();
     expect(pointFeature!.properties).toHaveProperty('title');
+  });
+
+  it('throws when features exceed MAX_IMPORT_FEATURES (DoS defence)', () => {
+    const oversized = JSON.stringify({
+      type: 'FeatureCollection',
+      features: Array.from({ length: MAX_IMPORT_FEATURES + 1 }, () => ({
+        type: 'Feature',
+        geometry: { type: 'Point', coordinates: [0, 0] },
+        properties: {},
+      })),
+    });
+    expect(() => parseGeoJson(oversized)).toThrow(/features 數量超過上限/);
+  });
+
+  it('accepts features exactly at MAX_IMPORT_FEATURES', () => {
+    const atLimit = JSON.stringify({
+      type: 'FeatureCollection',
+      features: Array.from({ length: MAX_IMPORT_FEATURES }, () => ({
+        type: 'Feature',
+        geometry: { type: 'Point', coordinates: [0, 0] },
+        properties: {},
+      })),
+    });
+    expect(() => parseGeoJson(atLimit)).not.toThrow();
+  });
+
+  it('returns a fresh features array (mutations do not leak to caller JSON)', () => {
+    const json = JSON.stringify({
+      type: 'FeatureCollection',
+      features: [
+        { type: 'Feature', geometry: { type: 'Point', coordinates: [0, 0] }, properties: { title: 'a' } },
+      ],
+    });
+    const result = parseGeoJson(json);
+    result.featureCollection.features.push({
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [1, 1] },
+      properties: { title: 'injected' },
+    });
+    // Re-parsing the original JSON string must still produce the original single feature
+    const fresh = parseGeoJson(json);
+    expect(fresh.featureCollection.features).toHaveLength(1);
   });
 
   it('should handle various property names (title, name, desc, description)', () => {

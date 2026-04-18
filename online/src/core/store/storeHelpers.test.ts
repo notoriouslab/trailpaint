@@ -36,6 +36,16 @@ describe('computeBoundingBoxCenter', () => {
     const result = computeBoundingBoxCenter([[-10, -50], [10, 50]]);
     expect(result).toEqual({ center: [0, 0], zoom: 12 });
   });
+
+  it('filters NaN/Infinity points so they cannot poison the center (A5)', () => {
+    const pts: [number, number][] = [[NaN, 100], [23.5, 121], [Infinity, -Infinity]];
+    const result = computeBoundingBoxCenter(pts);
+    expect(result).toEqual({ center: [23.5, 121], zoom: 12 });
+  });
+
+  it('returns null when every point is non-finite', () => {
+    expect(computeBoundingBoxCenter([[NaN, NaN], [Infinity, 0]])).toBeNull();
+  });
 });
 
 describe('renumberSpots', () => {

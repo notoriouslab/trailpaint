@@ -236,6 +236,72 @@ describe('geojsonToImport — unsupported geometries (D8)', () => {
   });
 });
 
+describe('geojsonToImport — coordinate validation (A1/A2/L1)', () => {
+  it('skips Point with less-than-2 coordinates, counts unsupported', () => {
+    const fc: GeoJsonFeatureCollection = {
+      type: 'FeatureCollection',
+      features: [
+        { type: 'Feature', geometry: { type: 'Point', coordinates: [121] as unknown as [number, number] }, properties: { title: 'broken' } },
+        { type: 'Feature', geometry: { type: 'Point', coordinates: [121, 25] }, properties: { title: 'ok' } },
+      ],
+    };
+    const result = geojsonToImport({ featureCollection: fc }, opts);
+    expect(result.spots).toHaveLength(1);
+    expect(result.spots[0].title).toBe('ok');
+    expect(result.unsupportedCount).toBe(1);
+  });
+
+  it('skips Point with out-of-range lat/lng', () => {
+    const fc: GeoJsonFeatureCollection = {
+      type: 'FeatureCollection',
+      features: [
+        { type: 'Feature', geometry: { type: 'Point', coordinates: [999, -999] }, properties: { title: 'outside' } },
+        { type: 'Feature', geometry: { type: 'Point', coordinates: [0, 91] }, properties: { title: 'lat>90' } },
+        { type: 'Feature', geometry: { type: 'Point', coordinates: [181, 0] }, properties: { title: 'lng>180' } },
+        { type: 'Feature', geometry: { type: 'Point', coordinates: [121, 25] }, properties: { title: 'ok' } },
+      ],
+    };
+    const result = geojsonToImport({ featureCollection: fc }, opts);
+    expect(result.spots).toHaveLength(1);
+    expect(result.spots[0].title).toBe('ok');
+    expect(result.unsupportedCount).toBe(3);
+  });
+
+  it('filters out invalid points inside a LineString, keeps remaining', () => {
+    const fc: GeoJsonFeatureCollection = {
+      type: 'FeatureCollection',
+      features: [
+        {
+          type: 'Feature',
+          geometry: {
+            type: 'LineString',
+            coordinates: [[121, 25], [999, 999], [122, 26], [NaN, 0]] as [number, number][],
+          },
+          properties: { name: 'trail' },
+        },
+      ],
+    };
+    const result = geojsonToImport({ featureCollection: fc }, opts);
+    expect(result.routes).toHaveLength(1);
+    expect(result.routes[0].pts).toEqual([[25, 121], [26, 122]]);
+  });
+
+  it('skips LineString with non-array coordinates', () => {
+    const fc: GeoJsonFeatureCollection = {
+      type: 'FeatureCollection',
+      features: [
+        {
+          type: 'Feature',
+          geometry: { type: 'LineString', coordinates: null as unknown as [number, number][] },
+          properties: { name: 'broken' },
+        },
+      ],
+    };
+    const result = geojsonToImport({ featureCollection: fc }, opts);
+    expect(result.routes).toHaveLength(0);
+  });
+});
+
 describe('geojsonToImport — defaults & edge cases', () => {
   it('falls back to "Spot N" title when properties has no title/name', () => {
     const fc: GeoJsonFeatureCollection = {

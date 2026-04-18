@@ -84,6 +84,19 @@ describe('parseExif', () => {
     await expect(parseExif(mockFile)).rejects.toThrow('Invalid image');
   });
 
+  it('drops Invalid Date from malformed DateTimeOriginal string', async () => {
+    const mockFile = new File(['test'], 'photo.jpg', { type: 'image/jpeg' });
+    mockExifr.parse.mockResolvedValueOnce({
+      DateTimeOriginal: 'totally not a date',
+      latitude: 25,
+      longitude: 121,
+    });
+
+    const result = await parseExif(mockFile);
+    expect(result.takenAt).toBeNull();
+    expect(result.latlng).toEqual([25, 121]);
+  });
+
   it('should convert DateTimeOriginal string to Date if needed', async () => {
     const mockFile = new File(['test'], 'photo.jpg', { type: 'image/jpeg' });
     const dateString = '2026-04-18T14:30:00Z';

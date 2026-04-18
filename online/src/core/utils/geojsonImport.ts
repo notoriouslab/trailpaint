@@ -77,7 +77,15 @@ export function geojsonToImport(bundle: ImportBundle, opts: GeojsonImportOpts): 
     const geom = feature.geometry;
 
     if (geom.type === 'Point') {
+      if (!Array.isArray(geom.coordinates) || geom.coordinates.length < 2) {
+        unsupportedCount++;
+        continue;
+      }
       const [lng, lat] = geom.coordinates;
+      if (!isValidLngLat(lng, lat)) {
+        unsupportedCount++;
+        continue;
+      }
       const num = opts.startingSpotNum + spotIdx + 1;
       const spot = makeSpot({ lat, lng, num, props, opts });
       spots.push(spot);
@@ -87,14 +95,14 @@ export function geojsonToImport(bundle: ImportBundle, opts: GeojsonImportOpts): 
       }
       spotIdx++;
     } else if (geom.type === 'LineString') {
-      const pts = swapCoords(geom.coordinates);
+      const pts = swapCoordsValid(geom.coordinates);
       if (pts.length < 2) continue;
       routes.push(makeRoute({ pts, idx: opts.startingRouteColorIdx + routeIdx, name: getRouteName(props) }));
       routeIdx++;
     } else if (geom.type === 'MultiLineString') {
       const sharedName = getRouteName(props);
       for (const segment of geom.coordinates) {
-        const pts = swapCoords(segment);
+        const pts = swapCoordsValid(segment);
         if (pts.length < 2) continue;
         routes.push(makeRoute({ pts, idx: opts.startingRouteColorIdx + routeIdx, name: sharedName }));
         routeIdx++;
@@ -110,8 +118,27 @@ export function geojsonToImport(bundle: ImportBundle, opts: GeojsonImportOpts): 
   return result;
 }
 
-function swapCoords(coords: Lnglat[]): [number, number][] {
-  return coords.map(([lng, lat]) => [lat, lng] as [number, number]);
+function isValidLngLat(lng: unknown, lat: unknown): boolean {
+  return (
+    typeof lng === 'number' &&
+    typeof lat === 'number' &&
+    isFinite(lng) &&
+    isFinite(lat) &&
+    lat >= -90 && lat <= 90 &&
+    lng >= -180 && lng <= 180
+  );
+}
+
+function swapCoordsValid(coords: Lnglat[]): [number, number][] {
+  const out: [number, number][] = [];
+  if (!Array.isArray(coords)) return out;
+  for (const pt of coords) {
+    if (!Array.isArray(pt) || pt.length < 2) continue;
+    const [lng, lat] = pt;
+    if (!isValidLngLat(lng, lat)) continue;
+    out.push([lat, lng]);
+  }
+  return out;
 }
 
 function makeSpot(args: {
