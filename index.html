@@ -18,6 +18,11 @@
   <meta property="og:url" content="https://trailpaint.org/"/>
   <meta property="og:locale" content="zh_TW"/>
   <meta property="og:site_name" content="TrailPaint 路小繪"/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <meta name="author" content="NotoriousLab"/>
+  <meta name="keywords" content="手繪風路線地圖, 路線地圖工具, 登山地圖製作, 旅遊地圖, GPX 匯入, 照片 EXIF 匯入, KML 匯出, GeoJSON 匯出, 路線插畫, Story Player, trail map maker, illustrated map, hand-drawn map"/>
+  <meta property="og:locale:alternate" content="en_US"/>
+  <meta property="og:locale:alternate" content="ja_JP"/>
   <link rel="canonical" href="https://trailpaint.org/"/>
   <link rel="icon" type="image/svg+xml" href="/app/favicon.svg"/>
   <link rel="apple-touch-icon" href="/app/favicon.svg"/>
@@ -57,6 +62,114 @@
       "url": "https://github.com/notoriouslab"
     },
     "license": "https://opensource.org/licenses/MIT"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "TrailPaint 是什麼？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TrailPaint 路小繪是一個免費、開源的瀏覽器工具，在真實地圖上製作手繪風格的路線插畫。支援從照片 EXIF、KML、GeoJSON、GPX 匯入，匯出 PNG 地圖插畫、完整備份、以及 GeoJSON / KML 互通格式。純前端運作，無需註冊，資料存在瀏覽器本地不上傳伺服器。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "資料會上傳到伺服器嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "不會。TrailPaint 是純前端工具，所有專案資料存在瀏覽器 localStorage。只有地圖圖磚、反向地理編碼、海拔查詢等地圖功能會呼叫外部服務，由使用者主動觸發，不含個人資料。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何從照片批次建立景點？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "點「匯入」→「匯入照片」→ 選取或拖曳最多 20 張照片（JPEG / HEIC 皆可）。TrailPaint 會讀取 EXIF GPS 座標自動建立景點，無 GPS 的照片會放在「待定位」分組，拖曳即可設定位置。Nominatim 反向地理編碼會自動補上地名作為景點標題。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "支援哪些匯入與匯出格式？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "匯入：.trailpaint 專案檔、照片 EXIF（JPEG / HEIC）、KML（Google My Maps）、GeoJSON（geojson.io / Google Takeout）、GPX（登山 App）、截圖底圖。匯出：PNG 多比例插畫、.trailpaint 完整備份、GeoJSON / KML 純地理結構（給 Google My Maps、Google Earth、Gaia GPS 用）、分享連結、Player 嵌入 HTML。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Story Player 是什麼？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Story Player 是 TrailPaint 的獨立入口（/app/player/），把地圖變成自動導覽故事：fly-to 動畫逐點飛過去、popup 展示照片與說明、可設定播放間隔與循環、支援背景音樂、中研院 1897/1921/1966 台灣歷史地圖疊加、全螢幕模式適合展場與教學投影。一鍵複製嵌入碼可貼到部落格、教會網站、Notion。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "可以商業使用嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "可以。TrailPaint 採 GPL-3.0 License，允許商業使用、修改、二次創作，但衍生作品必須同樣以 GPL-3.0 開源。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "手機可以用嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "可以。網頁版支援響應式設計，iOS Safari、Android Chrome 都支援。也可安裝為 PWA（Progressive Web App）加到手機主畫面當原生 App 使用。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "支援哪些語言？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "繁體中文、英文、日文三種語言，根據瀏覽器偏好自動偵測，也可透過 ?lang=zh-TW / en / ja URL 參數手動切換。"
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "如何製作 TrailPaint 路線地圖",
+    "description": "用 TrailPaint 路小繪從照片、地圖或 AI 三種方式建立手繪風路線地圖的步驟",
+    "inLanguage": "zh-TW",
+    "totalTime": "PT5M",
+    "tool": {
+      "@type": "HowToTool",
+      "name": "TrailPaint 路小繪",
+      "url": "https://trailpaint.org/app/"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "選擇建立方式",
+        "text": "打開 https://trailpaint.org/app/，選擇從照片匯入（拖 20 張照片進來自動建景點）、從地圖手動建、或用 AI 提示詞生成 JSON 再匯入。",
+        "url": "https://trailpaint.org/app/"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "編輯景點與路線",
+        "text": "放置景點卡片（31 種圖示可選）、畫路線（5 色循環）、加照片、調整順序。支援 Undo / Redo（Cmd+Z）。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "匯出分享",
+        "text": "點「匯出」打開三 tab 對話框：圖片 tab 下載 PNG 或複製分享連結、備份 tab 下載完整 .trailpaint 專案檔、互通格式 tab 輸出 GeoJSON 或 KML 給其他地圖軟體使用。"
+      }
+    ]
   }
   </script>
   <style>

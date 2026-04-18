@@ -1,34 +1,142 @@
 # TrailPaint 路小繪
 
-> 在真實地圖上製作手繪風格的路線插畫，免費、開源、無需註冊。
+> 手繪風路線地圖工具。從照片、地圖、AI 三種方式建立路線，一鍵匯出 PNG、備份、GeoJSON/KML 互通格式。免費、開源（GPL-3.0）、無需註冊。
 
 ## 這是什麼
 
-TrailPaint 是一個瀏覽器端的路線地圖繪製工具，專為登山、健行、單車、旅行愛好者設計。也適合老師、導遊、部落客使用。使用者可以在真實地圖上繪製路線、放置景點卡片、標記照片，然後匯出手繪風格的高品質地圖插畫。
+TrailPaint（路小繪）是一個純瀏覽器端的**手繪風路線地圖工具**，專為登山、健行、單車、旅行愛好者、老師、導遊、部落客、教會 / NGO 設計。使用者可以在真實地圖上建立景點、繪製路線、標記照片,匯出為**手繪插畫風的高品質地圖**，也可輸出 GeoJSON / KML 與其他地圖軟體互通。
 
-## 核心功能
+零後端、零帳號，所有資料存在瀏覽器本地。支援 PWA 可安裝到手機主畫面。
 
-- 路線繪製：在地圖上畫路線，支援 5 色虛線搭配箭頭方向
-- 景點卡片：手繪紙紋風格卡片，28 種圖示分類（含三角點、集合點）
-- 照片標記：在地圖上放置照片，匯出時自動嵌入
-- GPX 匯入：匯入 GPS 軌跡檔（.gpx）自動轉為路線
-- 多比例匯出：IG 正方形、限動 9:16、4:3 等比例，搭配多種邊框風格
-- 高品質匯出：2x 解析度 PNG，含統計資訊與浮水印
-- AI 提示詞：4 種風格（日系手繪、藏寶圖、療癒卡通、極簡線條），搭配 AI 繪圖工具重新風格化
-- AI 匯入：將行程描述交給 ChatGPT / Claude 產生景點 JSON，再匯入 TrailPaint
-- 分享連結：壓縮專案資料產生可分享的短網址
-- 海拔剖面圖：自動查詢海拔資料並產生剖面圖與路線統計
-- 多語支援：繁體中文、英文、日文
+## 三種建立路線的方式
+
+1. **從照片建立（v1.3 新能力）**：拖曳 20 張照片進 TrailPaint，EXIF GPS 自動建景點。支援 iPhone HEIC、Android JPEG。無 GPS 照片自動歸入「待定位」分組，拖一下就到位。Nominatim 反向地理編碼自動補地名。
+2. **在地圖上手動建**：搜尋地點、畫路線、放景點卡片。3 步新手引導教學。8 條範例路線一鍵試玩。
+3. **用 AI 生成**：複製內建提示詞模板給 ChatGPT / Claude，描述行程，AI 產出可匯入的 JSON 檔。
+
+## 匯入管道（統一 ImportWizard）
+
+- `.trailpaint` 自家專案檔
+- **照片 EXIF**（JPEG、HEIC，含 GPS）
+- **KML**（Google My Maps 匯出、geojson.io 等）
+- **GeoJSON**（Google Takeout、Mapbox、D3 視覺化）
+- **GPX**（登山 App、Garmin 等 GPS 軌跡）
+- 截圖底圖（Google Maps / Apple Maps 截圖）
+
+## 輸出格式（v1.3 統一 ExportWizard）
+
+所有輸出收進單一「匯出」對話框，三個 tab：
+
+### 🖼️ 圖片 tab
+- PNG 多比例（1:1 IG feed / 9:16 Story / 4:3 / 原始）
+- 3 種邊框（經典雙框、紙感手繪、極簡細框）
+- 2 種風格濾鏡（原始、素描）
+- 即時預覽 + 構圖微調（pan / zoom）
+- 分享連結（URL hash 編碼整個專案 + 可選 TinyURL 縮網址）
+- AI 提示詞 4 種風格（日系手繪、藏寶圖、療癒卡通、極簡線條），複製貼到 Midjourney / Gemini / ChatGPT 圖像生成
+- Player 嵌入碼（一鍵複製含專案資料的 `<iframe>`）
+
+### 💾 備份 tab
+- .trailpaint 完整專案檔（保留所有景點、路線、照片）
+- 匯入 .trailpaint 橋接
+
+### 🌐 互通格式 tab
+- GeoJSON（geojson.io、Mapbox、D3）
+- KML（Google My Maps、Google Earth、Gaia GPS）
+- 純地理結構，不含照片（open data 邊界）
+
+## Story Player 故事播放器
+
+獨立入口 `/app/player/` 專門做自動導覽播放：
+- fly-to 動畫逐點飛過去，popup 展示照片與說明
+- 播放間隔 2s/4s/6s/8s，循環 1×/2×/3×/∞
+- 5 種底圖 + 中研院 1897 / 1921 / 1966 台灣歷史地圖疊加
+- 背景音樂（MP3/M4A 直連 URL）
+- 全螢幕適合展場、教學投影
+- Editor 一鍵跳到 Player 播放當前專案
+
+## Story Page 故事集合
+
+`/stories/` 展示精選故事地圖：
+- **台灣宣教士腳蹤**：馬偕、巴克禮、蘭大衛、馬雅各、彭蒙惠 5 位宣教士路線
+- **耶穌受難週**：從榮耀進城到復活顯現的聖地路線
+- 橫向 tabs 切換不同人物或主題
+- LINE / FB 分享自動顯示 OG 縮圖
+
+## 其他核心功能
+
+- 5 種底圖（OpenStreetMap 標準 / 衛星 / 等高線 / 暗色 / Protomaps 多語向量）
+- 拖曳截圖當底圖
+- 手繪風虛線 + 箭頭 + 紙感景點卡片
+- **31 種景點圖示**（植物、花、樹、鳥、昆蟲、水、岩石、廁所、站牌、休憩、住宿、餐廳、酒吧、溫泉、商城、電影院、腳踏車、停車、急救、海邊、遊樂、三角點、集合點、觀景、星空、拍照、注意、說明、標記等）
+- 5 色路線循環（橘、藍、綠、紅、紫）
+- 拖曳節點編輯路線 + 雙擊刪除
+- 海拔剖面圖（距離、時間、累計爬升下降）
+- 路線反向地理編碼自動命名
+- Undo/Redo（Cmd+Z / Ctrl+Z）
+- Fit All 一鍵全覽
+- 景點列表拖曳排序
+- 三語自動偵測（繁體中文 / English / 日本語）
+
+## 適合誰用
+
+- 登山健行：路線規劃、GPX 匯入、海拔剖面
+- 單車騎行：路線標記、距離統計
+- 旅遊部落客：IG / Story 分享卡匯出
+- 生態導覽：景點標記、解說卡片、照片
+- 教育單位：環境教育、課程教材、歷史地圖
+- 教會 / NGO：宣教士腳蹤、服事路線故事
+
+## 隱私與資料
+
+- **零後端**：所有資料存在瀏覽器 localStorage，不上傳伺服器
+- **零帳號**：無需註冊即可使用
+- 唯一的外部呼叫：地圖圖磚（OSM / CARTO / Protomaps）、Nominatim 反向地理編碼、Open-Meteo 海拔查詢、TinyURL 縮網址（使用者主動觸發）
 
 ## 技術
 
-- 純前端應用，資料儲存在瀏覽器本地，不上傳伺服器
-- 技術棧：React 19 + TypeScript + Leaflet + Zustand + Vite
-- 地圖底圖：OpenStreetMap、Protomaps 多語向量圖磚等 5 種
-- 開源：GPL-3.0 License
+- 純前端 SPA：Vite + React 19 + TypeScript 5（strict）
+- 地圖：Leaflet + react-leaflet + protomaps-leaflet
+- 狀態：Zustand + zundo（temporal undo/redo）
+- PWA：vite-plugin-pwa + Workbox
+- 匯入：exifr（EXIF GPS，含 HEIC）+ @tmcw/togeojson（KML）+ 自建 GeoJSON parser
+- 匯出：html-to-image + Canvas 後處理 + 風格濾鏡
+- i18n：自建 t() + runtime locale 偵測
+- 多 entry 打包：Editor `/app/` + Player `/app/player/`
+- 授權：GPL-3.0 License
 
 ## 連結
 
 - 線上使用：https://trailpaint.org/app/
 - 首頁：https://trailpaint.org/
+- Story Player：https://trailpaint.org/app/player/
+- Story 故事集合：https://trailpaint.org/stories/
 - 原始碼：https://github.com/notoriouslab/trailpaint
+- 版本發佈：https://github.com/notoriouslab/trailpaint/releases
+- 離線版單檔：https://trailpaint.org/trailpaint.html
+
+## 常見問題（FAQ）
+
+**Q: 資料會上傳到伺服器嗎？**
+A: 不會。TrailPaint 是純前端工具，所有資料存在瀏覽器 localStorage。只有地圖圖磚、反向地理編碼、海拔查詢等地圖功能會呼叫外部服務，使用者主動觸發，不含個人資料。
+
+**Q: 需要註冊帳號嗎？**
+A: 不需要，打開 https://trailpaint.org/app/ 直接使用。
+
+**Q: 可以商業使用嗎？**
+A: 可以。GPL-3.0 License 允許商業使用，但衍生作品必須同樣以 GPL-3.0 開源。
+
+**Q: 支援哪些檔案格式？**
+A: 匯入支援 .trailpaint、照片 EXIF（JPEG/HEIC）、KML、GeoJSON、GPX、截圖底圖。匯出支援 PNG、.trailpaint、GeoJSON、KML、分享連結、Player 嵌入 HTML。
+
+**Q: 手機可以用嗎？**
+A: 可以。網頁版支援響應式設計，也可安裝為 PWA 當原生 App 使用（加到主畫面）。iOS Safari、Android Chrome 都支援。
+
+**Q: 能離線使用嗎？**
+A: 線上版在第一次開啟後透過 PWA 快取可離線編輯。另提供 `trailpaint.html` 單檔離線版（但功能較受限，不含 GPX 匯入、海拔查詢、照片 EXIF、KML/GeoJSON 匯入）。
+
+**Q: 如何從照片批次建立景點？**
+A: 點「匯入」→「匯入照片」→ 選取或拖曳最多 20 張照片（JPEG/HEIC）。TrailPaint 會讀取 EXIF GPS 座標自動建立景點，無 GPS 的照片放在「待定位」分組，拖曳即可設定位置。
+
+**Q: 可以把地圖放進部落格或網站嗎？**
+A: 可以。匯出對話框的「圖片」tab 有「複製 Player 嵌入碼」按鈕，一鍵複製含專案資料的 `<iframe>` 標籤，貼到 WordPress、Notion、Substack、教會網站等任何可嵌入 HTML 的平台。
