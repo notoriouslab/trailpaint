@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from 'vitest';
-import { parseGeoJson, MAX_IMPORT_FEATURES } from './geojsonParser';
+import { parseGeoJson, MAX_IMPORT_FEATURES, MAX_JSON_BYTES } from './geojsonParser';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
@@ -100,6 +100,13 @@ describe('geojsonParser', () => {
     const pointFeature = result.featureCollection.features.find((f) => f.geometry.type === 'Point');
     expect(pointFeature!.properties).toBeDefined();
     expect(pointFeature!.properties).toHaveProperty('title');
+  });
+
+  it('throws before JSON.parse when input exceeds MAX_JSON_BYTES (closes H1 bypass)', () => {
+    // 500 features each carrying one giant LineString would bypass MAX_IMPORT_FEATURES
+    // alone; the byte cap catches it before JSON.parse runs.
+    const giantJson = 'x'.repeat(MAX_JSON_BYTES + 1);
+    expect(() => parseGeoJson(giantJson)).toThrow(/檔案過大/);
   });
 
   it('throws when features exceed MAX_IMPORT_FEATURES (DoS defence)', () => {

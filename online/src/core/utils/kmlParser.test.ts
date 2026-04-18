@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from 'vitest';
 import { DOMParser as XmlDOMParser } from '@xmldom/xmldom';
-import { parseKml } from './kmlParser';
+import { parseKml, MAX_KML_BYTES } from './kmlParser';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
@@ -15,6 +15,11 @@ describe('kmlParser', () => {
   beforeAll(() => {
     const fixturePath = join(__dirname, '__fixtures__/kml/google-my-maps.kml');
     kmlFixture = readFileSync(fixturePath, 'utf-8');
+  });
+
+  it('throws when KML string exceeds MAX_KML_BYTES (DoS defence)', () => {
+    const giant = 'x'.repeat(MAX_KML_BYTES + 1);
+    expect(() => parseKml(giant)).toThrow(/檔案過大/);
   });
 
   it('should parse valid KML with points and lines', () => {

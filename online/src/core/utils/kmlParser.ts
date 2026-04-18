@@ -1,13 +1,21 @@
 import { kml } from '@tmcw/togeojson';
 import type { ImportBundle, GeoJsonFeatureCollection } from './geojsonImport';
 
+// String-size cap aligned with geojsonParser.MAX_JSON_BYTES to keep memory
+// pressure from malicious KML payloads symmetric with GeoJSON.
+export const MAX_KML_BYTES = 20 * 1024 * 1024;
+
 export function parseKml(xmlString: string): ImportBundle {
+  if (xmlString.length > MAX_KML_BYTES) {
+    throw new Error(`檔案過大（上限 ${Math.round(MAX_KML_BYTES / 1024 / 1024)}MB）`);
+  }
+
   let doc: Document;
 
   try {
     const parser = new DOMParser();
     doc = parser.parseFromString(xmlString, 'text/xml');
-  } catch (err) {
+  } catch {
     throw new Error('非有效 KML');
   }
 
@@ -25,7 +33,7 @@ export function parseKml(xmlString: string): ImportBundle {
       throw new Error('非有效 KML');
     }
     featureCollection = result as GeoJsonFeatureCollection;
-  } catch (err) {
+  } catch {
     throw new Error('非有效 KML');
   }
 
