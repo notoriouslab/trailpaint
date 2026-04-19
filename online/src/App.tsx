@@ -7,6 +7,7 @@ import OnboardingOverlay from './core/components/OnboardingOverlay';
 import ExportWizard from './core/components/ExportWizard';
 import ImportWizard from './core/components/ImportWizard';
 import FloatingActions from './core/components/FloatingActions';
+import UpdatePrompt from './core/components/UpdatePrompt';
 import { captureMap, saveProject, exportGeojson, exportKml } from './map/ExportButton';
 import { decodeShareLink } from './core/utils/shareLink';
 import { openStoryMode } from './core/utils/storyMode';
@@ -172,6 +173,7 @@ export default function App() {
           onLoadImage={loadImageFile}
         />
       )}
+      <UpdatePrompt />
     </div>
   );
 }
