@@ -7,7 +7,7 @@ import {
   type StyleFilter,
 } from '../utils/exportRenderer';
 import { applyStyleFilter } from '../utils/styleFilters';
-import { encodeShareLink, shortenUrl } from '../utils/shareLink';
+import { encodeShareLink, shortenUrl, createBackendShare } from '../utils/shareLink';
 import { buildProjectEmbedHtml } from '../utils/embedCode';
 import { t, currentLocale } from '../../i18n';
 import './ExportWizard.css';
@@ -228,9 +228,10 @@ export default function ExportWizard({
 
   const handleCopyShareLink = useCallback(async () => {
     try {
-      const url = await encodeShareLink(project);
+      const url = await createBackendShare(project);
       const ok = await copyToClipboard(url);
       if (ok) showToast(t('export.preview.shareCopied'));
+      else showToast(t('export.preview.shortFailed'));
     } catch (err) {
       console.error('Share link failed:', err);
       showToast(t('export.preview.shortFailed'));

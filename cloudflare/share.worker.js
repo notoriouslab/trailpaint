@@ -28,6 +28,16 @@ const MAX_PAYLOAD_BYTES = 1_000_000;
 const ORIGIN = 'https://trailpaint.org';
 const ID_PATTERN = /^[A-Za-z0-9_-]{12}$/;
 
+// CORS: share API has no auth or cookies, so `*` is equivalent to server-
+// direct access. Rate limit + schema validation + size cap are the real
+// security layer — CORS here just unblocks local dev (localhost:5173 → Worker).
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Max-Age': '86400',
+};
+
 /** Generate 12-char URL-safe base64 ID (72 bits entropy, ~10^-9 collision at 1M keys). */
 function genId() {
   const bytes = crypto.getRandomValues(new Uint8Array(9));
@@ -65,22 +75,26 @@ async function compressAndBase64(json) {
   return btoa(binary);
 }
 
+function errorJson(error, status) {
+  return Response.json({ error }, { status, headers: CORS_HEADERS });
+}
+
 async function handlePost(request, env) {
   const bodyText = await request.text();
   if (bodyText.length > MAX_PAYLOAD_BYTES) {
-    return Response.json({ error: 'payload too large' }, { status: 413 });
+    return errorJson('payload too large', 413);
   }
 
   let payload;
   try {
     payload = JSON.parse(bodyText);
   } catch {
-    return Response.json({ error: 'invalid json' }, { status: 400 });
+    return errorJson('invalid json', 400);
   }
 
   const schemaErr = validateCompactSchema(payload);
   if (schemaErr) {
-    return Response.json({ error: schemaErr }, { status: 400 });
+    return errorJson(schemaErr, 400);
   }
 
   // Collision retry: probability ~10^-21 per attempt at current load; 3 tries
@@ -93,7 +107,7 @@ async function handlePost(request, env) {
     id = null;
   }
   if (!id) {
-    return Response.json({ error: 'id collision, please retry' }, { status: 503 });
+    return errorJson('id collision, please retry', 503);
   }
 
   const envelope = {
@@ -105,11 +119,14 @@ async function handlePost(request, env) {
 
   await env.SHARE_KV.put(id, JSON.stringify(envelope), { expirationTtl: TTL_SECONDS });
 
-  return Response.json({
-    url: `${ORIGIN}/s/${id}`,
-    id,
-    expiresAt: Date.now() + TTL_SECONDS * 1000,
-  });
+  return Response.json(
+    {
+      url: `${ORIGIN}/s/${id}`,
+      id,
+      expiresAt: Date.now() + TTL_SECONDS * 1000,
+    },
+    { headers: CORS_HEADERS },
+  );
 }
 
 async function handleGet(request, env, ctx) {
@@ -174,6 +191,12 @@ async function handleGet(request, env, ctx) {
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+
+    // CORS preflight for /api/s (browsers only; GET /s/:id is a simple redirect
+    // and doesn't require preflight).
+    if (request.method === 'OPTIONS' && url.pathname === '/api/s') {
+      return new Response(null, { status: 204, headers: CORS_HEADERS });
+    }
 
     if (url.pathname === '/api/s' && request.method === 'POST') {
       return handlePost(request, env);

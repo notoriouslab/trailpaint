@@ -3,9 +3,16 @@ import { DEFAULT_CARD_OFFSET } from '../models/types';
 import { migrateProject } from './migrateProject';
 
 /**
- * Compact a project for sharing: strip photos, shorten keys, omit defaults.
+ * Compact a project for sharing: shorten keys, omit defaults.
+ *
+ * `includePhoto` controls whether `spot.photo` (base64 data URL) is embedded:
+ * - `false` (default) for the URL-hash path — photos strip to keep URLs short
+ *   enough to survive LINE/WeChat truncation and fit in TinyURL's limits.
+ * - `true` for the backend `/s/:id` path — KV has 1MB payload room, so photos
+ *   ride along and friends see the full visual story.
+ * Key `p` on spots stores the photo data URL when included; absent otherwise.
  */
-function compactProject(project: Project): Record<string, unknown> {
+function compactProject(project: Project, includePhoto = false): Record<string, unknown> {
   const out: Record<string, unknown> = {
     v: project.version,
     n: project.name,
@@ -17,6 +24,7 @@ function compactProject(project: Project): Record<string, unknown> {
       };
       if (s.desc) o.d = s.desc;
       if (s.cardOffset.x !== 0 || s.cardOffset.y !== 0) o.o = [s.cardOffset.x, s.cardOffset.y];
+      if (includePhoto && s.photo) o.p = s.photo;
       return o;
     }),
     r: project.routes.map((r) => {
@@ -50,7 +58,7 @@ function expandProject(c: Record<string, unknown>): Project {
     num: s.u as number,
     title: s.t as string,
     desc: (s.d as string) ?? '',
-    photo: null,
+    photo: (typeof s.p === 'string' ? s.p : null),
     iconId: s.k as string,
     cardOffset: s.o ? { x: (s.o as number[])[0], y: (s.o as number[])[1] } : { ...DEFAULT_CARD_OFFSET },
   })) ?? [];
@@ -199,6 +207,45 @@ function validateProjectLimits(p: Project): boolean {
     }
   }
   return true;
+}
+
+/* ── Backend share (Cloudflare Worker + KV) ── */
+
+const BACKEND_URL = 'https://trailpaint.org/api/s';
+const BACKEND_TIMEOUT_MS = 5000;
+
+/**
+ * Create a short share URL with automatic degradation:
+ *   1. Backend /s/:id (Cloudflare Worker + KV, 012-share-backend)
+ *   2. TinyURL (third-party legacy fallback)
+ *   3. Long hash URL (original compressed-in-URL)
+ *
+ * Always returns a usable URL. Never throws — logs and degrades silently.
+ */
+export async function createBackendShare(project: Project): Promise<string> {
+  const compact = compactProject(project, true); // include photos
+
+  try {
+    const res = await fetch(BACKEND_URL, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(compact),
+      signal: AbortSignal.timeout(BACKEND_TIMEOUT_MS),
+    });
+    if (res.ok) {
+      const data = (await res.json()) as { url?: unknown };
+      if (typeof data.url === 'string' && data.url.startsWith('https://')) {
+        return data.url;
+      }
+    }
+    console.warn('[createBackendShare] backend non-ok:', res.status);
+  } catch (err) {
+    console.warn('[createBackendShare] backend failed:', err);
+  }
+
+  const longUrl = await encodeShareLink(project);
+  const tinyUrl = await shortenUrl(longUrl);
+  return tinyUrl ?? longUrl;
 }
 
 /* ── Helpers ── */
