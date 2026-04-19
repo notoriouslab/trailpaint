@@ -216,7 +216,11 @@ function validateProjectLimits(p: Project): boolean {
 /* ── Backend share (Cloudflare Worker + KV) ── */
 
 const BACKEND_URL = 'https://trailpaint.org/api/s';
-const BACKEND_TIMEOUT_MS = 5000;
+// 5s was too tight: a 400-600KB photo-heavy payload on mobile uplink
+// (1-3 Mbps typical) can spend 3-5s just on the HTTP body transfer,
+// then Worker processing + KV write, easily blowing past 5s on Safari.
+// Aborts here silently degrade to TinyURL, which drops photos.
+const BACKEND_TIMEOUT_MS = 20000;
 
 /**
  * Create a short share URL with automatic degradation:
