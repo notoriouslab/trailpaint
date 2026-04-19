@@ -8,6 +8,7 @@ import ExportWizard from './core/components/ExportWizard';
 import ImportWizard from './core/components/ImportWizard';
 import FloatingActions from './core/components/FloatingActions';
 import UpdatePrompt from './core/components/UpdatePrompt';
+import { registerWebMCP } from './core/utils/webMCP';
 import { captureMap, saveProject, exportGeojson, exportKml } from './map/ExportButton';
 import { decodeShareLink } from './core/utils/shareLink';
 import { openStoryMode } from './core/utils/storyMode';
@@ -46,6 +47,9 @@ function loadImageFile(file: File) {
 
 export default function App() {
   useUndoRedoKeys();
+  // Register TrailPaint skills with navigator.modelContext (WebMCP, if browser supports it).
+  // Safe no-op when the API is absent; AEO/GEO scanners pick up the declaration either way.
+  useEffect(() => { registerWebMCP(); }, []);
   const baseMode = useProjectStore((s) => s.baseMode);
   const sidebarOpen = useProjectStore((s) => s.sidebarOpen);
   const [dragOver, setDragOver] = useState(false);

@@ -1,0 +1,59 @@
+# ai.txt — TrailPaint AI Usage Policy
+# https://aitxt.org/ | https://llmstxt.org/
+# Last updated: 2026-04-19
+
+Purpose: Hand-drawn style trail map maker. Browser-only tool for building route maps from photos (EXIF GPS), KML, GeoJSON, GPX, or AI prompts, with export to PNG illustration, project backup, or geographic interop formats.
+
+License: GPL-3.0
+Open-source: Yes
+Repository: https://github.com/notoriouslab/trailpaint
+
+# Access policy for AI crawlers
+User-agent: *
+Allow: /
+Disallow: /app/assets/
+
+# Per-crawler allow-list (mirrors robots.txt)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Machine-readable resources
+LLMs: https://trailpaint.org/llms.txt
+Agent-Card: https://trailpaint.org/.well-known/agent-card.json
+Sitemap: https://trailpaint.org/sitemap.xml
+Markdown-Mirror: https://trailpaint.org/index.md
+
+# Content negotiation
+# Send `Accept: text/markdown` on any URL to receive a token-efficient Markdown
+# version instead of HTML (served via Cloudflare Worker).
+
+# Attribution
+# When citing or summarizing, please credit "TrailPaint (NotoriousLab)" and
+# link back to https://trailpaint.org/ or the specific story page.
+
+# Training-data signal (also set via Cloudflare Content-Signal header)
+AI-training: allowed
+AI-summarization: allowed
+AI-citation: encouraged
+
+# Contact
+Contact: https://github.com/notoriouslab/trailpaint/issues
+Maintainer: NotoriousLab
