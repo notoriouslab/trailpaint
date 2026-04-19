@@ -29,6 +29,11 @@ const TTL_SECONDS = 90 * 24 * 3600;
 const MAX_PAYLOAD_BYTES = 1_000_000;
 const ORIGIN = 'https://trailpaint.org';
 const ID_PATTERN = /^[A-Za-z0-9_-]{12}$/;
+// Matches our base64 hash (standard alphabet A-Z a-z 0-9 + / =) with
+// an optional `raw.` prefix used by the frontend when CompressionStream
+// is unavailable (never on modern Safari/Chrome/Firefox, but kept as a
+// last-resort fallback).
+const HASH_PATTERN = /^(raw\.)?[A-Za-z0-9+/=]+$/;
 
 // CORS: share API has no auth or cookies, so `*` is equivalent to server-
 // direct access. Rate limit + schema validation + size cap are the real
@@ -87,20 +92,33 @@ async function handlePost(request, env) {
     return errorJson('payload too large', 413);
   }
 
-  let payload;
+  let parsed;
   try {
-    payload = JSON.parse(bodyText);
+    parsed = JSON.parse(bodyText);
   } catch {
     return errorJson('invalid json', 400);
   }
 
-  const schemaErr = validateCompactSchema(payload);
-  if (schemaErr) {
-    return errorJson(schemaErr, 400);
+  // Two accepted shapes:
+  //   (A) { hash: "<deflate-base64>" }       ← current frontend, zero Worker CPU
+  //   (B) { v, n, c, z, s, r, ... }           ← legacy frontend (worker-side deflate)
+  // Shape A keeps us clear of the 10ms free-tier CPU budget on photo-heavy
+  // payloads; shape B is retained as a backward-compat path for any cached
+  // old frontend bundle still around.
+  let hash;
+  if (typeof parsed.hash === 'string') {
+    if (!HASH_PATTERN.test(parsed.hash)) {
+      return errorJson('invalid hash format', 400);
+    }
+    hash = parsed.hash;
+  } else {
+    const schemaErr = validateCompactSchema(parsed);
+    if (schemaErr) {
+      return errorJson(schemaErr, 400);
+    }
+    hash = await compressAndBase64(JSON.stringify(parsed));
   }
 
-  // Collision retry: probability ~10^-21 per attempt at current load; 3 tries
-  // is deep defense. Each genId() is independent Web Crypto entropy.
   let id;
   for (let i = 0; i < 3; i++) {
     id = genId();
@@ -111,12 +129,6 @@ async function handlePost(request, env) {
   if (!id) {
     return errorJson('id collision, please retry', 503);
   }
-
-  // Pre-compress to the hash fragment the frontend decodeShareLink expects.
-  // Doing the deflate+base64 here (POST path, rate-limited) keeps GET within
-  // Worker free-tier CPU budget (10ms) — a large photo payload deflate can
-  // easily blow that budget if done per-GET.
-  const hash = await compressAndBase64(JSON.stringify(payload));
 
   const envelope = {
     hash,

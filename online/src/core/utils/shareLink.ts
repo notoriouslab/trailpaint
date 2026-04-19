@@ -96,26 +96,35 @@ function expandProject(c: Record<string, unknown>): Project {
 }
 
 /**
- * Encode a project into a compressed URL hash (long URL, no third-party).
+ * Compress a project to the deflate+base64 hash string (without `#share=`).
+ * Falls back to `raw.<base64>` on browsers without CompressionStream.
+ * Shared by both the URL-hash path (encodeShareLink) and the backend path
+ * (createBackendShare) — frontend-side compression avoids a ~3× larger body
+ * transfer and off-loads the deflate work from the Worker CPU budget.
  */
-export async function encodeShareLink(project: Project, targetPath?: string): Promise<string> {
-  const compact = compactProject(project);
+async function compressToBase64Hash(project: Project, includePhoto: boolean): Promise<string> {
+  const compact = compactProject(project, includePhoto);
   const json = JSON.stringify(compact);
-  const basePath = targetPath
-    ? `${window.location.origin}${targetPath}`
-    : `${window.location.origin}${window.location.pathname}`;
-
   try {
     const blob = new Blob([new TextEncoder().encode(json)]);
     const cs = new CompressionStream('deflate');
     const compressed = blob.stream().pipeThrough(cs);
     const buffer = await new Response(compressed).arrayBuffer();
-    const base64 = uint8ToBase64(new Uint8Array(buffer));
-    return `${basePath}#share=${base64}`;
+    return uint8ToBase64(new Uint8Array(buffer));
   } catch {
-    const base64 = uint8ToBase64(new TextEncoder().encode(json));
-    return `${basePath}#share=raw.${base64}`;
+    return 'raw.' + uint8ToBase64(new TextEncoder().encode(json));
   }
+}
+
+/**
+ * Encode a project into a compressed URL hash (long URL, no third-party).
+ */
+export async function encodeShareLink(project: Project, targetPath?: string): Promise<string> {
+  const hash = await compressToBase64Hash(project, false);
+  const basePath = targetPath
+    ? `${window.location.origin}${targetPath}`
+    : `${window.location.origin}${window.location.pathname}`;
+  return `${basePath}#share=${hash}`;
 }
 
 /**
@@ -231,13 +240,19 @@ const BACKEND_TIMEOUT_MS = 20000;
  * Always returns a usable URL. Never throws — logs and degrades silently.
  */
 export async function createBackendShare(project: Project): Promise<string> {
-  const compact = compactProject(project, true); // include photos
+  // Compress on the frontend, POST only the deflate-base64 hash. Two wins:
+  //   (1) body shrinks ~3× (photos are JSON-embedded base64 → JSON → deflate),
+  //       so mobile Safari's fetch doesn't silently choke on 400KB+ uploads
+  //       and degrade to TinyURL.
+  //   (2) Worker POST does zero compression work, staying comfortably under
+  //       the 10ms free-tier CPU budget even for photo-heavy projects.
+  const hash = await compressToBase64Hash(project, true); // include photos
 
   try {
     const res = await fetch(BACKEND_URL, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(compact),
+      body: JSON.stringify({ hash }),
       signal: AbortSignal.timeout(BACKEND_TIMEOUT_MS),
     });
     if (res.ok) {
