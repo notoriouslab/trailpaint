@@ -142,10 +142,14 @@ export async function shortenUrl(longUrl: string): Promise<string | null> {
  * Decode a share link hash back to a Project.
  * Returns null if the hash is not a share link or decoding fails.
  */
-// Max compressed payload size (base64 chars). ~375KB compressed ≈ generous for any real project.
-const MAX_PAYLOAD_LEN = 500_000;
-// Max decompressed JSON size. 2MB is far beyond any real project without photos.
-const MAX_DECOMPRESSED_LEN = 2_000_000;
+// Max compressed payload size (base64 chars). Backend /s/:id POST enforces a
+// 1MB payload cap; after deflate+base64 it lands around 1.3MB worst case. A
+// 2MB ceiling here absorbs that with headroom while still shutting down the
+// pathological decompression-bomb attack on directly-pasted hash URLs.
+const MAX_PAYLOAD_LEN = 2_000_000;
+// Max decompressed JSON size. Photo-heavy projects (≤20 spots × ~50KB
+// base64 thumbnail at 600/0.7) land around 1-1.2MB; 3MB keeps margin.
+const MAX_DECOMPRESSED_LEN = 3_000_000;
 // Semantic limits — prevent UI freeze from absurd data
 const MAX_SPOTS = 200;
 const MAX_ROUTES = 50;
