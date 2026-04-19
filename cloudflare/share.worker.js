@@ -26,11 +26,11 @@
  */
 
 const TTL_SECONDS = 90 * 24 * 3600;
-// 1MB was too tight against real use: an 8-photo project at 600/0.7 JPEG
-// (each ~150KB base64) produces a deflate-base64 hash approaching 1MB.
-// 3MB absorbs that comfortably while still shutting down obvious abuse
-// (KV value ceiling is 25MB so we're nowhere near the infra limit).
-const MAX_PAYLOAD_BYTES = 3_000_000;
+// Photo-heavy shares: 20 spots × 600/0.7 JPEG lands around 3MB hash; we set
+// 5MB so 30-ish photos still go through. KV value ceiling is 25MB so we're
+// still an order of magnitude below the infra limit, and WAF rate limit
+// (30 POST/IP/day) bounds worst-case quota growth to 150MB/IP/day.
+const MAX_PAYLOAD_BYTES = 5_000_000;
 const ORIGIN = 'https://trailpaint.org';
 const ID_PATTERN = /^[A-Za-z0-9_-]{12}$/;
 // Matches our base64 hash (standard alphabet A-Z a-z 0-9 + / =) with
