@@ -4,12 +4,14 @@
  * Replaces the TinyURL third-party dependency with a self-hosted short link
  * service. Users POST a project payload to /api/s; Worker generates a 12-char
  * ID, stores the payload in KV (TTL 90 days), and returns a short URL. When
- * friends open /s/:id, Worker fetches the payload from KV and 307-redirects
- * to /app/#share=<payload> so the existing frontend decodeShareLink logic
- * works unchanged.
+ * friends open /s/:id, Worker fetches the payload from KV and lands the
+ * recipient on /app/player/?share=ss (Story Player) — recipients almost
+ * always want to *watch* a shared trail, not edit someone else's project.
+ * Authors going Editor → Player → back still use the existing storyMode.ts
+ * path (new tab / localStorage restore), which is unaffected.
  *
  * Routes (configured in Cloudflare Dashboard):
- *   - trailpaint.org/s/*      (GET — redirect to /app/#share=...)
+ *   - trailpaint.org/s/*      (GET — land on /app/player/?share=ss)
  *   - trailpaint.org/api/s    (POST — write new share)
  *
  * Bindings:
@@ -320,9 +322,9 @@ async function handleGet(request, env, ctx) {
   var h = ${JSON.stringify(hash)};
   try {
     sessionStorage.setItem('tp_share_hash', h);
-    location.replace(${JSON.stringify(ORIGIN + '/app/?share=ss')});
+    location.replace(${JSON.stringify(ORIGIN + '/app/player/?share=ss')});
   } catch (e) {
-    location.replace(${JSON.stringify(ORIGIN + '/app/#share=')} + h);
+    location.replace(${JSON.stringify(ORIGIN + '/app/player/#share=')} + h);
   }
 })();
 </script>

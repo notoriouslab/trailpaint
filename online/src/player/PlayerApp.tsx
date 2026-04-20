@@ -65,10 +65,28 @@ export default function PlayerApp() {
       } catch { /* fall through to hash */ }
     }
 
-    // 3. Check URL hash (share link — photos stripped)
-    const hash = window.location.hash;
-    if (hash && hash.startsWith('#share=')) {
-      decodeShareLink(hash).then((p) => {
+    // 3. Check share link. Two sources:
+    //    (A) sessionStorage 'tp_share_hash' — primary path for /s/:id backend
+    //        shares. Cloudflare Worker stashes the deflate-base64 hash here
+    //        and lands on /app/player/?share=ss, sidestepping URL fragment
+    //        length caps that break photo-heavy shares (>~300KB).
+    //    (B) window.location.hash '#share=...' — direct long-hash URLs
+    //        (pre-012 shares, or Worker fallback when sessionStorage blocked).
+    //    Consume-and-clear sessionStorage so "← back to editor" lands on an
+    //    empty Editor (recipients shouldn't inherit an editable copy).
+    let shareHash: string | null = null;
+    try {
+      const stored = sessionStorage.getItem('tp_share_hash');
+      if (stored) {
+        sessionStorage.removeItem('tp_share_hash');
+        shareHash = '#share=' + stored;
+      }
+    } catch { /* sessionStorage unavailable (Safari private mode, quota) */ }
+    if (!shareHash && window.location.hash.startsWith('#share=')) {
+      shareHash = window.location.hash;
+    }
+    if (shareHash) {
+      decodeShareLink(shareHash).then((p) => {
         if (p) loadProject(p);
         else setError(t('player.error.share'));
       }).catch(() => setError(t('player.error.format')));
