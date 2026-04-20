@@ -7,9 +7,13 @@ import PlayerMap from './PlayerMap';
 import SpotListPanel from './SpotListPanel';
 import PlaybackControl from './PlaybackControl';
 
-/** Validate ?src= param: only allow /stories/*.json, no traversal */
+/** Validate ?src= param: allow curated same-origin JSON under /stories/ or
+ *  /examples/routes/. Path components use [^/] so Chinese filenames work
+ *  (e.g. /examples/routes/阿朗壹古道.trailpaint.json). `..` traversal blocked. */
 function isValidSrc(src: string): boolean {
-  return /^\/stories\/[\w-]+\/[\w\-.]+\.json$/.test(src) && !src.includes('..');
+  if (src.includes('..')) return false;
+  return /^\/stories\/[^/]+\/[^/]+\.json$/.test(src)
+      || /^\/examples\/routes\/[^/]+\.json$/.test(src);
 }
 
 export default function PlayerApp() {
