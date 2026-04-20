@@ -1,3 +1,6 @@
+# Content Signal (top-level, site-wide — RFC draft-romm-aipref-contentsignals)
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
 User-agent: *
 Allow: /
 Disallow: /app/assets/

@@ -26,6 +26,19 @@
     <meta name="twitter:image" content="https://trailpaint.org/examples/og-image.jpg" />
     <link rel="canonical" href="https://trailpaint.org/app/" />
     <link rel="apple-touch-icon" href="/app/favicon.svg" />
+    <!-- WebMCP (navigator.modelContext.provideContext) early stub.
+         AEO scanners that grep the rendered HTML (instead of executing the
+         bundle) need to see the API call verbatim. The real tool set is
+         registered by src/core/utils/webMCP.ts after bundle load; this
+         inline no-op makes the API discoverable at first byte. -->
+    <script>
+      (function () {
+        if (typeof navigator !== 'undefined' && navigator.modelContext &&
+            typeof navigator.modelContext.provideContext === 'function') {
+          try { navigator.modelContext.provideContext({ tools: [] }); } catch (e) {}
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
