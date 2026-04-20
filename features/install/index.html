@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>安裝到主畫面（PWA）— TrailPaint 路小繪</title>
+  <meta name="description" content="把 TrailPaint 安裝成 PWA 加到 iOS / Android 手機主畫面與桌機應用程式 — 全螢幕開啟、打開更快、可離線編輯。含 iPhone Safari、Android Chrome、Windows / macOS 桌面三種安裝步驟。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:title" content="安裝到主畫面（PWA）— TrailPaint">
+  <meta property="og:description" content="iPhone Safari、Android Chrome、桌面 Chrome / Edge 三種安裝步驟。全螢幕 App 體驗、可離線編輯、資料一樣留在你的瀏覽器。">
+  <meta property="og:url" content="https://trailpaint.org/features/install/">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://trailpaint.org/features/install/">
+  <link rel="icon" type="image/svg+xml" href="/app/favicon.svg">
+  <link rel="stylesheet" href="/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "如何把 TrailPaint 安裝成 PWA 加到手機主畫面",
+    "description": "TrailPaint 支援 PWA（Progressive Web App），在 iPhone、Android、桌面瀏覽器上都可以加到主畫面或當獨立應用程式開啟。",
+    "inLanguage": "zh-TW",
+    "totalTime": "PT1M",
+    "tool": { "@type": "HowToTool", "name": "TrailPaint 路小繪", "url": "https://trailpaint.org/app/" },
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "iPhone / iPad（Safari）", "text": "用 Safari 打開 https://trailpaint.org/app/，點底部分享按鈕，向下捲動選「加入主畫面」，輸入名稱後點右上「加入」。", "url": "https://trailpaint.org/features/install/#ios" },
+      { "@type": "HowToStep", "position": 2, "name": "Android（Chrome / Edge）", "text": "用 Chrome 或 Edge 打開 https://trailpaint.org/app/，點右上三點選單「加到主畫面」或「安裝應用程式」，確認安裝即可。", "url": "https://trailpaint.org/features/install/#android" },
+      { "@type": "HowToStep", "position": 3, "name": "桌面（Chrome / Edge）", "text": "在 Chrome 或 Edge 打開 https://trailpaint.org/app/，網址列右側會出現「安裝」圖示，點擊即可把 TrailPaint 安裝成獨立應用程式。", "url": "https://trailpaint.org/features/install/#desktop" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="brand" href="/">🌿 TrailPaint</a>
+      <div class="site-nav-links">
+        <a href="/features/" class="active">功能</a>
+        <a href="/examples/">範例</a>
+        <a href="/stories/">故事地圖</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/app/" target="_blank">開始繪製 →</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <h1>📱 安裝到主畫面（PWA）</h1>
+    <p class="subtitle">TrailPaint 是 PWA（Progressive Web App），iPhone、Android、桌面瀏覽器都能「安裝」成獨立應用程式 — 全螢幕開啟、打開更快、可離線編輯、資料一樣留在你的瀏覽器。</p>
+
+    <h2>為什麼建議安裝？</h2>
+    <ul>
+      <li><strong>打開更快</strong> — 主畫面一點就開，不用進瀏覽器找分頁</li>
+      <li><strong>全螢幕 App 體驗</strong> — 沒有網址列與 tab 佔用，地圖與編輯區更大，手機尤其明顯</li>
+      <li><strong>可離線編輯</strong> — Service Worker 已快取核心資源，訊號不好時仍能開啟（地圖圖磚需要網路）</li>
+      <li><strong>不吃額外空間</strong> — 只是把網頁快捷加到主畫面，不像原生 App 要下載幾十 MB</li>
+      <li><strong>資料沒有搬家問題</strong> — 一樣存在同一個瀏覽器的 localStorage，網頁版 / PWA 切換共用同一份專案</li>
+    </ul>
+
+    <h2 id="ios">iPhone / iPad（Safari）</h2>
+    <p><strong>必須使用 Safari</strong>，iOS 上 Chrome / Firefox / Edge 的「加入主畫面」無法建立正式 PWA。</p>
+    <ol>
+      <li>用 <strong>Safari</strong> 打開 <a href="https://trailpaint.org/app/" target="_blank">https://trailpaint.org/app/</a></li>
+      <li>點底部中間的 <strong>分享按鈕</strong>（方框上方有一支向上的箭頭 <code>□↑</code>）</li>
+      <li>彈出選單往下捲動，點 <strong>「加入主畫面」</strong>（Add to Home Screen）</li>
+      <li>可以改名稱（預設「TrailPaint」），右上點 <strong>「加入」</strong></li>
+      <li>回到主畫面，會看到 🌿 TrailPaint icon，點它會全螢幕開啟，跟原生 App 一樣</li>
+    </ol>
+    <p style="font-size:0.9rem;opacity:0.85;">💡 建議順便在 Safari 關掉「請求桌面版網站」，避免被桌機版面擠壓到手機 UI。</p>
+
+    <h2 id="android">Android（Chrome / Edge / Samsung Internet）</h2>
+    <ol>
+      <li>用 <strong>Chrome</strong>（或 Edge、Samsung Internet）打開 <a href="https://trailpaint.org/app/" target="_blank">https://trailpaint.org/app/</a></li>
+      <li>點右上角 <strong>⋮ 三點選單</strong></li>
+      <li>選 <strong>「加到主畫面」</strong> 或 <strong>「安裝應用程式」</strong>（Install app，Chrome 會優先顯示後者）</li>
+      <li>確認名稱，點 <strong>「安裝」</strong></li>
+      <li>主畫面多一個 🌿 TrailPaint icon，點開是獨立視窗，可從工作切換器看到</li>
+    </ol>
+    <p style="font-size:0.9rem;opacity:0.85;">💡 Chrome 有時會自己跳「安裝 TrailPaint」的底部小橫幅，直接點就好。</p>
+
+    <h2 id="desktop">桌面（Chrome / Edge — Windows / macOS / Linux）</h2>
+    <ol>
+      <li>用 <strong>Chrome</strong> 或 <strong>Edge</strong> 打開 <a href="https://trailpaint.org/app/" target="_blank">https://trailpaint.org/app/</a></li>
+      <li>網址列右邊會出現 <strong>安裝圖示</strong>（電腦加下箭頭的小 icon）</li>
+      <li>點它 → 「安裝」，TrailPaint 會變成獨立視窗應用程式</li>
+      <li>macOS 會加到 Launchpad、Windows 加到開始選單，兩邊都能釘到 Dock / 工作列</li>
+    </ol>
+    <p style="font-size:0.9rem;opacity:0.85;">💡 找不到安裝 icon？打開 <code>⋮</code> 選單 → 「安裝 TrailPaint」，或「儲存並分享」 → 「建立捷徑...」。</p>
+
+    <h2>常見問題</h2>
+    <details class="faq-item">
+      <summary>裝成 PWA 會佔很多空間嗎？</summary>
+      <div class="faq-body">不會。PWA 只是把網頁快取下來，通常 1-3 MB。你的專案資料存在瀏覽器 localStorage，不會重複儲存。</div>
+    </details>
+    <details class="faq-item">
+      <summary>離線時可以完全使用嗎？</summary>
+      <div class="faq-body">編輯介面可以離線開啟。<strong>地圖圖磚、反向地理編碼、海拔查詢、分享連結</strong>需要網路。建議在有訊號時先把要用的區域圖磚瀏覽過一次讓瀏覽器先快取。</div>
+    </details>
+    <details class="faq-item">
+      <summary>PWA 和網頁版的專案資料會同步嗎？</summary>
+      <div class="faq-body">會，因為它們用同一個瀏覽器的 localStorage。只要是同一個裝置 + 同一個瀏覽器，切來切去都是同一份。換裝置要用「匯出 → 備份」存成 <code>.trailpaint</code> 檔搬過去。</div>
+    </details>
+    <details class="faq-item">
+      <summary>iOS 上為什麼一定要 Safari？</summary>
+      <div class="faq-body">Apple 規定只有 Safari 能真正安裝 PWA。iOS 上的 Chrome / Firefox 內部也是用 WebKit，但沒有開放「加入主畫面」產生正式 PWA 的能力。用其他瀏覽器只能做普通書籤。</div>
+    </details>
+    <details class="faq-item">
+      <summary>要怎麼移除 PWA？</summary>
+      <div class="faq-body">手機：長按 icon → 「移除 App」或「從主畫面移除」即可。桌面：打開 PWA 視窗，右上 <code>⋮</code> → 「解除安裝 TrailPaint」。資料若要一併清掉，還要到瀏覽器裡把 trailpaint.org 的網站資料清除。</div>
+    </details>
+    <details class="faq-item">
+      <summary>Story Player 也可以單獨安裝嗎？</summary>
+      <div class="faq-body">目前 PWA manifest scope 是 <code>/app/</code>，故事播放器 <code>/app/player/</code> 已包含在內，一個安裝檔兩個入口都能用。在 PWA 裡直接打 URL 或用 Editor 右下「故事模式」都會留在 App 內。</div>
+    </details>
+
+    <p style="margin-top: 2rem; text-align: center;">
+      <a class="cta" href="/app/" target="_blank">打開 Editor 開始安裝</a>
+      <a class="cta cta--ghost" href="/faq/" style="margin-left: 0.5rem;">回 FAQ</a>
+    </p>
+  </main>
+
+  <footer class="footer">
+    <p>TrailPaint 路小繪 · 手繪風路線地圖工具 · GPL-3.0 Open Source</p>
+    <p><a href="/">首頁</a> · <a href="/features/">功能</a> · <a href="/examples/">範例</a> · <a href="/stories/">故事地圖</a> · <a href="/faq/">FAQ</a> · <a href="https://github.com/notoriouslab/trailpaint">GitHub</a></p>
+  </footer>
+</body>
+</html>
