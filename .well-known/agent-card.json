@@ -77,7 +77,7 @@
     {
       "id": "share-link",
       "name": "Generate Share Link",
-      "description": "Encode the entire project (spots, routes, photos) into a URL hash. Recipient opens the link to see the map in TrailPaint. Optional TinyURL shortening.",
+      "description": "Generate a short share URL backed by Cloudflare Workers + KV. Recipient opens the link to see the map in TrailPaint. TTL 90 days, with optional Open Graph cover image from the first photo.",
       "outputModes": ["text/uri-list"],
       "tags": ["share", "link"]
     },
@@ -132,9 +132,10 @@
         "OpenStreetMap (map tiles)",
         "CARTO (map tiles)",
         "Protomaps (multilingual vector tiles)",
-        "Nominatim (reverse geocoding)",
+        "Photon (primary reverse geocoding)",
+        "Nominatim (fallback reverse geocoding)",
         "Open-Meteo (elevation data)",
-        "TinyURL (optional URL shortening, user-triggered)"
+        "Cloudflare Workers + KV (optional share-link backend, user-triggered)"
       ]
     }
   }

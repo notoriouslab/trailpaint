@@ -153,10 +153,9 @@ LIMIT 50
 ### 降級鏈（前端 `shareLink.ts:createBackendShare`）
 
 1. **後端 `POST /api/s`**（本 Worker）— 主要路徑
-2. **TinyURL `shortenUrl()`** — 後端失敗時保底
-3. **長 hash URL** — 兩者都失敗時最後一線
+2. **長 hash URL** — 後端失敗時最後一線（會捨棄照片，但至少連結可用）
 
-降級對使用者**透明**（`console.warn` 留痕但不出錯誤 toast），確保「按複製一定有結果」。
+降級對使用者**透明**（`console.warn` 留痕但不出錯誤 toast），確保「按複製一定有結果」。先前的 TinyURL fallback 已移除 — 它產出的是無照片連結，收件人會看到空白預覽以為連結壞掉，體驗反而更差。
 
 ## 相關設定
 

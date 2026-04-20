@@ -44,7 +44,7 @@ Three tabs for three use cases:
 - PNG at multiple ratios: 1:1 (IG feed), 9:16 (Story), 4:3, original
 - 3 border styles: Classic double, Paper sketch, Minimal thin
 - 2 style filters: Original, Sketch
-- Share link (URL hash encodes entire project; optional TinyURL shortening)
+- Share link via Cloudflare Workers + KV short URL (TTL 90 days, Open Graph cover from first photo)
 - AI prompts in 4 styles: Japanese hand-drawn, Treasure map, Kawaii cartoon, Minimal line art
 - Player embed code (`<iframe>` with project data baked in)
 
@@ -87,7 +87,7 @@ Curated collections:
 
 - **Zero backend**: all project data stored in browser localStorage, never uploaded
 - **Zero account**: no signup required
-- External calls only: map tiles (OSM / CARTO / Protomaps), Nominatim reverse geocoding, Open-Meteo elevation, TinyURL shortener (user-triggered)
+- External calls only: map tiles (OSM / CARTO / Protomaps), Photon (primary) / Nominatim (fallback) reverse geocoding, Open-Meteo elevation, Cloudflare Workers share-link backend (user-triggered)
 
 ## Tech Stack
 

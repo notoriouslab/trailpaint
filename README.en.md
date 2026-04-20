@@ -21,7 +21,7 @@
 TrailPaint is a **hand-drawn style trail map maker**. Take a trip, come back, and in minutes turn your path, stops, and photos into a printable, IG-ready, blog-embeddable **illustrated map**.
 
 - **No backend, no account**: everything runs in the browser
-- **PWA ready**: install to phone home screen, works like a native app
+- **PWA ready**: install to phone home screen, works like a native app ([iOS / Android / desktop install guide](https://trailpaint.org/features/install/))
 - **Auto-detects 3 languages**: Chinese / English / Japanese
 - **Open source GPL-3.0**: free to use, modify, and remix
 
@@ -41,7 +41,7 @@ Supports:
 - iPhone HEIC photos with EXIF GPS
 - Android JPEG
 - Photos without GPS: auto-grouped as "pending location", drag to place
-- Auto-naming: Nominatim reverse geocoding fills in spot titles
+- Auto-naming: Photon (primary) / Nominatim (fallback) reverse geocoding fills in spot titles
 
 ![Import dialog](./examples/import-wizard.jpg)
 
@@ -76,7 +76,7 @@ v1.3 unifies all outputs into a single "Export Wizard" with three tabs matching 
 - **3 border styles**: Classic double / Paper sketch / Minimal thin
 - **Style filters**: Original / Sketch
 - **Live preview + composition tweak**: arrow keys pan, +/- zoom
-- **🔗 Share link**: URL hash encodes the whole project — recipient opens your map (optional TinyURL shortening)
+- **🔗 Share link**: Cloudflare Workers + KV short URL, 90-day TTL, photos travel with the link, first photo becomes the Open Graph cover for LINE / Facebook previews
 - **🤖 AI prompt**: 4 styles (Japanese hand-drawn / Treasure map / Kawaii cartoon / Minimal line art), paste to Midjourney / Gemini for pure illustration
 - **📋 Player embed code**: one-click `<iframe>` with project data baked in — paste to WordPress, Notion, Substack
 
@@ -112,7 +112,11 @@ v1.3 unifies all outputs into a single "Export Wizard" with three tabs matching 
 
 ### Story Page: `/stories/` collection
 
-Curated story maps. Taiwan missionaries (Mackay, Barclay, Landsborough, Maxwell, Doris Brougham) are the first series. Horizontal tabs switch characters; LINE/FB shares auto-display OG thumbnails.
+Curated story maps:
+- **Taiwan Missionaries' Footprints**: Mackay, Barclay, Landsborough, Maxwell, Doris Brougham and more — 19-20th century missionary routes in Taiwan with Academia Sinica historical map overlays
+- **Passion Week**: Jesus' final week in Jerusalem across 12+ biblical locations, paired with classical paintings (da Vinci, Caravaggio, Rembrandt) and scripture links to YouVersion
+
+Horizontal tabs switch characters / chapters; LINE / FB shares auto-display OG thumbnails.
 
 ---
 
@@ -146,7 +150,7 @@ Export PNG + copy AI prompt → feed to ChatGPT / Gemini image generation:
 GPX import (tracks + waypoints auto-simplified) · **Photo EXIF import (JPEG/HEIC with GPS)** · **KML / GeoJSON import** · Elevation profile (distance/time/cumulative ascent-descent) · Auto-naming via reverse geocoding · JSON save/restore full state
 
 ### Export
-**Unified ExportWizard** (Image / Backup / Interop tabs) · Multi-ratio crop preview · 3 borders + 2 filters · Stats overlay · URL hash share link + TinyURL shortener · AI prompts 4 styles · Player embed code · GeoJSON / KML pure geographic structure
+**Unified ExportWizard** (Image / Backup / Interop tabs) · Multi-ratio crop preview · 3 borders + 2 filters · Stats overlay · Cloudflare Workers + KV short URL (90-day TTL, OG cover photo) · AI prompts 4 styles · Player embed code · GeoJSON / KML pure geographic structure
 
 ### Experience
 Undo/Redo (Cmd+Z) · Hand-drawn shake SVG filter · PWA installable · Auto-detect 3 languages · Mobile floating actions · Fit All overview · Drag-sort spots · First-time tutorial
@@ -164,18 +168,24 @@ Auto-play · Basemap + historical layers · Background music · Fullscreen · Pl
 | OpenStreetMap | Map data (local-language labels) | [openstreetmap.org](https://www.openstreetmap.org) |
 | Protomaps | Multilingual vector tiles | [protomaps.com](https://protomaps.com) |
 | CARTO | Map tiles | [carto.com](https://carto.com) |
-| Nominatim | Place search + reverse geocoding | [nominatim.org](https://nominatim.openstreetmap.org) |
+| Photon | Place search + reverse geocoding (primary) | [photon.komoot.io](https://photon.komoot.io) |
+| Nominatim | Reverse geocoding (fallback) | [nominatim.org](https://nominatim.openstreetmap.org) |
 | Open-Meteo | Elevation data | [open-meteo.com](https://open-meteo.com) |
-| TinyURL | URL shortening | [tinyurl.com](https://tinyurl.com) |
+| Cloudflare Workers + KV | Share-link short URLs (90-day TTL) | [workers.cloudflare.com](https://workers.cloudflare.com) |
 | Academia Sinica | Taiwan historical maps 1897/1921/1966 | [gis.sinica.edu.tw](https://gis.sinica.edu.tw) |
 
 ---
 
-## Offline Version
+## Site Structure
 
-For zero-network environments, download [`trailpaint.html`](trailpaint.html) single file — open directly in browser.
+Beyond Editor / Player, trailpaint.org has several entry points you can link to, embed, or share:
 
-> ⚠️ Offline version lacks online maps, GPX import, elevation query, photo EXIF, and KML/GeoJSON import (features that need network or extra dependencies). iOS cannot open local HTML directly — use the online version at trailpaint.org.
+- [`/features/`](https://trailpaint.org/features/) — Feature reference (Import / Export / Story Player / AI prompt / PWA install)
+- [`/features/install/`](https://trailpaint.org/features/install/) — **PWA install guide** (iOS Safari / Android Chrome / desktop)
+- [`/examples/`](https://trailpaint.org/examples/) — Sample trails, one click to play or download
+- [`/stories/`](https://trailpaint.org/stories/) — Curated story collections (Taiwan missionaries, Passion Week)
+- [`/faq/`](https://trailpaint.org/faq/) — Full FAQ
+- [`llms.txt`](https://trailpaint.org/llms.txt) / [`agent-card.json`](https://trailpaint.org/.well-known/agent-card.json) — Structured summaries for AI and agents
 
 ---
 
@@ -201,8 +211,10 @@ cd online
 npm install
 npm run dev        # Dev server
 npm run build      # Build to ../app/
-npm test           # vitest 205 cases
+npm test           # vitest
 ```
+
+The Cloudflare Worker that backs the share-link short URLs lives in [`cloudflare/`](./cloudflare/); see that directory's README for deployment.
 
 Spectra SDD specs: `openspec/changes/` (not in git, local reference)
 

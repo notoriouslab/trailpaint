@@ -98,14 +98,11 @@ trailpaint/
 
 ---
 
-### 5. 離線版退役
+### 5. 離線版退役 ✅
 
-**背景**：`trailpaint.html` 是最早的單檔離線版。目前 PWA 已經可以離線使用，離線版的維護成本高（每次改功能要同步兩份代碼）。
+**背景**：`trailpaint.html` 是最早的單檔離線版。PWA 已可離線使用，繼續維護兩份代碼成本太高。
 
-**待討論**：
-- 什麼時候正式停止維護？
-- 需要通知現有離線版使用者嗎？
-- 離線版的 i18n 替換陷阱（compiled JSX Unicode 轉義）是否值得繼續投入？
+**現況（2026-04-20）**：正式退役。三個離線版 HTML（`trailpaint.html` / `-en` / `-ja`）移入 `old/`，官網與 README 不再指向；llms.txt / agent-card.json 同步移除。建議離線使用者改走 [PWA 安裝](https://trailpaint.org/features/install/)。
 
 ---
 
