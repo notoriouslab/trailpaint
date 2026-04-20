@@ -78,8 +78,8 @@ describe('migrateProject — baseline (Task 2)', () => {
         },
       ],
     });
-    expect(p.spots[0].title).toHaveLength(200);
-    expect(p.spots[0].desc).toHaveLength(2000);
+    expect(p.spots[0].title).toHaveLength(80);
+    expect(p.spots[0].desc).toHaveLength(500);
   });
 
   it('rejects data:image/svg+xml (SVG can contain <script> in certain contexts)', () => {

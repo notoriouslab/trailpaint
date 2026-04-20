@@ -44,9 +44,11 @@ export function migrateProject(data: Record<string, unknown>): Project {
     const rawPhoto = (s as Record<string, unknown>).photo;
     const safePhoto = typeof rawPhoto === 'string' && SAFE_PHOTO_RE.test(rawPhoto) ? rawPhoto : null;
 
-    // Clamp string lengths to prevent data bombs
-    const title = typeof s.title === 'string' ? s.title.slice(0, 200) : '';
-    const desc = typeof s.desc === 'string' ? s.desc.slice(0, 2000) : '';
+    // Clamp string lengths to prevent data bombs. Empirical max across all
+    // bundled projects (2026-04-20): title 36 (resurrection), desc 215
+    // (maxwell) — 80/500 leaves ~2x headroom without encouraging bloat.
+    const title = typeof s.title === 'string' ? s.title.slice(0, 80) : '';
+    const desc = typeof s.desc === 'string' ? s.desc.slice(0, 500) : '';
 
     // Per-photo size cap + aggregate cap (prevent 200 × 2MB memory bomb)
     let clampedPhoto: string | null = safePhoto && safePhoto.length <= SINGLE_PHOTO_LIMIT ? safePhoto : null;
