@@ -101,6 +101,28 @@ describe('parseExif', () => {
     expect(result.latlng).toEqual([25, 121]);
   });
 
+  it('rejects out-of-range latitude/longitude (passes isFinite but outside WGS84)', async () => {
+    const mockFile = new File(['test'], 'photo.jpg', { type: 'image/jpeg' });
+
+    // latitude 200 is finite but bogus → must drop the pair entirely
+    mockExifr.gps.mockResolvedValueOnce({ latitude: 200, longitude: 50 });
+    mockExifr.parse.mockResolvedValueOnce(undefined);
+    expect((await parseExif(mockFile)).latlng).toBeNull();
+
+    mockExifr.gps.mockResolvedValueOnce({ latitude: 40, longitude: 200 });
+    mockExifr.parse.mockResolvedValueOnce(undefined);
+    expect((await parseExif(mockFile)).latlng).toBeNull();
+
+    mockExifr.gps.mockResolvedValueOnce({ latitude: -90.0001, longitude: 0 });
+    mockExifr.parse.mockResolvedValueOnce(undefined);
+    expect((await parseExif(mockFile)).latlng).toBeNull();
+
+    // Exact boundaries are accepted
+    mockExifr.gps.mockResolvedValueOnce({ latitude: 90, longitude: -180 });
+    mockExifr.parse.mockResolvedValueOnce(undefined);
+    expect((await parseExif(mockFile)).latlng).toEqual([90, -180]);
+  });
+
   it('converts DateTimeOriginal string to Date when needed', async () => {
     const mockFile = new File(['test'], 'photo.jpg', { type: 'image/jpeg' });
 

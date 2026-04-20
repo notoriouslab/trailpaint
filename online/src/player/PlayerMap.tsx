@@ -1,11 +1,12 @@
 import { MapContainer, Marker, Popup, Polyline, ZoomControl, useMap } from 'react-leaflet';
 import { usePlayerStore } from './usePlayerStore';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import PlayerBasemapSwitcher from './PlayerBasemapSwitcher';
 import PlayerFitAll from './PlayerFitAll';
 import ScriptureRefs from './ScriptureRefs';
 import LocateButton from '../map/LocateButton';
+import type { Spot } from '../core/models/types';
 import 'leaflet/dist/leaflet.css';
 import '../map/MapView.css';
 
@@ -89,6 +90,31 @@ function ActiveMarker({
   );
 }
 
+/** Popup body — isolated so the broken-image fallback has local state */
+function SpotPopupContent({ spot }: { spot: Spot }) {
+  const [imgFailed, setImgFailed] = useState(false);
+  useEffect(() => { setImgFailed(false); }, [spot.photo]);
+
+  return (
+    <div className="player-popup__body">
+      <strong className="player-popup__title">{spot.title}</strong>
+      {spot.photo && !imgFailed && (
+        <img
+          src={spot.photo}
+          alt={spot.title}
+          className="player-popup__img"
+          onError={() => setImgFailed(true)}
+        />
+      )}
+      {spot.photo && imgFailed && (
+        <div className="player-popup__img-fallback">照片載入失敗</div>
+      )}
+      {spot.desc && <p className="player-popup__desc">{spot.desc}</p>}
+      <ScriptureRefs refs={spot.scripture_refs} />
+    </div>
+  );
+}
+
 /** Simple numbered circle icon (cached to avoid re-creating on every render) */
 const _iconCache = new Map<string, L.DivIcon>();
 function spotIcon(num: number, active: boolean) {
@@ -160,19 +186,8 @@ export default function PlayerMap() {
           active={activeIndex === i}
           onClick={() => { setPlaying(false); setActiveSpot(i); }}
         >
-          <Popup maxWidth={280}>
-            <div style={{ fontFamily: 'Georgia, serif' }}>
-              <strong style={{ fontSize: '15px', display: 'block', marginBottom: 2 }}>{spot.title}</strong>
-              {spot.photo && (
-                <img
-                  src={spot.photo}
-                  alt={spot.title}
-                  style={{ width: '100%', maxHeight: 200, objectFit: 'contain', borderRadius: 4, marginTop: 8 }}
-                />
-              )}
-              {spot.desc && <p style={{ margin: '6px 0 0', fontSize: '13px', color: '#555', lineHeight: 1.5 }}>{spot.desc}</p>}
-              <ScriptureRefs refs={spot.scripture_refs} />
-            </div>
+          <Popup maxWidth={480} className="player-popup">
+            <SpotPopupContent spot={spot} />
           </Popup>
         </ActiveMarker>
       ))}

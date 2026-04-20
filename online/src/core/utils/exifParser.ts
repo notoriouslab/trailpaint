@@ -33,7 +33,14 @@ export async function parseExif(file: File): Promise<ExifData> {
     typeof gps.latitude === 'number' &&
     typeof gps.longitude === 'number' &&
     isFinite(gps.latitude) &&
-    isFinite(gps.longitude)
+    isFinite(gps.longitude) &&
+    // Range guard: reject malicious/corrupt EXIF that passes isFinite but lies
+    // outside the WGS84 domain; downstream cos(lat) and Mercator projection
+    // will produce nonsense coordinates otherwise.
+    gps.latitude >= -90 &&
+    gps.latitude <= 90 &&
+    gps.longitude >= -180 &&
+    gps.longitude <= 180
   ) {
     latlng = [gps.latitude, gps.longitude];
   }

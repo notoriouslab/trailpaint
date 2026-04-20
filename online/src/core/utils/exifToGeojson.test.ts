@@ -242,6 +242,138 @@ describe('exifToGeojson', () => {
     expect(result.stats.withoutGps).toBe(2);
   });
 
+  it('no-GPS photo interpolates between flanking GPS photos by time', async () => {
+    const f1 = new File(['test'], 'a.jpg', { type: 'image/jpeg' });
+    const f2 = new File(['test'], 'b.jpg', { type: 'image/jpeg' });
+    const f3 = new File(['test'], 'c.jpg', { type: 'image/jpeg' });
+
+    mockParseExif
+      .mockResolvedValueOnce({ file: f1, latlng: [25.00, 121.00], takenAt: new Date(2026, 3, 18, 14, 0) })
+      .mockResolvedValueOnce({ file: f2, latlng: null,              takenAt: new Date(2026, 3, 18, 14, 30) })
+      .mockResolvedValueOnce({ file: f3, latlng: [25.10, 121.20], takenAt: new Date(2026, 3, 18, 15, 0) });
+
+    // mapCenter is Taiwan; middle photo must NOT end up there.
+    const result = await exifToGeojson([f1, f2, f3], [23.5, 121.0]);
+
+    const [lng, lat] = result.featureCollection.features[1].geometry.coordinates;
+    // frac = 0.5 → interpolated anchor (25.05, 121.10) + sunflower spread.
+    // Tight ±0.001° (≈ 111m) so a spread bug can't hide inside the window.
+    expect(lat).toBeGreaterThan(25.049);
+    expect(lat).toBeLessThan(25.051);
+    expect(lng).toBeGreaterThan(121.099);
+    expect(lng).toBeLessThan(121.101);
+    expect(result.featureCollection.features[1].properties.pendingLocation).toBe(true);
+  });
+
+  it('interpolates along the short arc across the antimeridian (+179° ↔ -179°)', async () => {
+    const f1 = new File(['test'], 'a.jpg', { type: 'image/jpeg' });
+    const f2 = new File(['test'], 'b.jpg', { type: 'image/jpeg' });
+    const f3 = new File(['test'], 'c.jpg', { type: 'image/jpeg' });
+
+    mockParseExif
+      .mockResolvedValueOnce({ file: f1, latlng: [0, 179.9],  takenAt: new Date(2026, 3, 18, 14, 0) })
+      .mockResolvedValueOnce({ file: f2, latlng: null,         takenAt: new Date(2026, 3, 18, 14, 30) })
+      .mockResolvedValueOnce({ file: f3, latlng: [0, -179.9], takenAt: new Date(2026, 3, 18, 15, 0) });
+
+    const result = await exifToGeojson([f1, f2, f3], [23.5, 121.0]);
+
+    const [lng] = result.featureCollection.features[1].geometry.coordinates;
+    // Short-arc interp crosses ±180°; naive linear would land near 0° (wrong hemisphere).
+    const absLng = Math.abs(lng);
+    expect(absLng).toBeGreaterThan(179);
+    expect(absLng).toBeLessThanOrEqual(180);
+  });
+
+  it('does not spread photos anchored near the poles (|lat|>84°)', async () => {
+    const f1 = new File(['test'], 'a.jpg', { type: 'image/jpeg' });
+    const f2 = new File(['test'], 'b.jpg', { type: 'image/jpeg' });
+    const f3 = new File(['test'], 'c.jpg', { type: 'image/jpeg' });
+
+    mockParseExif
+      .mockResolvedValueOnce({ file: f1, latlng: [87.0, 0], takenAt: new Date(2026, 3, 18, 14, 0) })
+      .mockResolvedValueOnce({ file: f2, latlng: null,        takenAt: new Date(2026, 3, 18, 14, 10) })
+      .mockResolvedValueOnce({ file: f3, latlng: null,        takenAt: new Date(2026, 3, 18, 14, 20) });
+
+    const result = await exifToGeojson([f1, f2, f3], [0, 0]);
+    const [lng, lat] = result.featureCollection.features[1].geometry.coordinates;
+    // Pole-safe: return anchor verbatim instead of flinging dLng to infinity
+    expect(lat).toBe(87.0);
+    expect(lng).toBe(0);
+  });
+
+  it('no-GPS photo before all GPS photos snaps to the earliest GPS anchor', async () => {
+    const f1 = new File(['test'], 'a.jpg', { type: 'image/jpeg' });
+    const f2 = new File(['test'], 'b.jpg', { type: 'image/jpeg' });
+
+    mockParseExif
+      .mockResolvedValueOnce({ file: f1, latlng: null,              takenAt: new Date(2026, 3, 18, 8, 0) })
+      .mockResolvedValueOnce({ file: f2, latlng: [40.00, -74.00], takenAt: new Date(2026, 3, 18, 9, 0) });
+
+    const result = await exifToGeojson([f1, f2], [23.5, 121.0]);
+
+    const [lng, lat] = result.featureCollection.features[0].geometry.coordinates;
+    // Anchored near f2, not mapCenter; spread < 100m
+    expect(lat).toBeGreaterThan(39.99);
+    expect(lat).toBeLessThan(40.01);
+    expect(lng).toBeGreaterThan(-74.01);
+    expect(lng).toBeLessThan(-73.99);
+  });
+
+  it('no-GPS photo without takenAt falls back to GPS centroid, not mapCenter', async () => {
+    const f1 = new File(['test'], 'a.jpg', { type: 'image/jpeg' });
+    const f2 = new File(['test'], 'b.jpg', { type: 'image/jpeg' });
+    const f3 = new File(['test'], 'c.jpg', { type: 'image/jpeg' });
+
+    mockParseExif
+      .mockResolvedValueOnce({ file: f1, latlng: [10.00, 20.00], takenAt: null })
+      .mockResolvedValueOnce({ file: f2, latlng: null,             takenAt: null })
+      .mockResolvedValueOnce({ file: f3, latlng: [12.00, 22.00], takenAt: null });
+
+    const result = await exifToGeojson([f1, f2, f3], [23.5, 121.0]);
+
+    const [lng, lat] = result.featureCollection.features[1].geometry.coordinates;
+    // Centroid of (10,20) and (12,22) = (11,21); spread < 100m
+    expect(lat).toBeGreaterThan(10.99);
+    expect(lat).toBeLessThan(11.01);
+    expect(lng).toBeGreaterThan(20.99);
+    expect(lng).toBeLessThan(21.01);
+  });
+
+  it('whole batch with no GPS still falls back to mapCenter', async () => {
+    const f1 = new File(['test'], 'a.jpg', { type: 'image/jpeg' });
+    const f2 = new File(['test'], 'b.jpg', { type: 'image/jpeg' });
+
+    mockParseExif
+      .mockResolvedValueOnce({ file: f1, latlng: null, takenAt: new Date(2026, 3, 18, 14, 0) })
+      .mockResolvedValueOnce({ file: f2, latlng: null, takenAt: new Date(2026, 3, 18, 14, 30) });
+
+    const mapCenter: [number, number] = [23.5, 121.0];
+    const result = await exifToGeojson([f1, f2], mapCenter);
+
+    for (const feat of result.featureCollection.features) {
+      expect(feat.geometry.coordinates).toEqual([121.0, 23.5]); // [lng, lat]
+      expect(feat.properties.pendingLocation).toBe(true);
+    }
+  });
+
+  it('multiple no-GPS photos sharing an anchor spread to distinct points', async () => {
+    const f1 = new File(['test'], 'a.jpg', { type: 'image/jpeg' });
+    const f2 = new File(['test'], 'b.jpg', { type: 'image/jpeg' });
+    const f3 = new File(['test'], 'c.jpg', { type: 'image/jpeg' });
+
+    mockParseExif
+      .mockResolvedValueOnce({ file: f1, latlng: [25.00, 121.00], takenAt: new Date(2026, 3, 18, 14, 0) })
+      .mockResolvedValueOnce({ file: f2, latlng: null,              takenAt: new Date(2026, 3, 18, 14, 10) })
+      .mockResolvedValueOnce({ file: f3, latlng: null,              takenAt: new Date(2026, 3, 18, 14, 20) });
+
+    const result = await exifToGeojson([f1, f2, f3], [23.5, 121.0]);
+
+    const c2 = result.featureCollection.features[1].geometry.coordinates;
+    const c3 = result.featureCollection.features[2].geometry.coordinates;
+    // Both anchor on f1 (only one-sided GPS), but spread must differ
+    expect(c2).not.toEqual(c3);
+  });
+
   it('should format DateTimeOriginal as YYYY-MM-DD HH:mm', async () => {
     const mockFile = new File(['test'], 'photo.jpg', { type: 'image/jpeg' });
     const mockDate = new Date(2026, 3, 18, 9, 5, 30); // local 09:05:30
