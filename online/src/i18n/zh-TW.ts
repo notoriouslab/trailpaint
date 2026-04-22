@@ -143,6 +143,7 @@ export default {
   'import.geojsonParseError': 'GeoJSON 格式錯誤，請確認檔案完整',
   'import.unsupportedFeatures': '偵測到 {count} 個不支援的元素（面型/嵌套），已略過',
   'import.noFeaturesImported': '檔案內沒有可匯入的景點或路線',
+  'import.photoAdopt.summary': '📎 {adopted} 張照片併入現有景點，新建 {added} 張（可按復原退回）',
   'import.ai.title': '🤖 用 AI 製作路線 JSON',
   'import.ai.desc': '把行程描述貼給 ChatGPT 或 Claude，它會幫你生成 JSON — 複製後貼回這裡就能匯入。',
   'import.ai.copyPrompt': '複製提示詞模板',

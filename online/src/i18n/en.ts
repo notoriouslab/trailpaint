@@ -143,6 +143,7 @@ export default {
   'import.geojsonParseError': 'Invalid GeoJSON file',
   'import.unsupportedFeatures': 'Skipped {count} unsupported elements (polygons / nested)',
   'import.noFeaturesImported': 'No importable spots or routes in file',
+  'import.photoAdopt.summary': '📎 {adopted} photo(s) merged into existing spots, {added} new (undo to revert)',
   'import.ai.title': '🤖 Create trail JSON with AI',
   'import.ai.desc': 'Paste your trip description to ChatGPT or Claude — it generates JSON you can paste back here to import.',
   'import.ai.copyPrompt': 'Copy prompt template',

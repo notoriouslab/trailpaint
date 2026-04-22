@@ -143,6 +143,7 @@ export default {
   'import.geojsonParseError': 'GeoJSON ファイルが無効です',
   'import.unsupportedFeatures': '非対応要素を {count} 個スキップしました（面・入れ子）',
   'import.noFeaturesImported': 'インポート可能なスポットや経路が見つかりません',
+  'import.photoAdopt.summary': '📎 {adopted} 枚を既存スポットに統合、{added} 枚を新規作成（元に戻す可）',
   'import.ai.title': '🤖 AI でルート JSON を作成',
   'import.ai.desc': '旅程の説明を ChatGPT や Claude に貼り付けると JSON を生成してくれます。コピーして下の欄に貼り戻せばインポートできます。',
   'import.ai.copyPrompt': 'プロンプトテンプレートをコピー',

@@ -4,7 +4,8 @@ import { parseGpx } from '../utils/gpxParser';
 import { exifToGeojson, MAX_PHOTO_BATCH } from '../utils/exifToGeojson';
 import { parseKml } from '../utils/kmlParser';
 import { parseGeoJson } from '../utils/geojsonParser';
-import { geojsonToImport, type ImportBundle } from '../utils/geojsonImport';
+import { geojsonToImport, type ImportBundle, type ImportResult } from '../utils/geojsonImport';
+import { planPhotoAdoption } from '../utils/photoAdoption';
 import { stripJsonCodeFence } from '../utils/pasteJsonInput';
 import type { ExifStats } from '../utils/exifToGeojson';
 import { t } from '../../i18n';
@@ -154,7 +155,33 @@ export default function ImportWizard({ onClose, onLoadImage }: ImportWizardProps
     if (result.unsupportedCount && result.unsupportedCount > 0) {
       showToast(t('import.unsupportedFeatures').replace('{count}', String(result.unsupportedCount)));
     }
-    await importPOIs(result);
+
+    // Let close-proximity photos adopt existing photo-less spots (30m radius).
+    // Merges are invisible to KML/GeoJSON import since those bundles carry no
+    // spotPhotoMap — plan.adoptions stays empty there.
+    const plan = planPhotoAdoption(
+      result.spots,
+      result.spotPhotoMap ?? new Map(),
+      state.project.spots,
+    );
+    const mergedPhotoMap = new Map<string, File>();
+    for (const a of plan.adoptions) mergedPhotoMap.set(a.spotId, a.photoFile);
+    for (const [id, file] of plan.remainingPhotoMap) mergedPhotoMap.set(id, file);
+    const merged: ImportResult = {
+      ...result,
+      spots: plan.remainingSpots,
+      spotPhotoMap: mergedPhotoMap.size > 0 ? mergedPhotoMap : undefined,
+    };
+
+    await importPOIs(merged);
+
+    if (plan.adoptions.length > 0) {
+      showToast(
+        t('import.photoAdopt.summary')
+          .replace('{adopted}', String(plan.adoptions.length))
+          .replace('{added}', String(plan.remainingSpots.length)),
+      );
+    }
     return true;
   }, [importPOIs, showToast]);
 
