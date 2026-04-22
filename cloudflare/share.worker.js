@@ -322,9 +322,9 @@ async function handleGet(request, env, ctx) {
   var h = ${JSON.stringify(hash)};
   try {
     sessionStorage.setItem('tp_share_hash', h);
-    location.replace(${JSON.stringify(ORIGIN + '/app/player/?share=ss')});
+    location.replace(${JSON.stringify(ORIGIN + '/app/player/?share=ss&autoplay=1')});
   } catch (e) {
-    location.replace(${JSON.stringify(ORIGIN + '/app/player/#share=')} + h);
+    location.replace(${JSON.stringify(ORIGIN + '/app/player/?autoplay=1#share=')} + h);
   }
 })();
 </script>

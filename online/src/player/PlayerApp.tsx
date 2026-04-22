@@ -176,11 +176,12 @@ export default function PlayerApp() {
     }
   }, [params, loadProject, setError, isEmbed, cleanUrl]);
 
-  // Autoplay: trigger after project loads
+  // Autoplay: trigger 1s after project loads so FitBounds has time to show
+  // the whole route before FlyToActive zooms in on spot 1.
   useEffect(() => {
-    if (autoplay && project && project.spots.length > 0) {
-      setPlaying(true);
-    }
+    if (!autoplay || !project || project.spots.length === 0) return;
+    const t = setTimeout(() => setPlaying(true), 1000);
+    return () => clearTimeout(t);
   }, [autoplay, project, setPlaying]);
 
   // Handle file drop / file input
