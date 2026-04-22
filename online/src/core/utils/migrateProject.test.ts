@@ -356,3 +356,100 @@ describe('migrateProject — v4 pendingLocation (010 D5)', () => {
     expect(p.spots[2].pendingLocation).toBeUndefined();
   });
 });
+
+describe('migrateProject — v3.1 photoMeta / photo_query (013)', () => {
+  const validMeta = {
+    source: 'wikimedia-commons',
+    license: 'CC BY-SA 3.0',
+    author: 'AngMoKio',
+    authorUrl: 'https://commons.wikimedia.org/wiki/User:AngMoKio',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:X.jpg',
+  };
+
+  it('leaves photoMeta undefined for v3 input without the field', () => {
+    const p = migrateProject({
+      ...validBase,
+      version: 3,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x' }],
+    });
+    expect(p.spots[0].photoMeta).toBeUndefined();
+  });
+
+  it('preserves all 5 photoMeta fields when valid', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', photoMeta: { ...validMeta } }],
+    });
+    expect(p.spots[0].photoMeta).toEqual(validMeta);
+  });
+
+  it('drops entire photoMeta when source is not wikimedia-commons (all-or-nothing)', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', photoMeta: { ...validMeta, source: 'unsplash' } }],
+    });
+    expect(p.spots[0].photoMeta).toBeUndefined();
+  });
+
+  it('drops photoMeta when authorUrl is non-Commons (XSS defense vs javascript: URLs)', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{
+        id: 's1', latlng: [23.5, 121], title: 'x',
+        photoMeta: { ...validMeta, authorUrl: 'javascript:alert(1)' },
+      }],
+    });
+    expect(p.spots[0].photoMeta).toBeUndefined();
+  });
+
+  it('keeps photoMeta when authorUrl is null (anonymous artist)', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{
+        id: 's1', latlng: [23.5, 121], title: 'x',
+        photoMeta: { ...validMeta, authorUrl: null },
+      }],
+    });
+    expect(p.spots[0].photoMeta?.authorUrl).toBeNull();
+  });
+
+  it('drops photoMeta when sourceUrl is non-Commons', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{
+        id: 's1', latlng: [23.5, 121], title: 'x',
+        photoMeta: { ...validMeta, sourceUrl: 'https://evil.com/steal' },
+      }],
+    });
+    expect(p.spots[0].photoMeta).toBeUndefined();
+  });
+
+  it('preserves photo_query when string', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', photo_query: '台北101|Taipei 101' }],
+    });
+    expect(p.spots[0].photo_query).toBe('台北101|Taipei 101');
+  });
+
+  it('drops photo_query when not string (number / object)', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [
+        { id: 's1', latlng: [23.5, 121], title: 'x', photo_query: 123 },
+        { id: 's2', latlng: [23.5, 121], title: 'y', photo_query: { q: 'x' } },
+      ],
+    });
+    expect(p.spots[0].photo_query).toBeUndefined();
+    expect(p.spots[1].photo_query).toBeUndefined();
+  });
+
+  it('clamps photo_query to 200 chars (data bomb defense)', () => {
+    const long = 'x'.repeat(500);
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', photo_query: long }],
+    });
+    expect(p.spots[0].photo_query?.length).toBe(200);
+  });
+});

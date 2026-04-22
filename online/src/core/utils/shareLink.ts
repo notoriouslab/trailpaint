@@ -12,7 +12,7 @@ import { migrateProject } from './migrateProject';
  *   ride along and friends see the full visual story.
  * Key `p` on spots stores the photo data URL when included; absent otherwise.
  */
-function compactProject(project: Project, includePhoto = false): Record<string, unknown> {
+export function compactProject(project: Project, includePhoto = false): Record<string, unknown> {
   const out: Record<string, unknown> = {
     v: project.version,
     n: project.name,
@@ -25,6 +25,17 @@ function compactProject(project: Project, includePhoto = false): Record<string, 
       if (s.desc) o.d = s.desc;
       if (s.cardOffset.x !== 0 || s.cardOffset.y !== 0) o.o = [s.cardOffset.x, s.cardOffset.y];
       if (includePhoto && s.photo) o.p = s.photo;
+      // v3.1 photoMeta (013): 內層 key 改用 sc/lc/au/uu/su 避免與其他物件的 short keys
+      // 視覺重複（runtime namespace 不同無衝突，但 debug 時看得清楚）
+      if (s.photoMeta) {
+        o.pm = {
+          sc: s.photoMeta.source,
+          lc: s.photoMeta.license,
+          au: s.photoMeta.author,
+          uu: s.photoMeta.authorUrl,
+          su: s.photoMeta.sourceUrl,
+        };
+      }
       return o;
     }),
     r: project.routes.map((r) => {
@@ -51,17 +62,31 @@ function compactProject(project: Project, includePhoto = false): Record<string, 
 /**
  * Expand a compact project back to full Project structure.
  */
-function expandProject(c: Record<string, unknown>): Project {
-  const spots = (c.s as Record<string, unknown>[])?.map((s) => ({
-    id: s.i as string,
-    latlng: s.l as [number, number],
-    num: s.u as number,
-    title: s.t as string,
-    desc: (s.d as string) ?? '',
-    photo: (typeof s.p === 'string' ? s.p : null),
-    iconId: s.k as string,
-    cardOffset: s.o ? { x: (s.o as number[])[0], y: (s.o as number[])[1] } : { ...DEFAULT_CARD_OFFSET },
-  })) ?? [];
+export function expandProject(c: Record<string, unknown>): Project {
+  const spots = (c.s as Record<string, unknown>[])?.map((s) => {
+    const out: Record<string, unknown> = {
+      id: s.i as string,
+      latlng: s.l as [number, number],
+      num: s.u as number,
+      title: s.t as string,
+      desc: (s.d as string) ?? '',
+      photo: (typeof s.p === 'string' ? s.p : null),
+      iconId: s.k as string,
+      cardOffset: s.o ? { x: (s.o as number[])[0], y: (s.o as number[])[1] } : { ...DEFAULT_CARD_OFFSET },
+    };
+    // v3.1 photoMeta (013): expand sc/lc/au/uu/su → photoMeta；migrateProject 會做白名單
+    if (s.pm && typeof s.pm === 'object') {
+      const pm = s.pm as Record<string, unknown>;
+      out.photoMeta = {
+        source: pm.sc,
+        license: pm.lc,
+        author: pm.au,
+        authorUrl: pm.uu,
+        sourceUrl: pm.su,
+      };
+    }
+    return out;
+  }) ?? [];
   const routes = (c.r as Record<string, unknown>[])?.map((r) => ({
     id: r.i as string,
     name: (r.n as string) ?? '',

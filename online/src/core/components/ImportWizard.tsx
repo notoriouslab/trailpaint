@@ -31,7 +31,7 @@ JSON 格式要求：
   "center": [緯度, 經度],
   "zoom": 14,
   "spots": [
-    { "id": "s1", "latlng": [緯度, 經度], "num": 1, "title": "景點名", "desc": "描述", "photo": null, "iconId": "pin", "cardOffset": { "x": 0, "y": -60 } }
+    { "id": "s1", "latlng": [緯度, 經度], "num": 1, "title": "景點名", "desc": "描述", "photo": null, "photo_query": "中文關鍵字|English keywords", "iconId": "pin", "cardOffset": { "x": 0, "y": -60 } }
   ],
   "routes": [
     { "id": "r1", "name": "路線名", "pts": [[緯度,經度], ...中間路徑點...], "color": "orange", "elevations": null }
@@ -40,7 +40,9 @@ JSON 格式要求：
 
 iconId 選項：leaf(植物), flower(花), tree(樹), bird(鳥), water(水), rock(岩石), toilet(廁所), bus(站牌), rest(休憩), food(餐廳), beer(酒吧), hotspring(溫泉), mall(商城), cinema(電影院), bike(腳踏車), parking(停車), sun(觀景), camera(拍照), warning(注意), info(說明), pin(標記)
 color 選項：orange, blue, green, red, purple
-座標請用真實 GPS 座標（可用 Google Maps 查）。每個景點的 cardOffset 請設不同的 x 值（如 80, -100, 90, -80）避免卡片重疊。`;
+座標請用真實 GPS 座標（可用 Google Maps 查）。每個景點的 cardOffset 請設不同的 x 值（如 80, -100, 90, -80）避免卡片重疊。
+
+photo_query 給「AI 匯入 + 自動補圖」功能使用：請為每個景點產生中英雙語搜尋關鍵字（以 | 分隔），優先使用該景點在 Wikimedia Commons 上的常見命名（例：「台北101|Taipei 101」、「七星山|Qixingshan」、「敘利亞安提阿|Antioch Syria」）。冷門地點若不確定可留空字串 ""。`;
 
 async function copyToClipboard(text: string): Promise<boolean> {
   if (navigator.clipboard?.write) {

@@ -1,4 +1,4 @@
-import type { Project, Spot, OverlaySetting, MusicSetting } from '../models/types';
+import type { Project, Spot, OverlaySetting, MusicSetting, PhotoMeta } from '../models/types';
 import { DEFAULT_CARD_OFFSET } from '../models/types';
 import type { Route } from '../models/routes';
 import { ROUTE_COLORS } from '../models/routes';
@@ -7,6 +7,12 @@ import { isAllowedMediaUrl } from './embedCode';
 /**
  * Validate and migrate raw JSON data to a Project.
  * Used by both Editor (importJSON) and Player (load).
+ *
+ * v3.1 (013-ai-photo-commons): Spot 新增 optional `photoMeta`（Commons attribution）
+ * 與 `photo_query`（LLM 匯入關鍵字）。非 break change，v3 資料 migrate 後兩欄位皆
+ * undefined。photoMeta 白名單驗證：source 必須 'wikimedia-commons'、authorUrl 必須
+ * null 或 https://commons.wikimedia.org/* 開頭；驗證失敗則整個 photoMeta 設 undefined
+ * （all-or-nothing，避免部分保留造成 UI 不一致）。
  */
 export function migrateProject(data: Record<string, unknown>): Project {
   // Basic schema validation
@@ -71,6 +77,34 @@ export function migrateProject(data: Record<string, unknown>): Project {
       if (scriptureRefs.length === 0) scriptureRefs = undefined;
     }
 
+    // photo_query (v3.1+, 013): LLM 產的搜尋關鍵字；只做型別驗證，非字串設 undefined
+    const photoQuery = typeof s.photo_query === 'string' ? s.photo_query.slice(0, 200) : undefined;
+
+    // photoMeta (v3.1+, 013): Commons attribution；白名單驗證 all-or-nothing
+    let photoMeta: PhotoMeta | undefined;
+    if (s.photoMeta && typeof s.photoMeta === 'object') {
+      const pm = s.photoMeta as Record<string, unknown>;
+      const source = pm.source;
+      const license = pm.license;
+      const author = pm.author;
+      const authorUrl = pm.authorUrl;
+      const sourceUrl = pm.sourceUrl;
+      const validSource = source === 'wikimedia-commons';
+      const validAuthorUrl = authorUrl === null
+        || (typeof authorUrl === 'string' && authorUrl.startsWith('https://commons.wikimedia.org/'));
+      const validSourceUrl = typeof sourceUrl === 'string' && sourceUrl.startsWith('https://commons.wikimedia.org/');
+      if (validSource && validAuthorUrl && validSourceUrl
+          && typeof license === 'string' && typeof author === 'string') {
+        photoMeta = {
+          source: 'wikimedia-commons',
+          license: license.slice(0, 80),
+          author: author.slice(0, 120),
+          authorUrl: authorUrl as string | null,
+          sourceUrl: sourceUrl as string,
+        };
+      }
+    }
+
     const spot: Spot = {
       ...(s as unknown as Spot),
       title,
@@ -94,6 +128,9 @@ export function migrateProject(data: Record<string, unknown>): Project {
     } else {
       delete spot.pendingLocation;
     }
+    // v3.1+ photo_query / photoMeta (013): explicit set-or-delete 以覆蓋 spread 帶入的未驗證值
+    if (photoQuery) spot.photo_query = photoQuery; else delete spot.photo_query;
+    if (photoMeta) spot.photoMeta = photoMeta; else delete spot.photoMeta;
     spots.push(spot);
   }
 
