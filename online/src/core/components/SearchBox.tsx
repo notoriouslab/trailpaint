@@ -63,7 +63,7 @@ function parseCoords(input: string): [number, number] | null {
 
 interface SearchBoxProps {
   onSelect: (latlng: [number, number], name: string) => void;
-  onAddSpot?: (latlng: [number, number]) => void;
+  onAddSpot?: (latlng: [number, number], title: string) => void;
 }
 
 export default function SearchBox({ onSelect, onAddSpot }: SearchBoxProps) {
@@ -142,10 +142,11 @@ export default function SearchBox({ onSelect, onAddSpot }: SearchBoxProps) {
     const lat = parseFloat(r.lat);
     const lon = parseFloat(r.lon);
     if (!isFinite(lat) || !isFinite(lon)) return;
+    const { name } = splitName(r.display_name);
     onSelect([lat, lon], r.display_name);
     // Coordinate input: also create a spot at that location
     if (r.type === 'coordinate' && onAddSpot) {
-      onAddSpot([lat, lon]);
+      onAddSpot([lat, lon], name);
     }
     setQuery('');
     setResults([]);
@@ -196,6 +197,25 @@ export default function SearchBox({ onSelect, onAddSpot }: SearchBoxProps) {
                   <div className="search-box__item-name">{name}</div>
                   {address && <div className="search-box__item-addr">{address}</div>}
                 </div>
+                {onAddSpot && (
+                  <button
+                    className="search-box__add-btn"
+                    title={t('mode.addSpot')}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const lat = parseFloat(r.lat);
+                      const lon = parseFloat(r.lon);
+                      if (!isFinite(lat) || !isFinite(lon)) return;
+                      onSelect([lat, lon], r.display_name); // Also fly to it
+                      onAddSpot([lat, lon], name);
+                      setQuery('');
+                      setResults([]);
+                      setSearched(false);
+                    }}
+                  >
+                    ＋
+                  </button>
+                )}
               </div>
             );
           })}

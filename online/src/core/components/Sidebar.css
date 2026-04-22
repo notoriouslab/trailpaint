@@ -272,6 +272,29 @@
   white-space: nowrap;
 }
 
+.search-box__add-btn {
+  background: #f5ede0;
+  border: 1px solid #dcc6a8;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: 4px;
+  color: #b45309;
+  transition: all 0.1s;
+}
+
+.search-box__add-btn:hover {
+  background: #ecd9bd;
+  border-color: #b45309;
+  transform: scale(1.1);
+}
+
 .search-box__loading {
   padding: 12px;
   text-align: center;

@@ -30,7 +30,7 @@ interface ProjectState {
   bgImageSize: { w: number; h: number } | null;
 
   // Spot actions
-  addSpot: (latlng: [number, number]) => void;
+  addSpot: (latlng: [number, number], title?: string) => void;
   updateSpot: (id: string, patch: Partial<Spot>) => void;
   removeSpot: (id: string) => void;
   swapSpots: (index: number, direction: 'up' | 'down') => void;
@@ -117,7 +117,7 @@ export const useProjectStore = create<ProjectState>()(
 
   // ── Spot actions ──
 
-  addSpot: (latlng) => {
+  addSpot: (latlng, title) => {
     const id = crypto.randomUUID();
     set((s) => {
       const num = s.project.spots.length + 1;
@@ -125,7 +125,7 @@ export const useProjectStore = create<ProjectState>()(
         id,
         latlng,
         num,
-        title: `${t('spot.defaultTitle')} ${num}`,
+        title: title || `${t('spot.defaultTitle')} ${num}`,
         desc: '',
         photo: null,
         iconId: 'pin',

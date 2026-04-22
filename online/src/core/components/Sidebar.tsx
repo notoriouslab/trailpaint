@@ -114,7 +114,7 @@ export default function Sidebar({
         {showSettings && <SettingsPanel />}
 
         {/* Search — map mode only */}
-        {!isImageMode && <SearchBox onSelect={handleSearchSelect} onAddSpot={(latlng) => useProjectStore.getState().addSpot(latlng)} />}
+        {!isImageMode && <SearchBox onSelect={handleSearchSelect} onAddSpot={(latlng, title) => useProjectStore.getState().addSpot(latlng, title)} />}
 
         <ModeToolbar />
 
