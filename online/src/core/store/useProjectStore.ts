@@ -543,6 +543,10 @@ export const useProjectStore = create<ProjectState>()(
   exportJSON: () => JSON.stringify(get().project, null, 2),
 
   importJSON: (json) => {
+    // Defense-in-depth：caller 側（ImportWizard / drop / file-load）各自有 cap，
+    // store 作為 SSOT 也要擋，避免未來新 caller 漏檢 → OOM。20MB 與 caller 一致。
+    const MAX_JSON_SIZE = 20 * 1024 * 1024;
+    if (json.length > MAX_JSON_SIZE) throw new Error('Project too large');
     const raw = JSON.parse(json);
     const data = migrateProject(raw);
     set({
