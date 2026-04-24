@@ -1,7 +1,7 @@
 import { toPng } from 'html-to-image';
 import { useProjectStore } from '../core/store/useProjectStore';
 import { parseGpx } from '../core/utils/gpxParser';
-import { roundRectPath } from '../core/utils/exportRenderer';
+import { roundRectPath, type CapturedMap } from '../core/utils/exportRenderer';
 import { projectToGeojson } from '../core/utils/geojsonExport';
 import { projectToKml } from '../core/utils/kmlExport';
 import { t } from '../i18n';
@@ -94,18 +94,31 @@ function drawPhotosToCanvas(
 }
 
 /**
- * Capture the map as an HTMLImageElement at the given pixelRatio.
+ * Capture the map as two layered images (tiles + overlays) at the given pixelRatio.
  *
  * Hybrid approach for iOS Safari compatibility:
- * 1. Draw tiles to canvas manually (canvas.drawImage — works everywhere with crossOrigin)
- * 2. Hide tiles, capture overlays (routes, markers, cards) with html-to-image
- *    (no cross-origin images in foreignObject → works on iOS WebKit)
- * 3. Composite: tiles at bottom, overlays on top
+ * 1. Draw tiles to a tilesCanvas manually (canvas.drawImage — works everywhere)
+ * 2. Hide tile background, capture overlays (routes, markers, cards) with html-to-image
+ *    onto a separate overlaysCanvas with transparent background
+ * 3. Draw spot-card photos onto overlaysCanvas too (bypass iOS foreignObject bug)
+ *
+ * Returns two images so renderExportCanvas can filter tiles alone while keeping
+ * overlays (markers/cards/photos) pristine.
  */
 // iOS Safari canvas size limit (~16M pixels). Exceeding it causes silent blank output.
 const MAX_CANVAS_PIXELS = 16_000_000;
 
-export async function captureMap(pixelRatio = 2): Promise<HTMLImageElement> {
+async function canvasToImage(canvas: HTMLCanvasElement): Promise<HTMLImageElement> {
+  const img = new Image();
+  img.src = canvas.toDataURL('image/png');
+  await new Promise<void>((resolve, reject) => {
+    img.onload = () => resolve();
+    img.onerror = () => reject(new Error('Image load failed'));
+  });
+  return img;
+}
+
+export async function captureMap(pixelRatio = 2): Promise<CapturedMap> {
   const mapEl = document.querySelector('.leaflet-container') as HTMLElement;
   if (!mapEl) throw new Error('Map element not found');
 
@@ -138,17 +151,23 @@ export async function captureMap(pixelRatio = 2): Promise<HTMLImageElement> {
   const w = Math.round(containerRect.width * dpi);
   const h = Math.round(containerRect.height * dpi);
 
-  // Step 1: Draw tiles directly to canvas
-  const canvas = document.createElement('canvas');
-  canvas.width = w;
-  canvas.height = h;
-  const ctx = canvas.getContext('2d')!;
-  drawTilesToCanvas(ctx, mapEl, containerRect, dpi);
+  // Layer 1: Tiles canvas（filter 會套在這層）
+  const tilesCanvas = document.createElement('canvas');
+  tilesCanvas.width = w;
+  tilesCanvas.height = h;
+  const tilesCtx = tilesCanvas.getContext('2d')!;
+  drawTilesToCanvas(tilesCtx, mapEl, containerRect, dpi);
 
-  // Step 2: Capture with html-to-image (DON'T filter tiles — let it try)
+  // Layer 2: Overlays canvas（透明底，filter 不影響）
+  const overlaysCanvas = document.createElement('canvas');
+  overlaysCanvas.width = w;
+  overlaysCanvas.height = h;
+  const overlaysCtx = overlaysCanvas.getContext('2d')!;
+
   // Make map background transparent so on iOS where tiles fail in foreignObject,
-  // the transparent areas let our canvas-drawn tiles show through.
-  // On desktop tiles render fine in both canvas and foreignObject (harmless double-draw).
+  // the transparent areas stay transparent in the overlay capture (tiles come
+  // from tilesCanvas). On desktop tiles may render in both layers (harmless —
+  // overlay draws on top of filtered tiles, covering them cleanly).
   const origBg = mapEl.style.background;
   mapEl.style.background = 'transparent';
 
@@ -171,12 +190,15 @@ export async function captureMap(pixelRatio = 2): Promise<HTMLImageElement> {
         if (el.classList?.contains('watermark')) return false;
         if (el.classList?.contains('locate-button')) return false;
         if (el.classList?.contains('basemap-switcher')) return false;
-        // Exclude card photos — they are drawn directly to canvas below
+        // Exclude card photos — they are drawn directly to overlaysCanvas below
         // to avoid iOS Safari foreignObject decode failures at high pixelRatio.
         if (el.tagName === 'IMG' && el.closest('.spot-card__photo-wrap')) return false;
-        // Exclude vector tile canvases (protomaps-leaflet) — already drawn in Step 1.
-        // foreignObject cannot serialize canvas content, so they'd appear blank.
-        if (el.tagName === 'CANVAS' && el.closest('.leaflet-tile-pane')) return false;
+        // Exclude tile layers entirely from the overlay capture — they live in
+        // tilesCanvas (Layer 1). Excluding the whole tile-pane also drops any
+        // <img> raster tiles, so the overlay layer stays transparent where
+        // tiles would otherwise sit.
+        if (el.classList?.contains('leaflet-tile-pane')) return false;
+        if (el.closest?.('.leaflet-tile-pane')) return false;
         return true;
       },
     });
@@ -188,26 +210,24 @@ export async function captureMap(pixelRatio = 2): Promise<HTMLImageElement> {
       overlayImg.onerror = () => reject(new Error('Overlay capture failed'));
     });
 
-    // Composite: html-to-image result on top of canvas tiles
-    ctx.drawImage(overlayImg, 0, 0);
+    // Draw html-to-image result to overlaysCanvas (transparent where tiles were)
+    overlaysCtx.drawImage(overlayImg, 0, 0);
 
     // Draw card photos directly via canvas.drawImage (bypasses foreignObject).
-    // This runs AFTER the overlay composite so photos render on top of the
-    // card background/border that html-to-image already drew.
-    drawPhotosToCanvas(ctx, mapEl, containerRect, dpi);
+    // Runs AFTER the overlay composite so photos render on top of the card
+    // background/border that html-to-image already drew.
+    drawPhotosToCanvas(overlaysCtx, mapEl, containerRect, dpi);
   } finally {
     mapEl.style.background = origBg;
     shadowStyle.remove();
   }
 
-  // Convert canvas to image
-  const finalImg = new Image();
-  finalImg.src = canvas.toDataURL('image/png');
-  await new Promise<void>((resolve, reject) => {
-    finalImg.onload = () => resolve();
-    finalImg.onerror = () => reject(new Error('Image load failed'));
-  });
-  return finalImg;
+  // Convert both canvases to images in parallel
+  const [tilesImg, overlaysImg] = await Promise.all([
+    canvasToImage(tilesCanvas),
+    canvasToImage(overlaysCanvas),
+  ]);
+  return { tilesImg, overlaysImg };
 }
 
 export function saveProject() {

@@ -10,6 +10,7 @@ import FloatingActions from './core/components/FloatingActions';
 import UpdatePrompt from './core/components/UpdatePrompt';
 import { registerWebMCP } from './core/utils/webMCP';
 import { captureMap, saveProject, exportGeojson, exportKml } from './map/ExportButton';
+import type { CapturedMap } from './core/utils/exportRenderer';
 import { decodeShareLink } from './core/utils/shareLink';
 import { openStoryMode } from './core/utils/storyMode';
 import { flyTo, panBy, zoomBy } from './map/useMapRef';
@@ -54,7 +55,7 @@ export default function App() {
   const sidebarOpen = useProjectStore((s) => s.sidebarOpen);
   const [dragOver, setDragOver] = useState(false);
   const [exportWizardOpen, setExportWizardOpen] = useState(false);
-  const [capturedImage, setCapturedImage] = useState<HTMLImageElement | null>(null);
+  const [capturedImage, setCapturedImage] = useState<CapturedMap | null>(null);
   const [importWizardOpen, setImportWizardOpen] = useState(false);
 
   // Handle share link on load.
@@ -141,7 +142,7 @@ export default function App() {
     }
   }, []);
 
-  const handleAdjustView = useCallback(async (dx: number, dy: number, dZoom: number): Promise<HTMLImageElement> => {
+  const handleAdjustView = useCallback(async (dx: number, dy: number, dZoom: number): Promise<CapturedMap> => {
     if (dx || dy) panBy(dx, dy);
     if (dZoom) zoomBy(dZoom);
     // Wait for tiles to load after adjustment

@@ -23,6 +23,17 @@ export function roundRectPath(ctx: CanvasRenderingContext2D, x: number, y: numbe
 }
 export type StyleFilter = 'original' | 'sketch';
 
+/**
+ * 兩層匯出底圖：
+ * - tilesImg = 地圖 tile + overlay tile（套 style filter 的標的）
+ * - overlaysImg = routes / markers / spot cards / photos（透明底，不受 filter 影響）
+ * 拆兩層是為了讓「素描」等 filter 只套底圖，圖文匡與照片保留原貌。
+ */
+export interface CapturedMap {
+  tilesImg: HTMLImageElement;
+  overlaysImg: HTMLImageElement;
+}
+
 /* ── Crop ── */
 
 export function getCropDimensions(
@@ -252,17 +263,19 @@ export interface RenderOptions {
 }
 
 /**
- * Render an export canvas from a base image with all effects applied.
- * Returns the resulting canvas.
+ * Render an export canvas from a captured map with all effects applied.
+ * Pipeline: tiles → filter → overlays → border/stats/watermark.
+ * Filter 只套 tiles 層，overlays（markers/cards/photos）原貌疊上。
  */
 export function renderExportCanvas(
-  baseImage: HTMLImageElement,
+  baseImage: CapturedMap,
   options: RenderOptions,
   applyFilter: (canvas: HTMLCanvasElement, filter: StyleFilter) => void,
 ): HTMLCanvasElement {
+  const { tilesImg, overlaysImg } = baseImage;
   const { cropX, cropY, cropW, cropH } = getCropDimensions(
-    baseImage.width,
-    baseImage.height,
+    tilesImg.width,
+    tilesImg.height,
     options.format,
   );
 
@@ -270,13 +283,17 @@ export function renderExportCanvas(
   canvas.width = cropW;
   canvas.height = cropH;
   const ctx = canvas.getContext('2d', { willReadFrequently: options.filter !== 'original' })!;
-  ctx.drawImage(baseImage, cropX, cropY, cropW, cropH, 0, 0, cropW, cropH);
 
-  // Style filter (before overlays so border/stats stay crisp)
+  // 1. Tiles layer（素描/濾鏡作用的對象）
+  ctx.drawImage(tilesImg, cropX, cropY, cropW, cropH, 0, 0, cropW, cropH);
   if (options.filter !== 'original') {
     applyFilter(canvas, options.filter);
   }
 
+  // 2. Overlays layer（markers/cards/photos，原貌疊上）
+  ctx.drawImage(overlaysImg, cropX, cropY, cropW, cropH, 0, 0, cropW, cropH);
+
+  // 3. Frame overlays (border/stats/watermark) — 疊在最上面
   drawExportBorder(ctx, cropW, cropH, options.borderStyle);
   if (options.showStats) {
     drawStatsOverlay(ctx, cropW, cropH, options.routes);
