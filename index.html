@@ -101,7 +101,35 @@
     "step": [
       { "@type": "HowToStep", "position": 1, "name": "選擇建立方式", "text": "打開 https://trailpaint.org/app/，選擇從照片匯入（拖 20 張照片進來自動建景點）、從地圖手動建、或用 AI 提示詞生成 JSON 再匯入。", "url": "https://trailpaint.org/app/" },
       { "@type": "HowToStep", "position": 2, "name": "編輯景點與路線", "text": "放置景點卡片（31 種圖示可選）、畫路線（5 色循環）、加照片、調整順序。支援 Undo / Redo（Cmd+Z）。" },
-      { "@type": "HowToStep", "position": 3, "name": "匯出分享", "text": "點「匯出」打開三 tab 對話框：圖片 tab 下載 PNG 或複製分享連結、備份 tab 下載完整 .trailpaint 專案檔、互通格式 tab 輸出 GeoJSON 或 KML 給其他地圖軟體使用。" }
+      { "@type": "HowToStep", "position": 3, "name": "匯出分享", "text": "點「匯出」打開三 tab 對話框：『圖片下載』tab 下載 PNG、『完整備份』tab 下載 .trailpaint 專案檔、『互通分享』tab 左欄輸出 GeoJSON / KML 給 Google My Maps / Gaia GPS 等工具，右欄複製故事模式連結或 Player 嵌入碼分享到社群。" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "TrailPaint Project (.trailpaint.json)",
+    "alternateName": ["TrailPaint JSON", "路線地圖 JSON"],
+    "description": "Hand-drawn trail map story format for TrailPaint: numbered spots (景點), polyline routes, historical basemap overlays, and CC-attributed photos. Open, LLM-friendly, documented with JSON Schema 2020-12 so AI agents can generate and consume .trailpaint.json files directly.",
+    "encodingFormat": "application/json",
+    "fileFormat": ".trailpaint.json",
+    "url": "https://trailpaint.org/schemas/project-v3.schema.json",
+    "sameAs": "https://trailpaint.org/.well-known/trailpaint",
+    "isBasedOn": {
+      "@type": "CreativeWork",
+      "name": "JSON Schema 2020-12",
+      "url": "https://json-schema.org/draft/2020-12/schema"
+    },
+    "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+    "publisher": { "@type": "Organization", "name": "NotoriousLab", "url": "https://github.com/notoriouslab" },
+    "audience": { "@type": "Audience", "audienceType": "AI agents, LLMs, map makers, story producers" },
+    "about": [
+      { "@type": "Thing", "name": "trail map" },
+      { "@type": "Thing", "name": "hand-drawn map" },
+      { "@type": "Thing", "name": "map story" },
+      { "@type": "Thing", "name": "TouristTrip" }
     ]
   }
   </script>

@@ -3,6 +3,7 @@ import { temporal } from 'zundo';
 import type { Project, Spot, Mode, OverlaySetting, MusicSetting } from '../models/types';
 import { DEFAULT_CARD_OFFSET, DEFAULT_CENTER, DEFAULT_ZOOM } from '../models/types';
 import { migrateProject } from '../utils/migrateProject';
+import { exportProjectWithJsonLd } from '../utils/jsonLdExport';
 import type { Route } from '../models/routes';
 import { ROUTE_COLORS } from '../models/routes';
 import { reverseGeocode } from '../utils/reverseGeocode';
@@ -540,7 +541,7 @@ export const useProjectStore = create<ProjectState>()(
 
   // ── Persistence ──
 
-  exportJSON: () => JSON.stringify(get().project, null, 2),
+  exportJSON: () => exportProjectWithJsonLd(get().project),
 
   importJSON: (json) => {
     // Defense-in-depth：caller 側（ImportWizard / drop / file-load）各自有 cap，

@@ -33,6 +33,13 @@ function sanitizeAuthorUrl(raw: unknown): string | null {
 export function migrateProject(data: Record<string, unknown>): Project {
   // Basic schema validation
   if (!data || typeof data !== 'object') throw new Error('Invalid project data');
+  // Strip JSON-LD decoration fields added by exporter for AI agents. These
+  // are not part of the Project schema; authoritative data lives in the
+  // native fields (version/name/spots/routes/...). Without this strip, the
+  // subsequent `{ ...(data as Project) }` spread would carry them into store.
+  delete data['@context'];
+  delete data['@type'];
+  delete data.itinerary;
   if (!Array.isArray(data.spots)) throw new Error('Missing or invalid spots');
   if (!Array.isArray(data.center) || data.center.length !== 2) throw new Error('Missing or invalid center');
   // Clamp center to valid lat/lng range

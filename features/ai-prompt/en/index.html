@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Prompt → Map Story — TrailPaint</title>
+  <meta name="description" content="Open .trailpaint.json format for map stories: numbered spots, routes, historical overlays, CC-attributed photos. LLMs generate JSON directly; TrailPaint auto-fetches photos from Wikimedia Commons. JSON Schema 2020-12 public — AI agents can reference it.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:title" content="AI Prompt → Map Story — TrailPaint">
+  <meta property="og:description" content="LLMs produce .trailpaint.json; import to get a hand-drawn map story. Open JSON Schema + auto Commons photo fetch.">
+  <meta property="og:url" content="https://trailpaint.org/features/ai-prompt/en/">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://trailpaint.org/features/ai-prompt/en/">
+  <link rel="alternate" hreflang="zh-TW" href="https://trailpaint.org/features/ai-prompt/">
+  <link rel="alternate" hreflang="en" href="https://trailpaint.org/features/ai-prompt/en/">
+  <link rel="alternate" hreflang="ja" href="https://trailpaint.org/features/ai-prompt/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://trailpaint.org/features/ai-prompt/">
+  <link rel="icon" type="image/svg+xml" href="/app/favicon.svg">
+  <link rel="stylesheet" href="/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Generate a TrailPaint map story with an AI prompt",
+    "description": "Hand an LLM a topic, get a .trailpaint.json file conforming to the TrailPaint JSON Schema, import it, and let TrailPaint auto-fetch photos from Wikimedia Commons to render a hand-drawn map story.",
+    "inLanguage": "en",
+    "totalTime": "PT3M",
+    "tool": [
+      { "@type": "HowToTool", "name": "TrailPaint Editor", "url": "https://trailpaint.org/app/" },
+      { "@type": "HowToTool", "name": "ChatGPT / Claude / Gemini (any LLM)" }
+    ],
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Copy the built-in prompt", "text": "In the Export Wizard's Image Download tab, pick an AI style (Japanese hand-drawn / Treasure Map / Kawaii / Minimal Line) and hit Copy AI Prompt." },
+      { "@type": "HowToStep", "position": 2, "name": "Paste to an LLM for JSON", "text": "Paste into ChatGPT / Claude / Gemini with your topic (e.g. 'Appalachian Trail 5-stop sampler'). The LLM returns a .trailpaint.json snippet conforming to project-v3 schema, with optional photo_query fields." },
+      { "@type": "HowToStep", "position": 3, "name": "Import with auto photo fetch", "text": "In Editor → Import → Paste JSON, enable 'Auto-fetch from Commons'. TrailPaint queries Wikimedia Commons via photo_query, embeds CC-licensed photos, and records attribution." }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "TrailPaint Project Schema",
+    "description": "JSON Schema 2020-12 specification for .trailpaint.json: field structure, semantics, and validation rules. AI agents can reference this schema to produce conformant files.",
+    "url": "https://trailpaint.org/schemas/project-v3.schema.json",
+    "sameAs": "https://trailpaint.org/.well-known/trailpaint",
+    "encodingFormat": "application/schema+json",
+    "isBasedOn": { "@type": "CreativeWork", "name": "JSON Schema 2020-12", "url": "https://json-schema.org/draft/2020-12/schema" },
+    "license": "https://www.gnu.org/licenses/gpl-3.0.html"
+  }
+  </script>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="brand" href="/">🌿 TrailPaint</a>
+      <div class="site-nav-links">
+        <a href="/features/" class="active">Features</a>
+        <a href="/examples/">Examples</a>
+        <a href="/stories/">Stories</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/app/" target="_blank">Start Drawing →</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <h1>AI Prompt → Map Story</h1>
+    <p class="subtitle">Hand a topic to an LLM, get a <code>.trailpaint.json</code> file, import it to render a hand-drawn map story with auto-fetched Commons photos. Open JSON Schema — AI agents can reference directly.</p>
+
+    <h2>What is this format?</h2>
+    <p><code>.trailpaint.json</code> is TrailPaint's "map story" format: a named JSON document with a center point, numbered spots, routes, optional historical basemaps, and CC-attributed photos. It is designed for LLM generation and AI agent consumption.</p>
+    <ul>
+      <li><strong>JSON Schema 2020-12 public</strong>: <a href="/schemas/project-v3.schema.json"><code>https://trailpaint.org/schemas/project-v3.schema.json</code></a></li>
+      <li><strong>Discovery</strong>: <a href="/.well-known/trailpaint"><code>/.well-known/trailpaint</code></a> (schema, examples, @context vocab)</li>
+      <li><strong>JSON-LD @context</strong>: exported files include <code>@context</code> mapping to <code>schema.org/TouristTrip</code> + <code>tp:</code> vocab — readable by any JSON-LD parser</li>
+      <li><strong>License</strong>: GPL-3.0. Third-party parsers and generators welcome.</li>
+    </ul>
+
+    <h2>Workflow</h2>
+    <ol>
+      <li>Open the <a href="/app/">Editor</a> → "Export" button (bottom-right) → <strong>Image Download</strong> tab</li>
+      <li>Pick an AI style from the dropdown (Japanese Hand-drawn / Treasure Map / Kawaii / Minimal Line)</li>
+      <li>Click "Copy AI Prompt"</li>
+      <li>Paste into ChatGPT / Claude / Gemini with your topic (e.g. "5 stops along the Pacific Crest Trail")</li>
+      <li>The LLM returns a <code>.trailpaint.json</code> snippet (with <code>photo_query</code> bilingual search fields)</li>
+      <li>In the Editor → Import → "Paste JSON", check "<strong>Auto-fetch from Commons</strong>". TrailPaint pulls CC-licensed photos and records attribution automatically.</li>
+    </ol>
+
+    <h2>Four built-in prompt styles</h2>
+    <h3>Hiking</h3>
+    <p>Emphasizes mountain spots: summits, huts, water sources, hazards, viewpoints. Routes include elevation notes. Icon bias: ⛰️ 🏕️ 💧.</p>
+
+    <h3>Mission</h3>
+    <p>Emphasizes missionary footsteps: churches, hospitals, schools, indigenous villages, martyr sites. Each spot carries year / person / historical event. Icon bias: ⛪ 🏥 🏫.</p>
+
+    <h3>History</h3>
+    <p>Emphasizes historical sites: battlefields, archaeological sites, old city gates, old harbors. Each spot carries dynasty / date and citation. Icon bias: 🏛️ ⚔️ 📜.</p>
+
+    <h3>Travel</h3>
+    <p>Emphasizes tourism: attractions, food, lodging, transit hubs. Each spot carries recommended dwell time and budget. Icon bias: 📸 🍜 ☕ 🏨.</p>
+
+    <h2>Prompt example (v3.1 with photo_query)</h2>
+    <h3>Prompt</h3>
+    <pre><code>You are a trail-map JSON generator. For the topic "{TOPIC}",
+produce a .trailpaint.json v3.1 document (schema at
+https://trailpaint.org/schemas/project-v3.schema.json) with:
+- version: 3
+- name: route name
+- center: [lat, lng] map center
+- zoom: 13-15
+- spots: 5-8 items, each with
+    id/latlng/num/title/desc/iconId/photo_query
+- routes: 1-2 polylines, pts: [[lat,lng], ...]
+- iconId from ICONS: home/church/camera/food/coffee/peak/...
+- photo_query as "中文關鍵字 | English keywords" bilingual,
+  so TrailPaint can auto-fetch from Wikimedia Commons
+Return raw JSON only, no explanation.</code></pre>
+
+    <h3>LLM response (excerpt)</h3>
+    <pre><code>{
+  "version": 3,
+  "name": "Taipei one-day cafe loop",
+  "center": [25.0425, 121.5320],
+  "zoom": 14,
+  "spots": [
+    { "id": "s1", "latlng": [25.0379, 121.5180],
+      "num": 1, "title": "Chiang Kai-shek Memorial Hall",
+      "desc": "White marble + Freedom Square, best morning light.",
+      "iconId": "building",
+      "photo_query": "中正紀念堂 自由廣場 | Chiang Kai-shek Memorial Hall Taipei" },
+    { "id": "s2", "latlng": [25.0337, 121.5298],
+      "num": 2, "title": "Yongkang Street",
+      "desc": "Cafe district. Try Din Tai Fung + mango shaved ice.",
+      "iconId": "coffee",
+      "photo_query": "永康街 鼎泰豐 | Yongkang Street Taipei" }
+  ],
+  "routes": [
+    { "id": "r1", "name": "Cafe loop",
+      "pts": [[25.0379,121.5180],[25.0337,121.5298]],
+      "color": "orange",
+      "elevations": null }
+  ]
+}</code></pre>
+
+    <h2>For AI developers / agents</h2>
+    <p>If you are building an agent or tool on top of the TrailPaint format, the following are stable, citable endpoints:</p>
+    <ul>
+      <li><strong>JSON Schema</strong>: <a href="/schemas/project-v3.schema.json"><code>/schemas/project-v3.schema.json</code></a> (JSON Schema 2020-12)</li>
+      <li><strong>Well-known discovery</strong>: <a href="/.well-known/trailpaint"><code>/.well-known/trailpaint</code></a></li>
+      <li><strong>WebMCP</strong>: the homepage inlines <code>navigator.modelContext.provideContext()</code> exposing <code>open-trailpaint-editor</code> and <code>create-share-link</code> tools</li>
+      <li><strong>Sample files</strong>: <a href="/stories/paul/first-journey.trailpaint.json"><code>/stories/paul/first-journey.trailpaint.json</code></a>, <a href="/stories/xuanzang/west.trailpaint.json"><code>/stories/xuanzang/west.trailpaint.json</code></a>, <a href="/stories/taiwan-missionaries/barclay.trailpaint.json"><code>/stories/taiwan-missionaries/barclay.trailpaint.json</code></a></li>
+      <li><strong>Exports carry JSON-LD</strong>: files exported from the Editor include <code>@context</code> (schema.org + tp: vocab) and <code>@type: TouristTrip</code> — feed them directly to any JSON-LD parser</li>
+    </ul>
+
+    <h2>Caveats</h2>
+    <ul>
+      <li><strong>Coordinate accuracy</strong>: LLMs are fine for landmarks, but obscure spots may drift 100-500 m. Fine-tune after import.</li>
+      <li><strong>Photos</strong>: LLMs don't produce data-URL photos; instead they emit <code>photo_query</code>, and TrailPaint auto-fetches CC-licensed photos from Wikimedia Commons with attribution. You can still swap in your own photos after import.</li>
+      <li><strong>Schema version</strong>: ask the LLM for v3 (the schema file is v3.1). Older versions auto-migrate on import.</li>
+      <li><strong>LLM recommendation</strong>: Claude is most stable for structured JSON output. ChatGPT and Gemini also work.</li>
+    </ul>
+
+    <h2>Advanced: photo-EXIF → JSON via ChatGPT-4V</h2>
+    <p>Drop 10 photos from your phone into ChatGPT-4V and say "produce a .trailpaint.json from these photos' EXIF". It will read EXIF GPS and generate spots directly. That said, TrailPaint's native "Import Photos" feature is faster and more accurate — the ChatGPT workflow is mainly useful when the photos are in someone else's hands and you just have the files.</p>
+
+    <p style="margin-top: 2rem; text-align: center;">
+      <a class="cta" href="/app/" target="_blank">Launch Editor</a>
+      <a class="cta cta--ghost" href="/features/import" style="margin-left: 0.5rem;">← Import</a>
+    </p>
+  </main>
+
+  <footer class="footer">
+    <p>TrailPaint · hand-drawn trail map maker · GPL-3.0 Open Source</p>
+    <p><a href="/">Home</a> · <a href="/features/">Features</a> · <a href="/examples/">Examples</a> · <a href="/stories/">Stories</a> · <a href="/faq/">FAQ</a> · <a href="https://github.com/notoriouslab/trailpaint">GitHub</a></p>
+  </footer>
+</body>
+</html>
