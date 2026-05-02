@@ -22,6 +22,13 @@ export interface OverlayDef {
   maxNativeZoom?: number;
   /** Geographic bounds [[south, west], [north, east]] — used to auto-fit when user selects overlay. */
   bounds?: [[number, number], [number, number]];
+  /**
+   * 該地圖代表年代（負數 = BC）。
+   * - number: 中心年代（單一時點，如 `tang_741` = 741）
+   * - [start, end]: 年代區間（如 `rome_200` = [-100, 400] 涵蓋羅馬帝國全期）
+   * 用於 TimeSlider 對應 overlay + spot era fade 計算。
+   */
+  year: number | [number, number];
 }
 
 /** Ordered list of groups for UI rendering (groups absent from OVERLAYS are skipped). */
@@ -57,6 +64,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 14,
     bounds: BOUNDS_TAIWAN,
+    year: 1897,
   },
   {
     id: 'jm20k_1921',
@@ -67,6 +75,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 14,
     bounds: BOUNDS_TAIWAN,
+    year: 1921,
   },
   {
     id: 'corona_1966',
@@ -77,6 +86,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 14,
     bounds: BOUNDS_TAIWAN,
+    year: 1966,
   },
   {
     id: 'han_bc7',
@@ -87,6 +97,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 10,
     bounds: BOUNDS_CHINA_HISTORIC,
+    year: -7,
   },
   {
     id: 'tang_741',
@@ -97,6 +108,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 10,
     bounds: BOUNDS_CHINA_HISTORIC,
+    year: 741,
   },
   {
     id: 'song_1208',
@@ -107,6 +119,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 10,
     bounds: BOUNDS_CHINA_HISTORIC,
+    year: 1208,
   },
   {
     id: 'yuan_1330',
@@ -117,6 +130,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 10,
     bounds: BOUNDS_CHINA_HISTORIC,
+    year: 1330,
   },
   {
     id: 'ming_1582',
@@ -127,6 +141,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 10,
     bounds: BOUNDS_CHINA_HISTORIC,
+    year: 1582,
   },
   {
     id: 'rome_200',
@@ -137,5 +152,6 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 10,
     bounds: BOUNDS_ROMAN_MEDITERRANEAN,
+    year: [-100, 400],
   },
 ];
