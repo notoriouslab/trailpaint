@@ -8,6 +8,8 @@ import type { OverlayDef } from './overlays';
 import { BASEMAPS } from './basemaps';
 import type { BasemapDef } from './basemaps';
 import { createBasemapLayer, resolveBasemapId } from './basemapLayer';
+import { useOverlayLayer } from './eraOverlayLayer';
+import { dispatchOverlayLoadFailed } from './MapToast';
 
 export default function BasemapSwitcher() {
   const map = useMap();
@@ -34,7 +36,17 @@ export default function BasemapSwitcher() {
   const setOverlay = useProjectStore((s) => s.setOverlay);
   const overlayId = overlay?.id ?? null;
   const overlayOpacity = overlay?.opacity ?? 0.5;
-  const overlayRef = useRef<L.TileLayer | null>(null);
+
+  // Cross-fade overlay layer (shared with TimeSlider via useOverlayLayer hook)
+  useOverlayLayer({
+    map,
+    overlayId,
+    opacity: overlayOpacity,
+    onLoadError: () => {
+      setOverlay(null);
+      dispatchOverlayLoadFailed();
+    },
+  });
 
   // Apply a basemap to the Leaflet map (imperative, no store write)
   const applyBasemap = (bm: BasemapDef) => {
@@ -65,32 +77,6 @@ export default function BasemapSwitcher() {
     setCurrent(bm.id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [projectBasemapId]);
-
-  // Create / destroy overlay layer when selection changes
-  useEffect(() => {
-    if (!overlayId) {
-      overlayRef.current = null;
-      return;
-    }
-    const ov = OVERLAYS.find((o) => o.id === overlayId);
-    if (!ov) return;
-    const layer = L.tileLayer(ov.url, {
-      attribution: ov.attribution,
-      maxZoom: ov.maxZoom,
-      maxNativeZoom: ov.maxNativeZoom,
-      opacity: overlayOpacity,
-      crossOrigin: true,
-    }).addTo(map);
-    layer.setZIndex(1);
-    overlayRef.current = layer;
-    return () => { map.removeLayer(layer); };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [overlayId, map]);
-
-  // Update overlay opacity without recreating layer
-  useEffect(() => {
-    overlayRef.current?.setOpacity(overlayOpacity);
-  }, [overlayOpacity]);
 
   const switchTo = (bm: BasemapDef) => {
     applyBasemap(bm);

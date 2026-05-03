@@ -169,6 +169,7 @@
       <a href="/features/">功能</a>
       <a href="/examples/">範例</a>
       <a href="/stories/">故事地圖</a>
+      <a href="/church/">教會</a>
       <a href="/faq/">FAQ</a>
       <a href="/app/" target="_blank">開始繪製 →</a>
     </div>
@@ -283,8 +284,37 @@
     </a>
   </div>
 
+  <h2>v1.4 — 年代滑桿、合輯、電子明信片、教會頁</h2>
+  <p style="margin-bottom: 1rem;">把 TrailPaint 從「靜態手繪地圖」推到「會說故事的時空地圖」。拖滑桿切換中研院/CCTS/DARE 等 9 張歷史地圖、把多個故事疊在同條走廊上、把任何一個瞬間下載成 IG 方圖明信片。</p>
+
+  <div class="card-grid">
+    <a class="card" href="/app/player/?compilation=silk-road-2000" target="_blank">
+      <h3>📚 絲路 2000 年 — 跨故事疊圖合輯</h3>
+      <p>張騫 BC 138、玄奘 AD 629、馬可波羅 AD 1271 — 同一條中亞走廊三段足跡，按 spot.era 全域時序排序，拖滑桿即可看到不同年代逐一聚焦。</p>
+    </a>
+    <a class="card" href="/app/player/?compilation=paul-three-journeys" target="_blank">
+      <h3>📚 保羅宣教三次旅行 — 合輯</h3>
+      <p>從敘利亞安提阿出發三度橫渡地中海，最後押解羅馬。沿使徒行傳 13-28 章 34 個景點 AD 46-62。</p>
+    </a>
+    <a class="card" href="/app/player/?compilation=four-gospels-map" target="_blank">
+      <h3>📚 四福音書地圖 — 合輯</h3>
+      <p>耶穌加利利傳道 + 變像山 + 耶路撒冷受難週，5 段故事 33 個景點橫跨 AD 27-30。</p>
+    </a>
+    <a class="card" href="/church/">
+      <h3>⛪ 教會 × TrailPaint 嵌入指南</h3>
+      <p>主日學 / 週報 / 個人靈修三個用例 + iframe 嵌入示範 + 一鍵複製 embed code，貼進 WordPress / Wix / 投影片即可嵌入。</p>
+    </a>
+  </div>
+
+  <p style="margin-top: 1rem;">截圖（左：絲路 2000 年合輯播放中，刻度落在「唐 (741)」第 18/59 景點長安大慈恩寺；右：馬偕 1897 年五股坑明信片，配中研院臺灣輿圖底圖 + 經文時序卡）：</p>
+  <div class="card-grid" style="grid-template-columns: 2fr 1fr; gap: 1rem;">
+    <img src="/examples/silk-road-2000-compilation.jpg" alt="絲路 2000 年合輯 - 跨故事 chronological 排序" style="width:100%;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+    <img src="/examples/postcard-mackay-1897.jpg" alt="馬偕 1897 年五股坑電子明信片" style="width:100%;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+  </div>
+
   <h2>最近更新</h2>
   <ul class="changelog-list">
+    <li><span class="date">2026-05-03</span><strong>v1.4</strong>：年代滑桿（拖動切歷史地圖 + 景點漸隱）、合輯（多故事疊圖 chronological/sequential 排序）、1080×1080 IG 方圖電子明信片、聖經敘事刻度組（出埃及 → 啟示錄）、`/church/` 教會 demo 頁</li>
     <li><span class="date">2026-04-20</span>首頁改版：功能 reference 頁、FAQ 獨立頁、範例集合；OG 預覽圖首張照片；Photon 取代 Nominatim 當主 geocoder（地名更準）</li>
     <li><span class="date">2026-04-19</span>分享連結後端（Cloudflare Workers + KV）：短網址、照片也能跟著分享、90 天 TTL、Safari 大 payload 支援</li>
     <li><span class="date">2026-04-18</span>ExportWizard：統一三 tab 匯出面板（圖片 / 備份 / 互通）</li>

@@ -30,7 +30,11 @@
       "historical_refs": [
         "《馬可波羅遊記》Prologue 第 1-9 章（Yule 譯本）",
         "Ramusio, Navigationi et Viaggi (1559) 序言"
-      ]
+      ],
+      "era": {
+        "start": 1271,
+        "end": 1275
+      }
     },
     {
       "id": "s2",
@@ -50,7 +54,11 @@
       "historical_refs": [
         "《馬可波羅遊記》Prologue 第 8-10 章",
         "Jean de Joinville, Vie de Saint Louis"
-      ]
+      ],
+      "era": {
+        "start": 1271,
+        "end": 1275
+      }
     },
     {
       "id": "s3",
@@ -70,7 +78,11 @@
       "historical_refs": [
         "《馬可波羅遊記》第一卷第 4-5 章",
         "Rashid al-Din, Jami al-Tawarikh"
-      ]
+      ],
+      "era": {
+        "start": 1271,
+        "end": 1275
+      }
     },
     {
       "id": "s4",
@@ -90,7 +102,11 @@
       "historical_refs": [
         "《馬可波羅遊記》第一卷第 15-19 章",
         "Ibn Battuta, Rihla 第二部"
-      ]
+      ],
+      "era": {
+        "start": 1271,
+        "end": 1275
+      }
     },
     {
       "id": "s5",
@@ -110,7 +126,11 @@
       "historical_refs": [
         "《馬可波羅遊記》第一卷第 17-18 章",
         "Yule, Book of Ser Marco Polo (1903)"
-      ]
+      ],
+      "era": {
+        "start": 1271,
+        "end": 1275
+      }
     },
     {
       "id": "s6",
@@ -130,7 +150,11 @@
       "historical_refs": [
         "《馬可波羅遊記》第一卷第 29-30 章",
         "Juzjani, Tabaqat-i Nasiri"
-      ]
+      ],
+      "era": {
+        "start": 1271,
+        "end": 1275
+      }
     },
     {
       "id": "s7",
@@ -150,7 +174,11 @@
       "historical_refs": [
         "《馬可波羅遊記》第一卷第 32 章",
         "Aurel Stein, Serindia (1921)"
-      ]
+      ],
+      "era": {
+        "start": 1271,
+        "end": 1275
+      }
     },
     {
       "id": "s8",
@@ -170,7 +198,11 @@
       "historical_refs": [
         "《馬可波羅遊記》第一卷第 33-36 章",
         "《大唐西域記》卷 12"
-      ]
+      ],
+      "era": {
+        "start": 1271,
+        "end": 1275
+      }
     },
     {
       "id": "s9",
@@ -190,7 +222,11 @@
       "historical_refs": [
         "《馬可波羅遊記》第一卷第 39 章",
         "Aurel Stein, Ruins of Desert Cathay (1912)"
-      ]
+      ],
+      "era": {
+        "start": 1271,
+        "end": 1275
+      }
     },
     {
       "id": "s10",
@@ -210,7 +246,11 @@
       "historical_refs": [
         "《馬可波羅遊記》第一卷第 41 章",
         "《元史》卷 60 地理志三·沙州路"
-      ]
+      ],
+      "era": {
+        "start": 1271,
+        "end": 1275
+      }
     },
     {
       "id": "s11",
@@ -230,7 +270,11 @@
       "historical_refs": [
         "《馬可波羅遊記》第一卷第 61 章",
         "《元史》卷 58 地理志一·上都路"
-      ]
+      ],
+      "era": {
+        "start": 1271,
+        "end": 1275
+      }
     },
     {
       "id": "s12",
@@ -251,7 +295,11 @@
         "《馬可波羅遊記》第二卷第 6-22 章",
         "《元史》卷 58 地理志一·大都路",
         "Pelliot (1959)"
-      ]
+      ],
+      "era": {
+        "start": 1271,
+        "end": 1275
+      }
     }
   ],
   "routes": []

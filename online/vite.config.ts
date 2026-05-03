@@ -1,12 +1,60 @@
-import { resolve } from 'path'
-import { defineConfig } from 'vite'
+import { resolve, extname, sep } from 'path'
+import { existsSync, statSync, createReadStream } from 'fs'
+import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+
+/**
+ * Dev-only middleware: serve files from trailpaint repo root for paths that
+ * live outside vite's `online/` root in production (e.g. /stories/, /church/).
+ * In production these paths exist on trailpaint.org alongside /app/; in dev we
+ * need the same absolute paths to resolve so ?compilation= and ?src= work.
+ */
+function serveTrailpaintRoot(): Plugin {
+  const ALLOWED = ['/stories/', '/church/', '/features/', '/faq/'];
+  const MIME: Record<string, string> = {
+    '.json': 'application/json; charset=utf-8',
+    '.html': 'text/html; charset=utf-8',
+    '.css': 'text/css; charset=utf-8',
+    '.js': 'application/javascript; charset=utf-8',
+    '.svg': 'image/svg+xml',
+    '.jpg': 'image/jpeg',
+    '.jpeg': 'image/jpeg',
+    '.png': 'image/png',
+    '.webp': 'image/webp',
+    '.mp3': 'audio/mpeg',
+    '.md': 'text/markdown; charset=utf-8',
+  };
+  const repoRoot = resolve(__dirname, '..');
+  return {
+    name: 'tp-serve-trailpaint-root',
+    apply: 'serve',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        const url = (req.url ?? '').split('?')[0];
+        if (!ALLOWED.some((p) => url.startsWith(p))) return next();
+        const filePath = resolve(repoRoot, url.replace(/^\/+/, ''));
+        // Path traversal defence: a URL like `/stories/../../etc/passwd` passes
+        // the `startsWith('/stories/')` check above but `path.resolve` normalises
+        // away the `..` segments, potentially landing outside the repo. Reject
+        // anything that doesn't resolve inside repoRoot.
+        if (filePath !== repoRoot && !filePath.startsWith(repoRoot + sep)) {
+          return next();
+        }
+        if (!existsSync(filePath) || !statSync(filePath).isFile()) return next();
+        const mime = MIME[extname(filePath).toLowerCase()] ?? 'application/octet-stream';
+        res.setHeader('Content-Type', mime);
+        createReadStream(filePath).pipe(res);
+      });
+    },
+  };
+}
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+    serveTrailpaintRoot(),
     VitePWA({
       registerType: 'prompt',
       manifest: {

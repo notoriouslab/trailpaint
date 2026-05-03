@@ -2,31 +2,52 @@ import { useState, useEffect, useRef } from 'react';
 import { useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { t } from '../i18n';
-import { usePlayerStore } from './usePlayerStore';
 import { OVERLAYS, OVERLAY_GROUP_ORDER, OVERLAY_GROUP_LABEL_KEY } from '../map/overlays';
 import type { OverlayDef } from '../map/overlays';
 import { BASEMAPS, DEFAULT_BASEMAP_ID } from '../map/basemaps';
 import type { BasemapDef } from '../map/basemaps';
 import { createBasemapLayer } from '../map/basemapLayer';
+import { useOverlayLayer } from '../map/eraOverlayLayer';
+import { dispatchOverlayLoadFailed } from '../map/MapToast';
 
-/** Full basemap + overlay switcher for the Player (mirrors Editor's BasemapSwitcher) */
-export default function PlayerBasemapSwitcher() {
+interface PlayerBasemapSwitcherProps {
+  /** Currently selected overlay id, or null for none. Controlled by parent (shared with TimeSlider). */
+  overlayId: string | null;
+  /** Overlay opacity 0-1. */
+  opacity: number;
+  /** Called when user picks/clears an overlay or drags opacity. */
+  onOverlayChange: (next: { id: string; opacity: number } | null) => void;
+  /** Initial basemap id (resolved from project). Internal basemap state stays local. */
+  initialBasemapId?: string;
+}
+
+/** Full basemap + overlay switcher for the Player (controlled overlay state for TimeSlider sharing) */
+export default function PlayerBasemapSwitcher({
+  overlayId,
+  opacity,
+  onOverlayChange,
+  initialBasemapId,
+}: PlayerBasemapSwitcherProps) {
   const map = useMap();
-  const project = usePlayerStore((s) => s.project);
 
-  // Initialize from project settings (resolve against available basemaps)
-  const rawBasemapId = project?.basemapId ?? DEFAULT_BASEMAP_ID;
+  const rawBasemapId = initialBasemapId ?? DEFAULT_BASEMAP_ID;
   const initBasemapId = BASEMAPS.some((b) => b.id === rawBasemapId) ? rawBasemapId : DEFAULT_BASEMAP_ID;
-  const initOverlayId = project?.overlay?.id ?? null;
-  const initOverlayOpacity = project?.overlay?.opacity ?? 0.5;
 
   const [current, setCurrent] = useState(initBasemapId);
   const [open, setOpen] = useState(false);
-  const [overlayId, setOverlayId] = useState<string | null>(initOverlayId);
-  const [overlayOpacity, setOverlayOpacity] = useState(initOverlayOpacity);
   const layerRef = useRef<L.Layer | null>(null);
-  const overlayRef = useRef<L.TileLayer | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Cross-fade overlay layer (shared with TimeSlider via useOverlayLayer hook)
+  useOverlayLayer({
+    map,
+    overlayId,
+    opacity,
+    onLoadError: () => {
+      onOverlayChange(null);
+      dispatchOverlayLoadFailed();
+    },
+  });
 
   // Prevent map drag/scroll when interacting with this control
   useEffect(() => {
@@ -55,32 +76,6 @@ export default function PlayerBasemapSwitcher() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [map]);
 
-  // Create / destroy overlay layer
-  useEffect(() => {
-    if (!overlayId) {
-      overlayRef.current = null;
-      return;
-    }
-    const ov = OVERLAYS.find((o) => o.id === overlayId);
-    if (!ov) return;
-    const layer = L.tileLayer(ov.url, {
-      attribution: ov.attribution,
-      maxZoom: ov.maxZoom,
-      maxNativeZoom: ov.maxNativeZoom,
-      opacity: overlayOpacity,
-      crossOrigin: true,
-    }).addTo(map);
-    layer.setZIndex(1);
-    overlayRef.current = layer;
-    return () => { map.removeLayer(layer); };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [overlayId, map]);
-
-  // Update overlay opacity
-  useEffect(() => {
-    overlayRef.current?.setOpacity(overlayOpacity);
-  }, [overlayOpacity]);
-
   const switchTo = (bm: BasemapDef) => {
     applyBasemap(bm);
     setCurrent(bm.id);
@@ -88,7 +83,7 @@ export default function PlayerBasemapSwitcher() {
   };
 
   const handleSelectOverlay = (ov: OverlayDef) => {
-    setOverlayId(ov.id);
+    onOverlayChange({ id: ov.id, opacity });
     if (ov.bounds) {
       const b = L.latLngBounds(ov.bounds);
       if (!b.contains(map.getCenter())) {
@@ -126,7 +121,7 @@ export default function PlayerBasemapSwitcher() {
           <div className="basemap-switcher__separator">{t('overlay.title')}</div>
           <button
             className={`basemap-switcher__option${!overlayId ? ' basemap-switcher__option--active' : ''}`}
-            onClick={() => setOverlayId(null)}
+            onClick={() => onOverlayChange(null)}
           >
             {t('overlay.none')}
           </button>
@@ -157,12 +152,12 @@ export default function PlayerBasemapSwitcher() {
                 type="range"
                 min="0"
                 max="100"
-                value={Math.round(overlayOpacity * 100)}
-                onChange={(e) => setOverlayOpacity(Number(e.target.value) / 100)}
+                value={Math.round(opacity * 100)}
+                onChange={(e) => onOverlayChange({ id: overlayId, opacity: Number(e.target.value) / 100 })}
                 className="basemap-switcher__slider"
               />
               <span className="basemap-switcher__slider-value">
-                {Math.round(overlayOpacity * 100)}%
+                {Math.round(opacity * 100)}%
               </span>
             </div>
           )}

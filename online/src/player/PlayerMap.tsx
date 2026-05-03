@@ -6,14 +6,19 @@ import PlayerBasemapSwitcher from './PlayerBasemapSwitcher';
 import PlayerFitAll from './PlayerFitAll';
 import ScriptureRefs from './ScriptureRefs';
 import LocateButton from '../map/LocateButton';
+import TimeSlider from '../map/TimeSlider';
+import MapToast from '../map/MapToast';
+import PostcardButton from './PostcardButton';
 import { getOverlayZoomCap } from '../map/overlays';
+import { HISTORY_SCALE, MODERN_TICK } from '../map/eraScales';
+import { eraOpacity } from '../map/eraFade';
 import { PhotoAttribution } from '../core/components/PhotoAttribution';
 import type { Spot } from '../core/models/types';
 import 'leaflet/dist/leaflet.css';
 import '../map/MapView.css';
 
 /** Fit map to all spots + route points on load */
-function FitBounds() {
+function FitBounds({ overlayId }: { overlayId: string | null }) {
   const map = useMap();
   const project = usePlayerStore((s) => s.project);
 
@@ -29,18 +34,20 @@ function FitBounds() {
       return;
     }
     const bounds = L.latLngBounds(pts);
-    const cap = getOverlayZoomCap(project.overlay?.id);
+    const cap = getOverlayZoomCap(overlayId);
     map.fitBounds(bounds, {
       padding: [40, 40],
       ...(cap !== undefined && { maxZoom: cap }),
     });
+    // overlayId intentionally omitted — only fit on initial project load
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [map, project]);
 
   return null;
 }
 
 /** Fly to active spot when it changes — offset north so popup has room above */
-function FlyToActive() {
+function FlyToActive({ overlayId }: { overlayId: string | null }) {
   const map = useMap();
   const project = usePlayerStore((s) => s.project);
   const activeIndex = usePlayerStore((s) => s.activeSpotIndex);
@@ -49,7 +56,7 @@ function FlyToActive() {
     if (activeIndex === null || activeIndex < 0 || !project) return;
     const spot = project.spots[activeIndex];
     if (!spot) return;
-    const cap = getOverlayZoomCap(project.overlay?.id);
+    const cap = getOverlayZoomCap(overlayId);
     let zoom = Math.max(map.getZoom(), 13);
     if (cap !== undefined) zoom = Math.min(zoom, cap);
     // Offset 120px north in screen coords so marker sits in lower half
@@ -59,18 +66,19 @@ function FlyToActive() {
     // Clamp to valid Mercator range
     const safeLat = Math.max(-85, Math.min(85, target.lat));
     map.flyTo([safeLat, target.lng], zoom, { duration: 0.8 });
-  }, [map, project, activeIndex]);
+  }, [map, project, activeIndex, overlayId]);
 
   return null;
 }
 
-/** Marker that auto-opens its popup when active */
+/** Marker that auto-opens its popup when active + applies era-fade opacity. */
 function ActiveMarker({
-  position, icon, active, children, onClick,
+  position, icon, active, opacity, children, onClick,
 }: {
   position: [number, number];
   icon: L.DivIcon;
   active: boolean;
+  opacity: number;
   children: React.ReactNode;
   onClick: () => void;
 }) {
@@ -79,12 +87,21 @@ function ActiveMarker({
   useEffect(() => {
     if (!markerRef.current) return;
     if (active) {
-      const t = setTimeout(() => markerRef.current?.openPopup(), 900);
+      // 1800ms: lets the map's flyTo (0.8s) finish + 1 second of "look at the
+      // new place" before the popup covers it. Tuned for 016 era-fade — user
+      // needs visible time to register the cross-fade / spot fade before UI
+      // chrome takes over.
+      const t = setTimeout(() => markerRef.current?.openPopup(), 1800);
       return () => clearTimeout(t);
     } else {
       markerRef.current.closePopup();
     }
   }, [active]);
+
+  // Era fade — drive marker opacity from currentYear vs spot.era (T3)
+  useEffect(() => {
+    markerRef.current?.setOpacity(opacity);
+  }, [opacity]);
 
   return (
     <Marker
@@ -156,6 +173,23 @@ export default function PlayerMap() {
   const setActiveSpot = usePlayerStore((s) => s.setActiveSpot);
   const setPlaying = usePlayerStore((s) => s.setPlaying);
 
+  // Overlay state lifted up so PlayerBasemapSwitcher and TimeSlider stay in sync.
+  // Player session-only — not written back to share link envelope.
+  const [overlay, setOverlay] = useState<{ id: string; opacity: number } | null>(
+    project.overlay ?? null,
+  );
+
+  // currentYear drives spot era fade. Initialised from the project's overlay (if any),
+  // falling back to modern. TimeSlider mutates this on drag.
+  const [currentYear, setCurrentYear] = useState<number>(() => {
+    const ovId = project.overlay?.id;
+    if (ovId) {
+      const tick = HISTORY_SCALE.find((t) => t.overlayId === ovId);
+      if (tick) return tick.year;
+    }
+    return MODERN_TICK.year;
+  });
+
   return (
     <MapContainer
       center={project.center}
@@ -167,11 +201,25 @@ export default function PlayerMap() {
       zoomControl={false}
     >
       <ZoomControl position="bottomright" />
-      <FitBounds />
-      <FlyToActive />
-      <PlayerBasemapSwitcher />
+      <FitBounds overlayId={overlay?.id ?? null} />
+      <FlyToActive overlayId={overlay?.id ?? null} />
+      <PlayerBasemapSwitcher
+        overlayId={overlay?.id ?? null}
+        opacity={overlay?.opacity ?? 0.5}
+        onOverlayChange={setOverlay}
+        initialBasemapId={project.basemapId}
+      />
       <PlayerFitAll />
       <LocateButton />
+      <TimeSlider
+        overlayId={overlay?.id ?? null}
+        spotsLatLngs={project.spots.map((s) => s.latlng)}
+        onChange={(tick) => {
+          setCurrentYear(tick.year);
+          if (!tick.overlayId) setOverlay(null);
+          else setOverlay({ id: tick.overlayId, opacity: overlay?.opacity ?? 0.5 });
+        }}
+      />
 
       {/* Routes */}
       {project.routes.map((r) => (
@@ -195,13 +243,21 @@ export default function PlayerMap() {
           position={spot.latlng}
           icon={spotIcon(spot.num, activeIndex === i)}
           active={activeIndex === i}
+          opacity={eraOpacity(spot.era, currentYear)}
           onClick={() => { setPlaying(false); setActiveSpot(i); }}
         >
-          <Popup maxWidth={480} className="player-popup">
+          <Popup
+            maxWidth={480}
+            className="player-popup"
+            autoPanPaddingTopLeft={[10, 64]}
+            autoPanPaddingBottomRight={[10, 90]}
+          >
             <SpotPopupContent spot={spot} />
           </Popup>
         </ActiveMarker>
       ))}
+      <MapToast />
+      <PostcardButton currentYear={currentYear} overlayId={overlay?.id ?? null} />
     </MapContainer>
   );
 }

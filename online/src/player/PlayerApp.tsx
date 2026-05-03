@@ -2,10 +2,17 @@ import { useEffect, useCallback, useState } from 'react';
 import { usePlayerStore } from './usePlayerStore';
 import { migrateProject } from '../core/utils/migrateProject';
 import { decodeShareLink } from '../core/utils/shareLink';
+import { loadCompilation, orderCompilationSpots } from '../core/utils/compilations';
+import type { Compilation, Project } from '../core/models/types';
 import { t } from '../i18n';
 import PlayerMap from './PlayerMap';
 import SpotListPanel from './SpotListPanel';
 import PlaybackControl from './PlaybackControl';
+
+/** Compilation id format: kebab-case alphanumerics, prevents path injection. */
+function isValidCompilationId(id: string): boolean {
+  return /^[a-z0-9][a-z0-9-]{0,63}$/.test(id);
+}
 
 /** Validate ?src= param: allow curated same-origin JSON under /stories/ or
  *  /examples/routes/. Path components use [^/] so Chinese filenames work
@@ -41,8 +48,54 @@ export default function PlayerApp() {
     } catch { /* older browsers / sandboxed contexts — leave URL as-is */ }
   }, [isEmbed]);
 
-  // Load project on mount: ?src= → localStorage → #share=
+  // Load project on mount: ?compilation= → ?src= → localStorage → #share=
   useEffect(() => {
+    // 0. Check ?compilation= param (multi-segment bundle from catalog.json)
+    const compId = params.get('compilation');
+    if (compId) {
+      if (!isValidCompilationId(compId)) {
+        console.warn('Invalid compilation id');
+        setError(t('player.error.compilation'));
+        return;
+      }
+      fetch('/stories/catalog.json', { signal: AbortSignal.timeout(30000) })
+        .then((r) => {
+          if (!r.ok) throw new Error(`HTTP ${r.status}`);
+          return r.json();
+        })
+        .then((catalog: { compilations?: Compilation[] }) => {
+          const comp = catalog.compilations?.find((c) => c.id === compId);
+          if (!comp) throw new Error('Compilation not found');
+          return loadCompilation(comp);
+        })
+        .then(({ compilation, spots, routes, failedSegments }) => {
+          const ordered = orderCompilationSpots(spots, compilation.playback);
+          if (ordered.length === 0) {
+            setError(t('player.error.compilationEmpty'));
+            return;
+          }
+          const merged: Project = {
+            version: 5,
+            name: compilation.title,
+            center: ordered[0].latlng,
+            zoom: 4,
+            spots: ordered,
+            routes,
+          };
+          loadProject(merged);
+          cleanUrl();
+          if (failedSegments.length > 0) {
+            console.warn('Compilation partial fail:', failedSegments);
+          }
+        })
+        .catch((e) => {
+          const msg = e instanceof Error && e.name === 'TimeoutError'
+            ? t('player.error.timeout') : t('player.error.compilation');
+          setError(msg);
+        });
+      return;
+    }
+
     // 1. Check ?src= param (embed mode — fetch same-origin JSON)
     const src = params.get('src');
     if (src) {

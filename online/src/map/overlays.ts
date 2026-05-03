@@ -22,6 +22,13 @@ export interface OverlayDef {
   maxNativeZoom?: number;
   /** Geographic bounds [[south, west], [north, east]] — used to auto-fit when user selects overlay. */
   bounds?: [[number, number], [number, number]];
+  /**
+   * 該地圖代表年代（負數 = BC）。
+   * - number: 中心年代（單一時點，如 `tang_741` = 741）
+   * - [start, end]: 年代區間（如 `rome_200` = [-100, 400] 涵蓋羅馬帝國全期）
+   * 用於 TimeSlider 對應 overlay + spot era fade 計算。
+   */
+  year: number | [number, number];
 }
 
 /** Ordered list of groups for UI rendering (groups absent from OVERLAYS are skipped). */
@@ -32,6 +39,42 @@ export function getOverlayZoomCap(overlayId: string | null | undefined): number 
   if (!overlayId) return undefined;
   const ov = OVERLAYS.find((o) => o.id === overlayId);
   return ov?.maxNativeZoom;
+}
+
+/**
+ * Return the set of overlay ids whose `bounds` intersect the given spot positions.
+ *
+ * Used by TimeSlider to filter ticks down to overlays geographically relevant to
+ * the current story (a London route shouldn't list 5 China overlays as options).
+ *
+ * Edge cases:
+ *   - `spotsLatLngs` empty → returns ALL overlay ids (no filtering possible)
+ *   - overlay has no `bounds` → kept (treated as global / unbounded)
+ *
+ * Pure function (no Leaflet runtime dependency) so it's safe in tests / SSR.
+ * Uses simple AABB overlap on [south, west, north, east] rectangles.
+ */
+export function getRelevantOverlayIds(
+  spotsLatLngs: ReadonlyArray<readonly [number, number]>,
+): Set<string> {
+  if (spotsLatLngs.length === 0) {
+    return new Set(OVERLAYS.map((o) => o.id));
+  }
+  let south = Infinity, west = Infinity, north = -Infinity, east = -Infinity;
+  for (const [lat, lng] of spotsLatLngs) {
+    if (lat < south) south = lat;
+    if (lat > north) north = lat;
+    if (lng < west) west = lng;
+    if (lng > east) east = lng;
+  }
+  return new Set(
+    OVERLAYS.filter((ov) => {
+      if (!ov.bounds) return true;
+      const [[ovSouth, ovWest], [ovNorth, ovEast]] = ov.bounds;
+      // AABB overlap test — boxes overlap unless one is strictly outside the other on any axis
+      return !(ovEast < west || ovWest > east || ovNorth < south || ovSouth > north);
+    }).map((o) => o.id),
+  );
 }
 
 export const OVERLAY_GROUP_LABEL_KEY: Record<OverlayGroup, string> = {
@@ -57,6 +100,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 14,
     bounds: BOUNDS_TAIWAN,
+    year: 1897,
   },
   {
     id: 'jm20k_1921',
@@ -67,6 +111,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 14,
     bounds: BOUNDS_TAIWAN,
+    year: 1921,
   },
   {
     id: 'corona_1966',
@@ -77,6 +122,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 14,
     bounds: BOUNDS_TAIWAN,
+    year: 1966,
   },
   {
     id: 'han_bc7',
@@ -87,6 +133,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 10,
     bounds: BOUNDS_CHINA_HISTORIC,
+    year: -7,
   },
   {
     id: 'tang_741',
@@ -97,6 +144,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 10,
     bounds: BOUNDS_CHINA_HISTORIC,
+    year: 741,
   },
   {
     id: 'song_1208',
@@ -107,6 +155,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 10,
     bounds: BOUNDS_CHINA_HISTORIC,
+    year: 1208,
   },
   {
     id: 'yuan_1330',
@@ -117,6 +166,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 10,
     bounds: BOUNDS_CHINA_HISTORIC,
+    year: 1330,
   },
   {
     id: 'ming_1582',
@@ -127,6 +177,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 10,
     bounds: BOUNDS_CHINA_HISTORIC,
+    year: 1582,
   },
   {
     id: 'rome_200',
@@ -137,5 +188,6 @@ export const OVERLAYS: OverlayDef[] = [
     maxZoom: 18,
     maxNativeZoom: 10,
     bounds: BOUNDS_ROMAN_MEDITERRANEAN,
+    year: [-100, 400],
   },
 ];

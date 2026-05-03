@@ -68,3 +68,59 @@ describe('compactProject / expandProject — photoMeta round-trip (013)', () => 
     expect(expanded.spots[0].photoMeta).toBeUndefined();
   });
 });
+
+describe('compactProject / expandProject — era round-trip (016 v1.4)', () => {
+  it('omits er key when spot has no era', () => {
+    const compact = compactProject(mkProject([{ ...baseSpot }]));
+    const spot = (compact.s as Record<string, unknown>[])[0];
+    expect(spot).not.toHaveProperty('er');
+  });
+
+  it('compacts era into er:[start,end] tuple', () => {
+    const compact = compactProject(mkProject([{ ...baseSpot, era: { start: 46, end: 48 } }]));
+    const spot = (compact.s as Record<string, unknown>[])[0];
+    expect(spot.er).toEqual([46, 48]);
+  });
+
+  it('round-trips AD era through compact → expand', () => {
+    const original = mkProject([{ ...baseSpot, era: { start: 46, end: 48 } }]);
+    const expanded = expandProject(compactProject(original));
+    expect(expanded.spots[0].era).toEqual({ start: 46, end: 48 });
+  });
+
+  it('round-trips BC era (negative numbers) correctly', () => {
+    const original = mkProject([{ ...baseSpot, era: { start: -138, end: -126 } }]);
+    const expanded = expandProject(compactProject(original));
+    expect(expanded.spots[0].era).toEqual({ start: -138, end: -126 });
+  });
+
+  it('expand drops era when tuple is malformed (length != 2 / non-number)', () => {
+    const compact = {
+      v: 5, n: 't', c: [0, 0], z: 8, r: [],
+      s: [{ i: 's1', l: [23.5, 121], u: 1, t: 'x', k: 'pin', er: ['46', '48'] }],
+    };
+    expect(expandProject(compact).spots[0].era).toBeUndefined();
+  });
+});
+
+describe('compactProject / expandProject — scripture_refs round-trip', () => {
+  it('omits sr key when spot has no scripture_refs', () => {
+    const compact = compactProject(mkProject([{ ...baseSpot }]));
+    const spot = (compact.s as Record<string, unknown>[])[0];
+    expect(spot).not.toHaveProperty('sr');
+  });
+
+  it('round-trips scripture_refs array', () => {
+    const original = mkProject([{ ...baseSpot, scripture_refs: ['Acts 16:9-12', 'Acts 17:1-9'] }]);
+    const expanded = expandProject(compactProject(original));
+    expect(expanded.spots[0].scripture_refs).toEqual(['Acts 16:9-12', 'Acts 17:1-9']);
+  });
+
+  it('expand filters non-string entries from sr array', () => {
+    const compact = {
+      v: 5, n: 't', c: [0, 0], z: 8, r: [],
+      s: [{ i: 's1', l: [23.5, 121], u: 1, t: 'x', k: 'pin', sr: ['Acts 16:9', 42, null, 'Matt 1:1'] }],
+    };
+    expect(expandProject(compact).spots[0].scripture_refs).toEqual(['Acts 16:9', 'Matt 1:1']);
+  });
+});

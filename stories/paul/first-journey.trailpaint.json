@@ -27,7 +27,11 @@
         "Acts 13:1-3",
         "Acts 14:26-28",
         "Acts 11:26"
-      ]
+      ],
+      "era": {
+        "start": 46,
+        "end": 48
+      }
     },
     {
       "id": "s2",
@@ -46,7 +50,11 @@
       },
       "scripture_refs": [
         "Acts 13:4"
-      ]
+      ],
+      "era": {
+        "start": 46,
+        "end": 48
+      }
     },
     {
       "id": "s3",
@@ -65,7 +73,11 @@
       },
       "scripture_refs": [
         "Acts 13:5"
-      ]
+      ],
+      "era": {
+        "start": 46,
+        "end": 48
+      }
     },
     {
       "id": "s4",
@@ -84,7 +96,11 @@
       },
       "scripture_refs": [
         "Acts 13:6-12"
-      ]
+      ],
+      "era": {
+        "start": 46,
+        "end": 48
+      }
     },
     {
       "id": "s5",
@@ -104,7 +120,11 @@
       "scripture_refs": [
         "Acts 13:13",
         "Acts 14:25"
-      ]
+      ],
+      "era": {
+        "start": 46,
+        "end": 48
+      }
     },
     {
       "id": "s6",
@@ -123,7 +143,11 @@
       },
       "scripture_refs": [
         "Acts 13:14-52"
-      ]
+      ],
+      "era": {
+        "start": 46,
+        "end": 48
+      }
     },
     {
       "id": "s7",
@@ -142,7 +166,11 @@
       },
       "scripture_refs": [
         "Acts 14:1-6"
-      ]
+      ],
+      "era": {
+        "start": 46,
+        "end": 48
+      }
     },
     {
       "id": "s8",
@@ -162,7 +190,11 @@
       "scripture_refs": [
         "Acts 14:8-20",
         "Acts 16:1-3"
-      ]
+      ],
+      "era": {
+        "start": 46,
+        "end": 48
+      }
     },
     {
       "id": "s9",
@@ -181,7 +213,11 @@
       },
       "scripture_refs": [
         "Acts 14:20-21"
-      ]
+      ],
+      "era": {
+        "start": 46,
+        "end": 48
+      }
     },
     {
       "id": "s10",
@@ -200,7 +236,11 @@
       },
       "scripture_refs": [
         "Acts 14:25-26"
-      ]
+      ],
+      "era": {
+        "start": 46,
+        "end": 48
+      }
     },
     {
       "id": "s11",
@@ -220,7 +260,11 @@
       "scripture_refs": [
         "Acts 14:27-28",
         "Acts 15:1-2"
-      ]
+      ],
+      "era": {
+        "start": 46,
+        "end": 48
+      }
     }
   ],
   "routes": [
