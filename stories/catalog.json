@@ -122,5 +122,47 @@
       "path": "xu-xiake/",
       "count": 1
     }
+  ],
+  "compilations": [
+    {
+      "id": "paul-three-journeys",
+      "title": "保羅宣教三次旅行",
+      "subtitle": "AD 46-62 三次差遣 + 押解羅馬",
+      "description": "從敘利亞安提阿出發，三度橫渡地中海，最後押解羅馬。沿使徒行傳 13-28 章足跡走過小亞細亞、馬其頓、亞該亞與羅馬。",
+      "segments": ["paul/first-journey", "paul/second-journey", "paul/to-rome"],
+      "yearRange": [46, 62],
+      "playback": "sequential"
+    },
+    {
+      "id": "four-gospels-map",
+      "title": "四福音書地圖",
+      "subtitle": "AD 27-30 加利利傳道 + 受難週",
+      "description": "馬太、馬可、路加、約翰各自記述的耶穌足跡——加利利傳道、變像山與耶路撒冷受難週。",
+      "segments": [
+        "jesus-galilee/early-galilee",
+        "jesus-galilee/transfiguration-road",
+        "passion-week/entry",
+        "passion-week/passion",
+        "passion-week/resurrection"
+      ],
+      "yearRange": [27, 30],
+      "playback": "sequential"
+    },
+    {
+      "id": "silk-road-2000",
+      "title": "絲路 2000 年：同一條走廊的時空對話",
+      "subtitle": "BC 138 — AD 1295 三段足跡層層疊疊",
+      "description": "張騫鑿空 BC 138、玄奘西行 AD 629、馬可波羅東來 AD 1271——同一條中亞走廊，1400 年三段足跡層層疊疊。",
+      "segments": [
+        "zhang-qian/first-mission",
+        "zhang-qian/second-mission",
+        "xuanzang/west",
+        "xuanzang/return",
+        "marco-polo/east-journey",
+        "marco-polo/west-return"
+      ],
+      "yearRange": [-138, 1295],
+      "playback": "chronological"
+    }
   ]
 }

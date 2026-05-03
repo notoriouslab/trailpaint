@@ -220,6 +220,8 @@ export default {
   'overlay.group.explore': '🌍 大航海',
   'overlay.group.war': '⚔️ 戦争',
   'overlay.loadFailed': '歴史地図の読み込みに失敗、現代に戻します',
+  'player.error.compilation': 'コンピレーションの読み込み失敗',
+  'player.error.compilationEmpty': 'コンピレーションに読み込み可能なセグメントがありません',
 
   // Time Slider
   'timeSlider.title': '年代',

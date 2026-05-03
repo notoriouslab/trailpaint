@@ -29,11 +29,21 @@ import { t } from '../i18n';
 import { HISTORY_SCALE, type Scale } from './eraScales';
 import { getRelevantOverlayIds } from './overlays';
 
+/** Payload delivered to onChange when a tick is selected. */
+export interface TimeSliderTick {
+  /** Overlay id mapped to this tick, or null for modern / overlay-less ticks. */
+  overlayId: string | null;
+  /** Calendar year (BC negative, AD positive) — drives spot era fade. */
+  year: number;
+  /** i18n key for the tick label — useful for postcard stamps. */
+  labelKey: string;
+}
+
 interface TimeSliderProps {
   /** Currently active overlay id, or null for none/modern. */
   overlayId: string | null;
-  /** Called when user drags or taps to a new tick. Pass null when snapping to modern. */
-  onChange: (overlayId: string | null) => void;
+  /** Called when user drags or taps to a new tick. */
+  onChange: (tick: TimeSliderTick) => void;
   /** Spot positions used to filter ticks down to geographically relevant overlays. */
   spotsLatLngs: ReadonlyArray<readonly [number, number]>;
 }
@@ -94,7 +104,11 @@ export default function TimeSlider({ overlayId, onChange, spotsLatLngs }: TimeSl
     if (idx === lastFiredIndexRef.current) return;
     lastFiredIndexRef.current = idx;
     const tick = scale[idx];
-    onChange(tick.overlayId ?? null);
+    onChange({
+      overlayId: tick.overlayId ?? null,
+      year: tick.year,
+      labelKey: tick.labelKey,
+    });
   };
 
   const handlePointerDown: React.PointerEventHandler<HTMLDivElement> = (e) => {

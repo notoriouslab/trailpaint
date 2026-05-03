@@ -220,6 +220,8 @@ export default {
   'overlay.group.explore': '🌍 Exploration',
   'overlay.group.war': '⚔️ War',
   'overlay.loadFailed': 'Historical overlay failed to load, reverting to modern',
+  'player.error.compilation': 'Compilation failed to load',
+  'player.error.compilationEmpty': 'Compilation has no loadable segments',
 
   // Time Slider
   'timeSlider.title': 'Era',

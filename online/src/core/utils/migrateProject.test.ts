@@ -12,9 +12,9 @@ const validBase = {
 };
 
 describe('migrateProject — baseline (Task 2)', () => {
-  it('returns a valid Project with version 4 for minimal valid input', () => {
+  it('returns a valid Project with version 5 for minimal valid input', () => {
     const p = migrateProject({ ...validBase });
-    expect(p.version).toBe(4);
+    expect(p.version).toBe(5);
     expect(p.name).toBe('Test');
     expect(p.center).toEqual([23.5, 121]);
     expect(p.zoom).toBe(8);
@@ -157,9 +157,9 @@ describe('migrateProject — baseline (Task 2)', () => {
 });
 
 describe('migrateProject — v3 scripture_refs (Task 3)', () => {
-  it('upgrades version from v2 input to v4', () => {
+  it('upgrades version from v2 input to v5', () => {
     const p = migrateProject({ ...validBase, version: 2 });
-    expect(p.version).toBe(4);
+    expect(p.version).toBe(5);
   });
 
   it('preserves valid scripture_refs array', () => {
@@ -263,14 +263,14 @@ describe('migrateProject — v3 scripture_refs (Task 3)', () => {
   });
 });
 
-describe('migrateProject — real fixture (mackay v2 → v4)', () => {
-  it('upgrades mackay.trailpaint.json (v2) to v4 without losing spots', () => {
+describe('migrateProject — real fixture (mackay v2 → v5)', () => {
+  it('upgrades mackay.trailpaint.json (v2) to v5 without losing spots', () => {
     const path = resolve(__dirname, '../../../../stories/taiwan-missionaries/mackay.trailpaint.json');
     const raw = JSON.parse(readFileSync(path, 'utf8'));
     expect(raw.version).toBe(2);
     const spotsBefore = raw.spots.length;
     const p = migrateProject(raw);
-    expect(p.version).toBe(4);
+    expect(p.version).toBe(5);
     expect(p.spots.length).toBe(spotsBefore);
     expect(p.name).toBe(raw.name);
     expect(p.center).toEqual([
@@ -290,12 +290,12 @@ describe('migrateProject — passion-week v3 fixtures', () => {
   ];
 
   for (const seg of segments) {
-    it(`loads ${seg.file} (v3) upgrading to v4 with scripture_refs preserved`, () => {
+    it(`loads ${seg.file} (v3) upgrading to v5 with scripture_refs preserved`, () => {
       const path = resolve(__dirname, `../../../../stories/passion-week/${seg.file}`);
       const raw = JSON.parse(readFileSync(path, 'utf8'));
       expect(raw.version).toBe(3);
       const p = migrateProject(raw);
-      expect(p.version).toBe(4);
+      expect(p.version).toBe(5);
       expect(p.spots.length).toBe(raw.spots.length);
       expect(p.spots.length).toBeGreaterThanOrEqual(seg.minSpots);
       // Every spot should keep its scripture_refs
@@ -321,13 +321,13 @@ describe('migrateProject — passion-week v3 fixtures', () => {
 });
 
 describe('migrateProject — v4 pendingLocation (010 D5)', () => {
-  it('upgrades v3 input to v4 without data loss', () => {
+  it('upgrades v3 input to v5 without data loss', () => {
     const p = migrateProject({
       ...validBase,
       version: 3,
       spots: [{ id: 's1', latlng: [23.5, 121], title: 'x' }],
     });
-    expect(p.version).toBe(4);
+    expect(p.version).toBe(5);
     expect(p.spots).toHaveLength(1);
     expect(p.spots[0].pendingLocation).toBeUndefined();
   });

@@ -220,6 +220,8 @@ export default {
   'overlay.group.explore': '🌍 探險',
   'overlay.group.war': '⚔️ 戰爭',
   'overlay.loadFailed': '歷史地圖載入失敗，已切回現代',
+  'player.error.compilation': '合輯載入失敗',
+  'player.error.compilationEmpty': '合輯沒有可載入的故事段落',
 
   // Time Slider
   'timeSlider.title': '年代',

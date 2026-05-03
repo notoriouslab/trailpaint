@@ -77,7 +77,8 @@ function SpotMarkers() {
   return <>{spots.map((spot) => <SpotMarker key={spot.id} spot={spot} />)}</>;
 }
 
-/** TimeSlider wired to the project store (Editor side). */
+/** TimeSlider wired to the project store (Editor side).
+ *  Editor doesn't render era-fade on spots — `year` is consumed by overlay change only. */
 function MapTimeSlider() {
   const overlay = useProjectStore((s) => s.project.overlay);
   const setOverlay = useProjectStore((s) => s.setOverlay);
@@ -87,9 +88,9 @@ function MapTimeSlider() {
     <TimeSlider
       overlayId={overlay?.id ?? null}
       spotsLatLngs={spotsLatLngs}
-      onChange={(id) => {
-        if (!id) setOverlay(null);
-        else setOverlay({ id, opacity: overlay?.opacity ?? 0.5 });
+      onChange={(tick) => {
+        if (!tick.overlayId) setOverlay(null);
+        else setOverlay({ id: tick.overlayId, opacity: overlay?.opacity ?? 0.5 });
       }}
     />
   );

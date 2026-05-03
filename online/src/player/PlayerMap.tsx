@@ -9,6 +9,8 @@ import LocateButton from '../map/LocateButton';
 import TimeSlider from '../map/TimeSlider';
 import MapToast from '../map/MapToast';
 import { getOverlayZoomCap } from '../map/overlays';
+import { HISTORY_SCALE, MODERN_TICK } from '../map/eraScales';
+import { eraOpacity } from '../map/eraFade';
 import { PhotoAttribution } from '../core/components/PhotoAttribution';
 import type { Spot } from '../core/models/types';
 import 'leaflet/dist/leaflet.css';
@@ -68,13 +70,14 @@ function FlyToActive({ overlayId }: { overlayId: string | null }) {
   return null;
 }
 
-/** Marker that auto-opens its popup when active */
+/** Marker that auto-opens its popup when active + applies era-fade opacity. */
 function ActiveMarker({
-  position, icon, active, children, onClick,
+  position, icon, active, opacity, children, onClick,
 }: {
   position: [number, number];
   icon: L.DivIcon;
   active: boolean;
+  opacity: number;
   children: React.ReactNode;
   onClick: () => void;
 }) {
@@ -89,6 +92,11 @@ function ActiveMarker({
       markerRef.current.closePopup();
     }
   }, [active]);
+
+  // Era fade — drive marker opacity from currentYear vs spot.era (T3)
+  useEffect(() => {
+    markerRef.current?.setOpacity(opacity);
+  }, [opacity]);
 
   return (
     <Marker
@@ -166,6 +174,17 @@ export default function PlayerMap() {
     project.overlay ?? null,
   );
 
+  // currentYear drives spot era fade. Initialised from the project's overlay (if any),
+  // falling back to modern. TimeSlider mutates this on drag.
+  const [currentYear, setCurrentYear] = useState<number>(() => {
+    const ovId = project.overlay?.id;
+    if (ovId) {
+      const tick = HISTORY_SCALE.find((t) => t.overlayId === ovId);
+      if (tick) return tick.year;
+    }
+    return MODERN_TICK.year;
+  });
+
   return (
     <MapContainer
       center={project.center}
@@ -190,9 +209,10 @@ export default function PlayerMap() {
       <TimeSlider
         overlayId={overlay?.id ?? null}
         spotsLatLngs={project.spots.map((s) => s.latlng)}
-        onChange={(id) => {
-          if (!id) setOverlay(null);
-          else setOverlay({ id, opacity: overlay?.opacity ?? 0.5 });
+        onChange={(tick) => {
+          setCurrentYear(tick.year);
+          if (!tick.overlayId) setOverlay(null);
+          else setOverlay({ id: tick.overlayId, opacity: overlay?.opacity ?? 0.5 });
         }}
       />
 
@@ -218,6 +238,7 @@ export default function PlayerMap() {
           position={spot.latlng}
           icon={spotIcon(spot.num, activeIndex === i)}
           active={activeIndex === i}
+          opacity={eraOpacity(spot.era, currentYear)}
           onClick={() => { setPlaying(false); setActiveSpot(i); }}
         >
           <Popup maxWidth={480} className="player-popup">
