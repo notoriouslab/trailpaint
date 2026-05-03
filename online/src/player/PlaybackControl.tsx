@@ -323,10 +323,16 @@ export default function PlaybackControl() {
         <button
           className={`playback__btn${embedCopied ? ' playback__btn--active' : ''}`}
           onClick={async () => {
+            const compId = params.get('compilation');
             const src = params.get('src');
             const origin = window.location.origin;
             let html: string;
-            if (src) {
+            if (compId) {
+              // T9 / CP4: compilation embed — iframe re-fetches catalog.json + segments,
+              // no inline data needed (small embed snippet, large compilation playback).
+              const musicParam = effectiveMusicUrl ? `&music=${encodeURIComponent(effectiveMusicUrl)}` : '';
+              html = `<iframe src="${origin}/app/player/?embed=1&compilation=${encodeURIComponent(compId)}${musicParam}" width="100%" height="500" style="border:none;border-radius:8px" allowfullscreen></iframe>`;
+            } else if (src) {
               const musicParam = effectiveMusicUrl ? `&music=${encodeURIComponent(effectiveMusicUrl)}` : '';
               html = `<iframe src="${origin}/app/player/?embed=1&src=${encodeURIComponent(src)}${musicParam}" width="100%" height="500" style="border:none;border-radius:8px" allowfullscreen></iframe>`;
             } else {
