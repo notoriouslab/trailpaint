@@ -242,7 +242,12 @@ export default function PlayerMap() {
           opacity={eraOpacity(spot.era, currentYear)}
           onClick={() => { setPlaying(false); setActiveSpot(i); }}
         >
-          <Popup maxWidth={480} className="player-popup">
+          <Popup
+            maxWidth={480}
+            className="player-popup"
+            autoPanPaddingTopLeft={[10, 64]}
+            autoPanPaddingBottomRight={[10, 90]}
+          >
             <SpotPopupContent spot={spot} />
           </Popup>
         </ActiveMarker>
