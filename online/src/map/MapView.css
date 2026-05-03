@@ -566,7 +566,8 @@
   align-items: center;
   justify-content: center;
   padding: 16px;
-  animation: postcard-fade-in 0.18s ease-out;
+  /* No fade-in: backdrop must cover instantly so user doesn't see leaflet
+     setView / setOpacity operations during postcard render prep. */
 }
 
 @keyframes postcard-fade-in {
@@ -575,6 +576,7 @@
 }
 
 .postcard-modal {
+  animation: postcard-fade-in 0.18s ease-out;
   background: #fdf8ef;
   border-radius: 12px;
   box-shadow: 0 12px 40px rgba(0,0,0,0.4);

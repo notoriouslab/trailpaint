@@ -87,7 +87,11 @@ function ActiveMarker({
   useEffect(() => {
     if (!markerRef.current) return;
     if (active) {
-      const t = setTimeout(() => markerRef.current?.openPopup(), 900);
+      // 1800ms: lets the map's flyTo (0.8s) finish + 1 second of "look at the
+      // new place" before the popup covers it. Tuned for 016 era-fade — user
+      // needs visible time to register the cross-fade / spot fade before UI
+      // chrome takes over.
+      const t = setTimeout(() => markerRef.current?.openPopup(), 1800);
       return () => clearTimeout(t);
     } else {
       markerRef.current.closePopup();
@@ -253,7 +257,7 @@ export default function PlayerMap() {
         </ActiveMarker>
       ))}
       <MapToast />
-      <PostcardButton currentYear={currentYear} />
+      <PostcardButton currentYear={currentYear} overlayId={overlay?.id ?? null} />
     </MapContainer>
   );
 }

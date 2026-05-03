@@ -4,7 +4,7 @@
 
 > 手繪風路線地圖 · 從照片、地圖、AI 三種方式建立 · 一鍵輸出 PNG / 備份 / 互通格式
 
-[![Version](https://img.shields.io/badge/version-1.3.1-orange.svg)](https://trailpaint.org/app/)
+[![Version](https://img.shields.io/badge/version-1.4-orange.svg)](https://trailpaint.org/app/)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6.svg)](https://www.typescriptlang.org/)
 [![PWA Ready](https://img.shields.io/badge/PWA-ready-5a0fc8.svg)](https://trailpaint.org/app/)
@@ -115,8 +115,78 @@ v1.3 把所有輸出統一成單一「匯出 Wizard」，三個 tab 對應三種
 展示精選故事地圖：
 - **台灣宣教士腳蹤**：馬偕、巴克禮、蘭大衛、馬雅各、彭蒙惠 等 19-20 世紀宣教士的在台路線，搭配中研院歷史地圖疊加
 - **耶穌受難週**：從榮耀進城到復活顯現共 12+ 個聖經地點，搭配達文西、卡拉瓦喬、林布蘭等古典畫作，聖經經文連結到 YouVersion
+- **保羅宣教三次旅行**：AD 46-62 三次橫渡地中海 + 押解羅馬，34 個景點沿使徒行傳 13-28 章
+- **耶穌加利利傳道**：早期事工 + 變像山，10+6 個景點橫跨 AD 27-30
+- **絲路 2000 年素材**：張騫鑿空 BC 138 / 玄奘西行 AD 629 / 馬可波羅東來 AD 1271 — 同條中亞走廊三段足跡
+- **南宋亡國前後**：文天祥南撤 + 北擄就義
+- **明末徐霞客西南壯遊**：最後四年踏遍滇黔桂
 
 橫向 tabs 切換不同人物路線，LINE / FB 分享自動顯示 OG 縮圖。
+
+---
+
+## v1.4 — 年代滑桿、合輯、電子明信片、教會頁
+
+v1.4 把 TrailPaint 從「靜態手繪地圖」推到「**會說故事的時空地圖**」。新增四個能力，特別為教會主日學 / 週報 / 個人靈修場景設計，但對歷史教學、文化路線一樣適用。
+
+### ⏱ 年代滑桿（TimeSlider）
+
+地圖頂部的水平滑桿，左端古、右端今。拖動就 cross-fade 切換歷史地圖底圖（中研院 CCTS 西漢/唐/南宋/元/明、台灣輿圖 1897/1921、Corona 衛星 1966、DARE 羅馬 AD 200），同時根據 spot 的年代讓不在當下年代的景點漸隱（保留路線形狀，主角只剩當代景點）。
+
+兩刻度組可切換：
+- **🗺️ 歷史地圖**（預設）：對應 9 個 overlay 的年代刻度
+- **📖 聖經敘事**：出埃及 BC 1446 / 大衛王 BC 1000 / 巴比倫被擄 BC 586 / 耶穌 AD 30 / 保羅 AD 50 / 啟示錄 AD 95
+
+滑桿自動依當前 spot 地理範圍過濾相關 overlay — 倫敦路線只列「現代 + 羅馬 AD 200」，台灣登山只列三張台灣圖，不會塞 9 個無關刻度。
+
+### 📚 合輯（Compilation）— 跨故事疊圖
+
+`catalog.compilations[]` schema 把多個故事段落綁成一個 Player session：
+
+```
+?compilation=silk-road-2000
+```
+
+兩種播放順序：
+- `sequential`：依故事順序（保羅第一次 → 第二次 → 押解羅馬）
+- `chronological`：依 spot.era 全域時序（張騫 BC 138 → 玄奘 AD 629 → 馬可波羅 AD 1271，跨人物 mix 排序）
+
+partial fail 不 block — 一個故事段載入失敗，其他段照樣播。
+
+預設三個合輯：
+- `paul-three-journeys` — 保羅宣教三次旅行（34 景點）
+- `four-gospels-map` — 四福音書地圖：加利利傳道 + 受難週（33 景點）
+- `silk-road-2000` — 絲路 2000 年：張騫 + 玄奘 + 馬可波羅同條走廊（59 景點）
+
+![絲路 2000 年合輯 — 跨故事 chronological 排序](./examples/silk-road-2000-compilation.jpg)
+
+上面截圖：絲路合輯 chronological 排序，當前刻度落在「唐 (741)」，地圖底鋪上中研院唐代地圖，正在播放第 18 個景點長安（西安）大慈恩寺。左側 panel 列出 59 個景點橫跨 BC 138 到 AD 1295。
+
+### 📮 電子明信片（IG-square Postcard）
+
+每個景點都可以一鍵生成 **1080×1080 IG 方圖明信片**，含：
+- 上半地圖（自動縮放到 zoom 10/12，看清古地圖紋路）
+- 中段景點卡（照片 + 標題 + 經文出處 + 描述）
+- 下方年代印章（公元 1897 年 / AD 50 / 紀元前 138 年）+ TrailPaint 浮水印
+
+![馬偕宣教足跡 1897 年五股坑明信片](./examples/postcard-mackay-1897.jpg)
+
+上面範例：馬偕博士在五股坑，配中研院臺灣輿圖 1897 古地圖底圖，景點卡含人物畫像 + 經文時序說明，下方印章「公元 1897 年」。下載成 PNG 即可貼進 IG / Threads / 教會週報投影片。
+
+智慧 fallback：景點不在當前 overlay 地理範圍時，明信片自動切回現代底圖（避免台灣古地圖飄在英國的視覺錯亂）。三語年代格式（公元 X 年 / AD X / 西暦 X 年），scripture_refs 自動截短帶入。
+
+### ⛪ 教會頁 `/church/`
+
+`trailpaint.org/church/` 是教會 vertical 的 landing 頁，三個用例 + iframe 嵌入示範：
+- 主日學嵌四福音書地圖
+- 週報嵌保羅宣教三次
+- 個人靈修嵌絲路 2000 年
+
+Player ⚙ 面板「📋 複製合輯 embed」一鍵複製 iframe code，貼進 WordPress / Wix / Google Slides 即可嵌入。
+
+### 體驗節奏調整
+
+合輯播放時 fly-to 後 popup 延遲從 0.9s 拉到 1.8s — 給 user 1 秒「看到地圖變了」的時間，再讓圖文 popup 蓋上。
 
 ---
 

@@ -9,15 +9,78 @@
  */
 
 import { useState, useEffect } from 'react';
+import { useMap } from 'react-leaflet';
+import L from 'leaflet';
 import { t, currentLocale } from '../i18n';
 import { captureMap, sanitizeFilename } from '../map/ExportButton';
 import { renderPostcard } from '../core/utils/postcardRenderer';
 import type { StampLocale } from '../core/utils/postcardStamp';
+import { getOverlayZoomCap, OVERLAYS } from '../map/overlays';
 import { usePlayerStore } from './usePlayerStore';
 
 interface PostcardButtonProps {
   /** Current calendar year on the TimeSlider (drives stamp era text). */
   currentYear: number;
+  /** Active overlay id, used to cap the postcard zoom against the overlay's native pyramid. */
+  overlayId: string | null;
+}
+
+/**
+ * Postcard zoom target. Lower than the in-Player flyTo zoom (~13) so the
+ * historical map's hand-drawn texture is sharp + spot's regional context
+ * (rivers / dynasty borders / seas) is visible. Capped against the overlay's
+ * maxNativeZoom so CCTS / DARE tiles don't upscale and blur out.
+ */
+/** Default postcard zoom for low-res historical overlays (CCTS / DARE maxNativeZoom = 10)
+ *  and modern basemap. ~40km viewport diameter — captures regional context. */
+const POSTCARD_TARGET_ZOOM_DEFAULT = 10;
+/** For hi-res overlays like 中研院 jm200k_1897 / jm20k_1921 / corona_1966
+ *  (maxNativeZoom = 14) zoom in further so the postcard shows street-level detail. */
+const POSTCARD_TARGET_ZOOM_HIRES = 12;
+/** Threshold: overlays with maxNativeZoom >= this count as "hi-res". */
+const HIRES_OVERLAY_THRESHOLD = 13;
+const POSTCARD_MIN_ZOOM = 5;
+
+/** Pick a postcard target zoom matched to the active overlay's native pyramid.
+ *  No overlay / low-res overlay → DEFAULT (10).
+ *  Hi-res overlay (Taiwan jm/corona series) → HIRES (12). */
+function pickPostcardZoom(overlayId: string | null): number {
+  const cap = getOverlayZoomCap(overlayId);
+  if (cap === undefined) return POSTCARD_TARGET_ZOOM_DEFAULT;
+  if (cap >= HIRES_OVERLAY_THRESHOLD) {
+    return Math.min(POSTCARD_TARGET_ZOOM_HIRES, cap);
+  }
+  return Math.min(POSTCARD_TARGET_ZOOM_DEFAULT, cap);
+}
+/** Tile-load grace period after setView before captureMap. CCTS / DARE remote
+ *  tile servers + fresh viewport extent → 1500ms is the floor that stops the
+ *  "rapid-click → patchy postcard" issue 主公 hit. captureMap's own internal
+ *  poll covers vector tiles but not raster tiles, so we wait here. */
+const POSTCARD_TILE_LOAD_MS = 1500;
+
+/** Find the overlay tile layer (z-index > 0) on the map. Used to dim it for
+ *  postcards when the spot sits outside the overlay's geographic bounds. */
+function findOverlayTileLayer(map: L.Map): L.TileLayer | undefined {
+  let result: L.TileLayer | undefined;
+  map.eachLayer((layer) => {
+    if (!(layer instanceof L.TileLayer)) return;
+    // Internal Leaflet field; documented escape hatch when public API doesn't expose z-index.
+    const z = (layer as unknown as { _zIndex?: number })._zIndex;
+    if (typeof z === 'number' && z > 0) result = layer;
+  });
+  return result;
+}
+
+function isSpotInOverlayBounds(
+  spotLatLng: [number, number],
+  overlayId: string | null,
+): boolean {
+  if (!overlayId) return true;
+  const ov = OVERLAYS.find((o) => o.id === overlayId);
+  if (!ov?.bounds) return true; // unbounded overlay → always "in"
+  const [[s, w], [n, e]] = ov.bounds;
+  return spotLatLng[0] >= s && spotLatLng[0] <= n
+      && spotLatLng[1] >= w && spotLatLng[1] <= e;
 }
 
 type RenderState =
@@ -32,7 +95,8 @@ function resolveLocale(): StampLocale {
   return 'zh-TW';
 }
 
-export default function PostcardButton({ currentYear }: PostcardButtonProps) {
+export default function PostcardButton({ currentYear, overlayId }: PostcardButtonProps) {
+  const map = useMap();
   const project = usePlayerStore((s) => s.project);
   const activeIndex = usePlayerStore((s) => s.activeSpotIndex);
   const [state, setState] = useState<RenderState>({ kind: 'idle' });
@@ -49,19 +113,64 @@ export default function PostcardButton({ currentYear }: PostcardButtonProps) {
   const handleClick = async () => {
     if (state.kind === 'rendering') return;
     setState({ kind: 'rendering' });
+
+    const oldCenter = map.getCenter();
+    const oldZoom = map.getZoom();
+    let zoomChanged = false;
+    let dimmedOverlay: { layer: L.TileLayer; origOpacity: number } | null = null;
+
     try {
-      const captured = await captureMap(2);
       const spot =
         activeIndex !== null && activeIndex >= 0 && activeIndex < project.spots.length
           ? project.spots[activeIndex]
           : project.spots[0];
+
+      // Zoom out + recenter on the spot so the postcard reads as a geographic
+      // tableau, not a 13-zoom close-up that upscales tiles into mush.
+      // Pick zoom adaptively: low-res overlays (CCTS / DARE cap 10) → 10,
+      // hi-res overlays (Taiwan jm series cap 14) → 12.
+      let target = pickPostcardZoom(overlayId);
+      target = Math.max(target, POSTCARD_MIN_ZOOM);
+      target = Math.min(target, oldZoom);
+
+      // Fallback: spot lives outside the active overlay's geographic bounds
+      // (e.g. a Taiwan-overlay user navigates to a London story) → dim the
+      // overlay so the postcard shows the modern basemap instead of a
+      // disconnected tile blob. Using setOpacity directly bypasses
+      // useOverlayLayer's cross-fade animation; the modal backdrop hides the
+      // flicker from the user.
+      if (spot && !isSpotInOverlayBounds(spot.latlng, overlayId)) {
+        const overlayLayer = findOverlayTileLayer(map);
+        if (overlayLayer) {
+          const origOpacity = overlayLayer.options.opacity ?? 1;
+          overlayLayer.setOpacity(0);
+          dimmedOverlay = { layer: overlayLayer, origOpacity };
+        }
+      }
+
+      // Close popups + recenter (without animation so capture is instant).
+      map.closePopup();
+      if (spot && (target !== oldZoom || spot.latlng[0] !== oldCenter.lat || spot.latlng[1] !== oldCenter.lng)) {
+        map.setView(spot.latlng, target, { animate: false });
+        zoomChanged = true;
+      }
+      // Always wait — even when zoom didn't change, dimmed-overlay /
+      // popup-close + tile rerender needs a beat to settle.
+      await new Promise((r) => setTimeout(r, POSTCARD_TILE_LOAD_MS));
+
+      const captured = await captureMap(2);
       const blob = await renderPostcard({
         capturedMap: captured,
-        stamp: {
-          year: currentYear,
-          location: spot?.title,
-          scriptureRef: spot?.scripture_refs?.[0],
-        },
+        stamp: { year: currentYear },
+        spot: spot
+          ? {
+              title: spot.title,
+              photo: spot.photo,
+              desc: spot.desc,
+              scriptureRef: spot.scripture_refs?.[0],
+            }
+          : undefined,
+        projectName: project.name,
         locale: resolveLocale(),
       });
       const url = URL.createObjectURL(blob);
@@ -71,6 +180,14 @@ export default function PostcardButton({ currentYear }: PostcardButtonProps) {
     } catch (e) {
       console.error('Postcard render failed:', e);
       setState({ kind: 'error', msg: t('postcard.error') });
+    } finally {
+      // Always restore the user's view + overlay opacity, even on error / abort
+      if (zoomChanged) {
+        map.setView(oldCenter, oldZoom, { animate: false });
+      }
+      if (dimmedOverlay) {
+        dimmedOverlay.layer.setOpacity(dimmedOverlay.origOpacity);
+      }
     }
   };
 
