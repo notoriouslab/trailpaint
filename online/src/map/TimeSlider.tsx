@@ -23,10 +23,10 @@
  * Excluded from `captureMap` exports via `.time-slider` filter (control, not content).
  */
 
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import L from 'leaflet';
 import { t } from '../i18n';
-import { HISTORY_SCALE, type Scale } from './eraScales';
+import { HISTORY_SCALE, BIBLE_SCALE, type Scale, type ScaleGroupId } from './eraScales';
 import { getRelevantOverlayIds } from './overlays';
 
 /** Payload delivered to onChange when a tick is selected. */
@@ -57,16 +57,21 @@ export default function TimeSlider({ overlayId, onChange, spotsLatLngs }: TimeSl
   const containerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const draggingRef = useRef(false);
+  const [scaleGroup, setScaleGroup] = useState<ScaleGroupId>('history');
 
-  // Filter scale to overlays whose bounds intersect spot positions, then reverse
-  // so index 0 is oldest (left) and index n-1 is modern (right).
+  // History scale: filter overlays by spot bounds, then reverse for left-old/right-new.
+  // Bible scale: keep all 7 ticks (geographic filter doesn't apply — most ticks have
+  // no overlay, just drive spot era fade).
   const scale = useMemo(() => {
+    if (scaleGroup === 'bible') {
+      return reverseChronological(BIBLE_SCALE);
+    }
     const relevantIds = getRelevantOverlayIds(spotsLatLngs);
     const filtered = HISTORY_SCALE.filter(
       (tick) => !tick.overlayId || relevantIds.has(tick.overlayId),
     );
     return reverseChronological(filtered);
-  }, [spotsLatLngs]);
+  }, [spotsLatLngs, scaleGroup]);
 
   const activeIndex = useMemo(() => {
     if (!overlayId) return scale.length - 1; // modern is rightmost after reversal
@@ -88,8 +93,17 @@ export default function TimeSlider({ overlayId, onChange, spotsLatLngs }: TimeSl
     }
   }, []);
 
-  // Degraded: nothing to pick (e.g. spots in a region with 0 overlays + modern)
+  // Degraded: nothing to pick (e.g. spots in a region with 0 overlays + modern).
+  // Bible scale always has 7 ticks so this only triggers for empty history filter.
   if (scale.length < 2) return null;
+
+  /** Toggle scale group. Snaps thumb to modern + clears overlay so the tile state
+   *  matches the new scale's index 0/n-1 immediately (no half-state confusion). */
+  const handleToggleScale = (next: ScaleGroupId) => {
+    if (next === scaleGroup) return;
+    setScaleGroup(next);
+    onChange({ overlayId: null, year: new Date().getFullYear(), labelKey: 'era.modern' });
+  };
 
   /** Map a pointer x within the track to nearest tick index. */
   const pointerToIndex = (clientX: number): number => {
@@ -137,6 +151,30 @@ export default function TimeSlider({ overlayId, onChange, spotsLatLngs }: TimeSl
   return (
     <div className="time-slider time-slider--horizontal" ref={containerRef}>
       <div className="time-slider__pill">
+        <div className="time-slider__group-toggle" role="radiogroup" aria-label={t('timeSlider.scaleGroup')}>
+          <button
+            type="button"
+            className={`time-slider__group-btn${scaleGroup === 'history' ? ' time-slider__group-btn--active' : ''}`}
+            onClick={() => handleToggleScale('history')}
+            title={t('timeSlider.scale.history')}
+            aria-label={t('timeSlider.scale.history')}
+            aria-checked={scaleGroup === 'history'}
+            role="radio"
+          >
+            🗺️
+          </button>
+          <button
+            type="button"
+            className={`time-slider__group-btn${scaleGroup === 'bible' ? ' time-slider__group-btn--active' : ''}`}
+            onClick={() => handleToggleScale('bible')}
+            title={t('timeSlider.scale.bible')}
+            aria-label={t('timeSlider.scale.bible')}
+            aria-checked={scaleGroup === 'bible'}
+            role="radio"
+          >
+            📖
+          </button>
+        </div>
         <div
           className="time-slider__track"
           ref={trackRef}

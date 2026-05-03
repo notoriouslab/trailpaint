@@ -8,6 +8,7 @@ import ScriptureRefs from './ScriptureRefs';
 import LocateButton from '../map/LocateButton';
 import TimeSlider from '../map/TimeSlider';
 import MapToast from '../map/MapToast';
+import PostcardButton from './PostcardButton';
 import { getOverlayZoomCap } from '../map/overlays';
 import { HISTORY_SCALE, MODERN_TICK } from '../map/eraScales';
 import { eraOpacity } from '../map/eraFade';
@@ -247,6 +248,7 @@ export default function PlayerMap() {
         </ActiveMarker>
       ))}
       <MapToast />
+      <PostcardButton currentYear={currentYear} />
     </MapContainer>
   );
 }

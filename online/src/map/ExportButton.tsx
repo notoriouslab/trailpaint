@@ -6,7 +6,7 @@ import { projectToGeojson } from '../core/utils/geojsonExport';
 import { projectToKml } from '../core/utils/kmlExport';
 import { t } from '../i18n';
 
-function sanitizeFilename(name: string): string {
+export function sanitizeFilename(name: string): string {
   return name.replace(/[/\\:*?"<>|]/g, '_').slice(0, 100) || 'Untitled';
 }
 
@@ -192,6 +192,8 @@ export async function captureMap(pixelRatio = 2): Promise<CapturedMap> {
         if (el.classList?.contains('basemap-switcher')) return false;
         if (el.classList?.contains('time-slider')) return false;
         if (el.classList?.contains('map-toast')) return false;
+        if (el.classList?.contains('postcard-button')) return false;
+        if (el.classList?.contains('postcard-modal-backdrop')) return false;
         // Exclude card photos — they are drawn directly to overlaysCanvas below
         // to avoid iOS Safari foreignObject decode failures at high pixelRatio.
         if (el.tagName === 'IMG' && el.closest('.spot-card__photo-wrap')) return false;
