@@ -13,6 +13,7 @@
 
 import type { CapturedMap } from './exportRenderer';
 import { formatEra, formatScriptureRef, type StampLocale } from './postcardStamp';
+import { stripUnsafeChars } from './textSanitize';
 
 const POSTCARD_SIZE = 1080;
 const MAP_HEIGHT = 540;
@@ -153,7 +154,10 @@ async function drawSpotCard(
   if (spot.title) {
     ctx.fillStyle = COLOR_TEXT;
     ctx.font = `36px ${FONT_STACK}`;
-    const titleLines = wrapText(ctx, spot.title, TEXT_WIDTH, 2);
+    // Strip RTL / bidi-override / control chars before drawing — same defence
+    // as formatScriptureRef. An attacker-supplied title containing U+202E
+    // would otherwise reverse downstream text on the postcard.
+    const titleLines = wrapText(ctx, stripUnsafeChars(spot.title), TEXT_WIDTH, 2);
     for (const line of titleLines) {
       ctx.fillText(line, TEXT_LEFT, cursorY);
       cursorY += 44;
@@ -344,6 +348,10 @@ function trimWithEllipsis(
 }
 
 function stripDescDecorations(desc: string): string {
+  // Strip credits + RTL/control chars in one pass: photo credit (📷 ...) gets
+  // truncated, then unsafe chars removed so a malicious desc can't reverse
+  // downstream text on the postcard.
   const idx = desc.indexOf('📷');
-  return (idx === -1 ? desc : desc.slice(0, idx)).trim();
+  const truncated = idx === -1 ? desc : desc.slice(0, idx);
+  return stripUnsafeChars(truncated).trim();
 }

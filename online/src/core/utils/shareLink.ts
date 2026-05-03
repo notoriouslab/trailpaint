@@ -36,6 +36,15 @@ export function compactProject(project: Project, includePhoto = false): Record<s
           su: s.photoMeta.sourceUrl,
         };
       }
+      // v3+ scripture_refs (009): keep so receivers can link to YouVersion etc.
+      if (s.scripture_refs && s.scripture_refs.length > 0) {
+        o.sr = s.scripture_refs;
+      }
+      // v5+ era (016): preserve so TimeSlider era fade still works after
+      // share-link round-trip. Compact as [start, end] tuple.
+      if (s.era) {
+        o.er = [s.era.start, s.era.end];
+      }
       return o;
     }),
     r: project.routes.map((r) => {
@@ -84,6 +93,16 @@ export function expandProject(c: Record<string, unknown>): Project {
         authorUrl: pm.uu,
         sourceUrl: pm.su,
       };
+    }
+    // v3+ scripture_refs (009): expand back as-is; migrateProject re-validates.
+    if (Array.isArray(s.sr)) {
+      out.scripture_refs = (s.sr as unknown[]).filter((x): x is string => typeof x === 'string');
+    }
+    // v5+ era (016): expand [start, end] tuple → { start, end }; migrateProject's
+    // sanitizeEra re-validates (NaN / inverted / out-of-range rejected).
+    if (Array.isArray(s.er) && s.er.length === 2
+        && typeof s.er[0] === 'number' && typeof s.er[1] === 'number') {
+      out.era = { start: s.er[0], end: s.er[1] };
     }
     return out;
   }) ?? [];

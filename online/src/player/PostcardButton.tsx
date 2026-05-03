@@ -185,7 +185,10 @@ export default function PostcardButton({ currentYear, overlayId }: PostcardButto
       if (zoomChanged) {
         map.setView(oldCenter, oldZoom, { animate: false });
       }
-      if (dimmedOverlay) {
+      // Race-safe: user might have switched overlay while the postcard was
+      // rendering — useOverlayLayer would have disposed the captured layer.
+      // map.hasLayer() guards against setOpacity on a stale reference.
+      if (dimmedOverlay && map.hasLayer(dimmedOverlay.layer)) {
         dimmedOverlay.layer.setOpacity(dimmedOverlay.origOpacity);
       }
     }
