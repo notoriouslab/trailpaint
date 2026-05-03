@@ -41,6 +41,42 @@ export function getOverlayZoomCap(overlayId: string | null | undefined): number 
   return ov?.maxNativeZoom;
 }
 
+/**
+ * Return the set of overlay ids whose `bounds` intersect the given spot positions.
+ *
+ * Used by TimeSlider to filter ticks down to overlays geographically relevant to
+ * the current story (a London route shouldn't list 5 China overlays as options).
+ *
+ * Edge cases:
+ *   - `spotsLatLngs` empty → returns ALL overlay ids (no filtering possible)
+ *   - overlay has no `bounds` → kept (treated as global / unbounded)
+ *
+ * Pure function (no Leaflet runtime dependency) so it's safe in tests / SSR.
+ * Uses simple AABB overlap on [south, west, north, east] rectangles.
+ */
+export function getRelevantOverlayIds(
+  spotsLatLngs: ReadonlyArray<readonly [number, number]>,
+): Set<string> {
+  if (spotsLatLngs.length === 0) {
+    return new Set(OVERLAYS.map((o) => o.id));
+  }
+  let south = Infinity, west = Infinity, north = -Infinity, east = -Infinity;
+  for (const [lat, lng] of spotsLatLngs) {
+    if (lat < south) south = lat;
+    if (lat > north) north = lat;
+    if (lng < west) west = lng;
+    if (lng > east) east = lng;
+  }
+  return new Set(
+    OVERLAYS.filter((ov) => {
+      if (!ov.bounds) return true;
+      const [[ovSouth, ovWest], [ovNorth, ovEast]] = ov.bounds;
+      // AABB overlap test — boxes overlap unless one is strictly outside the other on any axis
+      return !(ovEast < west || ovWest > east || ovNorth < south || ovSouth > north);
+    }).map((o) => o.id),
+  );
+}
+
 export const OVERLAY_GROUP_LABEL_KEY: Record<OverlayGroup, string> = {
   taiwan: 'overlay.group.taiwan',
   china: 'overlay.group.china',

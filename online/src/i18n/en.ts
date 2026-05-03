@@ -220,6 +220,17 @@ export default {
   'overlay.group.explore': '🌍 Exploration',
   'overlay.group.war': '⚔️ War',
 
+  // Time Slider
+  'timeSlider.title': 'Era',
+  'timeSlider.toggle': 'Switch era',
+  'era.modern': 'Modern',
+  'era.exodus': 'Exodus (BC 1446)',
+  'era.david': 'King David (BC 1000)',
+  'era.babylon': 'Babylonian Exile (BC 586)',
+  'era.jesus': 'Jesus (AD 30)',
+  'era.paul': 'Paul’s Mission (AD 50)',
+  'era.revelation': 'Revelation (AD 95)',
+
   // Floating menu
   'floating.more': 'More actions',
 

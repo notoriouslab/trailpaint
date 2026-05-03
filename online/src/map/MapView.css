@@ -338,3 +338,114 @@
 .fit-all-button__btn:active {
   background: #e5e5e5;
 }
+
+/* ── Time Slider (horizontal pill at top of map) ── */
+
+.time-slider--horizontal {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 44px;
+  z-index: 700;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+}
+
+.time-slider__pill {
+  pointer-events: auto;
+  width: 100%;
+  max-width: 520px;
+  height: 100%;
+  background: rgba(255, 250, 240, 0.92);
+  border-radius: 22px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  border: 1px solid rgba(184, 90, 0, 0.18);
+  padding: 0 24px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.time-slider__track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  touch-action: none;
+}
+
+.time-slider__rail {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(184, 90, 0, 0.35);
+  border-radius: 1px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.time-slider__tick {
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #b85a00;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.time-slider__tick--active {
+  background: #b85a00;
+  border-color: #b85a00;
+}
+
+.time-slider__thumb {
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #b85a00;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: left 0.18s ease-out;
+}
+
+.time-slider__thumb-label {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: Georgia, serif;
+  font-size: 11px;
+  color: #3b1a06;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  pointer-events: none;
+}
+
+/* Mobile: tighter pill, label larger for touch readability */
+@media (max-width: 767px) {
+  .time-slider--horizontal {
+    height: 40px;
+  }
+  .time-slider__pill {
+    padding: 0 18px;
+  }
+  .time-slider__thumb-label {
+    top: -24px;
+    font-size: 10.5px;
+  }
+}

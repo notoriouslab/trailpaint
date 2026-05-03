@@ -220,6 +220,17 @@ export default {
   'overlay.group.explore': '🌍 探險',
   'overlay.group.war': '⚔️ 戰爭',
 
+  // Time Slider
+  'timeSlider.title': '年代',
+  'timeSlider.toggle': '切換年代',
+  'era.modern': '現代',
+  'era.exodus': '出埃及 (BC 1446)',
+  'era.david': '大衛王 (BC 1000)',
+  'era.babylon': '被擄巴比倫 (BC 586)',
+  'era.jesus': '耶穌時代 (AD 30)',
+  'era.paul': '保羅宣教 (AD 50)',
+  'era.revelation': '啟示錄 (AD 95)',
+
   // Floating menu
   'floating.more': '更多功能',
 

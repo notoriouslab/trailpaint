@@ -220,6 +220,17 @@ export default {
   'overlay.group.explore': '🌍 大航海',
   'overlay.group.war': '⚔️ 戦争',
 
+  // Time Slider
+  'timeSlider.title': '年代',
+  'timeSlider.toggle': '年代切替',
+  'era.modern': '現代',
+  'era.exodus': '出エジプト (BC 1446)',
+  'era.david': 'ダビデ王 (BC 1000)',
+  'era.babylon': 'バビロン捕囚 (BC 586)',
+  'era.jesus': 'イエス時代 (AD 30)',
+  'era.paul': 'パウロ宣教 (AD 50)',
+  'era.revelation': 'ヨハネ黙示録 (AD 95)',
+
   // Floating menu
   'floating.more': 'その他の機能',
 

@@ -6,6 +6,7 @@ import PlayerBasemapSwitcher from './PlayerBasemapSwitcher';
 import PlayerFitAll from './PlayerFitAll';
 import ScriptureRefs from './ScriptureRefs';
 import LocateButton from '../map/LocateButton';
+import TimeSlider from '../map/TimeSlider';
 import { getOverlayZoomCap } from '../map/overlays';
 import { PhotoAttribution } from '../core/components/PhotoAttribution';
 import type { Spot } from '../core/models/types';
@@ -13,7 +14,7 @@ import 'leaflet/dist/leaflet.css';
 import '../map/MapView.css';
 
 /** Fit map to all spots + route points on load */
-function FitBounds() {
+function FitBounds({ overlayId }: { overlayId: string | null }) {
   const map = useMap();
   const project = usePlayerStore((s) => s.project);
 
@@ -29,18 +30,20 @@ function FitBounds() {
       return;
     }
     const bounds = L.latLngBounds(pts);
-    const cap = getOverlayZoomCap(project.overlay?.id);
+    const cap = getOverlayZoomCap(overlayId);
     map.fitBounds(bounds, {
       padding: [40, 40],
       ...(cap !== undefined && { maxZoom: cap }),
     });
+    // overlayId intentionally omitted — only fit on initial project load
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [map, project]);
 
   return null;
 }
 
 /** Fly to active spot when it changes — offset north so popup has room above */
-function FlyToActive() {
+function FlyToActive({ overlayId }: { overlayId: string | null }) {
   const map = useMap();
   const project = usePlayerStore((s) => s.project);
   const activeIndex = usePlayerStore((s) => s.activeSpotIndex);
@@ -49,7 +52,7 @@ function FlyToActive() {
     if (activeIndex === null || activeIndex < 0 || !project) return;
     const spot = project.spots[activeIndex];
     if (!spot) return;
-    const cap = getOverlayZoomCap(project.overlay?.id);
+    const cap = getOverlayZoomCap(overlayId);
     let zoom = Math.max(map.getZoom(), 13);
     if (cap !== undefined) zoom = Math.min(zoom, cap);
     // Offset 120px north in screen coords so marker sits in lower half
@@ -59,7 +62,7 @@ function FlyToActive() {
     // Clamp to valid Mercator range
     const safeLat = Math.max(-85, Math.min(85, target.lat));
     map.flyTo([safeLat, target.lng], zoom, { duration: 0.8 });
-  }, [map, project, activeIndex]);
+  }, [map, project, activeIndex, overlayId]);
 
   return null;
 }
@@ -156,6 +159,12 @@ export default function PlayerMap() {
   const setActiveSpot = usePlayerStore((s) => s.setActiveSpot);
   const setPlaying = usePlayerStore((s) => s.setPlaying);
 
+  // Overlay state lifted up so PlayerBasemapSwitcher and TimeSlider stay in sync.
+  // Player session-only — not written back to share link envelope.
+  const [overlay, setOverlay] = useState<{ id: string; opacity: number } | null>(
+    project.overlay ?? null,
+  );
+
   return (
     <MapContainer
       center={project.center}
@@ -167,11 +176,24 @@ export default function PlayerMap() {
       zoomControl={false}
     >
       <ZoomControl position="bottomright" />
-      <FitBounds />
-      <FlyToActive />
-      <PlayerBasemapSwitcher />
+      <FitBounds overlayId={overlay?.id ?? null} />
+      <FlyToActive overlayId={overlay?.id ?? null} />
+      <PlayerBasemapSwitcher
+        overlayId={overlay?.id ?? null}
+        opacity={overlay?.opacity ?? 0.5}
+        onOverlayChange={setOverlay}
+        initialBasemapId={project.basemapId}
+      />
       <PlayerFitAll />
       <LocateButton />
+      <TimeSlider
+        overlayId={overlay?.id ?? null}
+        spotsLatLngs={project.spots.map((s) => s.latlng)}
+        onChange={(id) => {
+          if (!id) setOverlay(null);
+          else setOverlay({ id, opacity: overlay?.opacity ?? 0.5 });
+        }}
+      />
 
       {/* Routes */}
       {project.routes.map((r) => (

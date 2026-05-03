@@ -8,6 +8,7 @@ import HandDrawnFilter from './HandDrawnFilter';
 import BasemapSwitcher from './BasemapSwitcher';
 import LocateButton from './LocateButton';
 import FitAllButton from './FitAllButton';
+import TimeSlider from './TimeSlider';
 import Watermark from './Watermark';
 import { setMapInstance } from './useMapRef';
 import 'leaflet/dist/leaflet.css';
@@ -75,6 +76,24 @@ function SpotMarkers() {
   return <>{spots.map((spot) => <SpotMarker key={spot.id} spot={spot} />)}</>;
 }
 
+/** TimeSlider wired to the project store (Editor side). */
+function MapTimeSlider() {
+  const overlay = useProjectStore((s) => s.project.overlay);
+  const setOverlay = useProjectStore((s) => s.setOverlay);
+  const spots = useProjectStore((s) => s.project.spots);
+  const spotsLatLngs = spots.map((s) => s.latlng);
+  return (
+    <TimeSlider
+      overlayId={overlay?.id ?? null}
+      spotsLatLngs={spotsLatLngs}
+      onChange={(id) => {
+        if (!id) setOverlay(null);
+        else setOverlay({ id, opacity: overlay?.opacity ?? 0.5 });
+      }}
+    />
+  );
+}
+
 export default function MapView() {
   const center = useProjectStore((s) => s.project.center);
   const zoom = useProjectStore((s) => s.project.zoom);
@@ -95,6 +114,7 @@ export default function MapView() {
       <BasemapSwitcher />
       <LocateButton />
       <FitAllButton />
+      <MapTimeSlider />
       <HandDrawnFilter />
       <MapClickHandler />
       <MapSync />
