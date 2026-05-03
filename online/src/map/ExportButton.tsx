@@ -191,6 +191,7 @@ export async function captureMap(pixelRatio = 2): Promise<CapturedMap> {
         if (el.classList?.contains('locate-button')) return false;
         if (el.classList?.contains('basemap-switcher')) return false;
         if (el.classList?.contains('time-slider')) return false;
+        if (el.classList?.contains('map-toast')) return false;
         // Exclude card photos — they are drawn directly to overlaysCanvas below
         // to avoid iOS Safari foreignObject decode failures at high pixelRatio.
         if (el.tagName === 'IMG' && el.closest('.spot-card__photo-wrap')) return false;

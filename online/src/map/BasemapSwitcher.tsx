@@ -9,6 +9,7 @@ import { BASEMAPS } from './basemaps';
 import type { BasemapDef } from './basemaps';
 import { createBasemapLayer, resolveBasemapId } from './basemapLayer';
 import { useOverlayLayer } from './eraOverlayLayer';
+import { dispatchOverlayLoadFailed } from './MapToast';
 
 export default function BasemapSwitcher() {
   const map = useMap();
@@ -37,7 +38,15 @@ export default function BasemapSwitcher() {
   const overlayOpacity = overlay?.opacity ?? 0.5;
 
   // Cross-fade overlay layer (shared with TimeSlider via useOverlayLayer hook)
-  useOverlayLayer({ map, overlayId, opacity: overlayOpacity });
+  useOverlayLayer({
+    map,
+    overlayId,
+    opacity: overlayOpacity,
+    onLoadError: () => {
+      setOverlay(null);
+      dispatchOverlayLoadFailed();
+    },
+  });
 
   // Apply a basemap to the Leaflet map (imperative, no store write)
   const applyBasemap = (bm: BasemapDef) => {

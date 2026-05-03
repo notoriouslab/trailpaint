@@ -12,6 +12,8 @@
 import { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import { OVERLAYS } from './overlays';
+import { isOverlayThresholdReached } from './tileErrorThreshold';
+export { TILE_ERROR_THRESHOLD, isOverlayThresholdReached } from './tileErrorThreshold';
 
 interface CrossFadeHandle {
   /** Cancel the in-flight animation. Snaps both layers to the final target state. */
@@ -69,7 +71,14 @@ interface UseOverlayLayerOpts {
   overlayId: string | null;
   opacity: number;
   durationMs?: number;
+  /**
+   * Called when the active overlay's tile server returns errors for 3 distinct
+   * tile URLs (overlay-wide failure heuristic, R1 risk mitigation).
+   * Caller is expected to clear the overlay selection so the layer fades out.
+   */
+  onLoadError?: () => void;
 }
+
 
 /**
  * Manages a Leaflet overlay tile layer with cross-fade transitions.
@@ -87,9 +96,13 @@ export function useOverlayLayer({
   overlayId,
   opacity,
   durationMs = 400,
+  onLoadError,
 }: UseOverlayLayerOpts) {
   const layerRef = useRef<L.TileLayer | null>(null);
   const animHandleRef = useRef<CrossFadeHandle | null>(null);
+  // Stable ref so the effect doesn't re-run when caller passes a fresh callback closure
+  const onLoadErrorRef = useRef(onLoadError);
+  useEffect(() => { onLoadErrorRef.current = onLoadError; }, [onLoadError]);
 
   useEffect(() => {
     // Cancel any in-flight cross-fade before starting new transition
@@ -126,6 +139,20 @@ export function useOverlayLayer({
       crossOrigin: true,
     }).addTo(map);
     newLayer.setZIndex(2);
+
+    // Track distinct failed tile URLs scoped to THIS layer instance.
+    // Counter resets automatically when overlayId changes (effect re-runs → new Set).
+    const erroredUrls = new Set<string>();
+    let errorFired = false;
+    const handleTileError = (e: L.TileErrorEvent) => {
+      if (errorFired) return;
+      const url = (e.tile as HTMLImageElement | undefined)?.src;
+      if (isOverlayThresholdReached(erroredUrls, url)) {
+        errorFired = true;
+        onLoadErrorRef.current?.();
+      }
+    };
+    newLayer.on('tileerror', handleTileError);
 
     animHandleRef.current = crossFadeOverlay(
       map,

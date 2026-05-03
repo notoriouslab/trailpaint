@@ -449,3 +449,39 @@
     font-size: 10.5px;
   }
 }
+
+/* ── Map Toast (overlay-load-failed notifications) ── */
+
+.map-toast {
+  position: absolute;
+  top: 64px;  /* below TimeSlider pill (top:10 + height:44 + gap) */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 750;
+  background: rgba(120, 53, 15, 0.95);
+  color: #fef9e7;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  white-space: nowrap;
+  pointer-events: none;
+  animation: map-toast-fade-in 0.2s ease-out;
+}
+
+@keyframes map-toast-fade-in {
+  from { opacity: 0; transform: translate(-50%, -8px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@media (max-width: 767px) {
+  .map-toast {
+    font-size: 12px;
+    padding: 7px 12px;
+    top: 60px;
+    max-width: calc(100vw - 24px);
+    white-space: normal;
+    text-align: center;
+  }
+}

@@ -7,6 +7,7 @@ import PlayerFitAll from './PlayerFitAll';
 import ScriptureRefs from './ScriptureRefs';
 import LocateButton from '../map/LocateButton';
 import TimeSlider from '../map/TimeSlider';
+import MapToast from '../map/MapToast';
 import { getOverlayZoomCap } from '../map/overlays';
 import { PhotoAttribution } from '../core/components/PhotoAttribution';
 import type { Spot } from '../core/models/types';
@@ -224,6 +225,7 @@ export default function PlayerMap() {
           </Popup>
         </ActiveMarker>
       ))}
+      <MapToast />
     </MapContainer>
   );
 }

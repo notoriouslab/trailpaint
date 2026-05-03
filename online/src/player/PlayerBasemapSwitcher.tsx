@@ -8,6 +8,7 @@ import { BASEMAPS, DEFAULT_BASEMAP_ID } from '../map/basemaps';
 import type { BasemapDef } from '../map/basemaps';
 import { createBasemapLayer } from '../map/basemapLayer';
 import { useOverlayLayer } from '../map/eraOverlayLayer';
+import { dispatchOverlayLoadFailed } from '../map/MapToast';
 
 interface PlayerBasemapSwitcherProps {
   /** Currently selected overlay id, or null for none. Controlled by parent (shared with TimeSlider). */
@@ -38,7 +39,15 @@ export default function PlayerBasemapSwitcher({
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Cross-fade overlay layer (shared with TimeSlider via useOverlayLayer hook)
-  useOverlayLayer({ map, overlayId, opacity });
+  useOverlayLayer({
+    map,
+    overlayId,
+    opacity,
+    onLoadError: () => {
+      onOverlayChange(null);
+      dispatchOverlayLoadFailed();
+    },
+  });
 
   // Prevent map drag/scroll when interacting with this control
   useEffect(() => {

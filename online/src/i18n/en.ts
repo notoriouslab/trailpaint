@@ -219,6 +219,7 @@ export default {
   'overlay.group.ancient': '✝️ Ancient',
   'overlay.group.explore': '🌍 Exploration',
   'overlay.group.war': '⚔️ War',
+  'overlay.loadFailed': 'Historical overlay failed to load, reverting to modern',
 
   // Time Slider
   'timeSlider.title': 'Era',

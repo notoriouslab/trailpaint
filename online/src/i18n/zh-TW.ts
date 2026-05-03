@@ -219,6 +219,7 @@ export default {
   'overlay.group.ancient': '✝️ 古代',
   'overlay.group.explore': '🌍 探險',
   'overlay.group.war': '⚔️ 戰爭',
+  'overlay.loadFailed': '歷史地圖載入失敗，已切回現代',
 
   // Time Slider
   'timeSlider.title': '年代',
