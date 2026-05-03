@@ -107,4 +107,10 @@ describe('sanitizeEra', () => {
     expect(sanitizeEra({ start: -3001, end: 0 })).toBeUndefined();
     expect(sanitizeEra({ start: 0, end: 3001 })).toBeUndefined();
   });
+
+  it('accepts inclusive boundaries -3000 / 3000', () => {
+    expect(sanitizeEra({ start: -3000, end: -3000 })).toEqual({ start: -3000, end: -3000 });
+    expect(sanitizeEra({ start: 3000, end: 3000 })).toEqual({ start: 3000, end: 3000 });
+    expect(sanitizeEra({ start: -3000, end: 3000 })).toEqual({ start: -3000, end: 3000 });
+  });
 });

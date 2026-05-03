@@ -299,6 +299,10 @@ function roundedRectPath(
 function loadImage(src: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const img = new Image();
+    // Defence in depth: today spot.photo is always a base64 data: URL (no CORS
+    // implications), but if a future schema allows external photo URLs the
+    // canvas would taint without crossOrigin set, breaking toBlob silently.
+    img.crossOrigin = 'anonymous';
     img.onload = () => resolve(img);
     img.onerror = () => reject(new Error('image load failed'));
     img.src = src;

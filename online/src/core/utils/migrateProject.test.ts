@@ -479,3 +479,46 @@ describe('migrateProject — v3.1 photoMeta / photo_query (013)', () => {
     expect(p.spots[0].photo_query?.length).toBe(200);
   });
 });
+
+describe('migrateProject — spot.num clamp (賈詡 audit E2)', () => {
+  const validBase = {
+    version: 5,
+    name: 'Test',
+    center: [23.5, 121],
+    zoom: 8,
+    spots: [],
+    routes: [],
+  };
+
+  it('clamps spot.num to <= 9999 (1e308 → 9999, prevents UI badge break)', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', num: 1e308 }],
+    });
+    expect(p.spots[0].num).toBe(9999);
+  });
+
+  it('falls back to spots.length+1 when spot.num is NaN', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', num: NaN }],
+    });
+    expect(p.spots[0].num).toBe(1);
+  });
+
+  it('falls back to spots.length+1 when spot.num is Infinity', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', num: Infinity }],
+    });
+    expect(p.spots[0].num).toBe(1);
+  });
+
+  it('preserves valid spot.num within [1, 9999]', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', num: 42 }],
+    });
+    expect(p.spots[0].num).toBe(42);
+  });
+});

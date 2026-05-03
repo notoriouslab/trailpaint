@@ -110,6 +110,10 @@ export default function TimeSlider({ overlayId, onChange, spotsLatLngs }: TimeSl
     const track = trackRef.current;
     if (!track) return activeIndex;
     const rect = track.getBoundingClientRect();
+    // Guard against zero-width track (display:none mid-pointer / pre-layout
+    // pointerdown). Without this `clientX / 0 === Infinity` and Math.round
+    // returns Infinity, producing scale[Infinity] = undefined → crash.
+    if (rect.width === 0) return activeIndex;
     const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
     return Math.round(ratio * (scale.length - 1));
   };

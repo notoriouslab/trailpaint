@@ -52,6 +52,10 @@ export async function searchCommonsPhoto(
   return null;
 }
 
+/** Per-candidate fetch timeout. Caller's outer signal still wins; this is a
+ *  defence-in-depth floor for callers that forget to pass one (e.g. tests). */
+const CANDIDATE_TIMEOUT_MS = 15_000;
+
 async function searchSingleCandidate(query: string, signal?: AbortSignal): Promise<CommonsHit | null> {
   const params = new URLSearchParams({
     action: 'query',
@@ -66,7 +70,12 @@ async function searchSingleCandidate(query: string, signal?: AbortSignal): Promi
     iiurlwidth: String(THUMB_WIDTH),
     iiextmetadatafilter: 'LicenseShortName|Artist|Credit',
   });
-  const res = await fetch(`${API}?${params}`, { signal });
+  // Compose caller signal with a self-imposed timeout so a hanging Commons
+  // request can't keep the import wizard pending indefinitely.
+  const innerSignal = signal
+    ? AbortSignal.any([signal, AbortSignal.timeout(CANDIDATE_TIMEOUT_MS)])
+    : AbortSignal.timeout(CANDIDATE_TIMEOUT_MS);
+  const res = await fetch(`${API}?${params}`, { signal: innerSignal });
   if (!res.ok) return null;
   const data = (await res.json()) as CommonsApiResponse;
   const pages = data.query?.pages;
@@ -128,5 +137,9 @@ function extractFirstHref(html: string): string | null {
   const href = m[1];
   if (href.startsWith('//')) return `https:${href}`;
   if (href.startsWith('/')) return `https://commons.wikimedia.org${href}`;
+  // Reject non-http(s) absolute hrefs at extraction time. `javascript:`,
+  // `data:`, `vbscript:` etc would otherwise reach migrateProject's authorUrl
+  // sanitiser as the only line of defence — belt + suspenders.
+  if (!/^https?:\/\//i.test(href)) return null;
   return href;
 }
