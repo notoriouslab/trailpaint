@@ -6,7 +6,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { loadCompilation, orderCompilationSpots, type CompilationSpot } from './compilations';
+import { loadCompilation, orderCompilationSpots, isValidSegmentId, type CompilationSpot } from './compilations';
 import type { Compilation } from '../models/types';
 
 const baseCompilation: Compilation = {
@@ -209,5 +209,44 @@ describe('loadCompilation', () => {
       'r-xuanzang/west',
       'r-marco-polo/east-journey',
     ]);
+  });
+});
+
+describe('isValidSegmentId — path injection defence', () => {
+  it('accepts well-formed group/segment ids', () => {
+    expect(isValidSegmentId('paul/first-journey')).toBe(true);
+    expect(isValidSegmentId('zhang-qian/second-mission')).toBe(true);
+    expect(isValidSegmentId('a1/b2')).toBe(true);
+  });
+
+  it('rejects path traversal', () => {
+    expect(isValidSegmentId('paul/../../etc/passwd')).toBe(false);
+    expect(isValidSegmentId('../paul/first')).toBe(false);
+    expect(isValidSegmentId('paul/..')).toBe(false);
+  });
+
+  it('rejects leading / trailing / double slashes', () => {
+    expect(isValidSegmentId('/paul/first-journey')).toBe(false);
+    expect(isValidSegmentId('paul/first-journey/')).toBe(false);
+    expect(isValidSegmentId('paul//first-journey')).toBe(false);
+  });
+
+  it('rejects single-token (no slash) ids', () => {
+    expect(isValidSegmentId('paul')).toBe(false);
+    expect(isValidSegmentId('first-journey')).toBe(false);
+  });
+
+  it('rejects uppercase, underscores, dots, spaces, unicode', () => {
+    expect(isValidSegmentId('Paul/first-journey')).toBe(false);
+    expect(isValidSegmentId('paul/First-Journey')).toBe(false);
+    expect(isValidSegmentId('paul/first_journey')).toBe(false);
+    expect(isValidSegmentId('paul/first.journey')).toBe(false);
+    expect(isValidSegmentId('paul /first')).toBe(false);
+    expect(isValidSegmentId('保羅/first')).toBe(false);
+  });
+
+  it('rejects ids starting with hyphen (would shadow CLI flags in any consumer)', () => {
+    expect(isValidSegmentId('-paul/first')).toBe(false);
+    expect(isValidSegmentId('paul/-first')).toBe(false);
   });
 });

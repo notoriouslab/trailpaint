@@ -29,11 +29,23 @@ export interface CompilationLoadResult {
   failedSegments: string[];
 }
 
+/**
+ * Validate segment id format: `group/segment`, both kebab-case alphanumerics.
+ * Rejects path traversal (`..`), leading/trailing slashes, double slashes,
+ * uppercase, and any non-`[a-z0-9-]` characters.
+ *
+ * Defence in depth: catalog.json comes from `/stories/catalog.json` which is
+ * trusted same-origin content, but a future supply-chain compromise of that
+ * file shouldn't translate into arbitrary path fetches.
+ */
+export function isValidSegmentId(id: string): boolean {
+  return /^[a-z0-9][a-z0-9-]*\/[a-z0-9][a-z0-9-]*$/.test(id);
+}
+
 /** Resolve a segment id to a fetchable URL under the stories tree. */
 function segmentUrl(basePath: string, segmentId: string): string {
-  // Strip trailing slash from basePath, leading slash from segmentId for clean join.
-  const clean = (s: string) => s.replace(/^\/+|\/+$/g, '');
-  return `/${clean(basePath)}/${clean(segmentId)}.trailpaint.json`;
+  const cleanBase = basePath.replace(/^\/+|\/+$/g, '');
+  return `/${cleanBase}/${segmentId}.trailpaint.json`;
 }
 
 /**
@@ -45,6 +57,9 @@ async function loadSegment(
   segmentId: string,
   signal?: AbortSignal,
 ): Promise<Project> {
+  if (!isValidSegmentId(segmentId)) {
+    throw new Error(`Invalid segment id: ${segmentId}`);
+  }
   const url = segmentUrl(basePath, segmentId);
   const res = await fetch(url, { signal });
   if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`);

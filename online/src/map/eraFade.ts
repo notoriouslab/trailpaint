@@ -28,6 +28,11 @@ export function eraOpacity(
   decay = 200,
 ): number {
   if (!era) return 1;
+  // Defensive: NaN currentYear (e.g. tick.year computed from corrupt scale)
+  // would propagate through Math.max and ruin every spot's opacity. Treat as
+  // "show fully" — TimeSlider should never produce NaN, but if it does we
+  // prefer a usable fallback over invisible spots.
+  if (!Number.isFinite(currentYear)) return 1;
   const { start, end } = era;
   if (currentYear >= start && currentYear <= end) return 1;
   const dist = currentYear < start ? start - currentYear : currentYear - end;

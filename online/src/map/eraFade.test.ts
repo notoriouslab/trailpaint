@@ -54,6 +54,15 @@ describe('eraOpacity', () => {
     // decay 400 → 100 years off = 1 - (100/400)^2 = 0.9375
     expect(eraOpacity(era, 200, 400)).toBeCloseTo(0.9375, 5);
   });
+
+  it('NaN currentYear → returns 1 (defensive — would otherwise ruin all spots)', () => {
+    expect(eraOpacity({ start: 100, end: 200 }, NaN)).toBe(1);
+  });
+
+  it('Infinity currentYear → returns 1 (defensive)', () => {
+    expect(eraOpacity({ start: 100, end: 200 }, Infinity)).toBe(1);
+    expect(eraOpacity({ start: 100, end: 200 }, -Infinity)).toBe(1);
+  });
 });
 
 describe('sanitizeEra', () => {

@@ -114,7 +114,9 @@ export function expandProject(c: Record<string, unknown>): Project {
     elevations: (r.e as number[] | null) ?? null,
   })) ?? [];
   const project: Project = {
-    version: (c.v as 1 | 2) ?? 2,
+    // Version cast is cosmetic — migrateProject re-runs against the expanded
+    // payload and force-bumps to the latest schema version (currently v5).
+    version: (typeof c.v === 'number' ? c.v : 5) as Project['version'],
     name: c.n as string,
     center: c.c as [number, number],
     zoom: c.z as number,
