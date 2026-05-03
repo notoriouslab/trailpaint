@@ -27,7 +27,11 @@
         "Matt 26:20-29",
         "John 13:1-17",
         "Luke 22:19-20"
-      ]
+      ],
+      "era": {
+        "start": 30,
+        "end": 30
+      }
     },
     {
       "id": "gethsemane",
@@ -48,7 +52,11 @@
         "Matt 26:36-46",
         "Luke 22:39-46",
         "John 18:1-11"
-      ]
+      ],
+      "era": {
+        "start": 30,
+        "end": 30
+      }
     },
     {
       "id": "caiaphas",
@@ -69,7 +77,11 @@
         "Matt 26:57-75",
         "Luke 22:54-62",
         "John 18:15-27"
-      ]
+      ],
+      "era": {
+        "start": 30,
+        "end": 30
+      }
     },
     {
       "id": "pilate",
@@ -89,7 +101,11 @@
       "scripture_refs": [
         "Matt 27:11-26",
         "John 18:28-19:16"
-      ]
+      ],
+      "era": {
+        "start": 30,
+        "end": 30
+      }
     },
     {
       "id": "via-dolorosa",
@@ -109,7 +125,11 @@
       "scripture_refs": [
         "Matt 27:32",
         "Luke 23:26-31"
-      ]
+      ],
+      "era": {
+        "start": 30,
+        "end": 30
+      }
     },
     {
       "id": "golgotha",
@@ -129,7 +149,11 @@
       "scripture_refs": [
         "Luke 23:33-46",
         "John 19:17-30"
-      ]
+      ],
+      "era": {
+        "start": 30,
+        "end": 30
+      }
     },
     {
       "id": "centurion",
@@ -149,7 +173,11 @@
       "scripture_refs": [
         "Matt 27:51-54",
         "Mark 15:39"
-      ]
+      ],
+      "era": {
+        "start": 30,
+        "end": 30
+      }
     }
   ],
   "routes": [
