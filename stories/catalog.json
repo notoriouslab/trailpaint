@@ -23,6 +23,16 @@
   ],
   "stories": [
     {
+      "id": "matteo-ricci",
+      "collection": "missions",
+      "title": "利瑪竇明清來華",
+      "subtitle": "AD 1582 — 1610 從澳門到北京 28 年",
+      "description": "義大利耶穌會士 Matteo Ricci 從澳門入華，學中文書畫《山海輿地全圖》、改穿儒服自稱「西儒」、北上 1601 入京覲見萬曆獻自鳴鐘。在徐光啟協助下完成《幾何原本》漢譯，1610 卒葬北京柵欄墓 — 中國皇帝首次特准外國傳教士葬地。文化適應宣教典範。",
+      "thumbnail": "matteo-ricci/cover.jpg",
+      "path": "matteo-ricci/",
+      "count": 1
+    },
+    {
       "id": "taiwan-missionaries",
       "collection": "missions",
       "title": "台灣宣教士腳蹤",
