@@ -83,6 +83,16 @@
       "count": 3
     },
     {
+      "id": "early-church",
+      "collection": "bible",
+      "title": "使徒行傳早期教會",
+      "subtitle": "AD 30 — 46 從耶路撒冷到安提阿",
+      "description": "耶穌升天後 10 日五旬節聖靈降臨於馬可樓 120 門徒，當日 3000 人受洗誕生耶路撒冷教會。司提反殉道引發逼迫使福音擴散至撒馬利亞、海岸、敘利亞；衣索匹亞太監受洗、彼得屋頂異象後接納哥尼流、安提阿教會「基督徒」首稱並差遣保羅出航。",
+      "thumbnail": "early-church/cover.jpg",
+      "path": "early-church/",
+      "count": 1
+    },
+    {
       "id": "revelation-churches",
       "collection": "bible",
       "title": "啟示錄七教會",
