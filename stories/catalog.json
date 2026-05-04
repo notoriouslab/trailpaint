@@ -63,6 +63,16 @@
       "count": 2
     },
     {
+      "id": "jesus-birth",
+      "collection": "bible",
+      "title": "耶穌降生",
+      "subtitle": "BC 6 — AD 12 從拿撒勒到聖殿",
+      "description": "加百列向馬利亞報訊，與約瑟在伯利恆生下嬰孩耶穌；逃亡埃及避希律屠殺、返拿撒勒成長、12 歲於聖殿與教師問答。本路線採 BC 6 早期年代論，補完 jesus-galilee 受洗前的童年敘事。",
+      "thumbnail": "jesus-birth/cover.jpg",
+      "path": "jesus-birth/",
+      "count": 1
+    },
+    {
       "id": "passion-week",
       "collection": "bible",
       "title": "耶穌受難週",
