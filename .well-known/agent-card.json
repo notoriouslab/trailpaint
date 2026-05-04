@@ -91,7 +91,7 @@
     {
       "id": "story-compilations",
       "name": "Story Compilations (v1.4)",
-      "description": "Pre-built compilation maps that overlay multiple story segments on the same canvas with a time slider. Five default compilations: Bible Narrative 2000y (9 stories from Exodus to Revelation), Great Century of Missions (Hudson Taylor + Taiwan missionaries), Paul Three Journeys, Four Gospels Map, Silk Road 2000 (Zhang Qian + Xuanzang + Marco Polo). Sunday school: drag the slider through 1500 years of biblical narrative on a single map.",
+      "description": "Pre-built compilation maps that overlay multiple story segments on the same canvas with a time slider. Seven default compilations: Bible Narrative 2000y (9 stories from Exodus to Revelation, 17 segments), Mission East 350y (Ricci + Carey + Hudson Taylor + Taiwan missionaries, 9 segments, sequential), Great Century of Missions (Hudson Taylor + Taiwan missionaries), Age of Discovery 500y (Marco Polo + Zheng He + Columbus + Magellan + Cook, 16 segments, chronological cross-author), Paul Three Journeys, Four Gospels Map, Silk Road 2000 (Zhang Qian + Xuanzang + Marco Polo). Sunday school: drag the slider through 1500 years of biblical narrative on a single map.",
       "url": "https://trailpaint.org/app/player/",
       "tags": ["compilation", "bible", "missions", "church", "sunday-school"]
     },
