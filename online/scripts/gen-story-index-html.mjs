@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..', '..');
 const STORIES = join(ROOT, 'stories');
-const GROUPS = ['paul', 'xuanzang', 'zheng-he', 'jesus-galilee', 'zhang-qian', 'wen-tianxiang', 'marco-polo', 'xu-xiake', 'revelation-churches', 'exodus-conquest'];
+const GROUPS = ['paul', 'xuanzang', 'zheng-he', 'jesus-galilee', 'zhang-qian', 'wen-tianxiang', 'marco-polo', 'xu-xiake', 'revelation-churches', 'exodus-conquest', 'david-king'];
 const TODAY = new Date().toISOString().slice(0, 10);
 
 function esc(s) {

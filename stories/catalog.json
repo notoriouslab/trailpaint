@@ -43,6 +43,16 @@
       "count": 2
     },
     {
+      "id": "david-king",
+      "collection": "bible",
+      "title": "大衛王生平",
+      "subtitle": "BC 1010 — 970 從伯利恆到耶路撒冷",
+      "description": "少年牧羊人從伯利恆受撒母耳膏立，在以拉谷以彈弓擊敗歌利亞名震以色列；流亡曠野召聚 400 人，於希伯崙作猶大王 7 年，最終攻克錫安建立耶路撒冷為京都。在位 33 年間經歷拔示巴與烏利亞、押沙龍叛變等宮廷悲劇，晚年所羅門在基遍蒙神顯現繼承王位。",
+      "thumbnail": "david-king/cover.jpg",
+      "path": "david-king/",
+      "count": 2
+    },
+    {
       "id": "passion-week",
       "collection": "bible",
       "title": "耶穌受難週",

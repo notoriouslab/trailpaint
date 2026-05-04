@@ -1,0 +1,45 @@
+{
+  "id": "david-king",
+  "title": "大衛王生平",
+  "subtitle": "BC 1010 — 970 從伯利恆到耶路撒冷",
+  "description": "少年牧羊人從伯利恆受撒母耳膏立，在以拉谷以彈弓擊敗歌利亞名震以色列；流亡曠野召聚 400 人，於希伯崙作猶大王 7 年，最終攻克錫安建立耶路撒冷為京都。在位 33 年間經歷拔示巴與烏利亞、押沙龍叛變等宮廷悲劇，晚年所羅門在基遍蒙神顯現繼承王位。",
+  "locale": "zh-TW",
+  "cover": "cover.jpg",
+  "music": {
+    "src": "../music/voller-hoffnung.mp3",
+    "title": "Voller Hoffnung — Ronny Matthes",
+    "credit": "Ronny Matthes (Jamendo / Internet Archive)",
+    "license": "CC"
+  },
+  "og": {
+    "title": "大衛王生平 — TrailPaint Stories",
+    "description": "互動地圖：BC 1010 從伯利恆到耶路撒冷，11 spots 含 City of David 考古爭議",
+    "image": "og.jpg"
+  },
+  "stories": [
+    {
+      "id": "rise",
+      "title": "從牧羊到建京都",
+      "subtitle": "BC 1025 — 1003 伯利恆到耶路撒冷",
+      "description": "少年大衛在伯利恆受撒母耳膏立，於以拉谷以彈弓擊倒歌利亞名震以色列，遭掃羅猜忌後流亡曠野召聚 400 人，於希伯崙作猶大王 7 年，最終攻克錫安城建立耶路撒冷為京都，歷時約 22 年。",
+      "data": "rise.trailpaint.json",
+      "thumbnail": "rise-thumb.jpg",
+      "color": "#b45309",
+      "music": "../music/voller-hoffnung.mp3"
+    },
+    {
+      "id": "reign",
+      "title": "王朝與傳承",
+      "subtitle": "BC 1003 — 970 烏利亞與押沙龍",
+      "description": "大衛攻克耶路撒冷後 33 年王朝充滿榮耀與悲劇：買亞勞拿禾場為聖殿預備地、攻打亞捫人時爆發拔示巴與烏利亞事件、長子押沙龍叛變兵敗約旦河外、晚年所羅門在基遍蒙神顯現確立王位。",
+      "data": "reign.trailpaint.json",
+      "thumbnail": "reign-thumb.jpg",
+      "color": "#7f1d1d",
+      "music": "../music/sorrow-and-love.mp3"
+    }
+  ],
+  "footer": {
+    "cta": "在 TrailPaint 中建立你自己的故事地圖",
+    "url": "https://trailpaint.org/app/"
+  }
+}
