@@ -81,7 +81,7 @@ export function expandProject(c: Record<string, unknown>): Project {
       desc: (s.d as string) ?? '',
       photo: (typeof s.p === 'string' ? s.p : null),
       iconId: s.k as string,
-      cardOffset: s.o ? { x: (s.o as number[])[0], y: (s.o as number[])[1] } : { ...DEFAULT_CARD_OFFSET },
+      cardOffset: parseCardOffset(s.o),
     };
     // v3.1 photoMeta (013): expand sc/lc/au/uu/su → photoMeta；migrateProject 會做白名單
     if (s.pm && typeof s.pm === 'object') {
@@ -139,6 +139,15 @@ export function expandProject(c: Record<string, unknown>): Project {
     }
   }
   return project;
+}
+
+/** Reject NaN/Infinity/non-array; a tampered share link could otherwise
+ *  inject NaN into a CSS transform and float the spot card off-screen. */
+function parseCardOffset(o: unknown): { x: number; y: number } {
+  if (!Array.isArray(o) || o.length < 2) return { ...DEFAULT_CARD_OFFSET };
+  const [x, y] = o;
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return { ...DEFAULT_CARD_OFFSET };
+  return { x: x as number, y: y as number };
 }
 
 /**
