@@ -33,6 +33,16 @@
       "count": 1
     },
     {
+      "id": "hudson-taylor",
+      "collection": "missions",
+      "title": "戴德生中國內地會",
+      "subtitle": "AD 1853 — 1905 從倫敦到鎮江 50 年",
+      "description": "英國宣教士 James Hudson Taylor 1853 抵滬，1865 倫敦布萊頓海岸異象創立中國內地會（CIM）。1866 Lammermuir 號 22 人抵杭州設總部，次 40 年 CIM 進入中國 18 省含內陸 11 省。1900 義和團事變殉道 58 名宣教士，1905 卒葬鎮江西郊馬利亞墓旁。CIM 1965 改名 OMF International 持續事工。",
+      "thumbnail": "hudson-taylor/cover.jpg",
+      "path": "hudson-taylor/",
+      "count": 2
+    },
+    {
       "id": "taiwan-missionaries",
       "collection": "missions",
       "title": "台灣宣教士腳蹤",
