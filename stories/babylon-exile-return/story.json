@@ -1,0 +1,45 @@
+{
+  "id": "babylon-exile-return",
+  "title": "巴比倫被擄歸回",
+  "subtitle": "BC 605 — 432 從聖殿被毀到城牆重建",
+  "description": "BC 586 尼布甲尼撒焚燒聖殿開啟猶大 70 年被擄歲月；BC 539 居魯士滅巴比倫頒詔允許歸回。三波歸回（所羅巴伯/以斯拉/尼希米）跨越 100 年完成聖殿（BC 516）與城牆（BC 445）重建。本故事涵蓋兩端 9 spots，從卡爾凱米戰役啟動被擄到尼希米 52 天城牆完工。",
+  "locale": "zh-TW",
+  "cover": "cover.jpg",
+  "music": {
+    "src": "../music/sorrow-and-love.mp3",
+    "title": "Sorrow and Love — Ronny Matthes",
+    "credit": "Ronny Matthes (Jamendo / Internet Archive)",
+    "license": "CC"
+  },
+  "og": {
+    "title": "巴比倫被擄歸回 — TrailPaint Stories",
+    "description": "互動地圖：BC 586 聖殿毀到 BC 445 城牆重建，9 spots 含 Cyrus Cylinder 與 Tel Dan Stele 考古",
+    "image": "og.jpg"
+  },
+  "stories": [
+    {
+      "id": "exile",
+      "title": "被擄",
+      "subtitle": "BC 605 — 586 從卡爾凱米到巴比倫",
+      "description": "BC 605 尼布甲尼撒在卡爾凱米擊敗埃及，啟動巴比倫帝國對猶大的三波擄掠：BC 605 但以理一行被擄、BC 597 約雅斤王 + 以西結被擄、BC 586 西底家王被弄瞎、聖殿被焚。被擄者沿幼發拉底河北上又東南，終達巴比倫城外提勒亞畢駐紮。",
+      "data": "exile.trailpaint.json",
+      "thumbnail": "exile-thumb.jpg",
+      "color": "#7f1d1d",
+      "music": "../music/sorrow-and-love.mp3"
+    },
+    {
+      "id": "return",
+      "title": "歸回",
+      "subtitle": "BC 539 — 445 從居魯士到尼希米",
+      "description": "BC 539 居魯士滅巴比倫，次年頒詔允許猶太人歸回重建聖殿（拉 1）。三波歸回：BC 538 所羅巴伯領 5 萬人、BC 458 以斯拉領祭司文士、BC 445 尼希米領 52 天重建城牆。書珊王宮為波斯帝國冬都，尼希米與以斯帖在此事奉。",
+      "data": "return.trailpaint.json",
+      "thumbnail": "return-thumb.jpg",
+      "color": "#b45309",
+      "music": "../music/voller-hoffnung.mp3"
+    }
+  ],
+  "footer": {
+    "cta": "在 TrailPaint 中建立你自己的故事地圖",
+    "url": "https://trailpaint.org/app/"
+  }
+}

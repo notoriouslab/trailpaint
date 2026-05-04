@@ -53,6 +53,16 @@
       "count": 2
     },
     {
+      "id": "babylon-exile-return",
+      "collection": "bible",
+      "title": "巴比倫被擄歸回",
+      "subtitle": "BC 605 — 432 從聖殿被毀到城牆重建",
+      "description": "BC 586 尼布甲尼撒焚燒聖殿開啟猶大 70 年被擄；BC 539 居魯士滅巴比倫頒詔允許歸回。三波歸回（所羅巴伯/以斯拉/尼希米）跨越 100 年完成聖殿（BC 516）與城牆（BC 445）重建。本故事 9 spots 從卡爾凱米戰役到尼希米 52 天城牆完工。",
+      "thumbnail": "babylon-exile-return/cover.jpg",
+      "path": "babylon-exile-return/",
+      "count": 2
+    },
+    {
       "id": "passion-week",
       "collection": "bible",
       "title": "耶穌受難週",
