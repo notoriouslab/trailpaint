@@ -28,6 +28,16 @@
       "music": "../music/voller-hoffnung.mp3"
     },
     {
+      "id": "middle",
+      "title": "中段五次航行",
+      "subtitle": "AD 1407 — 1422 第二至第六次下西洋",
+      "description": "永樂年間第二至第六次下西洋（1407-1422），鄭和率寶船隊推進至印度西南古里、波斯灣口忽魯謨斯、阿拉伯半島亞丁、最遠抵非洲東岸麻林（今肯亞）— 比哥倫布橫渡大西洋早 80 年。第四航 (1413-1415) 是中國前現代海洋史最遠航行記錄。本段 5 spots 標出五次航次共同經停的關鍵港埠。",
+      "data": "middle.trailpaint.json",
+      "thumbnail": "middle-thumb.jpg",
+      "color": "#92400e",
+      "music": "../music/voller-hoffnung.mp3"
+    },
+    {
       "id": "seventh",
       "title": "第七次下西洋",
       "subtitle": "AD 1431-1433 最後壯航，卒於古里",

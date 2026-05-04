@@ -226,11 +226,41 @@
       "id": "zheng-he",
       "collection": "exploration",
       "title": "鄭和下西洋",
-      "subtitle": "AD 1405-1433 明代寶船七下西洋",
+      "subtitle": "AD 1405-1433 明代寶船七下西洋（首 + 中 + 末三段）",
       "description": "永樂至宣德年間，明廷七次派鄭和率寶船隊遠航西洋，足跡達東南亞、印度、阿拉伯、東非。兩段互動地圖呈現「首航」與「遺作」——1405 年的龍江寶船初啟 vs 1433 年鄭和卒於古里的最後一航——跨越二十八年的壯舉收束。",
       "thumbnail": "zheng-he/cover.jpg",
       "path": "zheng-he/",
-      "count": 2
+      "count": 3
+    },
+    {
+      "id": "columbus",
+      "collection": "exploration",
+      "title": "哥倫布四次航海",
+      "subtitle": "AD 1492 — 1506",
+      "description": "Cristóbal Colón 1492 西班牙天主教雙王資助下從 Palos 出航尋亞洲新航路；首登巴哈馬 San Salvador 開啟「大西洋世界」。四次航海關鍵節點 6 spots 至 1506 Valladolid 葬地。爭議含 Watling Island 首登定位、1500 Bobadilla 押解審判、當代去殖民史學重審。",
+      "thumbnail": "columbus/cover.jpg",
+      "path": "columbus/",
+      "count": 1
+    },
+    {
+      "id": "magellan",
+      "collection": "exploration",
+      "title": "麥哲倫環球航行",
+      "subtitle": "AD 1519 — 1522",
+      "description": "Fernão de Magalhães 葡萄牙人轉投西班牙王室，1519 率 5 艘船 270 人尋香料群島西航路 — 史上首次環球航行。3 年後僅 Victoria 號 + 18 人由 Elcano 領回 Sanlúcar。Magellan 1521 死於菲律賓 Mactan 島。7 spots 含太平洋穿越壞血病劫難。",
+      "thumbnail": "magellan/cover.jpg",
+      "path": "magellan/",
+      "count": 1
+    },
+    {
+      "id": "cook",
+      "collection": "exploration",
+      "title": "庫克船長太平洋三航",
+      "subtitle": "AD 1768 — 1779",
+      "description": "James Cook 三度環行太平洋：1768-71 觀金星凌日 + 紐澳測繪、1772-75 首船過南極圈、1776-79 西北通道尋找。現代精確航海開創者（用 chronometer 測經度），死於夏威夷 Kealakekua 灣。7 spots 含 Sahlins vs Obeyesekere「Cook 是神？」學術論戰。",
+      "thumbnail": "cook/cover.jpg",
+      "path": "cook/",
+      "count": 1
     }
   ],
   "compilations": [
@@ -343,6 +373,53 @@
       ],
       "yearRange": [
         1853,
+        1923
+      ],
+      "playback": "sequential"
+    },
+    {
+      "id": "age-of-discovery",
+      "title": "大航海時代 500 年",
+      "subtitle": "AD 1271 — 1779 從馬可波羅到庫克",
+      "description": "馬可波羅 1271 東來、鄭和 1405-1433 七下西洋、哥倫布 1492 抵新大陸、麥哲倫 1519-22 環球、庫克 1768-79 太平洋三航 — 跨越歐亞與全球海洋的 500 年探險史 16 segments。chronological 排序展現東西方探險如何接力打開全球視野。",
+      "cover": "compilations/age-of-discovery-cover.jpg",
+      "thumbnail": "compilations/age-of-discovery-thumb.jpg",
+      "segments": [
+        "marco-polo/east-journey",
+        "marco-polo/west-return",
+        "zheng-he/first",
+        "zheng-he/middle",
+        "zheng-he/seventh",
+        "columbus/voyages",
+        "magellan/circumnavigation",
+        "cook/voyages"
+      ],
+      "yearRange": [
+        1271,
+        1779
+      ],
+      "playback": "chronological"
+    },
+    {
+      "id": "mission-east",
+      "title": "西方宣教士東進 350 年",
+      "subtitle": "AD 1582 — 1923 從利瑪竇到台灣宣教士",
+      "description": "西方基督教傳入亞洲的完整時序：利瑪竇 1582 耶穌會明朝來華 → 凱瑞 1792 印度浸信會 → 戴德生 1853 中國內地會 → 馬偕 1872 等台灣宣教士。9 segments 涵蓋 350 年宣教史完整脈絡。",
+      "cover": "compilations/mission-east-cover.jpg",
+      "thumbnail": "compilations/mission-east-thumb.jpg",
+      "segments": [
+        "matteo-ricci/journey",
+        "william-carey/india",
+        "hudson-taylor/coastal",
+        "hudson-taylor/inland",
+        "taiwan-missionaries/maxwell",
+        "taiwan-missionaries/mackay",
+        "taiwan-missionaries/barclay",
+        "taiwan-missionaries/landsborough",
+        "taiwan-missionaries/brougham"
+      ],
+      "yearRange": [
+        1582,
         1923
       ],
       "playback": "sequential"

@@ -122,6 +122,39 @@ const SPECS = [
     subtitle: '戴德生・馬偕・巴克禮・蘭大衛',
     badge: 'AD 1853 — 1923',
   },
+  // ── Tier 3 補完合輯（2026-05-04）── //
+  {
+    id: 'age-of-discovery-cover',
+    w: 1080, h: 1080,
+    dst: 'stories/compilations/age-of-discovery-cover.jpg',
+    title: '大航海時代 500 年',
+    subtitle: '從馬可波羅到庫克',
+    badge: 'AD 1271 — 1779',
+  },
+  {
+    id: 'age-of-discovery-thumb',
+    w: 1200, h: 628,
+    dst: 'stories/compilations/age-of-discovery-thumb.jpg',
+    title: '大航海時代 500 年',
+    subtitle: '馬可波羅・鄭和・哥倫布・麥哲倫・庫克',
+    badge: 'AD 1271 — 1779',
+  },
+  {
+    id: 'mission-east-cover',
+    w: 1080, h: 1080,
+    dst: 'stories/compilations/mission-east-cover.jpg',
+    title: '西方宣教士東進 350 年',
+    subtitle: '從利瑪竇到台灣宣教士',
+    badge: 'AD 1582 — 1923',
+  },
+  {
+    id: 'mission-east-thumb',
+    w: 1200, h: 628,
+    dst: 'stories/compilations/mission-east-thumb.jpg',
+    title: '西方宣教士東進',
+    subtitle: '利瑪竇・凱瑞・戴德生・馬偕',
+    badge: 'AD 1582 — 1923',
+  },
 ];
 
 /** Compose the placeholder HTML for a single spec. Title scales with image

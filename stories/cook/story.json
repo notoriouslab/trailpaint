@@ -1,0 +1,35 @@
+{
+  "id": "cook",
+  "title": "庫克船長太平洋三航",
+  "subtitle": "AD 1768 — 1779 從 Plymouth 到 Kealakekua",
+  "description": "James Cook 約克郡農夫之子，皇家海軍升至上尉後率 HMS Endeavour 三度環行太平洋：1768-71 觀金星凌日 + 紐澳測繪、1772-75 首船過南極圈、1776-79 西北通道尋找。Cook 是現代精確航海的開創者（用 chronometer 測經度、強制食酸菜防壞血病）— 後死於夏威夷 Kealakekua 灣與原住民衝突。",
+  "locale": "zh-TW",
+  "cover": "cover.jpg",
+  "music": {
+    "src": "../music/voller-hoffnung.mp3",
+    "title": "Voller Hoffnung — Ronny Matthes",
+    "credit": "Ronny Matthes (Jamendo / Internet Archive)",
+    "license": "CC"
+  },
+  "og": {
+    "title": "庫克船長太平洋三航 — TrailPaint Stories",
+    "description": "James Cook 約克郡農夫之子，皇家海軍升至上尉後率 HMS Endeavour 三度環行太平洋：1768-71 觀金星凌日 + 紐澳測繪、1772-75 首船過南極圈、1776-79 西北通道尋找。Cook 是現代精確航海的開創者（用 chronometer 測經度、強制食酸菜防壞血病）— 後死於夏威夷 Kealakekua 灣與原住民衝突。",
+    "image": "og.jpg"
+  },
+  "stories": [
+    {
+      "id": "voyages",
+      "title": "太平洋三航",
+      "subtitle": "AD 1768 — 1779 從 Plymouth 到 Kealakekua",
+      "description": "James Cook 約克郡農夫之子，皇家海軍升至上尉後率 HMS Endeavour 三度環行太平洋：1768-71 觀金星凌日 + 紐澳測繪、1772-75 首船過南極圈、1776-79 西北通道尋找。Cook 是現代精確航海的開創者（用 chronometer 測經度、強制食酸菜防壞血病）— 後死於夏威夷 Kealakekua 灣與原住民衝突。",
+      "data": "voyages.trailpaint.json",
+      "thumbnail": "voyages-thumb.jpg",
+      "color": "#7c2d12",
+      "music": "../music/voller-hoffnung.mp3"
+    }
+  ],
+  "footer": {
+    "cta": "在 TrailPaint 中建立你自己的故事地圖",
+    "url": "https://trailpaint.org/app/"
+  }
+}
