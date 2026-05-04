@@ -43,6 +43,16 @@
       "count": 3
     },
     {
+      "id": "revelation-churches",
+      "collection": "bible",
+      "title": "啟示錄七教會",
+      "subtitle": "AD 95 約翰書信巡迴小亞細亞",
+      "description": "使徒約翰在拔摩島受啟示，書信沿羅馬郵差路線送往小亞細亞 7 座城——以弗所、士每拿、別迦摩、推雅推喇、撒狄、非拉鐵非、老底嘉。每封書信責備或稱讚呼應該城的歷史與地理特性，是啟示錄 1-3 章的地理底本。",
+      "thumbnail": "revelation-churches/cover.jpg",
+      "path": "revelation-churches/",
+      "count": 1
+    },
+    {
       "id": "paul",
       "collection": "bible",
       "title": "使徒保羅宣教路線",
@@ -131,8 +141,15 @@
       "description": "從敘利亞安提阿出發，三度橫渡地中海，最後押解羅馬。沿使徒行傳 13-28 章足跡走過小亞細亞、馬其頓、亞該亞與羅馬。",
       "cover": "compilations/paul-three-journeys-cover.jpg",
       "thumbnail": "compilations/paul-three-journeys-thumb.jpg",
-      "segments": ["paul/first-journey", "paul/second-journey", "paul/to-rome"],
-      "yearRange": [46, 62],
+      "segments": [
+        "paul/first-journey",
+        "paul/second-journey",
+        "paul/to-rome"
+      ],
+      "yearRange": [
+        46,
+        62
+      ],
       "playback": "sequential"
     },
     {
@@ -149,7 +166,10 @@
         "passion-week/passion",
         "passion-week/resurrection"
       ],
-      "yearRange": [27, 30],
+      "yearRange": [
+        27,
+        30
+      ],
       "playback": "sequential"
     },
     {
@@ -167,7 +187,10 @@
         "marco-polo/east-journey",
         "marco-polo/west-return"
       ],
-      "yearRange": [-138, 1295],
+      "yearRange": [
+        -138,
+        1295
+      ],
       "playback": "chronological"
     }
   ]

@@ -41,10 +41,10 @@ describe('snapToNearestTick — boundary cases', () => {
     expect(result.overlayId).toBe('rome_200');
   });
 
-  it('snaps biblical pre-Roman era to no overlay (e.g. exodus BC1446)', () => {
+  it('snaps biblical pre-Roman era to rome_200 (B-plan: DARE bounds envelop OT locales)', () => {
     const result = snapToNearestTick(-1500, BIBLE_SCALE);
     expect(result.labelKey).toBe('era.exodus');
-    expect(result.overlayId).toBeUndefined();
+    expect(result.overlayId).toBe('rome_200');
   });
 });
 

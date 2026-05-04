@@ -1,0 +1,35 @@
+{
+  "id": "revelation-churches",
+  "title": "啟示錄七教會",
+  "subtitle": "AD 95 約翰書信巡迴小亞細亞",
+  "description": "使徒約翰在拔摩島受啟示，書信沿羅馬郵路送往小亞細亞 7 座城——以弗所、士每拿、別迦摩、推雅推喇、撒狄、非拉鐵非、老底嘉。每封書信責備或稱讚呼應該城的歷史與地理特性，是啟示錄 1-3 章的地理底本。",
+  "locale": "zh-TW",
+  "cover": "cover.jpg",
+  "music": {
+    "src": "../music/sorrow-and-love.mp3",
+    "title": "Sorrow and Love — Ronny Matthes",
+    "credit": "Ronny Matthes (Jamendo / Internet Archive)",
+    "license": "CC"
+  },
+  "og": {
+    "title": "啟示錄七教會 — TrailPaint Stories",
+    "description": "使徒約翰書信巡迴小亞細亞 7 座城互動地圖（AD 95，DARE 羅馬古典時期底圖）",
+    "image": "og.jpg"
+  },
+  "stories": [
+    {
+      "id": "seven-churches",
+      "title": "書信巡迴",
+      "subtitle": "拔摩島 → 7 城（啟 1:11 順序）",
+      "description": "從拔摩島啟程，沿羅馬郵差路線走訪 7 城，書信文本與當地考古層層對照。",
+      "data": "seven-churches.trailpaint.json",
+      "thumbnail": "seven-churches-thumb.jpg",
+      "color": "#7f1d1d",
+      "music": "../music/sorrow-and-love.mp3"
+    }
+  ],
+  "footer": {
+    "cta": "在 TrailPaint 中建立你自己的故事地圖",
+    "url": "https://trailpaint.org/app/"
+  }
+}

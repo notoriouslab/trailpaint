@@ -44,20 +44,22 @@ export const HISTORY_SCALE: Scale[] = [
 ];
 
 /**
- * Biblical narrative scale (CP3). Most ticks have no overlay — slider drives spot
- * era fade only. The Roman-era ticks (jesus / paul / revelation) map to rome_200.
- *
- * Future: when ANE / ancient Israel overlays are added, fill in overlayId for the
- * earlier ticks. For now they fade spots without changing basemap (graceful).
+ * Biblical narrative scale (CP3). All overlay-bearing ticks point to rome_200
+ * because DARE's geographic coverage [[20°S,-10°W],[55°N,55°E]] happens to
+ * envelop every Old Testament locale (Egyptian Delta, Sinai, Levant, Babylon).
+ * The era stamp on the postcard advertises the actual story year (e.g. "BC 1446
+ * 出埃及"), so users see "古典風底圖 + 故事真實年代" — a景點地圖, not a forensic
+ * archaeological reconstruction. Spots whose era is anchored to OT periods carry
+ * scripture_refs + scholar-cited desc lines for users wanting深入考據.
  */
 export const BIBLE_SCALE: Scale[] = [
   { year: MODERN_TICK.year, labelKey: 'era.modern' },
   { year: 95, labelKey: 'era.revelation', overlayId: 'rome_200' },
   { year: 50, labelKey: 'era.paul', overlayId: 'rome_200' },
   { year: 30, labelKey: 'era.jesus', overlayId: 'rome_200' },
-  { year: -586, labelKey: 'era.babylon' },
-  { year: -1000, labelKey: 'era.david' },
-  { year: -1446, labelKey: 'era.exodus' },
+  { year: -586, labelKey: 'era.babylon', overlayId: 'rome_200' },
+  { year: -1000, labelKey: 'era.david', overlayId: 'rome_200' },
+  { year: -1446, labelKey: 'era.exodus', overlayId: 'rome_200' },
 ];
 
 /** Look up a scale group by id. */
