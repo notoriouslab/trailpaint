@@ -33,6 +33,16 @@
       "count": 5
     },
     {
+      "id": "exodus-conquest",
+      "collection": "bible",
+      "title": "出埃及進迦南",
+      "subtitle": "BC 1446 — 1406 從歌珊到示劍",
+      "description": "以色列人在埃及為奴 430 年後，摩西帶領他們離開蘭塞、過紅海、頒律法於西奈山；40 年後新世代從加低斯北上，渡過約旦河，征服迦南中央山地，在示劍立約。本路線採早期出埃及論（BC 1446），路線爭議地點 desc 標明各派立場與學者引用。",
+      "thumbnail": "exodus-conquest/cover.jpg",
+      "path": "exodus-conquest/",
+      "count": 2
+    },
+    {
       "id": "passion-week",
       "collection": "bible",
       "title": "耶穌受難週",
