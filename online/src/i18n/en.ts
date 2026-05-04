@@ -307,6 +307,7 @@ export default {
   'player.backToEditor': '← Editor',
   'story.pwaHint': 'Story Mode plays in this window. Tap "← Editor" to return.',
   'update.available': '✨ New version available',
+  'update.current': 'Currently',
   'update.now': 'Update now',
   'update.later': 'Later',
   'player.embed.empty': 'No story loaded',

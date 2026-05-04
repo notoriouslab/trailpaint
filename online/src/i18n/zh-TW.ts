@@ -307,6 +307,7 @@ export default {
   'player.backToEditor': '← 返回',
   'story.pwaHint': '故事模式會在同一視窗播放，點「返回編輯」按鈕可回來。',
   'update.available': '✨ 有新版可用',
+  'update.current': '目前',
   'update.now': '立即更新',
   'update.later': '稍後',
   'player.embed.empty': 'No story loaded',

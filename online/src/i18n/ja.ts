@@ -307,6 +307,7 @@ export default {
   'player.backToEditor': '← 戻る',
   'story.pwaHint': 'ストーリーモードは同じウィンドウで再生されます。「← 編集へ戻る」ボタンで戻れます。',
   'update.available': '✨ 新しいバージョンが利用可能',
+  'update.current': '現在',
   'update.now': '今すぐ更新',
   'update.later': '後で',
   'player.embed.empty': 'No story loaded',

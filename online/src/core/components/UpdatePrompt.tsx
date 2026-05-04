@@ -44,7 +44,7 @@ export default function UpdatePrompt() {
     <div className="update-prompt" role="status" aria-live="polite">
       <div className="update-prompt__text">
         <span className="update-prompt__title">{t('update.available')}</span>
-        <span className="update-prompt__version">v{pkg.version}</span>
+        <span className="update-prompt__version">{t('update.current')} v{pkg.version}</span>
       </div>
       <div className="update-prompt__actions">
         <button
