@@ -84,9 +84,16 @@
     {
       "id": "story-player",
       "name": "Story Player Auto-Playback",
-      "description": "Standalone entry for auto-guided playback: fly-to animation through each spot, photo popups, playback interval and loop control, 5 basemaps plus Academia Sinica historical overlays (1897/1921/1966 for Taiwan), background music, fullscreen mode, one-click embed code.",
+      "description": "Standalone entry for auto-guided playback: fly-to animation through each spot, photo popups, playback interval and loop control, 5 basemaps plus 9 historical overlays (Taiwan 1897/1921/1966 + China 5 dynasties from CCTS + DARE Roman Mediterranean), background music, fullscreen mode, one-click embed code. v1.4 adds time slider (drag to cross-fade historical maps and spot opacity by era), compilations (multi-story chronological dialogue), and electronic postcards (1080×1080 IG square downloads).",
       "url": "https://trailpaint.org/app/player/",
-      "tags": ["player", "playback", "narrative", "embed", "fullscreen"]
+      "tags": ["player", "playback", "narrative", "embed", "fullscreen", "compilation", "time-slider"]
+    },
+    {
+      "id": "story-compilations",
+      "name": "Story Compilations (v1.4)",
+      "description": "Pre-built compilation maps that overlay multiple story segments on the same canvas with a time slider. Five default compilations: Bible Narrative 2000y (9 stories from Exodus to Revelation), Great Century of Missions (Hudson Taylor + Taiwan missionaries), Paul Three Journeys, Four Gospels Map, Silk Road 2000 (Zhang Qian + Xuanzang + Marco Polo). Sunday school: drag the slider through 1500 years of biblical narrative on a single map.",
+      "url": "https://trailpaint.org/app/player/",
+      "tags": ["compilation", "bible", "missions", "church", "sunday-school"]
     },
     {
       "id": "ai-prompt",

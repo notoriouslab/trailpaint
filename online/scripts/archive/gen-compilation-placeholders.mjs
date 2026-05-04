@@ -89,6 +89,39 @@ const SPECS = [
     subtitle: '保羅三次・四福音書・絲路 2000 年',
     badge: '年代滑桿 + 電子明信片',
   },
+  // ── Tier 1+2 完成後新增的 2 合輯（2026-05-04）── //
+  {
+    id: 'bible-narrative-cover',
+    w: 1080, h: 1080,
+    dst: 'stories/compilations/bible-narrative-cover.jpg',
+    title: '聖經敘事年代軸',
+    subtitle: '貫穿全本聖經 1500 年',
+    badge: 'BC 1446 — AD 95',
+  },
+  {
+    id: 'bible-narrative-thumb',
+    w: 1200, h: 628,
+    dst: 'stories/compilations/bible-narrative-thumb.jpg',
+    title: '聖經敘事年代軸',
+    subtitle: '出埃及 → 大衛 → 巴比倫 → 耶穌 → 保羅 → 啟示錄',
+    badge: 'BC 1446 — AD 95',
+  },
+  {
+    id: 'great-century-cover',
+    w: 1080, h: 1080,
+    dst: 'stories/compilations/great-century-cover.jpg',
+    title: '十九世紀大宣教世紀',
+    subtitle: '西方宣教士進入中國與台灣',
+    badge: 'AD 1853 — 1923',
+  },
+  {
+    id: 'great-century-thumb',
+    w: 1200, h: 628,
+    dst: 'stories/compilations/great-century-thumb.jpg',
+    title: '十九世紀大宣教世紀',
+    subtitle: '戴德生・馬偕・巴克禮・蘭大衛',
+    badge: 'AD 1853 — 1923',
+  },
 ];
 
 /** Compose the placeholder HTML for a single spec. Title scales with image

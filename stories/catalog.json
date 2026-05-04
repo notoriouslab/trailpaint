@@ -262,6 +262,60 @@
         1295
       ],
       "playback": "chronological"
+    },
+    {
+      "id": "bible-narrative-2000y",
+      "title": "聖經敘事年代軸",
+      "subtitle": "BC 1446 — AD 95 跨越 1500 年的故事",
+      "description": "從以色列人出埃及到啟示錄七教會，貫穿全本聖經 1500 年敘事的 9 個故事 17 個段落。出埃及 → 大衛王 → 巴比倫被擄歸回 → 耶穌降生 → 加利利事工 → 受難週 → 早期教會 → 保羅宣教 → 啟示錄。主日學「貫穿全本聖經」一鍵體驗。",
+      "cover": "compilations/bible-narrative-cover.jpg",
+      "thumbnail": "compilations/bible-narrative-thumb.jpg",
+      "segments": [
+        "exodus-conquest/exodus",
+        "exodus-conquest/conquest",
+        "david-king/rise",
+        "david-king/reign",
+        "babylon-exile-return/exile",
+        "babylon-exile-return/return",
+        "jesus-birth/nativity",
+        "jesus-galilee/early-galilee",
+        "jesus-galilee/transfiguration-road",
+        "passion-week/entry",
+        "passion-week/passion",
+        "passion-week/resurrection",
+        "early-church/acts",
+        "paul/first-journey",
+        "paul/second-journey",
+        "paul/to-rome",
+        "revelation-churches/seven-churches"
+      ],
+      "yearRange": [
+        -1446,
+        95
+      ],
+      "playback": "sequential"
+    },
+    {
+      "id": "great-century-missions",
+      "title": "十九世紀大宣教世紀",
+      "subtitle": "AD 1853 — 1923 西方宣教士進入中國與台灣",
+      "description": "戴德生中國內地會與台灣英國/加拿大宣教士的同代敘事 — 19 世紀末到 20 世紀初的「大宣教世紀」(Great Century of Missions, Latourette 1937 命名)。戴德生 1853 抵滬到馬偕 1872 抵淡水、彭蒙惠 1923 收尾，70 年間西方宣教士從中國沿海推進至台灣山地與內陸 11 省，建立教會、醫院、學校超過 500 所。",
+      "cover": "compilations/great-century-cover.jpg",
+      "thumbnail": "compilations/great-century-thumb.jpg",
+      "segments": [
+        "hudson-taylor/coastal",
+        "hudson-taylor/inland",
+        "taiwan-missionaries/maxwell",
+        "taiwan-missionaries/mackay",
+        "taiwan-missionaries/barclay",
+        "taiwan-missionaries/landsborough",
+        "taiwan-missionaries/brougham"
+      ],
+      "yearRange": [
+        1853,
+        1923
+      ],
+      "playback": "sequential"
     }
   ]
 }

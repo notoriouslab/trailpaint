@@ -13,62 +13,41 @@ TrailPaint Stories is a curated collection of interactive story maps. Each story
 
 ## 收錄故事 / Featured Collections
 
-### 台灣宣教士腳蹤 / Footprints of Missionaries in Taiwan (1865–2024)
-URL: https://trailpaint.org/stories/taiwan-missionaries/
+截至 2026-05-04 共 18 個故事，分 4 個 collection。Tier 1+2 (2026-05-04) 新增 bible 6 故事 + missions 2 故事完成「貫穿全本聖經 1500 年」與「跨世紀宣教士東進」兩條敘事軸。
 
-五位宣教士在台灣的故事路線 / Five missionaries' routes across Taiwan:
+### 聖經地圖 / Bible (9 stories, BC 1446 — AD 95，按時序)
 
-- **George Leslie Mackay 馬偕博士** — 北部宣教之父 (1872–1901). Tamsui, Keelung, Yilan, Hsinchu, Hualien. Founded Oxford College and Hobe Mackay Hospital.
-- **Thomas Barclay 巴克禮牧師** — 台語白話字之父 (1875–1935). Tainan. Founded Tainan Theological College, translated the Taiwanese Bible, launched Taiwan Church News.
-- **David Landsborough 蘭大衛醫師** — 切膚之愛 / Love by the Skin (1895–1936). Changhua. Founded Changhua Christian Hospital.
-- **James Laidlaw Maxwell 馬雅各醫師** — 台灣醫療宣教先驅 (1865–1871). Tainan, Qihou. Taiwan's first Christian missionary.
-- **Doris Brougham 彭蒙惠宣教師** — 台灣英語教育之母 (1951–2024). Hualien, Taipei. Founded ORTV and Studio Classroom.
+- **出埃及進迦南 Exodus & Conquest** (BC 1446–1406, 13 spots / 2 segments) — 歌珊 → 西奈山 → 耶利哥 → 示劍。採早期出埃及論。爭議地點 desc 列各派學者立場（西奈山 4 派、紅海 3 派、耶利哥 Wood vs Kenyon）。https://trailpaint.org/stories/exodus-conquest/
+- **大衛王生平 King David** (BC 1010–970, 11 spots / 2 segments) — 伯利恆受膏 → 耶路撒冷建京都 → 王朝悲劇 → 基遍所羅門接班。含 Eilat Mazar 2005 City of David 考古爭議。https://trailpaint.org/stories/david-king/
+- **巴比倫被擄歸回 Babylon Exile & Return** (BC 605–432, 9 spots / 2 segments) — 卡爾凱米戰役 → 耶路撒冷被毀 → 巴比倫 → Pasargadae 居魯士頒詔 → 城牆重建。含 Cyrus Cylinder 1879 大英博物館出土。https://trailpaint.org/stories/babylon-exile-return/
+- **耶穌降生 Jesus' Birth** (BC 6 — AD 12, 7 spots) — 拿撒勒受報 → 伯利恆降生 → 聖殿獻嬰 → 埃及避難 → 12 歲聖殿問道。https://trailpaint.org/stories/jesus-birth/
+- **耶穌加利利傳道 Jesus' Galilean Ministry** (AD 27–30, 16 spots / 2 segments) — Cana → Capernaum → Caesarea Philippi → 變像山。https://trailpaint.org/stories/jesus-galilee/
+- **耶穌受難週 Passion Week** (AD 33, 17 spots / 3 segments) — 進城歡呼 → 最後晚餐 → 客西馬尼 → 各各他 → 復活顯現 → 升天。https://trailpaint.org/stories/passion-week/
+- **使徒行傳早期教會 Early Church** (AD 30–46, 7 spots) — 馬可樓五旬節 → 撒馬利亞 → 衣索匹亞太監 → 大馬色路 → 哥尼流家 → 安提阿基督徒首稱。補保羅出航前的彼得腓利敘事。https://trailpaint.org/stories/early-church/
+- **保羅宣教三次旅行 Paul's Three Journeys** (AD 46–62, 34 spots / 3 segments) — 三次差遣 + 押解羅馬。https://trailpaint.org/stories/paul/
+- **啟示錄七教會 Seven Churches** (AD 95, 8 spots) — 拔摩島 → 以弗所 → 士每拿 → 別迦摩 → 推雅推喇 → 撒狄 → 非拉鐵非 → 老底嘉。沿羅馬郵差路線啟 1:11 順序。https://trailpaint.org/stories/revelation-churches/
 
-### 耶穌受難週 / Passion Week (ca. AD 30)
-URL: https://trailpaint.org/stories/passion-week/
+### 宣教史 / Missions (3 stories, 1582 — 2024，按時序)
 
-耶穌在耶路撒冷最後一週的足跡，分三段 / Jesus' final week in Jerusalem in three segments:
+- **利瑪竇明清來華 Matteo Ricci** (1582–1610, 7 spots) — 澳門 → 肇慶 → 韶州 → 南昌 → 南京 → 北京覲見萬曆 → 柵欄墓地。耶穌會文化適應宣教典範，明朝特准外國傳教士葬地。https://trailpaint.org/stories/matteo-ricci/
+- **戴德生中國內地會 Hudson Taylor / CIM** (1853–1905, 10 spots / 2 segments) — 倫敦差遣 → 上海 → 寧波 → 布萊頓海岸 1865 異象 → 杭州 CIM 總部 → 內陸擴展 → 鎮江葬地。1900 義和團事變殉道 58 名 CIM 宣教士。https://trailpaint.org/stories/hudson-taylor/
+- **台灣宣教士腳蹤 Footprints in Taiwan** (1865–2024, 5 segments) — Maxwell / Mackay / Barclay / Landsborough / Brougham 五位宣教士。https://trailpaint.org/stories/taiwan-missionaries/
 
-- **Triumphal Entry** (Sunday–Wednesday): Jesus rides into Jerusalem, cleanses the Temple, debates with religious leaders.
-- **Last Supper to Calvary** (Thursday–Friday): The Upper Room, Gethsemane, trial before Pilate, Via Dolorosa, the cross at Calvary.
-- **Resurrection and Appearances** (Saturday–Sunday): the empty tomb, road to Emmaus, appearances to disciples, Ascension from the Mount of Olives.
+### 中國歷史 / China (4 stories)
 
-### 保羅宣教三次旅行 / Paul's Three Missionary Journeys (AD 46–62)
-URL: https://trailpaint.org/stories/paul/
+- **張騫通西域 Zhang Qian's Western Mission** (BC 139–126)
+- **玄奘西行 Xuanzang's Journey West** (AD 629–645)
+- **文天祥南撤北擄 Wen Tianxiang** (1275–1283)
+- **徐霞客西南壯遊 Xu Xiake** (1636–1640)
 
-從敘利亞安提阿三次橫渡地中海，最後押解羅馬。沿使徒行傳 13–28 章 34 個景點 / Three Mediterranean crossings + journey to Rome, 34 spots along Acts 13–28:
+URLs: `/stories/{zhang-qian|xuanzang|wen-tianxiang|xu-xiake}/`
 
-- **First Journey** (AD 46–48): Cyprus and southern Galatia
-- **Second Journey** (AD 49–52): Macedonian call, opening Europe
-- **To Rome** (AD 60–62): Caesarea trial, storm at sea, house arrest in Rome
+### 大航海時代 / Exploration (2 stories)
 
-### 耶穌加利利傳道 / Jesus' Galilean Ministry (AD 27–30)
-URL: https://trailpaint.org/stories/jesus-galilee/
+- **馬可波羅東來 Marco Polo's Travels** (1271–1295)
+- **鄭和下西洋 Zheng He's Treasure Voyages** (1405–1433)
 
-早期事工與變像山 16 個景點 / Early ministry and Transfiguration Road, 16 spots:
-
-- **Early Galilee** (AD 27–29): Cana, Capernaum, Sea of Galilee teaching
-- **Transfiguration Road** (AD 29–30): from Caesarea Philippi to the Mount of Transfiguration
-
-### 絲路單段故事 / Silk Road Source Segments
-
-URL: https://trailpaint.org/stories/zhang-qian/ · /xuanzang/ · /marco-polo/
-
-三段個別故事，可獨立播放或合輯時序 mix / Three standalone stories, also bundled in `silk-road-2000` chronological compilation:
-
-- **張騫鑿空 Zhang Qian's Western Mission** (BC 138–115): first/second mission opening the Silk Road
-- **玄奘西行 Xuanzang's Journey West** (AD 629–645): westward to India + return with sutras
-- **馬可波羅東來 Marco Polo's Travels** (AD 1271–1295): east journey + west return via maritime route
-
-### 文天祥南撤北擄 / Wen Tianxiang's Southern Retreat & Northern Captivity (AD 1275–1283)
-URL: https://trailpaint.org/stories/wen-tianxiang/
-
-南宋亡國前後忠臣足跡 / Southern Song's loyal minister at the dynasty's end.
-
-### 徐霞客西南壯遊 / Xu Xiake's Southwest Journey (AD 1636–1640)
-URL: https://trailpaint.org/stories/xu-xiake/
-
-明末地理學家最後四年壯遊滇黔桂 / Late-Ming geographer's final four-year exploration through Yunnan, Guizhou, Guangxi.
+URLs: `/stories/{marco-polo|zheng-he}/`
 
 ## 預設合輯 / Default Compilations (v1.4)
 
@@ -76,6 +55,8 @@ URL pattern: https://trailpaint.org/app/player/?compilation=<id>
 
 合輯把多段故事綁成一個 Player session，可選 sequential（依故事順序）或 chronological（依 spot.era 全域時序，跨人物 mix）/ Compilations bundle multiple segments into one session — choose `sequential` (story order) or `chronological` (global era.start sort, cross-author mixing).
 
+- **bible-narrative-2000y** — 聖經敘事年代軸：出埃及 → 大衛 → 巴比倫 → 降生 → 加利利 → 受難週 → 早期教會 → 保羅 → 啟示錄 (BC 1446–AD 95, 9 stories / 17 segments / 全部 spots, sequential, **主日學「貫穿全本聖經 1500 年」一鍵體驗**)
+- **great-century-missions** — 十九世紀大宣教世紀：戴德生 + 馬偕等台灣宣教士 (1853–1923, 7 segments, sequential)
 - **paul-three-journeys** — 保羅宣教三次旅行 (AD 46–62, 34 spots, sequential)
 - **four-gospels-map** — 四福音書地圖：加利利傳道 + 變像山 + 受難週 (AD 27–30, 33 spots, sequential)
 - **silk-road-2000** — 絲路 2000 年：張騫 + 玄奘 + 馬可波羅同條走廊 (BC 138–AD 1295, 59 spots, chronological — cross-author dialogue)
