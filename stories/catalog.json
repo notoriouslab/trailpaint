@@ -23,6 +23,16 @@
   ],
   "stories": [
     {
+      "id": "luther",
+      "collection": "missions",
+      "title": "馬丁路德宗教改革",
+      "subtitle": "AD 1517 — 1546 從 95 條到艾斯雷本",
+      "description": "奥古斯丁修士 Martin Luther 1517 釘 95 條於威騰堡啟動宗教改革，1521 沃姆斯議會「我立此處」拒絕收回；瓦特堡譯德文聖經塑造現代德語。29 年改革神學遺產含「因信稱義」「唯獨聖經」「萬民皆祭司」。",
+      "thumbnail": "luther/cover.jpg",
+      "path": "luther/",
+      "count": 1
+    },
+    {
       "id": "matteo-ricci",
       "collection": "missions",
       "title": "利瑪竇明清來華",
@@ -30,6 +40,16 @@
       "description": "義大利耶穌會士 Matteo Ricci 從澳門入華，學中文書畫《山海輿地全圖》、改穿儒服自稱「西儒」、北上 1601 入京覲見萬曆獻自鳴鐘。在徐光啟協助下完成《幾何原本》漢譯，1610 卒葬北京柵欄墓 — 中國皇帝首次特准外國傳教士葬地。文化適應宣教典範。",
       "thumbnail": "matteo-ricci/cover.jpg",
       "path": "matteo-ricci/",
+      "count": 1
+    },
+    {
+      "id": "william-carey",
+      "collection": "missions",
+      "title": "威廉凱瑞印度宣教",
+      "subtitle": "AD 1792 — 1834 從諾丁罕到 Serampore 41 年",
+      "description": "「現代宣教之父」William Carey 1792 諾丁罕啟動 Particular Baptist Society，1793 抵加爾各答，1800 Serampore Trio 創立 Mission：譯印度六大語系聖經、創亞洲第一所 grant-degree 學府 Serampore College、推動禁絕寡婦殉葬。",
+      "thumbnail": "william-carey/cover.jpg",
+      "path": "william-carey/",
       "count": 1
     },
     {
@@ -133,26 +153,6 @@
       "count": 3
     },
     {
-      "id": "xuanzang",
-      "collection": "china",
-      "title": "玄奘西行",
-      "subtitle": "AD 629-645 大唐西域記",
-      "description": "唐代高僧玄奘 629 年自長安偷渡出關，歷五萬里、百餘國，入天竺求法十七年，於 645 年攜六百五十七部梵本佛經歸長安。兩段互動地圖涵蓋西行與歸程，沿途搭配敦煌莫高窟、高昌故城、那爛陀遺址等實景影像。",
-      "thumbnail": "xuanzang/cover.jpg",
-      "path": "xuanzang/",
-      "count": 2
-    },
-    {
-      "id": "zheng-he",
-      "collection": "exploration",
-      "title": "鄭和下西洋",
-      "subtitle": "AD 1405-1433 明代寶船七下西洋",
-      "description": "永樂至宣德年間，明廷七次派鄭和率寶船隊遠航西洋，足跡達東南亞、印度、阿拉伯、東非。兩段互動地圖呈現「首航」與「遺作」——1405 年的龍江寶船初啟 vs 1433 年鄭和卒於古里的最後一航——跨越二十八年的壯舉收束。",
-      "thumbnail": "zheng-he/cover.jpg",
-      "path": "zheng-he/",
-      "count": 2
-    },
-    {
       "id": "jesus-galilee",
       "collection": "bible",
       "title": "耶穌加利利事工",
@@ -160,6 +160,26 @@
       "description": "公元 27 至 30 年間，拿撒勒人耶穌離開木匠鋪，走下約旦河接受洗禮，隨即被聖靈引入曠野受試探。之後祂回到加利利，以迦百農為基地，沿湖呼召彼得、安得烈、雅各、約翰，於迦拿行第一個神蹟，於山上講論八福，於曠野擘餅餵飽五千人。祂在該撒利亞腓立比的山泉旁聽見彼得認信，於是登上變像山露出榮光，然後堅定面上耶路撒冷。",
       "thumbnail": "jesus-galilee/cover.jpg",
       "path": "jesus-galilee/",
+      "count": 2
+    },
+    {
+      "id": "three-kingdoms",
+      "collection": "china",
+      "title": "三國蜀漢北伐",
+      "subtitle": "AD 207 — 234 從隆中對到五丈原",
+      "description": "三顧茅廬陳隆中對天下三分；208 赤壁火攻；219 漢中王；223 白帝託孤；228 街亭揮淚斬馬謖；234 諸葛亮卒於五丈原。沿陳壽《三國志》主線蜀漢核心 6 spots 涵蓋 27 年「鞠躬盡瘁」之軌。CCTS 三國 262 古地圖底圖。",
+      "thumbnail": "three-kingdoms/cover.jpg",
+      "path": "three-kingdoms/",
+      "count": 1
+    },
+    {
+      "id": "xuanzang",
+      "collection": "china",
+      "title": "玄奘西行",
+      "subtitle": "AD 629-645 大唐西域記",
+      "description": "唐代高僧玄奘 629 年自長安偷渡出關，歷五萬里、百餘國，入天竺求法十七年，於 645 年攜六百五十七部梵本佛經歸長安。兩段互動地圖涵蓋西行與歸程，沿途搭配敦煌莫高窟、高昌故城、那爛陀遺址等實景影像。",
+      "thumbnail": "xuanzang/cover.jpg",
+      "path": "xuanzang/",
       "count": 2
     },
     {
@@ -183,6 +203,16 @@
       "count": 2
     },
     {
+      "id": "xu-xiake",
+      "collection": "china",
+      "title": "徐霞客西南壯遊",
+      "subtitle": "1636-1640 最後壯遊",
+      "description": "崇禎九年（1636）秋，五十歲的徐霞客從江陰出發踏上最後一次壯遊，經浙、贛、湘、粵西、黔、滇，歷時四年，行程逾兩萬里。他在桂林探獨秀峰、在貴州記下黃果樹瀑布，深入雲南考察石林、滇池、洱海，登上雞足山金頂。1640 年冬因足疾由麗江土司木增以竹輿護送東歸，次年春病逝家中。《徐霞客遊記》六十餘萬字為明代地理學巔峰。",
+      "thumbnail": "xu-xiake/cover.jpg",
+      "path": "xu-xiake/",
+      "count": 1
+    },
+    {
       "id": "marco-polo",
       "collection": "exploration",
       "title": "馬可波羅東來",
@@ -193,14 +223,14 @@
       "count": 2
     },
     {
-      "id": "xu-xiake",
-      "collection": "china",
-      "title": "徐霞客西南壯遊",
-      "subtitle": "1636-1640 最後壯遊",
-      "description": "崇禎九年（1636）秋，五十歲的徐霞客從江陰出發踏上最後一次壯遊，經浙、贛、湘、粵西、黔、滇，歷時四年，行程逾兩萬里。他在桂林探獨秀峰、在貴州記下黃果樹瀑布，深入雲南考察石林、滇池、洱海，登上雞足山金頂。1640 年冬因足疾由麗江土司木增以竹輿護送東歸，次年春病逝家中。《徐霞客遊記》六十餘萬字為明代地理學巔峰。",
-      "thumbnail": "xu-xiake/cover.jpg",
-      "path": "xu-xiake/",
-      "count": 1
+      "id": "zheng-he",
+      "collection": "exploration",
+      "title": "鄭和下西洋",
+      "subtitle": "AD 1405-1433 明代寶船七下西洋",
+      "description": "永樂至宣德年間，明廷七次派鄭和率寶船隊遠航西洋，足跡達東南亞、印度、阿拉伯、東非。兩段互動地圖呈現「首航」與「遺作」——1405 年的龍江寶船初啟 vs 1433 年鄭和卒於古里的最後一航——跨越二十八年的壯舉收束。",
+      "thumbnail": "zheng-he/cover.jpg",
+      "path": "zheng-he/",
+      "count": 2
     }
   ],
   "compilations": [

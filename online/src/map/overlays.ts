@@ -9,10 +9,12 @@ export interface OverlayDef {
     | 'overlay.jm20k1921'
     | 'overlay.corona1966'
     | 'overlay.hanbc7'
+    | 'overlay.threeKingdoms262'
     | 'overlay.tang741'
     | 'overlay.song1208'
     | 'overlay.yuan1330'
     | 'overlay.ming1582'
+    | 'overlay.qing1820'
     | 'overlay.rome200';
   group: OverlayGroup;
   url: string;
@@ -136,6 +138,17 @@ export const OVERLAYS: OverlayDef[] = [
     year: -7,
   },
   {
+    id: 'three_kingdoms_262',
+    labelKey: 'overlay.threeKingdoms262',
+    group: 'china',
+    url: 'https://gis.sinica.edu.tw/ccts/file-exists.php?img=ad0262-jpg-{z}-{x}-{y}',
+    attribution: '中央研究院人社中心GIS專題中心（CCTS）',
+    maxZoom: 18,
+    maxNativeZoom: 10,
+    bounds: BOUNDS_CHINA_HISTORIC,
+    year: 262,
+  },
+  {
     id: 'tang_741',
     labelKey: 'overlay.tang741',
     group: 'china',
@@ -178,6 +191,17 @@ export const OVERLAYS: OverlayDef[] = [
     maxNativeZoom: 10,
     bounds: BOUNDS_CHINA_HISTORIC,
     year: 1582,
+  },
+  {
+    id: 'qing_1820',
+    labelKey: 'overlay.qing1820',
+    group: 'china',
+    url: 'https://gis.sinica.edu.tw/ccts/file-exists.php?img=ad1820-jpg-{z}-{x}-{y}',
+    attribution: '中央研究院人社中心GIS專題中心（CCTS）',
+    maxZoom: 18,
+    maxNativeZoom: 10,
+    bounds: BOUNDS_CHINA_HISTORIC,
+    year: 1820,
   },
   {
     id: 'rome_200',

@@ -84,7 +84,7 @@
     {
       "id": "story-player",
       "name": "Story Player Auto-Playback",
-      "description": "Standalone entry for auto-guided playback: fly-to animation through each spot, photo popups, playback interval and loop control, 5 basemaps plus 9 historical overlays (Taiwan 1897/1921/1966 + China 5 dynasties from CCTS + DARE Roman Mediterranean), background music, fullscreen mode, one-click embed code. v1.4 adds time slider (drag to cross-fade historical maps and spot opacity by era), compilations (multi-story chronological dialogue), and electronic postcards (1080×1080 IG square downloads).",
+      "description": "Standalone entry for auto-guided playback: fly-to animation through each spot, photo popups, playback interval and loop control, 5 basemaps plus 11 historical overlays (Taiwan 1897/1921/1966 + China 7 dynasties from CCTS: Han BC7 / Three Kingdoms 262 / Tang 741 / Song 1208 / Yuan 1330 / Ming 1582 / Qing 1820 + DARE Roman Mediterranean), background music, fullscreen mode, one-click embed code. v1.4 adds time slider (drag to cross-fade historical maps and spot opacity by era), compilations (multi-story chronological dialogue), and electronic postcards (1080×1080 IG square downloads).",
       "url": "https://trailpaint.org/app/player/",
       "tags": ["player", "playback", "narrative", "embed", "fullscreen", "compilation", "time-slider"]
     },

@@ -49,8 +49,8 @@ describe('snapToNearestTick — boundary cases', () => {
 });
 
 describe('Scale definitions', () => {
-  it('HISTORY_SCALE includes MODERN_TICK + 9 overlays = 10 ticks', () => {
-    expect(HISTORY_SCALE).toHaveLength(10);
+  it('HISTORY_SCALE includes MODERN_TICK + 11 overlays = 12 ticks (Tier 3 +three_kingdoms_262 +qing_1820)', () => {
+    expect(HISTORY_SCALE).toHaveLength(12);
   });
 
   it('HISTORY_SCALE is sorted newest → oldest', () => {

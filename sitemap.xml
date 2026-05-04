@@ -109,7 +109,19 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://trailpaint.org/stories/luther/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://trailpaint.org/stories/matteo-ricci/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trailpaint.org/stories/william-carey/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -175,19 +187,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://trailpaint.org/stories/xuanzang/</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://trailpaint.org/stories/zheng-he/</loc>
-    <lastmod>2026-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://trailpaint.org/stories/jesus-galilee/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trailpaint.org/stories/three-kingdoms/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trailpaint.org/stories/xuanzang/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -205,13 +217,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://trailpaint.org/stories/xu-xiake/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://trailpaint.org/stories/marco-polo/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://trailpaint.org/stories/xu-xiake/</loc>
+    <loc>https://trailpaint.org/stories/zheng-he/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
