@@ -231,12 +231,6 @@ Export PNG → copy AI prompt → feed to ChatGPT / Gemini image generation for 
 | [`/faq/`](https://trailpaint.org/faq/) | Frequently asked questions |
 | [`llms.txt`](https://trailpaint.org/llms.txt) / [`agent-card.json`](https://trailpaint.org/.well-known/agent-card.json) | Structured summaries for AI and agents |
 
-### Relationship to notoriouslab ecosystem
-
-- **doc-cleaner**: PDF/PPTX/Word cleanup → output can become trail map spot descriptions
-- **OpenSpec**: Specification management (TrailPaint's Spectra SDD specs live here)
-- **bu-ketao**: Chinese LLM output compression (trail story descriptions can use these rules)
-
 ---
 
 ## Technical Details
