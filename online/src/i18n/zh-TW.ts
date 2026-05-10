@@ -42,6 +42,7 @@ export default {
 
   // Route
   'route.finish': '完成路線',
+  'route.connectSpots': '連結景點',
   'route.cancel': '取消',
   'route.hintStart': '點擊地圖標記路線起點',
   'route.hintPoints': '個點 — 繼續點擊或按「完成路線」',

@@ -14,6 +14,8 @@ export default function ModeToolbar() {
   const currentDrawing = useProjectStore((s) => s.currentDrawing);
   const finishRoute = useProjectStore((s) => s.finishRoute);
   const cancelDrawing = useProjectStore((s) => s.cancelDrawing);
+  const connectSpotsAsRoute = useProjectStore((s) => s.connectSpotsAsRoute);
+  const spots = useProjectStore((s) => s.project.spots);
 
   return (
     <div className="mode-toolbar">
@@ -44,6 +46,13 @@ export default function ModeToolbar() {
             disabled={currentDrawing.length < 2}
           >
             {t('route.finish')}
+          </button>
+          <button
+            className="mode-toolbar__action-btn"
+            onClick={connectSpotsAsRoute}
+            disabled={spots.length < 2}
+          >
+            {t('route.connectSpots')}
           </button>
           <button
             className="mode-toolbar__action-btn"

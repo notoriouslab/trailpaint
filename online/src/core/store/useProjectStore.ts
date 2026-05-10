@@ -40,6 +40,7 @@ interface ProjectState {
 
   // Route actions
   addDrawingPoint: (latlng: [number, number]) => void;
+  connectSpotsAsRoute: () => void;
   finishRoute: () => void;
   cancelDrawing: () => void;
   addRoute: (route: Route) => void;
@@ -190,6 +191,49 @@ export const useProjectStore = create<ProjectState>()(
 
   addDrawingPoint: (latlng) =>
     set((s) => ({ currentDrawing: [...s.currentDrawing, latlng] })),
+
+  connectSpotsAsRoute: () => {
+    const s = get();
+    if (s.project.spots.length < 2) return;
+
+    const pts = [...s.project.spots]
+      .sort((a, b) => a.num - b.num)
+      .map((sp) => sp.latlng);
+
+    const colorId = ROUTE_COLORS[s.project.routes.length % ROUTE_COLORS.length].id;
+    const routeId = crypto.randomUUID();
+    const route: Route = {
+      id: routeId,
+      name: '',
+      pts,
+      color: colorId,
+      elevations: null,
+    };
+
+    set({
+      project: { ...s.project, routes: [...s.project.routes, route] },
+      selectedRouteId: routeId,
+      selectedSpotId: null,
+    });
+
+    // Async side effect outside of set()
+    reverseGeocode(pts[Math.floor(pts.length / 2)]).then((name) => {
+      if (name) {
+        const curr = get();
+        const r = curr.project.routes.find((r) => r.id === routeId);
+        if (r && !r.name) {
+          set((s2) => ({
+            project: {
+              ...s2.project,
+              routes: s2.project.routes.map((r2) =>
+                r2.id === routeId ? { ...r2, name } : r2
+              ),
+            },
+          }));
+        }
+      }
+    }).catch(() => { /* naming is best-effort */ });
+  },
 
   finishRoute: () => {
     const s = get();
