@@ -115,27 +115,30 @@
   transform: rotate(-0.3deg);
 }
 
-/* ── Mobile: 極簡 (Editor only) — 縮到接近 pin 大小，方便調位置 ── */
-@media (max-width: 768px) {
-  .spot-card { width: 48px; }
+/* ── Mobile (≤600px, 手機 only) — 卡片縮到接近 pin，title 保留但更小，
+   iPad 縱向 (768px) 走桌機版 ── */
+@media (max-width: 600px) {
+  .spot-card { width: 24px; }
   .spot-card__title-tag {
-    padding: 2px 4px;
-    border-radius: 3px 5px 4px 6px;
+    padding: 1px 2px;
+    border-radius: 2px 3px 2px 4px;
+    border-width: 1px;
   }
-  .spot-card__title { font-size: 9px; }
-  .spot-card__hole { width: 5px; height: 5px; top: -3px; }
+  .spot-card__title { font-size: 7px; line-height: 1.1; }
+  .spot-card__hole { width: 4px; height: 4px; top: -2px; }
   .spot-card__photo-wrap {
-    padding: 2px;
-    border-radius: 0 0 4px 6px;
+    padding: 1px;
+    border-radius: 0 0 2px 4px;
+    border-width: 1px;
   }
-  .spot-card__photo { max-height: 36px; }
+  .spot-card__photo { max-height: 18px; }
   .spot-card__desc { display: none; }
   .spot-card__badge {
-    width: 18px;
-    height: 18px;
-    font-size: 9px;
-    top: -6px;
-    right: -6px;
+    width: 14px;
+    height: 14px;
+    font-size: 8px;
+    top: -5px;
+    right: -5px;
     border-width: 1.5px;
   }
 }
