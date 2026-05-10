@@ -8,6 +8,7 @@ import HandDrawnFilter from './HandDrawnFilter';
 import BasemapSwitcher from './BasemapSwitcher';
 import LocateButton from './LocateButton';
 import FitAllButton from './FitAllButton';
+import MapToast from './MapToast';
 import Watermark from './Watermark';
 import { setMapInstance } from './useMapRef';
 import 'leaflet/dist/leaflet.css';
@@ -102,6 +103,7 @@ export default function MapView() {
       <DrawingPreview />
       <SpotMarkers />
       <Watermark />
+      <MapToast />
     </MapContainer>
   );
 }

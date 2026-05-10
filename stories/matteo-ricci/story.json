@@ -1,0 +1,35 @@
+{
+  "id": "matteo-ricci",
+  "title": "利瑪竇明清來華",
+  "subtitle": "AD 1582 — 1610 從澳門到北京 28 年",
+  "description": "義大利耶穌會士 Matteo Ricci 1582 抵澳門，先以「西僧」身份學中文書畫《山海輿地全圖》；後改穿儒服自稱「西儒」，從韶州、南昌、南京一路北上，1601 入京覲見萬曆皇帝獻自鳴鐘成為首位居北京的天主教傳教士。1610 年卒於北京獲明朝特准賜葬柵欄墓地，開啟「中國禮儀之爭」前的文化適應宣教典範。",
+  "locale": "zh-TW",
+  "cover": "cover.jpg",
+  "music": {
+    "src": "../music/voller-hoffnung.mp3",
+    "title": "Voller Hoffnung — Ronny Matthes",
+    "credit": "Ronny Matthes (Jamendo / Internet Archive)",
+    "license": "CC"
+  },
+  "og": {
+    "title": "利瑪竇明清來華 — TrailPaint Stories",
+    "description": "互動地圖：1582 澳門到 1610 北京柵欄墓，7 spots 含《幾何原本》《天主實義》翻譯里程碑",
+    "image": "og.jpg"
+  },
+  "stories": [
+    {
+      "id": "journey",
+      "title": "從澳門到北京",
+      "subtitle": "AD 1582 — 1610 萬曆年間 28 年",
+      "description": "義大利耶穌會士利瑪竇 1582 抵澳門，先在肇慶以「西僧」身份學中文書畫《山海輿地全圖》；後改穿儒服自稱「西儒」，從韶州、南昌、南京一路北上，1601 入京覲見萬曆皇帝獻自鳴鐘成為首位居北京的天主教傳教士。1610 年卒於北京，獲明朝特准賜葬柵欄墓地，開啟「中國禮儀之爭」前的文化適應宣教典範。",
+      "data": "journey.trailpaint.json",
+      "thumbnail": "journey-thumb.jpg",
+      "color": "#7c2d12",
+      "music": "../music/voller-hoffnung.mp3"
+    }
+  ],
+  "footer": {
+    "cta": "在 TrailPaint 中建立你自己的故事地圖",
+    "url": "https://trailpaint.org/app/"
+  }
+}

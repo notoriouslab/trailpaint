@@ -26,7 +26,11 @@
       "scripture_refs": [
         "Acts 15:36-41",
         "Acts 11:26"
-      ]
+      ],
+      "era": {
+        "start": 49,
+        "end": 52
+      }
     },
     {
       "id": "s2",
@@ -45,7 +49,11 @@
       },
       "scripture_refs": [
         "Acts 16:1"
-      ]
+      ],
+      "era": {
+        "start": 49,
+        "end": 52
+      }
     },
     {
       "id": "s3",
@@ -64,7 +72,11 @@
       },
       "scripture_refs": [
         "Acts 16:1-5"
-      ]
+      ],
+      "era": {
+        "start": 49,
+        "end": 52
+      }
     },
     {
       "id": "s4",
@@ -83,7 +95,11 @@
       },
       "scripture_refs": [
         "Acts 16:6-10"
-      ]
+      ],
+      "era": {
+        "start": 49,
+        "end": 52
+      }
     },
     {
       "id": "s5",
@@ -102,7 +118,11 @@
       },
       "scripture_refs": [
         "Acts 16:11"
-      ]
+      ],
+      "era": {
+        "start": 49,
+        "end": 52
+      }
     },
     {
       "id": "s6",
@@ -121,7 +141,11 @@
       },
       "scripture_refs": [
         "Acts 16:12-40"
-      ]
+      ],
+      "era": {
+        "start": 49,
+        "end": 52
+      }
     },
     {
       "id": "s7",
@@ -140,7 +164,11 @@
       },
       "scripture_refs": [
         "Acts 17:1-9"
-      ]
+      ],
+      "era": {
+        "start": 49,
+        "end": 52
+      }
     },
     {
       "id": "s8",
@@ -159,7 +187,11 @@
       },
       "scripture_refs": [
         "Acts 17:10-15"
-      ]
+      ],
+      "era": {
+        "start": 49,
+        "end": 52
+      }
     },
     {
       "id": "s9",
@@ -178,7 +210,11 @@
       },
       "scripture_refs": [
         "Acts 17:16-34"
-      ]
+      ],
+      "era": {
+        "start": 49,
+        "end": 52
+      }
     },
     {
       "id": "s10",
@@ -197,7 +233,11 @@
       },
       "scripture_refs": [
         "Acts 18:1-18"
-      ]
+      ],
+      "era": {
+        "start": 49,
+        "end": 52
+      }
     },
     {
       "id": "s11",
@@ -216,7 +256,11 @@
       },
       "scripture_refs": [
         "Acts 18:18-21"
-      ]
+      ],
+      "era": {
+        "start": 49,
+        "end": 52
+      }
     },
     {
       "id": "s12",
@@ -235,7 +279,11 @@
       },
       "scripture_refs": [
         "Acts 18:22"
-      ]
+      ],
+      "era": {
+        "start": 49,
+        "end": 52
+      }
     }
   ],
   "routes": [

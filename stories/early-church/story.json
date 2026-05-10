@@ -1,0 +1,35 @@
+{
+  "id": "early-church",
+  "title": "使徒行傳早期教會",
+  "subtitle": "AD 30 — 46 從耶路撒冷到安提阿",
+  "description": "耶穌升天後 10 日五旬節聖靈降臨於馬可樓 120 門徒，當日 3000 人受洗誕生耶路撒冷教會。司提反殉道引發的逼迫使福音擴散至撒馬利亞、海岸、敘利亞；衣索匹亞太監受洗、彼得屋頂異象後接納哥尼流家、安提阿教會「基督徒」首稱並差遣保羅出航。本路線 7 spots 補完保羅三次旅程之前的早期教會敘事。",
+  "locale": "zh-TW",
+  "cover": "cover.jpg",
+  "music": {
+    "src": "../music/voller-hoffnung.mp3",
+    "title": "Voller Hoffnung — Ronny Matthes",
+    "credit": "Ronny Matthes (Jamendo / Internet Archive)",
+    "license": "CC"
+  },
+  "og": {
+    "title": "使徒行傳早期教會 — TrailPaint Stories",
+    "description": "互動地圖：AD 30 五旬節到 AD 46 安提阿差遣，7 spots 含早期教會跨文化突破",
+    "image": "og.jpg"
+  },
+  "stories": [
+    {
+      "id": "acts",
+      "title": "從耶路撒冷到安提阿",
+      "subtitle": "AD 30 — 46 五旬節到第一次差遣前",
+      "description": "耶穌升天後 10 日五旬節聖靈降臨於馬可樓，120 門徒當日 3000 人受洗，耶路撒冷教會誕生。司提反殉道引發大逼迫使福音擴散至撒馬利亞、海岸、敘利亞；彼得在約帕屋頂異象後接納外邦人哥尼流；安提阿「基督徒」首稱，成為差遣保羅出航的母會。",
+      "data": "acts.trailpaint.json",
+      "thumbnail": "acts-thumb.jpg",
+      "color": "#b45309",
+      "music": "../music/voller-hoffnung.mp3"
+    }
+  ],
+  "footer": {
+    "cta": "在 TrailPaint 中建立你自己的故事地圖",
+    "url": "https://trailpaint.org/app/"
+  }
+}

@@ -27,7 +27,11 @@
         "Matt 27:57-61",
         "Matt 28:5-7",
         "John 20:1-10"
-      ]
+      ],
+      "era": {
+        "start": 30,
+        "end": 30
+      }
     },
     {
       "id": "emmaus",
@@ -46,7 +50,11 @@
       },
       "scripture_refs": [
         "Luke 24:13-35"
-      ]
+      ],
+      "era": {
+        "start": 30,
+        "end": 30
+      }
     },
     {
       "id": "upper-room-appearance",
@@ -66,7 +74,11 @@
       "scripture_refs": [
         "John 20:19-29",
         "Luke 24:36-49"
-      ]
+      ],
+      "era": {
+        "start": 30,
+        "end": 30
+      }
     },
     {
       "id": "ascension",
@@ -87,7 +99,11 @@
         "Matt 28:16-20",
         "Luke 24:50-53",
         "Acts 1:9-11"
-      ]
+      ],
+      "era": {
+        "start": 30,
+        "end": 30
+      }
     }
   ],
   "routes": [

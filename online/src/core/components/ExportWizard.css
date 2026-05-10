@@ -284,6 +284,13 @@
   white-space: nowrap;
 }
 
+.export-preview__ai-hint {
+  margin: -4px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #a08060;
+}
+
 /* Toast */
 .export-preview__toast {
   position: absolute;
@@ -398,6 +405,24 @@
   margin: 0 auto;
 }
 
+.export-preview__tab-pane--interop {
+  max-width: 820px;
+}
+
+.export-interop-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.export-interop-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
 .export-preview__pane-title {
   margin: 0;
   font-size: 16px;
@@ -436,5 +461,9 @@
   }
   .export-preview__tab-pane {
     padding: 16px;
+  }
+  .export-interop-cols {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }

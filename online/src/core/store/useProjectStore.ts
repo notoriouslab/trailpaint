@@ -3,6 +3,7 @@ import { temporal } from 'zundo';
 import type { Project, Spot, Mode, OverlaySetting, MusicSetting } from '../models/types';
 import { DEFAULT_CARD_OFFSET, DEFAULT_CENTER, DEFAULT_ZOOM } from '../models/types';
 import { migrateProject } from '../utils/migrateProject';
+import { exportProjectWithJsonLd } from '../utils/jsonLdExport';
 import type { Route } from '../models/routes';
 import { ROUTE_COLORS } from '../models/routes';
 import { reverseGeocode } from '../utils/reverseGeocode';
@@ -88,12 +89,13 @@ function renumber(spots: Spot[]): Spot[] {
 }
 
 function createEmptyProject(): Project {
+  // No default music URL: Player picks randomly from MUSIC_POOL on mount when
+  // project.music is unset. Pinning a single track here would bypass the pool.
   return {
     version: 2,
     name: 'Untitled',
     center: DEFAULT_CENTER,
     zoom: DEFAULT_ZOOM,
-    music: { url: 'https://trailpaint.org/stories/music/redeemed.mp3', autoplay: false },
     spots: [],
     routes: [],
   };
@@ -540,9 +542,13 @@ export const useProjectStore = create<ProjectState>()(
 
   // ── Persistence ──
 
-  exportJSON: () => JSON.stringify(get().project, null, 2),
+  exportJSON: () => exportProjectWithJsonLd(get().project),
 
   importJSON: (json) => {
+    // Defense-in-depth：caller 側（ImportWizard / drop / file-load）各自有 cap，
+    // store 作為 SSOT 也要擋，避免未來新 caller 漏檢 → OOM。20MB 與 caller 一致。
+    const MAX_JSON_SIZE = 20 * 1024 * 1024;
+    if (json.length > MAX_JSON_SIZE) throw new Error('Project too large');
     const raw = JSON.parse(json);
     const data = migrateProject(raw);
     set({

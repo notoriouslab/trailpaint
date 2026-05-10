@@ -3,7 +3,9 @@
  *
  * Replaces the TinyURL third-party dependency with a self-hosted short link
  * service. Users POST a project payload to /api/s; Worker generates a 12-char
- * ID, stores the payload in KV (TTL 90 days), and returns a short URL. When
+ * ID, stores the payload in KV (TTL 180 days, sliding — extended on each
+ * cache miss so frequently-opened links never expire), and returns a short
+ * URL. When
  * friends open /s/:id, Worker fetches the payload from KV and lands the
  * recipient on /app/player/?share=ss (Story Player) — recipients almost
  * always want to *watch* a shared trail, not edit someone else's project.
@@ -27,7 +29,7 @@
  * work via on-the-fly compress fallback but may 502 on very large payloads.
  */
 
-const TTL_SECONDS = 90 * 24 * 3600;
+const TTL_SECONDS = 180 * 24 * 3600;
 // Photo-heavy shares: 20 spots × 600/0.7 JPEG lands around 3MB hash; we set
 // 5MB so 30-ish photos still go through. KV value ceiling is 25MB so we're
 // still an order of magnitude below the infra limit, and WAF rate limit
@@ -246,6 +248,11 @@ async function handleGet(request, env, ctx) {
   const raw = await env.SHARE_KV.get(id);
   if (!raw) return new Response('not found', { status: 404 });
 
+  // Sliding TTL: refresh expiration on every cache miss so links that keep
+  // getting opened never expire. Edge cache (max-age=3600) caps writes to
+  // at most 24/day per link, well under KV's free-tier write quota.
+  ctx.waitUntil(env.SHARE_KV.put(id, raw, { expirationTtl: TTL_SECONDS }));
+
   // Fire-and-forget analytics write. Only fires on cache miss (cache hit returns
   // before reaching here), so counts are a systematic under-estimate of true
   // traffic — but a good trend indicator for observing which shares get reopened.
@@ -322,9 +329,9 @@ async function handleGet(request, env, ctx) {
   var h = ${JSON.stringify(hash)};
   try {
     sessionStorage.setItem('tp_share_hash', h);
-    location.replace(${JSON.stringify(ORIGIN + '/app/player/?share=ss')});
+    location.replace(${JSON.stringify(ORIGIN + '/app/player/?share=ss&autoplay=1')});
   } catch (e) {
-    location.replace(${JSON.stringify(ORIGIN + '/app/player/#share=')} + h);
+    location.replace(${JSON.stringify(ORIGIN + '/app/player/?autoplay=1#share=')} + h);
   }
 })();
 </script>

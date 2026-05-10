@@ -1,0 +1,78 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "tp": "https://trailpaint.org/ns/v3/"
+  },
+  "@graph": [
+    {
+      "@id": "https://trailpaint.org/ns/v3/",
+      "@type": "rdf:Vocabulary",
+      "rdfs:label": "TrailPaint Namespace v3",
+      "rdfs:comment": "Minimal RDF vocabulary for TrailPaint map-story terms not covered by schema.org. Used in @context of exported .trailpaint.json files so AI agents and JSON-LD parsers can resolve tp:Spot, tp:Route, tp:PhotoMeta, tp:TrailStory, tp:photoQuery, tp:iconId and tp:scriptureRefs to structured definitions.",
+      "rdfs:seeAlso": [
+        { "@id": "https://trailpaint.org/schemas/project-v3.schema.json" },
+        { "@id": "https://trailpaint.org/.well-known/trailpaint" }
+      ]
+    },
+    {
+      "@id": "tp:TrailStory",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": { "@id": "schema:TouristTrip" },
+      "rdfs:label": "Trail Story",
+      "rdfs:comment": "A hand-drawn trail map story: a named narrative with numbered spots and polyline routes, optionally with a historical basemap overlay and CC-attributed photos."
+    },
+    {
+      "@id": "tp:Spot",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": { "@id": "schema:Place" },
+      "rdfs:label": "Story Spot",
+      "rdfs:comment": "A numbered story point in a TrailPaint map story. Carries a position (num), a location (latlng), and an icon category (iconId)."
+    },
+    {
+      "@id": "tp:Route",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": { "@id": "schema:CreativeWork" },
+      "rdfs:label": "Route",
+      "rdfs:comment": "A polyline (ordered list of lat/lng points) connecting one or more spots, rendered as a hand-drawn line on the map."
+    },
+    {
+      "@id": "tp:PhotoMeta",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf": { "@id": "schema:ImageObject" },
+      "rdfs:label": "Photo Attribution",
+      "rdfs:comment": "Attribution metadata for a CC-licensed photo sourced from Wikimedia Commons — license, author, author URL, source URL."
+    },
+    {
+      "@id": "tp:OverlaySetting",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Historical Basemap Overlay",
+      "rdfs:comment": "A historical map tile overlay (CCTS Tang/Song/Yuan/Ming-era China, DARE Roman-era Mediterranean, etc.) stacked on top of the modern basemap."
+    },
+    {
+      "@id": "tp:photoQuery",
+      "@type": "rdf:Property",
+      "rdfs:label": "photo search query",
+      "rdfs:comment": "Bilingual search keywords (pipe-separated: 中文 | English) used by TrailPaint to auto-fetch CC photos from Wikimedia Commons on import.",
+      "schema:domainIncludes": { "@id": "tp:Spot" },
+      "schema:rangeIncludes": { "@id": "schema:Text" }
+    },
+    {
+      "@id": "tp:iconId",
+      "@type": "rdf:Property",
+      "rdfs:label": "icon identifier",
+      "rdfs:comment": "Key into the TrailPaint ICONS catalog (e.g. 'church', 'peak', 'coffee'). Selects the pin glyph for a spot.",
+      "schema:domainIncludes": { "@id": "tp:Spot" },
+      "schema:rangeIncludes": { "@id": "schema:Text" }
+    },
+    {
+      "@id": "tp:scriptureRefs",
+      "@type": "rdf:Property",
+      "rdfs:label": "scripture references",
+      "rdfs:comment": "Bible references for scripture-based stories (e.g. 'Acts 13:4-12'). Echoed into schema.org citation on export.",
+      "schema:domainIncludes": { "@id": "tp:Spot" },
+      "schema:rangeIncludes": { "@id": "schema:Text" }
+    }
+  ]
+}

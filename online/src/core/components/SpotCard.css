@@ -69,6 +69,7 @@
 
 /* Photo area */
 .spot-card__photo-wrap {
+  position: relative;
   margin-top: 2px;
   background:
     repeating-conic-gradient(

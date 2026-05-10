@@ -1,4 +1,5 @@
 import type { Spot } from '../models/types';
+import { PhotoAttribution } from './PhotoAttribution';
 
 interface SpotCardProps {
   spot: Spot;
@@ -25,6 +26,7 @@ export default function SpotCard({ spot, selected, onSelect }: SpotCardProps) {
       {spot.photo && (
         <div className="spot-card__photo-wrap">
           <img src={spot.photo} alt={spot.title} className="spot-card__photo" />
+          <PhotoAttribution meta={spot.photoMeta} />
         </div>
       )}
 

@@ -414,12 +414,16 @@ html, body {
   color: #3b1a06;
 }
 
+.player-popup__img-wrap {
+  position: relative;
+  margin-top: 10px;
+}
+
 .player-popup__img {
   width: 100%;
   max-height: 360px;
   object-fit: contain;
   border-radius: 4px;
-  margin-top: 10px;
   display: block;
 }
 

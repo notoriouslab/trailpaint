@@ -1,0 +1,45 @@
+{
+  "id": "exodus-conquest",
+  "title": "出埃及進迦南",
+  "subtitle": "BC 1446 — 1406 從歌珊到應許之地",
+  "description": "以色列人在埃及為奴 430 年後，摩西帶領他們離開蘭塞積貨城，過紅海、走西奈、頒律法；40 年後新世代從加低斯北上，渡過約旦河，征服迦南中央山地，在示劍立約。本路線採早期出埃及論（BC 1446），路線爭議地點 desc 標明各派立場與學者引用。",
+  "locale": "zh-TW",
+  "cover": "cover.jpg",
+  "music": {
+    "src": "../music/voller-hoffnung.mp3",
+    "title": "Voller Hoffnung — Ronny Matthes",
+    "credit": "Ronny Matthes (Jamendo / Internet Archive)",
+    "license": "CC"
+  },
+  "og": {
+    "title": "出埃及進迦南 — TrailPaint Stories",
+    "description": "互動地圖：BC 1446 從歌珊到示劍，13 spots 含路線爭議學者引用",
+    "image": "og.jpg"
+  },
+  "stories": [
+    {
+      "id": "exodus",
+      "title": "出埃及",
+      "subtitle": "BC 1446 從歌珊到西奈山",
+      "description": "以色列人在埃及為奴 430 年後（出 12:40-41），摩西帶領他們離開蘭塞，過紅海，行走曠野，最終在西奈山頒布律法。本路線採早期出埃及論（BC 1446）。",
+      "data": "exodus.trailpaint.json",
+      "thumbnail": "exodus-thumb.jpg",
+      "color": "#b45309",
+      "music": "../music/voller-hoffnung.mp3"
+    },
+    {
+      "id": "conquest",
+      "title": "進迦南",
+      "subtitle": "BC 1406 加低斯到示劍",
+      "description": "40 年曠野漂流結束後，以色列人從加低斯巴尼亞北上，繞過摩押與亞捫，渡過約旦河，攻陷耶利哥與艾城，在示劍立約獻祭——應許之地正式成為以色列地。",
+      "data": "conquest.trailpaint.json",
+      "thumbnail": "conquest-thumb.jpg",
+      "color": "#7c2d12",
+      "music": "../music/voller-hoffnung.mp3"
+    }
+  ],
+  "footer": {
+    "cta": "在 TrailPaint 中建立你自己的故事地圖",
+    "url": "https://trailpaint.org/app/"
+  }
+}

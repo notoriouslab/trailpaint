@@ -1,0 +1,26 @@
+/* 照片下方緊鄰一行、水平置中的黑灰底膠囊。block flow 不 absolute，
+ * 所以不會因父 container 的 overflow/position 而跑出照片外。桌機手機統一 7px。 */
+.photo-attribution {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 3px auto 0;
+  font-size: 7px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.photo-attribution a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.photo-attribution a:hover {
+  color: #fff;
+}

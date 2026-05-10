@@ -39,3 +39,33 @@
 - 絕大部分為 15-17 世紀原刊地圖與畫作，已進入公版。
 - 加勒三語碑現代照片（Kanatonian, CC BY-SA 3.0）需 share-alike。
 - 照片均嵌入各 `.trailpaint.json` 的 `spot.desc` 結尾「📷 credit」；此檔提供完整 Source URL。
+
+---
+
+## 中段五次航行（middle.trailpaint.json）— Phase 12 補完 (2026-05-04)
+
+| # | Spot | 作者 | 授權 | 來源 |
+|---|---|---|---|---|
+| 2 | 古里 Calicut | Vinayaraj | CC BY-SA 4.0 | [Commons File](https://commons.wikimedia.org/wiki/File:Kozhikode_Beach_monsoon_season_(2).jpg) |
+| 3 | 忽魯謨斯 Hormuz | NASA image using data provided courtesy of the University of Maryland’s Global Land Cover Facility | Public domain | [Commons File](https://commons.wikimedia.org/wiki/File:QeshmIsland_NASA.jpg) |
+| 4 | 亞丁 Aden | Unknown authorUnknown author | Public domain | [Commons File](https://commons.wikimedia.org/wiki/File:Wounded_yemenis_in_Aden_after_government_shooting_on_the_city,_1994.jpg) |
+| 5 | 麻林 Malindi | George K Gordon (Sub Lieutenant) | Public domain | [Commons File](https://commons.wikimedia.org/wiki/File:Melinda_chart_1873.jpg) |
+
+學者引用：Edward L. Dreyer《Zheng He: China and the Oceans in the Early Ming Dynasty》(Pearson, 2007) / Louise Levathes《When China Ruled the Seas》(Oxford, 1994) / 馬歡《瀛涯勝覽》/ 費信《星槎勝覽》/ 鞏珍《西洋番國志》/ Sally K. Church《Zheng He's Voyages: New Perspectives》(SOAS, 2008)
+
+爭議：Gavin Menzies《1421: The Year China Discovered the World》(2002) 主張鄭和分隊抵美洲 — 學界主流否定。
+---
+
+## 中段五次航行（middle.trailpaint.json）— Phase 12 補完 (2026-05-04)
+
+| # | Spot | 作者 | 授權 | 來源 |
+|---|---|---|---|---|
+| 1 | 滿剌加 Malacca | Philip Nalangan | CC BY 4.0 | [Commons File](https://commons.wikimedia.org/wiki/File:Malacca_River_Melaka.jpg) |
+| 2 | 古里 Calicut | Vinayaraj | CC BY-SA 4.0 | [Commons File](https://commons.wikimedia.org/wiki/File:Kozhikode_Beach_monsoon_season_(2).jpg) |
+| 3 | 忽魯謨斯 Hormuz | NASA image using data provided courtesy of the University of Maryland’s Global Land Cover Facility | Public domain | [Commons File](https://commons.wikimedia.org/wiki/File:QeshmIsland_NASA.jpg) |
+| 4 | 亞丁 Aden | Unknown authorUnknown author | Public domain | [Commons File](https://commons.wikimedia.org/wiki/File:Wounded_yemenis_in_Aden_after_government_shooting_on_the_city,_1994.jpg) |
+| 5 | 麻林 Malindi | George K Gordon (Sub Lieutenant) | Public domain | [Commons File](https://commons.wikimedia.org/wiki/File:Melinda_chart_1873.jpg) |
+
+學者引用：Edward L. Dreyer《Zheng He: China and the Oceans in the Early Ming Dynasty》(Pearson, 2007) / Louise Levathes《When China Ruled the Seas》(Oxford, 1994) / 馬歡《瀛涯勝覽》/ 費信《星槎勝覽》/ 鞏珍《西洋番國志》/ Sally K. Church《Zheng He's Voyages: New Perspectives》(SOAS, 2008)
+
+爭議：Gavin Menzies《1421: The Year China Discovered the World》(2002) 主張鄭和分隊抵美洲 — 學界主流否定。

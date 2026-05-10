@@ -12,7 +12,7 @@ import { migrateProject } from './migrateProject';
  *   ride along and friends see the full visual story.
  * Key `p` on spots stores the photo data URL when included; absent otherwise.
  */
-function compactProject(project: Project, includePhoto = false): Record<string, unknown> {
+export function compactProject(project: Project, includePhoto = false): Record<string, unknown> {
   const out: Record<string, unknown> = {
     v: project.version,
     n: project.name,
@@ -25,6 +25,26 @@ function compactProject(project: Project, includePhoto = false): Record<string, 
       if (s.desc) o.d = s.desc;
       if (s.cardOffset.x !== 0 || s.cardOffset.y !== 0) o.o = [s.cardOffset.x, s.cardOffset.y];
       if (includePhoto && s.photo) o.p = s.photo;
+      // v3.1 photoMeta (013): 內層 key 改用 sc/lc/au/uu/su 避免與其他物件的 short keys
+      // 視覺重複（runtime namespace 不同無衝突，但 debug 時看得清楚）
+      if (s.photoMeta) {
+        o.pm = {
+          sc: s.photoMeta.source,
+          lc: s.photoMeta.license,
+          au: s.photoMeta.author,
+          uu: s.photoMeta.authorUrl,
+          su: s.photoMeta.sourceUrl,
+        };
+      }
+      // v3+ scripture_refs (009): keep so receivers can link to YouVersion etc.
+      if (s.scripture_refs && s.scripture_refs.length > 0) {
+        o.sr = s.scripture_refs;
+      }
+      // v5+ era (016): preserve so TimeSlider era fade still works after
+      // share-link round-trip. Compact as [start, end] tuple.
+      if (s.era) {
+        o.er = [s.era.start, s.era.end];
+      }
       return o;
     }),
     r: project.routes.map((r) => {
@@ -51,17 +71,41 @@ function compactProject(project: Project, includePhoto = false): Record<string, 
 /**
  * Expand a compact project back to full Project structure.
  */
-function expandProject(c: Record<string, unknown>): Project {
-  const spots = (c.s as Record<string, unknown>[])?.map((s) => ({
-    id: s.i as string,
-    latlng: s.l as [number, number],
-    num: s.u as number,
-    title: s.t as string,
-    desc: (s.d as string) ?? '',
-    photo: (typeof s.p === 'string' ? s.p : null),
-    iconId: s.k as string,
-    cardOffset: s.o ? { x: (s.o as number[])[0], y: (s.o as number[])[1] } : { ...DEFAULT_CARD_OFFSET },
-  })) ?? [];
+export function expandProject(c: Record<string, unknown>): Project {
+  const spots = (c.s as Record<string, unknown>[])?.map((s) => {
+    const out: Record<string, unknown> = {
+      id: s.i as string,
+      latlng: s.l as [number, number],
+      num: s.u as number,
+      title: s.t as string,
+      desc: (s.d as string) ?? '',
+      photo: (typeof s.p === 'string' ? s.p : null),
+      iconId: s.k as string,
+      cardOffset: parseCardOffset(s.o),
+    };
+    // v3.1 photoMeta (013): expand sc/lc/au/uu/su → photoMeta；migrateProject 會做白名單
+    if (s.pm && typeof s.pm === 'object') {
+      const pm = s.pm as Record<string, unknown>;
+      out.photoMeta = {
+        source: pm.sc,
+        license: pm.lc,
+        author: pm.au,
+        authorUrl: pm.uu,
+        sourceUrl: pm.su,
+      };
+    }
+    // v3+ scripture_refs (009): expand back as-is; migrateProject re-validates.
+    if (Array.isArray(s.sr)) {
+      out.scripture_refs = (s.sr as unknown[]).filter((x): x is string => typeof x === 'string');
+    }
+    // v5+ era (016): expand [start, end] tuple → { start, end }; migrateProject's
+    // sanitizeEra re-validates (NaN / inverted / out-of-range rejected).
+    if (Array.isArray(s.er) && s.er.length === 2
+        && typeof s.er[0] === 'number' && typeof s.er[1] === 'number') {
+      out.era = { start: s.er[0], end: s.er[1] };
+    }
+    return out;
+  }) ?? [];
   const routes = (c.r as Record<string, unknown>[])?.map((r) => ({
     id: r.i as string,
     name: (r.n as string) ?? '',
@@ -70,11 +114,13 @@ function expandProject(c: Record<string, unknown>): Project {
     elevations: (r.e as number[] | null) ?? null,
   })) ?? [];
   const project: Project = {
-    version: (c.v as 1 | 2) ?? 2,
+    // Version cast is cosmetic — migrateProject re-runs against the expanded
+    // payload and force-bumps to the latest schema version (currently v5).
+    version: (typeof c.v === 'number' ? c.v : 5) as Project['version'],
     name: c.n as string,
     center: c.c as [number, number],
     zoom: c.z as number,
-    spots,
+    spots: spots as unknown as Project['spots'],
     routes,
   };
   if (c.ov && typeof c.ov === 'object') {
@@ -93,6 +139,15 @@ function expandProject(c: Record<string, unknown>): Project {
     }
   }
   return project;
+}
+
+/** Reject NaN/Infinity/non-array; a tampered share link could otherwise
+ *  inject NaN into a CSS transform and float the spot card off-screen. */
+function parseCardOffset(o: unknown): { x: number; y: number } {
+  if (!Array.isArray(o) || o.length < 2) return { ...DEFAULT_CARD_OFFSET };
+  const [x, y] = o;
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return { ...DEFAULT_CARD_OFFSET };
+  return { x: x as number, y: y as number };
 }
 
 /**

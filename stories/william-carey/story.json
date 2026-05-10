@@ -1,0 +1,35 @@
+{
+  "id": "william-carey",
+  "title": "威廉凱瑞印度宣教",
+  "subtitle": "AD 1792 — 1834 從諾丁罕到 Serampore 41 年",
+  "description": "英國浸信會宣教士 William Carey 1792 諾丁罕講道激勵成立 Particular Baptist Missionary Society — 啟動現代基督新教宣教運動。1793 抵加爾各答，1800 Serampore Trio 於丹麥屬 Serampore 創立 Mission；41 年間譯印度六大語系聖經、亞洲第一所 grant-degree 高等學府 Serampore College、推動印度禁絕寡婦殉葬。被尊為「現代宣教之父」。",
+  "locale": "zh-TW",
+  "cover": "cover.jpg",
+  "music": {
+    "src": "../music/voller-hoffnung.mp3",
+    "title": "Voller Hoffnung — Ronny Matthes",
+    "credit": "Ronny Matthes (Jamendo / Internet Archive)",
+    "license": "CC"
+  },
+  "og": {
+    "title": "威廉凱瑞印度宣教 — TrailPaint Stories",
+    "description": "互動地圖：1792 諾丁罕到 1834 Serampore，7 spots 跨英國/印度 41 年宣教史",
+    "image": "og.jpg"
+  },
+  "stories": [
+    {
+      "id": "india",
+      "title": "印度宣教",
+      "subtitle": "AD 1792 — 1834 從諾丁罕到 Serampore",
+      "description": "William Carey 31 歲 1792 諾丁罕講道「期待從神而來大事，為神嘗試大事」啟動 Particular Baptist Missionary Society；次年抵加爾各答開啟 41 年印度宣教。1800 移居丹麥屬 Serampore 創立 Mission，1809 完成 Bengali 全本聖經、1818 創立 Serampore College — 譯經逾 40 種語文、創印度第一份報紙、推動寡婦殉葬廢除。「現代宣教之父」典範。",
+      "data": "india.trailpaint.json",
+      "thumbnail": "india-thumb.jpg",
+      "color": "#7c2d12",
+      "music": "../music/voller-hoffnung.mp3"
+    }
+  ],
+  "footer": {
+    "cta": "在 TrailPaint 中建立你自己的故事地圖",
+    "url": "https://trailpaint.org/app/"
+  }
+}

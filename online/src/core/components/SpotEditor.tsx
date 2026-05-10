@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import type { Spot } from '../models/types';
 import { ICONS } from '../icons';
 import { compressImage } from '../hooks/useImageCompress';
+import { PhotoAttribution } from './PhotoAttribution';
 import { t } from '../../i18n';
 
 interface SpotEditorProps {
@@ -70,6 +71,7 @@ export default function SpotEditor({ spot, onUpdate, onDelete, onClose }: SpotEd
       {spot.photo && (
         <div className="spot-editor__photo-preview">
           <img src={spot.photo} alt="" />
+          <PhotoAttribution meta={spot.photoMeta} />
           <button className="spot-editor__photo-remove" onClick={() => onUpdate({ photo: null })}>
             {t('editor.removePhoto')}
           </button>

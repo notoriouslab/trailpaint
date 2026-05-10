@@ -6,7 +6,8 @@
  *      pre-rendered .md file (saves ~5× tokens for AI crawlers vs full HTML).
  *   2. Fix `/.well-known/api-catalog` Content-Type to `application/linkset+json`
  *      (RFC 9727 — GitHub Pages would otherwise serve it as text/plain and
- *      RFC 9264 scanners reject it).
+ *      RFC 9264 scanners reject it). Same for `/.well-known/trailpaint`
+ *      → `application/json` (extensionless files default to octet-stream).
  *   3. Inject an RFC 8288 `Link:` response header on homepage / stories
  *      pointing agents at llms.txt / agent-card / agent-skills / api-catalog /
  *      sitemap so automated discovery doesn't need HTML scraping.
@@ -27,6 +28,8 @@ const AGENT_LINKS = [
   '</.well-known/agent-card.json>; rel="service-desc"; type="application/json"',
   '</.well-known/agent-skills/index.json>; rel="agent-skills"; type="application/json"',
   '</.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"',
+  '</.well-known/trailpaint>; rel="describedby"; type="application/json"',
+  '</schemas/project-v3.schema.json>; rel="profile"; type="application/schema+json"',
   '</sitemap.xml>; rel="sitemap"; type="application/xml"',
 ].join(', ');
 
@@ -70,6 +73,22 @@ async function serveApiCatalog(request) {
   });
 }
 
+async function serveTrailpaintDiscovery(request) {
+  // .well-known/trailpaint has no extension — GitHub Pages defaults to
+  // application/octet-stream, but JSON-LD parsers / AI agents expect JSON.
+  const originRes = await fetch(request, { cf: { cacheTtl: 600, cacheEverything: true } });
+  if (!originRes.ok) return originRes;
+  const body = await originRes.text();
+  return new Response(body, {
+    status: 200,
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8',
+      'Cache-Control': 'public, max-age=600, s-maxage=600',
+      'X-Served-By': 'cf-worker-markdown-negotiation',
+    },
+  });
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -79,6 +98,12 @@ export default {
     if ((request.method === 'GET' || request.method === 'HEAD') &&
         url.pathname === '/.well-known/api-catalog') {
       return serveApiCatalog(request);
+    }
+
+    // Content-Type fix for trailpaint discovery (GitHub Pages defaults to octet-stream)
+    if ((request.method === 'GET' || request.method === 'HEAD') &&
+        url.pathname === '/.well-known/trailpaint') {
+      return serveTrailpaintDiscovery(request);
     }
 
     // Only intercept GET/HEAD requests that explicitly want markdown

@@ -5,6 +5,7 @@ import {
   type ExportFormat,
   type ExportBorderStyle,
   type StyleFilter,
+  type CapturedMap,
 } from '../utils/exportRenderer';
 import { applyStyleFilter } from '../utils/styleFilters';
 import { createBackendShare } from '../utils/shareLink';
@@ -13,9 +14,9 @@ import { t, currentLocale } from '../../i18n';
 import './ExportWizard.css';
 
 interface ExportWizardProps {
-  baseImage: HTMLImageElement | null;
+  baseImage: CapturedMap | null;
   onClose: () => void;
-  onAdjust: (dx: number, dy: number, dZoom: number) => Promise<HTMLImageElement>;
+  onAdjust: (dx: number, dy: number, dZoom: number) => Promise<CapturedMap>;
   onCapture: () => Promise<void>;
   onSave: () => void;
   onOpenImportWizard: () => void;
@@ -81,9 +82,9 @@ function sanitizeFilename(name: string): string {
   return name.replace(/[/\\:*?"<>|]/g, '_').slice(0, 100) || 'Untitled';
 }
 
-type AiStyle = 'japanese' | 'treasure' | 'kawaii' | 'minimal';
+type AiStyle = 'japanese' | 'treasure' | 'kawaii';
 
-const AI_STYLES: AiStyle[] = ['japanese', 'treasure', 'kawaii', 'minimal'];
+const AI_STYLES: AiStyle[] = ['japanese', 'treasure', 'kawaii'];
 
 const LOCALE_LABEL_INSTRUCTION: Record<string, string> = {
   'zh-TW': 'All text labels on the map MUST be written in Traditional Chinese (繁體中文). Do NOT use Simplified Chinese or garbled characters.',
@@ -100,7 +101,6 @@ function getAiPrompt(routeName: string, aiStyle: AiStyle): string {
     japanese: `${base}, Japanese hand-drawn cartographic style (手描き地図). Warm washi paper texture, soft watercolor washes for terrain, delicate ink outlines, handwritten-style labels. Muted earth tones with gentle greens and warm browns. Illustrated travel journal (旅ノート) aesthetic. ${langRule}`,
     treasure: `${base} in antique treasure map style. Aged parchment with burnt edges and coffee stains, ornate compass rose, hand-drawn topographic features with hachure shading, sea-monster-style decorative illustrations in margins. Sepia ink with gold and deep brown tones. Old-world cartography aesthetic, as if drawn by an 18th-century explorer. ${langRule}`,
     kawaii: `${base} in cute kawaii cartoon style. Rounded soft shapes, pastel color palette (mint green, baby pink, cream, lavender), tiny smiling trees and clouds, chibi-style hikers, bubble-letter labels. Flat design with subtle shadows. Cheerful, cozy, sticker-sheet aesthetic. ${langRule}`,
-    minimal: `${base} in minimal line art style. Single-weight black ink lines on pure white background, no fills or shading, clean geometric icons for landmarks, trail shown as a simple dotted line. Labels in casual handwritten font. Generous whitespace. Modern minimalist poster aesthetic, inspired by Muji design language. ${langRule}`,
   };
 
   return prompts[aiStyle];
@@ -393,15 +393,6 @@ export default function ExportWizard({
               >
                 {downloading ? t('export.preview.downloading') : t('export.preview.download')}
               </button>
-              <div className="export-preview__btn-row">
-                <button
-                  className="export-preview__btn"
-                  onClick={handleCopyShareLink}
-                  style={{ flex: 1 }}
-                >
-                  🔗 {t('export.preview.shareLink')}
-                </button>
-              </div>
               <div className="export-preview__ai-row">
                 <select
                   className="export-preview__select"
@@ -419,17 +410,7 @@ export default function ExportWizard({
                   🤖 {t('export.preview.aiPrompt')}
                 </button>
               </div>
-              <button
-                className="export-preview__btn"
-                onClick={async () => {
-                  const project = useProjectStore.getState().project;
-                  const embedHtml = buildProjectEmbedHtml(project, window.location.origin);
-                  await navigator.clipboard.writeText(embedHtml);
-                  showToast(t('export.preview.embedCopied'));
-                }}
-              >
-                📋 {t('export.preview.embedCode')}
-              </button>
+              <p className="export-preview__ai-hint">{t('export.preview.aiHint')}</p>
             </div>
           </div>
             </>
@@ -462,21 +443,48 @@ export default function ExportWizard({
           )}
 
           {activeTab === 'interop' && (
-            <div className="export-preview__tab-pane">
-              <h3 className="export-preview__pane-title">{t('export.interop.title')}</h3>
-              <p className="export-preview__desc">{t('export.interop.desc')}</p>
-              {hasData ? (
-                <>
-                  <button className="export-preview__btn" onClick={onExportGeojson}>
-                    🌐 {t('export.interop.geojson')}
+            <div className="export-preview__tab-pane export-preview__tab-pane--interop">
+              <div className="export-interop-cols">
+                <div className="export-interop-col">
+                  <h3 className="export-preview__pane-title">{t('export.interop.geoTitle')}</h3>
+                  <p className="export-preview__desc">{t('export.interop.geoDesc')}</p>
+                  {hasData ? (
+                    <>
+                      <button className="export-preview__btn" onClick={onExportGeojson}>
+                        🌐 {t('export.interop.geojson')}
+                      </button>
+                      <button className="export-preview__btn" onClick={onExportKml}>
+                        🌐 {t('export.interop.kml')}
+                      </button>
+                    </>
+                  ) : (
+                    <div className="export-preview__empty">{t('export.interop.empty')}</div>
+                  )}
+                </div>
+                <div className="export-interop-col">
+                  <h3 className="export-preview__pane-title">{t('export.interop.shareTitle')}</h3>
+                  <p className="export-preview__desc">{t('export.interop.shareDesc')}</p>
+                  <button
+                    className="export-preview__btn"
+                    onClick={handleCopyShareLink}
+                    disabled={!hasData}
+                  >
+                    🔗 {t('export.preview.shareLink')}
                   </button>
-                  <button className="export-preview__btn" onClick={onExportKml}>
-                    🌐 {t('export.interop.kml')}
+                  <button
+                    className="export-preview__btn"
+                    disabled={!hasData}
+                    onClick={async () => {
+                      const project = useProjectStore.getState().project;
+                      const embedHtml = buildProjectEmbedHtml(project, window.location.origin);
+                      await navigator.clipboard.writeText(embedHtml);
+                      showToast(t('export.preview.embedCopied'));
+                    }}
+                  >
+                    📋 {t('export.preview.embedCode')}
                   </button>
-                </>
-              ) : (
-                <div className="export-preview__empty">{t('export.interop.empty')}</div>
-              )}
+                </div>
+              </div>
             </div>
           )}
         </div>

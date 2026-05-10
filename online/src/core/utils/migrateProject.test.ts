@@ -12,9 +12,9 @@ const validBase = {
 };
 
 describe('migrateProject — baseline (Task 2)', () => {
-  it('returns a valid Project with version 4 for minimal valid input', () => {
+  it('returns a valid Project with version 5 for minimal valid input', () => {
     const p = migrateProject({ ...validBase });
-    expect(p.version).toBe(4);
+    expect(p.version).toBe(5);
     expect(p.name).toBe('Test');
     expect(p.center).toEqual([23.5, 121]);
     expect(p.zoom).toBe(8);
@@ -157,9 +157,9 @@ describe('migrateProject — baseline (Task 2)', () => {
 });
 
 describe('migrateProject — v3 scripture_refs (Task 3)', () => {
-  it('upgrades version from v2 input to v4', () => {
+  it('upgrades version from v2 input to v5', () => {
     const p = migrateProject({ ...validBase, version: 2 });
-    expect(p.version).toBe(4);
+    expect(p.version).toBe(5);
   });
 
   it('preserves valid scripture_refs array', () => {
@@ -263,14 +263,14 @@ describe('migrateProject — v3 scripture_refs (Task 3)', () => {
   });
 });
 
-describe('migrateProject — real fixture (mackay v2 → v4)', () => {
-  it('upgrades mackay.trailpaint.json (v2) to v4 without losing spots', () => {
+describe('migrateProject — real fixture (mackay v2 → v5)', () => {
+  it('upgrades mackay.trailpaint.json (v2) to v5 without losing spots', () => {
     const path = resolve(__dirname, '../../../../stories/taiwan-missionaries/mackay.trailpaint.json');
     const raw = JSON.parse(readFileSync(path, 'utf8'));
     expect(raw.version).toBe(2);
     const spotsBefore = raw.spots.length;
     const p = migrateProject(raw);
-    expect(p.version).toBe(4);
+    expect(p.version).toBe(5);
     expect(p.spots.length).toBe(spotsBefore);
     expect(p.name).toBe(raw.name);
     expect(p.center).toEqual([
@@ -290,12 +290,12 @@ describe('migrateProject — passion-week v3 fixtures', () => {
   ];
 
   for (const seg of segments) {
-    it(`loads ${seg.file} (v3) upgrading to v4 with scripture_refs preserved`, () => {
+    it(`loads ${seg.file} (v3) upgrading to v5 with scripture_refs preserved`, () => {
       const path = resolve(__dirname, `../../../../stories/passion-week/${seg.file}`);
       const raw = JSON.parse(readFileSync(path, 'utf8'));
       expect(raw.version).toBe(3);
       const p = migrateProject(raw);
-      expect(p.version).toBe(4);
+      expect(p.version).toBe(5);
       expect(p.spots.length).toBe(raw.spots.length);
       expect(p.spots.length).toBeGreaterThanOrEqual(seg.minSpots);
       // Every spot should keep its scripture_refs
@@ -321,13 +321,13 @@ describe('migrateProject — passion-week v3 fixtures', () => {
 });
 
 describe('migrateProject — v4 pendingLocation (010 D5)', () => {
-  it('upgrades v3 input to v4 without data loss', () => {
+  it('upgrades v3 input to v5 without data loss', () => {
     const p = migrateProject({
       ...validBase,
       version: 3,
       spots: [{ id: 's1', latlng: [23.5, 121], title: 'x' }],
     });
-    expect(p.version).toBe(4);
+    expect(p.version).toBe(5);
     expect(p.spots).toHaveLength(1);
     expect(p.spots[0].pendingLocation).toBeUndefined();
   });
@@ -354,5 +354,171 @@ describe('migrateProject — v4 pendingLocation (010 D5)', () => {
     expect(p.spots[0].pendingLocation).toBeUndefined();
     expect(p.spots[1].pendingLocation).toBeUndefined();
     expect(p.spots[2].pendingLocation).toBeUndefined();
+  });
+});
+
+describe('migrateProject — v3.1 photoMeta / photo_query (013)', () => {
+  const validMeta = {
+    source: 'wikimedia-commons',
+    license: 'CC BY-SA 3.0',
+    author: 'AngMoKio',
+    authorUrl: 'https://commons.wikimedia.org/wiki/User:AngMoKio',
+    sourceUrl: 'https://commons.wikimedia.org/wiki/File:X.jpg',
+  };
+
+  it('leaves photoMeta undefined for v3 input without the field', () => {
+    const p = migrateProject({
+      ...validBase,
+      version: 3,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x' }],
+    });
+    expect(p.spots[0].photoMeta).toBeUndefined();
+  });
+
+  it('preserves all 5 photoMeta fields when valid', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', photoMeta: { ...validMeta } }],
+    });
+    expect(p.spots[0].photoMeta).toEqual(validMeta);
+  });
+
+  it('drops entire photoMeta when source is not wikimedia-commons (all-or-nothing)', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', photoMeta: { ...validMeta, source: 'unsplash' } }],
+    });
+    expect(p.spots[0].photoMeta).toBeUndefined();
+  });
+
+  it('downgrades non-Wikimedia authorUrl to null but keeps photoMeta (attribution still shows)', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{
+        id: 's1', latlng: [23.5, 121], title: 'x',
+        photoMeta: { ...validMeta, authorUrl: 'https://flickr.com/people/xxx' },
+      }],
+    });
+    // photoMeta 保留，authorUrl 降級 null（避免 CC BY 合規漏洞）
+    expect(p.spots[0].photoMeta).toBeDefined();
+    expect(p.spots[0].photoMeta?.author).toBe('AngMoKio');
+    expect(p.spots[0].photoMeta?.authorUrl).toBeNull();
+  });
+
+  it('keeps authorUrl when pointing to zh.wikipedia.org (common Commons Artist pattern)', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{
+        id: 's1', latlng: [23.5, 121], title: 'x',
+        photoMeta: { ...validMeta, authorUrl: 'https://zh.wikipedia.org/wiki/User:Xxx' },
+      }],
+    });
+    expect(p.spots[0].photoMeta?.authorUrl).toBe('https://zh.wikipedia.org/wiki/User:Xxx');
+  });
+
+  it('downgrades javascript: authorUrl to null (XSS defense)', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{
+        id: 's1', latlng: [23.5, 121], title: 'x',
+        photoMeta: { ...validMeta, authorUrl: 'javascript:alert(1)' },
+      }],
+    });
+    expect(p.spots[0].photoMeta).toBeDefined();
+    expect(p.spots[0].photoMeta?.authorUrl).toBeNull();
+  });
+
+  it('keeps photoMeta when authorUrl is null (anonymous artist)', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{
+        id: 's1', latlng: [23.5, 121], title: 'x',
+        photoMeta: { ...validMeta, authorUrl: null },
+      }],
+    });
+    expect(p.spots[0].photoMeta?.authorUrl).toBeNull();
+  });
+
+  it('drops photoMeta when sourceUrl is non-Commons', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{
+        id: 's1', latlng: [23.5, 121], title: 'x',
+        photoMeta: { ...validMeta, sourceUrl: 'https://evil.com/steal' },
+      }],
+    });
+    expect(p.spots[0].photoMeta).toBeUndefined();
+  });
+
+  it('preserves photo_query when string', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', photo_query: '台北101|Taipei 101' }],
+    });
+    expect(p.spots[0].photo_query).toBe('台北101|Taipei 101');
+  });
+
+  it('drops photo_query when not string (number / object)', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [
+        { id: 's1', latlng: [23.5, 121], title: 'x', photo_query: 123 },
+        { id: 's2', latlng: [23.5, 121], title: 'y', photo_query: { q: 'x' } },
+      ],
+    });
+    expect(p.spots[0].photo_query).toBeUndefined();
+    expect(p.spots[1].photo_query).toBeUndefined();
+  });
+
+  it('clamps photo_query to 200 chars (data bomb defense)', () => {
+    const long = 'x'.repeat(500);
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', photo_query: long }],
+    });
+    expect(p.spots[0].photo_query?.length).toBe(200);
+  });
+});
+
+describe('migrateProject — spot.num clamp (賈詡 audit E2)', () => {
+  const validBase = {
+    version: 5,
+    name: 'Test',
+    center: [23.5, 121],
+    zoom: 8,
+    spots: [],
+    routes: [],
+  };
+
+  it('clamps spot.num to <= 9999 (1e308 → 9999, prevents UI badge break)', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', num: 1e308 }],
+    });
+    expect(p.spots[0].num).toBe(9999);
+  });
+
+  it('falls back to spots.length+1 when spot.num is NaN', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', num: NaN }],
+    });
+    expect(p.spots[0].num).toBe(1);
+  });
+
+  it('falls back to spots.length+1 when spot.num is Infinity', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', num: Infinity }],
+    });
+    expect(p.spots[0].num).toBe(1);
+  });
+
+  it('preserves valid spot.num within [1, 9999]', () => {
+    const p = migrateProject({
+      ...validBase,
+      spots: [{ id: 's1', latlng: [23.5, 121], title: 'x', num: 42 }],
+    });
+    expect(p.spots[0].num).toBe(42);
   });
 });

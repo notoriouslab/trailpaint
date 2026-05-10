@@ -4,7 +4,12 @@ import { parseGpx } from '../utils/gpxParser';
 import { exifToGeojson, MAX_PHOTO_BATCH } from '../utils/exifToGeojson';
 import { parseKml } from '../utils/kmlParser';
 import { parseGeoJson } from '../utils/geojsonParser';
-import { geojsonToImport, type ImportBundle } from '../utils/geojsonImport';
+import { geojsonToImport, type ImportBundle, type ImportResult } from '../utils/geojsonImport';
+import { planPhotoAdoption } from '../utils/photoAdoption';
+import { stripJsonCodeFence } from '../utils/pasteJsonInput';
+import { migrateProject } from '../utils/migrateProject';
+import { autoFetchPhotos, AutoFetchAbortError, type FetchReport } from '../utils/autoFetchPhotos';
+import type { Project } from '../models/types';
 import type { ExifStats } from '../utils/exifToGeojson';
 import { t } from '../../i18n';
 import './ImportWizard.css';
@@ -29,7 +34,7 @@ JSON 格式要求：
   "center": [緯度, 經度],
   "zoom": 14,
   "spots": [
-    { "id": "s1", "latlng": [緯度, 經度], "num": 1, "title": "景點名", "desc": "描述", "photo": null, "iconId": "pin", "cardOffset": { "x": 0, "y": -60 } }
+    { "id": "s1", "latlng": [緯度, 經度], "num": 1, "title": "景點名", "desc": "描述", "photo": null, "photo_query": "中文關鍵字|English keywords", "iconId": "pin", "cardOffset": { "x": 0, "y": -60 } }
   ],
   "routes": [
     { "id": "r1", "name": "路線名", "pts": [[緯度,經度], ...中間路徑點...], "color": "orange", "elevations": null }
@@ -38,7 +43,9 @@ JSON 格式要求：
 
 iconId 選項：leaf(植物), flower(花), tree(樹), bird(鳥), water(水), rock(岩石), toilet(廁所), bus(站牌), rest(休憩), food(餐廳), beer(酒吧), hotspring(溫泉), mall(商城), cinema(電影院), bike(腳踏車), parking(停車), sun(觀景), camera(拍照), warning(注意), info(說明), pin(標記)
 color 選項：orange, blue, green, red, purple
-座標請用真實 GPS 座標（可用 Google Maps 查）。每個景點的 cardOffset 請設不同的 x 值（如 80, -100, 90, -80）避免卡片重疊。`;
+座標請用真實 GPS 座標（可用 Google Maps 查）。每個景點的 cardOffset 請設不同的 x 值（如 80, -100, 90, -80）避免卡片重疊。
+
+photo_query 給「AI 匯入 + 自動補圖」功能使用：請為每個景點產生中英雙語搜尋關鍵字（以 | 分隔），優先使用該景點在 Wikimedia Commons 上的常見命名（例：「台北101|Taipei 101」、「七星山|Qixingshan」、「敘利亞安提阿|Antioch Syria」）。冷門地點若不確定可留空字串 ""。`;
 
 async function copyToClipboard(text: string): Promise<boolean> {
   if (navigator.clipboard?.write) {
@@ -66,12 +73,25 @@ async function copyToClipboard(text: string): Promise<boolean> {
   return ok;
 }
 
-type SubView = 'main' | 'photoPreview';
+type SubView = 'main' | 'photoPreview' | 'autoFetchProgress' | 'autoFetchCancelled' | 'autoFetchReport';
 
 interface PhotoPreviewState {
   files: File[];
   stats: ExifStats;
   bundle: ImportBundle;
+}
+
+interface AutoFetchProgressState {
+  current: number;
+  total: number;
+  title: string;
+}
+
+interface AutoFetchCancelledState {
+  project: Project;
+  report: FetchReport;
+  processed: number;
+  total: number;
 }
 
 export default function ImportWizard({ onClose, onLoadImage }: ImportWizardProps) {
@@ -82,6 +102,14 @@ export default function ImportWizard({ onClose, onLoadImage }: ImportWizardProps
   const [schemaOpen, setSchemaOpen] = useState(false);
   const [subView, setSubView] = useState<SubView>('main');
   const [preview, setPreview] = useState<PhotoPreviewState | null>(null);
+  const [pasteOpen, setPasteOpen] = useState(false);
+  const [pasteText, setPasteText] = useState('');
+  const [pasteError, setPasteError] = useState('');
+  const [autoFetchChecked, setAutoFetchChecked] = useState(false);
+  const [autoFetchProgress, setAutoFetchProgress] = useState<AutoFetchProgressState | null>(null);
+  const [autoFetchCancelled, setAutoFetchCancelled] = useState<AutoFetchCancelledState | null>(null);
+  const [autoFetchReport, setAutoFetchReport] = useState<{ project: Project; report: FetchReport } | null>(null);
+  const abortRef = useRef<AbortController | null>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   const showToast = useCallback((msg: string) => {
@@ -150,7 +178,33 @@ export default function ImportWizard({ onClose, onLoadImage }: ImportWizardProps
     if (result.unsupportedCount && result.unsupportedCount > 0) {
       showToast(t('import.unsupportedFeatures').replace('{count}', String(result.unsupportedCount)));
     }
-    await importPOIs(result);
+
+    // Let close-proximity photos adopt existing photo-less spots (30m radius).
+    // Merges are invisible to KML/GeoJSON import since those bundles carry no
+    // spotPhotoMap — plan.adoptions stays empty there.
+    const plan = planPhotoAdoption(
+      result.spots,
+      result.spotPhotoMap ?? new Map(),
+      state.project.spots,
+    );
+    const mergedPhotoMap = new Map<string, File>();
+    for (const a of plan.adoptions) mergedPhotoMap.set(a.spotId, a.photoFile);
+    for (const [id, file] of plan.remainingPhotoMap) mergedPhotoMap.set(id, file);
+    const merged: ImportResult = {
+      ...result,
+      spots: plan.remainingSpots,
+      spotPhotoMap: mergedPhotoMap.size > 0 ? mergedPhotoMap : undefined,
+    };
+
+    await importPOIs(merged);
+
+    if (plan.adoptions.length > 0) {
+      showToast(
+        t('import.photoAdopt.summary')
+          .replace('{adopted}', String(plan.adoptions.length))
+          .replace('{added}', String(plan.remainingSpots.length)),
+      );
+    }
     return true;
   }, [importPOIs, showToast]);
 
@@ -246,6 +300,113 @@ export default function ImportWizard({ onClose, onLoadImage }: ImportWizardProps
     if (ok) showToast(t('import.ai.promptCopied'));
   }, [showToast]);
 
+  const handleOpenPaste = useCallback(() => {
+    setPasteOpen(true);
+    setPasteError('');
+  }, []);
+
+  const handleCancelPaste = useCallback(() => {
+    setPasteOpen(false);
+    setPasteText('');
+    setPasteError('');
+    setAutoFetchChecked(false);
+  }, []);
+
+  /** 貼 JSON 後智能預設：有任一 spot 帶 photo_query 就預設勾「自動補圖」 */
+  const handlePasteTextChange = useCallback((e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const text = e.target.value;
+    setPasteText(text);
+    // 只在非空且沒手動勾選時偵測一次；勾過之後尊重用戶選擇
+    if (text.length > 50 && text.length < 100000 && !autoFetchChecked) {
+      try {
+        const parsed = JSON.parse(stripJsonCodeFence(text));
+        const hasQuery = Array.isArray(parsed?.spots)
+          && parsed.spots.some((s: { photo_query?: unknown }) => typeof s?.photo_query === 'string' && s.photo_query.trim());
+        if (hasQuery) setAutoFetchChecked(true);
+      } catch { /* 貼一半或無效 JSON 不處理 */ }
+    }
+  }, [autoFetchChecked]);
+
+  const handleStartAutoFetch = useCallback(async (project: Project) => {
+    const ac = new AbortController();
+    abortRef.current = ac;
+    setPasteOpen(false);
+    setAutoFetchProgress({ current: 0, total: project.spots.length, title: '' });
+    setSubView('autoFetchProgress');
+    try {
+      const result = await autoFetchPhotos(
+        project,
+        (current, total, title) => setAutoFetchProgress({ current, total, title }),
+        ac.signal,
+      );
+      setAutoFetchReport(result);
+      setSubView('autoFetchReport');
+    } catch (err) {
+      if (err instanceof AutoFetchAbortError) {
+        setAutoFetchCancelled({
+          project: err.partial.project,
+          report: err.partial.report,
+          processed: err.partial.processed,
+          total: project.spots.length,
+        });
+        setSubView('autoFetchCancelled');
+      } else {
+        setPasteError(t('import.failed'));
+        setSubView('main');
+        setPasteOpen(true);
+      }
+    } finally {
+      abortRef.current = null;
+    }
+  }, []);
+
+  const handleAbortAutoFetch = useCallback(() => {
+    abortRef.current?.abort();
+  }, []);
+
+  const handleLoadAutoFetchResult = useCallback(() => {
+    const data = autoFetchReport?.project ?? autoFetchCancelled?.project;
+    if (!data) return;
+    importJSON(JSON.stringify(data));
+    onClose();
+  }, [autoFetchReport, autoFetchCancelled, importJSON, onClose]);
+
+  const handleDiscardAutoFetch = useCallback(() => {
+    onClose();
+  }, [onClose]);
+
+  const handlePasteImport = useCallback(() => {
+    const raw = pasteText.trim();
+    if (!raw) {
+      setPasteError(t('import.ai.pasteJsonEmpty'));
+      return;
+    }
+    if (raw.length > MAX_PROJECT_SIZE) {
+      setPasteError(t('import.tooLarge'));
+      return;
+    }
+    const cleaned = stripJsonCodeFence(raw);
+    // Auto-fetch 路徑：parse + migrate 後交給 autoFetchPhotos pipeline
+    if (autoFetchChecked) {
+      let project: Project;
+      try {
+        project = migrateProject(JSON.parse(cleaned));
+      } catch (e) {
+        setPasteError(e instanceof SyntaxError ? t('import.ai.errorParse') : t('import.ai.errorSchema'));
+        return;
+      }
+      void handleStartAutoFetch(project);
+      return;
+    }
+    // 直接匯入路徑：走現有 importJSON（無連網）
+    try {
+      importJSON(cleaned);
+      onClose();
+    } catch {
+      setPasteError(t('import.failed'));
+    }
+  }, [pasteText, autoFetchChecked, handleStartAutoFetch, importJSON, onClose]);
+
   const [dragOver, setDragOver] = useState(false);
 
   const handleWizardDrop = useCallback((e: React.DragEvent) => {
@@ -291,7 +452,94 @@ export default function ImportWizard({ onClose, onLoadImage }: ImportWizardProps
         </div>
 
         <div className="import-wizard__body">
-          {subView === 'photoPreview' && preview ? (
+          {subView === 'autoFetchProgress' && autoFetchProgress ? (
+            <div className="import-wizard__autofetch">
+              <h3>{t('import.ai.progressTitle')}</h3>
+              <p className="import-wizard__autofetch-current">
+                {t('import.ai.progressLine')
+                  .replace('{current}', String(autoFetchProgress.current))
+                  .replace('{total}', String(autoFetchProgress.total))}
+                <br />📷 {autoFetchProgress.title}
+              </p>
+              <div className="import-wizard__autofetch-bar">
+                <div
+                  className="import-wizard__autofetch-bar-fill"
+                  style={{ width: `${(autoFetchProgress.current / Math.max(1, autoFetchProgress.total)) * 100}%` }}
+                />
+              </div>
+              <button className="import-wizard__paste-cancel" onClick={handleAbortAutoFetch}>
+                {t('import.ai.progressCancel')}
+              </button>
+            </div>
+          ) : subView === 'autoFetchCancelled' && autoFetchCancelled ? (
+            <div className="import-wizard__autofetch">
+              <h3>{t('import.ai.cancelledTitle')}</h3>
+              <p>
+                {t('import.ai.cancelledDesc')
+                  .replace('{processed}', String(autoFetchCancelled.processed))
+                  .replace('{total}', String(autoFetchCancelled.total))}
+              </p>
+              <div className="import-wizard__paste-actions">
+                <button
+                  className="import-wizard__paste-cancel"
+                  onClick={handleDiscardAutoFetch}
+                >
+                  {t('import.ai.cancelledDiscard')}
+                </button>
+                <button
+                  className="import-wizard__paste-import"
+                  onClick={handleLoadAutoFetchResult}
+                >
+                  {t('import.ai.cancelledLoadPartial')}
+                </button>
+              </div>
+            </div>
+          ) : subView === 'autoFetchReport' && autoFetchReport ? (
+            <div className="import-wizard__autofetch">
+              <h3>{t('import.ai.reportTitle')}</h3>
+              <p>
+                ✅ {t('import.ai.reportFound').replace('{count}', String(autoFetchReport.report.found))}
+                {autoFetchReport.report.missed.length > 0 && (
+                  <>
+                    {' · '}
+                    ⚠️ {t('import.ai.reportMissed').replace('{count}', String(autoFetchReport.report.missed.length))}
+                  </>
+                )}
+              </p>
+              {autoFetchReport.report.missed.length > 0 && (
+                <ul className="import-wizard__autofetch-missed">
+                  {autoFetchReport.report.missed.map((m) => (
+                    <li key={m.spotId} className="import-wizard__autofetch-missed-item">
+                      <strong>{m.title}</strong>
+                      <br />
+                      {m.query
+                        ? (
+                          <>
+                            {t('import.ai.reportSuggestion')}{' '}
+                            <a
+                              href={`https://commons.wikimedia.org/w/index.php?search=${encodeURIComponent(m.query)}&profile=advanced&fulltext=1&ns6=1`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {m.query}
+                            </a>
+                          </>
+                        )
+                        : t('import.ai.reportNoQuery')}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <div className="import-wizard__paste-actions">
+                <button
+                  className="import-wizard__paste-import"
+                  onClick={handleLoadAutoFetchResult}
+                >
+                  {t('import.ai.reportDone')}
+                </button>
+              </div>
+            </div>
+          ) : subView === 'photoPreview' && preview ? (
             <PhotoPreview
               state={preview}
               onConfirm={handleConfirmPhotos}
@@ -334,9 +582,57 @@ export default function ImportWizard({ onClose, onLoadImage }: ImportWizardProps
           <div className="import-wizard__ai">
             <h3>{t('import.ai.title')}</h3>
             <p>{t('import.ai.desc')}</p>
-            <button className="import-wizard__ai-btn" onClick={handleCopyPrompt}>
-              📋 {t('import.ai.copyPrompt')}
-            </button>
+            <div className="import-wizard__ai-actions">
+              <button className="import-wizard__ai-btn" onClick={handleCopyPrompt}>
+                📋 {t('import.ai.copyPrompt')}
+              </button>
+              <button className="import-wizard__ai-btn" onClick={handleOpenPaste}>
+                📥 {t('import.ai.pasteJson')}
+              </button>
+            </div>
+
+            {pasteOpen && (
+              <div className="import-wizard__paste-panel">
+                <textarea
+                  className="import-wizard__paste-textarea"
+                  value={pasteText}
+                  onChange={handlePasteTextChange}
+                  placeholder={t('import.ai.pasteJsonPlaceholder')}
+                  autoFocus
+                  autoCorrect="off"
+                  autoCapitalize="off"
+                  spellCheck={false}
+                />
+                {pasteError && (
+                  <div className="import-wizard__paste-error">{pasteError}</div>
+                )}
+                <label className="import-wizard__paste-autofetch">
+                  <input
+                    type="checkbox"
+                    checked={autoFetchChecked}
+                    onChange={(e) => setAutoFetchChecked(e.target.checked)}
+                  />
+                  <span>✨ {t('import.ai.autoFetchCheckbox')}</span>
+                </label>
+                <div className="import-wizard__paste-privacy">
+                  {autoFetchChecked ? t('import.ai.autoFetchNote') : t('import.ai.pasteJsonPrivacy')}
+                </div>
+                <div className="import-wizard__paste-actions">
+                  <button
+                    className="import-wizard__paste-cancel"
+                    onClick={handleCancelPaste}
+                  >
+                    {t('import.ai.pasteJsonCancel')}
+                  </button>
+                  <button
+                    className="import-wizard__paste-import"
+                    onClick={handlePasteImport}
+                  >
+                    {autoFetchChecked ? `✨ ${t('import.ai.autoFetchStart')}` : t('import.ai.pasteJsonImport')}
+                  </button>
+                </div>
+              </div>
+            )}
 
             {/* Collapsible JSON schema */}
             <button

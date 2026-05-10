@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrailPaint Namespace v3 — tp: vocabulary</title>
+  <meta name="description" content="Minimal RDF vocabulary for TrailPaint map-story terms (tp:Spot / tp:Route / tp:TrailStory / tp:PhotoMeta / tp:photoQuery / tp:iconId / tp:scriptureRefs) referenced by @context in exported .trailpaint.json files.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://trailpaint.org/ns/v3/">
+  <link rel="alternate" type="application/ld+json" href="https://trailpaint.org/ns/v3/index.jsonld">
+  <link rel="icon" type="image/svg+xml" href="/app/favicon.svg">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="brand" href="/">🌿 TrailPaint</a>
+      <div class="site-nav-links">
+        <a href="/features/">Features</a>
+        <a href="/features/ai-prompt/en/">AI Prompt</a>
+        <a href="/schemas/project-v3.schema.json">Schema</a>
+        <a href="/app/" target="_blank">Editor →</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page">
+    <h1>TrailPaint Namespace v3 (<code>tp:</code>)</h1>
+    <p class="subtitle">Minimal RDF vocabulary for terms not covered by <a href="https://schema.org/">schema.org</a>. Referenced by <code>@context</code> in every exported <code>.trailpaint.json</code>.</p>
+
+    <p>Machine-readable: <a href="index.jsonld"><code>https://trailpaint.org/ns/v3/index.jsonld</code></a></p>
+
+    <h2>Base IRI</h2>
+    <pre><code>https://trailpaint.org/ns/v3/</code></pre>
+
+    <h2>Classes</h2>
+    <dl>
+      <dt><code>tp:TrailStory</code> ⊂ <code>schema:TouristTrip</code></dt>
+      <dd>A hand-drawn trail map story — named narrative with numbered spots and polyline routes.</dd>
+      <dt><code>tp:Spot</code> ⊂ <code>schema:Place</code></dt>
+      <dd>A numbered story point. Carries position (<code>num</code>), location, and icon category.</dd>
+      <dt><code>tp:Route</code> ⊂ <code>schema:CreativeWork</code></dt>
+      <dd>A polyline connecting one or more spots.</dd>
+      <dt><code>tp:PhotoMeta</code> ⊂ <code>schema:ImageObject</code></dt>
+      <dd>CC attribution metadata for a photo from Wikimedia Commons.</dd>
+      <dt><code>tp:OverlaySetting</code></dt>
+      <dd>A historical map tile overlay (CCTS, DARE, etc.) stacked on the basemap.</dd>
+    </dl>
+
+    <h2>Properties</h2>
+    <dl>
+      <dt><code>tp:photoQuery</code> (domain: <code>tp:Spot</code>)</dt>
+      <dd>Bilingual search keywords (<code>中文 | English</code>) for Commons auto-fetch.</dd>
+      <dt><code>tp:iconId</code> (domain: <code>tp:Spot</code>)</dt>
+      <dd>Key into the TrailPaint ICONS catalog (e.g. <code>church</code>, <code>peak</code>).</dd>
+      <dt><code>tp:scriptureRefs</code> (domain: <code>tp:Spot</code>)</dt>
+      <dd>Bible references (e.g. <code>Acts 13:4-12</code>). Mirrored to <code>schema:citation</code> on export.</dd>
+    </dl>
+
+    <h2>See also</h2>
+    <ul>
+      <li><a href="/schemas/project-v3.schema.json">JSON Schema 2020-12</a> — <code>.trailpaint.json</code> structural validation</li>
+      <li><a href="/.well-known/trailpaint">/.well-known/trailpaint</a> — discovery pointer</li>
+      <li><a href="/features/ai-prompt/en/">AI prompt documentation</a></li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <p>TrailPaint · GPL-3.0 Open Source · <a href="https://github.com/notoriouslab/trailpaint">GitHub</a></p>
+  </footer>
+</body>
+</html>

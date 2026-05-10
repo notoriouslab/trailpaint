@@ -31,7 +31,11 @@
         "《馬可波羅遊記》第二卷第 82 章",
         "《島夷誌略》汪大淵（1349）",
         "泉州後渚港宋代海船考古報告, 1982"
-      ]
+      ],
+      "era": {
+        "start": 1291,
+        "end": 1295
+      }
     },
     {
       "id": "s2",
@@ -52,7 +56,11 @@
         "《馬可波羅遊記》第三卷第 5 章",
         "《元史》卷 210 外夷傳·占城",
         "Maspero, Le royaume de Champa (1928)"
-      ]
+      ],
+      "era": {
+        "start": 1291,
+        "end": 1295
+      }
     },
     {
       "id": "s3",
@@ -72,7 +80,11 @@
       "historical_refs": [
         "《馬可波羅遊記》第三卷第 9-10 章",
         "Ibn Battuta, Rihla 第四部"
-      ]
+      ],
+      "era": {
+        "start": 1291,
+        "end": 1295
+      }
     },
     {
       "id": "s4",
@@ -93,7 +105,11 @@
         "《馬可波羅遊記》第三卷第 14-15 章",
         "Culavamsa",
         "Ibn Battuta 第四部·Sarandib"
-      ]
+      ],
+      "era": {
+        "start": 1291,
+        "end": 1295
+      }
     },
     {
       "id": "s5",
@@ -113,7 +129,11 @@
       "historical_refs": [
         "《馬可波羅遊記》第三卷第 22-25 章",
         "Cosmas Indicopleustes, Christian Topography"
-      ]
+      ],
+      "era": {
+        "start": 1291,
+        "end": 1295
+      }
     },
     {
       "id": "s6",
@@ -134,7 +154,11 @@
         "《馬可波羅遊記》第三卷第 37 章",
         "Rashid al-Din, Jami al-Tawarikh",
         "Pelliot, Notes on Marco Polo"
-      ]
+      ],
+      "era": {
+        "start": 1291,
+        "end": 1295
+      }
     },
     {
       "id": "s7",
@@ -154,7 +178,11 @@
       "historical_refs": [
         "《馬可波羅遊記》第三卷末章",
         "Pelliot, Notes on Marco Polo Vol. I"
-      ]
+      ],
+      "era": {
+        "start": 1291,
+        "end": 1295
+      }
     },
     {
       "id": "s8",
@@ -175,7 +203,11 @@
         "《馬可波羅遊記》全書成書序",
         "Ramusio, Navigationi et Viaggi Vol. II (1559)",
         "Marco Polo 遺囑 (1323)"
-      ]
+      ],
+      "era": {
+        "start": 1291,
+        "end": 1295
+      }
     }
   ],
   "routes": []

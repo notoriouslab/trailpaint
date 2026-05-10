@@ -1,0 +1,35 @@
+{
+  "id": "columbus",
+  "title": "哥倫布四次航海",
+  "subtitle": "AD 1492 — 1506 從 Palos 到 Valladolid",
+  "description": "Cristoforo Colombo（西班牙文 Cristóbal Colón）熱那亞商人，1492 西班牙天主教雙王資助下從 Palos 出航尋亞洲新航路；首登巴哈馬 San Salvador 開啟「大西洋世界」。本路線 6 spots 涵蓋四次航海關鍵節點與 1506 Valladolid 葬地。",
+  "locale": "zh-TW",
+  "cover": "cover.jpg",
+  "music": {
+    "src": "../music/voller-hoffnung.mp3",
+    "title": "Voller Hoffnung — Ronny Matthes",
+    "credit": "Ronny Matthes (Jamendo / Internet Archive)",
+    "license": "CC"
+  },
+  "og": {
+    "title": "哥倫布四次航海 — TrailPaint Stories",
+    "description": "Cristoforo Colombo（西班牙文 Cristóbal Colón）熱那亞商人，1492 西班牙天主教雙王資助下從 Palos 出航尋亞洲新航路；首登巴哈馬 San Salvador 開啟「大西洋世界」。本路線 6 spots 涵蓋四次航海關鍵節點與 1506 Valladolid 葬地。",
+    "image": "og.jpg"
+  },
+  "stories": [
+    {
+      "id": "voyages",
+      "title": "四次航海",
+      "subtitle": "AD 1492 — 1506 從 Palos 到 Valladolid",
+      "description": "Cristoforo Colombo（西班牙文 Cristóbal Colón）熱那亞商人，1492 西班牙天主教雙王資助下從 Palos 出航尋亞洲新航路；首登巴哈馬 San Salvador 開啟「大西洋世界」。本路線 6 spots 涵蓋四次航海關鍵節點與 1506 Valladolid 葬地。",
+      "data": "voyages.trailpaint.json",
+      "thumbnail": "voyages-thumb.jpg",
+      "color": "#7c2d12",
+      "music": "../music/voller-hoffnung.mp3"
+    }
+  ],
+  "footer": {
+    "cta": "在 TrailPaint 中建立你自己的故事地圖",
+    "url": "https://trailpaint.org/app/"
+  }
+}

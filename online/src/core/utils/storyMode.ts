@@ -63,7 +63,7 @@ export function openStoryMode(project: Project): void {
     // Quota exceeded — the broadcast/opener paths will carry the payload.
   }
 
-  const w = window.open('/app/player/', '_blank');
+  const w = window.open('/app/player/?autoplay=1', '_blank');
   if (!w) return; // popup blocked — nothing we can do
 
   // Path 2: BroadcastChannel — waits for Player's 'player-ready' ping

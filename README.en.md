@@ -2,165 +2,204 @@
 
 [中文](README.md) | [日本語](README.ja.md)
 
-> Hand-drawn style trail maps · Build from photos, maps, or AI · Export as PNG / backup / interop formats
+> **Hand-drawn style trail map maker** · Turn your trip into a map in minutes · Zero backend, PWA-ready, auto-detects 3 languages
 
-[![Version](https://img.shields.io/badge/version-1.3.1-orange.svg)](https://trailpaint.org/app/)
+[![Version](https://img.shields.io/badge/version-1.4-orange.svg)](https://trailpaint.org/app/)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6.svg)](https://www.typescriptlang.org/)
 [![PWA Ready](https://img.shields.io/badge/PWA-ready-5a0fc8.svg)](https://trailpaint.org/app/)
 [![i18n](https://img.shields.io/badge/i18n-中文%20%7C%20EN%20%7C%20日本語-green.svg)](https://trailpaint.org/app/)
+[![Star History](https://img.shields.io/github/stars/notoriouslab/trailpaint?style=social)](https://star-history.com/#notoriouslab/trailpaint&Date)
 
-**[Try it now →](https://trailpaint.org/app/)** · **[Explore Stories →](https://trailpaint.org/stories/)** · **[Story Player →](https://trailpaint.org/app/player/)**
+**[Try it now →](https://trailpaint.org/app/)** · **[Explore Stories →](https://trailpaint.org/stories/)** · **[Story Player →](https://trailpaint.org/app/player/)** · **[PWA Install →](https://trailpaint.org/features/install/)**
 
 ![TrailPaint Editor](./examples/trailpaint-hero.jpg)
 
 ---
 
-## What is This?
+## Positioning
 
-TrailPaint is a **hand-drawn style trail map maker**. Take a trip, come back, and in minutes turn your path, stops, and photos into a printable, IG-ready, blog-embeddable **illustrated map**.
+TrailPaint turns "remembering a trip" into "map in 3 minutes → share instantly". Whether you're hiking, traveling, teaching, or missionary work — if you have a story, locations, and photos — TrailPaint generates an illustrated map.
 
-- **No backend, no account**: everything runs in the browser
-- **PWA ready**: install to phone home screen, works like a native app ([iOS / Android / desktop install guide](https://trailpaint.org/features/install/))
-- **Auto-detects 3 languages**: Chinese / English / Japanese
-- **Open source GPL-3.0**: free to use, modify, and remix
+**Core strengths:**
 
-### Sample map
+| Strength | Implementation |
+|----------|-----------------|
+| 📷 **Auto photo import** | EXIF GPS reads coordinates, KML / GeoJSON / GPX supported |
+| 🖼️ **Multiple outputs** | PNG (IG/blogs) / backup file / interop formats |
+| ⏱ **Spacetime narrative** | Timeline slider + historical maps + auto-guided stories |
+| 🔐 **Privacy-first** | Zero backend, all data in browser, works offline |
+| 📱 **Install-to-home** | PWA, one-click phone home screen install |
 
 ![TrailPaint sample — Taipei Shilin 8-spot trail](./examples/trailpaint-01.jpg)
 
 ---
 
-## Three Ways to Build a Trail
+## Quick Start (3 ways)
 
-### 📷 From Photos (Fastest)
+### Option 1: Play instantly (1 minute)
 
-Shoot 20 photos on a trip → drag them into TrailPaint → EXIF GPS auto-creates spots. **New in v1.3**, eliminating the pain of cross-referencing Google Maps for coordinates after the fact.
+1. Open [trailpaint.org/app/](https://trailpaint.org/app/)
+2. Click the menu "Load Sample", pick a route (Yangmingshan, Hehuanshan, Taipei heritage, etc.)
+3. Click "Export" → "Image", choose style, download PNG
 
-Supports:
-- iPhone HEIC photos with EXIF GPS
-- Android JPEG
-- Photos without GPS: auto-grouped as "pending location", drag to place
-- Auto-naming: Photon (primary) / Nominatim (fallback) reverse geocoding fills in spot titles
+**Output:** IG-ready illustrated map
+
+### Option 2: Hand-draw (5 minutes)
+
+1. Open editor, search location or drag screenshot for custom basemap
+2. Click "Add Spot" to place markers, drag to draw route
+3. Click "Export" to pick style and download
+
+**Output:** Custom map or shareable short URL
+
+### Option 3: Import existing (1 minute)
+
+1. Prepare GPX (hiking app), KML (Google My Maps), or photo folder
+2. Click "Import" → drag or select file
+3. System auto-creates spots → click "Export"
+
+**Output:** Auto-generated map
+
+---
+
+## Common Use Paths
+
+| Scenario | Steps | Output |
+|----------|-------|--------|
+| 🎒 **Hikers** | Record GPX → import → tag spots → elevation profile | Route file (share with team) |
+| 📸 **Travel bloggers** | Shoot 20 photos (with EXIF GPS) → drag into TrailPaint → add captions | IG Story / 9:16 long-form image |
+| ⛪ **Churches / teaching** | Load "Missionary Footprints" or "Passion Week" → Story Player with timeline + historical maps → present | Projection / lesson embed |
+| 🌲 **Ecology guides** | Hand-tag spots + upload species photos → add descriptions → export KML to Google My Maps | Navigation map file |
+| 🎨 **Storytellers** | Create fictional route → use AI prompt to stylize → embed in blog | Notion / WordPress iframe |
+
+---
+
+## Core Concepts
+
+### Building trails: Three channels
+
+#### 📷 Auto from photos (1 minute)
+Shoot 20 photos with EXIF GPS → drag into TrailPaint → auto-extract coordinates & spot names. Supports iPhone HEIC / Android JPEG, reverse geocoding, drag-to-place for photos without GPS.
+
+#### 🗺️ Hand-draw on map (classic flow)
+Search location → click "Add Spot" to place markers → fill name & photos → click "Draw Route" → export. First-time guided tour included; also one-click load 8 sample routes.
+
+#### 🤖 AI-generated
+Click "Import" → "Create trail JSON with AI" → copy prompt template, paste to ChatGPT / Claude → AI generates importable JSON. Great for planning or fictional creation.
+
+**Import formats:** GPX (hiking apps), KML (Google My Maps), GeoJSON (geojson.io), .trailpaint files, screenshots as basemaps
 
 ![Import dialog](./examples/import-wizard.jpg)
 
-The import dialog also supports: **KML** (Google My Maps export), **GeoJSON** (geojson.io, Google Takeout), **GPX** (hiking app tracks), **native .trailpaint project files**, and screenshot basemaps.
-
-### 🗺️ Manually on the Map
-
-Classic flow, best for reliving a trip with the map in front of you:
-
-1. Search a location or drag a screenshot for custom basemap
-2. Click "Add Spot" to place markers with names and photos
-3. Click "Draw Route" to trace a path
-4. Click "Export" to download
-
-First-time users get a 3-step tutorial. Or load one of **8 sample routes** (Yangmingshan, Hehuanshan, Matcha Mountain, Jiaming Lake, Jiufen, Alangyi, Baishihu, London Museum Tour) for a one-click demo.
-
-### 🤖 Generated by AI
-
-Click "Import" → "🤖 Create trail JSON with AI" → copy the prompt template, paste to ChatGPT or Claude with your trip description, and the AI generates an importable JSON. Great for planning stages or fictional trails.
-
 ---
 
-## One Map, Many Outputs
+### Outputs: One map, many products
 
-v1.3 unifies all outputs into a single "Export Wizard" with three tabs matching three use cases:
+#### 🖼️ Image export (for sharing)
 
-### 🖼️ Image (for humans, for the web)
+**PNG ratios:** 1:1 (IG feed) / 9:16 (Story) / 4:3 / original
+
+**Borders + filters:** 3 border styles (classic double / paper sketch / minimal thin) × 2 filters (original / sketch)
+
+**Share & embed:**
+- 🔗 Short URL (Cloudflare Workers + KV, 90-day TTL, auto-OG cover from first photo)
+- 📋 iframe embed code — paste to WordPress, Notion, Substack, etc.
 
 ![Export - Image tab](./examples/export-wizard-image.jpg)
 
-- **PNG download**: 1:1 (IG feed) / 9:16 (Story) / 4:3 / original
-- **3 border styles**: Classic double / Paper sketch / Minimal thin
-- **Style filters**: Original / Sketch
-- **Live preview + composition tweak**: arrow keys pan, +/- zoom
-- **🔗 Share link**: Cloudflare Workers + KV short URL, 90-day TTL, photos travel with the link, first photo becomes the Open Graph cover for LINE / Facebook previews
-- **🤖 AI prompt**: 4 styles (Japanese hand-drawn / Treasure map / Kawaii cartoon / Minimal line art), paste to Midjourney / Gemini for pure illustration
-- **📋 Player embed code**: one-click `<iframe>` with project data baked in — paste to WordPress, Notion, Substack
+#### 💾 Backup file (for editing)
 
-### 💾 Backup (for yourself)
+Download .trailpaint project (preserves all spots, routes, photos, edit state) → import later when switching devices or reinstalling.
 
-![Export - Backup tab](./examples/export-wizard-backup.jpg)
-
-- **Download .trailpaint project file**: preserves all spots, routes, photos
-- **Import .trailpaint**: restore for editing
-- This is your source format — switching devices, reinstalls, or saving drafts
-
-### 🌐 Interop (for other tools)
-
-![Export - Interop tab](./examples/export-wizard-interop.jpg)
+#### 🌐 Interop (for other tools)
 
 - **GeoJSON**: geojson.io, Mapbox, D3 visualizations
 - **KML**: Google My Maps, Google Earth, Gaia GPS
-- Pure geographic structure, no photos (open data boundary)
+
+Pure geographic data, no photos.
 
 ---
 
-## Story Player: Turn Maps into Stories
+### Story Player: Maps that tell stories
+
+**[Story Player](/app/player/)** is a standalone playback entry that transforms static maps into auto-guided experiences:
+
+#### Core playback features
+
+| Feature | Purpose |
+|---------|---------|
+| ▶ **Fly-to animation** | Fly to each spot, popup shows photo and description |
+| ⚙ **Playback settings** | Interval 2s/4s/6s/8s, loop 1×/2×/3×/∞ |
+| 🗺️ **Basemap + historical layers** | 5 basemaps + Academia Sinica (Han/Tang/Song/Yuan/Ming) + Taiwan 1897/1921/1966 + AD 200 Rome |
+| 🎵 **Background music** | Paste MP3/M4A direct URL to play |
+| 📺 **Fullscreen mode** | Optimized for exhibits, classroom projection, event displays |
+
+#### Featured story maps (v1.4 new)
+
+- **Taiwan Missionaries' Footprints**: 19-20th century missionary routes + Academia Sinica historical overlays
+- **Passion Week**: 12+ biblical locations + classical paintings + YouVersion scripture links
+- **Paul's Three Missionary Journeys**: 34 spots, AD 46-62 Mediterranean and Rome
+- **Silk Road 2000**: Zhang Qian BC 138 → Xuanzang AD 629 → Marco Polo AD 1271, same Central Asian corridor
 
 ![Story Player — Jesus' Passion Week auto-tour](./examples/trailpaint-02.jpg)
 
-**[/app/player/](https://trailpaint.org/app/player/)** is a standalone entry for "auto-guided playback":
+#### ⏱ Timeline slider (TimeSlider)
 
-- **▶ fly-to animation**: fly to each spot, popup shows photo and description
-- **⚙ Playback settings**: interval 2s/4s/6s/8s, loop 1×/2×/3×/∞
-- **🗺️ Basemap + historical overlays**: 5 basemaps + Academia Sinica 1897/1921/1966 historical layers
-- **🎵 Background music**: paste MP3/M4A direct URL (recommend [incompetech.com](https://incompetech.com/music/royalty-free/music.html) free CC BY)
-- **📺 Fullscreen**: great for exhibits, classroom projection, event displays
+Horizontal slider at map top: drag to auto cross-fade historical map layers and fade non-era spots. Toggle between "Historical Maps" or "Biblical Timeline" scales.
 
-### Story Page: `/stories/` collection
+#### 📚 Compilation
 
-Curated story maps:
-- **Taiwan Missionaries' Footprints**: Mackay, Barclay, Landsborough, Maxwell, Doris Brougham and more — 19-20th century missionary routes in Taiwan with Academia Sinica historical map overlays
-- **Passion Week**: Jesus' final week in Jerusalem across 12+ biblical locations, paired with classical paintings (da Vinci, Caravaggio, Rembrandt) and scripture links to YouVersion
+Bundle multiple story segments into one Player:
+- `sequential`: play in story order
+- `chronological`: global timeline sort (cross-character mix)
 
-Horizontal tabs switch characters / chapters; LINE / FB shares auto-display OG thumbnails.
+Three defaults: Paul's three journeys / Four Gospels map / Silk Road 2000.
+
+![Silk Road 2000 compilation — cross-story chronological sort](./examples/silk-road-2000-compilation.jpg)
+
+#### 📮 IG-square postcard
+
+One-click generate 1080×1080 PNG per spot:
+- Top half: map (auto-zoom to see historical map texture)
+- Middle: spot card (photo + title + scripture + description)
+- Bottom: era stamp ("AD 1897" / "AD 50" / "BC 138") + watermark
+
+Smart fallback: if spot not in current geographic range, auto-switch to modern basemap.
+
+![Mackay missionary 1897 Wugu postcard](./examples/postcard-mackay-1897.jpg)
+
+#### ⛪ Church landing page (`/church/`)
+
+Pre-built examples: Sunday school Four Gospels / bulletin Paul's three / daily devotional Silk Road 2000. One-click copy iframe embed code.
 
 ---
 
-## Want True Hand-Drawn Style?
+### AI stylization
 
-Export PNG + copy AI prompt → feed to ChatGPT / Gemini image generation:
+Export PNG → copy AI prompt → feed to ChatGPT / Gemini image generation for true hand-drawn illustration.
+
+4 preset prompt styles: Japanese hand-drawn / Treasure map / Kawaii cartoon / Minimalist line art.
 
 ![AI-stylized result](./examples/Gemini_Generated_Image.jpg)
 
 ---
 
-## Who's It For
+---
 
-| Audience | Use Case |
+## Advanced Reference
+
+### Complete feature matrix
+
+| Category | Features |
 |----------|----------|
-| 🎒 Hiking / Trekking | Route planning, GPX import, elevation profile |
-| 🚲 Cycling | Route marking, distance stats |
-| 📸 Travel Bloggers | IG / Story share card export |
-| 🌲 Ecology Guides | POI markers, info cards, photos |
-| 🏫 Education | Environmental education, course materials, historical maps |
-| ⛪ Churches / NGOs | Missionary footprints, service route stories |
+| **Basemap & markers** | 5 online maps (standard / satellite / contour / dark / multilingual vector) · drag screenshot for custom basemap · 31 spot icons · hand-drawn dashed lines + arrows · paper-texture spot cards |
+| **Data handling** | GPX / KML / GeoJSON import (auto-simplified) · Photo EXIF GPS (iPhone HEIC / Android JPEG) · Elevation profile (distance/time/cumulative gain-loss) · Reverse geocoding auto-name |
+| **Edit & interact** | Undo/Redo (Cmd+Z) · Drag-edit nodes · Spot reordering · Hand-drawn shake SVG filter · Fit All overview |
+| **Export & share** | PNG multi-ratio crop · 3 borders + 2 filters · Short URL (auto-OG from photo) · Player iframe · GeoJSON / KML pure geographic · .trailpaint full backup |
+| **Experience polish** | PWA installable · Auto-detect 3 languages · Mobile floating menu · Guided tutorial · 8 sample routes |
 
----
-
-## Feature Summary
-
-### Basemap & Markers
-5 online maps (Standard / Satellite / Contour / Dark / Multilingual vector) · Drag screenshot as basemap · Hand-drawn dashed lines + arrows · Paper-texture spot cards · 31 spot icons · Drag-edit route nodes · 5 route colors cycle
-
-### Data Handling
-GPX import (tracks + waypoints auto-simplified) · **Photo EXIF import (JPEG/HEIC with GPS)** · **KML / GeoJSON import** · Elevation profile (distance/time/cumulative ascent-descent) · Auto-naming via reverse geocoding · JSON save/restore full state
-
-### Export
-**Unified ExportWizard** (Image / Backup / Interop tabs) · Multi-ratio crop preview · 3 borders + 2 filters · Stats overlay · Cloudflare Workers + KV short URL (90-day TTL, OG cover photo) · AI prompts 4 styles · Player embed code · GeoJSON / KML pure geographic structure
-
-### Experience
-Undo/Redo (Cmd+Z) · Hand-drawn shake SVG filter · PWA installable · Auto-detect 3 languages · Mobile floating actions · Fit All overview · Drag-sort spots · First-time tutorial
-
-### Story Player
-Auto-play · Basemap + historical layers · Background music · Fullscreen · Player embed code · Editor → Player one-click jump
-
----
-
-## Services Used
+### External services
 
 | Service | Purpose | Link |
 |---------|---------|------|
@@ -176,65 +215,103 @@ Auto-play · Basemap + historical layers · Background music · Fullscreen · Pl
 
 ---
 
-## Site Structure
+## Ecosystem & Integration
 
-Beyond Editor / Player, trailpaint.org has several entry points you can link to, embed, or share:
+### Website entry points
 
-- [`/features/`](https://trailpaint.org/features/) — Feature reference (Import / Export / Story Player / AI prompt / PWA install)
-- [`/features/install/`](https://trailpaint.org/features/install/) — **PWA install guide** (iOS Safari / Android Chrome / desktop)
-- [`/examples/`](https://trailpaint.org/examples/) — Sample trails, one click to play or download
-- [`/stories/`](https://trailpaint.org/stories/) — Curated story collections (Taiwan missionaries, Passion Week)
-- [`/faq/`](https://trailpaint.org/faq/) — Full FAQ
-- [`llms.txt`](https://trailpaint.org/llms.txt) / [`agent-card.json`](https://trailpaint.org/.well-known/agent-card.json) — Structured summaries for AI and agents
-
----
-
-## Tech Stack
-
-- **Framework**: Vite + React 19 + TypeScript 5 (strict)
-- **Map**: Leaflet + react-leaflet + protomaps-leaflet (CARTO + Protomaps vector tiles)
-- **State**: Zustand + zundo (temporal undo/redo)
-- **PWA**: vite-plugin-pwa + Workbox
-- **Export**: html-to-image + Canvas post-processing + style filters
-- **Import**: exifr (EXIF GPS, including HEIC) + @tmcw/togeojson (KML) + custom GeoJSON parser
-- **i18n**: Custom t() + runtime locale detection
-- **Structure**: `core/` (no Leaflet deps) · `map/` (Leaflet integration) · `player/` (standalone Story Player entry)
-- **Story Page**: Pure static HTML + vanilla JS (bypasses Vite, native SEO/OG)
-- **Multi-page build**: Vite rollup multi-entry (Editor `/app/` + Player `/app/player/`)
+| Page | Purpose |
+|------|---------|
+| [`/app/`](https://trailpaint.org/app/) | **Editor** — main authoring interface (new, import, hand-draw) |
+| [`/app/player/`](https://trailpaint.org/app/player/) | **Story Player** — auto-guided playback (timeline slider, compilations, music) |
+| [`/stories/`](https://trailpaint.org/stories/) | Curated story collections (Taiwan missionaries, Passion Week, Paul's journeys, Silk Road 2000, etc.) |
+| [`/examples/`](https://trailpaint.org/examples/) | Sample trails (one-click play) |
+| [`/features/`](https://trailpaint.org/features/) | Feature walkthrough (import / export / Story Player / AI prompt) |
+| [`/features/install/`](https://trailpaint.org/features/install/) | PWA install guide (iOS / Android / desktop) |
+| [`/church/`](https://trailpaint.org/church/) | Church landing page (Sunday school, bulletin, devotional embed examples) |
+| [`/faq/`](https://trailpaint.org/faq/) | Frequently asked questions |
+| [`llms.txt`](https://trailpaint.org/llms.txt) / [`agent-card.json`](https://trailpaint.org/.well-known/agent-card.json) | Structured summaries for AI and agents |
 
 ---
 
-## Development
+## Technical Details
+
+### Core tech stack
+
+| Layer | Technology |
+|-------|------------|
+| **Frontend** | Vite + React 19 + TypeScript 5 (strict mode) |
+| **Map engine** | Leaflet + react-leaflet + protomaps-leaflet (vector tiles) |
+| **State management** | Zustand + zundo (temporal undo/redo) |
+| **PWA** | vite-plugin-pwa + Workbox (offline support) |
+| **Export** | html-to-image + Canvas post-processing + SVG style filters |
+| **Import** | exifr (EXIF GPS) + @tmcw/togeojson (KML) + custom GeoJSON parser |
+| **i18n** | Custom t() function + runtime locale detection |
+| **Architecture** | `core/` (logic, no Leaflet deps) · `map/` (Leaflet integration layer) · `player/` (standalone entry) |
+
+### Build & deployment
+
+- **Editor + Player**: Vite rollup multi-entry (`/app/` + `/app/player/`)
+- **Story Page**: Pure static HTML + vanilla JS (native SEO/OG, bypasses Vite)
+- **Cloudflare Worker**: Short-URL share links (KV storage, 90-day TTL)
+
+---
+
+## Development & Contributing
+
+### Quick start
 
 ```bash
 cd online
 npm install
-npm run dev        # Dev server
+npm run dev        # Dev server (:5173)
 npm run build      # Build to ../app/
 npm test           # vitest
 ```
 
-The Cloudflare Worker that backs the share-link short URLs lives in [`cloudflare/`](./cloudflare/); see that directory's README for deployment.
+**Cloudflare Worker** code: [`cloudflare/`](./cloudflare/) directory, deployment instructions in that README.
 
-Spectra SDD specs: `openspec/changes/` (not in git, local reference)
+**Spectra SDD specs**: `openspec/changes/` (local dev reference, not in git)
 
 ---
 
-## Share Your Trail Map
+## Share Your Work
 
-Made something you're proud of with TrailPaint? Share your `.trailpaint` project via [Issue](https://github.com/notoriouslab/trailpaint/issues) with an exported image and a story (which trail? why did you walk it?). Great works will be showcased on `/stories/`.
+Made a trail map you're proud of? Share your `.trailpaint` project file via [GitHub Issue](https://github.com/notoriouslab/trailpaint/issues) with an exported image and the story (which trail? why did you walk it?).
+
+Outstanding maps will be featured on [`/stories/`](https://trailpaint.org/stories/) for the community to discover.
+
+---
 
 ## Contributing
 
-PRs and issues welcome. Bug reports, feature requests, sharing your maps — all encouraged.
+We welcome:
+- 🐛 Bug reports (with reproduction steps, screenshots)
+- 💡 Feature requests (new export formats, new basemaps, new story themes)
+- 🎨 Map sharing (see "Share Your Work" above)
+- 📝 Documentation improvements
+- 🔧 Code PRs
+
+---
 
 ## Disclaimer
 
-TrailPaint is a **trail recording and sharing tool, not a navigation app**. Distance, time, and elevation data are auto-calculated from maps and GPX tracks and may differ from reality. Plan outdoor activities independently and follow on-site conditions. Basemap data comes from OpenStreetMap and other third-party services with no real-time or accuracy guarantees.
+TrailPaint is a **trail recording and sharing tool, not a navigation app**.
+
+- Distance, time, and elevation data are auto-calculated from maps and GPX tracks and may differ from reality
+- Plan outdoor activities independently and follow on-site conditions
+- Basemap data comes from OpenStreetMap / CARTO and other third-party services with no real-time or accuracy guarantees
+
+---
 
 ## License
 
-GPL-3.0 License — free to use and modify, derivative works must also be GPL-3.0 open source.
+**GPL-3.0 License** — free to use, modify, and create derivatives. Derivative works must also be GPL-3.0 open source.
+
+See [LICENSE](LICENSE) for details.
+
+---
+
+[![Star History Chart](https://api.star-history.com/svg?repos=notoriouslab/trailpaint&type=Date)](https://star-history.com/#notoriouslab/trailpaint&Date)
 
 ---
 

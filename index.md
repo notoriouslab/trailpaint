@@ -3,12 +3,13 @@
 > Hand-drawn style trail map maker. Build routes from photos, maps, or AI prompts, then export as PNG illustration, complete project backup, or GeoJSON / KML interop formats. Free, open-source (GPL-3.0), no account, no backend.
 
 Language: zh-TW / en / ja (auto-detected)
-Version: 1.3.1
+Version: 1.4.0
 License: GPL-3.0
 Source: https://github.com/notoriouslab/trailpaint
 Try it: https://trailpaint.org/app/
 Stories: https://trailpaint.org/stories/
 Player: https://trailpaint.org/app/player/
+Church landing: https://trailpaint.org/church/
 
 ## 這是什麼 / What is TrailPaint
 
@@ -44,9 +45,10 @@ Three tabs for three use cases:
 - PNG at multiple ratios: 1:1 (IG feed), 9:16 (Story), 4:3, original
 - 3 border styles: Classic double, Paper sketch, Minimal thin
 - 2 style filters: Original, Sketch
-- Share link via Cloudflare Workers + KV short URL (TTL 90 days, Open Graph cover from first photo)
+- Share link via Cloudflare Workers + KV short URL (TTL 180 days sliding, Open Graph cover from first photo)
 - AI prompts in 4 styles: Japanese hand-drawn, Treasure map, Kawaii cartoon, Minimal line art
-- Player embed code (`<iframe>` with project data baked in)
+- Player embed code (`<iframe>` with project data baked in; compilation embed uses lightweight URL ref instead of inline data, v1.4)
+- Electronic postcard (1080×1080 IG square with map + spot card + era stamp, v1.4)
 
 ### Backup tab
 - `.trailpaint` project file (preserves all spots, routes, photos)
@@ -60,19 +62,76 @@ Three tabs for three use cases:
 ## Story Player (/app/player/)
 
 Standalone entry for auto-guided playback:
-- fly-to animation through each spot
+- fly-to animation through each spot (1.8s settle delay so user sees the new map before popup covers it, v1.4)
 - popup shows photo and description
 - playback interval 2s/4s/6s/8s, loop 1×/2×/3×/∞
-- 5 basemaps + Academia Sinica 1897 / 1921 / 1966 Taiwan historical overlays
+- 5 basemaps + 9 historical overlays: Academia Sinica CCTS Han BC 7 / Tang 741 / Song 1208 / Yuan 1330 / Ming 1582; Taiwan jm200k 1897 / jm20k 1921 / Corona 1966; DARE Roman Empire AD 200
 - background music via direct MP3/M4A URL
 - fullscreen mode for exhibits, classroom, events
 - one-click embed code for blogs, church sites, Notion
+- URL params: `?src=/stories/foo/bar.trailpaint.json` (single segment) · `?compilation=silk-road-2000` (multi-segment compilation, v1.4)
 
 ## Story Page (/stories/)
 
 Curated collections:
 - **Taiwan Missionaries' Footprints** (1865–2024): George Mackay, Thomas Barclay, David Landsborough, James L. Maxwell, Doris Brougham across Tamsui, Tainan, Changhua, Hualien, Taipei
-- **Passion Week** (ca. AD 33): Jesus' final week in Jerusalem from Triumphal Entry to Resurrection and Ascension
+- **Passion Week** (ca. AD 30): Jesus' final week in Jerusalem from Triumphal Entry to Resurrection and Ascension
+- **Paul's Three Missionary Journeys** (AD 46–62): three Mediterranean crossings + journey to Rome, 34 spots along Acts 13–28
+- **Jesus' Galilean Ministry** (AD 27–30): early teaching + Transfiguration road, 16 spots
+- **Silk Road raw segments**: Zhang Qian first/second mission BC 138/119; Xuanzang's westward & return journey AD 629/643; Marco Polo's east journey & west return AD 1271/1291
+- **Wen Tianxiang** (AD 1275–1283): Southern Song's last stand + Yuan captivity
+- **Xu Xiake's Southwest Journey** (AD 1636–1640): final four-year exploration through Yunnan, Guizhou, Guangxi
+
+## v1.4 Era Slider, Compilations, Postcards, Church Landing (2026-05)
+
+Pushes TrailPaint from "static hand-drawn map" to "spatio-temporal storytelling". Designed for church Sunday school / weekly bulletins / personal devotion, but applies equally to history teaching and cultural routes.
+
+### Era Slider (TimeSlider)
+
+Horizontal pill at the top of the map, oldest left → modern right. Drags cross-fade the historical overlay tile layer; spots whose `era` window doesn't overlap the current year fade to 0.15 opacity (route shape preserved, only contemporary spots stay vivid).
+
+Two scale groups toggle:
+- 🗺️ Historical maps (default): 10 ticks aligned with the 9 overlays + modern
+- 📖 Biblical narrative: Exodus BC 1446 / King David BC 1000 / Babylonian Exile BC 586 / Jesus AD 30 / Paul AD 50 / Revelation AD 95
+
+Slider auto-filters overlays whose geographic bounds intersect the current spots. A London route shows only "modern + Roman AD 200"; a Taiwan hike shows only the three Taiwan overlays.
+
+### Compilation (multi-story bundles)
+
+`catalog.compilations[]` schema groups multiple story segments into one Player session. URL: `/app/player/?compilation=<id>`.
+
+Two playback modes:
+- `sequential` — preserves segment order (e.g., Paul's first → second → Rome)
+- `chronological` — sorts spots by `era.start` globally (Zhang Qian BC 138 → Xuanzang AD 629 → Marco Polo AD 1271, mixed across human authors)
+
+Partial-fail tolerant: one failed segment doesn't block the others.
+
+Three default compilations:
+- `paul-three-journeys` — 34 spots, AD 46–62, sequential
+- `four-gospels-map` — 33 spots, AD 27–30, sequential (Galilean ministry + Transfiguration + Passion Week)
+- `silk-road-2000` — 59 spots, BC 138–AD 1295, chronological (cross-author Silk Road dialogue)
+
+### Electronic Postcard (1080×1080 IG square)
+
+Click 📮 on any spot → downloads a PNG postcard with three sections:
+- Top half: current map view (auto-zoomed to 10 for low-res overlays / 12 for hi-res Taiwan jm series, capped against overlay's native zoom pyramid so historical tiles stay sharp)
+- Middle: spot card (280×280 photo + title + scripture ref + description + project name in italic bottom-right)
+- Bottom: era stamp (公元 X 年 / AD X / 西暦 X 年 in three locales) + "via TrailPaint · trailpaint.org" watermark
+
+Smart fallback: if the spot sits outside the active overlay's geographic bounds, the postcard renders against the modern basemap instead (no Taiwan historical map floating over London).
+
+### Church Landing Page (/church/)
+
+Vertical landing for church usage with three iframe-embedded use cases:
+- Sunday school: embed Four Gospels Map
+- Weekly bulletin: embed Paul's Three Journeys
+- Personal devotion: embed Silk Road 2000
+
+Embed code is one-click copy from Player ⚙ menu — paste into WordPress / Wix / Google Slides.
+
+### Spot Era Schema (v5)
+
+`Spot.era?: { start: number; end: number }` — calendar years, BC negative, AD positive, range [-3000, 3000]. Drives postcard era stamp + TimeSlider opacity fade. 17 historical segments / 150 spots already tagged: Paul × 3, Galilean ministry × 2, Passion Week × 3, Zhang Qian × 2, Xuanzang × 2, Marco Polo × 2, Wen Tianxiang × 2, Xu Xiake × 1. Modern stories (Taiwan hikes, 19th-century missionaries) stay era-agnostic intentionally — their spots remain visible at any TimeSlider position.
 
 ## Who It's For
 

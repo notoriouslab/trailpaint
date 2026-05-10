@@ -19,6 +19,16 @@ const LOOP_OPTIONS = [
   { label: '∞', value: 0 },
 ];
 
+// Random per Player mount when project doesn't pin a music URL — keeps demos
+// fresh instead of always Redeemed. Same-mount stays stable; reload re-rolls.
+const MUSIC_POOL = [
+  { url: 'https://trailpaint.org/stories/music/redeemed.mp3', labelKey: 'player.music.track.redeemed' },
+  { url: 'https://trailpaint.org/stories/music/morning-mood.mp3', labelKey: 'player.music.track.morningMood' },
+  { url: 'https://trailpaint.org/stories/music/voller-hoffnung.mp3', labelKey: 'player.music.track.vollerHoffnung' },
+  { url: 'https://trailpaint.org/stories/music/sorrow-and-love.mp3', labelKey: 'player.music.track.sorrowAndLove' },
+  { url: 'https://trailpaint.org/stories/music/the-servant-king.mp3', labelKey: 'player.music.track.theServantKing' },
+] as const;
+
 export default function PlaybackControl() {
   const project = usePlayerStore((s) => s.project)!;
   const playing = usePlayerStore((s) => s.playing);
@@ -60,7 +70,8 @@ export default function PlaybackControl() {
     }
   }, []);
 
-  const DEFAULT_MUSIC = 'https://trailpaint.org/stories/music/redeemed.mp3';
+  const [defaultPick] = useState(() => MUSIC_POOL[Math.floor(Math.random() * MUSIC_POOL.length)]);
+  const DEFAULT_MUSIC = defaultPick.url;
   const [musicUrlInput, setMusicUrlInput] = useState(project.music?.url || DEFAULT_MUSIC);
   const [musicAutoplay, setMusicAutoplay] = useState(project.music?.autoplay ?? false);
 
@@ -71,6 +82,10 @@ export default function PlaybackControl() {
   const musicParam = rawMusicParam && isAllowedMediaUrl(rawMusicParam) ? rawMusicParam : null;
   const effectiveMusicUrl = musicParam || project.music?.url || DEFAULT_MUSIC;
   const effectiveAutoplay = musicParam ? true : project.music?.autoplay ?? false;
+  const currentTrackLabelKey = useMemo(() => {
+    const found = MUSIC_POOL.find((m) => m.url === effectiveMusicUrl);
+    return found ? found.labelKey : 'player.music.track.custom';
+  }, [effectiveMusicUrl]);
 
   // Initialize audio element for background music
   useEffect(() => {
@@ -202,6 +217,10 @@ export default function PlaybackControl() {
             ))}
           </div>
           <div className="playback__setting-group playback__setting-group--music">
+            <span className="playback__setting-label">{t('player.music.nowPlaying')}</span>
+            <span className="playback__setting-hint">{t(currentTrackLabelKey)}</span>
+          </div>
+          <div className="playback__setting-group playback__setting-group--music">
             <span className="playback__setting-label">{t('player.music.url')}</span>
             <span className="playback__setting-hint">{t('player.music.urlHint')}</span>
             <input
@@ -304,10 +323,16 @@ export default function PlaybackControl() {
         <button
           className={`playback__btn${embedCopied ? ' playback__btn--active' : ''}`}
           onClick={async () => {
+            const compId = params.get('compilation');
             const src = params.get('src');
             const origin = window.location.origin;
             let html: string;
-            if (src) {
+            if (compId) {
+              // T9 / CP4: compilation embed — iframe re-fetches catalog.json + segments,
+              // no inline data needed (small embed snippet, large compilation playback).
+              const musicParam = effectiveMusicUrl ? `&music=${encodeURIComponent(effectiveMusicUrl)}` : '';
+              html = `<iframe src="${origin}/app/player/?embed=1&compilation=${encodeURIComponent(compId)}${musicParam}" width="100%" height="500" style="border:none;border-radius:8px" allowfullscreen></iframe>`;
+            } else if (src) {
               const musicParam = effectiveMusicUrl ? `&music=${encodeURIComponent(effectiveMusicUrl)}` : '';
               html = `<iframe src="${origin}/app/player/?embed=1&src=${encodeURIComponent(src)}${musicParam}" width="100%" height="500" style="border:none;border-radius:8px" allowfullscreen></iframe>`;
             } else {
