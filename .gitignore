@@ -9,3 +9,5 @@ openspec/
 .env.local
 dist/
 stories/**/photos/
+.claude-memory
+opencode.json

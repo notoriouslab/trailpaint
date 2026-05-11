@@ -17,9 +17,12 @@ function getZoomScale(zoom: number): number {
   return Math.max(0.5, Math.min(1, 1 + (zoom - 14) * 0.12));
 }
 
-const MOBILE_MQ = '(max-width: 768px)';
+const MOBILE_MQ = '(max-width: 600px)';
 const CARD_W_DESKTOP = 120;
-const CARD_W_MOBILE = 100;
+const CARD_W_MOBILE = 24;
+// 手機卡片視覺上離 pin 拉得更開。資料層 cardOffset 不變（跨裝置一致），
+// 只在 render/drag 時手機端乘以這個倍率。
+const MOBILE_OFFSET_BOOST = 1.5;
 
 export default function SpotMarker({ spot }: { spot: Spot }) {
   const map = useMap();
@@ -95,10 +98,13 @@ function CardOverlay({ spot, selected, map, onSelect, onUpdateOffset }: CardOver
 
     const isMobile = window.matchMedia(MOBILE_MQ).matches;
     const halfW = isMobile ? CARD_W_MOBILE / 2 : CARD_W_DESKTOP / 2;
+    const boost = isMobile ? MOBILE_OFFSET_BOOST : 1;
+    const offX = spot.cardOffset.x * boost;
+    const offY = spot.cardOffset.y * boost;
     const scale = getZoomScale(map.getZoom());
 
     const pt = map.latLngToContainerPoint(spot.latlng);
-    wrap.style.transform = `translate(${pt.x + spot.cardOffset.x - halfW}px, ${pt.y + spot.cardOffset.y}px) scale(${scale})`;
+    wrap.style.transform = `translate(${pt.x + offX - halfW}px, ${pt.y + offY}px) scale(${scale})`;
 
     // Set CSS variable for pin circle scale
     map.getContainer().style.setProperty('--spot-scale', String(scale));
@@ -107,8 +113,8 @@ function CardOverlay({ spot, selected, map, onSelect, onUpdateOffset }: CardOver
     if (line) {
       line.setAttribute('x1', String(halfW));
       line.setAttribute('y1', '0');
-      line.setAttribute('x2', String(-spot.cardOffset.x / scale + halfW));
-      line.setAttribute('y2', String(-spot.cardOffset.y / scale));
+      line.setAttribute('x2', String(-offX / scale + halfW));
+      line.setAttribute('y2', String(-offY / scale));
     }
   }, [map, spot.latlng, spot.cardOffset]);
 
@@ -137,9 +143,11 @@ function CardOverlay({ spot, selected, map, onSelect, onUpdateOffset }: CardOver
 
     const onMove = (ev: MouseEvent) => {
       if (!dragRef.current) return;
+      const isMobile = window.matchMedia(MOBILE_MQ).matches;
+      const boost = isMobile ? MOBILE_OFFSET_BOOST : 1;
       onUpdateOffset({
-        x: dragRef.current.ox + (ev.clientX - dragRef.current.mx),
-        y: dragRef.current.oy + (ev.clientY - dragRef.current.my),
+        x: dragRef.current.ox + (ev.clientX - dragRef.current.mx) / boost,
+        y: dragRef.current.oy + (ev.clientY - dragRef.current.my) / boost,
       });
     };
     const onUp = () => {
@@ -174,9 +182,11 @@ function CardOverlay({ spot, selected, map, onSelect, onUpdateOffset }: CardOver
       }
       ev.preventDefault();
       const t = ev.touches[0];
+      const isMobile = window.matchMedia(MOBILE_MQ).matches;
+      const boost = isMobile ? MOBILE_OFFSET_BOOST : 1;
       onUpdateOffset({
-        x: dragRef.current.ox + (t.clientX - dragRef.current.mx),
-        y: dragRef.current.oy + (t.clientY - dragRef.current.my),
+        x: dragRef.current.ox + (t.clientX - dragRef.current.mx) / boost,
+        y: dragRef.current.oy + (t.clientY - dragRef.current.my) / boost,
       });
     };
     const cleanup = () => {
