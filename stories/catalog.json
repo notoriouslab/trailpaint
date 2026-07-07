@@ -213,6 +213,16 @@
       "count": 1
     },
     {
+      "id": "yu-yonghe",
+      "collection": "china",
+      "title": "郁永河裨海紀遊",
+      "subtitle": "AD 1697 康熙採硫紀行",
+      "description": "康熙三十六年（1697）郁永河渡黑水溝赴台採硫：二月二十五日鹿耳門登岸，四月初七乘牛車自府城北上縱貫西部諸番社，四月二十七日抵淡水，於北投勘硫煉硫，十月工竣返棹。17 spots / 2 segments，路線對齊中研院 THCTS〈郁永河《裨海紀遊》路線圖〉考證，疊 CCTS 清 1820 + 臺灣百年歷史地圖 1897。",
+      "thumbnail": "yu-yonghe/cover.jpg",
+      "path": "yu-yonghe/",
+      "count": 2
+    },
+    {
       "id": "marco-polo",
       "collection": "exploration",
       "title": "馬可波羅東來",

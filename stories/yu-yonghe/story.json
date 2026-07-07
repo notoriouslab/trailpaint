@@ -1,0 +1,45 @@
+{
+  "id": "yu-yonghe",
+  "title": "郁永河裨海紀遊",
+  "subtitle": "AD 1697 康熙採硫紀行 — 從福州到北投",
+  "description": "康熙三十六年（1697）郁永河為賠補福州焚毀的火藥硫磺，渡黑水溝赴台採硫：二月二十五日鹿耳門登岸，四月初七乘牛車自府城北上，二十天縱貫西部平原諸番社，四月二十七日抵淡水，五月起於北投勘硫煉硫，十月工竣返棹。《裨海紀遊》是清初台灣地理、族群與生態最重要的第一手見聞錄。路線對齊中研院 THCTS〈郁永河《裨海紀遊》路線圖〉與王祿驊、李玉亭、范毅軍、廖泫銘、白璧玲 2011〈《裨海記遊》歷史考證與 GIS 整合應用〉（《地圖》21(2)）之考證；歷史底圖採中研院 CCTS 清代 1820 與臺灣百年歷史地圖 1897 日治二十萬分一圖。",
+  "locale": "zh-TW",
+  "cover": "cover.jpg",
+  "music": {
+    "src": "../music/voller-hoffnung.mp3",
+    "title": "Voller Hoffnung — Ronny Matthes",
+    "credit": "Ronny Matthes (Jamendo / Internet Archive)",
+    "license": "CC"
+  },
+  "og": {
+    "title": "郁永河裨海紀遊 — TrailPaint Stories",
+    "description": "互動地圖：1697 康熙採硫之旅，福州渡黑水溝、牛車縱貫西台灣到北投硫穴，17 spots 對齊中研院 THCTS 路線考證，疊清代 1820 與日治 1897 歷史地圖",
+    "image": "og.jpg"
+  },
+  "stories": [
+    {
+      "id": "crossing",
+      "title": "渡海來台",
+      "subtitle": "1697 正月—二月 福州、廈門、澎湖、鹿耳門",
+      "description": "康熙三十五年（1696）冬福州火藥庫焚毀，典守者需賠補硫磺，幕客郁永河自告奮勇渡海赴台採硫。康熙三十六年（1697）正月二十四日離福州，陸路經興化、泉州至廈門候船，放洋過澎湖，二月二十五日鹿耳門「買小舟登岸」，於府城停留備辦煉硫工料。《裨海紀遊》卷上詳記黑水溝驚航，是清初渡台海道最重要的第一手紀錄。",
+      "data": "crossing.trailpaint.json",
+      "thumbnail": "crossing-thumb.jpg",
+      "color": "#1e3a8a",
+      "music": "../music/voller-hoffnung.mp3"
+    },
+    {
+      "id": "northbound",
+      "title": "牛車北上採硫",
+      "subtitle": "1697 四月初七—十月 府城—竹塹—淡水—北投",
+      "description": "四月初七日率眾五十五人乘黃犢車出府城，二十天縱貫西部平原：歷西拉雅四大社、渡濁水溪三分流、阻雨牛罵社、越大甲溪後「番社皆空室」，竹塹迄南嵌八九十里「不見一人一屋」。四月二十七日乘莽葛渡淡水河抵淡水社，溯河過甘答門見「康熙台北湖」，五月起於北投勘硫煉硫，親探硫穴留下台灣文學史最著名的地熱描寫。十月工竣返棹福州。",
+      "data": "northbound.trailpaint.json",
+      "thumbnail": "northbound-thumb.jpg",
+      "color": "#92400e",
+      "music": "../music/voller-hoffnung.mp3"
+    }
+  ],
+  "footer": {
+    "cta": "在 TrailPaint 中建立你自己的故事地圖",
+    "url": "https://trailpaint.org/app/"
+  }
+}

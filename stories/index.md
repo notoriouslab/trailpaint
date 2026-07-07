@@ -7,13 +7,13 @@ Version: 1.4.0
 
 ## 這是什麼 / What is This
 
-TrailPaint Stories 是用 TrailPaint 製作的精選故事地圖集合。每個故事包含多條歷史路線，可自動播放導覽（fly-to 動畫 + 照片 popup + 配樂 + 9 張歷史地圖疊加），也可全螢幕投影做教學展示，或一鍵嵌入部落格、教會網站、Notion。v1.4 起加入年代滑桿（拖動切換歷史地圖底圖、景點按 era 漸隱）、合輯（多故事跨人物時序排序）、電子明信片（1080×1080 IG 方圖下載）。
+TrailPaint Stories 是用 TrailPaint 製作的精選故事地圖集合。每個故事包含多條歷史路線，可自動播放導覽（fly-to 動畫 + 照片 popup + 配樂 + 11 張歷史地圖疊加），也可全螢幕投影做教學展示，或一鍵嵌入部落格、教會網站、Notion。v1.4 起加入年代滑桿（拖動切換歷史地圖底圖、景點按 era 漸隱）、合輯（多故事跨人物時序排序）、電子明信片（1080×1080 IG 方圖下載）。
 
-TrailPaint Stories is a curated collection of interactive story maps. Each story contains multiple historical routes with auto-play narration, photo popups, background music, and 9 historical basemap overlays. v1.4 adds an era slider (cross-fade historical maps + spot opacity by era), compilations (multi-story chronological dialogue), and electronic postcards (1080×1080 IG square downloads).
+TrailPaint Stories is a curated collection of interactive story maps. Each story contains multiple historical routes with auto-play narration, photo popups, background music, and 11 historical basemap overlays. v1.4 adds an era slider (cross-fade historical maps + spot opacity by era), compilations (multi-story chronological dialogue), and electronic postcards (1080×1080 IG square downloads).
 
 ## 收錄故事 / Featured Collections
 
-截至 2026-05-04 共 24 個故事，分 4 個 collection。Tier 1+2+3 (2026-05-04) 新增 bible 6 / missions 4 / china 1 / exploration 3 故事完成「貫穿全本聖經 1500 年」+「西方宣教士東進 350 年」+「大航海時代 500 年」三條敘事軸。
+截至 2026-07-07 共 25 個故事，分 4 個 collection。Tier 1+2+3 (2026-05-04) 新增 bible 6 / missions 4 / china 1 / exploration 3 故事完成「貫穿全本聖經 1500 年」+「西方宣教士東進 350 年」+「大航海時代 500 年」三條敘事軸。
 
 ### 聖經地圖 / Bible (9 stories, BC 1446 — AD 95，按時序)
 
@@ -35,15 +35,16 @@ TrailPaint Stories is a curated collection of interactive story maps. Each story
 - **戴德生中國內地會 Hudson Taylor / CIM** (1853–1905, 10 spots / 2 segments) — 倫敦差遣 → 上海 → 寧波 → 布萊頓海岸 1865 異象 → 杭州 CIM 總部 → 內陸擴展 → 鎮江葬地。1900 義和團事變殉道 58 名 CIM 宣教士。https://trailpaint.org/stories/hudson-taylor/
 - **台灣宣教士腳蹤 Footprints in Taiwan** (1865–2024, 5 segments) — Maxwell / Mackay / Barclay / Landsborough / Brougham 五位宣教士。https://trailpaint.org/stories/taiwan-missionaries/
 
-### 中國歷史 / China (5 stories)
+### 中國歷史 / China (6 stories)
 
 - **三國蜀漢北伐 Three Kingdoms** (AD 207–234, 6 spots) — 隆中三顧茅廬 → 赤壁火攻 → 漢中王 → 白帝託孤 → 街亭斬馬謖 → 五丈原。CCTS 三國 262 古地圖底圖。https://trailpaint.org/stories/three-kingdoms/
 - **張騫通西域 Zhang Qian's Western Mission** (BC 139–126)
 - **玄奘西行 Xuanzang's Journey West** (AD 629–645)
 - **文天祥南撤北擄 Wen Tianxiang** (1275–1283)
 - **徐霞客西南壯遊 Xu Xiake** (1636–1640)
+- **郁永河裨海紀遊 Yu Yonghe's Sulfur Expedition** (1697, 17 spots / 2 segments) — 福州渡黑水溝 → 鹿耳門 → 牛車縱貫西台灣 → 淡水 → 北投硫穴。路線對齊中研院 THCTS〈郁永河《裨海紀遊》路線圖〉考證，疊 CCTS 清 1820 + 臺灣百年歷史地圖 1897。https://trailpaint.org/stories/yu-yonghe/
 
-URLs: `/stories/{three-kingdoms|zhang-qian|xuanzang|wen-tianxiang|xu-xiake}/`
+URLs: `/stories/{three-kingdoms|zhang-qian|xuanzang|wen-tianxiang|xu-xiake|yu-yonghe}/`
 
 ### 大航海時代 / Exploration (5 stories, 1271 — 1779，按時序)
 
