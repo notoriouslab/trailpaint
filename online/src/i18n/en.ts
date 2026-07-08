@@ -42,6 +42,7 @@ export default {
 
   // Route
   'route.finish': 'Finish Route',
+  'route.connectSpots': 'Connect Spots',
   'route.cancel': 'Cancel',
   'route.hintStart': 'Click the map to mark the starting point',
   'route.hintPoints': 'points — keep clicking or press "Finish Route"',

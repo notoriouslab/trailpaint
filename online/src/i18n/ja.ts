@@ -41,7 +41,8 @@ export default {
   'editor.deleteConfirm': 'このスポットを削除しますか？',
 
   // Route
-  'route.finish': 'ルート完成',
+  'route.finish': 'ルートを完成',
+  'route.connectSpots': 'スポットを結ぶ',
   'route.cancel': 'キャンセル',
   'route.hintStart': '地図をクリックしてルートの起点を設定',
   'route.hintPoints': 'ポイント — クリックを続けるか「ルート完成」を押す',
