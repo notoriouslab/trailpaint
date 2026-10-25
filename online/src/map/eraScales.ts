@@ -1,6 +1,6 @@
 /**
  * Time Slider scales — defines two scale groups:
- *   1. HISTORY_SCALE — corresponds to existing 9 historical map overlays
+ *   1. HISTORY_SCALE — one tick per historical map overlay (OVERLAYS)
  *   2. BIBLE_SCALE — biblical narrative timeline (CP3, mostly without overlay)
  *
  * Design ref: openspec/changes/2026-05-03-016-time-slider-postcard/design.md D7

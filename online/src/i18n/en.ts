@@ -228,6 +228,7 @@ export default {
   'overlay.tw1904': 'Colonial Map 1904',
   'overlay.tw1945': 'US Army City Plans 1945',
   'overlay.tw1955': 'Topographic 1955',
+  'overlay.tw1989': 'Topographic 1989',
   'overlay.tw1993': 'Topographic 1993',
   'overlay.hanbc7': 'W. Han (BC 7)',
   'overlay.threeKingdoms262': 'Three Kingdoms (262)',

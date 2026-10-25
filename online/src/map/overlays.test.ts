@@ -120,7 +120,7 @@ describe('getRelevantOverlayIds', () => {
   });
 
   it('019 island-wide overlays match both Taipei and Tainan', () => {
-    const twIds = ['tw_1904', 'tw_1945', 'tw_1955', 'tw_1993'];
+    const twIds = ['tw_1904', 'tw_1945', 'tw_1955', 'tw_1989', 'tw_1993'];
     const daan = getRelevantOverlayIds([[25.03, 121.54]]);
     const tainan = getRelevantOverlayIds([[22.99, 120.2]]);
     for (const id of twIds) {

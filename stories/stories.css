@@ -63,6 +63,34 @@ a:hover { text-decoration: underline; }
   margin-bottom: 0;
 }
 
+/* "Made with TrailPaint" hand-off, pinned to the right of the compact header */
+.stories-header__cta {
+  margin-left: auto;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.stories-header__cta-made {
+  color: #78716c;
+}
+
+.stories-header__cta-go {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #92400e;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.stories-header__cta:hover .stories-header__cta-go {
+  background: #78350f;
+}
+
 .stories-header__title {
   font-size: 22px;
   color: #78350f;
@@ -293,6 +321,9 @@ a:hover { text-decoration: underline; }
 @media (max-width: 768px) {
   .stories-header__title { font-size: 18px; }
   .stories-header { padding: 8px 16px; }
+  /* phone: the subtitle repeats the description below; give the room to the title and the hand-off */
+  .stories-header--compact .stories-header__subtitle { display: none; }
+  .stories-header--compact { gap: 12px; }
 
   .catalog-grid {
     grid-template-columns: 1fr;

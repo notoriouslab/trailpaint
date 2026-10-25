@@ -54,8 +54,8 @@ describe('snapToNearestTick — boundary cases', () => {
 });
 
 describe('Scale definitions', () => {
-  it('HISTORY_SCALE includes MODERN_TICK + 15 overlays = 16 ticks (019 +4 island-wide)', () => {
-    expect(HISTORY_SCALE).toHaveLength(16);
+  it('HISTORY_SCALE includes MODERN_TICK + 16 overlays = 17 ticks (019 +4 island-wide, +1989)', () => {
+    expect(HISTORY_SCALE).toHaveLength(17);
   });
 
   it('HISTORY_SCALE is sorted newest → oldest', () => {
@@ -110,6 +110,8 @@ describe('overlayForYear (019 D7)', () => {
 
   it('picks the latest map not later than the year (never the future)', () => {
     expect(overlayForYear(1975, taipei)).toBe('corona_1966');
+    expect(overlayForYear(1990, taipei)).toBe('tw_1989');
+    expect(overlayForYear(1988, taipei)).toBe('corona_1966');
     expect(overlayForYear(1899, taipei)).toBe('jm200k_1897');
   });
 

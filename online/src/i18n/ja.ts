@@ -228,6 +228,7 @@ export default {
   'overlay.tw1904': '堡図 1904',
   'overlay.tw1945': '米軍市街図 1945',
   'overlay.tw1955': '地形図 1955',
+  'overlay.tw1989': '地形図 1989',
   'overlay.tw1993': '地形図 1993',
   'overlay.hanbc7': '前漢 (BC 7)',
   'overlay.threeKingdoms262': '三国 (262)',

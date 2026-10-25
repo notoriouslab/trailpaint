@@ -65,7 +65,7 @@ Standalone entry for auto-guided playback:
 - fly-to animation through each spot (1.8s settle delay so user sees the new map before popup covers it, v1.4)
 - popup shows photo and description
 - playback interval 2s/4s/6s/8s, loop 1×/2×/3×/∞
-- 5 basemaps + 15 historical overlays: Academia Sinica CCTS Han BC 7 / Three Kingdoms 262 / Tang 741 / Song 1208 / Yuan 1330 / Ming 1582 / Qing 1820; Taiwan jm200k 1897 / 1904 / jm20k 1921 / 1945 / 1955 / Corona 1966 / 1993; DARE Roman Empire AD 200
+- 5 basemaps + 16 historical overlays: Academia Sinica CCTS Han BC 7 / Three Kingdoms 262 / Tang 741 / Song 1208 / Yuan 1330 / Ming 1582 / Qing 1820; Taiwan jm200k 1897 / 1904 / jm20k 1921 / 1945 / 1955 / Corona 1966 / 1989 / 1993; DARE Roman Empire AD 200
 - background music via direct MP3/M4A URL
 - fullscreen mode for exhibits, classroom, events
 - one-click embed code for blogs, church sites, Notion
@@ -135,7 +135,7 @@ Embed code is one-click copy from Player ⚙ menu — paste into WordPress / Wix
 
 ## v1.7 Cumulative Timeline + Taiwan Historical Maps (2026-10)
 
-The era slider gains a cumulative mode: at any year it shows only places that already existed (not yet built or already demolished = hidden), with tick spacing chosen from the story's own event span and playback stopping at each event year. Four Academia Sinica Taiwan maps join the overlays (1904 colonial map, 1945 US Army city plans, 1955 and 1993 topographic maps); in cumulative mode the basemap switches to the latest map not later than the slider year, and maps with no coverage at the story's location are skipped. First story: [Da'an District, a Century](https://trailpaint.org/stories/taipei-daan/) — 24 public facilities in Taipei's Da'an District, 1904 to today, each with its opening year at the current site and sources.
+The era slider gains a cumulative mode: at any year it shows only places that already existed (not yet built or already demolished = hidden), with tick spacing chosen from the story's own event span and playback stopping at each event year. Five Academia Sinica Taiwan maps join the overlays (1904 colonial map, 1945 US Army city plans, 1955, 1989 and 1993 topographic maps); in cumulative mode the basemap switches to the latest map not later than the slider year, and maps with no coverage at the story's location are skipped. First story: [Da'an District, a Century](https://trailpaint.org/stories/taipei-daan/) — 24 public facilities in Taipei's Da'an District, 1904 to today, each with its opening year at the current site and sources.
 
 ## v1.5–v1.6.5 Editor IA Redesign, Basemap Refresh, Route Hiding (2026-08)
 

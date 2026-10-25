@@ -13,6 +13,7 @@ export interface OverlayDef {
     | 'overlay.tw1945'
     | 'overlay.tw1955'
     | 'overlay.corona1966'
+    | 'overlay.tw1989'
     | 'overlay.tw1993'
     | 'overlay.hanbc7'
     | 'overlay.threeKingdoms262'
@@ -177,6 +178,17 @@ export const OVERLAYS: OverlayDef[] = [
     maxNativeZoom: 14,
     bounds: BOUNDS_TAIWAN,
     year: 1966,
+  },
+  {
+    id: 'tw_1989',
+    labelKey: 'overlay.tw1989',
+    group: 'taiwan',
+    url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=TM25K_1989-jpg-{z}-{x}-{y}',
+    attribution: '中央研究院人社中心GIS專題中心',
+    maxZoom: 18,
+    maxNativeZoom: 16,
+    bounds: BOUNDS_TAIWAN,
+    year: 1989,
   },
   {
     id: 'tw_1993',

@@ -7,9 +7,9 @@ Version: 1.7.0
 
 ## 這是什麼 / What is This
 
-TrailPaint Stories 是用 TrailPaint 製作的精選故事地圖集合。每個故事包含多條歷史路線，可自動播放導覽（fly-to 動畫 + 照片 popup + 配樂 + 15 張歷史地圖疊加），也可全螢幕投影做教學展示，或一鍵嵌入部落格、教會網站、Notion。v1.4 起加入年代滑桿（拖動切換歷史地圖底圖、景點按 era 漸隱）、合輯（多故事跨人物時序排序）、電子明信片（1080×1080 IG 方圖下載）。
+TrailPaint Stories 是用 TrailPaint 製作的精選故事地圖集合。每個故事包含多條歷史路線，可自動播放導覽（fly-to 動畫 + 照片 popup + 配樂 + 16 張歷史地圖疊加），也可全螢幕投影做教學展示，或一鍵嵌入部落格、教會網站、Notion。v1.4 起加入年代滑桿（拖動切換歷史地圖底圖、景點按 era 漸隱）、合輯（多故事跨人物時序排序）、電子明信片（1080×1080 IG 方圖下載）。
 
-TrailPaint Stories is a curated collection of interactive story maps. Each story contains multiple historical routes with auto-play narration, photo popups, background music, and 15 historical basemap overlays. v1.4 adds an era slider (cross-fade historical maps + spot opacity by era), compilations (multi-story chronological dialogue), and electronic postcards (1080×1080 IG square downloads).
+TrailPaint Stories is a curated collection of interactive story maps. Each story contains multiple historical routes with auto-play narration, photo popups, background music, and 16 historical basemap overlays. v1.4 adds an era slider (cross-fade historical maps + spot opacity by era), compilations (multi-story chronological dialogue), and electronic postcards (1080×1080 IG square downloads).
 
 ## 收錄故事 / Featured Collections
 
@@ -58,7 +58,7 @@ URLs: `/stories/{marco-polo|zheng-he|columbus|magellan|cook}/`
 
 ### 台灣百年歷史 / Taiwan: A Century (1 story)
 
-- **大安區百年 Da'an District, a Century** (1904–today, 24 spots) — 臺北大安區公共建設依「在現址啟用」年份累積出現：臺北刑務所、帝大與高校、國中國小、建國高架、大安森林公園、捷運與運動中心。時間軸為累積模式（未建成、已拆除不顯示），底圖隨年份切換中研院 1904 / 1945 / 1955 / 1966 / 1993 歷史地圖。每點附來源。https://trailpaint.org/stories/taipei-daan/
+- **大安區百年 Da'an District, a Century** (1904–today, 24 spots) — 臺北大安區公共建設依「在現址啟用」年份累積出現：臺北刑務所、帝大與高校、國中國小、建國高架、大安森林公園、捷運與運動中心。時間軸為累積模式（未建成、已拆除不顯示），底圖隨年份切換中研院 1904 / 1945 / 1955 / 1966 / 1989 / 1993 歷史地圖。每點附來源。https://trailpaint.org/stories/taipei-daan/
 
 ## 預設合輯 / Default Compilations (v1.4)
 
@@ -79,9 +79,9 @@ URL pattern: https://trailpaint.org/app/player/?compilation=<id>
 - fly-to 自動導覽 + 1.8 秒地圖呈現延遲再開 popup (v1.4 節奏調整) / auto-guided playback with 1.8s map-settle delay before popup (v1.4)
 - 照片 popup + 描述文字 / photo popups with descriptions
 - 播放間隔與循環設定 / playback interval and loop settings (2s/4s/6s/8s, 1×/2×/3×/∞)
-- 5 種底圖 + 15 張歷史地圖疊加 / 5 basemaps + 15 historical overlays:
+- 5 種底圖 + 16 張歷史地圖疊加 / 5 basemaps + 16 historical overlays:
   - Academia Sinica CCTS 西漢 BC 7 / 三國 262 / 唐 741 / 南宋 1208 / 元 1330 / 明 1582 / 清 1820（七朝完整）
-  - 台灣輿圖 jm200k 1897 / jm20k 1921 / Corona 衛星 1966；1904 臺灣堡圖 / 1945 美軍市街圖 / 1955 地形圖 / 1993 經建版地形圖（v1.7）
+  - 台灣輿圖 jm200k 1897 / jm20k 1921 / Corona 衛星 1966；1904 臺灣堡圖 / 1945 美軍市街圖 / 1955 地形圖 / 1989、1993 經建版地形圖（v1.7）
   - DARE Roman Empire AD 200
 - **年代滑桿 / Era Slider (v1.4)**: 拖動切換歷史地圖 + 景點按 era 漸隱；🗺️ 歷史 / 📖 聖經敘事兩刻度組
 - **電子明信片 / Postcard (v1.4)**: 1080×1080 IG 方圖含地圖 + 景點卡 + 年代印章一鍵下載

@@ -87,6 +87,21 @@ function renderCards(items) {
 
 /* ── Level 1: Story page ── */
 
+/**
+ * Visible "made with TrailPaint" hand-off in the compact story header.
+ * story.json footer.url is the editor link; only same-site paths or https URLs are used.
+ */
+function renderMadeWith(footer) {
+  var header = document.querySelector('.stories-header--compact');
+  if (!header || !footer || typeof footer.url !== 'string') return;
+  if (!/^(https:\/\/|\/)/.test(footer.url)) return;
+  var a = document.createElement('a');
+  a.className = 'stories-header__cta';
+  a.href = footer.url;
+  a.innerHTML = '<span class="stories-header__cta-made">用 TrailPaint 製作</span><span class="stories-header__cta-go">自己做一張 →</span>';
+  header.appendChild(a);
+}
+
 async function renderStoryPage(opts) {
   var tabsId = opts.tabsId;
   var iframeId = opts.iframeId;
@@ -105,6 +120,8 @@ async function renderStoryPage(opts) {
     var story = await res.json();
     var stories = story.stories || [];
     if (stories.length === 0) return;
+
+    renderMadeWith(story.footer);
 
     var useAutoplay = opts.autoplay ? '&autoplay=1' : '';
     var defaultMusic = story.music && story.music.src ? story.music.src : '';

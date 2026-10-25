@@ -37,6 +37,7 @@ const LAYERS = {
   tw_1945: { img: 'AMCityPlan_1945-png', z: 12 },
   tw_1955: { img: 'TM25K_1955-png', z: 11 },
   corona_1966: { img: 'Taiwan_Corona_1966-png', z: 11 },
+  tw_1989: { img: 'TM25K_1989-jpg', z: 11 },
   tw_1993: { img: 'TM25K_1993-jpg', z: 11 },
 };
 
