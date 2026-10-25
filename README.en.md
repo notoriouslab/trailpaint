@@ -10,7 +10,7 @@
 [![PWA Ready](https://img.shields.io/badge/PWA-ready-5a0fc8.svg)](https://trailpaint.org/features/install/)
 [![i18n](https://img.shields.io/badge/i18n-中文%20%7C%20EN%20%7C%20日本語-green.svg)](https://trailpaint.org/app/)
 
-**[Open the app →](https://trailpaint.org/app/)** · **[Explore story maps →](https://trailpaint.org/stories/)** · **[Story Player →](https://trailpaint.org/app/player/)** · **[Install as PWA →](https://trailpaint.org/features/install/)**
+**[Open the app →](https://trailpaint.org/app/)** · **[Story maps →](https://trailpaint.org/stories/)** · **[Trails & travel →](https://trailpaint.org/examples/)** · **[Taiwan Century →](https://trailpaint.org/taiwan/)** · **[Story Player →](https://trailpaint.org/app/player/)**
 
 ![TrailPaint editor — desktop tool-dock layout](./examples/trailpaint-hero.jpg)
 
@@ -88,6 +88,16 @@ There's also an **AI stylization prompt** (Japanese sketch / treasure map / cozy
 
 ---
 
+## The website: see the work first, then draw your own
+
+The [trailpaint.org](https://trailpaint.org/) homepage works like a small gallery: a seasonal feature on the left, a daily pick that rotates every day, an entrance to trails and travel routes, and rows of finished maps below. The editor comes last, for when you're ready to draw.
+
+Three curated sections:
+
+- **[Story maps](https://trailpaint.org/stories/)** — the Bible, mission history, Chinese history and the age of exploration, each with historical maps and a time slider
+- **[Trails & travel](https://trailpaint.org/examples/)** — hiking trails, old roads, family walks and trips abroad; play them or download the route file to make it your own
+- **[Taiwan Century](https://trailpaint.org/taiwan/)** — one place across a hundred years, on Academia Sinica historical maps from the 1904 colonial survey to today; first up is Da'an Forest Park
+
 ## Story Player: maps that tell stories
 
 **[Story Player](https://trailpaint.org/app/player/)** turns a static map into a guided tour: fly-to animations, photo cards, background music, and fullscreen mode — built for exhibitions, classrooms, and web embeds.
@@ -103,6 +113,7 @@ Featured story maps ([all →](https://trailpaint.org/stories/)):
 - **Paul's Three Journeys** — 34 spots across the AD 46-62 Mediterranean
 - **Silk Road 2000 Years** — Zhang Qian → Xuanzang → Marco Polo on the same corridor
 - **Yu Yonghe's 1697 Journey** — a sulfur expedition across Qing-era Taiwan
+- **Da'an Forest Park** — one Taipei block across a century: rice fields, a 1932 park plan, military villages, then a forest park; drag the slider to change era ([Taiwan Century](https://trailpaint.org/taiwan/))
 
 ![Story Player — auto tour](./examples/trailpaint-02.jpg)
 

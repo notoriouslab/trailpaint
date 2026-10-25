@@ -10,7 +10,7 @@
 [![PWA Ready](https://img.shields.io/badge/PWA-ready-5a0fc8.svg)](https://trailpaint.org/features/install/)
 [![i18n](https://img.shields.io/badge/i18n-中文%20%7C%20EN%20%7C%20日本語-green.svg)](https://trailpaint.org/app/)
 
-**[立即使用 →](https://trailpaint.org/app/)** · **[探索故事地圖 →](https://trailpaint.org/stories/)** · **[Story Player →](https://trailpaint.org/app/player/)** · **[PWA 安裝 →](https://trailpaint.org/features/install/)**
+**[立即使用 →](https://trailpaint.org/app/)** · **[故事地圖 →](https://trailpaint.org/stories/)** · **[出門走走 →](https://trailpaint.org/examples/)** · **[台灣百年 →](https://trailpaint.org/taiwan/)** · **[Story Player →](https://trailpaint.org/app/player/)**
 
 ![TrailPaint 編輯器 — 桌機工具盤佈局](./examples/trailpaint-hero.jpg)
 
@@ -88,6 +88,16 @@ TrailPaint 的使用節奏是三步：**先收集，再編輯，最後分享**�
 
 ---
 
+## 官網：先看作品，再自己畫
+
+[trailpaint.org](https://trailpaint.org/) 首頁像一間小型美術館：左邊是當季特展，右上是每天輪替的一張作品，右下是步道與旅行路線的入口，往下是一排排已完成的地圖。工具在最後，看完想畫再開始。
+
+三個策展區：
+
+- **[故事地圖](https://trailpaint.org/stories/)** — 聖經、宣教史、中國歷史、大航海，每個故事附老地圖與時間軸
+- **[出門走走](https://trailpaint.org/examples/)** — 登山步道、古道、親子散步與海外旅行，可直接播放或下載路線檔改成自己的行程
+- **[台灣百年](https://trailpaint.org/taiwan/)** — 同一個地方的一百年，疊上 1904 年臺灣堡圖到今天的中研院歷史地圖；第一篇是大安森林公園
+
 ## Story Player：讓地圖說故事
 
 **[Story Player](https://trailpaint.org/app/player/)** 把靜態地圖變成自動導覽：逐點 fly-to、照片與說明卡展示、背景音樂、全螢幕模式，適合展場、教學投影與網頁嵌入。
@@ -103,6 +113,7 @@ TrailPaint 的使用節奏是三步：**先收集，再編輯，最後分享**�
 - **保羅宣教三次旅行** — 34 景點，AD 46-62 地中海
 - **絲路 2000 年** — 張騫 → 玄奘 → 馬可波羅，同一條走廊三段足跡
 - **裨海紀遊** — 郁永河 1697 台灣採硫之旅，疊清代與日治歷史地圖
+- **大安森林公園** — 一個街廓的百年：稻田、七號公園預定地、眷村到森林公園，拉時間軸就換年代（[台灣百年](https://trailpaint.org/taiwan/)）
 
 ![Story Player — 自動導覽](./examples/trailpaint-02.jpg)
 
