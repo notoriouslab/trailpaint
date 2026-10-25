@@ -1,0 +1,98 @@
+[
+ {
+  "item": {
+   "type": "uri",
+   "value": "http://www.wikidata.org/entity/Q11081532"
+  },
+  "coord": {
+   "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+   "type": "literal",
+   "value": "Point(121.45861111 25.06166667)"
+  },
+  "top": {
+   "type": "uri",
+   "value": "http://www.wikidata.org/entity/Q55488"
+  },
+  "inception": {
+   "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+   "type": "literal",
+   "value": "2017-01-01T00:00:00Z"
+  },
+  "zhwiki": {
+   "type": "uri",
+   "value": "https://zh.wikipedia.org/wiki/%E6%96%B0%E5%8C%97%E7%94%A2%E6%A5%AD%E5%9C%92%E5%8D%80%E7%AB%99"
+  },
+  "opening": {
+   "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+   "type": "literal",
+   "value": "2017-03-02T00:00:00Z"
+  },
+  "tw": {
+   "xml:lang": "zh",
+   "type": "literal",
+   "value": "新北產業園區站"
+  }
+ },
+ {
+  "item": {
+   "type": "uri",
+   "value": "http://www.wikidata.org/entity/Q11081532"
+  },
+  "coord": {
+   "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+   "type": "literal",
+   "value": "Point(121.45861111 25.06166667)"
+  },
+  "top": {
+   "type": "uri",
+   "value": "http://www.wikidata.org/entity/Q928830"
+  },
+  "inception": {
+   "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+   "type": "literal",
+   "value": "2017-01-01T00:00:00Z"
+  },
+  "zhwiki": {
+   "type": "uri",
+   "value": "https://zh.wikipedia.org/wiki/%E6%96%B0%E5%8C%97%E7%94%A2%E6%A5%AD%E5%9C%92%E5%8D%80%E7%AB%99"
+  },
+  "opening": {
+   "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+   "type": "literal",
+   "value": "2017-03-02T00:00:00Z"
+  },
+  "tw": {
+   "xml:lang": "zh",
+   "type": "literal",
+   "value": "新北產業園區站"
+  }
+ },
+ {
+  "item": {
+   "type": "uri",
+   "value": "http://www.wikidata.org/entity/Q11081455"
+  },
+  "coord": {
+   "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+   "type": "literal",
+   "value": "Point(121.492 25.0551)"
+  },
+  "top": {
+   "type": "uri",
+   "value": "http://www.wikidata.org/entity/Q3914"
+  },
+  "inception": {
+   "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+   "type": "literal",
+   "value": "1962-08-01T00:00:00Z"
+  },
+  "zhwiki": {
+   "type": "uri",
+   "value": "https://zh.wikipedia.org/wiki/%E6%96%B0%E5%8C%97%E5%B8%82%E7%AB%8B%E4%B8%89%E9%87%8D%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+  },
+  "zh": {
+   "type": "literal",
+   "value": "台北测试馆"
+  }
+ }
+]

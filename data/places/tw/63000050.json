@@ -1,0 +1,1020 @@
+{
+  "towncode": "63000050",
+  "county": "臺北市",
+  "town": "中正區",
+  "slug": "taipei-zhongzheng",
+  "items": [
+    {
+      "id": "tpark-374",
+      "name": "二二八和平公園",
+      "category": "park",
+      "latlng": [
+        25.042286,
+        121.514297
+      ],
+      "start": 1899,
+      "end": null,
+      "desc": "二二八和平公園面積7.618公頃，位於本市中心區，東臨公園路，西靠懷寧街，南頻凱達格蘭大道，北向襄陽路，交通便捷。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "二二八和平公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q700588",
+      "name": "臺北車站",
+      "category": "station",
+      "latlng": [
+        25.047778,
+        121.517222
+      ],
+      "start": 1901,
+      "end": null,
+      "desc": "第一代臺北車站約 1891 年啟用於大稻埕；1901 年縱貫線改線，車站移至現址。現今站體於 1989 年鐵路地下化後啟用，之後捷運、高鐵、機場捷運陸續進駐。",
+      "sources": [
+        {
+          "title": "Wikidata Q700588",
+          "url": "https://www.wikidata.org/wiki/Q700588"
+        },
+        {
+          "title": "Wikidata Q102008606",
+          "url": "https://www.wikidata.org/wiki/Q102008606"
+        },
+        {
+          "title": "Wikidata Q18119044",
+          "url": "https://www.wikidata.org/wiki/Q18119044"
+        },
+        {
+          "title": "維基百科〈臺北車站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E8%BB%8A%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "臺北車站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "明治34年（1901年）8月25日，縱貫線改線開通及淡水線通車，作為改線後縱貫線車站以及淡水線起點的台北車站移轉到現址營運"
+      }
+    },
+    {
+      "id": "wd-q15924611",
+      "name": "臺北市中正區東門國民小學",
+      "category": "school",
+      "latlng": [
+        25.038253,
+        121.520438
+      ],
+      "start": 1905,
+      "end": null,
+      "desc": "前身為 1897 年成立、專收日籍兒童的國語學校第四附屬學校，1905 年遷至現址，日治時期稱旭小學校，戰後改為東門國民學校。",
+      "sources": [
+        {
+          "title": "Wikidata Q15924611",
+          "url": "https://www.wikidata.org/wiki/Q15924611"
+        },
+        {
+          "title": "維基百科〈臺北市中正區東門國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E4%B8%AD%E6%AD%A3%E5%8D%80%E6%9D%B1%E9%96%80%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市中正區東門國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1901年4月，改名為「臺北廳臺北第二尋常高等小學校」，校長平井又八，1905年8月遷至現址。"
+      }
+    },
+    {
+      "id": "wd-q697974",
+      "name": "臺北市立建國高級中學",
+      "category": "school",
+      "latlng": [
+        25.0309,
+        121.512
+      ],
+      "start": 1909,
+      "end": null,
+      "desc": "臺灣最早的中學之一，1898 年設於今中山堂附近。1908 年覓得南海路現址，次年遷入近藤十郎設計的紅樓新校舍，日治時期稱臺北一中，戰後改名建國中學。",
+      "sources": [
+        {
+          "title": "Wikidata Q697974",
+          "url": "https://www.wikidata.org/wiki/Q697974"
+        },
+        {
+          "title": "維基百科〈臺北市立建國高級中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%BB%BA%E5%9C%8B%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立建國高級中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1908年於臺北市鼓亭龍口町一丁目尋得校地，即今臺北市南海路56號現址，次年遷入由臺灣總督府土木局營繕課近藤十郎所設計的新校舍。"
+      }
+    },
+    {
+      "id": "wd-q15940800",
+      "name": "臺北市立螢橋國民中學",
+      "category": "school",
+      "latlng": [
+        25.019561,
+        121.526228
+      ],
+      "start": 1968,
+      "end": null,
+      "desc": "1968 年配合九年國民義務教育新設的國中，校舍於同年完工並開始招生。",
+      "sources": [
+        {
+          "title": "Wikidata Q15940800",
+          "url": "https://www.wikidata.org/wiki/Q15940800"
+        },
+        {
+          "title": "維基百科〈臺北市立螢橋國民中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E8%9E%A2%E6%A9%8B%E5%9C%8B%E6%B0%91%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立螢橋國民中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "學校於1968年台灣實施九年國民義務教育時配合政策所設立，校舍於同年完工並開始招生。"
+      }
+    },
+    {
+      "id": "tpark-595",
+      "name": "忠孝公園",
+      "category": "park",
+      "latlng": [
+        25.04183,
+        121.532021
+      ],
+      "start": 1973,
+      "end": null,
+      "desc": "忠孝公園位於捷運忠孝新生站2號出口，對面為台北科技大學，附近尚有知名的光華商圈，園內設有體健設施、兒童遊樂設施及寬敞之休憩廣場，初春時，小巧袖珍的欖仁花排成一線玲瓏可愛，杜鵑花、矮仙丹、松葉牡丹等花影先後綻放，夏季麵包樹結實累累生意盎然，周遭高聳之椰林一年四季直立在陽光下就像衛兵們看守著這座後花園，充分展現公園之活力，提供過客及旅人們流連忘返之休憩空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "忠孝公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-243",
+      "name": "連雲公園",
+      "category": "park",
+      "latlng": [
+        25.03521,
+        121.531822
+      ],
+      "start": 1979,
+      "end": null,
+      "desc": "連雲公園位於新生南路1段巷內，地處幽靜、樹蔭茂密，社區老人喜聚集於此閒話家常，園內設置一少見的純木造古風涼亭，白色軟石圍繞著蜿蜒曲線型的石板步道如小橋流水般營造出古色古香之清冽感受，公園內亦提供寬敞廣場、遊樂設施、溜冰場及運動設施等配合著具有歷史意義的爬架、水泥滑梯及彩色花架，充分滿足民眾各類休憩需求更鮮活了公園整體意象。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "連雲公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-764",
+      "name": "齊東公園",
+      "category": "park",
+      "latlng": [
+        25.04175,
+        121.528297
+      ],
+      "start": 1979,
+      "end": null,
+      "desc": "齊東公園位處齊東老街上，係臺北市留存至今少見的260年以上的老街，周邊日式房屋群聚，極具保存價值，齊東公園為整體社區中心點，對於地方發展具有重大意義，公園內現有木作小型聚會廣場、滑梯、健康步道、籃球架、爬架等設施，可供民眾休憩遊樂。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "齊東公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-8",
+      "name": "南昌公園",
+      "category": "park",
+      "latlng": [
+        25.026819,
+        121.520203
+      ],
+      "start": 1979,
+      "end": null,
+      "desc": "南昌公園為本區最大之鄰里公園，位於重要幹道交叉口，公園旁有南福宮，香火鼎盛是本地的信仰中心南昌公園植栽生態十分豐富，除本市常見之榕樹外，還有另有黑板樹、水黃皮、楓香、山蘇、斑葉鵝掌藤、玉龍草、火鶴花、綠葉粉黛、黃蝦花、麒麟花、松葉牡丹、金露花、四季草花等等，配合種植多種植被，多樣的變化吸引各種鳥類群聚，增添公園視覺饗宴，更創造有益健康之清幽環境。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "南昌公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q198642",
+      "name": "中央銀行",
+      "category": "government",
+      "latlng": [
+        25.03413,
+        121.516847
+      ],
+      "start": 1979,
+      "end": null,
+      "desc": "中央銀行 1949 年隨政府遷臺，1979 年遷入羅斯福路上由楊卓成、陳其寬設計的第一大樓；1984 年緊鄰的愛國西路第二大樓完工啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q198642",
+          "url": "https://www.wikidata.org/wiki/Q198642"
+        },
+        {
+          "title": "維基百科〈中華民國中央銀行〉",
+          "url": "https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E4%B8%AD%E5%A4%AE%E9%8A%80%E8%A1%8C"
+        }
+      ],
+      "photo": {
+        "query": "中央銀行"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1979年7月4日，中央銀行遷入在羅斯福路上由楊卓成與陳其寬共同設計的中央銀行第一大樓"
+      }
+    },
+    {
+      "id": "tpark-470",
+      "name": "中正138號綠地",
+      "category": "park",
+      "latlng": [
+        25.03784,
+        121.514511
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "中正138號綠地，1981 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "中正138號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-613",
+      "name": "黎明公園",
+      "category": "park",
+      "latlng": [
+        25.04414,
+        121.515556
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "此公園為本區最小之鄰里公園，隱身於臺北車站補習街的巷弄內，附近多為商業大樓辦公室，是屬人口活動高密集度之區域，提供附近補習的莘莘學子休息的好去處，園內有寬敞空間，公園植栽以清新簡潔之水黃皮、木棉樹為主，並配合里民需求於周遭種植桂花及四季草花，提供周邊民眾、上班族及莘莘學子在繁忙及緊迫的都市中，一個抒發壓力緩和情緒的舒適綠蔭空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "黎明公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-74",
+      "name": "牯嶺公園",
+      "category": "park",
+      "latlng": [
+        25.023121,
+        121.518677
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "園內許多動物銅雕、石雕及景觀雕塑，為本園一大特色；每年12月至3月為櫻花盛開季節，每屆冬末春初，櫻花盛開之際，各地人潮不約而同大量湧入，櫻花盛開時，里內即舉辦「賞櫻花‧海鮮大餐」活動，邀集社區民眾一同賞櫻，美不勝收。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "牯嶺公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q15914171",
+      "name": "臺北市立中正國民中學",
+      "category": "school",
+      "latlng": [
+        25.032532,
+        121.521948
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "1979 年於金華國中內設籌備處，徵收校地、辦理拆遷後建校，1983 年正式成立。",
+      "sources": [
+        {
+          "title": "Wikidata Q15914171",
+          "url": "https://www.wikidata.org/wiki/Q15914171"
+        },
+        {
+          "title": "維基百科〈臺北市立中正國民中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E4%B8%AD%E6%AD%A3%E5%9C%8B%E6%B0%91%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立中正國民中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1983年8月，正式成立「台北市立中正國民中學」。"
+      }
+    },
+    {
+      "id": "tpark-358",
+      "name": "信愛公園",
+      "category": "park",
+      "latlng": [
+        25.03491,
+        121.528763
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "信愛公園，1984 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "信愛公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-384",
+      "name": "永昌公園",
+      "category": "park",
+      "latlng": [
+        25.02623,
+        121.509956
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "本園周遭皆為住宅區，居民型態多元且人文氣息濃厚，設有涼亭、兒童遊憩區、健身廣場及花架休憩區等多項設施，並搭配木製花廊平台，提供周遭民眾休憩及社交集會場所，榕樹、黑板樹、猢猻木及金露花圍繞在外串起公園半壁林蔭，各式開花植物巧妙地搭配光與影配置成景，架構出柔合多層次的混種植被造景。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "永昌公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-420",
+      "name": "文光公園",
+      "category": "park",
+      "latlng": [
+        25.03904,
+        121.530853
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "文光公園為一社區型公園，設有兒童遊憩區、健身區等多項設施，體貼各年齡層的需求，除了提供長者休憩外，亦為鄰近孩童歡樂之遊樂場，園內植栽濃密且富多樣性，包括榕樹、莿桐樹圍繞，搭配各類觀葉及耐蔭植栽設計，其優質綠色活動空間，搭配公園主體景觀點綴區塊花卉，豐富地被色彩，提供植栽型態及生態觀察之絕佳環境。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文光公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-37",
+      "name": "文盛公園",
+      "category": "park",
+      "latlng": [
+        25.016171,
+        121.53212
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "文盛公園鄰近臺灣大學，位於熱鬧的公館商圈內，過往人潮絡繹不絕，本公園特色為小而精美且兼顧多元空間使用彈性，提供逛街逛累的民眾歇腳的好去處，園區內開闊的視野使公園一覽無遺，阿勃勒一串串黃金雨般的花錯落有緻，隨風飄逸婀娜多姿，蓮霧及芒果於產季散發淡淡果香及結實累累景象配合周邊色彩斑斕的植栽配置，增添視覺及嗅覺的饗宴。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文盛公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-645",
+      "name": "逸仙公園",
+      "category": "park",
+      "latlng": [
+        25.047701,
+        121.520027
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "「逸仙公園」位於臺北市中正區中山北路一段46號，面積約3025平方公尺，瀕臨台北車站，公園內有「國父史蹟館」乙座，館內陳設仿造當年國父居住時的模樣，除了以圖畫及照片介紹孫中山先生在台灣的活動，國父當年用過的茶几、手稿、史料與照片等文物，其中甚至遠從舊金山蒐集國父使用的辦公桌椅；並種植了松、竹、梅，池塘、迴廊、曲橋以及草皮，櫻花以及杜鵑花也競相開放，富有十足的中國庭園風味。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q15912059",
+          "url": "https://www.wikidata.org/wiki/Q15912059"
+        }
+      ],
+      "photo": {
+        "query": "逸仙公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-115",
+      "name": "永福公園",
+      "category": "park",
+      "latlng": [
+        25.009801,
+        121.532098
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "「永福公園」原係軍方列管眷舍及市定古蹟寶藏巖，於88年3月9日臺北市政府市政會議通過成立中正297號公園安置拆遷專案小組，並於90年12年19日起拆除臨水區違建，於95年6月26日公告「變更中正區中正297號公園用地部分（寶藏巖寺古蹟周邊地區）為保存區主要計畫案」，本公園部分變更為「保存區」及「歷史聚落風貌特定專用區」。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "永福公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q698013",
+      "name": "捷運中正紀念堂站",
+      "category": "station",
+      "latlng": [
+        25.034303,
+        121.516997
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "1998 年 12 月淡水線側月台隨淡水線、新店線與中和線通車啟用；2000 年小南門線通車後新店線側月台加入營運。",
+      "sources": [
+        {
+          "title": "Wikidata Q698013",
+          "url": "https://www.wikidata.org/wiki/Q698013"
+        },
+        {
+          "title": "維基百科〈中正紀念堂站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E4%B8%AD%E6%AD%A3%E7%B4%80%E5%BF%B5%E5%A0%82%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運中正紀念堂站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1998年12月24日：淡水線側（一月台、三月台）月台隨著淡水線「台北車站－中正紀念堂」段、新店線「中正紀念堂－古亭」段與中和線正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698114",
+      "name": "捷運台大醫院站",
+      "category": "station",
+      "latlng": [
+        25.042142,
+        121.516367
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "1998 年 12 月隨捷運淡水線臺北車站至中正紀念堂段、新店線與中和線通車啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q698114",
+          "url": "https://www.wikidata.org/wiki/Q698114"
+        },
+        {
+          "title": "維基百科〈台大醫院站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8F%B0%E5%A4%A7%E9%86%AB%E9%99%A2%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運台大醫院站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1998年12月24日：隨著淡水線「台北車站← →中正紀念堂」段、新店線「中正紀念堂← →古亭」段與中和線正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698599",
+      "name": "捷運古亭站",
+      "category": "station",
+      "latlng": [
+        25.027108,
+        121.522217
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "此地曾有臺鐵新店線古亭站，1965 年隨新店線停駛廢止。捷運古亭站於 1998 年 12 月隨中和線通車啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q698599",
+          "url": "https://www.wikidata.org/wiki/Q698599"
+        },
+        {
+          "title": "維基百科〈古亭站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8F%A4%E4%BA%AD%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運古亭站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1998年12月24日：新店線月台隨捷運「台北車站－南勢角」段 正式通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-391",
+      "name": "交通4號廣場",
+      "category": "park",
+      "latlng": [
+        25.04738,
+        121.518806
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "交通4號廣場位於中正區黎明里市民大道旁、逸仙公園西側，於民國88年間開闢完成，廣場面積為4,825平方公尺，廣場緊鄰臺北車站重要交通樞紐，並串聯逸仙公園(國父史蹟館)，廣場內栽植數棵刺桐及鋪設草皮，為交通繁雜的都市叢林增添些許綠意。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "交通4號廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q698004",
+      "name": "捷運西門站",
+      "category": "station",
+      "latlng": [
+        25.042722,
+        121.508578
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "1999 年 12 月隨捷運南港線、板橋線通車啟用，2000 年小南門線通車後成為轉乘站。日治時期附近曾有新店線的新起町乘降場。",
+      "sources": [
+        {
+          "title": "Wikidata Q698004",
+          "url": "https://www.wikidata.org/wiki/Q698004"
+        },
+        {
+          "title": "維基百科〈西門站 (臺北市)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%A5%BF%E9%96%80%E7%AB%99%20(%E8%87%BA%E5%8C%97%E5%B8%82)"
+        }
+      ],
+      "photo": {
+        "query": "捷運西門站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1999年12月24日：板南線側（1號月台、3月台隨著南港線「市政府－西門」段以及板橋線「西門－龍山寺」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698356",
+      "name": "捷運善導寺站",
+      "category": "station",
+      "latlng": [
+        25.044717,
+        121.523653
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "1999 年 12 月隨捷運南港線市政府至西門段通車啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q698356",
+          "url": "https://www.wikidata.org/wiki/Q698356"
+        },
+        {
+          "title": "維基百科〈善導寺站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%96%84%E5%B0%8E%E5%AF%BA%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運善導寺站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1999年12月24日：隨著南港線「市政府－西門」段以及板橋線「西門－龍山寺」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q708397",
+      "name": "捷運公館站",
+      "category": "station",
+      "latlng": [
+        25.014772,
+        121.534254
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "1921 年臺鐵新店線曾在此設公館站，1965 年停駛廢止。捷運公館站於 1999 年 11 月隨新店線古亭至新店段通車啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q708397",
+          "url": "https://www.wikidata.org/wiki/Q708397"
+        },
+        {
+          "title": "維基百科〈公館站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%85%AC%E9%A4%A8%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運公館站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1999年11月11日：隨著捷運新店線「古亭－新店」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q708952",
+      "name": "捷運台電大樓站",
+      "category": "station",
+      "latlng": [
+        25.020522,
+        121.528325
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "1999 年 11 月隨捷運新店線古亭至新店段通車啟用，曾長期作為區間車端點站。",
+      "sources": [
+        {
+          "title": "Wikidata Q708952",
+          "url": "https://www.wikidata.org/wiki/Q708952"
+        },
+        {
+          "title": "維基百科〈台電大樓站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8F%B0%E9%9B%BB%E5%A4%A7%E6%A8%93%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運台電大樓站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1999年11月11日：隨著捷運新店線「古亭－新店」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-211",
+      "name": "太原廣場",
+      "category": "park",
+      "latlng": [
+        25.04748,
+        121.51664
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "太原廣場，2000 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "太原廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-793",
+      "name": "行旅廣場",
+      "category": "park",
+      "latlng": [
+        25.047798,
+        121.513204
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "行旅廣場，2000 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "行旅廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q698767",
+      "name": "捷運小南門站",
+      "category": "station",
+      "latlng": [
+        25.035637,
+        121.510787
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "2000 年 8 月隨捷運小南門線西門至中正紀念堂段通車啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q698767",
+          "url": "https://www.wikidata.org/wiki/Q698767"
+        },
+        {
+          "title": "維基百科〈小南門站 (臺北市)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%B0%8F%E5%8D%97%E9%96%80%E7%AB%99%20(%E8%87%BA%E5%8C%97%E5%B8%82)"
+        }
+      ],
+      "photo": {
+        "query": "捷運小南門站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2000年8月31日：隨著「西門－中正紀念堂」段（小南門線區間）正式通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-465",
+      "name": "中央藝文公園",
+      "category": "park",
+      "latlng": [
+        25.046272,
+        121.526856
+      ],
+      "start": 2005,
+      "end": null,
+      "desc": "「中央藝文公園」，當初係由行政院文化建設委員會，為與華山創意文化專用區整體景觀考量而規劃設計，達到串連中央車站至公園間綠帶整體一致景觀，於90年間由本府都市發展局代辦簡易綠美化工程，並於95年間開闢完成。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q10875113",
+          "url": "https://www.wikidata.org/wiki/Q10875113"
+        },
+        {
+          "title": "維基百科〈中央藝文公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%A4%AE%E8%97%9D%E6%96%87%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "中央藝文公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-338",
+      "name": "螢橋公園",
+      "category": "park",
+      "latlng": [
+        25.02672,
+        121.51725
+      ],
+      "start": 2008,
+      "end": null,
+      "desc": "螢橋公園位於舊螢橋的西北方，原為中油加油站用地，97年間經臺灣中油公司捐贈暨規劃闢建，於民國98年4月完成後，以「螢橋」為此公園之名。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "螢橋公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-795",
+      "name": "北門廣場",
+      "category": "park",
+      "latlng": [
+        25.048002,
+        121.511683
+      ],
+      "start": 2017,
+      "end": null,
+      "desc": "北門廣場，2017 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北門廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-882",
+      "name": "水源町公園",
+      "category": "park",
+      "latlng": [
+        25.01187,
+        121.534604
+      ],
+      "start": 2021,
+      "end": null,
+      "desc": "108年啟動公館商圈附近的小觀音山木棧道規劃設計工作，步道起點便為北側之水源町公園，木棧道一路串聯公館商圈、寶藏巖藝術村及自來水園區等景點，交織於整體地形變化之中，沿途提供了景觀及自然生態的豐富性，也成為都市中的一處世外桃源。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "水源町公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-1000",
+      "name": "中正403號公園",
+      "category": "park",
+      "latlng": [
+        25.02559,
+        121.52049
+      ],
+      "start": 2022,
+      "end": null,
+      "desc": "中正403號公園，2022 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "中正403號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    }
+  ]
+}

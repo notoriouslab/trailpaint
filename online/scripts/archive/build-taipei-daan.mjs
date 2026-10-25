@@ -11,12 +11,13 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { spawn } from 'node:child_process';
 import { join, dirname } from 'node:path';
+import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..', '..', '..');
 const STORY_DIR = join(ROOT, 'stories', 'taipei-daan');
-const TMP = '/tmp/tp-taipei-daan';
+const TMP = join(tmpdir(), 'tp-taipei-daan');
 const UA = 'TrailPaint-example-builder/1.0 (https://trailpaint.org; https://github.com/notoriouslab/trailpaint) build';
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -39,8 +40,41 @@ const SEGMENT = {
 // Content lives in the place pool (data/places/tw/<TOWNCODE>.json) so other
 // districts reuse the same pipeline; this script only turns it into a story.
 const POOL = JSON.parse(readFileSync(join(ROOT, 'data', 'places', 'tw', '63000030.json'), 'utf8'));
-const SPOTS = POOL.items
-  .filter((it) => it.verified)
+/**
+ * Pool items shown in the story (020 T8). The pool keeps growing from the
+ * places pipeline; a new item enters the story only when its id is added here.
+ */
+const STORY_IDS = new Set([
+  'taihoku-prison',
+  'taihoku-tech-red-house',
+  'second-normal-school',
+  'taihoku-imperial-university',
+  'taihoku-high-school-auditorium',
+  'nishiki-elementary',
+  'daan-public-school',
+  'third-middle-school',
+  'jinhua-junior-high',
+  'renai-elementary',
+  'daan-junior-high',
+  'ntust',
+  'cathay-general-hospital',
+  'second-funeral-parlor',
+  'jianguo-elevated-road',
+  'taipei-public-library-main',
+  'daan-forest-park',
+  'mrt-daan',
+  'mrt-zhongxiao-dunhua',
+  'ntu-sports-center',
+  'daan-sports-center',
+  'mrt-daan-park',
+  'mrt-xinyi-anhe',
+  'heping-basketball-gym',
+]);
+const missing = [...STORY_IDS].filter((id) => !POOL.items.some((it) => it.id === id));
+if (missing.length) throw new Error(`STORY_IDS not in pool: ${missing.join(', ')}`);
+// List order breaks same-year ties; the pool file's own order changes as it grows.
+const SPOTS = [...STORY_IDS]
+  .map((id) => POOL.items.find((it) => it.id === id))
   .sort((a, b) => a.start - b.start) // Player plays in order → time moves forward
   .map((it) => ({
     title: it.name,

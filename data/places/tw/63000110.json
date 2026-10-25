@@ -1,0 +1,2978 @@
+{
+  "towncode": "63000110",
+  "county": "臺北市",
+  "town": "士林區",
+  "slug": "taipei-shilin",
+  "items": [
+    {
+      "id": "wd-q15913710",
+      "name": "臺北市士林區士林國民小學",
+      "category": "school",
+      "latlng": [
+        25.093339,
+        121.524884
+      ],
+      "start": 1904,
+      "end": null,
+      "desc": "1895 年創校，1904 年遷校至現址的新落成校舍；校內另有 1916 年興建的磚造校舍，是唯一留存的日治時代建築。",
+      "sources": [
+        {
+          "title": "Wikidata Q15913710",
+          "url": "https://www.wikidata.org/wiki/Q15913710"
+        },
+        {
+          "title": "維基百科〈臺北市士林區士林國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%A3%AB%E6%9E%97%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市士林區士林國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1904年11月3日，遷校至現址的新落成校舍。"
+      }
+    },
+    {
+      "id": "wd-q540668",
+      "name": "國立故宮博物院",
+      "category": "museum",
+      "latlng": [
+        25.102222,
+        121.548611
+      ],
+      "start": 1965,
+      "end": null,
+      "desc": "前身可溯至北京紫禁城的故宮博物院，輾轉遷臺後由北平故宮與中央博物院籌備處合併，1965 年 11 月 12 日在臺北現址復院開幕。",
+      "sources": [
+        {
+          "title": "Wikidata Q540668",
+          "url": "https://www.wikidata.org/wiki/Q540668"
+        },
+        {
+          "title": "維基百科〈國立故宮博物院〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E6%95%85%E5%AE%AE%E5%8D%9A%E7%89%A9%E9%99%A2"
+        }
+      ],
+      "photo": {
+        "query": "國立故宮博物院"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "隨後第二次國共內戰衝突導致時局再陷動盪，包括國立北平故宮博物院在內的6個機構於是在1948年11月10日決定遷往臺灣，幾經改組易名，最終由國立北平故宮博物院和國立中央博物院籌備處合併為國立故宮博物院，1965年11月12日在臺北現址復院開幕。"
+      }
+    },
+    {
+      "id": "wd-q140418072",
+      "name": "圓山保齡球館",
+      "category": "sports",
+      "latlng": [
+        25.082299,
+        121.525775
+      ],
+      "start": 1966,
+      "end": 2026,
+      "desc": "又名圓山育樂中心，位於中山北路，建物為余振中作品，1966 年開幕，2026 年歇業。",
+      "sources": [
+        {
+          "title": "Wikidata Q140418072",
+          "url": "https://www.wikidata.org/wiki/Q140418072"
+        },
+        {
+          "title": "維基百科〈圓山保齡球館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%93%E5%B1%B1%E4%BF%9D%E9%BD%A1%E7%90%83%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "圓山保齡球館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "圓山保齡球館，又名圓山育樂中心，位於臺灣臺北市士林區中山北路，建物為余振中作品，1966年開幕，2026年歇業。"
+      }
+    },
+    {
+      "id": "tpark-219",
+      "name": "士林136號綠地",
+      "category": "park",
+      "latlng": [
+        25.08691,
+        121.51091
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "士林136號綠地位於百齡橋西側引道，佔地不大，臨近葫東里里民活動中心，為周邊民眾休憩活動的處所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林136號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-273",
+      "name": "士林75號綠地",
+      "category": "park",
+      "latlng": [
+        25.123203,
+        121.529441
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "天玉街的圓環裡有3棵老榕樹，為文化局例保護的老樹，綠蔭參天，綠地裡設了一些座椅，幾乎不論早晚，都有人在樹下談天說地，為地方人士休憩聊天的好處所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林75號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-277",
+      "name": "士林76號綠地",
+      "category": "park",
+      "latlng": [
+        25.124725,
+        121.532776
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "士林76號綠地位處於交通繁忙的中山北路七段天母派出所前圓環上，綠地內並未設置園路及座椅等休憩空間，景觀美化功能大於實際休憩功能。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林76號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-328",
+      "name": "士林68號綠地",
+      "category": "park",
+      "latlng": [
+        25.09907,
+        121.53643
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "士林68號綠地位於福林路、至善路交叉口，為一槽化島型態之綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林68號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-469",
+      "name": "雙溪公園",
+      "category": "park",
+      "latlng": [
+        25.09804,
+        121.535919
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "雙溪公園因外雙溪與內雙溪從北向南延流，並在士林匯流而得名，地處於福林路與至善路的交叉口，是士林往陽明山、故宮及內、外雙溪的必經之地，民國63年闢建完成，開放區域約2公頃，是一座自然山水景觀的園林。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "雙溪公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-586",
+      "name": "天母公園",
+      "category": "park",
+      "latlng": [
+        25.125909,
+        121.530518
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "本公園面積57,815㎡、緊鄰磺溪，屬一自然型態之公園，於民國60年間闢建，園中樹木皆已成林、高聳成蔭，是士林、天母地區民眾重要的綠地及休憩場所。一進入公園即可見數株橡膠老樹，四周充滿南洋風情；園內巨大的榕樹更襯出ㄧ片綠意盎然。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q10939821",
+          "url": "https://www.wikidata.org/wiki/Q10939821"
+        },
+        {
+          "title": "維基百科〈天母公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A4%A9%E6%AF%8D%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "天母公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-63",
+      "name": "士林156號綠地",
+      "category": "park",
+      "latlng": [
+        25.103392,
+        121.554827
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "士林151綠地位於至善國中外，延著大門兩側，綠地內僅種植榕樹及木棉。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林156號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-639",
+      "name": "士林4號綠地(現況因捷運施工故不開放)",
+      "category": "park",
+      "latlng": [
+        25.136881,
+        121.546272
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "士林四號綠地位於凱旋路與格致路交叉口，為槽化島型式之綠地，綠地佔地小，無設置休憩設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林4號綠地(現況因捷運施工故不開放)"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-780",
+      "name": "士林151號綠地",
+      "category": "park",
+      "latlng": [
+        25.09576,
+        121.548439
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "士林151綠地位於自強隧道口，多種植灌木及草花妝點四季，由於位於隧道口車流繁忙且並未設置園路，並不建議於綠地上逗留。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林151號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q15929378",
+      "name": "臺北市士林區雨農國民小學",
+      "category": "school",
+      "latlng": [
+        25.105004,
+        121.530111
+      ],
+      "start": 1977,
+      "end": null,
+      "desc": "位於士林區的國民小學，1977 年 10 月校舍竣工，1998 年 9 月成立附設幼兒園。",
+      "sources": [
+        {
+          "title": "Wikidata Q15929378",
+          "url": "https://www.wikidata.org/wiki/Q15929378"
+        },
+        {
+          "title": "維基百科〈臺北市士林區雨農國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E9%9B%A8%E8%BE%B2%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市士林區雨農國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1977年10月校舍竣工。"
+      }
+    },
+    {
+      "id": "tpark-333",
+      "name": "華聲公園",
+      "category": "park",
+      "latlng": [
+        25.09598,
+        121.522491
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "華聲公園內人聲、鳥叫與蟲鳴無刻不在空間內對話，老榕樹、大廣場及體健設施遊戲場與民眾互動交流，鄰近圖書館士林分館、市場等帶來絡繹人潮。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574645",
+          "url": "https://www.wikidata.org/wiki/Q133574645"
+        }
+      ],
+      "photo": {
+        "query": "華聲公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-596",
+      "name": "花卉試驗中心",
+      "category": "park",
+      "latlng": [
+        25.135015,
+        121.544411
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "花卉試驗中心自民國37年間，由多位學有專精之學者積極規劃及努力墾荒下，至民國38年草創成立「陽明山柑橘示範場」。復以致力於杜鵑、茶花等花木研究為主，果樹為副之試驗研究與培育工作，於民國54年間更名為「陽明山工作站」，仍隸屬於臺灣省農業試驗所士林園藝分所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "花卉試驗中心"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-526",
+      "name": "海光公園",
+      "category": "park",
+      "latlng": [
+        25.08185,
+        121.507881
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "葫蘆國小前的海光公園，園內除了有涼亭、籃球場、兒童遊戲區、地下停車場等設施，滿足不同年齡層的生活需求外，還座落著葫蘆堵居民的信仰中心海光宮。是相傳有一農民在基隆河與淡水河交界處番仔溝，發現觀音佛祖神尊，在村民們建造小型的磚石廟宇，將觀音佛祖神尊奉祀於內，取名為「海光宮」。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574643",
+          "url": "https://www.wikidata.org/wiki/Q133574643"
+        }
+      ],
+      "photo": {
+        "query": "海光公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-385",
+      "name": "士林117號綠地",
+      "category": "park",
+      "latlng": [
+        25.097031,
+        121.513901
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "士林117號綠地位於承德路五段，緊鄰兒童新樂園園區，綠地內結合單車道，可連結至社子島及洲美等。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林117號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-453",
+      "name": "士林121號綠地",
+      "category": "park",
+      "latlng": [
+        25.09227,
+        121.515808
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "士林121號綠地位於承德路五段及陽明高中及北士商間，綠地旁有人行步道，可散步於大榕樹的綠蔭之下。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林121號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-655",
+      "name": "士林89號綠地",
+      "category": "park",
+      "latlng": [
+        25.10577,
+        121.528931
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "士林89號綠地位於忠誠路與德行東路104巷口，佔地440m2，設有公園椅、溜滑梯等遊具供民眾休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林89號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-712",
+      "name": "士林179號綠地",
+      "category": "park",
+      "latlng": [
+        25.10433,
+        121.529427
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "芝山公園石頭公廟綠地，臨近芝山岩遺址，芝山岩遺址可說是台灣考古史上最早被發現的史前文化遺址。雖名為綠地，但融合芝山岩後石頭公廟綠地就像是個小生態公園了…其結合了生態、休憩、信仰的功能早已成了周邊居民生活中不可或缺的一部分了。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林179號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-722",
+      "name": "士林116號綠地",
+      "category": "park",
+      "latlng": [
+        25.09646,
+        121.513603
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "士林116號綠地位於承德路五段，為人行道上之帶狀綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林116號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-783",
+      "name": "福中公園",
+      "category": "park",
+      "latlng": [
+        25.087919,
+        121.518837
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "福中公園從人文素材出發，透過步道規劃導覽，娓娓道來福港地區的歷史人文。相映著台灣欒樹黃紅簇擁以及環狀花木林蔭，好不熱鬧。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574649",
+          "url": "https://www.wikidata.org/wiki/Q133574649"
+        }
+      ],
+      "photo": {
+        "query": "福中公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-196",
+      "name": "聖山綠地",
+      "category": "park",
+      "latlng": [
+        25.106831,
+        121.532349
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "聖山綠地(士林95號)位於忠義街，德行東路190巷交叉口，設有體建設施及公園椅供民眾休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "聖山綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-258",
+      "name": "士林120號綠地",
+      "category": "park",
+      "latlng": [
+        25.09306,
+        121.520447
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "士林120綠地位於中正路與基河路口，約為一長方形綠地，綠地內種植多種喬木如榕樹、猢猻木、黑板樹、台灣欒樹、寒櫻等，每年春季位於綠地邊緣的寒櫻花季於路口特別醒目，總是吸引路人駐足拍照留念。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林120號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-503",
+      "name": "德仁公園",
+      "category": "park",
+      "latlng": [
+        25.102659,
+        121.521461
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "德仁公園位於捷運芝山站旁，面積迷你，但茂密的大榕樹提供周圍民眾輕鬆自在的乘涼遮蔭處，兒童遊樂區則是鄰近孩童互動玩耍的休閒場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574655",
+          "url": "https://www.wikidata.org/wiki/Q133574655"
+        }
+      ],
+      "photo": {
+        "query": "德仁公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-734",
+      "name": "蘭雅1號公園",
+      "category": "park",
+      "latlng": [
+        25.109932,
+        121.529112
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "忠誠路二段上，兩塊方整的綠地組成了面積1.1公頃的蘭雅公園，園內設施除有兒童遊戲區、溜冰場、彩繪涼亭、健康步道，提供民眾完善的休憩空間外，尤其地下停車場更增加附近上班族及居民的便利性。園內共植3百餘株喬木，列有33株為本市受保護樹木，綠蔭濃密，保護樹木不遺餘力。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "蘭雅1號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-840",
+      "name": "蘭雅公園",
+      "category": "park",
+      "latlng": [
+        25.109744,
+        121.529919
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "忠誠路二段上，兩塊方整的綠地組成了面積1.1公頃的蘭雅公園，園內設施除有兒童遊戲區、溜冰場、彩繪涼亭、健康步道，提供民眾完善的休憩空間外，尤其地下停車場更增加附近上班族及居民的便利性。園內共植3百餘株喬木，列有33株為本市受保護樹木，綠蔭濃密，保護樹木不遺餘力。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133648816",
+          "url": "https://www.wikidata.org/wiki/Q133648816"
+        }
+      ],
+      "photo": {
+        "query": "蘭雅公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-191",
+      "name": "至善公園",
+      "category": "park",
+      "latlng": [
+        25.09819,
+        121.538292
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "至善公園鄰處外雙溪畔邊，與雙溪公園相望，為進入國立故宮博物院及陽明山國家公園的重要門戶，更是連接士林雙溪旅遊線的重要樞鈕，至善公園占地24,786平方公尺，整個園區非常開闊，地形起伏有致，頗有層次之美。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574588",
+          "url": "https://www.wikidata.org/wiki/Q133574588"
+        }
+      ],
+      "photo": {
+        "query": "至善公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-39",
+      "name": "忠誠公園",
+      "category": "park",
+      "latlng": [
+        25.10342,
+        121.525742
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "忠誠公園位於士林區中山北路六段與忠誠路一段交叉口，座落在各大辦公及住宅大樓之間，面積1萬餘平方公尺，佔地雖然不大，但在車水馬龍的路旁，提供了豐富的綠意及遊憩空間，大大減低因人車壅塞所引發的不適感。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574597",
+          "url": "https://www.wikidata.org/wiki/Q133574597"
+        }
+      ],
+      "photo": {
+        "query": "忠誠公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-439",
+      "name": "天和公園",
+      "category": "park",
+      "latlng": [
+        25.11982,
+        121.533989
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "天和公園有別與其他公園綠地之獨特處，是在園內有著歷經300餘年，用以澆灌士林地區農田的古芝蘭八景之一「番井」。番井水質清可見底，且水量奇大，預估1天可湧出15到18噸驚人水量，足可列名水之選。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574583",
+          "url": "https://www.wikidata.org/wiki/Q133574583"
+        }
+      ],
+      "photo": {
+        "query": "天和公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-591",
+      "name": "天母廣場",
+      "category": "park",
+      "latlng": [
+        25.11875,
+        121.530083
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "天母廣場(士林1號廣場)分為東西兩側，位於中山北路與天母東西路交接處，靠近美國學校和日僑學校。目前定期舉辦舉市集，每到週末假日，人潮絡驛不絕。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "天母廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-626",
+      "name": "至誠公園",
+      "category": "park",
+      "latlng": [
+        25.101089,
+        121.536682
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "至誠公園位於士林區的精華樞紐，帶狀園區鄰近外雙溪，西側即可上陽明山。極具特色的落羽松林間步道與蟲鳴鳥叫相互呼應，是生態教育的最佳場域。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574589",
+          "url": "https://www.wikidata.org/wiki/Q133574589"
+        }
+      ],
+      "photo": {
+        "query": "至誠公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-737",
+      "name": "福順公園",
+      "category": "park",
+      "latlng": [
+        25.08235,
+        121.511131
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "福順公園鄰接葫蘆堵圖書館，空間設計簡潔多元。優美的印度紫檀以及馬賽克拼貼的座位，清風徐來，陽光樹蔭交織，讓民眾漫步更顯休閒快意。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574653",
+          "url": "https://www.wikidata.org/wiki/Q133574653"
+        }
+      ],
+      "photo": {
+        "query": "福順公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-771",
+      "name": "士林118號綠地",
+      "category": "park",
+      "latlng": [
+        25.09318,
+        121.519463
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "士林118號綠地位於中正路士林行政中心前兩側之帶狀綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林118號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-903",
+      "name": "蘭興公園",
+      "category": "park",
+      "latlng": [
+        25.111029,
+        121.525193
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "面積約1.3公頃的蘭興公園，自克強路10巷往裡面走，就可以看見供民眾運動的兩座網球場，鄰居、朋友約好一起去打球，是最康健的聯誼活動。而且左右傍著磺溪和住宅社區，蜿蜒至中山北路六段，與蘭興一、二號綠地串成一條有氧綠帶。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574659",
+          "url": "https://www.wikidata.org/wiki/Q133574659"
+        }
+      ],
+      "photo": {
+        "query": "蘭興公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-419",
+      "name": "磺溪公園",
+      "category": "park",
+      "latlng": [
+        25.104879,
+        121.52063
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "磺溪公園沿著堤岸延伸，園內活動廣場、小型表演台提供民眾展現的空間；高聳的樹木、繽紛的花草帶給磺溪居民清涼的午後時光。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q49503664",
+          "url": "https://www.wikidata.org/wiki/Q49503664"
+        }
+      ],
+      "photo": {
+        "query": "磺溪公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-496",
+      "name": "新佳公園",
+      "category": "park",
+      "latlng": [
+        25.098631,
+        121.519493
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "新佳公園位於住宅鄰里間，榕樹廣場讓民眾可在其中乘涼聊天，園區設有體健設施及兒童遊具，襯以時花小草，提供老幼互動連絡情感的好地方。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574647",
+          "url": "https://www.wikidata.org/wiki/Q133574647"
+        }
+      ],
+      "photo": {
+        "query": "新佳公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-761",
+      "name": "基河公園",
+      "category": "park",
+      "latlng": [
+        25.08004,
+        121.524017
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "基河公園擁有星光浪漫的景觀，位於劍潭捷運站附近，半圓形廣場，加上以燈塔、河舟為主要意象的裝置，是情侶談心、民眾散步乘涼的最佳首選。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574644",
+          "url": "https://www.wikidata.org/wiki/Q133574644"
+        }
+      ],
+      "photo": {
+        "query": "基河公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-221",
+      "name": "福林公園",
+      "category": "park",
+      "latlng": [
+        25.0958,
+        121.529472
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "福林公園位於士林區中山北路與福林路交叉口，於民國80年闢建完成，面積約2.6公頃，呈三角形形狀，為一開放式綜合公園。園中最大特色，係邀請國立藝術學院美術系黎主任志文先生以大自然的景象為主體，設計創作之優雅藝術雕塑。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574651",
+          "url": "https://www.wikidata.org/wiki/Q133574651"
+        }
+      ],
+      "photo": {
+        "query": "福林公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-416",
+      "name": "社子公園",
+      "category": "park",
+      "latlng": [
+        25.09037,
+        121.506027
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "位於台北市士林區永平街20巷底左側，自早年三樂建設在社子地區建築公寓時，將延平北路六段社子派出所後方的一塊土地闢建為三樂花園，園內假山水池、涼亭城樓俱備，且挖掘出原住民活動遺跡，民國78年時，本府將三樂花園徵收，並更名為社子公園，是社子地區最大的公園，也是一處充滿故事的休閒園地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574636",
+          "url": "https://www.wikidata.org/wiki/Q133574636"
+        }
+      ],
+      "photo": {
+        "query": "社子公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-60",
+      "name": "天福綠地",
+      "category": "park",
+      "latlng": [
+        25.116751,
+        121.532547
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "天福綠地(士林83號綠地)位於天母東路22巷內，為一三角型綠地，內有涼亭供人乘涼休息，亦有遊具供孩童玩樂；另原有三株印度橡膠樹列為受保護樹木，但因104年8月蘇迪勒颱風來襲，二株傾倒，現已修剪後扶正救治，後續觀察其生長情況。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "天福綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-685",
+      "name": "前港公園",
+      "category": "park",
+      "latlng": [
+        25.086063,
+        121.520156
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "前港公園位於華齡街與前港街交叉口(百齡國小對面)鄰近捷運劍潭站，已開闢面積36,129平方米，附近更有百齡高中、百齡國小等學區，可提供莘莘學子課後遊憩的好去處。公園內老榕樹遍布，常可見老人家在樹下乘涼聊天，增進情誼，青少年在公園內打球、跑步，形成一幅美麗和諧的圖畫。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574639",
+          "url": "https://www.wikidata.org/wiki/Q133574639"
+        }
+      ],
+      "photo": {
+        "query": "前港公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-715",
+      "name": "承德公園",
+      "category": "park",
+      "latlng": [
+        25.089661,
+        121.52198
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "承德公園於77年新建完成，鄰近士林運動中心，佔地廣大地面平坦寬敞，公園綠草如茵林木成蔭，並有兒童遊樂及運動設施，是民眾散步休閒放鬆的場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574598",
+          "url": "https://www.wikidata.org/wiki/Q133574598"
+        }
+      ],
+      "photo": {
+        "query": "承德公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-151",
+      "name": "天壽二號(士林80號)綠地",
+      "category": "park",
+      "latlng": [
+        25.11326,
+        121.526421
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "綠地位於中山北路六段，士東國小對面，公園內設有簡單的運動設施，另一個圓形階梯廣場供民眾停駐休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "天壽二號(士林80號)綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-757",
+      "name": "士林173號綠地 (蘭興1號綠地)",
+      "category": "park",
+      "latlng": [
+        25.112801,
+        121.526199
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "蘭興1號綠地(士林173號)位於中山北路六段士東路口，綠地內花木扶疏，設有多項運動及遊戲設施，另有一個半圓形階梯廣場及造形拱橋提供民眾駐足休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林173號綠地 (蘭興1號綠地)"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-784",
+      "name": "天和一號公園",
+      "category": "park",
+      "latlng": [
+        25.11844,
+        121.53471
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "天和一號公園鄰近天母商圈新光三越、天母運動公園等，是鬧中取靜的活動場所。生態邊坡、計時廣場、半月花圃為呼應地區良好的景觀塑造。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574582",
+          "url": "https://www.wikidata.org/wiki/Q133574582"
+        }
+      ],
+      "photo": {
+        "query": "天和一號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q714962",
+      "name": "臺北美國學校",
+      "category": "school",
+      "latlng": [
+        25.115833,
+        121.53
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "1949 年成立的私立國際學校，早期隸屬美國國防部，1989 年 9 月搬遷至現今的天母校區。",
+      "sources": [
+        {
+          "title": "Wikidata Q714962",
+          "url": "https://www.wikidata.org/wiki/Q714962"
+        },
+        {
+          "title": "維基百科〈台北美國學校〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8F%B0%E5%8C%97%E7%BE%8E%E5%9C%8B%E5%AD%B8%E6%A0%A1"
+        }
+      ],
+      "photo": {
+        "query": "臺北美國學校"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "在1989年9月，台北美國學校搬遷至現今的天母校區。"
+      }
+    },
+    {
+      "id": "tpark-455",
+      "name": "美崙公園",
+      "category": "park",
+      "latlng": [
+        25.09738,
+        121.51722
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "美崙公園位於士林區基河路與美崙街交會處，連接士林、天母、北投等地區的大片綠地空間於民國83年闢建完成，面積約6公頃。該園地形平坦，略呈梯形，為士林區不可或缺的休憩場所。緊鄰臺北市立天文科學教育館，遼闊的草坪及美麗的景緻為熱鬧繁華的士林地區，帶來知性及遊憩兼具的景觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "美崙公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-538",
+      "name": "士林79號綠地",
+      "category": "park",
+      "latlng": [
+        25.11558,
+        121.526779
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "士林79號綠地位於中山北路405巷21號前，綠地外圍原有一株榕樹及一株檬果樹提供遮蔭，但於蘇迪勒颱風期間傾倒死亡，目前綠地內僅有低矮灌木及草皮。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林79號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-962",
+      "name": "社正公園",
+      "category": "park",
+      "latlng": [
+        25.0875,
+        121.510422
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "社正公園為社子地區重要公園，位於社子市場旁。無論晨昏，人聲鼎沸，是老少咸宜的綠地空間。園區設有溜冰場、兒童遊戲場等給民眾提供活力的解放。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574637",
+          "url": "https://www.wikidata.org/wiki/Q133574637"
+        }
+      ],
+      "photo": {
+        "query": "社正公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-440",
+      "name": "至德園公園",
+      "category": "park",
+      "latlng": [
+        25.0984,
+        121.546402
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "至德園位於故宮右側，園區古意盎然情調優雅，與故宮莊嚴的建築相輝映。古樸橋廊蜿蜒，荷蓮錯落盛開，漫步亭台樓閣間，感受城市生活中的靜謐時光。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "至德園公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q11411913",
+      "name": "臺北市立百齡高級中學",
+      "category": "school",
+      "latlng": [
+        25.086578,
+        121.523884
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "1987 年成立籌備處、1989 年動土興建校舍，1991 年 7 月校舍完工並創立百齡國中，1999 年改制為高級中學。",
+      "sources": [
+        {
+          "title": "Wikidata Q11411913",
+          "url": "https://www.wikidata.org/wiki/Q11411913"
+        },
+        {
+          "title": "維基百科〈臺北市立百齡高級中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E7%99%BE%E9%BD%A1%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立百齡高級中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1991年7月招收第1屆新生13班，同時校舍完工，創立'''臺北市立百齡國民中學'''。"
+      }
+    },
+    {
+      "id": "wd-q15916343",
+      "name": "重陽大橋",
+      "category": "bridge",
+      "latlng": [
+        25.085,
+        121.503333
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "1986 年 4 月開始動工興建，1990 年 12 月完工，1991 年 1 月通車並同時徵收過路費。",
+      "sources": [
+        {
+          "title": "Wikidata Q15916343",
+          "url": "https://www.wikidata.org/wiki/Q15916343"
+        },
+        {
+          "title": "維基百科〈重陽大橋〉",
+          "url": "https://zh.wikipedia.org/wiki/%E9%87%8D%E9%99%BD%E5%A4%A7%E6%A9%8B"
+        }
+      ],
+      "photo": {
+        "query": "重陽大橋"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1991年1月通車，同時徵收過路費。"
+      }
+    },
+    {
+      "id": "tpark-103",
+      "name": "天壽公園",
+      "category": "park",
+      "latlng": [
+        25.114028,
+        121.525686
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "沿著磺溪邊的天母橋，有一狹長帶狀綠地即是天壽公園。公園設有籃球場、網球場及大片翠綠草地，提供民眾運動休閒、聊天野餐的活動空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q97346823",
+          "url": "https://www.wikidata.org/wiki/Q97346823"
+        },
+        {
+          "title": "維基百科〈天壽公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%A3%BD%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "天壽公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-682",
+      "name": "芝山公園",
+      "category": "park",
+      "latlng": [
+        25.102369,
+        121.531776
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "佔地面積約10公頃，位處士林區至誠路1段與雨聲街交叉口，偎依雙溪河畔，型如覆碗，是座充滿綠色生態與文化史蹟的大型自然公園。其名稱由來為清康熙年間，福建漳州移民於淡北、士林一帶墾居，因公園地形與福建漳州境內芝山形勢相當因而得名。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574638",
+          "url": "https://www.wikidata.org/wiki/Q133574638"
+        },
+        {
+          "title": "維基百科〈芝山岩〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%8A%9D%E5%B1%B1%E5%B2%A9"
+        }
+      ],
+      "photo": {
+        "query": "芝山公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-187",
+      "name": "福文公園",
+      "category": "park",
+      "latlng": [
+        25.090651,
+        121.527229
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "福文公園開闢於民國82年，面積約1063平方公尺，其座落於捷運士林、劍潭站之間，緊鄰士林夜市商圈，園內具有簡易體建設施及涼亭，提供往來的民眾良好的休憩場所，在您逛完夜市、參訪完士林官邸之虞，不妨停下腳步稍做休息，感受這城市之中的綠意。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574648",
+          "url": "https://www.wikidata.org/wiki/Q133574648"
+        }
+      ],
+      "photo": {
+        "query": "福文公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-317",
+      "name": "後港公園",
+      "category": "park",
+      "latlng": [
+        25.093237,
+        121.514454
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "鄰近基隆河畔的後港公園，是居民親近的後花園。磚砌的拱門、古樸小徑，流露靜謐穩重氣息，古樸的氣氛讓人宛若遠離塵囂。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574640",
+          "url": "https://www.wikidata.org/wiki/Q133574640"
+        }
+      ],
+      "photo": {
+        "query": "後港公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-363",
+      "name": "衛理公園",
+      "category": "park",
+      "latlng": [
+        25.102329,
+        121.553307
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "衛理公園,因位置於衛理女中對面而得名,遊樂場內除了兒童遊憩及體健設施外,還有台灣欒樹,風香等大型喬木,是假日休閒乘涼的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574657",
+          "url": "https://www.wikidata.org/wiki/Q133574657"
+        }
+      ],
+      "photo": {
+        "query": "衛理公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-762",
+      "name": "明勝公園",
+      "category": "park",
+      "latlng": [
+        25.079968,
+        121.519187
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "明勝公園為鄰里間的小型活動綠地，高大的黑板樹不僅遮陽，也傳達了溫暖的溫度。民眾休閒漫步其間時，有最放鬆原始的感受。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574599",
+          "url": "https://www.wikidata.org/wiki/Q133574599"
+        }
+      ],
+      "photo": {
+        "query": "明勝公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-294",
+      "name": "名山公園",
+      "category": "park",
+      "latlng": [
+        25.101549,
+        121.532372
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "名山公園開闢於民國83年，面積約5690平方公尺，南側緊鄰芝山巖，北側即為外雙溪，形成依山傍水的絕佳地理位置，園內可見芝山合約碑記等石雕裝置藝術，展現出芝山一帶濃厚的歷史氣息，另亦設有兒童遊戲區，無論是親子同遊，或是享受一人的知性之旅，都是相當合適的選擇。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574587",
+          "url": "https://www.wikidata.org/wiki/Q133574587"
+        }
+      ],
+      "photo": {
+        "query": "名山公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-32",
+      "name": "士林132號綠地",
+      "category": "park",
+      "latlng": [
+        25.09066,
+        121.506821
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "士林132號綠地開闢於民國85年，面積約2431平方公尺，座落於延平北路116巷弄中，綠地植栽沿著民宅巷弄而建，形成它狹長條帶式綠地，一進入綠地即可見數株大王耶子樹林立兩旁，為純樸巷弄增添一股南洋風情，園內更設有座椅，使民眾得以享受綠意稍做休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林132號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-367",
+      "name": "天福2號公園",
+      "category": "park",
+      "latlng": [
+        25.11709,
+        121.531609
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "天福二號公園開闢於民國83年，面積約727平方公尺，園內種植許多色彩繽紛的花草，點亮了天母一代的色彩，周圍緊鄰小市集及美國學校，得以體驗天母一帶獨特的外國文化，園內具有涼亭及溜滑梯，提供當地居民良好的休憩場所，在悠閒的午後，吹著涼風感受天母的氣息，賞玩鮮豔的草花，也是不錯的感受。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "天福2號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-555",
+      "name": "士林139號綠地",
+      "category": "park",
+      "latlng": [
+        25.084869,
+        121.509407
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "士林139號綠地位於延平北路五段257巷內，小而狹長，兩側住宅區住戶開門映入眼簾即是美倫美奐的綠色植物，其中亦設有花棚給予民眾休憩空間，另也有運動設施予民眾使用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林139號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-79",
+      "name": "志成公園",
+      "category": "park",
+      "latlng": [
+        25.09669,
+        121.53086
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "鄰近住宅與士林區福林國小的志成公園從其景觀的塑造，可以感受到公園社區化的設計意圖，打破以制式圍籬區隔內與外的傳統觀念，營造了開放性空間感，以迎接人們的腳步。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574596",
+          "url": "https://www.wikidata.org/wiki/Q133574596"
+        }
+      ],
+      "photo": {
+        "query": "志成公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-316",
+      "name": "華齡公園",
+      "category": "park",
+      "latlng": [
+        25.084049,
+        121.523163
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "華齡公園(士林8號公園)位於承德路與後港街間，佔地不大，設有園道及公園椅供民眾休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574646",
+          "url": "https://www.wikidata.org/wiki/Q133574646"
+        }
+      ],
+      "photo": {
+        "query": "華齡公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-452",
+      "name": "外雙溪公園",
+      "category": "park",
+      "latlng": [
+        25.101271,
+        121.552391
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "外雙溪公園由本所與國際扶輪3480地區共同闢建生態池園區，委託荒野保護協會陳德鴻老師指導，由士林社區大學樂活溼地保育志工社志工定期維護，期使能永續為一自然景觀水生植物的保育園區。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574584",
+          "url": "https://www.wikidata.org/wiki/Q133574584"
+        }
+      ],
+      "photo": {
+        "query": "外雙溪公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-627",
+      "name": "士林128號綠地",
+      "category": "park",
+      "latlng": [
+        25.084669,
+        121.522347
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "士林128綠地位於港前街內，為一帶狀綠地。綠地內喬木種植阿勃勒及艷紫荊，於夏季開花，輪番競艷，美不勝收。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林128號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-70",
+      "name": "士林131號綠地",
+      "category": "park",
+      "latlng": [
+        25.09079,
+        121.505592
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "士林131號綠地開闢於民國85年，面積約805平方公尺，座落於永平街的小巷弄中，為一長條型步道，園內種有許多鮮豔之盆栽花卉，為純樸的住宅區中增添一番綠意，其中更設有健康步道，不妨於茶餘飯後，來這綠地走走健康步道按摩腳底穴道，順便欣賞鮮豔的花朵，調劑一下疲憊的身心。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林131號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-200",
+      "name": "原住民文化主題公園",
+      "category": "park",
+      "latlng": [
+        25.10157,
+        121.550751
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "臺北市外雙溪故宮博物院鄰近的公園，特別規劃呈現原住民文化意象的主題風格，由本處及原住民委員會邀請各界原住民藝術家，打造更有味道的原住民文化主題公園，包括各族人像石牌、少年與狗石像搗米人像、手紋像、人紋像、及大熊像、梅花鹿像、母與子石像等作品等，讓市民在臺北市內就可以接近原住民的生活；公園入口廣場寬闊氣勢擎天，向內沿著滿佈圖騰的圖騰地磚園路步行，進到湖畔木棧廊道區，水邊種植落羽松群及多種水生植物如野薑花及睡蓮等，沿路以石板製成的石椅、石牆及各式圖騰地磚，配合生長的爛漫恣意的各式原生植物，營造一個含有豐富生態及展現原住民生活的意象。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574642",
+          "url": "https://www.wikidata.org/wiki/Q133574642"
+        }
+      ],
+      "photo": {
+        "query": "原住民文化主題公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-303",
+      "name": "至臨綠地",
+      "category": "park",
+      "latlng": [
+        25.10429,
+        121.555603
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "至臨綠地位於至善國中對面,綠地範圍內有榕樹,樟樹,台灣欒樹等大型喬木...本區常有學生放學後漫步於林間,至高點還可遠眺陽明山美景。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "至臨綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-347",
+      "name": "仰德二號公園",
+      "category": "park",
+      "latlng": [
+        25.099991,
+        121.538277
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "仰德二號公園位於外雙溪起伏的斜坡上，緊鄰仰德一號公園，溪畔夕照、山間雲彩的變化，加上茂密而原始的林相是登山健行、親近自然的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574586",
+          "url": "https://www.wikidata.org/wiki/Q133574586"
+        }
+      ],
+      "photo": {
+        "query": "仰德二號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-609",
+      "name": "仰德一號公園",
+      "category": "park",
+      "latlng": [
+        25.100071,
+        121.537781
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "仰德一號公園位於復興橋畔，與至誠公園遙遙相對。宛若都市藍帶與綠帶的相遇，是民眾溪邊休閒、賞景夕照、散步談心的最佳去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574585",
+          "url": "https://www.wikidata.org/wiki/Q133574585"
+        }
+      ],
+      "photo": {
+        "query": "仰德一號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-621",
+      "name": "東和公園",
+      "category": "park",
+      "latlng": [
+        25.1226,
+        121.533686
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "由中山北路七段114巷穿過天母東路86巷就可以到達東和公園，它的面積約有3.1公頃，於民國88年闢建完成，備有平面停車場、表演舞台，羽球場等設施，玉潮坑溪及其支流穿越其間，可說是純粹自然與休閒功能兼備的都會公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574600",
+          "url": "https://www.wikidata.org/wiki/Q133574600"
+        }
+      ],
+      "photo": {
+        "query": "東和公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-865",
+      "name": "線形公園-士林11號(前街)",
+      "category": "park",
+      "latlng": [
+        25.097214,
+        121.524831
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "線形公園-士林11號(前街)，1997 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "線形公園-士林11號(前街)"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q698405",
+      "name": "捷運芝山站",
+      "category": "station",
+      "latlng": [
+        25.102845,
+        121.522533
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "捷運淡水線車站，1997 年 3 月 28 日隨淡水線淡水至中山段正式通車而啟用，2010 年北側新增第二出入口。",
+      "sources": [
+        {
+          "title": "Wikidata Q698405",
+          "url": "https://www.wikidata.org/wiki/Q698405"
+        },
+        {
+          "title": "維基百科〈芝山站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%8A%9D%E5%B1%B1%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運芝山站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1997年3月28日：隨著淡水線「淡水－中山」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698433",
+      "name": "捷運劍潭站",
+      "category": "station",
+      "latlng": [
+        25.0844,
+        121.525
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "捷運淡水線車站，1997 年 3 月 28 日隨淡水線淡水至中山段通車而啟用；戰後舊鐵路劍潭站約於 1950 年代中期廢止。",
+      "sources": [
+        {
+          "title": "Wikidata Q698433",
+          "url": "https://www.wikidata.org/wiki/Q698433"
+        },
+        {
+          "title": "維基百科〈劍潭站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8A%8D%E6%BD%AD%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運劍潭站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1997年3月28日：隨著捷運淡水線「淡水－中山」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698614",
+      "name": "捷運士林站",
+      "category": "station",
+      "latlng": [
+        25.093453,
+        121.526211
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "捷運淡水線車站，1997 年 3 月隨淡水線淡水至中山段正式通車而啟用，前身為 1901 年啟用的淡水線鐵路士林停車場。",
+      "sources": [
+        {
+          "title": "Wikidata Q698614",
+          "url": "https://www.wikidata.org/wiki/Q698614"
+        },
+        {
+          "title": "維基百科〈士林站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A3%AB%E6%9E%97%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運士林站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1997年3月28日：捷運淡水線士林站隨著淡水線「淡水－中山」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-61",
+      "name": "天生廣場",
+      "category": "park",
+      "latlng": [
+        25.12619,
+        121.53125
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "天生廣場(士林2號)，位於中山北路七段219巷旁，緊鄰天母公園，設有涼亭、公園椅、運動設施等‧‧‧‧。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "天生廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-665",
+      "name": "東吳綠地",
+      "category": "park",
+      "latlng": [
+        25.096581,
+        121.542748
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "士林143號東吳綠地位於臨溪路東吳大學門口旁，為一長條形帶狀綠地，綠地內廣植台灣欒樹、楓香、山櫻等原生樹種，為本綠地四季帶來不同的妝容。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "東吳綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-751",
+      "name": "士林73號綠地 (天美綠地)",
+      "category": "park",
+      "latlng": [
+        25.121599,
+        121.52597
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "士林73號天美綠地沿著磺溪畔而建，共分為兩段，北段由天母北路44巷進入，西段由天母西路95巷進入。綠地內花木繁盛，宛如一坐小森林。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林73號綠地 (天美綠地)"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q697170",
+      "name": "臺北市立天母棒球場",
+      "category": "sports",
+      "latlng": [
+        25.113056,
+        121.533056
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "1997 年 3 月開始興建，1999 年 8 月 15 日落成啟用，2001 年曾為世界盃棒球賽開幕典禮與比賽場地。",
+      "sources": [
+        {
+          "title": "Wikidata Q697170",
+          "url": "https://www.wikidata.org/wiki/Q697170"
+        },
+        {
+          "title": "維基百科〈臺北市立天母棒球場〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%A4%A9%E6%AF%8D%E6%A3%92%E7%90%83%E5%A0%B4"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立天母棒球場"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1997年3月25日開始興建，1999年8月15日落成啟用。"
+      }
+    },
+    {
+      "id": "tpark-290",
+      "name": "福志公園",
+      "category": "park",
+      "latlng": [
+        25.099051,
+        121.534058
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "福志公園位於士林區福志里雨農路100巷的福林社區內，是眷村改建的公園；因地理位置隱身於堤防周邊，緊鄰雙溪河濱防汛道路，與雙溪河濱公園及樹木茂密的芝山公園相望，因此附近社區民眾以及對這個公園充滿兒時回憶的眷村朋友，才比較知道它的存在，也因此在這裡可以享受到一般公園所沒有的清閒自在。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574650",
+          "url": "https://www.wikidata.org/wiki/Q133574650"
+        }
+      ],
+      "photo": {
+        "query": "福志公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-700",
+      "name": "克強公園",
+      "category": "park",
+      "latlng": [
+        25.107986,
+        121.521967
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "從捷運芝山站2號出口徒步10分鐘就可到達，位在本市磺溪街55巷，也就是蘭雅國小和磺溪間的克強公園，90年年底闢建完成，面積約有1.6公頃。園內的克強游泳池，也就是從前臺北人所熟知的「天母游泳池」，陪伴許多臺北人度過一年又一年的炎炎夏日。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574594",
+          "url": "https://www.wikidata.org/wiki/Q133574594"
+        }
+      ],
+      "photo": {
+        "query": "克強公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-236",
+      "name": "永倫綠地",
+      "category": "park",
+      "latlng": [
+        25.09152,
+        121.500526
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "永倫綠地(士林129號)位於倫等街內，形狀小而狹長，設有少數公園椅及健身器材。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "永倫綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-274",
+      "name": "士林130號綠地",
+      "category": "park",
+      "latlng": [
+        25.0896,
+        121.502586
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "士林130號綠地位延平北路及環河北路交會處，雖佔地不大，但步道延伸當散步其中，微風吹來仍能感受到其悠靜之紛圍。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林130號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q10927242",
+      "name": "國立臺灣科學教育館",
+      "category": "museum",
+      "latlng": [
+        25.096111,
+        121.516667
+      ],
+      "start": 2003,
+      "end": null,
+      "desc": "1956 年成立於板橋公園，1958 年遷至南海學園，2003 年位於士林現址的新館建置完成，地下三層、地上十一層。",
+      "sources": [
+        {
+          "title": "Wikidata Q10927242",
+          "url": "https://www.wikidata.org/wiki/Q10927242"
+        },
+        {
+          "title": "維基百科〈國立臺灣科學教育館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E7%A7%91%E5%AD%B8%E6%95%99%E8%82%B2%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "國立臺灣科學教育館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2003年位於士林現址的新館建置完成，高度49米、占地面積約30,446坪，是一棟地下三層、地上十一層的建物。"
+      }
+    },
+    {
+      "id": "tpark-184",
+      "name": "福華公園",
+      "category": "park",
+      "latlng": [
+        25.08218,
+        121.518922
+      ],
+      "start": 2004,
+      "end": null,
+      "desc": "福華公園開闢於民國93年度，面積約為275平方公尺，其坐落於通河街325巷北側，為緊密的住宅區提供一塊小小的活動處所，也為繁複的巷弄間增添一番綠意，公園周圍緊臨市場，往來人潮眾多熱鬧，形成一股生意盎然的氣氛，更是街坊鄰居促膝長談的好所在。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574652",
+          "url": "https://www.wikidata.org/wiki/Q133574652"
+        }
+      ],
+      "photo": {
+        "query": "福華公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-741",
+      "name": "翠山公園",
+      "category": "park",
+      "latlng": [
+        25.10845,
+        121.56995
+      ],
+      "start": 2004,
+      "end": null,
+      "desc": "位於中社路二段的陽明山鞍部，綠意盎然，周邊環境清幽、蟲鳴鳥叫不時有涼風徐來，公園設有涼亭及兒童遊戲區，且有大樹遮蔭，且遠眺視野良好是避暑乘涼的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574654",
+          "url": "https://www.wikidata.org/wiki/Q133574654"
+        }
+      ],
+      "photo": {
+        "query": "翠山公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-165",
+      "name": "209號綠地",
+      "category": "park",
+      "latlng": [
+        25.0926,
+        121.528069
+      ],
+      "start": 2005,
+      "end": null,
+      "desc": "209號綠地位於中山北路五段及士林官邸公園之間,緊鄰中山北路人行道.綠地範圍內有蔓花生,大王椰子,楓香等植物,因周邊商辦大樓正在興建中,未來將是一個適合散步,逛街的好地方。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "209號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-15",
+      "name": "士林201號綠地",
+      "category": "park",
+      "latlng": [
+        25.13364,
+        121.560669
+      ],
+      "start": 2008,
+      "end": null,
+      "desc": "士林201號綠地位於永公路245巷34弄西側，往閻錫山墓園小路兩旁，為道路旁之帶狀綠地，無設置休憩設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林201號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-206",
+      "name": "士林197號綠地",
+      "category": "park",
+      "latlng": [
+        25.136188,
+        121.558964
+      ],
+      "start": 2008,
+      "end": null,
+      "desc": "士林197號綠地位於永公路245巷34弄，本綠地原為閻錫山墓園，於2004公告為市定古蹟；有「山西王」稱號的閻錫山，卸任後晚年隱居在陽明山。其晚年因懷念家鄉，並基於軍事防衛需要，選擇可居高臨下俯視淡水河口與台北盆地的防風山坡上，建造石頭屋「種能洞」及「紅磚屋」。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林197號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-326",
+      "name": "士林200號綠地",
+      "category": "park",
+      "latlng": [
+        25.13698,
+        121.561668
+      ],
+      "start": 2008,
+      "end": null,
+      "desc": "士林200號綠地位於永公路245巷34弄東側，為道路旁之帶狀綠地，無設置休憩設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林200號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-426",
+      "name": "德行公園",
+      "category": "park",
+      "latlng": [
+        25.10511,
+        121.523651
+      ],
+      "start": 2008,
+      "end": null,
+      "desc": "德行公園位於天母商圈旁，由士林電機回饋建設捐贈。如同都市叢林中的一顆綠寶石，提供民眾在繁忙的工作中小憩片刻的一片舒活境地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574656",
+          "url": "https://www.wikidata.org/wiki/Q133574656"
+        }
+      ],
+      "photo": {
+        "query": "德行公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-587",
+      "name": "士林199號綠地",
+      "category": "park",
+      "latlng": [
+        25.14052,
+        121.558456
+      ],
+      "start": 2008,
+      "end": null,
+      "desc": "士林199號綠地位於永公路245巷34弄西側，綠地內廣植茶花、櫻花，並無休憩設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林199號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-872",
+      "name": "社子島福安里堤防綠地",
+      "category": "park",
+      "latlng": [
+        25.098142,
+        121.496437
+      ],
+      "start": 2008,
+      "end": null,
+      "desc": "社子島福安里堤防綠地，2008 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "社子島福安里堤防綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-91",
+      "name": "士林3號廣場",
+      "category": "park",
+      "latlng": [
+        25.10453,
+        121.524612
+      ],
+      "start": 2008,
+      "end": null,
+      "desc": "忠誠路中山北路六段交叉口西側，SOGO百貨公司旁廣場。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林3號廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-276",
+      "name": "士林208號綠地",
+      "category": "park",
+      "latlng": [
+        25.09733,
+        121.533768
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "208綠地位於泰北中學正門前，綠地內花木扶疏，提供多個石椅供民眾休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林208號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-617",
+      "name": "添壽一號綠地",
+      "category": "park",
+      "latlng": [
+        25.116739,
+        121.526901
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "添壽一號綠地(士林78號)位於巷弄內之三角形綠地，佔地不大。綠地內設有公園椅供民眾休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "添壽一號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-143",
+      "name": "士林206號番仔田綠地",
+      "category": "park",
+      "latlng": [
+        25.09796,
+        121.548027
+      ],
+      "start": 2010,
+      "end": null,
+      "desc": "士林206號綠地又稱番仔田綠地，位於本市士林區自強隧道口的小巷弄內，開闢於民國99年，面積約1251㎡，佔地不大，屬於小而美的綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林206號番仔田綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-38",
+      "name": "士林207綠地(番仔田小綠地)",
+      "category": "park",
+      "latlng": [
+        25.09676,
+        121.548393
+      ],
+      "start": 2010,
+      "end": null,
+      "desc": "士林207號綠地(番仔田小綠地)位於力行街內。鄰近206號番仔田綠地，較206綠地小，空間亦不大，但亦有提供二個公園椅予民眾休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "士林207綠地(番仔田小綠地)"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-633",
+      "name": "41號公園",
+      "category": "park",
+      "latlng": [
+        25.10709,
+        121.5644
+      ],
+      "start": 2010,
+      "end": null,
+      "desc": "41號公園位於雙溪國小對面,範圍內除厚葉石斑木,春不老之外,還種有許多山櫻花.冬季開花時,漫步櫻花林間,別有一番風味。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574581",
+          "url": "https://www.wikidata.org/wiki/Q133574581"
+        }
+      ],
+      "photo": {
+        "query": "41號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-177",
+      "name": "住六(公一)公園",
+      "category": "park",
+      "latlng": [
+        25.136914,
+        121.559493
+      ],
+      "start": 2011,
+      "end": null,
+      "desc": "位在臺北市陽明山住六(公一)重劃區，正對萬坪森林保護區，四周群山環抱，景致優美，空氣清新。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133574591",
+          "url": "https://www.wikidata.org/wiki/Q133574591"
+        },
+        {
+          "title": "Wikidata Q133574592",
+          "url": "https://www.wikidata.org/wiki/Q133574592"
+        }
+      ],
+      "photo": {
+        "query": "住六(公一)公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q97708238",
+      "name": "臺北市立圖書館李科永紀念圖書館",
+      "category": "library",
+      "latlng": [
+        25.095998,
+        121.531017
+      ],
+      "start": 2013,
+      "end": null,
+      "desc": "位於福林公園內，為紀念木材貿易商、慈善家李科永而設，2013 年 10 月 27 日落成開放，是臺北市立圖書館第 66 個服務據點。",
+      "sources": [
+        {
+          "title": "Wikidata Q97708238",
+          "url": "https://www.wikidata.org/wiki/Q97708238"
+        },
+        {
+          "title": "維基百科〈臺北市立圖書館李科永紀念圖書館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%9C%96%E6%9B%B8%E9%A4%A8%E6%9D%8E%E7%A7%91%E6%B0%B8%E7%B4%80%E5%BF%B5%E5%9C%96%E6%9B%B8%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立圖書館李科永紀念圖書館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2010年3月6日，基金會於士林區福林公園捐贈興建李科永紀念館，並於2013年10月27日落成開放，成為臺北市立圖書館第66個服務據點，台北市長郝龍斌也出席了其啟用儀式。"
+      }
+    },
+    {
+      "id": "tpark-1004",
+      "name": "雙溪濕地公園",
+      "category": "park",
+      "latlng": [
+        25.096977,
+        121.511988
+      ],
+      "start": 2022,
+      "end": null,
+      "desc": "臺北市士林區承德路五段150巷因應本市於99年11月至100年4月辦理國際花卉博覽會，為疏導花博展期大量之觀光人潮以及停車需求，闢建作為臨時停車場，藉以降低會場周邊交通衝擊。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "雙溪濕地公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-980",
+      "name": "山仔后公園",
+      "category": "park",
+      "latlng": [
+        25.137291,
+        121.545635
+      ],
+      "start": 2024,
+      "end": null,
+      "desc": "山仔后公園鄰近文化大學及美軍眷村商圈，提供周邊里民休憩遊玩場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q133648344",
+          "url": "https://www.wikidata.org/wiki/Q133648344"
+        }
+      ],
+      "photo": {
+        "query": "山仔后公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    }
+  ]
+}

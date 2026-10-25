@@ -1,0 +1,1520 @@
+{
+  "towncode": "63000010",
+  "county": "臺北市",
+  "town": "松山區",
+  "slug": "taipei-songshan",
+  "items": [
+    {
+      "id": "wd-q15908771",
+      "name": "臺北市松山區西松國民小學",
+      "category": "school",
+      "latlng": [
+        25.052755,
+        121.562899
+      ],
+      "start": 1937,
+      "end": null,
+      "desc": "1936 年於日治時期成立，原借用松山慈祐宮右廂房作臨時教室，1937 年新校舍落成後正式遷入現址。",
+      "sources": [
+        {
+          "title": "Wikidata Q15908771",
+          "url": "https://www.wikidata.org/wiki/Q15908771"
+        },
+        {
+          "title": "維基百科〈臺北市松山區西松國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E6%9D%BE%E5%B1%B1%E5%8D%80%E8%A5%BF%E6%9D%BE%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市松山區西松國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "*1937年4月：新校舍落成，正式遷入現址。"
+      }
+    },
+    {
+      "id": "wd-q713896",
+      "name": "臺北田徑場",
+      "category": "sports",
+      "latlng": [
+        25.049444,
+        121.551111
+      ],
+      "start": 1956,
+      "end": null,
+      "desc": "主場館 1956 年興建完成，為舉辦 2009 年聽障奧運拆除重建，新場館可容納兩萬名觀眾，2009 年 7 月 23 日啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q713896",
+          "url": "https://www.wikidata.org/wiki/Q713896"
+        },
+        {
+          "title": "維基百科〈臺北田徑場〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E7%94%B0%E5%BE%91%E5%A0%B4"
+        }
+      ],
+      "photo": {
+        "query": "臺北田徑場"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "主場館位於北寧路側，原可容納16,000名觀眾，於1956年興建完成，主要用於舉辦田徑與足球競賽"
+      }
+    },
+    {
+      "id": "wd-q10866921",
+      "name": "三軍總醫院松山分院",
+      "category": "hospital",
+      "latlng": [
+        25.054385,
+        121.557672
+      ],
+      "start": 1958,
+      "end": null,
+      "desc": "前身為 1945 年成立的第四空軍醫院，後更名空軍總醫院，1958 年 12 月遷入健康路現址，1959 年舉行落成典禮。",
+      "sources": [
+        {
+          "title": "Wikidata Q10866921",
+          "url": "https://www.wikidata.org/wiki/Q10866921"
+        },
+        {
+          "title": "維基百科〈三軍總醫院松山分院〉",
+          "url": "https://zh.wikipedia.org/wiki/%E4%B8%89%E8%BB%8D%E7%B8%BD%E9%86%AB%E9%99%A2%E6%9D%BE%E5%B1%B1%E5%88%86%E9%99%A2"
+        }
+      ],
+      "photo": {
+        "query": "三軍總醫院松山分院"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1945年12月1日：'''第四空軍醫院'''於南京市成立，後於1949年1月20日隨空軍總司令部遷臺，更名'''臺北市空軍總醫院'''，設於臺北市蘭州街；1958年4月1日更名'''空軍總醫院'''，同年12月1日遷入健康路現址，並於1959年11月25日舉行落成典禮。"
+      }
+    },
+    {
+      "id": "wd-q7676549",
+      "name": "土地改革紀念館",
+      "category": "museum",
+      "latlng": [
+        25.047675,
+        121.549314
+      ],
+      "start": 1967,
+      "end": null,
+      "desc": "土地改革紀念館大樓於 1967 年 3 月 11 日落成，命名為敦化樓，由副總統嚴家淦主持剪綵，省政府主席黃杰主持揭幕。",
+      "sources": [
+        {
+          "title": "Wikidata Q7676549",
+          "url": "https://www.wikidata.org/wiki/Q7676549"
+        },
+        {
+          "title": "維基百科〈土地改革紀念館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%9F%E5%9C%B0%E6%94%B9%E9%9D%A9%E7%B4%80%E5%BF%B5%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "土地改革紀念館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1967年3月11日，土地改革紀念館大樓落成，命名為敦化樓，由蕭錚題字、中華民國副總統嚴家淦主持剪綵、臺灣省政府主席黃杰主持揭幕儀式。"
+      }
+    },
+    {
+      "id": "tpark-100",
+      "name": "新中公園",
+      "category": "park",
+      "latlng": [
+        25.06052,
+        121.560867
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "活潑的鋪面、井然有秩的花草、寬闊的廣場及碩大的表演台，適合民眾從事休閒活動的絕佳場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q19841060",
+          "url": "https://www.wikidata.org/wiki/Q19841060"
+        }
+      ],
+      "photo": {
+        "query": "新中公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-110",
+      "name": "富錦二號公園",
+      "category": "park",
+      "latlng": [
+        25.05961,
+        121.559624
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "簡單的設施、美麗的花圃及乾淨整潔的步道，毫無車水馬龍的吵雜，有別於富錦一號公園的華麗景致，提供里民一個清幽素雅的環境。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "富錦二號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-144",
+      "name": "撫遠公園",
+      "category": "park",
+      "latlng": [
+        25.064449,
+        121.566948
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "撫遠公園鄰近民權東路六段與塔悠路交會處，是當地居民日常休閒與放鬆的重要場所。公園設有一座多功能舞台、五座休憩涼亭，綠蔭成林、環境幽靜，適合散步、運動與親子同遊。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "撫遠公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-226",
+      "name": "富錦一號公園",
+      "category": "park",
+      "latlng": [
+        25.058889,
+        121.559029
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "公園內別出心裁的造景，從任何角度望去，均有不同的美感；在認養人細心整理照料下，一直維持績優公園的水準，列為本市示範觀摩公園之一。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "富錦一號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-396",
+      "name": "富錦六號公園",
+      "category": "park",
+      "latlng": [
+        25.05821,
+        121.552902
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "富錦六號公園內榕樹展演舞台使民眾有更多元的藝文活動，中央”朱槿”意象的花椅兼具公共藝術及休憩功能，西北角楓香樹下有舒適的座牆提供民眾駐足。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "富錦六號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-40",
+      "name": "新東公園",
+      "category": "park",
+      "latlng": [
+        25.0588,
+        121.568367
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "新東公園核心由四株大榕樹的圓形樹冠所構成，為綠蔭密佈的乘涼區，另有榕樹、白千層、茄苳、木棉花等多種喬木佇立園中，長廊式的涼亭亦別有一番風味。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "新東公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-445",
+      "name": "富錦三號公園",
+      "category": "park",
+      "latlng": [
+        25.06024,
+        121.558899
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "公園內具有熱帶椰林景觀，而入口意象、舖面動線、磚砌座椅等均是精心設計，為松山區績優鄰里公園的常客。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "富錦三號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-459",
+      "name": "延壽一號公園",
+      "category": "park",
+      "latlng": [
+        25.057631,
+        121.556351
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "公園內活潑色彩搭配的連鎖磚及高低不同具層次感的花台，簡單而不失典雅，而公園入口巨大榕樹教人印象鮮明，是個相當適合民眾談心散步的公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "延壽一號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-47",
+      "name": "延壽二號公園",
+      "category": "park",
+      "latlng": [
+        25.05735,
+        121.552757
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "為一座明淨的無菸公園，小葉欖仁及成排楓香點綴出四季分明的公園意象，另有優美的溜冰場並利用造型拱門的修飾將公園與具活潑色彩的防火巷結合一體。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "延壽二號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-532",
+      "name": "富錦五號公園",
+      "category": "park",
+      "latlng": [
+        25.058849,
+        121.553543
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "富錦五號公園空間規劃較為開闊，東側成群大王椰子參天而立、西側有茄苳成長茁壯著，廣場則可做為民眾休閒運動的場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "富錦五號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-650",
+      "name": "延壽三號公園",
+      "category": "park",
+      "latlng": [
+        25.05687,
+        121.551804
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "延壽三號公園鄰近臺北市立圖書館民生分館，樹木枝葉茂密，綠蔭遮地，環境清幽，提供民眾一個思考的好場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "延壽三號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-694",
+      "name": "精忠公園",
+      "category": "park",
+      "latlng": [
+        25.05934,
+        121.55217
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "精忠公園坐落於幽靜的民生社區一隅，公園一端榕樹成蔭，樹木茂密、綠蔭盎然，另步道兩側栽植有時節花卉，隱約透露著樸素之外尚有那分典雅氣質。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "精忠公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-716",
+      "name": "敦北公園",
+      "category": "park",
+      "latlng": [
+        25.06123,
+        121.551567
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "敦北公園分南、北兩側，南側為一以楓香為主、白千層為輔組成的林場，北側則是一片遼闊大草坪，悠閒地散步於其中令人不覺間心曠神怡起來。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "敦北公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-1001",
+      "name": "民生公園",
+      "category": "park",
+      "latlng": [
+        25.05748,
+        121.558098
+      ],
+      "start": 1973,
+      "end": null,
+      "desc": "含翠凝碧位於民生東路5段和延壽街間，佔地1.8公頃，自民國62年闢建以來早已是民生社區居民休閒活動不可或缺的一部分。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "民生公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-253",
+      "name": "敦化公園",
+      "category": "park",
+      "latlng": [
+        25.04641,
+        121.550484
+      ],
+      "start": 1973,
+      "end": null,
+      "desc": "敦化公園內植栽種類相當繁多，其中又以茄苳為主要喬木。園內遊戲設施相當齊全，是小朋友嬉戲的好地方，另有大型涼亭，供里民休憩聊天之用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "敦化公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-325",
+      "name": "三民公園",
+      "category": "park",
+      "latlng": [
+        25.06138,
+        121.566963
+      ],
+      "start": 1973,
+      "end": null,
+      "desc": "三民公園位於松山區新益里新東街、塔悠路及與撫遠街261巷旁，為一長條形帶狀公園，經撫遠街一分為二，公園西側設有三民公園溫水游泳池，是夏日市民消暑及冬天運動的好去處，臨新東街的口袋公園是逛市場歇歇腿的好地方，長椅上帶著大量蔬果食材的主婦望著草地上嬉戲的兒童是這裡常見的溫馨畫面。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q19840686",
+          "url": "https://www.wikidata.org/wiki/Q19840686"
+        }
+      ],
+      "photo": {
+        "query": "三民公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-353",
+      "name": "松山121號綠地三民圓環",
+      "category": "park",
+      "latlng": [
+        25.05916,
+        121.562569
+      ],
+      "start": 1973,
+      "end": null,
+      "desc": "三民路圓環位於民生東路四段與三民路交叉路口，面積3,320平方公尺，西元1973年闢建。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "松山121號綠地三民圓環"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-389",
+      "name": "精忠2號公園",
+      "category": "park",
+      "latlng": [
+        25.056391,
+        121.552849
+      ],
+      "start": 1973,
+      "end": null,
+      "desc": "公園位於民生國小操場左邊，面敦化北路199巷，後方為敦化北路199巷6弄，左方為民生東路四段80巷，鄰近延壽3號公園，此公園為早期眷村花圃，面積總計700平方公尺，民國62年開闢為公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "精忠2號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-606",
+      "name": "寶清公園",
+      "category": "park",
+      "latlng": [
+        25.05212,
+        121.567642
+      ],
+      "start": 1974,
+      "end": null,
+      "desc": "寶清公園結合籃球架的設計，讓溜冰場成為多用途的活動場所，園內往來人群頻繁，是一座充滿朝氣的公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "寶清公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-97",
+      "name": "八德公園",
+      "category": "park",
+      "latlng": [
+        25.04693,
+        121.545708
+      ],
+      "start": 1978,
+      "end": null,
+      "desc": "八德公園係一以櫻花為主題，風格鮮明之鄰里公園，而涼亭周圍的花卉造景與筆直的光蠟樹相配得宜，園內設施完備，兒童遊戲及里民休憩兩相宜。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "八德公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-161",
+      "name": "西松公園",
+      "category": "park",
+      "latlng": [
+        25.05369,
+        121.564133
+      ],
+      "start": 1979,
+      "end": null,
+      "desc": "有著茄苳環繞，及高聳成群的印度橡膠、光蠟木、白千層、黑板樹的西松公園，不僅是乘涼休憩好去處，溜滑梯亦兼講台效用，而廣場可作為里民聚會活動用途。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "西松公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-493",
+      "name": "中華公園",
+      "category": "park",
+      "latlng": [
+        25.053527,
+        121.552484
+      ],
+      "start": 1979,
+      "end": null,
+      "desc": "中華公園風貌較為光亮明朗，晨間為里民聚集運動的場所，下午則為小朋友玩耍的樂園，搭配櫻花的美景及活潑圖案的鋪面及牆面，相當出色。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "中華公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-288",
+      "name": "民有二號公園",
+      "category": "park",
+      "latlng": [
+        25.059641,
+        121.546318
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "民有二號公園維護精緻，美麗的花卉及精緻的造景皆由認養義工團隊對公園的珍愛及對景觀品質的要求下完成的傑作，榮選為績優鄰里公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "民有二號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-409",
+      "name": "長壽公園",
+      "category": "park",
+      "latlng": [
+        25.05337,
+        121.558922
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "長壽公園以臺灣欒樹為主要喬木，盛夏時刻一片綠意盎然，並設有遊戲區及造型花園，是一個令人得以徹底放鬆的地方。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "長壽公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-659",
+      "name": "民有三號公園",
+      "category": "park",
+      "latlng": [
+        25.05862,
+        121.547623
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "民有三號公園花木扶疏、步道整潔，散步於園中，自感怡然舒適，伴隨各式耐陰植物巧妙地布置成景，架構出柔合多層次的植被，榮獲績優鄰里公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "民有三號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-788",
+      "name": "民有一號公園",
+      "category": "park",
+      "latlng": [
+        25.06077,
+        121.547401
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "民有一號公園以花園風格為其設計靈魂，園中明亮的蔓花生地毯及時節草花花海使公園顯得青春洋溢，園中亦有多種花卉在各個時節展現迷人風采。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "民有一號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-346",
+      "name": "敦中公園",
+      "category": "park",
+      "latlng": [
+        25.0499,
+        121.545891
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "本公園有三大活動區(活動廣場、廟埕廣場、兒童遊戲場)，園路以減法美學還原公園本貌外，亦考量無障礙之相關規定設計，園路下方更是採用雨撲滿之方式收集雨水，並用以本公園植物澆灌。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "敦中公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-570",
+      "name": "吉祥公園",
+      "category": "park",
+      "latlng": [
+        25.050533,
+        121.564049
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "吉祥公園為一座多功能的鄰里公園，樹蔭下的泥土地鋪設地磚及種植花草，兼顧造型與實用的設計，而局部草花的造景，讓公園顯得俏皮有活力。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "吉祥公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-719",
+      "name": "婦聯公園",
+      "category": "park",
+      "latlng": [
+        25.054689,
+        121.559731
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "水黃皮環繞婦聯公園形成鮮明綠帶，公園內則種植有臺灣海棗、垂榕、榕樹、厚皮香、春不老等，環境清幽，園內格局別緻，常做為國內電視劇拍攝的場景。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "婦聯公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-373",
+      "name": "吉仁公園",
+      "category": "park",
+      "latlng": [
+        25.04781,
+        121.553482
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "有著榕樹、木棉、黑板樹、麵包樹、刺桐等多種喬木分植於園中，位置於八德路3段及延吉街交叉路口，讓人車喧囂的地方得以有一令人放鬆之處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "吉仁公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-137",
+      "name": "健康公園",
+      "category": "park",
+      "latlng": [
+        25.054119,
+        121.568871
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "健康公園西南一隅有水黃皮做為避暑乘涼處，園內則有榕樹、阿勃勒、黑板樹、豔紫荊等參差坐落，另外花草茂盛的苗圃及局部的造景，讓公園充滿生命力。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "健康公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-22",
+      "name": "美仁二號公園",
+      "category": "park",
+      "latlng": [
+        25.0495,
+        121.553421
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "美仁二號公園與美仁一號公園比鄰相望，園內有茂密的大樹及美麗的杜鵑、簡單的硬體設施，毫無繁雜感，並讓人有恬適的感覺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "美仁二號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-380",
+      "name": "美仁一號公園",
+      "category": "park",
+      "latlng": [
+        25.05015,
+        121.553459
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "緊鄰育達商職及土地公廟，且因該廟宇供俸的為上百年的石雕土地公，香火鼎盛，輔以廟宇外彩色連鎖地磚的鋪設，更為本公園增色不少。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "美仁一號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-444",
+      "name": "寧安公園",
+      "category": "park",
+      "latlng": [
+        25.05035,
+        121.554871
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "寧安公園有著壯碩的榕樹群、樟樹以及垂榕，是地方上的避暑勝地，且因緊鄰育達商職，有許多學生前往聊天談心，為極具人氣的公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "寧安公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-169",
+      "name": "復源公園",
+      "category": "park",
+      "latlng": [
+        25.04649,
+        121.554482
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "復源公園有成群榕樹，呈現明顯的林蔭風格，所種植的草皮亦相當美麗；下午常聚集前往休憩聊天的里民，使用率頻繁。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "復源公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-225",
+      "name": "鵬程公園",
+      "category": "park",
+      "latlng": [
+        25.055519,
+        121.568672
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "園內主要分為兒童遊戲區及綠蔭休閒區，值得一提的是在綠蔭休閒區內有多座木造體建設施，讓里民有更多的休閒器材使用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "鵬程公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-155",
+      "name": "安平公園",
+      "category": "park",
+      "latlng": [
+        25.05302,
+        121.564491
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "安平公園為本區最小的鄰里公園，麻雀雖小卻五臟俱全，花木扶疏，宛如一座小花園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "安平公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-107",
+      "name": "舊宗1號公園 ( 新東農園 )",
+      "category": "park",
+      "latlng": [
+        25.061951,
+        121.568863
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "舊宗1號公園位於松山區新東里塔悠路351號旁鄰近三民公園，南側為撫遠抽水站、西面為塔悠路、東背基隆河，基地呈正方形，面積總計745平方公尺，民國85年開闢為環保公園，供民眾使用。公園約於107年改為新東農園，供里民種菜使用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "舊宗1號公園 ( 新東農園 )"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q21017003",
+      "name": "麥帥二橋",
+      "category": "bridge",
+      "latlng": [
+        25.0561,
+        121.571
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "位於麥帥一橋下游不到 400 公尺處，連接松山區健康路與內湖區堤頂大道，1996 年完工，是基隆河畔的明顯地標。",
+      "sources": [
+        {
+          "title": "Wikidata Q21017003",
+          "url": "https://www.wikidata.org/wiki/Q21017003"
+        },
+        {
+          "title": "維基百科〈麥帥二橋〉",
+          "url": "https://zh.wikipedia.org/wiki/%E9%BA%A5%E5%B8%A5%E4%BA%8C%E6%A9%8B"
+        }
+      ],
+      "photo": {
+        "query": "麥帥二橋"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "麥帥二橋，是臺灣臺北市的一座橋梁，位於麥帥一橋下游不到400公尺處，連接松山區健康路及內湖區堤頂大道，於1996年完工，是內湖、南港、松山等地區重要聯絡橋梁，也是基隆河及周遭水岸區域之明顯地標。"
+      }
+    },
+    {
+      "id": "wd-q698347",
+      "name": "南京復興站",
+      "category": "station",
+      "latlng": [
+        25.051936,
+        121.544044
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "原名南京東路站，1996 年隨木柵線通車啟用，2014 年松山線通車後更名為南京復興站，成為文湖線與松山線轉乘站。",
+      "sources": [
+        {
+          "title": "Wikidata Q698347",
+          "url": "https://www.wikidata.org/wiki/Q698347"
+        },
+        {
+          "title": "維基百科〈南京復興站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8D%97%E4%BA%AC%E5%BE%A9%E8%88%88%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "南京復興站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "*1996年3月28日：木柵線南京東路站隨著木柵線（今文湖線）正式通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-506",
+      "name": "富民生態公園",
+      "category": "park",
+      "latlng": [
+        25.06015,
+        121.564339
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "富民生態公園是一座生態主題公園，全區呈帶狀面積約8,413平方公尺，位於松山區民生東路五段177巷旁，介於三民路及新東街之間。自民國86年起至91年底，經過6期整建始逐步完成。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "富民生態公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q11411917",
+      "name": "臺北市立西松高級中學",
+      "category": "school",
+      "latlng": [
+        25.055357,
+        121.566347
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "前身為 1968 年創校的西松國民中學，舊校址位於南京東路五段巷內，1997 年 6 月遷校至松山區健康路現址，即今日校地。",
+      "sources": [
+        {
+          "title": "Wikidata Q11411917",
+          "url": "https://www.wikidata.org/wiki/Q11411917"
+        },
+        {
+          "title": "維基百科〈臺北市立西松高級中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E8%A5%BF%E6%9D%BE%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立西松高級中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1997年6月，遷校至松山區健康路現址。"
+      }
+    },
+    {
+      "id": "tpark-337",
+      "name": "舊宗2號公園",
+      "category": "park",
+      "latlng": [
+        25.054911,
+        121.57
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "舊宗2號公園，位於松山區松山抽水站兩側，西面塔悠路、東背基隆河、左側健康路、臺北市麥帥二橋越過其中、鄰近健康公園及鵬程公園，基地呈梯型，面積總計795平方公尺，民國89年開闢為公園，供民眾使用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "舊宗2號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-92",
+      "name": "復盛公園",
+      "category": "park",
+      "latlng": [
+        25.04748,
+        121.56147
+      ],
+      "start": 2004,
+      "end": null,
+      "desc": "原名為「捐地公園」，後因所屬於松山區復盛里，故經研商後，於2012年8月29日正式更名為「復盛公園」。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "復盛公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q710183",
+      "name": "臺北小巨蛋",
+      "category": "sports",
+      "latlng": [
+        25.050699,
+        121.550122
+      ],
+      "start": 2005,
+      "end": null,
+      "desc": "座落於南京東路與敦化北路口，原址為已拆除的台北市立棒球場，由臺北市政府興建，2005 年 12 月正式開幕。",
+      "sources": [
+        {
+          "title": "Wikidata Q710183",
+          "url": "https://www.wikidata.org/wiki/Q710183"
+        },
+        {
+          "title": "維基百科〈臺北小巨蛋〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B0%8F%E5%B7%A8%E8%9B%8B"
+        }
+      ],
+      "photo": {
+        "query": "臺北小巨蛋"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "臺北小巨蛋由臺北市政府興建，2005年10月試營運，2005年12月1日正式開幕，以市有財產委託經營管理採購案之合約形式交由東森媒體集團旗下公司「東森巨蛋經營管理股份有限公司」（簡稱東森巨蛋）經營，東森巨蛋每年繳交台北市政府權利金約新台幣1億7,000多萬元。"
+      }
+    },
+    {
+      "id": "wd-q11104381",
+      "name": "松山運動中心",
+      "category": "sports",
+      "latlng": [
+        25.048611,
+        121.550222
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "臺北市松山區的公有運動中心，2009 年 11 月 1 日正式啟用，由匯陽百貨承包經營。",
+      "sources": [
+        {
+          "title": "Wikidata Q11104381",
+          "url": "https://www.wikidata.org/wiki/Q11104381"
+        },
+        {
+          "title": "維基百科〈松山運動中心〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%9D%BE%E5%B1%B1%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83"
+        }
+      ],
+      "photo": {
+        "query": "松山運動中心"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2009年11月1日正式啟用，承包經營單位是匯陽百貨。"
+      }
+    },
+    {
+      "id": "wd-q699690",
+      "name": "松山機場站",
+      "category": "station",
+      "latlng": [
+        25.063071,
+        121.551599
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "臺北捷運文湖線車站，2008 年完成竣工，2009 年 7 月 4 日隨內湖線正式通車而啟用，服務松山機場周邊。",
+      "sources": [
+        {
+          "title": "Wikidata Q699690",
+          "url": "https://www.wikidata.org/wiki/Q699690"
+        },
+        {
+          "title": "維基百科〈松山機場站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%9D%BE%E5%B1%B1%E6%A9%9F%E5%A0%B4%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "松山機場站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "*2009年7月4日：隨著內湖線正式通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-796",
+      "name": "松基公園",
+      "category": "park",
+      "latlng": [
+        25.055369,
+        121.545445
+      ],
+      "start": 2012,
+      "end": null,
+      "desc": "松基公園位於北市松山區復興北路、長春路、慶城街，綠蔭大道整齊潔淨，公園內種多樹木，如樟樹、鳳凰木等的樹木；公園內樹木枝葉全年濃密可遮蔭，很適合大清早來呼吸芬多精。人行步道平坦無障礙空間設計，是市民休閒好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "松基公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q6963682",
+      "name": "南京三民站",
+      "category": "station",
+      "latlng": [
+        25.05142,
+        121.5643
+      ],
+      "start": 2014,
+      "end": null,
+      "desc": "臺北捷運松山線車站，於 2014 年 11 月 15 日隨松山線正式通車而啟用，位於松山區南京東路上。",
+      "sources": [
+        {
+          "title": "Wikidata Q6963682",
+          "url": "https://www.wikidata.org/wiki/Q6963682"
+        },
+        {
+          "title": "維基百科〈南京三民站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8D%97%E4%BA%AC%E4%B8%89%E6%B0%91%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "南京三民站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "*2014年11月15日：隨著松山線正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q7676270",
+      "name": "台北小巨蛋站",
+      "category": "station",
+      "latlng": [
+        25.051686,
+        121.551499
+      ],
+      "start": 2014,
+      "end": null,
+      "desc": "臺北捷運松山線車站，於 2014 年 11 月 15 日隨松山線正式通車而啟用，鄰近臺北小巨蛋一帶。",
+      "sources": [
+        {
+          "title": "Wikidata Q7676270",
+          "url": "https://www.wikidata.org/wiki/Q7676270"
+        },
+        {
+          "title": "維基百科〈台北小巨蛋站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8F%B0%E5%8C%97%E5%B0%8F%E5%B7%A8%E8%9B%8B%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "台北小巨蛋站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2014年11月15日：隨著松山線正式通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-874",
+      "name": "民福綠地",
+      "category": "park",
+      "latlng": [
+        25.06276,
+        121.54879
+      ],
+      "start": 2016,
+      "end": null,
+      "desc": "民福綠地，2016 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "民福綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-860",
+      "name": "松榮公園",
+      "category": "park",
+      "latlng": [
+        25.060208,
+        121.555107
+      ],
+      "start": 2021,
+      "end": null,
+      "desc": "松榮公園位於富錦街及光復北路處，面積約為7,266平方公尺，公園前身原為空軍眷村，在眷村拆除後，轉為都市農園，後又改建為公園。松榮公園利用設計手法營造出地形上的變化與遠方大屯山景相互呼應，富有寬度變化的步道則象徵瑠公圳的流水，交織於地形變化中，將台北市山水融於公園，別具意義。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "松榮公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    }
+  ]
+}

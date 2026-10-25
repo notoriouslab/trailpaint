@@ -1,0 +1,1708 @@
+{
+  "towncode": "63000090",
+  "county": "臺北市",
+  "town": "南港區",
+  "slug": "taipei-nangang",
+  "items": [
+    {
+      "id": "tpark-309",
+      "name": "中南公園",
+      "category": "park",
+      "latlng": [
+        25.05122,
+        121.615471
+      ],
+      "start": 1967,
+      "end": null,
+      "desc": "中南公園，1967 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "中南公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-283",
+      "name": "胡適公園",
+      "category": "park",
+      "latlng": [
+        25.039921,
+        121.617912
+      ],
+      "start": 1973,
+      "end": null,
+      "desc": "胡適公園於民國62年闢建，佔地2.1公頃，為南港山系延伸的小山丘，位於南港區研究院路二段，與中央研究院僅一路之隔，園內設施包含籃球場、涼亭及體健設施，提供遊園民眾使用。本府依墓園所在的自然山勢，將之開闢為胡適公園，成為墓園公園化一個獨特的典範。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q15915538",
+          "url": "https://www.wikidata.org/wiki/Q15915538"
+        },
+        {
+          "title": "維基百科〈胡適公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%83%A1%E9%81%A9%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "胡適公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-667",
+      "name": "南港29號綠地",
+      "category": "park",
+      "latlng": [
+        25.042391,
+        121.617233
+      ],
+      "start": 1973,
+      "end": null,
+      "desc": "29號綠地位於研究院路二段舊莊街一段交叉路口，緊鄰中央研究院，面積1,138平方公尺，西元1973年闢建。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "南港29號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-126",
+      "name": "南興公園",
+      "category": "park",
+      "latlng": [
+        25.05402,
+        121.606903
+      ],
+      "start": 1978,
+      "end": null,
+      "desc": "南興公園位於南港區行政中心以南與臺鐵南港站、捷運南港站及施工中之高鐵南港站以北之間，公園北邊即為南港區行政中心，是南港地區交通及行政樞紐。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q18128503",
+          "url": "https://www.wikidata.org/wiki/Q18128503"
+        }
+      ],
+      "photo": {
+        "query": "南興公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q15903024",
+      "name": "臺北市立南港高級工業職業學校",
+      "category": "school",
+      "latlng": [
+        25.056669,
+        121.608378
+      ],
+      "start": 1978,
+      "end": null,
+      "desc": "市立高職，1978 年完成教室大樓與實習第一工場，同年 5 月 20 日正式成立設校，首年招收六科十二班。",
+      "sources": [
+        {
+          "title": "Wikidata Q15903024",
+          "url": "https://www.wikidata.org/wiki/Q15903024"
+        },
+        {
+          "title": "維基百科〈臺北市立南港高級工業職業學校〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8D%97%E6%B8%AF%E9%AB%98%E7%B4%9A%E5%B7%A5%E6%A5%AD%E8%81%B7%E6%A5%AD%E5%AD%B8%E6%A0%A1"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立南港高級工業職業學校"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1978年完成「教室大樓」、「實習第一工場」，05月20日正式成立設校，同年7月參加臺北市高職聯招，招收「重機械修護科」、「模具科」、「鑄工科」、「 儀表修護科」、「配管科」、「建築科」等6科12班。"
+      }
+    },
+    {
+      "id": "tpark-327",
+      "name": "新富公園",
+      "category": "park",
+      "latlng": [
+        25.05303,
+        121.616959
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "新富公園雖小，屬於社區型的公園，午前及午後爺爺奶奶帶著小孫子在公園玩耍，在涼亭聊天，提供民眾良好的休閒環境。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "新富公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-41",
+      "name": "聯成公園",
+      "category": "park",
+      "latlng": [
+        25.046591,
+        121.587219
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "位於南港區忠孝東路6段250巷1弄內的聯成公園園內周邊種植臺灣欒樹，臺灣欒樹為臺灣的原生特有種植物，具有樹姿優美、生長快速、樹勢強健、耐空氣污染、綠蔭效果佳且色彩多變化等優點，惟有紅姬緣椿象棲息，春季大量繁殖易遭市民反感，常被誤認為害蟲，然紅姬緣椿象主要係以吸食臺灣欒樹汁液維生，對樹木並無害，成蟲壽命僅2個月，且無法適應溼熱天氣，5月份就會慢慢消失，另紅姬緣椿象也是鳥類之食物，為生態食物鏈中的重要角色。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "聯成公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-630",
+      "name": "玉成公園",
+      "category": "park",
+      "latlng": [
+        25.042549,
+        121.585503
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "玉成公園於民國71年闢建，面積約4公頃，公園位於中坡南路與成福路交接口處，週邊緊鄰學校、土地公廟，為當地居民社交的休閒場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q131414112",
+          "url": "https://www.wikidata.org/wiki/Q131414112"
+        },
+        {
+          "title": "維基百科〈南港區公園列表〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8D%97%E6%B8%AF%E5%8D%80%E5%85%AC%E5%9C%92%E5%88%97%E8%A1%A8"
+        }
+      ],
+      "photo": {
+        "query": "玉成公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-406",
+      "name": "萬福公園",
+      "category": "park",
+      "latlng": [
+        25.046249,
+        121.58445
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "萬福公園位於忠孝東路6段70巷內，面積1954平方公尺，於民國73年開闢屬社區型的鄰里公園，本公園面積雖小但設施卻很多元，具有涼亭、兒童遊戲場、小型表演場及體健設施等多樣性的空間，為當地居民活動聚會的好場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬福公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-789",
+      "name": "成德綠地",
+      "category": "park",
+      "latlng": [
+        25.04645,
+        121.587463
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "成德綠地位於南港區東新街100號之1，西元1984年闢建，面積1,598平方公尺，鄰近有忠孝醫院、成德國小、美國慈恩學校等。綠地一片滿滿綠意的灌木及濃密的榕樹、茄苳、垂榕、小葉欖仁、九重葛、烏臼、蜘蛛百合等喬木，漫步其間彷彿在轉瞬間遠離塵囂。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "成德綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q63923079",
+      "name": "中央研究院史語所歷史文物陳列館",
+      "category": "museum",
+      "latlng": [
+        25.039517,
+        121.61619
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "由王大閎設計的歷史文物陳列館大樓於 1986 年 6 月落成，陳列館隨之成立，史語所的大陸考古文物轉移至此收藏展示。",
+      "sources": [
+        {
+          "title": "Wikidata Q63923079",
+          "url": "https://www.wikidata.org/wiki/Q63923079"
+        },
+        {
+          "title": "維基百科〈中央研究院歷史語言研究所歷史文物陳列館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%A4%AE%E7%A0%94%E7%A9%B6%E9%99%A2%E6%AD%B7%E5%8F%B2%E8%AA%9E%E8%A8%80%E7%A0%94%E7%A9%B6%E6%89%80%E6%AD%B7%E5%8F%B2%E6%96%87%E7%89%A9%E9%99%B3%E5%88%97%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "中央研究院史語所歷史文物陳列館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1986年6月，由王大閎設計的歷史文物陳列館大樓落成，歷史文物陳列館成立，史語所中國大陸考古文物由考古館轉移至文物館大樓收藏展示。"
+      }
+    },
+    {
+      "id": "tpark-134",
+      "name": "新勝公園",
+      "category": "park",
+      "latlng": [
+        25.048849,
+        121.593163
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "座落於臺北市南港區昆陽街152巷33號，面積2,845平方公尺(0.28公頃)，於民國76年10月興建，迨至91年8月修建而成目前的風貌，是具有多功能的綜合公園。園內有健康步道，供市民運動健身，也適合親子同樂於兒童遊戲區，另有小型棚頂廣場方便市民運動、集會或休息。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "新勝公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-266",
+      "name": "興南公園",
+      "category": "park",
+      "latlng": [
+        25.05512,
+        121.597397
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "興南公園雖小，且四週馬路圍繞，公園內以肯式蒲桃為主要林相，整合週邊社區資源-園長、認養人、東新里辦公處、育成高級中學,東新國民小學，發展公園環境藝術，將環境教育落實於生活中。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q136721255",
+          "url": "https://www.wikidata.org/wiki/Q136721255"
+        }
+      ],
+      "photo": {
+        "query": "興南公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-297",
+      "name": "南港公園",
+      "category": "park",
+      "latlng": [
+        25.04307,
+        121.591911
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "南港公園於民國76年闢建，面積約11.8公頃，園內地勢依山傍水，建築饒富中國風味。公園位於東新街與成福路交接口處，北接聯勤總部，南聯南港國宅，向西遠眺可望及信義區四獸山，視野遼闊，是南港區最大且擁有天然埤塘的景觀公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q16926403",
+          "url": "https://www.wikidata.org/wiki/Q16926403"
+        },
+        {
+          "title": "維基百科〈南港公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8D%97%E6%B8%AF%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "南港公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-474",
+      "name": "合成公園",
+      "category": "park",
+      "latlng": [
+        25.045099,
+        121.581139
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "合成公園位於合成里永吉路與中坡北路交叉口，屬車水馬龍的交通要道，公園旁有『顯應聖宮』，公園樹蔭提供民眾休閒遮陰，還有小朋友最愛的遊具組合。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "合成公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-116",
+      "name": "興華公園",
+      "category": "park",
+      "latlng": [
+        25.05677,
+        121.60479
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "興華公園位於興華路巷內，屬於社區型的公園，午前及午後爺爺奶奶帶著小孫子在公園玩耍，在涼亭聊天。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "興華公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-152",
+      "name": "舊莊公園",
+      "category": "park",
+      "latlng": [
+        25.04137,
+        121.62027
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "舊莊公園內視野開闊以綠色草坪為覆地，廣場有菩提樹點綴，周圍種植榕樹樹蔭是民眾喜歡休憩的角落。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "舊莊公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-198",
+      "name": "理想公園",
+      "category": "park",
+      "latlng": [
+        25.039869,
+        121.62159
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "園內有枕木鑲成的梯坪空間，卵石砌成的森林小徑，以及木製的花廊、平臺，與原有堅硬冰冷的水泥建材結合後，使公共空間更貼近自然。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "理想公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-473",
+      "name": "六福公園",
+      "category": "park",
+      "latlng": [
+        25.04726,
+        121.616508
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "本公園設有兒童遊戲場、涼亭、步道等多項設施，體貼各年齡層的需求，使用率極高，亦提供都市中的生物良好的生態棲地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "六福公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-601",
+      "name": "中研公園",
+      "category": "park",
+      "latlng": [
+        25.04689,
+        121.613052
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "中研公園於民國78年闢建，佔地約1.5公頃，位於研究院路二段12巷內，園內喬木種類包括水黃皮、第倫桃、樟樹、阿勃勒、大王椰子、蒲葵、榔榆、羊蹄甲、台灣欒樹、楓香、大花紫薇、黑板樹及榕樹等；灌木包括桂花、變葉木、朱蕉、春不老、南美朱槿、野牡丹、金英樹、七里香等觀花及觀葉植物，配合入口意象、設施界定、地形景觀等配置綠化，營造出四季變化之美。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "中研公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-460",
+      "name": "合成8號綠園綠地",
+      "category": "park",
+      "latlng": [
+        25.050831,
+        121.593788
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "合成8號綠園位於南港區東新街土至忠孝東路6段449號，面積21,321平方公尺。綠地一片滿滿綠意的灌木及濃密的榕樹、茄苳、鳳凰木、小葉欖仁、大花紫薇、山櫻花、等十餘種喬木，配合不同的時期開花與變色落葉，充分展現四季變換之美，加上青翠宜人的美麗草皮，漫步其間彷彿在轉瞬間遠離塵囂。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "合成8號綠園綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-48",
+      "name": "南汐公園",
+      "category": "park",
+      "latlng": [
+        25.05468,
+        121.617691
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "南港路1段與研究院路1段交叉口，捷運南港展覽館站5號、6號出口及周遭綠地範圍，就是南汐公園。由於捷運南港線東延段經貿南站之站體位於南汐公園下方，係配合捷運車站興建工程之需求全面開挖，故現有的地面景觀整體管理維護委由捷運公司負責。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "南汐公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-683",
+      "name": "合成18號綠園",
+      "category": "park",
+      "latlng": [
+        25.046261,
+        121.582916
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "合成18號綠園位於忠孝東路6段玉成街口至東新街口，面積5,631平方公尺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "合成18號綠園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-942",
+      "name": "九如綠地D",
+      "category": "park",
+      "latlng": [
+        25.038561,
+        121.61631
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "九如綠地座落於南港區研究院路150巷底、四分溪旁，開闢於西元1991年，面積約有8,322平方公尺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "九如綠地D"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-292",
+      "name": "東明公園",
+      "category": "park",
+      "latlng": [
+        25.0548,
+        121.603638
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "公園內設有兒童遊戲場、溜冰場、涼亭、步道等多項設施，體貼各年齡層的需求，使用率極高。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "東明公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-494",
+      "name": "福山公園",
+      "category": "park",
+      "latlng": [
+        25.044701,
+        121.617851
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "本公園林陰豐富，常見鄰近居民漫步於公園中，午間亦有民眾在此用餐，享受休憩空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "福山公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-640",
+      "name": "東新綠地",
+      "category": "park",
+      "latlng": [
+        25.053591,
+        121.602448
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "東新綠地位於南港路二段104號，面積7,450平方公尺。西元1992年開闢。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "東新綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-749",
+      "name": "成福綠地",
+      "category": "park",
+      "latlng": [
+        25.04537,
+        121.592949
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "南港45號成福綠地,係於西元1992年完成開闢，位於東新街170巷口,南港公園旁。綠地面積為1,210平方公尺。綠地內設有大草坪搭配牛隻動物造型雕塑、涼亭、步道等設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "成福綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-413",
+      "name": "南深綠地",
+      "category": "park",
+      "latlng": [
+        25.03793,
+        121.623161
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "南深綠地座落於南港區舊莊街一段231號旁，開闢於西元1993年，面積約有2,197平方公尺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "南深綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-401",
+      "name": "東坡公園",
+      "category": "park",
+      "latlng": [
+        25.045231,
+        121.593308
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "位於南港區東新街180巷內的社區公園，公園處於民國94年起接管，公園面積1,184平方公尺，園內設有兒童遊戲場及木平台，種植水黃皮、鳳凰木、茄苳、桑樹等喬木提供休憩民眾遮蔭乘涼，新植耐蔭性植栽-白鶴芋，為公園增添一抹明亮的色彩，再往公園裡走，你會發現，有1個石頭上刻著：莫聽穿林打葉聲，何妨吟嘯且徐行。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "東坡公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-516",
+      "name": "重陽公園",
+      "category": "park",
+      "latlng": [
+        25.0562,
+        121.599152
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "重陽公園位於中國電視公司公車站牌旁，廣大的樹蔭，形成涼爽的林蔭公園，早晨及午後常見爺爺奶奶帶小孫子在公園乘涼、玩耍。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "重陽公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-938",
+      "name": "四分綠地D",
+      "category": "park",
+      "latlng": [
+        25.034326,
+        121.612552
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "四分綠地C位於研究院路三段86巷27弄12號對面，組合遊具遊戲區舖設的彈性地墊充分確保兒童遊戲時的安全。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "四分綠地D"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-72",
+      "name": "東明綠地",
+      "category": "park",
+      "latlng": [
+        25.05427,
+        121.600693
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "東明綠地位於南港路二段72巷21弄內，面積2,533平方公尺，於民國1996年開闢完成。綠地為一長條形狀，平坦步道旁有小葉欖仁、台灣灤樹、茄冬、楓香、烏臼、春不老、豔紫荊喬木等。除了欣賞植物的綠意盎然，花木扶疏，不妨靜下心細細聆聽各式鳥鳴叫聲。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "東明綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-335",
+      "name": "新坡綠地",
+      "category": "park",
+      "latlng": [
+        25.03561,
+        121.617752
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "新坡綠地位於研究院路二段213巷2號前，面積1,055平方公尺，西元1998年闢建。綠地位於小山坡地，地形較為特殊。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "新坡綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-730",
+      "name": "東陽公園",
+      "category": "park",
+      "latlng": [
+        25.05744,
+        121.603737
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "公園內設有籃球場、羽球場、兒童遊戲場、溜冰場、涼亭等多項設施，體貼各年齡層的需求，使用率極高。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "東陽公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-692",
+      "name": "新陽綠地",
+      "category": "park",
+      "latlng": [
+        25.056931,
+        121.603416
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "新陽綠地位於南港區興南街272巷3號對面，面積5,610平方公尺，西元2000年闢建。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "新陽綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q698675",
+      "name": "捷運後山埤站",
+      "category": "station",
+      "latlng": [
+        25.044864,
+        121.582342
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "臺北捷運板南線車站，於 2000 年 12 月 30 日隨板南線「昆陽－市政府」段正式通車而啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q698675",
+          "url": "https://www.wikidata.org/wiki/Q698675"
+        },
+        {
+          "title": "維基百科〈後山埤站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%BE%8C%E5%B1%B1%E5%9F%A4%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運後山埤站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2000年12月30日：隨著板南線「昆陽－市政府」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698774",
+      "name": "捷運昆陽站",
+      "category": "station",
+      "latlng": [
+        25.050492,
+        121.593278
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "臺北捷運南港線車站，於 2000 年 12 月 30 日隨「昆陽－市政府」段正式通車而啟用，2008 年再向東延伸至南港站。",
+      "sources": [
+        {
+          "title": "Wikidata Q698774",
+          "url": "https://www.wikidata.org/wiki/Q698774"
+        },
+        {
+          "title": "維基百科〈昆陽站 (臺北市)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%98%86%E9%99%BD%E7%AB%99%20(%E8%87%BA%E5%8C%97%E5%B8%82)"
+        }
+      ],
+      "photo": {
+        "query": "捷運昆陽站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2000年12月30日：隨著南港線「昆陽－市政府」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-366",
+      "name": "幸福公園",
+      "category": "park",
+      "latlng": [
+        25.046021,
+        121.616051
+      ],
+      "start": 2002,
+      "end": null,
+      "desc": "本公園以生態景觀為主體，目的提供鄰近居民漫步的休憩空間，如同漫步在森林中，有豐富的芬多精及負離子，有宜身心健康。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "幸福公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-616",
+      "name": "四分河濱公園",
+      "category": "park",
+      "latlng": [
+        25.04863,
+        121.615692
+      ],
+      "start": 2002,
+      "end": null,
+      "desc": "四分河濱公園位於南港區研究院路二段與中研公園間，南側臨四分溪畔，目前開闢面積約1.2公頃，於91年及96年部份開闢6,518平方公尺，98年擴建4,588平方公尺，98年12月中旬正式開放使用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "四分河濱公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q15242423",
+      "name": "中央研究院嶺南美術館",
+      "category": "museum",
+      "latlng": [
+        25.040278,
+        121.615
+      ],
+      "start": 2002,
+      "end": null,
+      "desc": "隸屬中央研究院歐美研究所的美術館，展館設在南港院區近美大樓，2002 年歐豪年文化基金會贈畫後於 6 月 28 日開館。",
+      "sources": [
+        {
+          "title": "Wikidata Q15242423",
+          "url": "https://www.wikidata.org/wiki/Q15242423"
+        },
+        {
+          "title": "維基百科〈中央研究院嶺南美術館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%A4%AE%E7%A0%94%E7%A9%B6%E9%99%A2%E5%B6%BA%E5%8D%97%E7%BE%8E%E8%A1%93%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "中央研究院嶺南美術館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2002年，歐豪年文化基金會贈與中央研究院百餘幅畫作，均出自嶺南畫派名家，包括該畫派遠祖居廉，嶺南畫派三傑高劍父、高奇峰、陳樹人、趙少昂以及歐豪年本人等；嶺南美術館爰於6月28日開館。"
+      }
+    },
+    {
+      "id": "wd-q15901807",
+      "name": "臺北市立育成高級中學",
+      "category": "school",
+      "latlng": [
+        25.058125,
+        121.608952
+      ],
+      "start": 2002,
+      "end": null,
+      "desc": "位於南港區的市立高中，為落實「區區有高中」政策而籌設，2002 年校舍竣工，正式開始招生。",
+      "sources": [
+        {
+          "title": "Wikidata Q15901807",
+          "url": "https://www.wikidata.org/wiki/Q15901807"
+        },
+        {
+          "title": "維基百科〈臺北市立育成高級中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E8%82%B2%E6%88%90%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立育成高級中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2002年校舍竣工，正式開始招生，由陳必讀擔任首任校長。"
+      }
+    },
+    {
+      "id": "tpark-12",
+      "name": "港後公園",
+      "category": "park",
+      "latlng": [
+        25.06275,
+        121.615379
+      ],
+      "start": 2003,
+      "end": null,
+      "desc": "公園以綠地設計，視野開闊，以草坪覆地，搭配不同的喬灌木，提供都市中的生物良好的生態棲地，常見多樣性的物種在此出現。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "港後公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-744",
+      "name": "經貿公園",
+      "category": "park",
+      "latlng": [
+        25.06258,
+        121.616364
+      ],
+      "start": 2003,
+      "end": null,
+      "desc": "公園以綠地設計，視野開闊，以草坪覆地，搭配不同的喬灌木。夏天灌木開花時會吸引甲蟲，蝶類前來覓食。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q136721253",
+          "url": "https://www.wikidata.org/wiki/Q136721253"
+        }
+      ],
+      "photo": {
+        "query": "經貿公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-233",
+      "name": "合樂公園",
+      "category": "park",
+      "latlng": [
+        25.0485,
+        121.581886
+      ],
+      "start": 2004,
+      "end": null,
+      "desc": "合樂公園位於南港區玉成街48號對面，南港運動中心旁，於民國93年闢建，公園面積2,204平方公尺，園內栽植茄苳、桃花心木、小葉欖仁等喬木，搭配錐形羅漢松、變葉木、宮粉仙丹等植栽，設有兒童遊戲場、塑木座椅、弧形花廊，讓往來遊客可在花廊下躲雨，且增設機械式體健設施，提供民眾運動新選擇。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "合樂公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-256",
+      "name": "合心廣場",
+      "category": "park",
+      "latlng": [
+        25.04661,
+        121.583458
+      ],
+      "start": 2004,
+      "end": null,
+      "desc": "合心廣場位於玉成街與忠孝東路六段交叉口(原南隆鐵工廠)，面積2,041平方公尺，西元2004年闢建。廣場內鄰近中華電信公司及住商辦公大樓。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "合心廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q10908517",
+      "name": "臺北市南港運動中心",
+      "category": "sports",
+      "latlng": [
+        25.04904,
+        121.58055
+      ],
+      "start": 2006,
+      "end": null,
+      "desc": "位於南港區的市立運動中心，於 2006 年 12 月 1 日正式啟用，由中國青年救國團承包經營。",
+      "sources": [
+        {
+          "title": "Wikidata Q10908517",
+          "url": "https://www.wikidata.org/wiki/Q10908517"
+        },
+        {
+          "title": "維基百科〈南港運動中心〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8D%97%E6%B8%AF%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83"
+        }
+      ],
+      "photo": {
+        "query": "臺北市南港運動中心"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2006年12月1日正式啟用，承包經營單位是中國青年救國團。"
+      }
+    },
+    {
+      "id": "tpark-205",
+      "name": "新南綠地",
+      "category": "park",
+      "latlng": [
+        25.051849,
+        121.606552
+      ],
+      "start": 2007,
+      "end": null,
+      "desc": "新南綠地位於忠孝東路七段398號(平均地權基金)，面積4,321平方公尺，於西元2007年闢建。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "新南綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-359",
+      "name": "後山埤公園",
+      "category": "park",
+      "latlng": [
+        25.043711,
+        121.589951
+      ],
+      "start": 2007,
+      "end": null,
+      "desc": "後山埤公園於民國96年闢建，位於東新街170巷旁，緊鄰南港公園西側，佔地7.2公頃，目前闢建部分原為南港第三公墓之範圍計5.7公頃，約有墳墓4,000餘座，本處於95年11月28日進行墳墓遷移、開闢為休憩公園，於96年9月10日完工開放使用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q122001078",
+          "url": "https://www.wikidata.org/wiki/Q122001078"
+        }
+      ],
+      "photo": {
+        "query": "後山埤公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-255",
+      "name": "昆陽公園",
+      "category": "park",
+      "latlng": [
+        25.048719,
+        121.5942
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "昆陽公園，2009 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "昆陽公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q115445",
+      "name": "捷運南港軟體園區站",
+      "category": "station",
+      "latlng": [
+        25.059933,
+        121.615872
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "臺北捷運文湖線車站，2009 年 2 月實質完工，同年 7 月 4 日隨內湖線正式通車而啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q115445",
+          "url": "https://www.wikidata.org/wiki/Q115445"
+        },
+        {
+          "title": "維基百科〈南港軟體園區站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8D%97%E6%B8%AF%E8%BB%9F%E9%AB%94%E5%9C%92%E5%8D%80%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運南港軟體園區站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2009年7月4日：隨著內湖線正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q699465",
+      "name": "捷運南港展覽館站",
+      "category": "station",
+      "latlng": [
+        25.055247,
+        121.617547
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "臺北捷運車站，內湖線於 2009 年 7 月 4 日正式通車而啟用，南港線月台則在 2011 年才通車啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q699465",
+          "url": "https://www.wikidata.org/wiki/Q699465"
+        },
+        {
+          "title": "維基百科〈南港展覽館站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8D%97%E6%B8%AF%E5%B1%95%E8%A6%BD%E9%A4%A8%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運南港展覽館站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2009年7月4日：隨著內湖線正式通車而啟用，並同時啟用南港線南港站至本站間免費接駁公車（由指南客運行駛），以期減低忠孝復興站的運量負擔。"
+      }
+    },
+    {
+      "id": "tpark-231",
+      "name": "中興公園",
+      "category": "park",
+      "latlng": [
+        25.044201,
+        121.614853
+      ],
+      "start": 2010,
+      "end": null,
+      "desc": "中興公園位於南港區研究院路2段98巷內，與中央研究院相鄰，於民國99年闢建，公園面積1,168平方公尺，園內栽植樟樹、臺灣欒樹、青楓、茄苳、大花紫薇、烏桕等喬木，搭配錐形羅漢松、杜鵑、七里香、桂花等植栽，並設有弧形花廊，讓往來遊客可在花廊下躲雨。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "中興公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-86",
+      "name": "湧聲公園",
+      "category": "park",
+      "latlng": [
+        25.04328,
+        121.592758
+      ],
+      "start": 2010,
+      "end": null,
+      "desc": "南港66號公園-湧聲公園位於南港區東新街170巷，緊鄰南港公園，民國96年3月15日都市計畫公告劃設公園，面積1,555平方公尺，以市地重劃方式取得用地整體開發，並由南港區南港1號公園東南側自辦市地重劃區重劃會闢建完成後交由公園處接管。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湧聲公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q75902234",
+      "name": "臺北市南港區南港國民小學",
+      "category": "school",
+      "latlng": [
+        25.057564,
+        121.610653
+      ],
+      "start": 2010,
+      "end": null,
+      "desc": "前身為 1914 年成立的錫口公學校南港分校，是南港區最早的小學；新校舍於 2010 年 2 月底起正式啟用上課。",
+      "sources": [
+        {
+          "title": "Wikidata Q75902234",
+          "url": "https://www.wikidata.org/wiki/Q75902234"
+        },
+        {
+          "title": "維基百科〈臺北市南港區南港國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%8D%97%E6%B8%AF%E5%8D%80%E5%8D%97%E6%B8%AF%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市南港區南港國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "南港國小的新校舍在2007年9月17日動工，2010年3月完工，學校則自2009年陸續進行遷校作業，在2010年2月底正式在新校舍上課，原校舍則在後來拆除興建臺北南港展覽館2館。"
+      }
+    },
+    {
+      "id": "tpark-216",
+      "name": "南港五號廣場",
+      "category": "park",
+      "latlng": [
+        25.05407,
+        121.5998
+      ],
+      "start": 2011,
+      "end": null,
+      "desc": "南港五號廣場位於南港路二段以南，178巷對面，面積1,900平方公尺，原南港輪胎工廠自辦重劃於西元2011年闢建。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "南港五號廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-427",
+      "name": "南港65號園區綠地",
+      "category": "park",
+      "latlng": [
+        25.059031,
+        121.61422
+      ],
+      "start": 2011,
+      "end": null,
+      "desc": "南港65號園區綠地位於重陽路以東、三重路以西，中央為道路分隔為南北2段，西元2011年闢建，綠地南段由台肥協助開闢並捐贈,北段由筑丰實業綠美化。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "南港65號園區綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-539",
+      "name": "三重世貿公園",
+      "category": "park",
+      "latlng": [
+        25.05793,
+        121.615387
+      ],
+      "start": 2011,
+      "end": null,
+      "desc": "為提供市民更多的停車空間，停管處新建南港區世貿公園地下停車場，並於民國100年簡易綠美化，公園面積約1.2公頃，位於南港區經貿二路106巷，東側為南港展覽館、西側為南港軟體園區(第一、二期園區)、南側為南港軟體園區(第三期園區)、北側為中國信託企業總部大樓。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "三重世貿公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-774",
+      "name": "市民公園",
+      "category": "park",
+      "latlng": [
+        25.04929,
+        121.581734
+      ],
+      "start": 2012,
+      "end": null,
+      "desc": "南港60號公園位於南港區市民大道7段與玉成街交叉口處的三角公園，係配合鐵路地下化由交通部鐵改局南港專案開闢興建，公園面積1,050平方公尺，園內花台邊設置木質座椅，提供往來民眾短暫休憩；種植華盛頓椰子、光臘樹、水黃皮、山黃梔、錫蘭葉下珠及鴨跖草等植栽，為枯燥乏味的柏油路增添一抹綠意。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "市民公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-862",
+      "name": "錫口廊道",
+      "category": "park",
+      "latlng": [
+        25.051007,
+        121.579931
+      ],
+      "start": 2012,
+      "end": null,
+      "desc": "錫口廊道，2012 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "錫口廊道"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-492",
+      "name": "瓶蓋印象公園",
+      "category": "park",
+      "latlng": [
+        25.053719,
+        121.606226
+      ],
+      "start": 2016,
+      "end": null,
+      "desc": "「瓶蓋印象公園」位於南港瓶蓋工廠舊址，緊鄰南港車站，為臺北東區門戶之一環。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "瓶蓋印象公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-791",
+      "name": "玉東公園",
+      "category": "park",
+      "latlng": [
+        25.050188,
+        121.584156
+      ],
+      "start": 2017,
+      "end": null,
+      "desc": "玉東公園，是南港區玉成自辦市地重劃區重劃後的成果，由市府無償取得9,500平方公尺的公園用地，由本府地政局土開開發總隊及各單位夥伴共同打造，後經地方命名為「玉東公園」。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q97349755",
+          "url": "https://www.wikidata.org/wiki/Q97349755"
+        },
+        {
+          "title": "維基百科〈玉東公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E7%8E%89%E6%9D%B1%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "玉東公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    }
+  ]
+}

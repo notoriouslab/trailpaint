@@ -1,0 +1,2732 @@
+{
+  "towncode": "63000100",
+  "county": "臺北市",
+  "town": "內湖區",
+  "slug": "taipei-neihu",
+  "items": [
+    {
+      "id": "wd-q11594746",
+      "name": "臺北市私立方濟高級中學",
+      "category": "school",
+      "latlng": [
+        25.077291,
+        121.590949
+      ],
+      "start": 1965,
+      "end": null,
+      "desc": "天主教比利時方濟會於內湖現址籌建校舍，1965 年 8 月方濟中學正式成立，首期有一棟三層教學大樓。",
+      "sources": [
+        {
+          "title": "Wikidata Q11594746",
+          "url": "https://www.wikidata.org/wiki/Q11594746"
+        },
+        {
+          "title": "維基百科〈臺北市私立方濟高級中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%A7%81%E7%AB%8B%E6%96%B9%E6%BF%9F%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市私立方濟高級中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1965年8月，「方濟中學」正式成立，成世光主教出任首任董事長，首任校長申培謙神父，共有教學大樓一棟三層12間教室，招生200多位學生。"
+      }
+    },
+    {
+      "id": "tpark-301",
+      "name": "大湖公園",
+      "category": "park",
+      "latlng": [
+        25.082976,
+        121.602695
+      ],
+      "start": 1979,
+      "end": null,
+      "desc": "大湖公園DahuPark位於內湖區成功路5段，湖泊因白鷺成群又名白鷺湖。其毗鄰白鷺山，遙指五指山、忠勇山等，佔地約13公頃餘。始於民國68年仿中國園林興建，大湖湖泊面積約10公頃餘，屬區域性公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q10936501",
+          "url": "https://www.wikidata.org/wiki/Q10936501"
+        },
+        {
+          "title": "維基百科〈大湖公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E6%B9%96%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "大湖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-207",
+      "name": "碧山公園",
+      "category": "park",
+      "latlng": [
+        25.08708,
+        121.591957
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "公園內花木扶疏，滿園綠意，環境幽雅，並設有溜冰場及遊樂設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "碧山公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-293",
+      "name": "瑞陽公園",
+      "category": "park",
+      "latlng": [
+        25.07751,
+        121.579352
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "園內設施完善，遍植不同灌木，與文德3號公園連成一片綠帶。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "瑞陽公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-315",
+      "name": "港華四號公園",
+      "category": "park",
+      "latlng": [
+        25.086531,
+        121.575279
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "公園面積迷你，以綠地、植栽觀賞為主。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "港華四號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-369",
+      "name": "港華二號公園",
+      "category": "park",
+      "latlng": [
+        25.08779,
+        121.573837
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "公園面積迷你，以綠地、植栽觀賞為主。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "港華二號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-383",
+      "name": "港華一號公園",
+      "category": "park",
+      "latlng": [
+        25.087734,
+        121.573586
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "茂密的大榕樹及石桌、椅，提供附近民眾輕鬆自在的乘涼遮蔭處，兒童遊樂區則是鄰近孩童互動玩耍的休閒場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "港華一號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-466",
+      "name": "湖山六號公園",
+      "category": "park",
+      "latlng": [
+        25.083099,
+        121.60186
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "景觀美麗，充滿綠意，整齊清潔的公園，除了提供長者休憩外，兒童遊樂區則是鄰近孩童互動玩耍的休閒場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湖山六號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-541",
+      "name": "港華三號公園",
+      "category": "park",
+      "latlng": [
+        25.086691,
+        121.575058
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "公園面積迷你，以綠地、植栽觀賞為主。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "港華三號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-551",
+      "name": "湖山三號公園",
+      "category": "park",
+      "latlng": [
+        25.08716,
+        121.604469
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "位於社區內，還保留有蔣公銅像，以大片綠地、植栽觀賞為主。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湖山三號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-607",
+      "name": "湖山四號公園",
+      "category": "park",
+      "latlng": [
+        25.082701,
+        121.600754
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "公園內花木扶疏，滿園綠意，環境幽雅，並設有木製平台及體健設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湖山四號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-652",
+      "name": "港華六號公園",
+      "category": "park",
+      "latlng": [
+        25.084261,
+        121.574623
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "本公園雖面積不大但綠樹成蔭，園內大樹生長良好，樹型優美，將利用本特性延伸至整體規劃設計之中，期望落實花園城市「文化、綠意、美質」的目標，發揮「形塑靜謐綠色空間」及「景觀主題重塑」等實質功能，促進民眾優質生活。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "港華六號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-724",
+      "name": "港華5號綠地",
+      "category": "park",
+      "latlng": [
+        25.085449,
+        121.574287
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "港華5號綠地位於內湖區環山路2段62號對面，面積418平方公尺，西元1983年闢建。在車水馬龍的馬路旁，園內植栽有楓香、大王椰子、印度橡膠樹等喬木，雖面積不大沒有完整的硬體設施，但綠樹成蔭，園內大樹生長良好、樹型優美，令人一進園內即感到無限綠意與幽靜。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "港華5號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-767",
+      "name": "湖山八號公園",
+      "category": "park",
+      "latlng": [
+        25.08392,
+        121.603271
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "公園面積迷你，以綠地、植栽觀賞為主。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湖山八號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-93",
+      "name": "湖山五號公園",
+      "category": "park",
+      "latlng": [
+        25.081579,
+        121.600838
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "公園內花木扶疏，滿園綠意，環境幽雅，並設有木製平台及體健設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湖山五號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-424",
+      "name": "安湖三號公園",
+      "category": "park",
+      "latlng": [
+        25.070419,
+        121.615692
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "公園內花木扶疏，里長並自費種植櫻花，且設有組合遊具等，為附近居民最佳休憩娛樂場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "安湖三號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-482",
+      "name": "樂康公園",
+      "category": "park",
+      "latlng": [
+        25.07007,
+        121.620697
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "為鄰里間的小型公園，設有涼亭及組合遊具，是老少咸宜的綠地空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "樂康公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-530",
+      "name": "東湖二號公園",
+      "category": "park",
+      "latlng": [
+        25.073891,
+        121.610924
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "園內設施完善，公園樹蔭提供民眾休閒遮陰，隨時可見許多長者漫步公園內、聊天話家常。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "東湖二號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-588",
+      "name": "東湖四號公園",
+      "category": "park",
+      "latlng": [
+        25.07045,
+        121.61808
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "園內充滿綠意，設有磨石子地面，除了提供長者休憩運動外，亦為鄰近孩童歡樂之遊樂場。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "東湖四號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-95",
+      "name": "東湖一號公園",
+      "category": "park",
+      "latlng": [
+        25.0756,
+        121.612137
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "園內設施完善，延伸綠帶遍植不同灌木，深具觀賞教育價值。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "東湖一號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-993",
+      "name": "成功公園",
+      "category": "park",
+      "latlng": [
+        25.084299,
+        121.596626
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "本公園位於內湖區成功路四段223巷旁，鄰近捷運文湖線內湖站。公園的主體是一座小山丘，靠近成功路四段的平坦區域屬於都市公園型態，其餘的山坡地仍保有自然的風貌。從成功路進入公園映入眼簾的是一座涼亭以及一個木棧廣場，高大茂密的印度橡膠樹交錯出涼爽的樹蔭。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "成功公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-302",
+      "name": "湖山9號公園",
+      "category": "park",
+      "latlng": [
+        25.08522,
+        121.6035
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "湖山9號公園位於大湖山莊街42號至56號間，74年開闢，面積10,691平方公尺，園區多為山坡地，為避免過度開發，影響水土保持，仍保留自然的風貌，僅於平坦處適度栽植樹木、草坪綠美化，設有涼亭，提供市民休憩，歡迎民眾多加使用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湖山9號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-688",
+      "name": "港墘公園",
+      "category": "park",
+      "latlng": [
+        25.080978,
+        121.576437
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "公園內花木扶疏，滿園綠意，環境幽雅，並設有涼亭及遊樂設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "港墘公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-646",
+      "name": "新明公園",
+      "category": "park",
+      "latlng": [
+        25.054131,
+        121.578812
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "花木扶疏，散步園中，自有怡然恬適之情。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "新明公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-488",
+      "name": "碧湖公園",
+      "category": "park",
+      "latlng": [
+        25.08219,
+        121.58429
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "碧湖公園BihuPark位於臺北市內湖區內湖路2段175號，鄰近國立臺灣戲曲學院，交通便利，於捷運大湖線文德站下車後，沿著文德路101巷轉入，前進約200公尺即可抵達，面積約13餘公頃，園中的「大陂湖」面積約8公頃，為昔日農業灌溉用水的來源。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q15940899",
+          "url": "https://www.wikidata.org/wiki/Q15940899"
+        },
+        {
+          "title": "維基百科〈碧湖公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E7%A2%A7%E6%B9%96%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "碧湖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-498",
+      "name": "金瑞公園",
+      "category": "park",
+      "latlng": [
+        25.087959,
+        121.587952
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "茂密的大榕樹及石桌、椅，提供附近民眾輕鬆自在的乘涼遮蔭處，兒童遊樂區則是鄰近孩童互動玩耍的休閒場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "金瑞公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-690",
+      "name": "西康公園",
+      "category": "park",
+      "latlng": [
+        25.08312,
+        121.564392
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "花木扶疏，散步園中，自有怡然恬適之情，並設有溜冰場、體健及遊樂設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "西康公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-112",
+      "name": "港都公園",
+      "category": "park",
+      "latlng": [
+        25.08272,
+        121.575233
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "公園樹蔭提供民眾休閒遮陰，還有小朋友最愛的遊具組合，構築了親子與社區情感的聯繫空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "港都公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q7676303",
+      "name": "臺北市立內湖高級中學",
+      "category": "school",
+      "latlng": [
+        25.078389,
+        121.586566
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "1988 年成立，首屆學生借用鄰近國中上課，一年後於 1989 年 9 月返回新建落成的校舍。",
+      "sources": [
+        {
+          "title": "Wikidata Q7676303",
+          "url": "https://www.wikidata.org/wiki/Q7676303"
+        },
+        {
+          "title": "維基百科〈臺北市立內湖高級中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%85%A7%E6%B9%96%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立內湖高級中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "第一屆學生因校舍工程尚未完工，乃洽借鄰近的三民國中和西湖國中兩校部份教學場地，以供學生上課學習，一年之後於1989年9月返回新建落成的校舍。"
+      }
+    },
+    {
+      "id": "tpark-732",
+      "name": "康寧公園",
+      "category": "park",
+      "latlng": [
+        25.068911,
+        121.609589
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "景觀美麗，充滿綠意，整齊清潔的公園，除了提供長者休憩外，亦為鄰近孩童歡樂之遊樂場。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "康寧公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-85",
+      "name": "治磐廣場",
+      "category": "park",
+      "latlng": [
+        25.082729,
+        121.566307
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "治磐廣場位於內湖區內湖路1段285巷8弄2號旁，面積288平方公尺，西元1990年闢建。是一個小型平坦的廣場，種有馬拉巴栗、金龜樹等樹木。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "治磐廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-433",
+      "name": "五分公園",
+      "category": "park",
+      "latlng": [
+        25.06712,
+        121.614792
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "公園位於市場旁，無論晨昏，人聲鼎沸，是老少咸宜的綠地空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "五分公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-643",
+      "name": "西安公園",
+      "category": "park",
+      "latlng": [
+        25.08745,
+        121.567482
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "為一坡地形公園，漫步至山頂時，可眺望德明科技大學一帶之景觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "西安公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-108",
+      "name": "安泰公園",
+      "category": "park",
+      "latlng": [
+        25.074089,
+        121.618637
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "花木扶疏、涼亭橫跨安泰溪上，散步園中，自有怡然恬適之情。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "安泰公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-49",
+      "name": "陽光公園",
+      "category": "park",
+      "latlng": [
+        25.076736,
+        121.586719
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "園內設施完善，遍植不同灌木，與紫陽公園連成一片綠帶。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "陽光公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-704",
+      "name": "金龍公園",
+      "category": "park",
+      "latlng": [
+        25.085432,
+        121.590799
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "為鄰里間的小型公園，民眾休閒漫步其間時，有放鬆休憩的感受。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "金龍公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q15934005",
+      "name": "金龍隧道",
+      "category": "tunnel",
+      "latlng": [
+        25.085556,
+        121.586944
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "位於內湖區的公路隧道，1989 年動工，1992 年 9 月 3 日竣工，居民等不及原訂通車日而提前通行。",
+      "sources": [
+        {
+          "title": "Wikidata Q15934005",
+          "url": "https://www.wikidata.org/wiki/Q15934005"
+        },
+        {
+          "title": "維基百科〈金龍隧道 (臺灣)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E9%87%91%E9%BE%8D%E9%9A%A7%E9%81%93%20(%E8%87%BA%E7%81%A3)"
+        }
+      ],
+      "photo": {
+        "query": "金龍隧道"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "原定於1992年9月15日通車，但由於當地居民早等不及，在9月10日突破圍籬搶先通行。"
+      }
+    },
+    {
+      "id": "tpark-94",
+      "name": "湖興公園",
+      "category": "park",
+      "latlng": [
+        25.066931,
+        121.589592
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "園內設施完善，有涼亭、花架座椅平臺及遊樂設施，隨時可見許多長者攜帶孫子於公園內休憩、聊天。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湖興公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-390",
+      "name": "港富廣場",
+      "category": "park",
+      "latlng": [
+        25.080299,
+        121.578117
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "港富廣場位於內湖路1段715巷旁，面積3,054平方公尺，西元1994年闢建。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "港富廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q11129168",
+      "name": "民權隧道",
+      "category": "tunnel",
+      "latlng": [
+        25.068361,
+        121.602306
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "位於內湖區的公路隧道，1993 年 6 月 1 日動工，1994 年 11 月 20 日下午三時通車。",
+      "sources": [
+        {
+          "title": "Wikidata Q11129168",
+          "url": "https://www.wikidata.org/wiki/Q11129168"
+        },
+        {
+          "title": "維基百科〈民權隧道〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%B0%91%E6%AC%8A%E9%9A%A7%E9%81%93"
+        }
+      ],
+      "photo": {
+        "query": "民權隧道"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1993年6月1日動工，1994年11月20日下午三時通車。"
+      }
+    },
+    {
+      "id": "tpark-242",
+      "name": "文德3號公園",
+      "category": "park",
+      "latlng": [
+        25.07509,
+        121.577118
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "文德三號公園位於內湖區，於民國84年開闢，面積約1.6公頃，公園北起文德路、南至瑞光路，錯落於兩側住宅群落和內湖科學園區間因此使用率非常高。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文德3號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-125",
+      "name": "文德1號綠地",
+      "category": "park",
+      "latlng": [
+        25.07859,
+        121.584213
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "文德1號綠地位於內湖區文德路1號-91號間，是沿著內湖捷運線下分佈於三個區塊綠地，面積8,194平方公尺，於西元1996年開闢完成，綠地內設施包含了組合遊具、搖搖樂、雙人浪板、撐體向上、雙人腰背按摩器、雙人腹肌器、太空漫步機、單桿等多項的體健設施，是民眾休閒運動、兒童校外教學的好去處，綠地內設有平坦步道沿著步道兩側設計各種鄉土植物，大花紫薇、美人樹、光臘樹、榕樹、玉蘭、水黃皮、榔榆、樟樹、緬槴、大葉欖仁和楓香等。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文德1號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-218",
+      "name": "文心公園",
+      "category": "park",
+      "latlng": [
+        25.065451,
+        121.584183
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "公園以草皮綠地、植栽觀賞為主，常有人聚集從事槌球運動。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文心公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-230",
+      "name": "湖元公園",
+      "category": "park",
+      "latlng": [
+        25.06823,
+        121.587021
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "四週社區公寓環繞，公園內花木扶疏，環境安靜幽雅，並設有涼亭及遊樂設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湖元公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-247",
+      "name": "南湖一號公園",
+      "category": "park",
+      "latlng": [
+        25.069139,
+        121.611092
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "本公園為環保公園，其綠地可以減少地面的粉塵負荷，減少揚塵的發生，並藉植樹吸收微粒以降低懸浮微粒濃度。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "南湖一號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-28",
+      "name": "行善公園",
+      "category": "park",
+      "latlng": [
+        25.053261,
+        121.575577
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "園內設施完善，延伸綠帶遍植不同灌木，深具觀賞教育價值。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "行善公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-318",
+      "name": "洲子1號公園",
+      "category": "park",
+      "latlng": [
+        25.079571,
+        121.564339
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "洲子一號環保公園位於內湖科學園區商辦大樓林立區域，鄰近捷運西湖站，位於堤頂大道、基湖路交叉口，鄰二路口內側有一圓形小廣場，周邊種植落羽松，冬季葉色轉紅，此區除可觀賞落羽松葉色變化外，尚可遠眺大草坪。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "洲子1號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-398",
+      "name": "山腳公園",
+      "category": "park",
+      "latlng": [
+        25.084089,
+        121.579903
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "為一坡地形公園，可沿階梯至坡頂，空氣清新，為健身休閒之好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "山腳公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-468",
+      "name": "美善公園",
+      "category": "park",
+      "latlng": [
+        25.056999,
+        121.578583
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "公園樹蔭提供民眾休閒遮陰，還有小朋友最愛的遊具組合，構築了親子與社區情感的聯繫空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "美善公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-487",
+      "name": "內湖110號綠地",
+      "category": "park",
+      "latlng": [
+        25.07123,
+        121.580071
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "內湖110號綠地位於內湖區瑞光路112巷及76巷旁內，面積1,318平方公尺，係由大都市、住一建設等於西元1996年開闢完成捐贈本府。綠地為一長條形狀，平坦步道兩旁有小葉欖仁、台灣灤樹喬木等。除了欣賞植物的綠意盎然，花木扶疏，不妨靜下心細細聆聽各式鳥鳴叫聲。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "內湖110號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-54",
+      "name": "煙波庭公園",
+      "category": "park",
+      "latlng": [
+        25.08634,
+        121.599251
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "煙波庭公園備有網球場、溜冰場、籃球架等多項運動設施，並種植多樣喬木。是里民運動、休閒、乘涼的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "煙波庭公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-569",
+      "name": "內湖119號安興綠地",
+      "category": "park",
+      "latlng": [
+        25.057699,
+        121.583672
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "近年來全球暖化與節能減碳之環保議題持續受到重視，為減少私人運具使用與發展永續環境，臺北市目前積極推廣民眾運輸與自行車等綠色運具，並規劃及設計自行車道提供自行車族群更安全及便捷之交通環境，以帶動潛在之自行車使用者。更成為市府重要政策之一。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "內湖119號安興綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-573",
+      "name": "湖興綠地",
+      "category": "park",
+      "latlng": [
+        25.068939,
+        121.590897
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "湖興綠地位於內湖區成功路2段312巷27號旁，面積390平方公尺，於西元1996年開闢完成，綠地內設有圓形平坦步道沿著步道兩側設計高大小葉欖仁及水黃皮等喬木等。除了欣賞植物的綠意盎然，不妨靜下心細細聆聽各式鳥鳴叫聲。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湖興綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-598",
+      "name": "文德二號公園",
+      "category": "park",
+      "latlng": [
+        25.07786,
+        121.58374
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "景觀美麗，充滿綠意，整齊清潔的公園，除了提供長者休憩外，亦為鄰近孩童歡樂之遊樂場。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文德二號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-703",
+      "name": "福壽公園",
+      "category": "park",
+      "latlng": [
+        25.079809,
+        121.596558
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "公園內植栽種類眾多，設有遊具設施及花架座椅區，為附近居民最佳休憩娛樂場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "福壽公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-706",
+      "name": "西安廣場",
+      "category": "park",
+      "latlng": [
+        25.08676,
+        121.560852
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "西安廣場位於內湖區文湖街21巷20號對面，面積1,080平方公尺，西元1996年闢建。從車水馬龍的馬路一端轉進就是鄰里間的小型廣場，園內植栽有樟樹、台灣灤樹、檬果、海檬果、玉蘭花等喬木，四週鄰近高樓大廈及社區公寓環繞，園內花木扶疏，環境安靜優雅。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "西安廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-763",
+      "name": "潭美公園",
+      "category": "park",
+      "latlng": [
+        25.057011,
+        121.58168
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "位於南京東路6段沿線，由新明路298巷起至成功路二段間的週美綠地，開闢於西元1996年，全區共佔地12,844平方公尺，因交通繁忙又為處高架麥帥公路下方，狹長帶狀園區種植臺灣欒樹、鳳凰木、茄冬、榔榆、金露華、蜘蛛百合及草坪綠美化，綠樹成蔭可以隔離降低快速道路所產生的噪音，沿著步道設有多處座椅供民眾隨時可停下腳步休息，在充滿綠意的環境裡和好朋友談天說地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "潭美公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-773",
+      "name": "北勢湖公園",
+      "category": "park",
+      "latlng": [
+        25.08375,
+        121.561684
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "本公園為環保公園，其綠地可以減少地面的粉塵負荷，減少揚塵的發生，並藉植樹吸收微粒以降低懸浮微粒濃度。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北勢湖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-81",
+      "name": "扶輪親恩公園",
+      "category": "park",
+      "latlng": [
+        25.06671,
+        121.57975
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "位於民權大橋下橋處、進入內湖之交通要道，內湖意象輔以夜間照明，順暢的步行空間與開放的綠意環境，形塑可親怡人的公園風貌。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "扶輪親恩公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-994",
+      "name": "洲子2號公園",
+      "category": "park",
+      "latlng": [
+        25.079599,
+        121.568626
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "一進入公園，首先映入眼簾的是一排噴水池，潔白的水花與流水聲，為炎炎夏日帶來清涼的感受。公園的另一側灌木與樹木夾道，又提供過往的人們置身林間幽境之感。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "洲子2號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-239",
+      "name": "九華公園",
+      "category": "park",
+      "latlng": [
+        25.088591,
+        121.561378
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "九華公園雖屬小型鄰里公園，但草木植栽種類繁多，攀爬於花架的炮仗花、九重葛是其中重點。其後有登山步道可供健行，登高而上或有「北邙山頭少閒土」的感慨。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "九華公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-533",
+      "name": "翠湖公園",
+      "category": "park",
+      "latlng": [
+        25.08626,
+        121.602107
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "為鄰里間的小型綠地，整片草皮，民眾漫步其間有放鬆休憩的感受。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "翠湖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-430",
+      "name": "瑞湖公園",
+      "category": "park",
+      "latlng": [
+        25.069309,
+        121.576889
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "園內設施完善，有大片草皮、植栽，並設有網球場供民眾免費使用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "瑞湖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-52",
+      "name": "石潭公園",
+      "category": "park",
+      "latlng": [
+        25.06312,
+        121.593208
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "位於內湖區成功路二段的石潭公園，開闢於民國87年，全區共佔地55,660平方公尺，坐落在麥帥公路兩側，自成功路二段延伸安康路的全段，提供市民休閒活動的空間和豐富的運動設施。園內有一片完整且開闊的草坪，適合各種戶外活動，玩累了就可以到旁邊的涼亭休息。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "石潭公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-599",
+      "name": "文湖公園",
+      "category": "park",
+      "latlng": [
+        25.087427,
+        121.560993
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "為大排水溝附近的小型公園，設有木製平台，民眾休閒漫步其間時，有放鬆休憩的感受。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文湖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-711",
+      "name": "湖聖公園",
+      "category": "park",
+      "latlng": [
+        25.069771,
+        121.591766
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "湖聖公園為鄰里公園，設計以「串連」、「生態」與「向心圓」的概念，導入圓與綠等設計元素，並以動、靜之間的平衡關係做為設計理念，讓流暢的動線和綠美化傳達「臺北城市之慢生活」、「發展社區與公園的新親密關係」、「身心合一的緩慢運動」之慢生活概念。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湖聖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-20",
+      "name": "上灣公園",
+      "category": "park",
+      "latlng": [
+        25.06546,
+        121.59584
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "位於民權東路6段210巷43號旁之上灣公園，開闢於88年，全區共佔地15,883平方公尺，為狹長帶狀公園，鄰近住宅區，園內種植臺灣欒樹、樟樹、茄冬、樹玫瑰及帶狀草坪，綠樹成蔭且步道沿線設有多處座椅、供民眾使用，在充滿綠意的環境裡享受一下城市難得鬧中取靜的休憩空間，歡迎您常來上灣公園走走。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "上灣公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-515",
+      "name": "下灣公園",
+      "category": "park",
+      "latlng": [
+        25.066811,
+        121.590698
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "位於成功路2段189號旁之下灣公園，開闢於88年，全區共佔地14,586平方公尺，狹長帶狀園區蜿蜒約1公里，鄰近住宅區，園內種植臺灣欒樹、樟樹、茄苳、蒲葵、金露華及草坪綠美化，綠樹成蔭且步道沿線設有多處座椅、涼亭、體健設施、組合遊具供民眾使用，在充滿綠意的環境裡享受一下城市難得鬧中取靜的休憩空間，歡迎您常來下灣公園走走。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "下灣公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-593",
+      "name": "週美綠地",
+      "category": "park",
+      "latlng": [
+        25.0564,
+        121.581902
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "週美綠地位於內湖區新明路298巷以西至基隆河堤防旁，面積9,245平方公尺，於西元2000年開闢完成，綠地為一長條形狀，平坦步道沿著步道兩側設計高大小葉欖仁、台灣灤樹、樟樹、蒲葵、榔榆、茄冬、楓香、流蘇、鳳凰木、印度紫檀、阿勃勒、福木、豔紫荊、肯氏南洋杉喬木等。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "週美綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-185",
+      "name": "長青公園",
+      "category": "park",
+      "latlng": [
+        25.08098,
+        121.581741
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "位於內湖路二段103巷34號的長青公園，面積5,168平方公尺，約0.5公頃，長青公園大部分係坡面地形，為做好水土保持，開發為梯形狀公園，因此長青公園也造就了多樣化具有層次且生氣蓬勃的植被景觀，茂盛的台灣欒樹正為炎炎夏日做了一片遮陽區域，加上整排的福木點綴，相當堅固且不怕強風，圓圓的葉形襯托更是增添幾分視覺上的變化，兩側緊鄰社區，對面係擁有湖泊美景的碧湖公園，亦可見碧湖壯麗景觀，湖光山色美不勝收，亦可謂「前面有小河、後面有山坡」，是個散步駐足的好地方，一窺美麗的自然風情。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "長青公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-259",
+      "name": "麗湖公園",
+      "category": "park",
+      "latlng": [
+        25.073539,
+        121.599282
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "麗湖公園於97年度成為環保無菸公園，且為一社區型公園，設有兒童遊憩區及體健區等設施，體貼各年齡層的需求，提供長者休憩及孩童歡樂之遊樂場。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "麗湖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-55",
+      "name": "灣仔廣場",
+      "category": "park",
+      "latlng": [
+        25.068939,
+        121.590897
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "灣仔廣場位於內湖區成功路2段324巷4號旁，面積1,067平方公尺，西元2001年闢建。鄰近瓏山林大廈及社區公寓，從車水馬龍的馬路一端轉進就是鄰里間的小型廣場，園內植栽有鳳凰木、豔紫荊等喬木，搭配觀賞植物重點美化佈置，碧草如茵，花木扶疏，令人一進園內即感到無限綠意與幽靜。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "灣仔廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-600",
+      "name": "西湖公園",
+      "category": "park",
+      "latlng": [
+        25.083611,
+        121.570389
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "西湖公園位於內湖科學園區附近的住宅區亦鄰近西湖市場，為一山邊之自然公園，公園中坡度明顯，內有兒童遊戲區、涼亭區及地下停車場等設施，公園內花木扶疏有多種開花植物四季變換妝點整個公園，如相思樹、紫葳、大花紫葳、阿勃勒、桂花等，涼亭區居高臨下可遠眺山景，景色宜人，自公園改建為地下停車場後公園同時帶入其它多元的設施與明亮感，提供使用者多樣的停留與駐足空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "西湖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-65",
+      "name": "仙樹公園",
+      "category": "park",
+      "latlng": [
+        25.085609,
+        121.569
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "園內有受保護樟樹、故名仙樹公園，散步園中，自有怡然恬適之情。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "仙樹公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-651",
+      "name": "清白公園",
+      "category": "park",
+      "latlng": [
+        25.081699,
+        121.595284
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "清白公園位於臺北市成功路四段61巷32弄18號〈康寧國小旁〉，計畫面積約3.6公頃，民國90至94年陸續將1.4公頃開闢成公園，基地內設置貯留滲透空地、滯洪池、解說設施、登山步道等，為總合治水概念公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q121974674",
+          "url": "https://www.wikidata.org/wiki/Q121974674"
+        }
+      ],
+      "photo": {
+        "query": "清白公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-759",
+      "name": "康湖公園",
+      "category": "park",
+      "latlng": [
+        25.07468,
+        121.608727
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "位於捷運葫州站1號出口，鄰近康寧醫院及康寧護校，公園內植栽種類眾多，綠意盎然，為附近學生下課及醫院病人最佳休憩之場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "康湖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-831",
+      "name": "畚箕湖公園",
+      "category": "park",
+      "latlng": [
+        25.089436,
+        121.560064
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "本公園屬水土保持公園，不開放進入。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "畚箕湖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-102",
+      "name": "內湖125號公園",
+      "category": "park",
+      "latlng": [
+        25.064699,
+        121.611259
+      ],
+      "start": 2003,
+      "end": null,
+      "desc": "內湖125號公園位於南湖大橋東側與國道中山高速公路南側，康寧抽水站周邊，公園開闢面積7,375平方公尺，屬於都會周邊綠地公園，進入南湖疏散門-基十一號疏散門之兩側，一側為內湖125號公園，另一側為河川用地，緊鄰基隆河河道。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "內湖125號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-127",
+      "name": "安湖公園",
+      "category": "park",
+      "latlng": [
+        25.07402,
+        121.615417
+      ],
+      "start": 2003,
+      "end": null,
+      "desc": "本公園以生態景觀為主體，以綠地、植栽觀賞為主。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "安湖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-552",
+      "name": "游美公園",
+      "category": "park",
+      "latlng": [
+        25.0646,
+        121.597198
+      ],
+      "start": 2003,
+      "end": null,
+      "desc": "本公園以生態景觀為主體，提供鄰近居民漫步的休憩空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "游美公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-428",
+      "name": "瑞光公園",
+      "category": "park",
+      "latlng": [
+        25.07118,
+        121.577683
+      ],
+      "start": 2004,
+      "end": null,
+      "desc": "位於內湖區瑞光路132巷旁的瑞光公園，開闢於民國93年，由於公園旁就是高級別墅區，曾被民眾戲稱為「豪宅公園」，園區面積共33,806平方公尺，地形起伏變化，一半為緩坡，鄰陽光街321巷旁斜坡有一片完整且開闊的草坪，常吸引民眾駐足逗留拍照、享受日光浴，園區栽種草坪及羅漢松、白千層、臺灣欒樹、大王椰子、相思樹、鐵樹、含笑、蜘蛛百合等多種樹木植栽綠美化，且步道以花與蝴蝶為主題之馬賽克裝飾，也有多個超Q的可愛動物石雕像，如松鼠、貓頭鷹、猴子等，除附近住戶常帶小朋友來遊玩，不少內科人也趁中午或下班時刻，來此散心紓壓，歡迎大家來此一遊。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "瑞光公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-670",
+      "name": "大坑公園",
+      "category": "park",
+      "latlng": [
+        25.069037,
+        121.598706
+      ],
+      "start": 2004,
+      "end": null,
+      "desc": "景觀美麗，充滿綠意，整齊清潔的公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大坑公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-829",
+      "name": "湖畔公園",
+      "category": "park",
+      "latlng": [
+        25.088247,
+        121.601473
+      ],
+      "start": 2005,
+      "end": null,
+      "desc": "公園大部分面積為山坡地，為美化公園環境於邊坡擋土牆面進行牆面改造。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湖畔公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q10936522",
+      "name": "大湖隧道",
+      "category": "tunnel",
+      "latlng": [
+        25.079556,
+        121.610667
+      ],
+      "start": 2006,
+      "end": null,
+      "desc": "位於內湖區的公路隧道，2006 年 3 月 9 日貫通，同年 12 月 6 日正式通車。",
+      "sources": [
+        {
+          "title": "Wikidata Q10936522",
+          "url": "https://www.wikidata.org/wiki/Q10936522"
+        },
+        {
+          "title": "維基百科〈大湖隧道〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E6%B9%96%E9%9A%A7%E9%81%93"
+        }
+      ],
+      "photo": {
+        "query": "大湖隧道"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2006年3月9日貫通（另一說法為2月貫通），2006年12月6日通車。"
+      }
+    },
+    {
+      "id": "wd-q11063922",
+      "name": "康樂隧道",
+      "category": "tunnel",
+      "latlng": [
+        25.079333,
+        121.619472
+      ],
+      "start": 2006,
+      "end": null,
+      "desc": "位於內湖區的公路隧道，2006 年 1 月 20 日貫通，同年 12 月 6 日正式通車。",
+      "sources": [
+        {
+          "title": "Wikidata Q11063922",
+          "url": "https://www.wikidata.org/wiki/Q11063922"
+        },
+        {
+          "title": "維基百科〈康樂隧道〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%BA%B7%E6%A8%82%E9%9A%A7%E9%81%93"
+        }
+      ],
+      "photo": {
+        "query": "康樂隧道"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2006年1月20日貫通，2006年12月6日通車。"
+      }
+    },
+    {
+      "id": "tpark-30",
+      "name": "內湖117號綠地",
+      "category": "park",
+      "latlng": [
+        25.083269,
+        121.601852
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "內湖117號綠地位於內湖區大湖山莊街與成功路5段交叉口.大湖社區國宅內，面積2,214平方公尺，西元2009年闢建。鄰近為內湖區捷運大湖站，入口處有大湖里辦公處為美化周邊景觀向本處申請設置藝術品。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "內湖117號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-489",
+      "name": "康湖二號公園",
+      "category": "park",
+      "latlng": [
+        25.074042,
+        121.6088
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "位於捷運葫州站1號出口，鄰近康寧醫院及康寧護校，與康湖公園連成一片，因坡度較陡，以植栽觀賞為主。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "康湖二號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-75",
+      "name": "麗湖綠地",
+      "category": "park",
+      "latlng": [
+        25.073374,
+        121.600509
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "本公園以生態景觀為主體，提供鄰近居民漫步的休憩空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "麗湖綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q699296",
+      "name": "捷運文德站",
+      "category": "station",
+      "latlng": [
+        25.0787,
+        121.585
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "臺北捷運文湖線車站，2009 年 2 月實質完工，同年 7 月 4 日隨內湖線通車而啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q699296",
+          "url": "https://www.wikidata.org/wiki/Q699296"
+        },
+        {
+          "title": "維基百科〈文德站 (台灣)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%96%87%E5%BE%B7%E7%AB%99%20(%E5%8F%B0%E7%81%A3)"
+        }
+      ],
+      "photo": {
+        "query": "捷運文德站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2009年2月22日，文德站實質完工；7月4日：隨著內湖線通車而啟用；7月28日，因文德、葫洲、南港展覽館站三站，屋頂排水管設計位置不良，正對車廂的新鮮空氣排出口，導致車廂內會進水，後經調整已排除。"
+      }
+    },
+    {
+      "id": "wd-q699449",
+      "name": "捷運內湖站",
+      "category": "station",
+      "latlng": [
+        25.083772,
+        121.594644
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "臺北捷運文湖線車站，2009 年 2 月實質完工，同年 7 月 4 日隨文湖線正式通車而啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q699449",
+          "url": "https://www.wikidata.org/wiki/Q699449"
+        },
+        {
+          "title": "維基百科〈內湖站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%85%A7%E6%B9%96%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運內湖站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2009年7月4日：隨著文湖線正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q699531",
+      "name": "捷運西湖站",
+      "category": "station",
+      "latlng": [
+        25.082072,
+        121.566964
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "臺北捷運文湖線車站，2009 年 2 月實質完工，同年 7 月 4 日隨內湖線正式通車而啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q699531",
+          "url": "https://www.wikidata.org/wiki/Q699531"
+        },
+        {
+          "title": "維基百科〈西湖站 (臺北市)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%A5%BF%E6%B9%96%E7%AB%99%20(%E8%87%BA%E5%8C%97%E5%B8%82)"
+        }
+      ],
+      "photo": {
+        "query": "捷運西湖站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2009年2月22日：西湖站實質完工；6月10日至6月19日，與捷運站共構的西湖市場進行試賣活動；7月4日：隨著內湖線正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q699932",
+      "name": "捷運港墘站",
+      "category": "station",
+      "latlng": [
+        25.080089,
+        121.575122
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "臺北捷運文湖線車站，2009 年 2 月實質完工，同年 7 月 4 日隨內湖線正式通車而啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q699932",
+          "url": "https://www.wikidata.org/wiki/Q699932"
+        },
+        {
+          "title": "維基百科〈港墘站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%B8%AF%E5%A2%98%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運港墘站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2009年2月22日：港墘站實質完工；7月4日：隨著內湖線正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q699938",
+      "name": "捷運東湖站",
+      "category": "station",
+      "latlng": [
+        25.067261,
+        121.611489
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "臺北捷運文湖線車站，2009 年 2 月實質完工，同年 7 月 4 日隨內湖線通車而啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q699938",
+          "url": "https://www.wikidata.org/wiki/Q699938"
+        },
+        {
+          "title": "維基百科〈東湖站 (臺北市)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%9D%B1%E6%B9%96%E7%AB%99%20(%E8%87%BA%E5%8C%97%E5%B8%82)"
+        }
+      ],
+      "photo": {
+        "query": "捷運東湖站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2009年2月22日：東湖站實質完工；7月4日：隨著內湖線通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q699944",
+      "name": "捷運葫洲站",
+      "category": "station",
+      "latlng": [
+        25.072817,
+        121.607372
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "臺北捷運文湖線車站，2009 年 2 月實質完工，同年 7 月 4 日隨內湖線通車而啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q699944",
+          "url": "https://www.wikidata.org/wiki/Q699944"
+        },
+        {
+          "title": "維基百科〈葫洲站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%91%AB%E6%B4%B2%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運葫洲站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2009年7月4日：隨著內湖線通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-260",
+      "name": "湖寶公園",
+      "category": "park",
+      "latlng": [
+        25.066601,
+        121.599564
+      ],
+      "start": 2010,
+      "end": null,
+      "desc": "為鄰里間的小型綠地，民眾休閒漫步其間時，有放鬆休憩的感受。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湖寶公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-612",
+      "name": "西康二號公園",
+      "category": "park",
+      "latlng": [
+        25.08498,
+        121.563927
+      ],
+      "start": 2010,
+      "end": null,
+      "desc": "景觀美麗，充滿綠意，整齊清潔的公園，除了提供長者休憩外，兒童遊樂區則是鄰近孩童互動玩耍的休閒場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "西康二號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-7",
+      "name": "明美公園",
+      "category": "park",
+      "latlng": [
+        25.06222,
+        121.586197
+      ],
+      "start": 2010,
+      "end": null,
+      "desc": "明美公園位於內湖區舊宗路與南京東路6段交叉口，屬於內湖五期重劃區，公園形狀呈現倒L型，包含公園主體及一長形帶狀綠地，公園主要區塊設有花架休憩區、兒童遊戲場。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "明美公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q10891338",
+      "name": "內湖復育園區",
+      "category": "park",
+      "latlng": [
+        25.061023,
+        121.60669
+      ],
+      "start": 2015,
+      "end": null,
+      "desc": "位於基隆河畔的公園，前身為「內湖垃圾山」垃圾掩埋場，2015 年 6 月 5 日啟用，建有復育林區與遊憩區。",
+      "sources": [
+        {
+          "title": "Wikidata Q10891338",
+          "url": "https://www.wikidata.org/wiki/Q10891338"
+        },
+        {
+          "title": "維基百科〈內湖復育園區〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%85%A7%E6%B9%96%E5%BE%A9%E8%82%B2%E5%9C%92%E5%8D%80"
+        }
+      ],
+      "photo": {
+        "query": "內湖復育園區"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "內湖復育園區，是位於臺灣台北市內湖區蘆洲里、基隆河畔的公園，2015年6月5日啟用，前身為被稱為「內湖垃圾山」的葫洲里垃圾掩埋場。"
+      }
+    },
+    {
+      "id": "tpark-832",
+      "name": "口湖公園",
+      "category": "park",
+      "latlng": [
+        25.067328,
+        121.598514
+      ],
+      "start": 2017,
+      "end": null,
+      "desc": "公車站牌民權東路六段(民權敦品)站旁休憩空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "口湖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-765",
+      "name": "康樂綠地",
+      "category": "park",
+      "latlng": [
+        25.075461,
+        121.620652
+      ],
+      "start": 2018,
+      "end": null,
+      "desc": "康樂綠地位於康樂街191巷旁，面積15,445平方公尺，西元2010年先行闢建3,613平方公尺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "康樂綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-818",
+      "name": "大港墘公園",
+      "category": "park",
+      "latlng": [
+        25.077415,
+        121.572997
+      ],
+      "start": 2018,
+      "end": null,
+      "desc": "公園北接金面山、南接基隆河，具生態跳島的潛力，公園從橫向到縱向多元串連，便能充分發揮都市綠網的機能，創造出讓人感受寧靜的空間，或讓人舒放、一望無際的寬闊大草坪。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大港墘公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-995",
+      "name": "湖濱公園",
+      "category": "park",
+      "latlng": [
+        25.081547,
+        121.587627
+      ],
+      "start": 2021,
+      "end": null,
+      "desc": "公園面積迷你，以綠地、植栽觀賞為主。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湖濱公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    }
+  ]
+}

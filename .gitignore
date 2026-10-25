@@ -15,3 +15,6 @@ opencode.json
 # patch leftovers
 *.rej
 *.orig
+
+# 020 places pipeline: unverified candidates / review queues stay local
+online/.cache/

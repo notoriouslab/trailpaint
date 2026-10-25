@@ -1,0 +1,1040 @@
+{
+  "towncode": "63000070",
+  "county": "臺北市",
+  "town": "萬華區",
+  "slug": "taipei-wanhua",
+  "items": [
+    {
+      "id": "wd-q7967935",
+      "name": "萬華車站",
+      "category": "station",
+      "latlng": [
+        25.0334,
+        121.5
+      ],
+      "start": 1918,
+      "end": null,
+      "desc": "萬華車站最早設於 1901 年，1918 年 7 月向西遷移至現址，位於當時臺北市新富町五丁目。",
+      "sources": [
+        {
+          "title": "Wikidata Q7967935",
+          "url": "https://www.wikidata.org/wiki/Q7967935"
+        },
+        {
+          "title": "維基百科〈萬華車站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%90%AC%E8%8F%AF%E8%BB%8A%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "萬華車站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1918年（大正7年）7月1日：向西遷移至現址，位於當時臺北市新富町五丁目。"
+      }
+    },
+    {
+      "id": "wd-q11411916",
+      "name": "臺北市立華江高級中學",
+      "category": "school",
+      "latlng": [
+        25.028343,
+        121.496655
+      ],
+      "start": 1953,
+      "end": null,
+      "desc": "前身為 1946 年創立的台北市立萬華初級中學，起初借老松國校上課，1953 年新建老松分校校舍完工，日間部遷入現址。",
+      "sources": [
+        {
+          "title": "Wikidata Q11411916",
+          "url": "https://www.wikidata.org/wiki/Q11411916"
+        },
+        {
+          "title": "維基百科〈臺北市立華江高級中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E8%8F%AF%E6%B1%9F%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立華江高級中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1953年9月，新建老松分校校舍，8間校舍、1間廁所完工，日間部全部遷移新校舍（華江高中現址）開始上課。"
+      }
+    },
+    {
+      "id": "wd-q15919352",
+      "name": "臺北市萬華區大理國民小學",
+      "category": "school",
+      "latlng": [
+        25.031515,
+        121.4932
+      ],
+      "start": 1957,
+      "end": null,
+      "desc": "1955 年創校，初期借龍山、雙園國校禮堂上課，1957 年校舍六間落成後遷入現校址，位於鐵路縱貫線旁。",
+      "sources": [
+        {
+          "title": "Wikidata Q15919352",
+          "url": "https://www.wikidata.org/wiki/Q15919352"
+        },
+        {
+          "title": "維基百科〈臺北市萬華區大理國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E5%A4%A7%E7%90%86%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市萬華區大理國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1957年2月，校舍六間落成即遷入現校址，先期係實施二部制上課，'''大理國小'''位於鐵路縱貫線旁，當時是過淡水河進入台北市的第一個學校。"
+      }
+    },
+    {
+      "id": "wd-q28415260",
+      "name": "臺北市萬華區西園國民小學",
+      "category": "school",
+      "latlng": [
+        25.026971,
+        121.498793
+      ],
+      "start": 1961,
+      "end": null,
+      "desc": "1959 年創校，起初暫借東園國小教室上課，1961 年新校舍在現址落成，當時共有十三班。",
+      "sources": [
+        {
+          "title": "Wikidata Q28415260",
+          "url": "https://www.wikidata.org/wiki/Q28415260"
+        },
+        {
+          "title": "維基百科〈臺北市萬華區西園國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E8%A5%BF%E5%9C%92%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市萬華區西園國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1961年，新校舍在現址落成，當時總計十三班。"
+      }
+    },
+    {
+      "id": "wd-q15914772",
+      "name": "華江橋",
+      "category": "bridge",
+      "latlng": [
+        25.035556,
+        121.486667
+      ],
+      "start": 1968,
+      "end": null,
+      "desc": "為紓解光復橋車流量，華江橋於 1966 年 5 月動工興建，1968 年 10 月完工，連接台北和平西路與板橋文化路。",
+      "sources": [
+        {
+          "title": "Wikidata Q15914772",
+          "url": "https://www.wikidata.org/wiki/Q15914772"
+        },
+        {
+          "title": "維基百科〈華江橋〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%8F%AF%E6%B1%9F%E6%A9%8B"
+        }
+      ],
+      "photo": {
+        "query": "華江橋"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "台北至板橋間原來僅有光復橋相連，但是由於橋齡老舊已無法負荷板橋至台北間日益增加的交通量，華江橋為紓解光復橋（吊橋）車流量，於1966年5月興建，於1968年10月完工。"
+      }
+    },
+    {
+      "id": "tpark-311",
+      "name": "老松公園",
+      "category": "park",
+      "latlng": [
+        25.038521,
+        121.502739
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "位於社區中心,交通要街,花木繽紛,具庭園景觀特色,遊憩機能完備。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "老松公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-443",
+      "name": "萬華266號綠地",
+      "category": "park",
+      "latlng": [
+        25.03916,
+        121.503098
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "萬華266號綠地，1971 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬華266號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-26",
+      "name": "東園公園",
+      "category": "park",
+      "latlng": [
+        25.02095,
+        121.495247
+      ],
+      "start": 1974,
+      "end": null,
+      "desc": "精巧曲道花臺蜿蜒於刺桐綠蔭，多用途涼亭設計搭配活動廣場，自然碎石步道，構築了親子與社區情感的聯繫空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "東園公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q15931182",
+      "name": "華中橋",
+      "category": "bridge",
+      "latlng": [
+        25.015278,
+        121.495556
+      ],
+      "start": 1976,
+      "end": null,
+      "desc": "華中橋由台灣省政府與台北市政府共同投資興建，1975 年建造，1976 年 10 月 10 日通車。",
+      "sources": [
+        {
+          "title": "Wikidata Q15931182",
+          "url": "https://www.wikidata.org/wiki/Q15931182"
+        },
+        {
+          "title": "維基百科〈華中橋〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%8F%AF%E4%B8%AD%E6%A9%8B"
+        }
+      ],
+      "photo": {
+        "query": "華中橋"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "華中橋係由台灣省政府和台北市政府共同投資興建，當時投資約新台幣四億九千多萬元，於1975年建造，並於1976年10月10號通車。"
+      }
+    },
+    {
+      "id": "tpark-133",
+      "name": "西園公園",
+      "category": "park",
+      "latlng": [
+        25.026955,
+        121.497882
+      ],
+      "start": 1977,
+      "end": null,
+      "desc": "象徵社區空間中心的入口拼畫意象，完整開闊的綠帶草坪，開放的精巧花臺，整體景觀風貌令人心曠神怡。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "西園公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-697",
+      "name": "華江一號公園",
+      "category": "park",
+      "latlng": [
+        25.035891,
+        121.49411
+      ],
+      "start": 1977,
+      "end": null,
+      "desc": "帶狀花台座落民宅中間，提供居民休憩空間視覺綠意。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "華江一號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-772",
+      "name": "聚德公園",
+      "category": "park",
+      "latlng": [
+        25.034889,
+        121.49472
+      ],
+      "start": 1977,
+      "end": null,
+      "desc": "兒童遊戲場設施完備，輔以旁邊花台綠意，增添親子互動。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "聚德公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-584",
+      "name": "長沙公園",
+      "category": "park",
+      "latlng": [
+        25.0415,
+        121.499924
+      ],
+      "start": 1979,
+      "end": null,
+      "desc": "位於昔時水陸交易市集，外圍以喬木構成綠色廊道，深具歷史文化特色。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "長沙公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-99",
+      "name": "萬華51號公園",
+      "category": "park",
+      "latlng": [
+        25.03594,
+        121.502922
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "萬華51號公園位於萬華區富福里西園路1段與大理街交叉口，於民國70年間開闢完成，公園面積為845平方公尺，98-99年本府商業處的「樞紐商圈整合拓展計畫」將商圈內暨有文化、古蹟、美食及特色街區整合，並於公園內設置舞台、燈柱及商圈意象等造型，展現艋舺商圈整體意象。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬華51號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-775",
+      "name": "柳鄉公園",
+      "category": "park",
+      "latlng": [
+        25.03726,
+        121.495438
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "位於柳鄉社區中心，園內設施完善，延伸綠帶遍植不同灌木，深具觀賞教育價值。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "柳鄉公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-104",
+      "name": "大理公園",
+      "category": "park",
+      "latlng": [
+        25.03414,
+        121.49366
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "小巧細緻的公園植栽，提供過往路人視覺愉悅的景觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大理公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-594",
+      "name": "綠堤公園",
+      "category": "park",
+      "latlng": [
+        25.033211,
+        121.492897
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "青楓蒼鬱，設施完備，隨處可見的翩翩蝶影，夾雜親子嬉笑聲，增添一股悠雅的氣氛。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "綠堤公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-735",
+      "name": "華江八號公園",
+      "category": "park",
+      "latlng": [
+        25.03406,
+        121.492683
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "花木扶疏，格局方正，綠意盎然，為華江社區居民常用的休閒公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "華江八號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-988",
+      "name": "華江七號公園",
+      "category": "park",
+      "latlng": [
+        25.035028,
+        121.493461
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "華江七號公園，1984 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "華江七號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-636",
+      "name": "寺前公園",
+      "category": "park",
+      "latlng": [
+        25.033541,
+        121.499207
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "小巧細緻，花木錯落，使人心曠神怡。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "寺前公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-371",
+      "name": "華西公園",
+      "category": "park",
+      "latlng": [
+        25.03867,
+        121.498657
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "氣勢磅礡的石砌流瀑，順暢的步行空間與開放的綠意環境，輔以夜間照明，形塑可親怡人的公園風貌。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "華西公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q15917924",
+      "name": "財政部臺北國稅局",
+      "category": "government",
+      "latlng": [
+        25.047848,
+        121.509212
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "1967 年因臺北市升格院轄市而設立，後數度遷移，1992 年 9 月 29 日遷至萬華區中華路一段 2 號現址。",
+      "sources": [
+        {
+          "title": "Wikidata Q15917924",
+          "url": "https://www.wikidata.org/wiki/Q15917924"
+        },
+        {
+          "title": "維基百科〈財政部臺北國稅局〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%B2%A1%E6%94%BF%E9%83%A8%E8%87%BA%E5%8C%97%E5%9C%8B%E7%A8%85%E5%B1%80"
+        }
+      ],
+      "photo": {
+        "query": "財政部臺北國稅局"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1992年9月29日，遷移至臺北市萬華區中華路一段2號（）。"
+      }
+    },
+    {
+      "id": "tpark-611",
+      "name": "桂林公園",
+      "category": "park",
+      "latlng": [
+        25.03891,
+        121.496819
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "花木扶疏，散步園中，自有怡然恬適之情。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "桂林公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q698620",
+      "name": "龍山寺站",
+      "category": "station",
+      "latlng": [
+        25.03525,
+        121.500417
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "台北捷運龍山寺站隨南港線西門至市政府段與板橋線西門至龍山寺段通車，於 1999 年 12 月 24 日啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q698620",
+          "url": "https://www.wikidata.org/wiki/Q698620"
+        },
+        {
+          "title": "維基百科〈龍山寺站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E9%BE%8D%E5%B1%B1%E5%AF%BA%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "龍山寺站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1999年12月24日：隨著南港線「市政府－西門」段以及板橋線「西門－龍山寺」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-502",
+      "name": "福星公園",
+      "category": "park",
+      "latlng": [
+        25.04607,
+        121.505913
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "為臨近熱鬧的西門町電影街商圈，提供一輕鬆悠閒的休憩綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "福星公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-320",
+      "name": "錦德公園",
+      "category": "park",
+      "latlng": [
+        25.0233,
+        121.492363
+      ],
+      "start": 2005,
+      "end": null,
+      "desc": "本公園規劃有入口廣場、園路、休憩座椅等，搭配綠美化呈現綠蔭景緻，塑造簡約之都市綠地空間，提供里民悠閒活動最佳地方。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "錦德公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-156",
+      "name": "和平青草園公園",
+      "category": "park",
+      "latlng": [
+        25.03266,
+        121.497208
+      ],
+      "start": 2006,
+      "end": null,
+      "desc": "公園緣起：「和平青草園(原萬華402號公園)」座落於艋舺大道與西園路交叉口，面積4,693平方公尺，略呈現三角形。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "和平青草園公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-511",
+      "name": "青山公園",
+      "category": "park",
+      "latlng": [
+        25.03937,
+        121.498306
+      ],
+      "start": 2006,
+      "end": null,
+      "desc": "為華西街觀光夜市一隅，在繁華熱鬧的夜市中，有綠意清新的氣息，圓形廣場供微型表演及觀光客作短暫的休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "青山公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-590",
+      "name": "保德公園",
+      "category": "park",
+      "latlng": [
+        25.022791,
+        121.497467
+      ],
+      "start": 2007,
+      "end": null,
+      "desc": "環保無菸公園，彩繪塗鴉牆面並設有特色造型座椅，以懸掛式花盆造景，充分利用園內空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "保德公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-766",
+      "name": "壽德公園",
+      "category": "park",
+      "latlng": [
+        25.024429,
+        121.501137
+      ],
+      "start": 2008,
+      "end": null,
+      "desc": "座落於壽德里的小公園，提供周邊居民活動休閒的環境。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "壽德公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-386",
+      "name": "糖廍文化園區公園",
+      "category": "park",
+      "latlng": [
+        25.033549,
+        121.494646
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "公園內保存了台灣最北的製糖遺構之臺北糖廠建物，是一個政府、進駐團體、社區居民三方合作讓閒置空間再造、打造良好生活空間的案例。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "糖廍文化園區公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-695",
+      "name": "長順公園",
+      "category": "park",
+      "latlng": [
+        25.031851,
+        121.489029
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "座落於華江里長順街旁之公園，提供周邊居民帶小朋友前來遊玩的環境。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "長順公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-405",
+      "name": "西本願寺（萬華406號）廣場",
+      "category": "park",
+      "latlng": [
+        25.0403,
+        121.50708
+      ],
+      "start": 2013,
+      "end": null,
+      "desc": "西本願寺（萬華406號）廣場重生西門町鬧區新明珠臺北市西門町中華路1段及長沙街2段交會處的萬華406號廣場，座落著臺版「西本願寺」建築群遺蹟，包含「西本願寺」本堂臺基及「御廟所」臺座、「輪番所」、「樹心會館」、「鐘樓」及「參道」等，在臺北市政府工務局公園處的積極修復下，以古色古香卻又是全新的面貌與市民見面，未來可串連紅樓、西門商圈的觀光休閒空間，將流行、新潮的時尚文化連結到具有古蹟氛圍的臺北一隅。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q108324684",
+          "url": "https://www.wikidata.org/wiki/Q108324684"
+        }
+      ],
+      "photo": {
+        "query": "西本願寺（萬華406號）廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q24833466",
+      "name": "幸福公路館",
+      "category": "museum",
+      "latlng": [
+        25.026966,
+        121.496694
+      ],
+      "start": 2015,
+      "end": null,
+      "desc": "臺灣第一座公路博物館，位於萬華區東園街交通部公路局大樓一樓，於 2015 年 8 月 3 日啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q24833466",
+          "url": "https://www.wikidata.org/wiki/Q24833466"
+        },
+        {
+          "title": "維基百科〈幸福公路館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%B9%B8%E7%A6%8F%E5%85%AC%E8%B7%AF%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "幸福公路館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "幸福公路館是臺灣第一座公路博物館，位於臺北市萬華區東園街的「交通部公路局」大樓一樓，2015年8月3日9時啟用。"
+      }
+    },
+    {
+      "id": "tpark-813",
+      "name": "孝德公園",
+      "category": "park",
+      "latlng": [
+        25.024124,
+        121.49425
+      ],
+      "start": 2016,
+      "end": null,
+      "desc": "前「榮民印刷廠」在臺北市政府、地方民意代表及里長通力合作下闢建成為公園綠地，命名為「孝德公園」，並於105年8月22日正式揭幕，提供里民一處休憩閒話家常的好所在。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "孝德公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-990",
+      "name": "日善公園",
+      "category": "park",
+      "latlng": [
+        25.026383,
+        121.496312
+      ],
+      "start": 2019,
+      "end": null,
+      "desc": "公園設計時，保留台北城牆石、防空洞、飛行器製造工廠等現地歷史資源元素，以保留再利用的方式，重新詮釋文化資源。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "日善公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q96033198",
+      "name": "歌仔戲圖書館",
+      "category": "library",
+      "latlng": [
+        25.036111,
+        121.50025
+      ],
+      "start": 2020,
+      "end": null,
+      "desc": "歌仔戲圖書館於 2020 年 5 月 31 日由歌仔戲演員陳亞蘭舉辦開幕式，開幕式曾因疫情而延期。",
+      "sources": [
+        {
+          "title": "Wikidata Q96033198",
+          "url": "https://www.wikidata.org/wiki/Q96033198"
+        },
+        {
+          "title": "維基百科〈歌仔戲圖書館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%AD%8C%E4%BB%94%E6%88%B2%E5%9C%96%E6%9B%B8%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "歌仔戲圖書館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "該館於2020年5月31日由歌仔戲演員陳亞蘭舉辦開幕式，曾因2019冠狀病毒病疫情而導致開幕式延期。"
+      }
+    },
+    {
+      "id": "tpark-623",
+      "name": "糖廍公園",
+      "category": "park",
+      "latlng": [
+        25.034393,
+        121.494653
+      ],
+      "start": 2022,
+      "end": null,
+      "desc": "於大理社區核心的點狀綠帶，多樣植栽，配合昔時榨糖石磨，饒富人文趣味。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "糖廍公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2022 @@
+{
+  "towncode": "63000020",
+  "county": "臺北市",
+  "town": "信義區",
+  "slug": "taipei-xinyi",
+  "items": [
+    {
+      "id": "wd-q25020340",
+      "name": "臺北市立興雅國民小學",
+      "category": "school",
+      "latlng": [
+        25.046677,
+        121.570129
+      ],
+      "start": 1940,
+      "end": null,
+      "desc": "日治時期校舍於昭和 15 年（1940 年）在基隆路現址新建竣工並遷入，後改名雙葉國民學校，戰後由興雅國民學校使用。",
+      "sources": [
+        {
+          "title": "Wikidata Q25020340",
+          "url": "https://www.wikidata.org/wiki/Q25020340"
+        },
+        {
+          "title": "維基百科〈臺北市信義區興雅國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E8%88%88%E9%9B%85%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立興雅國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "昭和15年一月，在目前基隆路校址的校舍新建竣工，遷移至基隆路，後改名為「'''雙葉國民學校'''」。"
+      }
+    },
+    {
+      "id": "wd-q15934732",
+      "name": "臺北市私立協和祐德高級中學",
+      "category": "school",
+      "latlng": [
+        25.042598,
+        121.583532
+      ],
+      "start": 1966,
+      "end": null,
+      "desc": "前身祐德初級中學原設於淡水竿蓁林，1966 年校舍遷至信義區忠孝東路現址，更名臺北市私立祐德高級中學。",
+      "sources": [
+        {
+          "title": "Wikidata Q15934732",
+          "url": "https://www.wikidata.org/wiki/Q15934732"
+        },
+        {
+          "title": "維基百科〈臺北市私立協和祐德高級中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%A7%81%E7%AB%8B%E5%8D%94%E5%92%8C%E7%A5%90%E5%BE%B7%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市私立協和祐德高級中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "*1966年（民國55年）：原校址擴建為新埔工業專科學校，校舍遷至臺北市信義區忠孝東路現址，更名臺北市私立祐德高級中學。"
+      }
+    },
+    {
+      "id": "wd-q697314",
+      "name": "國立國父紀念館",
+      "category": "government",
+      "latlng": [
+        25.039987,
+        121.560291
+      ],
+      "start": 1972,
+      "end": null,
+      "desc": "為紀念國父孫中山百年誕辰而興建的文化及紀念綜合設施，位於信義區，1972 年 5 月 16 日落成啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q697314",
+          "url": "https://www.wikidata.org/wiki/Q697314"
+        },
+        {
+          "title": "Wikidata Q113714736",
+          "url": "https://www.wikidata.org/wiki/Q113714736"
+        },
+        {
+          "title": "維基百科〈國立國父紀念館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E5%9C%8B%E7%88%B6%E7%B4%80%E5%BF%B5%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "國立國父紀念館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "國立國父紀念館，通稱國父紀念館，簡稱國館，是位於臺灣臺北市信義區的國家紀念建築，係紀念中華民國國父孫中山百年誕辰而興建的文化及紀念綜合設施，於1972年5月16日落成啟用，館區總面積達三萬五千坪（約11萬5702.48平方公尺）。"
+      }
+    },
+    {
+      "id": "wd-q11411912",
+      "name": "臺北市立永春高級中學",
+      "category": "school",
+      "latlng": [
+        25.03357,
+        121.578621
+      ],
+      "start": 1976,
+      "end": null,
+      "desc": "1968 年成立永春國民中學，1976 年遷入永春陂現址，1994 年改制為高中，1996 年正式更名為永春高級中學。",
+      "sources": [
+        {
+          "title": "Wikidata Q11411912",
+          "url": "https://www.wikidata.org/wiki/Q11411912"
+        },
+        {
+          "title": "維基百科〈臺北市立永春高級中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E6%B0%B8%E6%98%A5%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立永春高級中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1968年九年國民義務教育開始實施、同年'''臺北市立永春國民中學'''成立，1976年遷入永春陂現址。"
+      }
+    },
+    {
+      "id": "tpark-111",
+      "name": "黎富公園",
+      "category": "park",
+      "latlng": [
+        25.021009,
+        121.556702
+      ],
+      "start": 1977,
+      "end": null,
+      "desc": "本公園屬老生代公園。公園面積：900平方公尺。公園位置：富陽街92號前。公園沿革：於民國66年開闢，84年7月1日接收。公園特色：黎富公園面對捷運木柵線，介於六張犁站與麟光站之間，民眾一般日常上班之通勤要徑。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "黎富公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-404",
+      "name": "黎忠公園",
+      "category": "park",
+      "latlng": [
+        25.019079,
+        121.559372
+      ],
+      "start": 1977,
+      "end": null,
+      "desc": "本公園屬老生代公園。公園面積：1014平方公尺。公園位置：和平東路3段435巷7弄。公園沿革：於民國66年開闢，84年7月1日接收，91年社改整修完成。公園特色：黎忠公園面對捷運木柵線麟光站，民眾一般日常上班之通勤要徑。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "黎忠公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-394",
+      "name": "吳興公園",
+      "category": "park",
+      "latlng": [
+        25.023291,
+        121.56794
+      ],
+      "start": 1978,
+      "end": null,
+      "desc": "本公園屬老生代公園。公園面積：1176平方公尺。公園位置：吳興街432巷114號。公園沿革：於民國67年開闢，84年7月1日接收。公園特色：吳興公園取地利之便，建於溪流與側坡間,由吳興街432巷口熱鬧市集轉入即可瞧見這座落於都市叢林中的一處清幽角落。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "吳興公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-571",
+      "name": "永吉公園",
+      "category": "park",
+      "latlng": [
+        25.043591,
+        121.575043
+      ],
+      "start": 1978,
+      "end": null,
+      "desc": "本公園屬老生代公園。公園面積：2200平方公尺。公園位置：永吉路278巷57弄內。公園沿革：於民國67年開闢，84年7月1日接收，93年社改整修完成。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "永吉公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-118",
+      "name": "永春崗公園",
+      "category": "park",
+      "latlng": [
+        25.03171,
+        121.577591
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "永春崗公園位於信義區松山路656巷2號旁，於民國69年開闢，面積11,302平方公尺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q11132257",
+          "url": "https://www.wikidata.org/wiki/Q11132257"
+        },
+        {
+          "title": "維基百科〈永春崗公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%B0%B8%E6%98%A5%E5%B4%97%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "永春崗公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-308",
+      "name": "泰和公園",
+      "category": "park",
+      "latlng": [
+        25.02314,
+        121.568199
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "本公園屬老生代公園。公園面積：1422平方公尺。公園位置：吳興街583巷與600巷67弄間。公園沿革：於民國69年開闢，84年7月1日接收。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "泰和公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-429",
+      "name": "三興公園",
+      "category": "park",
+      "latlng": [
+        25.02858,
+        121.559547
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "本公園屬老生代公園。公園面積：3306平方公尺。公園位置：吳興街156巷40弄與吳興街118巷間。公園沿革：於民國69年開闢，84年7月1日接收。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "三興公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-664",
+      "name": "富台公園",
+      "category": "park",
+      "latlng": [
+        25.04207,
+        121.572243
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "富台公園位於信義區松信路右側與臺北兒童福利中心間，周圍商業區、住宅區及私人機關林立，於民國69年開闢，並於103年全面更新，公園面積1,959平方公尺，位居信義計畫區周邊地帶。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "富台公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-733",
+      "name": "林口公園",
+      "category": "park",
+      "latlng": [
+        25.039061,
+        121.578949
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "本公園屬老生代公園。公園面積：2117平方公尺。公園位置：松山路515巷。公園沿革：於民國69年開闢，84年7月1日接收，94年社改整修完成。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "林口公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-519",
+      "name": "中興公園",
+      "category": "park",
+      "latlng": [
+        25.034269,
+        121.55925
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "本公園屬老生代公園。公園面積：2453平方公尺。公園位置：基隆路1段380巷，座落中興里區內。公園沿革：於民國70年開闢，84年7月1日接收，90年完成整建。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "中興公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-559",
+      "name": "永春公園",
+      "category": "park",
+      "latlng": [
+        25.042299,
+        121.579117
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "本公園屬中生代公園。社區改造於101年完成。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "永春公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-768",
+      "name": "雅祥公園",
+      "category": "park",
+      "latlng": [
+        25.047569,
+        121.571831
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：3065平方公尺。公園位置：松信路與基隆路1段35巷7弄邊。公園沿革：於民國72年開闢，84年7月1日接收。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "雅祥公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-132",
+      "name": "松隆綠地",
+      "category": "park",
+      "latlng": [
+        25.03496,
+        121.580109
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "松隆綠地屬佔地2112平方公尺的長型綠地，位於松山商職西南側，建於民國83年。沿著長型步道種植楓香、山櫻花、大王椰子、小葉欖仁、樟樹、檸檬、龍眼樹多種喬木；而遊戲區則有阿勃勒、魚木、鳳凰木等開花喬木及鵝掌藤、杜鵑、仙丹花、觀音宗竹等多種灌木。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "松隆綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-395",
+      "name": "福德公園",
+      "category": "park",
+      "latlng": [
+        25.03824,
+        121.581848
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：1290平方公尺。公園位置：福德街與大道路口。公園沿革：於民國73年開闢，84年7月1日接收。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "福德公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-475",
+      "name": "景平公園",
+      "category": "park",
+      "latlng": [
+        25.02989,
+        121.563942
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：1609平方公尺。公園位置：莊敬路289巷口。公園沿革：於民國73年開闢，84年7月1日接收。公園特色：景平公園座落為信義計畫區邊，社區新興大樓林立，旁有幼稚園、國中等學校，為一高品質之文教社區。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "景平公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-709",
+      "name": "五常公園",
+      "category": "park",
+      "latlng": [
+        25.047689,
+        121.574341
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：6942平方公尺。公園位置：松隆路272號與永吉路225巷邊。公園沿革：於民國73年開闢，84年7月1日接收，92年社改整修完成。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "五常公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-96",
+      "name": "百福公園",
+      "category": "park",
+      "latlng": [
+        25.037939,
+        121.588539
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "百福公園位於南港區福德街309巷19號對面，於民國73年闢建，公園處94年接管，公園面積2,756平方公尺，走進公園即可被常綠灌木六月雪所拼湊出的「百福」二字所吸引，公園名稱便不明而喻。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "百福公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-197",
+      "name": "中全公園",
+      "category": "park",
+      "latlng": [
+        25.038589,
+        121.57489
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：5060平方公尺。公園位置：虎林街164巷與松德路邊。公園沿革：民國81年開闢84年10月28日接收，94年社改整修完成。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "中全公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-31",
+      "name": "松友公園",
+      "category": "park",
+      "latlng": [
+        25.033911,
+        121.576149
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：2196平方公尺。公園位置：信義路6段76巷2弄。公園沿革：於民國75年開闢，84年7月1日接收。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "松友公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-339",
+      "name": "春光公園",
+      "category": "park",
+      "latlng": [
+        25.042231,
+        121.580742
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：4241平方公尺。公園位置：忠孝東路5段、林口街口。公園沿革：於民國75年開闢，84年7月1日接收，93年停管處整建完成。公園特色：由於地下停車場興建，新建公園於93年3月重新啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "春光公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-183",
+      "name": "革新公園",
+      "category": "park",
+      "latlng": [
+        25.043831,
+        121.567368
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：1585平方公尺。公園位置：松隆路19-33旁。公園沿革：於民國76年開闢，84年7月1日接收。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "革新公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-222",
+      "name": "虎林公園",
+      "category": "park",
+      "latlng": [
+        25.031481,
+        121.577293
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：9547平方公尺。公園位置：信義路6段76巷8弄與松德路307巷。公園沿革：於民國76年開闢，84年7月1日接收，92年社改整修完成。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "虎林公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-264",
+      "name": "黎平綠地",
+      "category": "park",
+      "latlng": [
+        25.02319,
+        121.557121
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "位於崇德街146巷17號前，建於民國76年，佔地面積僅有100平方公尺的小綠地。綠地由琴葉榕、小葉欖仁、樟樹、七里香、春不老等喬木、灌木圍繞而成，綠地的中間有一組石桌椅，是附近居民在此乘涼、聊天的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "黎平綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-581",
+      "name": "福祥公園",
+      "category": "park",
+      "latlng": [
+        25.04604,
+        121.570503
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：835平方公尺。公園位置：永吉路127巷與松隆路99號邊。公園沿革：於民國76年開闢，84年7月1日接收。公園特色：為一小巧玲瓏的三角公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "福祥公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-671",
+      "name": "四育公園",
+      "category": "park",
+      "latlng": [
+        25.046761,
+        121.575142
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：1766平方公尺。公園位置：虎林街30巷與永吉路321巷邊。公園沿革：於民國76年開闢，84年7月1日接收，並於90年12月重新整建完成。公園特色：「四育公園」行政轄屬信義區四育里，原名「正義公園」，91年應里民之建議更名為「四育公園」。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "四育公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-375",
+      "name": "松光綠地",
+      "category": "park",
+      "latlng": [
+        25.039499,
+        121.578529
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "於民國77年建造，原名林口2號綠地於今年初更名為松光綠地，是由黑板樹圍繞而成的三角形綠地，佔地1611平方公尺。除黑板樹外還有金露花、四季秋海棠、杜鵑、花葉椒草等多種草花灌木。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "松光綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-449",
+      "name": "富生公園",
+      "category": "park",
+      "latlng": [
+        25.042089,
+        121.569847
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：6907平方公尺。公園位置：永吉路30巷167弄底，座落興雅里區內。公園沿革：於民國77年開闢，84年7月1日接收，94年完成整建。公園特色：本公園屬中生代公園。公園面積：6907平方公尺。公園位置：永吉路30巷167弄底，座落興雅里區內。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "富生公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-45",
+      "name": "厚生廣場",
+      "category": "park",
+      "latlng": [
+        25.043409,
+        121.5681
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "屬長形廣場占地1,611平方公尺，建於民國77年，位於永吉路30巷102弄。廣場內種植黑板樹、欖仁、小葉欖仁、榕樹、龍柏、福木、檬果、楊桃、柚子、仙丹花、梔子花、朱蕉、變葉木等多種植物，不同時節來到這裡會有不同的樣貌可以欣賞。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "厚生廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-868",
+      "name": "富生1號公園",
+      "category": "park",
+      "latlng": [
+        25.042229,
+        121.569849
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "富生1號公園，1988 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "富生1號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-869",
+      "name": "富生2號公園",
+      "category": "park",
+      "latlng": [
+        25.042381,
+        121.569624
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "富生2號公園，1988 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "富生2號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-740",
+      "name": "景聯廣場",
+      "category": "park",
+      "latlng": [
+        25.03252,
+        121.561401
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "於民國79年由震旦行捐贈原公園旁的部分土地合併而成，正式改名為「景聯廣場」。位於吳興街7巷與莊敬路6巷之間，佔地2,055平方公尺。廣場內種植黑板樹、阿勃勒、小葉欖仁、麵包樹、楓香、饅頭樹、桑樹、茄冬、朱蕉、七里香、木麻黃、黛葉粉、杜鵑、仙丹花、鵝掌藤等多種喬、灌木。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "景聯廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q7676278",
+      "name": "臺北市議會",
+      "category": "government",
+      "latlng": [
+        25.0386,
+        121.562
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "臺北市議會 1964 年遷入中正區獨立大樓，1990 年再遷至信義區仁愛路四段的新廈，與臺北市市政大樓為鄰。",
+      "sources": [
+        {
+          "title": "Wikidata Q7676278",
+          "url": "https://www.wikidata.org/wiki/Q7676278"
+        },
+        {
+          "title": "維基百科〈臺北市議會〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E8%AD%B0%E6%9C%83"
+        }
+      ],
+      "photo": {
+        "query": "臺北市議會"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1990年，臺北市議會再遷移至位於臺北東區逸仙路與仁愛路四段交界處的市議會新廈（臺北市信義區仁愛路四段507號），與臺北市市政大樓為鄰。"
+      }
+    },
+    {
+      "id": "tpark-101",
+      "name": "信義354號綠地",
+      "category": "park",
+      "latlng": [
+        25.029461,
+        121.56842
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "位於松仁路東側，綠地佔地有9014平方公尺，建造於民國80年。自行車道從信義路五段沿著松仁路至忠孝東路五段，車道兩旁種植黑板樹、水黃皮、艷紫荊等大型喬木有遮陰的效果，讓你能在舒適的狀態下沿著步道漫步或騎車。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "信義354號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-179",
+      "name": "信義356號綠地",
+      "category": "park",
+      "latlng": [
+        25.033381,
+        121.573708
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "鄰近於象山捷運站，位於信義路五段北側及松德路西側，建於民國80年，佔地8227平方公尺。沿著步道種植樟樹、榕樹、茄冬、山櫻花、大花紫薇、稜果榕、台灣欒樹大型喬木，綠樹成蔭下有遮陰避暑的效果還可以多多吸收芬多精。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "信義356號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-213",
+      "name": "信義350綠地",
+      "category": "park",
+      "latlng": [
+        25.03923,
+        121.562569
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "信義350綠地，1991 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "信義350綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-425",
+      "name": "信義353號綠地 (松仁綠地)",
+      "category": "park",
+      "latlng": [
+        25.032749,
+        121.567719
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "建於民國80年，位於信義路五段南側與松仁路西側間之帶狀綠地，佔地11,202平方公尺。狹長型的帶狀園區種植小葉欖仁、樟樹、水黃皮、楓香、羅漢松、木麻黃、七里香、仙丹花、金露花、軟枝黃蟬及草坪綠美化。綠地中有自行車道供民眾有一個舒適安心的騎車環境，一旁還有幾米公車可以供大家參觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "信義353號綠地 (松仁綠地)"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-615",
+      "name": "惠安公園",
+      "category": "park",
+      "latlng": [
+        25.024549,
+        121.564621
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：9927平方公尺。公園位置：吳興街320巷65號前。公園沿革：於民國80年開闢，84年7月1日接收。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "惠安公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-649",
+      "name": "信義351號綠地",
+      "category": "park",
+      "latlng": [
+        25.039181,
+        121.565437
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "於松高路本線基隆路口至松仁路口主要分為腳踏車道及人型步道，腳踏車道兩側樟樹林立，而人行步道全段由水黃皮及小葉欖仁林立。鄰近於百貨及誠品旁，步道旁多處設有座椅可供民眾在此休憩、聊天。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "信義351號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-658",
+      "name": "松德公園",
+      "category": "park",
+      "latlng": [
+        25.03602,
+        121.573288
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "位於信義區松德路180巷內、興雅國中西側，面積約1公頃，於民國80年開闢的松德公園，是想徜徉於濃濃綠蔭下，享受新鮮空氣的好選擇。園區內具有中央大草坪、綠園道、體健設施及兒童遊戲區供市民休憩活動，更有鄉土植物主題園，搭配解說牌，極富教育意義。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "松德公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-663",
+      "name": "安強公園",
+      "category": "park",
+      "latlng": [
+        25.03669,
+        121.57534
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：1090平方公尺。公園位置：虎林街202巷66弄。公園沿革：於民國80年開闢，84年7月1日接收，91年社改整修完成。公園特色：安強公園公園面積雖小，每天來往公園的人大都為鄰近居住之老人或小孩，所以呈現自然溫馨氣息。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "安強公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-714",
+      "name": "信義355號綠地",
+      "category": "park",
+      "latlng": [
+        25.030899,
+        121.568336
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "位於松仁路東側，綠地佔地有5472平方公尺，建造於民國80年。自行車道從信義路五段155號沿著松仁路至信義路五段路口，車道兩旁種植黑板樹、水黃皮、檬果等大型喬木有遮陰的效果，讓你能在舒適的狀態下沿著步道漫步或騎車。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "信義355號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-681",
+      "name": "念儒公園",
+      "category": "park",
+      "latlng": [
+        25.03772,
+        121.573761
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：777平方公尺。公園位置：忠孝東路5段236巷37弄底。公園沿革：民國81年開闢84年10月28日接收。公園特色：念儒公園位於松德公園興雅國中旁，為安康里內四公園最小一座，公園於民國81年闢建由海華建設公司所捐贈，景觀設計屬大樓中庭廣場設計。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "念儒公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-98",
+      "name": "三犁公園",
+      "category": "park",
+      "latlng": [
+        25.029779,
+        121.570023
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：3372平方公尺。公園位置：信義路5段150巷14弄旁。公園沿革：82年開闢95年由區公所接管。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "三犁公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-392",
+      "name": "信義352號公園 (松智公園)",
+      "category": "park",
+      "latlng": [
+        25.03582,
+        121.565514
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "建造於民國83年，屬狹長型綠地佔地11807平方公尺，其中有自行車道也有YouBike租借站可以供民眾代步。自行車道兩側主要種植茄冬及印度紫檀，人行步道則是水黃皮及楓香。附近鄰近新光三越、101及信義誠品，松智公園處也有設置座椅供民眾稍作休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "信義352號公園 (松智公園)"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-23",
+      "name": "市民廣場",
+      "category": "park",
+      "latlng": [
+        25.03664,
+        121.562752
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "市民廣場位處於信義計畫區內，於民國84年開闢，面積約4.2公頃，為仁愛路進入市政大樓的緩衝地帶，周圍商業區、住宅區及私人機關林立，廣場內規劃有植栽區、瀑布流水區、露天表演舞臺區等休憩設施，另有蒲葵、樟樹、青楓、阿勃勒、小葉欖仁、茄苳、欖仁、流蘇、山櫻花、楓香、臺灣欒樹等喬木點綴其間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "市民廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-378",
+      "name": "松壽廣場",
+      "category": "park",
+      "latlng": [
+        25.03739,
+        121.566078
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "松壽廣場(信義14號)位於信義區松智路東側與新光三越百貨間，於民國84年間開闢完成，周圍屬商業區用地，公司與機關林立，東側有新光三越百貨，西側為市政大樓，南側緊臨新舞台，北側則有誠品書局。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "松壽廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-583",
+      "name": "黎雙公園",
+      "category": "park",
+      "latlng": [
+        25.024981,
+        121.563469
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：2176平方公尺。公園位置：吳興街284巷22弄(北醫南側)。公園沿革：於民國84年開闢，84年7月1日接收。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "黎雙公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-750",
+      "name": "五分埔公園",
+      "category": "park",
+      "latlng": [
+        25.04694,
+        121.580101
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：中坡北路、松隆路口(松山車站前)。公園沿革：於民國84年開闢，84年7月1日接收，94年社改整修完成。公園特色：五分埔公園為一座大型鄰里公園，園內設有一籃球場為青少年主要運動場所，兒童遊戲場寬敞。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "五分埔公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q697995",
+      "name": "市政府站",
+      "category": "station",
+      "latlng": [
+        25.041164,
+        121.565978
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "臺北捷運板南線車站，1999 年 12 月 24 日隨板南線「市政府－龍山寺」段正式通車而啟用，2000 年南港線延伸至昆陽站。",
+      "sources": [
+        {
+          "title": "Wikidata Q697995",
+          "url": "https://www.wikidata.org/wiki/Q697995"
+        },
+        {
+          "title": "維基百科〈市政府站 (臺北市)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%B8%82%E6%94%BF%E5%BA%9C%E7%AB%99%20(%E8%87%BA%E5%8C%97%E5%B8%82)"
+        }
+      ],
+      "photo": {
+        "query": "市政府站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "*1999年12月24日：隨著板南線「市政府－龍山寺」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698382",
+      "name": "國父紀念館站",
+      "category": "station",
+      "latlng": [
+        25.0413,
+        121.558
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "臺北捷運車站，1999 年 12 月 24 日隨南港線「市政府－西門」段及板橋線「西門－龍山寺」段正式通車而啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q698382",
+          "url": "https://www.wikidata.org/wiki/Q698382"
+        },
+        {
+          "title": "維基百科〈國父紀念館站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%88%B6%E7%B4%80%E5%BF%B5%E9%A4%A8%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "國父紀念館站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "*1999年12月24日：隨著南港線「市政府－西門」段以及板橋線「西門－龍山寺」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698799",
+      "name": "永春站",
+      "category": "station",
+      "latlng": [
+        25.040869,
+        121.575606
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "臺北捷運板南線車站，2000 年 12 月 30 日隨南港線「昆陽－市政府」段正式通車而啟用，位於信義區永春陂一帶。",
+      "sources": [
+        {
+          "title": "Wikidata Q698799",
+          "url": "https://www.wikidata.org/wiki/Q698799"
+        },
+        {
+          "title": "維基百科〈永春站 (臺北市)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%B0%B8%E6%98%A5%E7%AB%99%20(%E8%87%BA%E5%8C%97%E5%B8%82)"
+        }
+      ],
+      "photo": {
+        "query": "永春站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "*2000年12月30日：隨著南港線「昆陽－市政府」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-149",
+      "name": "忠信廣場",
+      "category": "park",
+      "latlng": [
+        25.040541,
+        121.567909
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "忠信廣場(信義12號)位於忠孝東路五段與松仁路交叉口，緊鄰微風信義、新光三越、Bellavita等購物中心，是捷運板南線市府站二號出口旁佔地7777平方公尺的綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "忠信廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-524",
+      "name": "太子綠地",
+      "category": "park",
+      "latlng": [
+        25.045191,
+        121.577072
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "建造於民國90年，位於永吉路與虎林街交叉口，為一小型綠地。鄰近市場，綠地雖小但有設置多處座椅，可供上市場民眾在此聊天稍作休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "太子綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-454",
+      "name": "眷村文化公園",
+      "category": "park",
+      "latlng": [
+        25.031639,
+        121.561752
+      ],
+      "start": 2002,
+      "end": null,
+      "desc": "眷村文化公園位於信義區松勤路50號，面積13,000平方公尺，離臺北世界貿易中心對面不遠處，在信義區精華地段上，卻還能看見高僅2層、巷弄狹窄的眷村建物。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "眷村文化公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q139055195",
+      "name": "松山高中電扶梯陸橋",
+      "category": "bridge",
+      "latlng": [
+        25.043833,
+        121.566
+      ],
+      "start": 2002,
+      "end": null,
+      "desc": "位於信義區，跨越松山高中前基隆路正氣橋匝道，2002 年落成，是臺灣首座裝設電扶梯的人行天橋。",
+      "sources": [
+        {
+          "title": "Wikidata Q139055195",
+          "url": "https://www.wikidata.org/wiki/Q139055195"
+        },
+        {
+          "title": "維基百科〈松山高中電扶梯陸橋〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%9D%BE%E5%B1%B1%E9%AB%98%E4%B8%AD%E9%9B%BB%E6%89%B6%E6%A2%AF%E9%99%B8%E6%A9%8B"
+        }
+      ],
+      "photo": {
+        "query": "松山高中電扶梯陸橋"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "松山高中電扶梯陸橋，位於臺灣臺北市信義區，跨越松山高中前基隆路正氣橋匝道，2002年落成，為臺灣首座裝設電扶梯的人行天橋。"
+      }
+    },
+    {
+      "id": "tpark-33",
+      "name": "三張里公園",
+      "category": "park",
+      "latlng": [
+        25.03093,
+        121.566727
+      ],
+      "start": 2003,
+      "end": null,
+      "desc": "本公園屬新生代公園。公園面積：6658平方公尺。公園位置：松平路77號旁。公園沿革：94年開闢95年由區公所接管。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "三張里公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-481",
+      "name": "信義廣場",
+      "category": "park",
+      "latlng": [
+        25.03348,
+        121.56604
+      ],
+      "start": 2003,
+      "end": null,
+      "desc": "信義廣場(信義13號)位於信義路五段上，緊鄰101大樓、信義區公所、世貿二館等，面積達9,456平方公尺，位居信義計畫區重要核心地帶，考量有來自四面八方的遊客，因此規劃五個主要出入口與步道系統串聯，並於入口區留設小型廣場，方便遊客駐足休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "信義廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-17",
+      "name": "信義安康公園",
+      "category": "park",
+      "latlng": [
+        25.035721,
+        121.570068
+      ],
+      "start": 2005,
+      "end": null,
+      "desc": "信義安康公園位於本市信義區安康里博愛國小旁，開闢面積為10,609平方公尺，公園周邊多為住商混合區，在公園興闢之前此地曾為本處「樹木銀行」用地，用以培育箱植喬木。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "信義安康公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-153",
+      "name": "信義382號綠地 (惠安水與綠生活綠地)",
+      "category": "park",
+      "latlng": [
+        25.023359,
+        121.568237
+      ],
+      "start": 2006,
+      "end": null,
+      "desc": "惠安水與綠生活綠地位於台北市信義區的惠安里內，從94年開始惠安里透過計畫執行民眾參與，將社區內的吳興公園、閒置未開闢的公園地及預定計畫道路、民政局與發展局閒置空地等納入社區中屬於公共開放的閒置空間，與蜿蜒流經的惠安排水溝串聯形成社區帶狀區塊，藉由惠安排水溝水生植物淨實的溪緣生態設計及閒置空地的綠美實改善，及形塑惠安社區重要核心公共地區之規劃設計，將社區潛在水與綠的資源串聯交織，形成社區居民及孩童安全舒適的生活通廊及活動空間，營造屬於社區的生機花園，並凝聚原來因排水溝被分割的社區向心力，喚起在地居民往昔「我家門前有小河」的情實，讓社區居民恣意地隨著風、鳥、魚、蛙、花、蝶...翩翩起舞，進而讓社區朝氣蓬勃、凝聚社區居民生活的共同意識。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "信義382號綠地 (惠安水與綠生活綠地)"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-575",
+      "name": "景勤1號公園",
+      "category": "park",
+      "latlng": [
+        25.026331,
+        121.560257
+      ],
+      "start": 2006,
+      "end": null,
+      "desc": "本公園原為「陸軍保養廠」，於95年開闢為公園，公園面積約1公頃，南臨吳興街220巷，西臨信安街，東側為台北醫學院。本公園於規劃設計時經過多次和民眾互動的工作坊，在地方共識凝聚下，打造了臺北市第1座以田園城市為思考的公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "景勤1號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-605",
+      "name": "信義21號廣場",
+      "category": "park",
+      "latlng": [
+        25.034731,
+        121.564468
+      ],
+      "start": 2006,
+      "end": null,
+      "desc": "建於民國95年，佔地5,102平方公尺，位於101後方，主要種植小葉欖仁，廣場中央有噴水池可供民眾欣賞。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "信義21號廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-508",
+      "name": "交五",
+      "category": "park",
+      "latlng": [
+        25.04921,
+        121.57415
+      ],
+      "start": 2013,
+      "end": null,
+      "desc": "交五用地位於信義區市民大道六段（松信路至虎林街），於102年興闢完成，占地面積為10,745平方公尺，本處係因配合鐵路廊帶地下化，變更鐵路用地為交通用地後，考量基地形狀及整體開放空間系統，將釋出之地面土地規劃作公園使用，屬一帶狀型公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "交五"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-6",
+      "name": "交六",
+      "category": "park",
+      "latlng": [
+        25.04933,
+        121.570869
+      ],
+      "start": 2013,
+      "end": null,
+      "desc": "交六用地位於信義區市民大道六段（基隆路至松信路），於102年興闢完成，占地面積為6,832平方公尺。該處係因配合鐵路廊帶地下化，將地面土地規劃作公園使用，與鄰近的交五公園皆屬帶狀型公園。公園內除設有腳踏車道、休閒座椅，亦設置兒童遊樂設施，供市民運動及遊憩需求。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "交六"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-83",
+      "name": "信義20號廣場",
+      "category": "park",
+      "latlng": [
+        25.04875,
+        121.577583
+      ],
+      "start": 2013,
+      "end": null,
+      "desc": "建於民國102年，位於市民大道與松隆路及松山路交叉口，佔地面積1,549平方公尺。廣場內有黑板樹、緬梔花、紫薇等喬木來美化市容景觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "信義20號廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q4276721",
+      "name": "象山站",
+      "category": "station",
+      "latlng": [
+        25.032747,
+        121.568929
+      ],
+      "start": 2013,
+      "end": null,
+      "desc": "臺北捷運信義線車站，2013 年 11 月 24 日隨信義線「中正紀念堂至象山」段正式通車而啟用，曾為信義線終點。",
+      "sources": [
+        {
+          "title": "Wikidata Q4276721",
+          "url": "https://www.wikidata.org/wiki/Q4276721"
+        },
+        {
+          "title": "維基百科〈象山站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%B1%A1%E5%B1%B1%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "象山站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "*2013年11月24日：隨著信義線「中正紀念堂↔象山」段正式通車而啟用（通車後與淡水線直通運行，營運模式為「北投↔象山」）。"
+      }
+    },
+    {
+      "id": "tpark-241",
+      "name": "景勤2號公園",
+      "category": "park",
+      "latlng": [
+        25.026039,
+        121.557487
+      ],
+      "start": 2020,
+      "end": null,
+      "desc": "本公園原為「陸軍保養廠」，經94年6月臺北市政府公告修訂臺北市信義區陸軍保樣廠用地細部計畫案，調整使用分區為「公園用地」。市府為提高本地區多功能休憩防災開放空間、增加公共停車空間及調整鄰里道路通行系統，將本公園規劃為公園用地間防災避難空間，並有地下2層公有停車場。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "景勤2號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-851",
+      "name": "永春陂濕地公園",
+      "category": "park",
+      "latlng": [
+        25.032812,
+        121.580069
+      ],
+      "start": 2020,
+      "end": null,
+      "desc": "永春陂濕地公園位於信義區四獸山下，陂塘引流豹山溪及無名溪兩條溪流，為此帶來豐富生物物種及環境資源，百年前曾為一波光粼粼的陂塘，古人在此泛輕舟、吟風月。然而因土地開發陂塘漸漸失去儲水功能，國民政府遷台後設永春陂營區，湖光山色不再。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "永春陂濕地公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-852",
+      "name": "糶米公園",
+      "category": "park",
+      "latlng": [
+        25.018614,
+        121.572468
+      ],
+      "start": 2020,
+      "end": null,
+      "desc": "新闢糶米公園前身為既有違建空屋長年佔用，導致環境雜亂及排水不易之情況，近年來公園處致力於閒置空地加以活化，提升環境品質，於106年展開更新建工程計畫，將山坡地有效改善環境外，增加一處全齡的休憩空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "糶米公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q858333",
+      "name": "臺北大巨蛋",
+      "category": "sports",
+      "latlng": [
+        25.042327,
+        121.5601
+      ],
+      "start": 2023,
+      "end": null,
+      "desc": "位於信義區的臺灣唯一巨蛋級多功能室內場館，由遠雄巨蛋事業股份有限公司經營，2023 年 12 月 2 日正式啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q858333",
+          "url": "https://www.wikidata.org/wiki/Q858333"
+        },
+        {
+          "title": "維基百科〈臺北大巨蛋〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%A4%A7%E5%B7%A8%E8%9B%8B"
+        }
+      ],
+      "photo": {
+        "query": "臺北大巨蛋"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "臺北大巨蛋（英語：Taipei Dome，簡稱大巨蛋、臺北巨蛋）位於臺灣臺北市信義區，為臺灣唯一的巨蛋級多功能室內場館，於2023年12月2日啟用，經營單位為遠雄巨蛋事業股份有限公司。"
+      }
+    },
+    {
+      "id": "wd-q131444333",
+      "name": "富邦美術館",
+      "category": "museum",
+      "latlng": [
+        25.039391,
+        121.571208
+      ],
+      "start": 2024,
+      "end": null,
+      "desc": "由富邦藝術基金會與倫佐·皮亞諾建築工作室等合作設計興建，為其在臺灣首件作品，2024 年 5 月 4 日開館營運。",
+      "sources": [
+        {
+          "title": "Wikidata Q131444333",
+          "url": "https://www.wikidata.org/wiki/Q131444333"
+        },
+        {
+          "title": "維基百科〈富邦美術館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%AF%8C%E9%82%A6%E7%BE%8E%E8%A1%93%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "富邦美術館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2024年5月4日開館營運，由富邦藝術基金會執行長翁美慧出任館長。"
+      }
+    },
+    {
+      "id": "wd-q97167858",
+      "name": "國家鐵道博物館",
+      "category": "museum",
+      "latlng": [
+        25.046126,
+        121.563365
+      ],
+      "start": 2025,
+      "end": null,
+      "desc": "位於原臺北機廠，2015 年全區保留指定為國定古蹟，2019 年籌備處成立，2025 年 7 月 31 日啟動第一階段開館。",
+      "sources": [
+        {
+          "title": "Wikidata Q97167858",
+          "url": "https://www.wikidata.org/wiki/Q97167858"
+        },
+        {
+          "title": "維基百科〈國家鐵道博物館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E5%AE%B6%E9%90%B5%E9%81%93%E5%8D%9A%E7%89%A9%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "國家鐵道博物館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "*2025年7月31日，啟動第一階段開館，開放區域包括柴電工場、總辦公室、技工養成所、材料試驗所、大禮堂及澡堂等6處古蹟建築。"
+      }
+    }
+  ]
+}

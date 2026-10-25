@@ -1,0 +1,2760 @@
+{
+  "towncode": "63000080",
+  "county": "臺北市",
+  "town": "文山區",
+  "slug": "taipei-wenshan",
+  "items": [
+    {
+      "id": "wd-q718405",
+      "name": "考試院",
+      "category": "government",
+      "latlng": [
+        24.987831,
+        121.549356
+      ],
+      "start": 1951,
+      "end": null,
+      "desc": "考試院 1949 年隨政府遷臺，初借臺北孔廟，1951 年遷至臺北縣木柵鄉溝子口現址，即今文山區。",
+      "sources": [
+        {
+          "title": "Wikidata Q718405",
+          "url": "https://www.wikidata.org/wiki/Q718405"
+        },
+        {
+          "title": "維基百科〈考試院〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%80%83%E8%A9%A6%E9%99%A2"
+        }
+      ],
+      "photo": {
+        "query": "考試院"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1949年2月5日，考試院遷廣州市辦公，8月再遷廣西省梧州市，至12月隨中華民國政府遷往臺灣省臺北市，初暫借臺北孔廟，後於1951年遷臺北縣木柵鄉（現屬臺北市文山區）溝子口現址。"
+      }
+    },
+    {
+      "id": "wd-q15903796",
+      "name": "臺北市私立靜心高級中學",
+      "category": "school",
+      "latlng": [
+        24.998944,
+        121.54675
+      ],
+      "start": 1967,
+      "end": null,
+      "desc": "靜心中學前身為 1951 年於貴陽街創立的靜心托兒所與幼稚園，1967 年遷至興隆路二段 46 號現址。",
+      "sources": [
+        {
+          "title": "Wikidata Q15903796",
+          "url": "https://www.wikidata.org/wiki/Q15903796"
+        },
+        {
+          "title": "維基百科〈臺北市私立靜心高級中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%A7%81%E7%AB%8B%E9%9D%9C%E5%BF%83%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市私立靜心高級中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1967年遷至臺北市興隆路二段46號。"
+      }
+    },
+    {
+      "id": "tpark-119",
+      "name": "興隆公園",
+      "category": "park",
+      "latlng": [
+        25.000139,
+        121.551086
+      ],
+      "start": 1975,
+      "end": null,
+      "desc": "興隆公園位於文山區仙岩路128號旁，面積1.461公頃，為文山區大型公園之一，分屬於興業里與興安里，周圍有傳統商業經營雜貨店、理髮店、瓦斯行等，附近並有興隆小學、興德小學、興隆國中等學區。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q61480578",
+          "url": "https://www.wikidata.org/wiki/Q61480578"
+        },
+        {
+          "title": "維基百科〈興隆公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%88%88%E9%9A%86%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "興隆公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-500",
+      "name": "光明公園",
+      "category": "park",
+      "latlng": [
+        24.986469,
+        121.55471
+      ],
+      "start": 1979,
+      "end": null,
+      "desc": "本公園雖然設施簡潔，但是小而精美，不僅植栽的種類多樣化，在公園改造後更新遊憩設置，滿足民眾各類休憩需求。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "光明公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-781",
+      "name": "光輝公園",
+      "category": "park",
+      "latlng": [
+        24.98612,
+        121.55584
+      ],
+      "start": 1979,
+      "end": null,
+      "desc": "本公園分為東西2區，東區區分空間機能，相互串聯但設置人行通道將2區串聯起來，設施簡潔但小而美，不僅植栽的種類多樣化，設施滿足民眾各類休憩需求。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "光輝公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-331",
+      "name": "木柵公園",
+      "category": "park",
+      "latlng": [
+        24.98695,
+        121.560463
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "文山（木柵）1號公園係於民國69年完成開闢，位於興隆路4段50號，公園面積為40,066平方公尺。園區除游泳池及入口廣場外，其餘均位處於山坡地範圍，園內設有步道、階梯、溜冰場、涼亭、兒童遊戲場及公廁等設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q15950231",
+          "url": "https://www.wikidata.org/wiki/Q15950231"
+        },
+        {
+          "title": "維基百科〈木柵公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%9C%A8%E6%9F%B5%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "木柵公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-350",
+      "name": "萬和3號公園",
+      "category": "park",
+      "latlng": [
+        25.003811,
+        121.536339
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "本公園連續4年榮獲臺北市績優鄰里公園獎，公園內雙龍搶珠綠籬及大型保護樹木刺桐為園內最大特色。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬和3號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-458",
+      "name": "萬和1號公園",
+      "category": "park",
+      "latlng": [
+        25.00049,
+        121.536324
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "公園周邊入口，結合地被植栽及喬、灌木，形成鮮明之入口意象，園內亦設置無障礙坡道，行動不便及年長者使用，讓公園為多功能休憩場所，滿足各年齡層使用者的使用需求。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬和1號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-67",
+      "name": "萬和2號公園",
+      "category": "park",
+      "latlng": [
+        25.00149,
+        121.536537
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "公園四周為大型喬木環繞，草花樹木、緣石及花台界定公園內外空間，隨興中略見秩序，公園兩側為小型休閒廣場並設置造型涼亭及休憩石桌椅，供民眾聊天及運動跳舞。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬和2號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-173",
+      "name": "景美29號綠地",
+      "category": "park",
+      "latlng": [
+        24.99637,
+        121.551819
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "景美29號綠地座落於台北市文山區懷恩隧道口北側出入口，面積1,076平方公尺，於民國70年開闢，附近有中國科技大學台北校區、傳說八仙中的呂洞賓曾留下足跡的景美仙跡岩步道，從懷恩隧道經過辛亥路六段的馬路可以觀賞到黃金葉金露華、蜘蛛百合、六月雪、紫嬌花、翠蘆莉、鳶尾黃邊萬年麻等一片滿滿綠意的灌木，搭配修剪成圓形的福建茶、美麗的四季草花，以圓形、曲線等圖型排列，營造趣味、多變的景觀，優美的風鈴木交錯其中構成舒適、美麗的道路景色。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "景美29號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-334",
+      "name": "景美32號綠地",
+      "category": "park",
+      "latlng": [
+        25.00922,
+        121.557961
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "景美32號綠地坐落於文山區辛亥路四段上的辛亥隧道南側出口處附近，鄰近辛亥國小，開闢於民國70年，面積約有1,116平方公尺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "景美32號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-534",
+      "name": "景豐公園",
+      "category": "park",
+      "latlng": [
+        25.00013,
+        121.545052
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "入口階梯是環狀廣場，石板步道延綿穿越公園綠地，讓散步民眾得以完全放空並獲得心靈上之放鬆。公園另有羽球場地提供民眾使用，揮灑汗水來鍛鍊體魄。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "景豐公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-536",
+      "name": "木柵14號綠地",
+      "category": "park",
+      "latlng": [
+        24.991631,
+        121.551529
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "木柵14號綠地位於懷恩隧道口南側出入口前，於民國70年開闢，中央槽化島綠地面積約有1,043平方公尺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "木柵14號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-82",
+      "name": "萬年1號公園",
+      "category": "park",
+      "latlng": [
+        25.005699,
+        121.536201
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "本公園外圍由大型喬木圍塑，入口廣場利用曲線型花台、景觀矮牆及簡潔之鋪面設計美化。鋪面及花台亦作整體色系及空間感設計考量，故鄰里公園之自明性更顯明確。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬年1號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-578",
+      "name": "仙岩公園",
+      "category": "park",
+      "latlng": [
+        24.997971,
+        121.549362
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "公園外圍四邊型植栽區域形成公園環狀綠色廊道，園內廣場以兒童遊戲區為主體，圍繞遊戲區之步道及植栽空間層次清楚，有座山丘上環山步道環繞，提供附近居民登高健行之樂。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "仙岩公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q15904847",
+      "name": "臺北市文山區萬芳國民小學",
+      "category": "school",
+      "latlng": [
+        25.000491,
+        121.567563
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "萬芳國小於 1982 年 8 月 1 日正式成立，同年 8 月 31 日首期校舍工程完工，含三十二間普通教室與校門、運動場。",
+      "sources": [
+        {
+          "title": "Wikidata Q15904847",
+          "url": "https://www.wikidata.org/wiki/Q15904847"
+        },
+        {
+          "title": "維基百科〈臺北市文山區萬芳國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E6%96%87%E5%B1%B1%E5%8D%80%E8%90%AC%E8%8A%B3%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市文山區萬芳國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1982年8月31日，首期校舍工程計普通教室三十二間，專科教室三間，暨校門、運動場、圍牆、廚房等興建完成。"
+      }
+    },
+    {
+      "id": "tpark-577",
+      "name": "興豐公園",
+      "category": "park",
+      "latlng": [
+        25.000191,
+        121.55127
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "本公園入口廣場種植四株火焰木，搭配圓型洗石子花台，花台內種植四季草花以提供明顯的入口意象，廣場並以休閒座椅圍繞成一聊天區域。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "興豐公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-726",
+      "name": "試院公園",
+      "category": "park",
+      "latlng": [
+        24.987789,
+        121.547318
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "本公園在空間設計上利用地形高低的差異，再加上圍繞在四周的植栽綠化區，形成特殊的視覺景觀感受，散步在林下步道中有一種回歸山林的野趣。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "試院公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-263",
+      "name": "萬芳3號公園",
+      "category": "park",
+      "latlng": [
+        24.99925,
+        121.567101
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "期修剪的灌木叢，筆直劃一橋木群，呈現和諧氣氛，圍繞一石片廣場，作為休憩場所，臨萬芳路邊退縮約四公尺之候車區，提供候車者使用公園設施及享受寧適氣氛。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬芳3號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-265",
+      "name": "文山木柵60號綠地",
+      "category": "park",
+      "latlng": [
+        25.000429,
+        121.583252
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "位於新光路2段與萬福橋旁，動物園公務門前方綠地，民國73年建造，綠地面積1,196平方公尺，綠地內有金露華可愛造型、鵝掌藤、錫蘭葉下珠、青子木、黑板樹喬木美化市容景觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文山木柵60號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-27",
+      "name": "萬芳1號公園",
+      "category": "park",
+      "latlng": [
+        24.999861,
+        121.566727
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "本園區幾乎以步道鋪面及連接，為妥善利用坡地公園，以分段式階梯連接成階層式休憩平台，空間的配置簡潔有序，適合民眾登高賞景。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬芳1號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-284",
+      "name": "萬芳7號公園",
+      "category": "park",
+      "latlng": [
+        25.001579,
+        121.566162
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "萬芳7號公園位於文山區萬美街1段36號旁，於民國73年開闢，開闢面積為10,727平方公尺。公園依山坡地形開闢坡地部分保留原有林相，園區內配合景觀設施栽植有台灣欒樹、小葉欖仁等喬木，並栽植地被植物綠美化，園內並規劃有一步道可通往萬寧街，提供市民享受芬多精之秘密地點。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬芳7號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-285",
+      "name": "華興公園",
+      "category": "park",
+      "latlng": [
+        24.98917,
+        121.550468
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "由植栽綠帶圍繞著休憩區及兒童遊戲場，健康步道與休閒座椅除了與地坪呼應，亦和綠色植栽形成綠廊的意象，林下健康步道以黑白卵石間隔排列，鬧中取靜的設計既景觀又健康。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "華興公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-490",
+      "name": "萬芳2號公園",
+      "category": "park",
+      "latlng": [
+        24.999201,
+        121.566772
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "本公園裝飾著公共藝術品，配合清爽雅致的喬木叢，讓人眼睛為之一亮。浪漫與休閒的意象，是適合老人、情侶的安靜場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬芳2號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-535",
+      "name": "萬芳4號公園",
+      "category": "park",
+      "latlng": [
+        25.001539,
+        121.567528
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "萬芳4號公園位於文山區萬芳里，於民國73年間開闢完成，公園面積為13,476平方公尺，正對面即為萬芳國小，附近有萬芳里民活動中心、萬芳派出所、萬芳社區，且鄰近捷運萬芳社區站並有公車路網，交通便利，環境優良。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬芳4號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-62",
+      "name": "景行公園",
+      "category": "park",
+      "latlng": [
+        24.992519,
+        121.542778
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "本公園緊鄰景美鬧區及愛買百貨，園內大型喬木寬廣的綠蔭成為往來人潮短暫佇足的最佳地點，公園一隅的四角涼亭下，提供年長者悠閒下棋及自在談天的休憩場所，另兒童遊戲區內動物造型的溜滑梯搭配著四周搖搖樂等遊具，形成了幼童快樂的遊樂天堂，搭配公園周邊林下休憩步道及兩側休閒座椅，提供里民乘涼聊天的最佳場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q19852739",
+          "url": "https://www.wikidata.org/wiki/Q19852739"
+        },
+        {
+          "title": "維基百科〈景行公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%99%AF%E8%A1%8C%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "景行公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-66",
+      "name": "萬芳6號公園",
+      "category": "park",
+      "latlng": [
+        24.9995,
+        121.569183
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "本公園大片綠地及休憩座以提供幽靜、休憩的空間，結合國宅綠地深遠腹地及地形變化特性，讓民眾感受到地勢所帶來的優美感，規劃以芋蛙主題之意象形塑公園風貌。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬芳6號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-18",
+      "name": "萬芳8號公園",
+      "category": "park",
+      "latlng": [
+        25.00301,
+        121.560463
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "萬芳8號公園，1985 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬芳8號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-202",
+      "name": "萬有1號公園",
+      "category": "park",
+      "latlng": [
+        24.99983,
+        121.542953
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "休閒散步道蜿蜒在密布的樹蔭底下，搭配步道兩側座椅，在樹下休憩，自是一種悠閒，搭配園內兒童遊戲區及溜冰場，更滿足了各年齡層遊樂及健身需求。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬有1號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-278",
+      "name": "景仁公園",
+      "category": "park",
+      "latlng": [
+        24.99667,
+        121.5401
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "由滿布綠色蔓藤植栽的花架綠廊，伴隨著空曠的活動廣場與表演舞台，建構成一個動靜皆宜的最佳活動場所，公園內高低層次搭配的植栽，鮮活了公園整體意象搖曳生姿。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "景仁公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-399",
+      "name": "忠順公園",
+      "category": "park",
+      "latlng": [
+        24.983141,
+        121.561142
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "本公園在「兒童遊戲場」的周圍設置綠籬植栽，作為區域之間緩衝與區隔。白色涼亭與黑色壓花地坪的搭配，配上兩側的綠籬走道，提供民眾在視覺上的享受與身心的放鬆。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "忠順公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-463",
+      "name": "萬盛公園",
+      "category": "park",
+      "latlng": [
+        25.00515,
+        121.541061
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "本公園為高低差近一層樓之鄰里公園，兩層廣場間以階梯式植栽槽，搭配溜滑梯及階梯步道扶手，充份串連深具空間變化，公園設施可滿足各年齡層使用者的使用需求。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬盛公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-505",
+      "name": "萬芳11號公園",
+      "category": "park",
+      "latlng": [
+        25.00305,
+        121.56308
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "萬芳11號公園位於文山區萬美街一段與萬寧街交叉口，於民國74年開闢，開闢面積為10,906平方公尺。公園依山坡地形開闢，坡地部分保留原有林相，園區內並規劃登山步道可由萬美街通往萬美社區國宅。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬芳11號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-580",
+      "name": "萬芳10號公園",
+      "category": "park",
+      "latlng": [
+        25.00165,
+        121.562492
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "萬芳10號公園位於文山區萬美街1段121號旁約30公尺與萬芳9號公園相隔一條馬路，於民國74年開闢，開闢面積為11,120平方公尺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬芳10號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-641",
+      "name": "萬芳9號公園",
+      "category": "park",
+      "latlng": [
+        25.00178,
+        121.561478
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "萬芳9號公園位於文山區萬美街1段121號旁，於民國74年開闢，開闢面積為10,551平方公尺。公園依山坡地形開闢坡地部分保留原有林相，園區內配合景觀設施栽植有水黃皮、第倫桃、榕樹、莿桐及大王椰子等喬木，並栽植蜘蛛百合、桂花、變葉木等灌木及地被植物綠美化。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬芳9號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-485",
+      "name": "木新公園",
+      "category": "park",
+      "latlng": [
+        24.98222,
+        121.558037
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "本公園規劃有彩楓四季入口區、誘蝶植栽區、楓香廣場及彩葉漫步植栽區。無裝飾性公園設計，不僅簡單而明遼，在公園內的廣場聚會、運動，可說是民眾休閒活動的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "木新公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-495",
+      "name": "萬年3號公園",
+      "category": "park",
+      "latlng": [
+        25.00704,
+        121.536926
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "本公園綠帶以植栽花槽及變化的鋪面，搭配清爽的簡易造型涼亭，區隔人行步道及帶狀公園範圍，以滿足行人視覺景觀及公園內民眾休憩需求。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬年3號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-629",
+      "name": "興福公園",
+      "category": "park",
+      "latlng": [
+        24.99712,
+        121.545967
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "公園外圍四邊型植栽區域形成公園環狀綠色廊道，園內廣場以兒童遊戲區為主體，圍繞遊戲區之步道及植栽空間層次清楚，並有以石頭雕刻的12生肖。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "興福公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-725",
+      "name": "萬有2號公園",
+      "category": "park",
+      "latlng": [
+        25.00071,
+        121.541901
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "石板步道延綿穿越公園綠地，讓散步民眾得以完全放空並獲得心靈上之放鬆，享受寧靜讓心靈雜物沉澱。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬有2號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-778",
+      "name": "萬年2號公園",
+      "category": "park",
+      "latlng": [
+        25.005699,
+        121.536201
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "本公園外圍由大型喬木圍塑，中央廣場設置遮蔭花架涼亭，提供習已於此區活動之多數里民休憩需求，亦可作為多功能活動廣場使用，景觀矮牆及簡潔之鋪面設計美化，鋪面及花台亦作整體色系及空間感設計考量，鄰里公園之自明性更明確。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬年2號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q591131",
+      "name": "臺北市立動物園",
+      "category": "park",
+      "latlng": [
+        25.0026,
+        121.582
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "臺北市立動物園因圓山原址無法擴建，於 1986 年遷至木柵區，也就是今日文山區的木柵動物園。",
+      "sources": [
+        {
+          "title": "Wikidata Q591131",
+          "url": "https://www.wikidata.org/wiki/Q591131"
+        },
+        {
+          "title": "維基百科〈臺北市立動物園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%8B%95%E7%89%A9%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立動物園"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1986年，因圓山原址無法擴建，而遷至木柵區（今文山區），因此成為臺灣民眾現在所熟悉的「木柵動物園」。"
+      }
+    },
+    {
+      "id": "tpark-182",
+      "name": "保儀公園",
+      "category": "park",
+      "latlng": [
+        24.98354,
+        121.563469
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "民眾從入口綠廊就可感受到遠離塵囂的氛圍，公園內還有綠意盎然的池畔賞景區，是都市公園中少有的親水設計，完善的休閒坐椅設置讓全家人可以品嚐休閒時光。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "保儀公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-215",
+      "name": "恆光公園",
+      "category": "park",
+      "latlng": [
+        24.98241,
+        121.567589
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "本公園給民眾一種進入林蔭隧道的感受，適合民眾暫時脫離都市的喧鬧，進入寧靜的悠閒時光之中。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "恆光公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-229",
+      "name": "興旺公園",
+      "category": "park",
+      "latlng": [
+        25.00584,
+        121.550461
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "興旺公園，1987 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "興旺公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-743",
+      "name": "樟新公園",
+      "category": "park",
+      "latlng": [
+        24.979191,
+        121.556953
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "園中設置「陽光草坪區」，增進民眾的視野開放性，並提供活動舉辦的空間，配合明亮、開放、活力、陽光等特性，適合民眾在此休憩及聯誼。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "樟新公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-36",
+      "name": "久康公園",
+      "category": "park",
+      "latlng": [
+        24.989349,
+        121.564583
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "公園一隅的四角亭下，提供民眾一個休息、談天自在的休閒場合，寬廣多樣化遊樂設施讓嬉戲的孩童盡情的奔跑，搭配公園人行休憩步道，提供休閒最佳場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "久康公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-400",
+      "name": "萬有3號公園",
+      "category": "park",
+      "latlng": [
+        24.99872,
+        121.543098
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "本公園因腹地不大故配置上極為簡單，林蔭下廣場和造型木座椅適合休憩及沉思，公園另提供了運動與復健體健器材，搭配桌椅圍襯以綠地及灌木綠籬。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬有3號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-10",
+      "name": "新榮公園",
+      "category": "park",
+      "latlng": [
+        24.98333,
+        121.570221
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "新榮公園的樹木與草地搭配出神奇的協調感，從公園外部走進內側，可發現這是個精緻且井然有序的鄰里公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "新榮公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-411",
+      "name": "萬芳12號公園",
+      "category": "park",
+      "latlng": [
+        25.001471,
+        121.563583
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "本公園的外圍步道鋪面，搭配灌木叢植栽於步道兩側，塑造舒適之步行空間感受，公園內部具兒童遊戲、散步休憩等功能，滿足民眾在休閒上的需求。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬芳12號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-770",
+      "name": "樟樹公園",
+      "category": "park",
+      "latlng": [
+        24.982719,
+        121.559372
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "本公園使用花崗石地坪和洗石子地坪增加視覺上及行走上不同的體驗，配合兩側的灌木草花，民眾在可以放鬆休息，公園的每一處地方都適合民眾們在此賞景、聊天、休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "樟樹公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-129",
+      "name": "景美公園(原萬慶公園)",
+      "category": "park",
+      "latlng": [
+        24.99402,
+        121.537598
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "萬慶公園位於本市文山區景美里育英街45巷旁，開闢面積為16,813平方公尺，屬下凹式的狹長帶狀公園，鄰近羅斯福路六段、景美溪及景美河濱公園，靠近景美捷運站，附近有景美夜市可遊玩採買，公園附近尚有祖師廟及義民廟，使萬慶公園亦為香客經過暫時歇腳的地點。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "景美公園(原萬慶公園)"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-504",
+      "name": "文山50號綠地",
+      "category": "park",
+      "latlng": [
+        24.990789,
+        121.575089
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "位於新光路1段65巷55號對面，建於民國80年，佔地面積262平方公尺，綠地內有金露華、厚葉女貞、朱蕉、彩虹竹芋、朱槿、大葉銨、榕樹、黑板樹、阿伯樂、杜鵑花、灌木喬木來美化市容景觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文山50號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-589",
+      "name": "樟林公園",
+      "category": "park",
+      "latlng": [
+        24.98464,
+        121.559212
+      ],
+      "start": 1991,
+      "end": null,
+      "desc": "本公園隸屬文山區樟林里，公園鄰近地區居住密度不算太高，隨都市發展及新社區開發，附近社區內缺乏開放空間，故樟林公園腹地雖不大但相形重要。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "樟林公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-693",
+      "name": "木榮公園",
+      "category": "park",
+      "latlng": [
+        24.98464,
+        121.568657
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "公園的樹木與草地搭配出協調感，從公園外部走進內側，可發現這是個精緻且井然有序的鄰里公園，在此散步讓人感到心曠神怡，提供兼具休閒以及視覺景觀的休憩空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "木榮公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-699",
+      "name": "木柵49號綠地",
+      "category": "park",
+      "latlng": [
+        24.99308,
+        121.573669
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "位於新光路1段166巷旁，建於民國81年，佔地25平方公尺，綠地有鵝掌藤、福祿桐、七里香、茄苳等美化市容景觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "木柵49號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-521",
+      "name": "景美30號綠地",
+      "category": "park",
+      "latlng": [
+        25.00075,
+        121.555199
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "位於興隆路3段19號旁一塊迷你型三角綠地，82年改造完成，佔地面積29平方公尺，綠地內有金露華和春不老灌木美化市容景觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "景美30號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-654",
+      "name": "順興公園綠地",
+      "category": "park",
+      "latlng": [
+        24.98609,
+        121.564377
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "順興公園綠地位於文山區興隆路四段109巷92弄，於民國83年闢建，開闢面積為1,820平方公尺，公園鄰近住宅區，周邊擋土牆經忠順里里民及志工黏貼彩繪壓克力板為公園景觀增色不少，園內階梯以活潑的色彩繪上花鳥，與公園生態相得益彰，是適合出遊踏青欣賞不同風景的好地方。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "順興公園綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-275",
+      "name": "景福公園",
+      "category": "park",
+      "latlng": [
+        24.99568,
+        121.540321
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "本公園位於寧靜的住宅社區內，園內中央小型組合遊具搭配四周石板桌椅、休憩步道及翠綠多變的小型綠地，建構成一多功能使用的遊憩區域，增添悠閒的生活氣息。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "景福公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-348",
+      "name": "木南公園",
+      "category": "park",
+      "latlng": [
+        24.98653,
+        121.570839
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "公園與社區住宅結合，茂綠植栽緩和城市緊湊的步調，彎曲的坡狀步道搭配兒童遊戲場，開放空間的相互輝映，讓民眾有遠離都市的感受，享受空間所產生的攸閒感。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "木南公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-438",
+      "name": "萬芳13號公園",
+      "category": "park",
+      "latlng": [
+        25.00173,
+        121.565399
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "民眾可以沿著步道踩踏著每一步，眼前的景色猶如詩句畫面般生動，雨後的下午公園空氣會更清新。順著步道而上兩側植栽色彩豐富，地形的變化適合民眾健行與運動。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬芳13號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-557",
+      "name": "博嘉公園",
+      "category": "park",
+      "latlng": [
+        25.00045,
+        121.57354
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "園內種植許多植栽色彩豐富，且在涼亭休憩區玻璃採光罩的L型涼亭，營造出獨特的光影效果，本園具有地形變化與趣味性的景觀設計，是一精緻的鄰里公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "博嘉公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-9",
+      "name": "萬芳14號公園",
+      "category": "park",
+      "latlng": [
+        25.00032,
+        121.565331
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "「兒童遊戲場」的設計配合地形變化，空間更顯出趣味性，給民眾莫大視覺享受。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬芳14號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-349",
+      "name": "原野運動公園",
+      "category": "park",
+      "latlng": [
+        24.997129,
+        121.571373
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "本公園腹地廣大且開放性佳，讓民眾感受四周豐富的色系變化，在此區沉思、靜覽，而廣大腹地與造型雅致的花架綠廊結合，藍天綠地給人莫大的感官享受。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "原野運動公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-387",
+      "name": "萬利綠地",
+      "category": "park",
+      "latlng": [
+        25.00029,
+        121.564751
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "位於萬利街41巷10號對面，建於民國85年，佔地面積632m2，綠地內有使君子、龍柏、阿勃勒、喬木來美化市容景觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬利綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-448",
+      "name": "文山68號綠地",
+      "category": "park",
+      "latlng": [
+        25.00029,
+        121.564751
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "位於萬利街41巷10號對面，建於民國85年，佔地面積632m2，綠地內有使君子、龍柏、阿勃勒、喬木來美化市容景觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文山68號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-753",
+      "name": "椰城公園",
+      "category": "park",
+      "latlng": [
+        25.006359,
+        121.568703
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "椰城公園位於文山區和平東路四段101巷6弄21號，於民國85年開闢，開闢面積為2,023平方公尺，公園位於名門社區內，原設有一座游泳池，惟因該建物屬海砂屋，目前正在辦理拆遷作業故暫停開放，後續將增闢為公園以提供市民休憩使用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "椰城公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q698008",
+      "name": "萬芳醫院站",
+      "category": "station",
+      "latlng": [
+        24.999381,
+        121.558111
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "台北捷運萬芳醫院站隨木柵線於 1996 年 3 月 28 日正式通車而啟用，站體設於萬芳高中山腳下的萬芳醫院旁。",
+      "sources": [
+        {
+          "title": "Wikidata Q698008",
+          "url": "https://www.wikidata.org/wiki/Q698008"
+        },
+        {
+          "title": "維基百科〈萬芳醫院站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%90%AC%E8%8A%B3%E9%86%AB%E9%99%A2%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "萬芳醫院站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1996年3月28日：隨著木柵線正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698445",
+      "name": "辛亥站",
+      "category": "station",
+      "latlng": [
+        25.005456,
+        121.557069
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "台北捷運辛亥站隨木柵線（今文湖線）於 1996 年 3 月 28 日正式通車而啟用，為木柵線沿線車站之一。",
+      "sources": [
+        {
+          "title": "Wikidata Q698445",
+          "url": "https://www.wikidata.org/wiki/Q698445"
+        },
+        {
+          "title": "維基百科〈辛亥站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%BE%9B%E4%BA%A5%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "辛亥站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1996年3月28日：隨著木柵線正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698602",
+      "name": "萬芳社區站",
+      "category": "station",
+      "latlng": [
+        24.998639,
+        121.568011
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "台北捷運萬芳社區站隨木柵線（今文湖線）於 1996 年 3 月 28 日正式通車而啟用，為木柵線沿線車站之一。",
+      "sources": [
+        {
+          "title": "Wikidata Q698602",
+          "url": "https://www.wikidata.org/wiki/Q698602"
+        },
+        {
+          "title": "維基百科〈萬芳社區站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%90%AC%E8%8A%B3%E7%A4%BE%E5%8D%80%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "萬芳社區站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1996年3月28日：隨著木柵線正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698627",
+      "name": "動物園站",
+      "category": "station",
+      "latlng": [
+        24.99834,
+        121.579468
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "台北捷運文湖線動物園站隨木柵線於 1996 年 3 月 28 日正式通車而啟用，後來貓空纜車也於此設站。",
+      "sources": [
+        {
+          "title": "Wikidata Q698627",
+          "url": "https://www.wikidata.org/wiki/Q698627"
+        },
+        {
+          "title": "Wikidata Q108083184",
+          "url": "https://www.wikidata.org/wiki/Q108083184"
+        },
+        {
+          "title": "維基百科〈動物園站 (臺北市)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8B%95%E7%89%A9%E5%9C%92%E7%AB%99%20(%E8%87%BA%E5%8C%97%E5%B8%82)"
+        }
+      ],
+      "photo": {
+        "query": "動物園站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1996年3月28日：文湖線動物園站隨著木柵線正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698788",
+      "name": "木柵站",
+      "category": "station",
+      "latlng": [
+        24.998231,
+        121.573125
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "台北捷運木柵站隨木柵線（今文湖線）於 1996 年 3 月 28 日正式通車而啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q698788",
+          "url": "https://www.wikidata.org/wiki/Q698788"
+        },
+        {
+          "title": "維基百科〈木柵站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%9C%A8%E6%9F%B5%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "木柵站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1996年3月28日：隨著木柵線（今文湖線）正式通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-257",
+      "name": "景華公園",
+      "category": "park",
+      "latlng": [
+        24.99519,
+        121.543793
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "景華公園位於文山區景華里景興路與景華街交會口，於民國86年開闢，開闢面積為16,802平方公尺，目前為景華里佔地第二大之公園。園區鄰近景美捷運站，對面即為景興國中，附近尚有景美國中，交通方便。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "景華公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q16926774",
+      "name": "臺北市立萬芳醫院",
+      "category": "hospital",
+      "latlng": [
+        24.999817,
+        121.558143
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "萬芳醫院由市府 1989 年興建，1996 年委託臺北醫學大學經營，1997 年 2 月 15 日正式開幕。",
+      "sources": [
+        {
+          "title": "Wikidata Q16926774",
+          "url": "https://www.wikidata.org/wiki/Q16926774"
+        },
+        {
+          "title": "維基百科〈臺北市立萬芳醫院〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E8%90%AC%E8%8A%B3%E9%86%AB%E9%99%A2"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立萬芳醫院"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1996年8月，臺北市政府衛生局將萬芳醫院委託臺北醫學大學經營，1997年2月15日正式開幕，成為臺北市第一家公辦民營的市立醫院，也是唯二未併入臺北市立聯合醫院之市立醫院之一。"
+      }
+    },
+    {
+      "id": "tpark-553",
+      "name": "木柵17號(秀明綠地)",
+      "category": "park",
+      "latlng": [
+        24.989031,
+        121.564812
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "木柵17號秀明綠地位於台北市文山區久康街33號周邊轉角處，佔地53平方公尺的小型綠地，於民國87年開闢，鄰近久康公園、木柵國中及明道國小，該綠地上以金露華為鑲邊綠籬，搭配易維護的地毯草綠化，簡易、清爽。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "木柵17號(秀明綠地)"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-677",
+      "name": "指南綠地",
+      "category": "park",
+      "latlng": [
+        24.983009,
+        121.579674
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "位於指南路3段53號對面，建於民國87年，佔地面積4651m2綠地內有鵝掌藤、金露華、杜鵑花、水黃皮喬木來美化市容景觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "指南綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-736",
+      "name": "清溪綠地",
+      "category": "park",
+      "latlng": [
+        24.985069,
+        121.580551
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "清溪綠地位於文山區政大一街36巷，於民國88年開闢，開闢面積為2,272平方公尺，清澈的小坑溪流經全園，潺潺流水搭配園內豐富植栽，彷彿置身於大自然的懷抱，是都市裡難得擁有的自然公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "清溪綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-148",
+      "name": "福興公園",
+      "category": "park",
+      "latlng": [
+        25.004,
+        121.548157
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "本公園為高低差異變化較大之鄰里公園，以灌木及仿松竹欄杆圍塑公園綠帶，巧妙區隔草坡與道路，緩坡起伏的步道設施，讓民眾全家大小可以在此遊憩與休息。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "福興公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-178",
+      "name": "樟興公園",
+      "category": "park",
+      "latlng": [
+        24.980671,
+        121.554123
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "本公園植相優美，空間寬敞明亮，溫和的陽光讓民眾可以倘佯其中，適合全家大小一同出來散步、休息之用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "樟興公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-756",
+      "name": "興泰公園",
+      "category": "park",
+      "latlng": [
+        25.00481,
+        121.555481
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "興泰公園位於文山區辛亥路四段166巷內，於民國89年開闢及101年增闢，目前開闢面積為32,585平方公尺，公園鄰近捷運文湖線辛亥捷運站，於101年增闢部分多屬山坡地，以植草護坡為主，並種植喬木以利水土保持，另民國89開闢部分，地勢平緩且鄰近住宅，成為附近住戶散步休憩的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q122142310",
+          "url": "https://www.wikidata.org/wiki/Q122142310"
+        }
+      ],
+      "photo": {
+        "query": "興泰公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-150",
+      "name": "萬壽2號公園",
+      "category": "park",
+      "latlng": [
+        24.98737,
+        121.589561
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "萬壽2公園位於文山區萬壽路61巷上方，鄰近棲霞山莊，於民國90年開闢，面積514平方公尺，公園位於坡地上，於平緩處設有簡易的兒童遊戲場及體健設施，坡地處多保留原始林貌，充滿綠意。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬壽2號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-167",
+      "name": "萬壽1號公園",
+      "category": "park",
+      "latlng": [
+        24.987471,
+        121.589218
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "萬壽1號公園位於文山區萬壽路61巷旁，鄰近棲霞山莊，於民國90年開闢，面積4,709平方公尺，公園依山坡地形開闢，為營造永續的生態環境，坡地多保留原有林相，僅設有必要的緩坡階梯步道串聯周邊綠地，可通往萬壽路61巷23弄上方及鄰近的祥光寺，公園前即有公車站牌，交通便利。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬壽1號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-479",
+      "name": "軍功綠地",
+      "category": "park",
+      "latlng": [
+        25.00128,
+        121.572678
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "位於和平東路4段295巷8號口，民國90年建造，佔地面積1735m2，綠地有野薑花、鳳凰木、紅縷花、梔子花、錫蘭葉下珠、麥門冬台灣欒樹來美化市容景觀等。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "軍功綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-561",
+      "name": "坡內坑公園",
+      "category": "park",
+      "latlng": [
+        25.004971,
+        121.576553
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "坡內坑公園位於文山區木柵路四段159巷內，鄰近博嘉國小、博嘉運動公園，於民國90年開闢，面積為3,824平方公尺，公園依山坡地形開闢，坡地部分多保留原有林相，沿著階梯向上，可抵達一個小平台，平台周邊種植數株櫻花，在充滿綠意的山林點綴亮眼紅妝。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "坡內坑公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-162",
+      "name": "小坑1號公園",
+      "category": "park",
+      "latlng": [
+        24.983379,
+        121.585228
+      ],
+      "start": 2003,
+      "end": null,
+      "desc": "小坑一號公園位於文山區萬壽路62之1號旁，開闢面積為3,800平方公尺，公園坡度大於30度，高地落差較大，故園內多植草皮護坡，並設有步道，提供市民休憩使用。公園內種植山櫻花200餘株，早春時節櫻花遍地綻放，吸引遊客駐足，園路旁另設有座椅，可供賞花民眾駐足觀賞櫻花林美景。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "小坑1號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-147",
+      "name": "140高地",
+      "category": "park",
+      "latlng": [
+        25.00358,
+        121.569603
+      ],
+      "start": 2004,
+      "end": null,
+      "desc": "140高地公園面積5.6公頃，位於臺北市文山區萬美里境內，萬寧街北側，介於萬寧街與萬美街2段間的丘陵地，最高海拔為138公尺的枹子腳山位於萬寧街旁的140高地公園，在尚未有萬芳社區之前，該公園用地稱為抱仔腳，是個只有45戶人家居住的廣大丘陵地，如今，海拔138公尺的抱仔腳山下，山頂視野遼闊；93年間闢建了文山（木柵）80號公園（面積約2.2公頃），96年闢建了文山（木柵）30號公園（面積約3.4公頃），兩者倂稱「140高地公園」。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "140高地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-21",
+      "name": "芳寧公園",
+      "category": "park",
+      "latlng": [
+        25.00453,
+        121.563278
+      ],
+      "start": 2004,
+      "end": null,
+      "desc": "芳寧公園位於文山區和平東路四段與萬寧街交叉口一路向萬美街二段方向延伸，鄰近萬寧社區國宅，於民國93年部分開闢，面積共567平方公尺。芳寧公園對面即為140高地公園入口，園內設有涼亭花架及休憩廣場，可供市民休憩聊天，公園前方即有公車站牌(名門社區站)，交通便利。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "芳寧公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-564",
+      "name": "水景公園",
+      "category": "park",
+      "latlng": [
+        24.98698,
+        121.586838
+      ],
+      "start": 2004,
+      "end": null,
+      "desc": "水景公園位於文山區政大一街與政大二街間，於民國93年開闢，開闢面積為6,195平方公尺，旁與政大附中相鄰，公園依山坡地形闢建，環境清幽，是個放鬆休憩的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "水景公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-567",
+      "name": "明義公園",
+      "category": "park",
+      "latlng": [
+        24.98807,
+        121.560982
+      ],
+      "start": 2005,
+      "end": null,
+      "desc": "本公園看似簡單樸素，但實際進入其中可以發覺麻雀雖小，且內部的設施可謂五臟俱全的小公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "明義公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q10927081",
+      "name": "國立政治大學附屬高級中學",
+      "category": "school",
+      "latlng": [
+        24.987167,
+        121.585833
+      ],
+      "start": 2005,
+      "end": null,
+      "desc": "政大附中於 2005 年校舍完工，同年獲教育部同意開放招生，由湯志民擔任首任校長。",
+      "sources": [
+        {
+          "title": "Wikidata Q10927081",
+          "url": "https://www.wikidata.org/wiki/Q10927081"
+        },
+        {
+          "title": "維基百科〈國立政治大學附屬高級中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E6%94%BF%E6%B2%BB%E5%A4%A7%E5%AD%B8%E9%99%84%E5%B1%AC%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "國立政治大學附屬高級中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2005年校舍完工，同年教育部中部辦公室（國民及學前教育署前身）同意開放招生，由湯志民擔任首任校長。"
+      }
+    },
+    {
+      "id": "tpark-668",
+      "name": "萬壽3號公園",
+      "category": "park",
+      "latlng": [
+        24.98542,
+        121.586082
+      ],
+      "start": 2006,
+      "end": null,
+      "desc": "萬壽3公園位於文山區萬壽路61巷旁，與萬壽1號公園僅以萬壽路相隔，公園下方與政大一街相接，於民國95年開闢，面積761平方公尺。園區內依地形高低變化設計木棧道、石板階梯及景觀平台，並於平台上立有園內植物解說牌，園區內除有大片草地，並種植數株櫻花，是附近居民心目中的後花園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬壽3號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-696",
+      "name": "文山木柵59號公園",
+      "category": "park",
+      "latlng": [
+        24.98526,
+        121.582581
+      ],
+      "start": 2006,
+      "end": null,
+      "desc": "文山木柵59號公園位於文山區政大一街，鄰近政治大學，與著名的指南宮位於同一山系，緊鄰景美溪支流，終年溪水潺潺，與市區的鄰里公園相較，多了幾分靈氣與幽靜。循著園路即可通往緊鄰的清溪綠地一遊，順著溪畔小徑蜿蜒漫步，感受山迴路轉，柳暗花明的意境。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文山木柵59號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-710",
+      "name": "景美運動公園",
+      "category": "park",
+      "latlng": [
+        25.002541,
+        121.544518
+      ],
+      "start": 2006,
+      "end": null,
+      "desc": "景美運動公園位於文山區景豐街80號旁，北臨蟾蜍山系，佔地約2公頃。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "景美運動公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q5972635",
+      "name": "動物園南站",
+      "category": "station",
+      "latlng": [
+        24.990222,
+        121.587361
+      ],
+      "start": 2007,
+      "end": null,
+      "desc": "貓空纜車動物園南站（動物園內站）隨貓空纜車於 2007 年 7 月 4 日正式通車而啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q5972635",
+          "url": "https://www.wikidata.org/wiki/Q5972635"
+        },
+        {
+          "title": "維基百科〈動物園南站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8B%95%E7%89%A9%E5%9C%92%E5%8D%97%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "動物園南站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2007年7月4日：貓空纜車動物園內站隨著貓空纜車正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q6123869",
+      "name": "指南宮站",
+      "category": "station",
+      "latlng": [
+        24.979028,
+        121.589639
+      ],
+      "start": 2007,
+      "end": null,
+      "desc": "貓空纜車指南宮站隨貓空纜車於 2007 年 7 月 4 日正式通車而啟用，2010 年曾恢復通車測試營運。",
+      "sources": [
+        {
+          "title": "Wikidata Q6123869",
+          "url": "https://www.wikidata.org/wiki/Q6123869"
+        },
+        {
+          "title": "維基百科〈指南宮站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%8C%87%E5%8D%97%E5%AE%AE%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "指南宮站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2007年7月4日：貓空纜車指南宮站隨著貓空纜車正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q702191",
+      "name": "貓空站",
+      "category": "station",
+      "latlng": [
+        24.968611,
+        121.588222
+      ],
+      "start": 2007,
+      "end": null,
+      "desc": "貓空纜車貓空站隨貓空纜車於 2007 年 7 月 4 日正式通車而啟用，2010 年曾恢復通車測試營運。",
+      "sources": [
+        {
+          "title": "Wikidata Q702191",
+          "url": "https://www.wikidata.org/wiki/Q702191"
+        },
+        {
+          "title": "維基百科〈貓空站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%B2%93%E7%A9%BA%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "貓空站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2007年7月4日：貓空纜車貓空站隨著貓空纜車正式通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-89",
+      "name": "興德綠色步道",
+      "category": "park",
+      "latlng": [
+        24.99477,
+        121.55954
+      ],
+      "start": 2008,
+      "end": null,
+      "desc": "景美42號綠地─興德綠色步道位於興隆路3段296號至304巷口，為在海巡署前方的帶狀綠色步道，面積3,653平方公尺，步道以透水磚排列而成，兩旁種有楓香、蓮霧、檸檬桉、榕樹等喬木，灌木包含誘鳥的原生植物春不老、花徑細長的射干、葉色金黃亮麗的鑲黃邊金露華，在這裡居民可以休閒漫步其間、放鬆舒解壓力，同時間欣賞到植物的綠意盎然。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "興德綠色步道"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-356",
+      "name": "文山(景美)49號公園",
+      "category": "park",
+      "latlng": [
+        24.99589,
+        121.547852
+      ],
+      "start": 2012,
+      "end": null,
+      "desc": "文山（景美）49號公園位於文山區景華街128巷3弄，於民國101年部分開闢，開闢面積為340平方公尺，旁有景興國小鄰近住宅，公園依山坡地形闢建，設有枕木步道環繞公園，可供民眾親近原始林木，享受大自然的芬多精。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文山(景美)49號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-403",
+      "name": "忠順萊茵公園",
+      "category": "park",
+      "latlng": [
+        24.98678,
+        121.565369
+      ],
+      "start": 2012,
+      "end": null,
+      "desc": "忠順萊茵公園位於文山區興隆路四段109巷118號旁，於民國101年闢建，開闢面積為2,934平方公尺，公園緊鄰住宅區，園內經由忠順里里民及志工彩繪陶板美化，饒富童趣，亦是都市水泥叢林裡的藝文綠洲，公園環境清幽，是個讓人放鬆好地方。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "忠順萊茵公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-240",
+      "name": "興家公園",
+      "category": "park",
+      "latlng": [
+        24.99473,
+        121.560822
+      ],
+      "start": 2014,
+      "end": null,
+      "desc": "興家公園位於文山區興隆路三段207巷10弄旁，行政院海巡署對面社區內，鄰近文山運動中心，於民國103年開闢完成，面積共1,611平方公尺。公園內設有體健設施、平台、木棧道及石板步道，是附近居民休閒散步的好所在。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "興家公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-823",
+      "name": "萬興櫻花生態景觀公園",
+      "category": "park",
+      "latlng": [
+        24.991541,
+        121.573103
+      ],
+      "start": 2016,
+      "end": null,
+      "desc": "透水磚和滲透性側溝的設計，可涵養水資源並減輕既有排水設施的負擔。除此之外，由於文山區第一期市地重劃工程開闢於國立政治大學附近，臨近景美溪，工程保留五棵喬木，新種植七株八重櫻、四株吉野櫻及九株山櫻花。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "萬興櫻花生態景觀公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-859",
+      "name": "辛亥生態公園",
+      "category": "park",
+      "latlng": [
+        25.003685,
+        121.556764
+      ],
+      "start": 2020,
+      "end": null,
+      "desc": "辛亥生態公園位於辛亥路四段及興德路間，緊鄰捷運辛亥站，面積共18,037平方公尺，過去曾為憲兵營區，於民國109年開闢為公園，交通便利，環境優美。為營造自然生態景觀於園內種植甜根子草及蘆葦，並打造出香草園區供民眾親近。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q111097490",
+          "url": "https://www.wikidata.org/wiki/Q111097490"
+        }
+      ],
+      "photo": {
+        "query": "辛亥生態公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-861",
+      "name": "文山森林公園",
+      "category": "park",
+      "latlng": [
+        25.00435,
+        121.548322
+      ],
+      "start": 2022,
+      "end": null,
+      "desc": "文山森林公園位於臺北市文山區福興路95巷內，幅員遼闊東接福興公園，西臨景美運動公園。公園內花木扶疏設有溜滑梯長達50公尺全臺北市之最。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q111097498",
+          "url": "https://www.wikidata.org/wiki/Q111097498"
+        },
+        {
+          "title": "維基百科〈文山森林公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%96%87%E5%B1%B1%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "文山森林公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    }
+  ]
+}

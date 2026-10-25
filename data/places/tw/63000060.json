@@ -1,0 +1,1166 @@
+{
+  "towncode": "63000060",
+  "county": "臺北市",
+  "town": "大同區",
+  "slug": "taipei-datong",
+  "items": [
+    {
+      "id": "wd-q10493955",
+      "name": "臺北市大同區大龍國民小學",
+      "category": "school",
+      "latlng": [
+        25.073942,
+        121.516593
+      ],
+      "start": 1904,
+      "end": null,
+      "desc": "大龍國小創立於 1896 年，1904 年校舍落成後，正式遷入臺北市哈密街現址。",
+      "sources": [
+        {
+          "title": "Wikidata Q10493955",
+          "url": "https://www.wikidata.org/wiki/Q10493955"
+        },
+        {
+          "title": "維基百科〈臺北市大同區大龍國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E5%A4%A7%E9%BE%8D%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市大同區大龍國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1904年校舍落成，正式遷入臺北市哈密街47號現址"
+      }
+    },
+    {
+      "id": "boch-20211117000001",
+      "name": "永樂町派出所",
+      "category": "government",
+      "latlng": [
+        25.060414,
+        121.50926
+      ],
+      "start": 1912,
+      "end": null,
+      "desc": "1912 年設立於普願街的警察官吏派出所，之後改稱永樂町五丁目警察官吏派出所，1933 年改建為現今的兩層樓建物。",
+      "sources": [
+        {
+          "title": "文化部文化資產局〈永樂町派出所(迪化街1段260號)〉",
+          "url": "https://nchdb.boch.gov.tw/assets/overview/monument/20211117000001"
+        },
+        {
+          "title": "Wikidata Q109658074",
+          "url": "https://www.wikidata.org/wiki/Q109658074"
+        },
+        {
+          "title": "維基百科〈永樂町派出所〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%B0%B8%E6%A8%82%E7%94%BA%E6%B4%BE%E5%87%BA%E6%89%80"
+        }
+      ],
+      "photo": {
+        "query": "永樂町派出所"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1912年5月29日，台北廳公告設立「普願街警察官吏派出所」，其管轄區域包含杜厝街、港邊後街、大有街、埤仔前街、李厝街、普願街"
+      }
+    },
+    {
+      "id": "wd-q15931509",
+      "name": "臺北市大同區日新國民小學",
+      "category": "school",
+      "latlng": [
+        25.054404,
+        121.516482
+      ],
+      "start": 1920,
+      "end": null,
+      "desc": "日新國小前身為 1917 年設立的大稻埕第二公學校，1920 年紅樓啟用，學校正式遷入太原路現址。",
+      "sources": [
+        {
+          "title": "Wikidata Q15931509",
+          "url": "https://www.wikidata.org/wiki/Q15931509"
+        },
+        {
+          "title": "維基百科〈臺北市大同區日新國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%97%A5%E6%96%B0%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市大同區日新國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1920年，古色古香的紅樓啟用，學校正式遷入太原路現址。"
+      }
+    },
+    {
+      "id": "wd-q28414074",
+      "name": "臺北市大同區大橋國民小學",
+      "category": "school",
+      "latlng": [
+        25.063911,
+        121.512797
+      ],
+      "start": 1926,
+      "end": null,
+      "desc": "大橋公學校 1925 年創立，現今校地於 1925 年 11 月動工，1926 年 9 月落成，學校隨即搬至現址。",
+      "sources": [
+        {
+          "title": "Wikidata Q28414074",
+          "url": "https://www.wikidata.org/wiki/Q28414074"
+        },
+        {
+          "title": "維基百科〈臺北市大同區大橋國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E5%A4%A7%E6%A9%8B%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市大同區大橋國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "大橋公學校最初以太平公學校（今太平國小）為臨時教室，現今的校地在1925年11月動工，1926年9月落成，而大橋公學校便搬至現址。"
+      }
+    },
+    {
+      "id": "wd-q107027620",
+      "name": "臺北更生院",
+      "category": "government",
+      "latlng": [
+        25.06051,
+        121.513068
+      ],
+      "start": 1930,
+      "end": 1994,
+      "desc": "日治時期為戒斷鴉片成癮而設的機構，1930 年設立於今涼州街，後來建築於 1994 年遭拆除。",
+      "sources": [
+        {
+          "title": "Wikidata Q107027620",
+          "url": "https://www.wikidata.org/wiki/Q107027620"
+        },
+        {
+          "title": "維基百科〈臺北更生院〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E6%9B%B4%E7%94%9F%E9%99%A2"
+        }
+      ],
+      "photo": {
+        "query": "臺北更生院"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "臺北更生院是臺灣日治時期1930年設立的鴉片成癮的戒斷矯正的機構，位在臺北市日新町三丁目（今大同區涼州街28號），隸屬於臺灣總督府警務局。"
+      }
+    },
+    {
+      "id": "wd-q15916729",
+      "name": "臺北市大同區永樂國民小學",
+      "category": "school",
+      "latlng": [
+        25.061253,
+        121.5105
+      ],
+      "start": 1930,
+      "end": null,
+      "desc": "永樂國小所在原為大稻埕公學校西校區，1930 年西畔舊校舍撥給新設立的臺北市永樂公學校使用。",
+      "sources": [
+        {
+          "title": "Wikidata Q15916729",
+          "url": "https://www.wikidata.org/wiki/Q15916729"
+        },
+        {
+          "title": "維基百科〈臺北市大同區永樂國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E6%B0%B8%E6%A8%82%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市大同區永樂國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1930年（昭和5年），西畔舊校舍撥給新設立臺北市永樂公學校使用。"
+      }
+    },
+    {
+      "id": "wd-q20063987",
+      "name": "臺北市大同區雙蓮國民小學",
+      "category": "school",
+      "latlng": [
+        25.06075,
+        121.516817
+      ],
+      "start": 1943,
+      "end": null,
+      "desc": "前身為 1942 年成立的明治國民學校，初借用大橋國民學校校舍，1943 年校舍竣工後遷至寧夏路現址。",
+      "sources": [
+        {
+          "title": "Wikidata Q20063987",
+          "url": "https://www.wikidata.org/wiki/Q20063987"
+        },
+        {
+          "title": "維基百科〈臺北市大同區雙蓮國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E9%9B%99%E8%93%AE%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市大同區雙蓮國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "昭和18年（1943年）校舍竣工，校址遷至大同區寧夏路91巷15號。"
+      }
+    },
+    {
+      "id": "wd-q76098281",
+      "name": "臺北市大同區大同國民小學",
+      "category": "school",
+      "latlng": [
+        25.064947,
+        121.516899
+      ],
+      "start": 1951,
+      "end": null,
+      "desc": "大同國小源自 1937 年設立的圓山公學校，1951 年因校舍讓給臺北市立商業職業學校，而往南遷至現址。",
+      "sources": [
+        {
+          "title": "Wikidata Q76098281",
+          "url": "https://www.wikidata.org/wiki/Q76098281"
+        },
+        {
+          "title": "維基百科〈臺北市大同區大同國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%90%8C%E5%8D%80%E5%A4%A7%E5%90%8C%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市大同區大同國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "在1951年，因將校舍讓給「臺北市立商業職業學校」（今士林高商，1970年再遷至士林，原址改為蘭州國中）而面臨廢校，後經家長會積極請願，遂於同年往南遷至現址。"
+      }
+    },
+    {
+      "id": "wd-q11411906",
+      "name": "臺北市立明倫高級中學",
+      "category": "school",
+      "latlng": [
+        25.075737,
+        121.519124
+      ],
+      "start": 1970,
+      "end": null,
+      "desc": "明倫高中 1968 年創校，1970 年校舍竣工後遷入今址，1993 年改制為高級中學並停招國中部。",
+      "sources": [
+        {
+          "title": "Wikidata Q11411906",
+          "url": "https://www.wikidata.org/wiki/Q11411906"
+        },
+        {
+          "title": "維基百科〈臺北市立明倫高級中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E6%98%8E%E5%80%AB%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立明倫高級中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1970年校舍竣工，遷入今址。"
+      }
+    },
+    {
+      "id": "tpark-341",
+      "name": "景化公園",
+      "category": "park",
+      "latlng": [
+        25.065359,
+        121.512741
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "景化公園位於延平北路3段61巷及伊寧街9巷交會處，週遭皆為早期巴洛克式矮樓層建築物住宅區，為本座公園增添不少特色，園內設有涼亭、組合遊具及水池等休憩設施，為老社區帶來熱鬧的氣氛。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "景化公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-381",
+      "name": "蘭州公園",
+      "category": "park",
+      "latlng": [
+        25.063959,
+        121.515381
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "蘭州公園位於蘭州街及蘭州街89巷交會處，雖身在巷弄內，但附近國小學童放學時，熱愛至公園內休憩，且長輩們至公園泡茶聊天之景緻豐富公園的畫面。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q124420402",
+          "url": "https://www.wikidata.org/wiki/Q124420402"
+        },
+        {
+          "title": "維基百科〈蘭州公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%98%AD%E5%B7%9E%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "蘭州公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q15929924",
+      "name": "淡水河橋",
+      "category": "bridge",
+      "latlng": [
+        25.077917,
+        121.505222
+      ],
+      "start": 1976,
+      "end": null,
+      "desc": "淡水河橋隨中山高速公路臺北市重慶北路至三重路段，於 1976 年 10 月 10 日開放通車。",
+      "sources": [
+        {
+          "title": "Wikidata Q15929924",
+          "url": "https://www.wikidata.org/wiki/Q15929924"
+        },
+        {
+          "title": "維基百科〈淡水河橋〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%B7%A1%E6%B0%B4%E6%B2%B3%E6%A9%8B"
+        }
+      ],
+      "photo": {
+        "query": "淡水河橋"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1976年：中山高速公路台北市重慶北路至三重路段，於10月10日下午二時開放通車。"
+      }
+    },
+    {
+      "id": "tpark-120",
+      "name": "歸綏戲曲公園",
+      "category": "park",
+      "latlng": [
+        25.05797,
+        121.513092
+      ],
+      "start": 1978,
+      "end": null,
+      "desc": "歸綏公園位於重慶北路2段及歸綏街口，本座公園為戲曲主題公園，由戲曲作為主軸，賦予公園豐富之色彩，園內設有舞臺休憩區、組合遊具及搖搖樂等相關休憩設施，適合各年齡層使用者使用，是都市空間中良好之休閒去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "歸綏戲曲公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-287",
+      "name": "建成公園",
+      "category": "park",
+      "latlng": [
+        25.054091,
+        121.518227
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "當時，1937年「下奎府町兒童遊園地」名稱開園，是一座以兒童為對象的公園。戰後，合併下奎府町、建成町、上奎府町為建成區，因此「下奎府町兒童遊園地」改名為「建成公園」。民國101年3月興建地下停車場，併同地面層重新改造完成，公園面積佔地10,640平方公尺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q11065358",
+          "url": "https://www.wikidata.org/wiki/Q11065358"
+        },
+        {
+          "title": "維基百科〈建成公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%BB%BA%E6%88%90%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "建成公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-314",
+      "name": "大龍公園",
+      "category": "park",
+      "latlng": [
+        25.07024,
+        121.515579
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "大龍公園位於大同區大龍街及重慶北路3段223巷交會處之西南側街廓內，緊鄰大龍峒商圈及住宅社區中，公園內設有單槓與兒童遊具組，東北側有1座三角涼亭，在匆忙的都市環境中顯現出靜謐之感，也深刻感受到本公園與社區相當緊密結合在一起，提供民眾良好之休憩場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大龍公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-517",
+      "name": "大同251號綠地",
+      "category": "park",
+      "latlng": [
+        25.078381,
+        121.511848
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "大同251綠地位於大同區老師里環河北路敦煌路口三角綠地，於民國69年開闢完成，綠地面積為11,737平方公尺，當地居民非常喜歡櫻花，因而栽植八重櫻、富士櫻、寒櫻及山櫻花等各品種櫻花，每逢花季盛開時，總是吸引民眾駐足賞花。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大同251號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-291",
+      "name": "大同公園",
+      "category": "park",
+      "latlng": [
+        25.06798,
+        121.512001
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "大同公園位於延平北路3段113巷及136巷交換觸，係屬身處於居住型住宅區內，鄰近有延平國小，學生放學時熱愛於公園內遊憩，家長們也喜於至公園內休憩，另園內設有涼亭、觀賞魚池及組合遊具等相關休憩設施，是個多元化的都市附屬空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大同公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-304",
+      "name": "迪化公園",
+      "category": "park",
+      "latlng": [
+        25.07111,
+        121.512009
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "迪化公園位於迪化街2段及迪化街2段296巷交會處，週遭皆為居住型住宅區，且也鄰近於酒泉街花市區，沿路有著豐富花店景緻，增添不少環境美感，另園內設有涼亭、組合遊具及搖搖樂等休憩設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "迪化公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-486",
+      "name": "朝陽公園",
+      "category": "park",
+      "latlng": [
+        25.05595,
+        121.51313
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "朝陽公園位於重慶北路2段與重慶北路2段70巷街口，本座公園係為茶葉主題公園，為使來往民眾了解茶葉製作過程，並將製作過程表現在園內地磚上，園內設有兒童遊具、休息座椅、籃球場、寬敞步道與井然有序的花草樹木，作為當地居民體操、跳舞、運動與休憩的好場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "朝陽公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-461",
+      "name": "哈密公園",
+      "category": "park",
+      "latlng": [
+        25.074846,
+        121.515594
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "哈密公園位於大同區哈密街及重慶北路3段335巷交會處之西北側，緊鄰保安宮觀光區域，園內古木參天，與嫽繞古韻的保安宮、孔廟及大龍國小共同散發的書味使遊者如沐春風中。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "哈密公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-556",
+      "name": "至聖公園",
+      "category": "park",
+      "latlng": [
+        25.07119,
+        121.517693
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "至聖公園位於酒泉街及承德路3段208巷交會處，公園內設有組合遊具、搖搖樂及體健設施，與社區緊密結合在一起，是個供各年齡層所使用之休憩場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q15936597",
+          "url": "https://www.wikidata.org/wiki/Q15936597"
+        },
+        {
+          "title": "維基百科〈至聖公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%B3%E8%81%96%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "至聖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-491",
+      "name": "敦煌1號綠地",
+      "category": "park",
+      "latlng": [
+        25.074751,
+        121.516289
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "敦煌1號綠地大同區重慶里重慶北路3段交流道旁，於民國76年開闢完成，綠地面積為933平方公尺，該綠地位處大同區最南端，敦煌路早期為亂葬崗，熱心人士將遺骸集中於現址敦煌1號綠地（當時該綠地尚未開闢），一旁包公廟供奉萬姓爺、地藏王及包公殿讓信徒祭拜信仰，以撫人心。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "敦煌1號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-720",
+      "name": "敦煌2號綠地",
+      "category": "park",
+      "latlng": [
+        25.076969,
+        121.516441
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "敦煌2號綠地，1987 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "敦煌2號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-271",
+      "name": "塔城公園",
+      "category": "park",
+      "latlng": [
+        25.05072,
+        121.510803
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "塔城公園位於塔城街與鄭州路街口，本座公園鄰近市民大道及商業辦公區域，可提供附近上班族休憩使用，平日還有補習班老師帶著小朋友參觀本公園，教導小朋友植物之種類，不僅提供休憩也可提供教學使用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "塔城公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-114",
+      "name": "忠和公園",
+      "category": "park",
+      "latlng": [
+        25.05788,
+        121.508614
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "忠和公園位於環河北路1段及歸綏街口，鄰近為迪化街年貨大街，逢年過節時，有著濃厚之過節氣氛，熙來攘往採購中藥材及南北雜貨的餐館老師傅或是慕名而至的國外觀光客，則為平日的歸綏街帶來新舊的撞擊，園內設有組合遊具等相關休憩設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "忠和公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-193",
+      "name": "大同249綠地",
+      "category": "park",
+      "latlng": [
+        25.077431,
+        121.511459
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "大同249綠地位於大同區老師里迪化街364巷西北側，於民國79年開闢完成，綠地面積為1,486平方公尺，綠地內栽植許多櫻花，每逢花季盛開時，常吸引許多民眾前往駐足賞櫻。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大同249綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-525",
+      "name": "大同250號綠地",
+      "category": "park",
+      "latlng": [
+        25.077221,
+        121.509857
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "大同250號綠地，1990 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大同250號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-442",
+      "name": "玉泉公園",
+      "category": "park",
+      "latlng": [
+        25.049931,
+        121.507652
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "玉泉公園位於「臺北車站特定專用區」內，公園面積約為1.9公頃，於民國92年底完工，全區規劃係以整體生態環境為優先考量，除了增設游泳池外，同時重新規劃闢建公園綠地及遊憩設施，包括市民活動廣場、陽光草坪、兒童遊戲場、林蔭廊道與多層次植栽，利用人行道系統串連成完整的休憩空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "玉泉公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-415",
+      "name": "大同16號廣場",
+      "category": "park",
+      "latlng": [
+        25.056379,
+        121.508614
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "大同16號廣場位於大同區永樂里環河北路與民生西路口，於民國84年開闢完成，廣場面積為255平方公尺，該廣場設置公共藝術「大稻埕之春」，以青銅、花崗石為雕塑材質，作品呈現母子相擁，一同眺望遠方，充滿期待幸福與美滿之意象，母親象徵勤勞儉樸，相夫教子典範，男孩則代表著希望的未來，瞻仰遠方的母子，洋溢著快樂的心情，期待美好的遠景。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大同16號廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-478",
+      "name": "大稻埕公園",
+      "category": "park",
+      "latlng": [
+        25.058661,
+        121.510368
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "大稻埕公園位於歸綏街216號對面，鄰近為迪化街年貨大街，逢年過節時，有著濃厚之過節氣氛，平日也有豐富之南北雜貨飄香氣味；係因鄰近李臨秋先生故居，故文化局於園內設置李臨秋先生生平簡介播放機組，提供來往民眾觀看。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大稻埕公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-618",
+      "name": "交通8號廣場",
+      "category": "park",
+      "latlng": [
+        25.05032,
+        121.51651
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "交通8號廣場位於中正區黎明里忠孝西路與重慶北路口西側，民國89年開闢面積為2,698平方公尺，未開闢面積為7,161平方公尺，廣場內栽植樟樹、南洋杉、鳳凰木、臺灣欒樹、春不老、宮粉仙丹及草花等，並設置座椅提供休憩，歡迎來往旅客及民眾來此駐足休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "交通8號廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-739",
+      "name": "永樂廣場",
+      "category": "park",
+      "latlng": [
+        25.054661,
+        121.509659
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "於民國89年開闢完成，廣場面積為1,200平方公尺，每逢春節前夕迪化街湧入趕辦年貨人潮，配合本府商業處，提供廣場用地舉辦春節年貨大街等活動，平日則為民眾休憩之場所，另亦可提供一般民眾申請場地借用，以活化廣場用地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "永樂廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-510",
+      "name": "大稻埕廣場",
+      "category": "park",
+      "latlng": [
+        25.055,
+        121.509537
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "大稻埕廣場位於大同區永樂里永昌街與迪化街口之霞海城隍廟前，於民國90年開闢完成，廣場面積為131平方公尺，緊鄰廣場的臺北霞海城隍廟月老聞名海外，不少外國觀光客慕名而來祈求姻緣及事業；閩南語「埕」有「空地、廣場」之意，「稻埕」即「曬穀場」，清末至日據時代，大稻埕在地方經濟、人文活動等均有驚人成長及發展，除頻繁的商業活動外，同時也是人文薈萃之起源。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大稻埕廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-794",
+      "name": "建成圓環",
+      "category": "park",
+      "latlng": [
+        25.05276,
+        121.514295
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "建成圓環，2001 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "建成圓環"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q699040",
+      "name": "台北當代藝術館",
+      "category": "museum",
+      "latlng": [
+        25.050776,
+        121.519022
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "台北當代藝術館設於市定古蹟台北舊市府，2001 年 5 月 26 日正式開幕，是臺灣第一座公辦民營的當代藝術美術館。",
+      "sources": [
+        {
+          "title": "Wikidata Q699040",
+          "url": "https://www.wikidata.org/wiki/Q699040"
+        },
+        {
+          "title": "維基百科〈台北當代藝術館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8F%B0%E5%8C%97%E7%95%B6%E4%BB%A3%E8%97%9D%E8%A1%93%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "台北當代藝術館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "在國內藝術界殷殷關注之下，市定古蹟的台北舊市府，活化轉用成為國內唯一的「當代藝術館」，並於2001年5月26日正式開幕，是臺灣第一座公辦民營以推廣當代藝術為宗旨的美術館。"
+      }
+    },
+    {
+      "id": "tpark-78",
+      "name": "六藝廣場",
+      "category": "park",
+      "latlng": [
+        25.07469,
+        121.515053
+      ],
+      "start": 2006,
+      "end": null,
+      "desc": "六藝廣場位於大同區保安里孔廟西北側及保安宮南側道路，包括原蘭州派出所及龍塘綠地，於民國95年開闢完成，廣場面積為4,957平方公尺，為大龍峒文化園區重要活動場所，廣場周邊文化觀光景點包括孔廟、保安宮、捷運廣場、大龍夜市、大龍國小、老街等，觀光軸帶的串聯，塑造廣場周邊嶄新人文風貌。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "六藝廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q10934204",
+      "name": "大同運動中心",
+      "category": "sports",
+      "latlng": [
+        25.064861,
+        121.516139
+      ],
+      "start": 2009,
+      "end": null,
+      "desc": "大同運動中心 2008 年 8 月完工，因招商多次流標，直至 2009 年 12 月 12 日才正式啟用，特色設施為溜冰場。",
+      "sources": [
+        {
+          "title": "Wikidata Q10934204",
+          "url": "https://www.wikidata.org/wiki/Q10934204"
+        },
+        {
+          "title": "維基百科〈大同運動中心〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83"
+        }
+      ],
+      "photo": {
+        "query": "大同運動中心"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2008年8月完工，但因招商多次流標，直至2009年12月12日正式啟用，承包經營單位是遠東鐵櫃鋼鐵廠股份有限公司，特色設施為溜冰場。"
+      }
+    },
+    {
+      "id": "tpark-377",
+      "name": "保安廣場",
+      "category": "park",
+      "latlng": [
+        25.070551,
+        121.518929
+      ],
+      "start": 2010,
+      "end": null,
+      "desc": "保安廣場位於大同區保安里庫倫街55巷旁(北側)，於民國99年開闢完成，廣場面積為180平方公尺，屬長方形的狹長帶狀廣場，鄰近圓山捷運站，99年本市舉辦臺北國際花卉博覽會，該廣場因應人潮配合闢建。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "保安廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q699528",
+      "name": "大橋頭站",
+      "category": "station",
+      "latlng": [
+        25.063083,
+        121.513583
+      ],
+      "start": 2010,
+      "end": null,
+      "desc": "臺北捷運大橋頭站於 2010 年 11 月 3 日隨新莊線與蘆洲線部分路段正式通車而啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q699528",
+          "url": "https://www.wikidata.org/wiki/Q699528"
+        },
+        {
+          "title": "維基百科〈大橋頭站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E6%A9%8B%E9%A0%AD%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "大橋頭站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2010年11月3日：新莊線大橋頭站隨著新莊線「'''大橋頭'''－忠孝新生」與蘆洲線「蘆洲－'''大橋頭'''」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-838",
+      "name": "國順公園",
+      "category": "park",
+      "latlng": [
+        25.066222,
+        121.510025
+      ],
+      "start": 2018,
+      "end": null,
+      "desc": "國順公園於2018年建造完成，公園內主要分為陽光草坪、表演舞台、活動廣場、米食文化彩繪牆、體健及兒童遊戲場等區域，是個供各年齡層多元使用的公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q109437921",
+          "url": "https://www.wikidata.org/wiki/Q109437921"
+        },
+        {
+          "title": "維基百科〈國順公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E9%A0%86%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "國順公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q24837610",
+      "name": "阿嬤家-和平與女性人權館",
+      "category": "museum",
+      "latlng": [
+        25.064448,
+        121.518072
+      ],
+      "start": 2021,
+      "end": null,
+      "desc": "位於大同區的臺灣慰安婦紀念館，2016 年開幕，2021 年 10 月 27 日於承德路三段現址重新開館。",
+      "sources": [
+        {
+          "title": "Wikidata Q24837610",
+          "url": "https://www.wikidata.org/wiki/Q24837610"
+        },
+        {
+          "title": "維基百科〈阿嬤家-和平與女性人權館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E9%98%BF%E5%AC%A4%E5%AE%B6-%E5%92%8C%E5%B9%B3%E8%88%87%E5%A5%B3%E6%80%A7%E4%BA%BA%E6%AC%8A%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "阿嬤家-和平與女性人權館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "2021年10月27日於台北市大同區承德路三段32號5樓重新開館。"
+      }
+    }
+  ]
+}

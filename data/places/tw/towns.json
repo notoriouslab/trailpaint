@@ -1,0 +1,2210 @@
+{
+  "10002010": {
+    "county": "宜蘭縣",
+    "town": "宜蘭市",
+    "countySlug": "yilan",
+    "townSlug": "yilan"
+  },
+  "10002020": {
+    "county": "宜蘭縣",
+    "town": "羅東鎮",
+    "countySlug": "yilan",
+    "townSlug": "luodong"
+  },
+  "10002030": {
+    "county": "宜蘭縣",
+    "town": "蘇澳鎮",
+    "countySlug": "yilan",
+    "townSlug": "suao"
+  },
+  "10002040": {
+    "county": "宜蘭縣",
+    "town": "頭城鎮",
+    "countySlug": "yilan",
+    "townSlug": "toucheng"
+  },
+  "10002050": {
+    "county": "宜蘭縣",
+    "town": "礁溪鄉",
+    "countySlug": "yilan",
+    "townSlug": "jiaoxi"
+  },
+  "10002060": {
+    "county": "宜蘭縣",
+    "town": "壯圍鄉",
+    "countySlug": "yilan",
+    "townSlug": "zhuangwei"
+  },
+  "10002070": {
+    "county": "宜蘭縣",
+    "town": "員山鄉",
+    "countySlug": "yilan",
+    "townSlug": "yuanshan"
+  },
+  "10002080": {
+    "county": "宜蘭縣",
+    "town": "冬山鄉",
+    "countySlug": "yilan",
+    "townSlug": "dongshan"
+  },
+  "10002090": {
+    "county": "宜蘭縣",
+    "town": "五結鄉",
+    "countySlug": "yilan",
+    "townSlug": "wujie"
+  },
+  "10002100": {
+    "county": "宜蘭縣",
+    "town": "三星鄉",
+    "countySlug": "yilan",
+    "townSlug": "sanxing"
+  },
+  "10002110": {
+    "county": "宜蘭縣",
+    "town": "大同鄉",
+    "countySlug": "yilan",
+    "townSlug": "datong"
+  },
+  "10002120": {
+    "county": "宜蘭縣",
+    "town": "南澳鄉",
+    "countySlug": "yilan",
+    "townSlug": "nanao"
+  },
+  "10004010": {
+    "county": "新竹縣",
+    "town": "竹北市",
+    "countySlug": "hsinchu-county",
+    "townSlug": "zhubei"
+  },
+  "10004020": {
+    "county": "新竹縣",
+    "town": "竹東鎮",
+    "countySlug": "hsinchu-county",
+    "townSlug": "zhudong"
+  },
+  "10004030": {
+    "county": "新竹縣",
+    "town": "新埔鎮",
+    "countySlug": "hsinchu-county",
+    "townSlug": "xinpu"
+  },
+  "10004040": {
+    "county": "新竹縣",
+    "town": "關西鎮",
+    "countySlug": "hsinchu-county",
+    "townSlug": "guanxi"
+  },
+  "10004050": {
+    "county": "新竹縣",
+    "town": "湖口鄉",
+    "countySlug": "hsinchu-county",
+    "townSlug": "hukou"
+  },
+  "10004060": {
+    "county": "新竹縣",
+    "town": "新豐鄉",
+    "countySlug": "hsinchu-county",
+    "townSlug": "xinfeng"
+  },
+  "10004070": {
+    "county": "新竹縣",
+    "town": "芎林鄉",
+    "countySlug": "hsinchu-county",
+    "townSlug": "qionglin"
+  },
+  "10004080": {
+    "county": "新竹縣",
+    "town": "橫山鄉",
+    "countySlug": "hsinchu-county",
+    "townSlug": "hengshan"
+  },
+  "10004090": {
+    "county": "新竹縣",
+    "town": "北埔鄉",
+    "countySlug": "hsinchu-county",
+    "townSlug": "beipu"
+  },
+  "10004100": {
+    "county": "新竹縣",
+    "town": "寶山鄉",
+    "countySlug": "hsinchu-county",
+    "townSlug": "baoshan"
+  },
+  "10004110": {
+    "county": "新竹縣",
+    "town": "峨眉鄉",
+    "countySlug": "hsinchu-county",
+    "townSlug": "emei"
+  },
+  "10004120": {
+    "county": "新竹縣",
+    "town": "尖石鄉",
+    "countySlug": "hsinchu-county",
+    "townSlug": "jianshi"
+  },
+  "10004130": {
+    "county": "新竹縣",
+    "town": "五峰鄉",
+    "countySlug": "hsinchu-county",
+    "townSlug": "wufeng"
+  },
+  "10005010": {
+    "county": "苗栗縣",
+    "town": "苗栗市",
+    "countySlug": "miaoli",
+    "townSlug": "miaoli"
+  },
+  "10005020": {
+    "county": "苗栗縣",
+    "town": "苑裡鎮",
+    "countySlug": "miaoli",
+    "townSlug": "yuanli"
+  },
+  "10005030": {
+    "county": "苗栗縣",
+    "town": "通霄鎮",
+    "countySlug": "miaoli",
+    "townSlug": "tongxiao"
+  },
+  "10005040": {
+    "county": "苗栗縣",
+    "town": "竹南鎮",
+    "countySlug": "miaoli",
+    "townSlug": "zhunan"
+  },
+  "10005050": {
+    "county": "苗栗縣",
+    "town": "頭份市",
+    "countySlug": "miaoli",
+    "townSlug": "toufen"
+  },
+  "10005060": {
+    "county": "苗栗縣",
+    "town": "後龍鎮",
+    "countySlug": "miaoli",
+    "townSlug": "houlong"
+  },
+  "10005070": {
+    "county": "苗栗縣",
+    "town": "卓蘭鎮",
+    "countySlug": "miaoli",
+    "townSlug": "zhuolan"
+  },
+  "10005080": {
+    "county": "苗栗縣",
+    "town": "大湖鄉",
+    "countySlug": "miaoli",
+    "townSlug": "dahu"
+  },
+  "10005090": {
+    "county": "苗栗縣",
+    "town": "公館鄉",
+    "countySlug": "miaoli",
+    "townSlug": "gongguan"
+  },
+  "10005100": {
+    "county": "苗栗縣",
+    "town": "銅鑼鄉",
+    "countySlug": "miaoli",
+    "townSlug": "tongluo"
+  },
+  "10005110": {
+    "county": "苗栗縣",
+    "town": "南庄鄉",
+    "countySlug": "miaoli",
+    "townSlug": "nanzhuang"
+  },
+  "10005120": {
+    "county": "苗栗縣",
+    "town": "頭屋鄉",
+    "countySlug": "miaoli",
+    "townSlug": "touwu"
+  },
+  "10005130": {
+    "county": "苗栗縣",
+    "town": "三義鄉",
+    "countySlug": "miaoli",
+    "townSlug": "sanyi"
+  },
+  "10005140": {
+    "county": "苗栗縣",
+    "town": "西湖鄉",
+    "countySlug": "miaoli",
+    "townSlug": "xihu"
+  },
+  "10005150": {
+    "county": "苗栗縣",
+    "town": "造橋鄉",
+    "countySlug": "miaoli",
+    "townSlug": "zaoqiao"
+  },
+  "10005160": {
+    "county": "苗栗縣",
+    "town": "三灣鄉",
+    "countySlug": "miaoli",
+    "townSlug": "sanwan"
+  },
+  "10005170": {
+    "county": "苗栗縣",
+    "town": "獅潭鄉",
+    "countySlug": "miaoli",
+    "townSlug": "shitan"
+  },
+  "10005180": {
+    "county": "苗栗縣",
+    "town": "泰安鄉",
+    "countySlug": "miaoli",
+    "townSlug": "taian"
+  },
+  "10007010": {
+    "county": "彰化縣",
+    "town": "彰化市",
+    "countySlug": "changhua",
+    "townSlug": "changhua"
+  },
+  "10007020": {
+    "county": "彰化縣",
+    "town": "鹿港鎮",
+    "countySlug": "changhua",
+    "townSlug": "lukang"
+  },
+  "10007030": {
+    "county": "彰化縣",
+    "town": "和美鎮",
+    "countySlug": "changhua",
+    "townSlug": "hemei"
+  },
+  "10007040": {
+    "county": "彰化縣",
+    "town": "線西鄉",
+    "countySlug": "changhua",
+    "townSlug": "xianxi"
+  },
+  "10007050": {
+    "county": "彰化縣",
+    "town": "伸港鄉",
+    "countySlug": "changhua",
+    "townSlug": "shenkang"
+  },
+  "10007060": {
+    "county": "彰化縣",
+    "town": "福興鄉",
+    "countySlug": "changhua",
+    "townSlug": "fuxing"
+  },
+  "10007070": {
+    "county": "彰化縣",
+    "town": "秀水鄉",
+    "countySlug": "changhua",
+    "townSlug": "hsiushui"
+  },
+  "10007080": {
+    "county": "彰化縣",
+    "town": "花壇鄉",
+    "countySlug": "changhua",
+    "townSlug": "huatan"
+  },
+  "10007090": {
+    "county": "彰化縣",
+    "town": "芬園鄉",
+    "countySlug": "changhua",
+    "townSlug": "fenyuan"
+  },
+  "10007100": {
+    "county": "彰化縣",
+    "town": "員林市",
+    "countySlug": "changhua",
+    "townSlug": "yuanlin"
+  },
+  "10007110": {
+    "county": "彰化縣",
+    "town": "溪湖鎮",
+    "countySlug": "changhua",
+    "townSlug": "xihu"
+  },
+  "10007120": {
+    "county": "彰化縣",
+    "town": "田中鎮",
+    "countySlug": "changhua",
+    "townSlug": "tianzhong"
+  },
+  "10007130": {
+    "county": "彰化縣",
+    "town": "大村鄉",
+    "countySlug": "changhua",
+    "townSlug": "dacun"
+  },
+  "10007140": {
+    "county": "彰化縣",
+    "town": "埔鹽鄉",
+    "countySlug": "changhua",
+    "townSlug": "puyan"
+  },
+  "10007150": {
+    "county": "彰化縣",
+    "town": "埔心鄉",
+    "countySlug": "changhua",
+    "townSlug": "pusin"
+  },
+  "10007160": {
+    "county": "彰化縣",
+    "town": "永靖鄉",
+    "countySlug": "changhua",
+    "townSlug": "yongchin"
+  },
+  "10007170": {
+    "county": "彰化縣",
+    "town": "社頭鄉",
+    "countySlug": "changhua",
+    "townSlug": "shetou"
+  },
+  "10007180": {
+    "county": "彰化縣",
+    "town": "二水鄉",
+    "countySlug": "changhua",
+    "townSlug": "erhshui"
+  },
+  "10007190": {
+    "county": "彰化縣",
+    "town": "北斗鎮",
+    "countySlug": "changhua",
+    "townSlug": "beidou"
+  },
+  "10007200": {
+    "county": "彰化縣",
+    "town": "二林鎮",
+    "countySlug": "changhua",
+    "townSlug": "erhlin"
+  },
+  "10007210": {
+    "county": "彰化縣",
+    "town": "田尾鄉",
+    "countySlug": "changhua",
+    "townSlug": "tianwei"
+  },
+  "10007220": {
+    "county": "彰化縣",
+    "town": "埤頭鄉",
+    "countySlug": "changhua",
+    "townSlug": "pitou"
+  },
+  "10007230": {
+    "county": "彰化縣",
+    "town": "芳苑鄉",
+    "countySlug": "changhua",
+    "townSlug": "fangyuan"
+  },
+  "10007240": {
+    "county": "彰化縣",
+    "town": "大城鄉",
+    "countySlug": "changhua",
+    "townSlug": "dacheng"
+  },
+  "10007250": {
+    "county": "彰化縣",
+    "town": "竹塘鄉",
+    "countySlug": "changhua",
+    "townSlug": "chutang"
+  },
+  "10007260": {
+    "county": "彰化縣",
+    "town": "溪州鄉",
+    "countySlug": "changhua",
+    "townSlug": "hsichou"
+  },
+  "10008010": {
+    "county": "南投縣",
+    "town": "南投市",
+    "countySlug": "nantou",
+    "townSlug": "nantou"
+  },
+  "10008020": {
+    "county": "南投縣",
+    "town": "埔里鎮",
+    "countySlug": "nantou",
+    "townSlug": "puli"
+  },
+  "10008030": {
+    "county": "南投縣",
+    "town": "草屯鎮",
+    "countySlug": "nantou",
+    "townSlug": "caotun"
+  },
+  "10008040": {
+    "county": "南投縣",
+    "town": "竹山鎮",
+    "countySlug": "nantou",
+    "townSlug": "jhushan"
+  },
+  "10008050": {
+    "county": "南投縣",
+    "town": "集集鎮",
+    "countySlug": "nantou",
+    "townSlug": "jiji"
+  },
+  "10008060": {
+    "county": "南投縣",
+    "town": "名間鄉",
+    "countySlug": "nantou",
+    "townSlug": "mingjian"
+  },
+  "10008070": {
+    "county": "南投縣",
+    "town": "鹿谷鄉",
+    "countySlug": "nantou",
+    "townSlug": "lugu"
+  },
+  "10008080": {
+    "county": "南投縣",
+    "town": "中寮鄉",
+    "countySlug": "nantou",
+    "townSlug": "jhongliao"
+  },
+  "10008090": {
+    "county": "南投縣",
+    "town": "魚池鄉",
+    "countySlug": "nantou",
+    "townSlug": "yuchih"
+  },
+  "10008100": {
+    "county": "南投縣",
+    "town": "國姓鄉",
+    "countySlug": "nantou",
+    "townSlug": "guosing"
+  },
+  "10008110": {
+    "county": "南投縣",
+    "town": "水里鄉",
+    "countySlug": "nantou",
+    "townSlug": "shueili"
+  },
+  "10008120": {
+    "county": "南投縣",
+    "town": "信義鄉",
+    "countySlug": "nantou",
+    "townSlug": "sinyi"
+  },
+  "10008130": {
+    "county": "南投縣",
+    "town": "仁愛鄉",
+    "countySlug": "nantou",
+    "townSlug": "renai"
+  },
+  "10009010": {
+    "county": "雲林縣",
+    "town": "斗六市",
+    "countySlug": "yunlin",
+    "townSlug": "douliou"
+  },
+  "10009020": {
+    "county": "雲林縣",
+    "town": "斗南鎮",
+    "countySlug": "yunlin",
+    "townSlug": "dounan"
+  },
+  "10009030": {
+    "county": "雲林縣",
+    "town": "虎尾鎮",
+    "countySlug": "yunlin",
+    "townSlug": "huwei"
+  },
+  "10009040": {
+    "county": "雲林縣",
+    "town": "西螺鎮",
+    "countySlug": "yunlin",
+    "townSlug": "siluo"
+  },
+  "10009050": {
+    "county": "雲林縣",
+    "town": "土庫鎮",
+    "countySlug": "yunlin",
+    "townSlug": "tuku"
+  },
+  "10009060": {
+    "county": "雲林縣",
+    "town": "北港鎮",
+    "countySlug": "yunlin",
+    "townSlug": "beigang"
+  },
+  "10009070": {
+    "county": "雲林縣",
+    "town": "古坑鄉",
+    "countySlug": "yunlin",
+    "townSlug": "gukeng"
+  },
+  "10009080": {
+    "county": "雲林縣",
+    "town": "大埤鄉",
+    "countySlug": "yunlin",
+    "townSlug": "tapi"
+  },
+  "10009090": {
+    "county": "雲林縣",
+    "town": "莿桐鄉",
+    "countySlug": "yunlin",
+    "townSlug": "cihtong"
+  },
+  "10009100": {
+    "county": "雲林縣",
+    "town": "林內鄉",
+    "countySlug": "yunlin",
+    "townSlug": "linnei"
+  },
+  "10009110": {
+    "county": "雲林縣",
+    "town": "二崙鄉",
+    "countySlug": "yunlin",
+    "townSlug": "erlun"
+  },
+  "10009120": {
+    "county": "雲林縣",
+    "town": "崙背鄉",
+    "countySlug": "yunlin",
+    "townSlug": "lunbei"
+  },
+  "10009130": {
+    "county": "雲林縣",
+    "town": "麥寮鄉",
+    "countySlug": "yunlin",
+    "townSlug": "mailiao"
+  },
+  "10009140": {
+    "county": "雲林縣",
+    "town": "東勢鄉",
+    "countySlug": "yunlin",
+    "townSlug": "dongshih"
+  },
+  "10009150": {
+    "county": "雲林縣",
+    "town": "褒忠鄉",
+    "countySlug": "yunlin",
+    "townSlug": "baojhong"
+  },
+  "10009160": {
+    "county": "雲林縣",
+    "town": "臺西鄉",
+    "countySlug": "yunlin",
+    "townSlug": "taihsi"
+  },
+  "10009170": {
+    "county": "雲林縣",
+    "town": "元長鄉",
+    "countySlug": "yunlin",
+    "townSlug": "yuanchang"
+  },
+  "10009180": {
+    "county": "雲林縣",
+    "town": "四湖鄉",
+    "countySlug": "yunlin",
+    "townSlug": "sihhu"
+  },
+  "10009190": {
+    "county": "雲林縣",
+    "town": "口湖鄉",
+    "countySlug": "yunlin",
+    "townSlug": "kouhu"
+  },
+  "10009200": {
+    "county": "雲林縣",
+    "town": "水林鄉",
+    "countySlug": "yunlin",
+    "townSlug": "shueilin"
+  },
+  "10010010": {
+    "county": "嘉義縣",
+    "town": "太保市",
+    "countySlug": "chiayi-county",
+    "townSlug": "taibao"
+  },
+  "10010020": {
+    "county": "嘉義縣",
+    "town": "朴子市",
+    "countySlug": "chiayi-county",
+    "townSlug": "puzi"
+  },
+  "10010030": {
+    "county": "嘉義縣",
+    "town": "布袋鎮",
+    "countySlug": "chiayi-county",
+    "townSlug": "budai"
+  },
+  "10010040": {
+    "county": "嘉義縣",
+    "town": "大林鎮",
+    "countySlug": "chiayi-county",
+    "townSlug": "dalin"
+  },
+  "10010050": {
+    "county": "嘉義縣",
+    "town": "民雄鄉",
+    "countySlug": "chiayi-county",
+    "townSlug": "minsyong"
+  },
+  "10010060": {
+    "county": "嘉義縣",
+    "town": "溪口鄉",
+    "countySlug": "chiayi-county",
+    "townSlug": "xikou"
+  },
+  "10010070": {
+    "county": "嘉義縣",
+    "town": "新港鄉",
+    "countySlug": "chiayi-county",
+    "townSlug": "xingang"
+  },
+  "10010080": {
+    "county": "嘉義縣",
+    "town": "六腳鄉",
+    "countySlug": "chiayi-county",
+    "townSlug": "lioujiao"
+  },
+  "10010090": {
+    "county": "嘉義縣",
+    "town": "東石鄉",
+    "countySlug": "chiayi-county",
+    "townSlug": "dongshi"
+  },
+  "10010100": {
+    "county": "嘉義縣",
+    "town": "義竹鄉",
+    "countySlug": "chiayi-county",
+    "townSlug": "yizhu"
+  },
+  "10010110": {
+    "county": "嘉義縣",
+    "town": "鹿草鄉",
+    "countySlug": "chiayi-county",
+    "townSlug": "lucao"
+  },
+  "10010120": {
+    "county": "嘉義縣",
+    "town": "水上鄉",
+    "countySlug": "chiayi-county",
+    "townSlug": "shueishang"
+  },
+  "10010130": {
+    "county": "嘉義縣",
+    "town": "中埔鄉",
+    "countySlug": "chiayi-county",
+    "townSlug": "zhongpu"
+  },
+  "10010140": {
+    "county": "嘉義縣",
+    "town": "竹崎鄉",
+    "countySlug": "chiayi-county",
+    "townSlug": "zhuqi"
+  },
+  "10010150": {
+    "county": "嘉義縣",
+    "town": "梅山鄉",
+    "countySlug": "chiayi-county",
+    "townSlug": "meishan"
+  },
+  "10010160": {
+    "county": "嘉義縣",
+    "town": "番路鄉",
+    "countySlug": "chiayi-county",
+    "townSlug": "fanlu"
+  },
+  "10010170": {
+    "county": "嘉義縣",
+    "town": "大埔鄉",
+    "countySlug": "chiayi-county",
+    "townSlug": "dapu"
+  },
+  "10010180": {
+    "county": "嘉義縣",
+    "town": "阿里山鄉",
+    "countySlug": "chiayi-county",
+    "townSlug": "alishan"
+  },
+  "10013010": {
+    "county": "屏東縣",
+    "town": "屏東市",
+    "countySlug": "pingtung",
+    "townSlug": "pingtung"
+  },
+  "10013020": {
+    "county": "屏東縣",
+    "town": "潮州鎮",
+    "countySlug": "pingtung",
+    "townSlug": "chaojhou"
+  },
+  "10013030": {
+    "county": "屏東縣",
+    "town": "東港鎮",
+    "countySlug": "pingtung",
+    "townSlug": "donggang"
+  },
+  "10013040": {
+    "county": "屏東縣",
+    "town": "恆春鎮",
+    "countySlug": "pingtung",
+    "townSlug": "hengchun"
+  },
+  "10013050": {
+    "county": "屏東縣",
+    "town": "萬丹鄉",
+    "countySlug": "pingtung",
+    "townSlug": "wandan"
+  },
+  "10013060": {
+    "county": "屏東縣",
+    "town": "長治鄉",
+    "countySlug": "pingtung",
+    "townSlug": "changjhih"
+  },
+  "10013070": {
+    "county": "屏東縣",
+    "town": "麟洛鄉",
+    "countySlug": "pingtung",
+    "townSlug": "linluo"
+  },
+  "10013080": {
+    "county": "屏東縣",
+    "town": "九如鄉",
+    "countySlug": "pingtung",
+    "townSlug": "jiuru"
+  },
+  "10013090": {
+    "county": "屏東縣",
+    "town": "里港鄉",
+    "countySlug": "pingtung",
+    "townSlug": "ligang"
+  },
+  "10013100": {
+    "county": "屏東縣",
+    "town": "鹽埔鄉",
+    "countySlug": "pingtung",
+    "townSlug": "yenpu"
+  },
+  "10013110": {
+    "county": "屏東縣",
+    "town": "高樹鄉",
+    "countySlug": "pingtung",
+    "townSlug": "gaoshu"
+  },
+  "10013120": {
+    "county": "屏東縣",
+    "town": "萬巒鄉",
+    "countySlug": "pingtung",
+    "townSlug": "wanluan"
+  },
+  "10013130": {
+    "county": "屏東縣",
+    "town": "內埔鄉",
+    "countySlug": "pingtung",
+    "townSlug": "neipu"
+  },
+  "10013140": {
+    "county": "屏東縣",
+    "town": "竹田鄉",
+    "countySlug": "pingtung",
+    "townSlug": "jhutian"
+  },
+  "10013150": {
+    "county": "屏東縣",
+    "town": "新埤鄉",
+    "countySlug": "pingtung",
+    "townSlug": "sinpi"
+  },
+  "10013160": {
+    "county": "屏東縣",
+    "town": "枋寮鄉",
+    "countySlug": "pingtung",
+    "townSlug": "fangliao"
+  },
+  "10013170": {
+    "county": "屏東縣",
+    "town": "新園鄉",
+    "countySlug": "pingtung",
+    "townSlug": "shinyuan"
+  },
+  "10013180": {
+    "county": "屏東縣",
+    "town": "崁頂鄉",
+    "countySlug": "pingtung",
+    "townSlug": "kanding"
+  },
+  "10013190": {
+    "county": "屏東縣",
+    "town": "林邊鄉",
+    "countySlug": "pingtung",
+    "townSlug": "linbian"
+  },
+  "10013200": {
+    "county": "屏東縣",
+    "town": "南州鄉",
+    "countySlug": "pingtung",
+    "townSlug": "nanjhou"
+  },
+  "10013210": {
+    "county": "屏東縣",
+    "town": "佳冬鄉",
+    "countySlug": "pingtung",
+    "townSlug": "jiadong"
+  },
+  "10013220": {
+    "county": "屏東縣",
+    "town": "琉球鄉",
+    "countySlug": "pingtung",
+    "townSlug": "liouciou"
+  },
+  "10013230": {
+    "county": "屏東縣",
+    "town": "車城鄉",
+    "countySlug": "pingtung",
+    "townSlug": "checheng"
+  },
+  "10013240": {
+    "county": "屏東縣",
+    "town": "滿州鄉",
+    "countySlug": "pingtung",
+    "townSlug": "manjhou"
+  },
+  "10013250": {
+    "county": "屏東縣",
+    "town": "枋山鄉",
+    "countySlug": "pingtung",
+    "townSlug": "fangshan"
+  },
+  "10013260": {
+    "county": "屏東縣",
+    "town": "三地門鄉",
+    "countySlug": "pingtung",
+    "townSlug": "sandimen"
+  },
+  "10013270": {
+    "county": "屏東縣",
+    "town": "霧臺鄉",
+    "countySlug": "pingtung",
+    "townSlug": "wutai"
+  },
+  "10013280": {
+    "county": "屏東縣",
+    "town": "瑪家鄉",
+    "countySlug": "pingtung",
+    "townSlug": "majia"
+  },
+  "10013290": {
+    "county": "屏東縣",
+    "town": "泰武鄉",
+    "countySlug": "pingtung",
+    "townSlug": "taiwu"
+  },
+  "10013300": {
+    "county": "屏東縣",
+    "town": "來義鄉",
+    "countySlug": "pingtung",
+    "townSlug": "laiyi"
+  },
+  "10013310": {
+    "county": "屏東縣",
+    "town": "春日鄉",
+    "countySlug": "pingtung",
+    "townSlug": "chunrih"
+  },
+  "10013320": {
+    "county": "屏東縣",
+    "town": "獅子鄉",
+    "countySlug": "pingtung",
+    "townSlug": "shizi"
+  },
+  "10013330": {
+    "county": "屏東縣",
+    "town": "牡丹鄉",
+    "countySlug": "pingtung",
+    "townSlug": "mudan"
+  },
+  "10014010": {
+    "county": "臺東縣",
+    "town": "臺東市",
+    "countySlug": "taitung",
+    "townSlug": "taitung"
+  },
+  "10014020": {
+    "county": "臺東縣",
+    "town": "成功鎮",
+    "countySlug": "taitung",
+    "townSlug": "chenggong"
+  },
+  "10014030": {
+    "county": "臺東縣",
+    "town": "關山鎮",
+    "countySlug": "taitung",
+    "townSlug": "guanshan"
+  },
+  "10014040": {
+    "county": "臺東縣",
+    "town": "卑南鄉",
+    "countySlug": "taitung",
+    "townSlug": "beinan"
+  },
+  "10014050": {
+    "county": "臺東縣",
+    "town": "鹿野鄉",
+    "countySlug": "taitung",
+    "townSlug": "luye"
+  },
+  "10014060": {
+    "county": "臺東縣",
+    "town": "池上鄉",
+    "countySlug": "taitung",
+    "townSlug": "chihshang"
+  },
+  "10014070": {
+    "county": "臺東縣",
+    "town": "東河鄉",
+    "countySlug": "taitung",
+    "townSlug": "donghe"
+  },
+  "10014080": {
+    "county": "臺東縣",
+    "town": "長濱鄉",
+    "countySlug": "taitung",
+    "townSlug": "changbin"
+  },
+  "10014090": {
+    "county": "臺東縣",
+    "town": "太麻里鄉",
+    "countySlug": "taitung",
+    "townSlug": "taimali"
+  },
+  "10014100": {
+    "county": "臺東縣",
+    "town": "大武鄉",
+    "countySlug": "taitung",
+    "townSlug": "dawu"
+  },
+  "10014110": {
+    "county": "臺東縣",
+    "town": "綠島鄉",
+    "countySlug": "taitung",
+    "townSlug": "lyudao"
+  },
+  "10014120": {
+    "county": "臺東縣",
+    "town": "海端鄉",
+    "countySlug": "taitung",
+    "townSlug": "haiduan"
+  },
+  "10014130": {
+    "county": "臺東縣",
+    "town": "延平鄉",
+    "countySlug": "taitung",
+    "townSlug": "yanping"
+  },
+  "10014140": {
+    "county": "臺東縣",
+    "town": "金峰鄉",
+    "countySlug": "taitung",
+    "townSlug": "jinfeng"
+  },
+  "10014150": {
+    "county": "臺東縣",
+    "town": "達仁鄉",
+    "countySlug": "taitung",
+    "townSlug": "daren"
+  },
+  "10014160": {
+    "county": "臺東縣",
+    "town": "蘭嶼鄉",
+    "countySlug": "taitung",
+    "townSlug": "lanyu"
+  },
+  "10015010": {
+    "county": "花蓮縣",
+    "town": "花蓮市",
+    "countySlug": "hualien",
+    "townSlug": "hualien"
+  },
+  "10015020": {
+    "county": "花蓮縣",
+    "town": "鳳林鎮",
+    "countySlug": "hualien",
+    "townSlug": "fenglin"
+  },
+  "10015030": {
+    "county": "花蓮縣",
+    "town": "玉里鎮",
+    "countySlug": "hualien",
+    "townSlug": "yuli"
+  },
+  "10015040": {
+    "county": "花蓮縣",
+    "town": "新城鄉",
+    "countySlug": "hualien",
+    "townSlug": "xincheng"
+  },
+  "10015050": {
+    "county": "花蓮縣",
+    "town": "吉安鄉",
+    "countySlug": "hualien",
+    "townSlug": "jian"
+  },
+  "10015060": {
+    "county": "花蓮縣",
+    "town": "壽豐鄉",
+    "countySlug": "hualien",
+    "townSlug": "shoufeng"
+  },
+  "10015070": {
+    "county": "花蓮縣",
+    "town": "光復鄉",
+    "countySlug": "hualien",
+    "townSlug": "guangfu"
+  },
+  "10015080": {
+    "county": "花蓮縣",
+    "town": "豐濱鄉",
+    "countySlug": "hualien",
+    "townSlug": "fengbin"
+  },
+  "10015090": {
+    "county": "花蓮縣",
+    "town": "瑞穗鄉",
+    "countySlug": "hualien",
+    "townSlug": "ruisui"
+  },
+  "10015100": {
+    "county": "花蓮縣",
+    "town": "富里鄉",
+    "countySlug": "hualien",
+    "townSlug": "fuli"
+  },
+  "10015110": {
+    "county": "花蓮縣",
+    "town": "秀林鄉",
+    "countySlug": "hualien",
+    "townSlug": "xiulin"
+  },
+  "10015120": {
+    "county": "花蓮縣",
+    "town": "萬榮鄉",
+    "countySlug": "hualien",
+    "townSlug": "wanrong"
+  },
+  "10015130": {
+    "county": "花蓮縣",
+    "town": "卓溪鄉",
+    "countySlug": "hualien",
+    "townSlug": "zhuoxi"
+  },
+  "10016010": {
+    "county": "澎湖縣",
+    "town": "馬公市",
+    "countySlug": "penghu",
+    "townSlug": "magong"
+  },
+  "10016020": {
+    "county": "澎湖縣",
+    "town": "湖西鄉",
+    "countySlug": "penghu",
+    "townSlug": "huxi"
+  },
+  "10016030": {
+    "county": "澎湖縣",
+    "town": "白沙鄉",
+    "countySlug": "penghu",
+    "townSlug": "baisha"
+  },
+  "10016040": {
+    "county": "澎湖縣",
+    "town": "西嶼鄉",
+    "countySlug": "penghu",
+    "townSlug": "xiyu"
+  },
+  "10016050": {
+    "county": "澎湖縣",
+    "town": "望安鄉",
+    "countySlug": "penghu",
+    "townSlug": "wangan"
+  },
+  "10016060": {
+    "county": "澎湖縣",
+    "town": "七美鄉",
+    "countySlug": "penghu",
+    "townSlug": "cimei"
+  },
+  "10017010": {
+    "county": "基隆市",
+    "town": "中正區",
+    "countySlug": "keelung",
+    "townSlug": "zhongzheng"
+  },
+  "10017020": {
+    "county": "基隆市",
+    "town": "七堵區",
+    "countySlug": "keelung",
+    "townSlug": "qidu"
+  },
+  "10017030": {
+    "county": "基隆市",
+    "town": "暖暖區",
+    "countySlug": "keelung",
+    "townSlug": "nuannuan"
+  },
+  "10017040": {
+    "county": "基隆市",
+    "town": "仁愛區",
+    "countySlug": "keelung",
+    "townSlug": "renai"
+  },
+  "10017050": {
+    "county": "基隆市",
+    "town": "中山區",
+    "countySlug": "keelung",
+    "townSlug": "zhongshan"
+  },
+  "10017060": {
+    "county": "基隆市",
+    "town": "安樂區",
+    "countySlug": "keelung",
+    "townSlug": "anle"
+  },
+  "10017070": {
+    "county": "基隆市",
+    "town": "信義區",
+    "countySlug": "keelung",
+    "townSlug": "xinyi"
+  },
+  "10018010": {
+    "county": "新竹市",
+    "town": "東區",
+    "countySlug": "hsinchu-city",
+    "townSlug": "east"
+  },
+  "10018020": {
+    "county": "新竹市",
+    "town": "北區",
+    "countySlug": "hsinchu-city",
+    "townSlug": "north"
+  },
+  "10018030": {
+    "county": "新竹市",
+    "town": "香山區",
+    "countySlug": "hsinchu-city",
+    "townSlug": "xiangshan"
+  },
+  "10020010": {
+    "county": "嘉義市",
+    "town": "東區",
+    "countySlug": "chiayi-city",
+    "townSlug": "east"
+  },
+  "10020020": {
+    "county": "嘉義市",
+    "town": "西區",
+    "countySlug": "chiayi-city",
+    "townSlug": "west"
+  },
+  "63000010": {
+    "county": "臺北市",
+    "town": "松山區",
+    "countySlug": "taipei",
+    "townSlug": "songshan"
+  },
+  "63000020": {
+    "county": "臺北市",
+    "town": "信義區",
+    "countySlug": "taipei",
+    "townSlug": "xinyi"
+  },
+  "63000030": {
+    "county": "臺北市",
+    "town": "大安區",
+    "countySlug": "taipei",
+    "townSlug": "daan"
+  },
+  "63000040": {
+    "county": "臺北市",
+    "town": "中山區",
+    "countySlug": "taipei",
+    "townSlug": "zhongshan"
+  },
+  "63000050": {
+    "county": "臺北市",
+    "town": "中正區",
+    "countySlug": "taipei",
+    "townSlug": "zhongzheng"
+  },
+  "63000060": {
+    "county": "臺北市",
+    "town": "大同區",
+    "countySlug": "taipei",
+    "townSlug": "datong"
+  },
+  "63000070": {
+    "county": "臺北市",
+    "town": "萬華區",
+    "countySlug": "taipei",
+    "townSlug": "wanhua"
+  },
+  "63000080": {
+    "county": "臺北市",
+    "town": "文山區",
+    "countySlug": "taipei",
+    "townSlug": "wenshan"
+  },
+  "63000090": {
+    "county": "臺北市",
+    "town": "南港區",
+    "countySlug": "taipei",
+    "townSlug": "nangang"
+  },
+  "63000100": {
+    "county": "臺北市",
+    "town": "內湖區",
+    "countySlug": "taipei",
+    "townSlug": "neihu"
+  },
+  "63000110": {
+    "county": "臺北市",
+    "town": "士林區",
+    "countySlug": "taipei",
+    "townSlug": "shilin"
+  },
+  "63000120": {
+    "county": "臺北市",
+    "town": "北投區",
+    "countySlug": "taipei",
+    "townSlug": "beitou"
+  },
+  "64000010": {
+    "county": "高雄市",
+    "town": "鹽埕區",
+    "countySlug": "kaohsiung",
+    "townSlug": "yancheng"
+  },
+  "64000020": {
+    "county": "高雄市",
+    "town": "鼓山區",
+    "countySlug": "kaohsiung",
+    "townSlug": "gushan"
+  },
+  "64000030": {
+    "county": "高雄市",
+    "town": "左營區",
+    "countySlug": "kaohsiung",
+    "townSlug": "zuoying"
+  },
+  "64000040": {
+    "county": "高雄市",
+    "town": "楠梓區",
+    "countySlug": "kaohsiung",
+    "townSlug": "nanzih"
+  },
+  "64000050": {
+    "county": "高雄市",
+    "town": "三民區",
+    "countySlug": "kaohsiung",
+    "townSlug": "sanmin"
+  },
+  "64000060": {
+    "county": "高雄市",
+    "town": "新興區",
+    "countySlug": "kaohsiung",
+    "townSlug": "sinsing"
+  },
+  "64000070": {
+    "county": "高雄市",
+    "town": "前金區",
+    "countySlug": "kaohsiung",
+    "townSlug": "cianjin"
+  },
+  "64000080": {
+    "county": "高雄市",
+    "town": "苓雅區",
+    "countySlug": "kaohsiung",
+    "townSlug": "lingya"
+  },
+  "64000090": {
+    "county": "高雄市",
+    "town": "前鎮區",
+    "countySlug": "kaohsiung",
+    "townSlug": "cianjhen"
+  },
+  "64000100": {
+    "county": "高雄市",
+    "town": "旗津區",
+    "countySlug": "kaohsiung",
+    "townSlug": "cijin"
+  },
+  "64000110": {
+    "county": "高雄市",
+    "town": "小港區",
+    "countySlug": "kaohsiung",
+    "townSlug": "siaogang"
+  },
+  "64000120": {
+    "county": "高雄市",
+    "town": "鳳山區",
+    "countySlug": "kaohsiung",
+    "townSlug": "fongshan"
+  },
+  "64000130": {
+    "county": "高雄市",
+    "town": "林園區",
+    "countySlug": "kaohsiung",
+    "townSlug": "linyuan"
+  },
+  "64000140": {
+    "county": "高雄市",
+    "town": "大寮區",
+    "countySlug": "kaohsiung",
+    "townSlug": "daliao"
+  },
+  "64000150": {
+    "county": "高雄市",
+    "town": "大樹區",
+    "countySlug": "kaohsiung",
+    "townSlug": "dashu"
+  },
+  "64000160": {
+    "county": "高雄市",
+    "town": "大社區",
+    "countySlug": "kaohsiung",
+    "townSlug": "dashe"
+  },
+  "64000170": {
+    "county": "高雄市",
+    "town": "仁武區",
+    "countySlug": "kaohsiung",
+    "townSlug": "renwu"
+  },
+  "64000180": {
+    "county": "高雄市",
+    "town": "鳥松區",
+    "countySlug": "kaohsiung",
+    "townSlug": "niaosong"
+  },
+  "64000190": {
+    "county": "高雄市",
+    "town": "岡山區",
+    "countySlug": "kaohsiung",
+    "townSlug": "gangshan"
+  },
+  "64000200": {
+    "county": "高雄市",
+    "town": "橋頭區",
+    "countySlug": "kaohsiung",
+    "townSlug": "ciaotou"
+  },
+  "64000210": {
+    "county": "高雄市",
+    "town": "燕巢區",
+    "countySlug": "kaohsiung",
+    "townSlug": "yanchao"
+  },
+  "64000220": {
+    "county": "高雄市",
+    "town": "田寮區",
+    "countySlug": "kaohsiung",
+    "townSlug": "tianliao"
+  },
+  "64000230": {
+    "county": "高雄市",
+    "town": "阿蓮區",
+    "countySlug": "kaohsiung",
+    "townSlug": "alian"
+  },
+  "64000240": {
+    "county": "高雄市",
+    "town": "路竹區",
+    "countySlug": "kaohsiung",
+    "townSlug": "luzhu"
+  },
+  "64000250": {
+    "county": "高雄市",
+    "town": "湖內區",
+    "countySlug": "kaohsiung",
+    "townSlug": "hunei"
+  },
+  "64000260": {
+    "county": "高雄市",
+    "town": "茄萣區",
+    "countySlug": "kaohsiung",
+    "townSlug": "cieding"
+  },
+  "64000270": {
+    "county": "高雄市",
+    "town": "永安區",
+    "countySlug": "kaohsiung",
+    "townSlug": "yongan"
+  },
+  "64000280": {
+    "county": "高雄市",
+    "town": "彌陀區",
+    "countySlug": "kaohsiung",
+    "townSlug": "mituo"
+  },
+  "64000290": {
+    "county": "高雄市",
+    "town": "梓官區",
+    "countySlug": "kaohsiung",
+    "townSlug": "zihguan"
+  },
+  "64000300": {
+    "county": "高雄市",
+    "town": "旗山區",
+    "countySlug": "kaohsiung",
+    "townSlug": "cishan"
+  },
+  "64000310": {
+    "county": "高雄市",
+    "town": "美濃區",
+    "countySlug": "kaohsiung",
+    "townSlug": "meinong"
+  },
+  "64000320": {
+    "county": "高雄市",
+    "town": "六龜區",
+    "countySlug": "kaohsiung",
+    "townSlug": "liouguei"
+  },
+  "64000330": {
+    "county": "高雄市",
+    "town": "甲仙區",
+    "countySlug": "kaohsiung",
+    "townSlug": "jiasian"
+  },
+  "64000340": {
+    "county": "高雄市",
+    "town": "杉林區",
+    "countySlug": "kaohsiung",
+    "townSlug": "shanlin"
+  },
+  "64000350": {
+    "county": "高雄市",
+    "town": "內門區",
+    "countySlug": "kaohsiung",
+    "townSlug": "neimen"
+  },
+  "64000360": {
+    "county": "高雄市",
+    "town": "茂林區",
+    "countySlug": "kaohsiung",
+    "townSlug": "maolin"
+  },
+  "64000370": {
+    "county": "高雄市",
+    "town": "桃源區",
+    "countySlug": "kaohsiung",
+    "townSlug": "taoyuan"
+  },
+  "64000380": {
+    "county": "高雄市",
+    "town": "那瑪夏區",
+    "countySlug": "kaohsiung",
+    "townSlug": "namasia"
+  },
+  "65000010": {
+    "county": "新北市",
+    "town": "板橋區",
+    "countySlug": "new-taipei",
+    "townSlug": "banqiao"
+  },
+  "65000020": {
+    "county": "新北市",
+    "town": "三重區",
+    "countySlug": "new-taipei",
+    "townSlug": "sanchong"
+  },
+  "65000030": {
+    "county": "新北市",
+    "town": "中和區",
+    "countySlug": "new-taipei",
+    "townSlug": "zhonghe"
+  },
+  "65000040": {
+    "county": "新北市",
+    "town": "永和區",
+    "countySlug": "new-taipei",
+    "townSlug": "yonghe"
+  },
+  "65000050": {
+    "county": "新北市",
+    "town": "新莊區",
+    "countySlug": "new-taipei",
+    "townSlug": "xinzhuang"
+  },
+  "65000060": {
+    "county": "新北市",
+    "town": "新店區",
+    "countySlug": "new-taipei",
+    "townSlug": "xindian"
+  },
+  "65000070": {
+    "county": "新北市",
+    "town": "樹林區",
+    "countySlug": "new-taipei",
+    "townSlug": "shulin"
+  },
+  "65000080": {
+    "county": "新北市",
+    "town": "鶯歌區",
+    "countySlug": "new-taipei",
+    "townSlug": "yingge"
+  },
+  "65000090": {
+    "county": "新北市",
+    "town": "三峽區",
+    "countySlug": "new-taipei",
+    "townSlug": "sanxia"
+  },
+  "65000100": {
+    "county": "新北市",
+    "town": "淡水區",
+    "countySlug": "new-taipei",
+    "townSlug": "tamsui"
+  },
+  "65000110": {
+    "county": "新北市",
+    "town": "汐止區",
+    "countySlug": "new-taipei",
+    "townSlug": "xizhi"
+  },
+  "65000120": {
+    "county": "新北市",
+    "town": "瑞芳區",
+    "countySlug": "new-taipei",
+    "townSlug": "ruifang"
+  },
+  "65000130": {
+    "county": "新北市",
+    "town": "土城區",
+    "countySlug": "new-taipei",
+    "townSlug": "tucheng"
+  },
+  "65000140": {
+    "county": "新北市",
+    "town": "蘆洲區",
+    "countySlug": "new-taipei",
+    "townSlug": "luzhou"
+  },
+  "65000150": {
+    "county": "新北市",
+    "town": "五股區",
+    "countySlug": "new-taipei",
+    "townSlug": "wugu"
+  },
+  "65000160": {
+    "county": "新北市",
+    "town": "泰山區",
+    "countySlug": "new-taipei",
+    "townSlug": "taishan"
+  },
+  "65000170": {
+    "county": "新北市",
+    "town": "林口區",
+    "countySlug": "new-taipei",
+    "townSlug": "linkou"
+  },
+  "65000180": {
+    "county": "新北市",
+    "town": "深坑區",
+    "countySlug": "new-taipei",
+    "townSlug": "shenkeng"
+  },
+  "65000190": {
+    "county": "新北市",
+    "town": "石碇區",
+    "countySlug": "new-taipei",
+    "townSlug": "shiding"
+  },
+  "65000200": {
+    "county": "新北市",
+    "town": "坪林區",
+    "countySlug": "new-taipei",
+    "townSlug": "pinglin"
+  },
+  "65000210": {
+    "county": "新北市",
+    "town": "三芝區",
+    "countySlug": "new-taipei",
+    "townSlug": "sanzhi"
+  },
+  "65000220": {
+    "county": "新北市",
+    "town": "石門區",
+    "countySlug": "new-taipei",
+    "townSlug": "shimen"
+  },
+  "65000230": {
+    "county": "新北市",
+    "town": "八里區",
+    "countySlug": "new-taipei",
+    "townSlug": "bali"
+  },
+  "65000240": {
+    "county": "新北市",
+    "town": "平溪區",
+    "countySlug": "new-taipei",
+    "townSlug": "pingxi"
+  },
+  "65000250": {
+    "county": "新北市",
+    "town": "雙溪區",
+    "countySlug": "new-taipei",
+    "townSlug": "shuangxi"
+  },
+  "65000260": {
+    "county": "新北市",
+    "town": "貢寮區",
+    "countySlug": "new-taipei",
+    "townSlug": "gongliao"
+  },
+  "65000270": {
+    "county": "新北市",
+    "town": "金山區",
+    "countySlug": "new-taipei",
+    "townSlug": "jinshan"
+  },
+  "65000280": {
+    "county": "新北市",
+    "town": "萬里區",
+    "countySlug": "new-taipei",
+    "townSlug": "wanli"
+  },
+  "65000290": {
+    "county": "新北市",
+    "town": "烏來區",
+    "countySlug": "new-taipei",
+    "townSlug": "wulai"
+  },
+  "66000010": {
+    "county": "臺中市",
+    "town": "中區",
+    "countySlug": "taichung",
+    "townSlug": "central"
+  },
+  "66000020": {
+    "county": "臺中市",
+    "town": "東區",
+    "countySlug": "taichung",
+    "townSlug": "east"
+  },
+  "66000030": {
+    "county": "臺中市",
+    "town": "南區",
+    "countySlug": "taichung",
+    "townSlug": "south"
+  },
+  "66000040": {
+    "county": "臺中市",
+    "town": "西區",
+    "countySlug": "taichung",
+    "townSlug": "west"
+  },
+  "66000050": {
+    "county": "臺中市",
+    "town": "北區",
+    "countySlug": "taichung",
+    "townSlug": "north"
+  },
+  "66000060": {
+    "county": "臺中市",
+    "town": "西屯區",
+    "countySlug": "taichung",
+    "townSlug": "xitun"
+  },
+  "66000070": {
+    "county": "臺中市",
+    "town": "南屯區",
+    "countySlug": "taichung",
+    "townSlug": "nantun"
+  },
+  "66000080": {
+    "county": "臺中市",
+    "town": "北屯區",
+    "countySlug": "taichung",
+    "townSlug": "beitun"
+  },
+  "66000090": {
+    "county": "臺中市",
+    "town": "豐原區",
+    "countySlug": "taichung",
+    "townSlug": "fengyuan"
+  },
+  "66000100": {
+    "county": "臺中市",
+    "town": "東勢區",
+    "countySlug": "taichung",
+    "townSlug": "dongshi"
+  },
+  "66000110": {
+    "county": "臺中市",
+    "town": "大甲區",
+    "countySlug": "taichung",
+    "townSlug": "dajia"
+  },
+  "66000120": {
+    "county": "臺中市",
+    "town": "清水區",
+    "countySlug": "taichung",
+    "townSlug": "qingshui"
+  },
+  "66000130": {
+    "county": "臺中市",
+    "town": "沙鹿區",
+    "countySlug": "taichung",
+    "townSlug": "shalu"
+  },
+  "66000140": {
+    "county": "臺中市",
+    "town": "梧棲區",
+    "countySlug": "taichung",
+    "townSlug": "wuqi"
+  },
+  "66000150": {
+    "county": "臺中市",
+    "town": "后里區",
+    "countySlug": "taichung",
+    "townSlug": "houli"
+  },
+  "66000160": {
+    "county": "臺中市",
+    "town": "神岡區",
+    "countySlug": "taichung",
+    "townSlug": "shengang"
+  },
+  "66000170": {
+    "county": "臺中市",
+    "town": "潭子區",
+    "countySlug": "taichung",
+    "townSlug": "tanzi"
+  },
+  "66000180": {
+    "county": "臺中市",
+    "town": "大雅區",
+    "countySlug": "taichung",
+    "townSlug": "daya"
+  },
+  "66000190": {
+    "county": "臺中市",
+    "town": "新社區",
+    "countySlug": "taichung",
+    "townSlug": "xinshe"
+  },
+  "66000200": {
+    "county": "臺中市",
+    "town": "石岡區",
+    "countySlug": "taichung",
+    "townSlug": "shigang"
+  },
+  "66000210": {
+    "county": "臺中市",
+    "town": "外埔區",
+    "countySlug": "taichung",
+    "townSlug": "waipu"
+  },
+  "66000220": {
+    "county": "臺中市",
+    "town": "大安區",
+    "countySlug": "taichung",
+    "townSlug": "daan"
+  },
+  "66000230": {
+    "county": "臺中市",
+    "town": "烏日區",
+    "countySlug": "taichung",
+    "townSlug": "wuri"
+  },
+  "66000240": {
+    "county": "臺中市",
+    "town": "大肚區",
+    "countySlug": "taichung",
+    "townSlug": "dadu"
+  },
+  "66000250": {
+    "county": "臺中市",
+    "town": "龍井區",
+    "countySlug": "taichung",
+    "townSlug": "longjing"
+  },
+  "66000260": {
+    "county": "臺中市",
+    "town": "霧峰區",
+    "countySlug": "taichung",
+    "townSlug": "wufeng"
+  },
+  "66000270": {
+    "county": "臺中市",
+    "town": "太平區",
+    "countySlug": "taichung",
+    "townSlug": "taiping"
+  },
+  "66000280": {
+    "county": "臺中市",
+    "town": "大里區",
+    "countySlug": "taichung",
+    "townSlug": "dali"
+  },
+  "66000290": {
+    "county": "臺中市",
+    "town": "和平區",
+    "countySlug": "taichung",
+    "townSlug": "heping"
+  },
+  "67000010": {
+    "county": "臺南市",
+    "town": "新營區",
+    "countySlug": "tainan",
+    "townSlug": "sinying"
+  },
+  "67000020": {
+    "county": "臺南市",
+    "town": "鹽水區",
+    "countySlug": "tainan",
+    "townSlug": "yanshuei"
+  },
+  "67000030": {
+    "county": "臺南市",
+    "town": "白河區",
+    "countySlug": "tainan",
+    "townSlug": "baihe"
+  },
+  "67000040": {
+    "county": "臺南市",
+    "town": "柳營區",
+    "countySlug": "tainan",
+    "townSlug": "liouying"
+  },
+  "67000050": {
+    "county": "臺南市",
+    "town": "後壁區",
+    "countySlug": "tainan",
+    "townSlug": "houbi"
+  },
+  "67000060": {
+    "county": "臺南市",
+    "town": "東山區",
+    "countySlug": "tainan",
+    "townSlug": "dongshan"
+  },
+  "67000070": {
+    "county": "臺南市",
+    "town": "麻豆區",
+    "countySlug": "tainan",
+    "townSlug": "madou"
+  },
+  "67000080": {
+    "county": "臺南市",
+    "town": "下營區",
+    "countySlug": "tainan",
+    "townSlug": "xiaying"
+  },
+  "67000090": {
+    "county": "臺南市",
+    "town": "六甲區",
+    "countySlug": "tainan",
+    "townSlug": "lioujia"
+  },
+  "67000100": {
+    "county": "臺南市",
+    "town": "官田區",
+    "countySlug": "tainan",
+    "townSlug": "guantian"
+  },
+  "67000110": {
+    "county": "臺南市",
+    "town": "大內區",
+    "countySlug": "tainan",
+    "townSlug": "danei"
+  },
+  "67000120": {
+    "county": "臺南市",
+    "town": "佳里區",
+    "countySlug": "tainan",
+    "townSlug": "jiali"
+  },
+  "67000130": {
+    "county": "臺南市",
+    "town": "學甲區",
+    "countySlug": "tainan",
+    "townSlug": "syuejia"
+  },
+  "67000140": {
+    "county": "臺南市",
+    "town": "西港區",
+    "countySlug": "tainan",
+    "townSlug": "sigang"
+  },
+  "67000150": {
+    "county": "臺南市",
+    "town": "七股區",
+    "countySlug": "tainan",
+    "townSlug": "cigu"
+  },
+  "67000160": {
+    "county": "臺南市",
+    "town": "將軍區",
+    "countySlug": "tainan",
+    "townSlug": "jiangjyun"
+  },
+  "67000170": {
+    "county": "臺南市",
+    "town": "北門區",
+    "countySlug": "tainan",
+    "townSlug": "beimen"
+  },
+  "67000180": {
+    "county": "臺南市",
+    "town": "新化區",
+    "countySlug": "tainan",
+    "townSlug": "sinhua"
+  },
+  "67000190": {
+    "county": "臺南市",
+    "town": "善化區",
+    "countySlug": "tainan",
+    "townSlug": "shanhua"
+  },
+  "67000200": {
+    "county": "臺南市",
+    "town": "新市區",
+    "countySlug": "tainan",
+    "townSlug": "sinshih"
+  },
+  "67000210": {
+    "county": "臺南市",
+    "town": "安定區",
+    "countySlug": "tainan",
+    "townSlug": "anding"
+  },
+  "67000220": {
+    "county": "臺南市",
+    "town": "山上區",
+    "countySlug": "tainan",
+    "townSlug": "shanshang"
+  },
+  "67000230": {
+    "county": "臺南市",
+    "town": "玉井區",
+    "countySlug": "tainan",
+    "townSlug": "yujing"
+  },
+  "67000240": {
+    "county": "臺南市",
+    "town": "楠西區",
+    "countySlug": "tainan",
+    "townSlug": "nansi"
+  },
+  "67000250": {
+    "county": "臺南市",
+    "town": "南化區",
+    "countySlug": "tainan",
+    "townSlug": "nanhua"
+  },
+  "67000260": {
+    "county": "臺南市",
+    "town": "左鎮區",
+    "countySlug": "tainan",
+    "townSlug": "zuojhen"
+  },
+  "67000270": {
+    "county": "臺南市",
+    "town": "仁德區",
+    "countySlug": "tainan",
+    "townSlug": "rende"
+  },
+  "67000280": {
+    "county": "臺南市",
+    "town": "歸仁區",
+    "countySlug": "tainan",
+    "townSlug": "gueiren"
+  },
+  "67000290": {
+    "county": "臺南市",
+    "town": "關廟區",
+    "countySlug": "tainan",
+    "townSlug": "guanmiao"
+  },
+  "67000300": {
+    "county": "臺南市",
+    "town": "龍崎區",
+    "countySlug": "tainan",
+    "townSlug": "longci"
+  },
+  "67000310": {
+    "county": "臺南市",
+    "town": "永康區",
+    "countySlug": "tainan",
+    "townSlug": "yongkang"
+  },
+  "67000320": {
+    "county": "臺南市",
+    "town": "東區",
+    "countySlug": "tainan",
+    "townSlug": "east"
+  },
+  "67000330": {
+    "county": "臺南市",
+    "town": "南區",
+    "countySlug": "tainan",
+    "townSlug": "south"
+  },
+  "67000340": {
+    "county": "臺南市",
+    "town": "北區",
+    "countySlug": "tainan",
+    "townSlug": "north"
+  },
+  "67000350": {
+    "county": "臺南市",
+    "town": "安南區",
+    "countySlug": "tainan",
+    "townSlug": "annan"
+  },
+  "67000360": {
+    "county": "臺南市",
+    "town": "安平區",
+    "countySlug": "tainan",
+    "townSlug": "anping"
+  },
+  "67000370": {
+    "county": "臺南市",
+    "town": "中西區",
+    "countySlug": "tainan",
+    "townSlug": "west-central"
+  },
+  "68000010": {
+    "county": "桃園市",
+    "town": "桃園區",
+    "countySlug": "taoyuan",
+    "townSlug": "taoyuan"
+  },
+  "68000020": {
+    "county": "桃園市",
+    "town": "中壢區",
+    "countySlug": "taoyuan",
+    "townSlug": "zhongli"
+  },
+  "68000030": {
+    "county": "桃園市",
+    "town": "大溪區",
+    "countySlug": "taoyuan",
+    "townSlug": "daxi"
+  },
+  "68000040": {
+    "county": "桃園市",
+    "town": "楊梅區",
+    "countySlug": "taoyuan",
+    "townSlug": "yangmei"
+  },
+  "68000050": {
+    "county": "桃園市",
+    "town": "蘆竹區",
+    "countySlug": "taoyuan",
+    "townSlug": "luzhu"
+  },
+  "68000060": {
+    "county": "桃園市",
+    "town": "大園區",
+    "countySlug": "taoyuan",
+    "townSlug": "dayuan"
+  },
+  "68000070": {
+    "county": "桃園市",
+    "town": "龜山區",
+    "countySlug": "taoyuan",
+    "townSlug": "guishan"
+  },
+  "68000080": {
+    "county": "桃園市",
+    "town": "八德區",
+    "countySlug": "taoyuan",
+    "townSlug": "bade"
+  },
+  "68000090": {
+    "county": "桃園市",
+    "town": "龍潭區",
+    "countySlug": "taoyuan",
+    "townSlug": "longtan"
+  },
+  "68000100": {
+    "county": "桃園市",
+    "town": "平鎮區",
+    "countySlug": "taoyuan",
+    "townSlug": "pingzhen"
+  },
+  "68000110": {
+    "county": "桃園市",
+    "town": "新屋區",
+    "countySlug": "taoyuan",
+    "townSlug": "xinwu"
+  },
+  "68000120": {
+    "county": "桃園市",
+    "town": "觀音區",
+    "countySlug": "taoyuan",
+    "townSlug": "guanyin"
+  },
+  "68000130": {
+    "county": "桃園市",
+    "town": "復興區",
+    "countySlug": "taoyuan",
+    "townSlug": "fuxing"
+  },
+  "09007010": {
+    "county": "連江縣",
+    "town": "南竿鄉",
+    "countySlug": "lienchiang",
+    "townSlug": "nangan"
+  },
+  "09007020": {
+    "county": "連江縣",
+    "town": "北竿鄉",
+    "countySlug": "lienchiang",
+    "townSlug": "beigan"
+  },
+  "09007030": {
+    "county": "連江縣",
+    "town": "莒光鄉",
+    "countySlug": "lienchiang",
+    "townSlug": "juguang"
+  },
+  "09007040": {
+    "county": "連江縣",
+    "town": "東引鄉",
+    "countySlug": "lienchiang",
+    "townSlug": "dongyin"
+  },
+  "09020010": {
+    "county": "金門縣",
+    "town": "金城鎮",
+    "countySlug": "kinmen",
+    "townSlug": "jincheng"
+  },
+  "09020020": {
+    "county": "金門縣",
+    "town": "金沙鎮",
+    "countySlug": "kinmen",
+    "townSlug": "jinsha"
+  },
+  "09020030": {
+    "county": "金門縣",
+    "town": "金湖鎮",
+    "countySlug": "kinmen",
+    "townSlug": "jinhu"
+  },
+  "09020040": {
+    "county": "金門縣",
+    "town": "金寧鄉",
+    "countySlug": "kinmen",
+    "townSlug": "jinning"
+  },
+  "09020050": {
+    "county": "金門縣",
+    "town": "烈嶼鄉",
+    "countySlug": "kinmen",
+    "townSlug": "lieyu"
+  },
+  "09020060": {
+    "county": "金門縣",
+    "town": "烏坵鄉",
+    "countySlug": "kinmen",
+    "townSlug": "wuqiu"
+  }
+}

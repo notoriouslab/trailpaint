@@ -330,29 +330,23 @@
       }
     },
     {
-      "id": "taihoku-high-school-auditorium",
-      "name": "臺北高等學校講堂（今臺灣師範大學）",
+      "id": "daan-public-school",
+      "name": "大安公學校（今大安國小）",
       "category": "education",
       "latlng": [
-        25.026294,
-        121.526775
+        25.01995,
+        121.54998
       ],
       "start": 1929,
       "end": null,
-      "desc": "臺灣總督府臺北高等學校的講堂與主體校舍於 1929 年完成。1946 年臺灣省立師範學院借用校舍成立，1949 年臺北高級中學停辦，師範學院接收資源，逐步發展為今日的國立臺灣師範大學。",
+      "desc": "同樣在 1929 年，以臺灣人子弟為對象的「大安公學校」成立，以所在地大安為名。開校時校舍尚未完成，借富田町、龍安坡兩地民房招收兩班學生。1967 年改為今名大安國民小學。和同年的錦尋常小學校對照，可以看見日治時期日臺分校的教育制度。",
       "sources": [
         {
-          "title": "維基百科〈臺灣總督府臺北高等學校〉",
-          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E7%B8%BD%E7%9D%A3%E5%BA%9C%E8%87%BA%E5%8C%97%E9%AB%98%E7%AD%89%E5%AD%B8%E6%A0%A1"
-        },
-        {
-          "title": "維基百科〈國立臺灣師範大學〉",
-          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8"
+          "title": "維基百科〈臺北市大安區大安國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%A4%A7%E5%AE%89%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
         }
       ],
-      "photo": {
-        "query": "臺灣師範大學 禮堂|National Taiwan Normal University auditorium"
-      },
+      "photo": null,
       "verified": {
         "method": "manual",
         "date": "2026-10-25"
@@ -384,23 +378,29 @@
       }
     },
     {
-      "id": "daan-public-school",
-      "name": "大安公學校（今大安國小）",
+      "id": "taihoku-high-school-auditorium",
+      "name": "臺北高等學校講堂（今臺灣師範大學）",
       "category": "education",
       "latlng": [
-        25.01995,
-        121.54998
+        25.026294,
+        121.526775
       ],
       "start": 1929,
       "end": null,
-      "desc": "同樣在 1929 年，以臺灣人子弟為對象的「大安公學校」成立，以所在地大安為名。開校時校舍尚未完成，借富田町、龍安坡兩地民房招收兩班學生。1967 年改為今名大安國民小學。和同年的錦尋常小學校對照，可以看見日治時期日臺分校的教育制度。",
+      "desc": "臺灣總督府臺北高等學校的講堂與主體校舍於 1929 年完成。1946 年臺灣省立師範學院借用校舍成立，1949 年臺北高級中學停辦，師範學院接收資源，逐步發展為今日的國立臺灣師範大學。",
       "sources": [
         {
-          "title": "維基百科〈臺北市大安區大安國民小學〉",
-          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%A4%A7%E5%AE%89%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+          "title": "維基百科〈臺灣總督府臺北高等學校〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E7%B8%BD%E7%9D%A3%E5%BA%9C%E8%87%BA%E5%8C%97%E9%AB%98%E7%AD%89%E5%AD%B8%E6%A0%A1"
+        },
+        {
+          "title": "維基百科〈國立臺灣師範大學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8"
         }
       ],
-      "photo": null,
+      "photo": {
+        "query": "臺灣師範大學 禮堂|National Taiwan Normal University auditorium"
+      },
       "verified": {
         "method": "manual",
         "date": "2026-10-25"
@@ -505,6 +505,162 @@
       }
     },
     {
+      "id": "tpark-122",
+      "name": "仁愛圓環",
+      "category": "park",
+      "latlng": [
+        25.03763,
+        121.549683
+      ],
+      "start": 1968,
+      "end": null,
+      "desc": "仁愛路為臺北市的重要幹道之一，仁愛路為東西向道路，仁愛路東抵臺北市政府府前廣場，西抵臺北府城東門（景福門）；仁愛路與敦化南路交會處之圓環，常做為臺北燈會活動之主燈區，仁愛路亦為臺北市著名的林蔭大道之一。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "仁愛圓環"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-194",
+      "name": "師大公園",
+      "category": "park",
+      "latlng": [
+        25.024599,
+        121.528374
+      ],
+      "start": 1970,
+      "end": null,
+      "desc": "師大公園(ShidaPark)由6塊道路畸零地組成，原各區塊各自獨立使用，於86年間市府都發局重新規劃，並命名師大藝術公園。民國95年公園再次整建改造。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "師大公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-131",
+      "name": "大安195號綠地",
+      "category": "park",
+      "latlng": [
+        25.02002,
+        121.531433
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "被榕樹和茄苳圍繞的小三角形195綠地，民國60年建造，座落於大學里溫州街58巷內是個寧靜而隱密又富含著人文歷史的地方，周圍可沿著瑠公圳支流、殷海光故居、到附近特色咖啡館和書店享受著充滿文青的氣息的午後時光。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大安195號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-188",
+      "name": "永康公園",
+      "category": "park",
+      "latlng": [
+        25.03162,
+        121.529716
+      ],
+      "start": 1971,
+      "end": null,
+      "desc": "永康公園(YongkangPark)位於永康街東側，因臨永康街而命名為永康公園。公園位處永康商圈，除植栽外，入口處臺灣意象及花台拼貼圖騰最為吸睛。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "永康公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-362",
+      "name": "溫州公園",
+      "category": "park",
+      "latlng": [
+        25.018801,
+        121.531342
+      ],
+      "start": 1972,
+      "end": null,
+      "desc": "溫州公園(WenzhouPark)種植超過百種植物，產生色彩和層次的豐富感，還有供攀爬觀景木梯、生態水池及雨撲滿等設計，為社區民眾最常聚集的活動地點。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "溫州公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-548",
+      "name": "安東公園",
+      "category": "park",
+      "latlng": [
+        25.028931,
+        121.544823
+      ],
+      "start": 1973,
+      "end": null,
+      "desc": "安東公園(AndongPark)為處於老少人口及民間教育機構密度極高之環境，因此公園內規劃有綠地休閒區、親子活動區及社區耆老交誼區，拉近倫理親情交流。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "安東公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
       "id": "ntust",
       "name": "臺灣工業技術學院（今臺灣科技大學）",
       "category": "education",
@@ -526,6 +682,32 @@
       },
       "verified": {
         "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-620",
+      "name": "嘉興公園",
+      "category": "park",
+      "latlng": [
+        25.02137,
+        121.551949
+      ],
+      "start": 1975,
+      "end": null,
+      "desc": "嘉興公園(JiaxingPark)鄰近校區及住宅區，常為民眾茶餘飯後休憩之處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "嘉興公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
         "date": "2026-10-25"
       }
     },
@@ -555,6 +737,58 @@
       }
     },
     {
+      "id": "tpark-212",
+      "name": "黎孝公園",
+      "category": "park",
+      "latlng": [
+        25.01976,
+        121.555992
+      ],
+      "start": 1977,
+      "end": null,
+      "desc": "黎孝公園(LisiaoPark)位於和平東路3段308巷與和平東路3段308巷15弄之間，呈三角型，故當地人稱「三角公園」。民國66年闢建，面積1014平方公尺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "黎孝公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-631",
+      "name": "法治公園",
+      "category": "park",
+      "latlng": [
+        25.026911,
+        121.552917
+      ],
+      "start": 1977,
+      "end": null,
+      "desc": "法治公園(FazhiPark)原名「通化公園」，84年更名法治公園，公園銜名由前總統馬英九所題，園內以種植果樹聞名，也是無菸公園，為校外教學的好處所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "法治公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
       "id": "second-funeral-parlor",
       "name": "臺北市第二殯儀館（今懷愛館）",
       "category": "civic",
@@ -576,6 +810,318 @@
       },
       "verified": {
         "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-19",
+      "name": "仁愛公園",
+      "category": "park",
+      "latlng": [
+        25.036619,
+        121.546242
+      ],
+      "start": 1979,
+      "end": null,
+      "desc": "仁愛公園(RenaiPark)因臨近聯合醫院仁愛院區而得名。藉由居民參與及社區人口結構及區位特色，塑造成增進社區倫理親情及求診民眾舒展心靈之優質空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "仁愛公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-42",
+      "name": "和平公園",
+      "category": "park",
+      "latlng": [
+        25.023491,
+        121.542519
+      ],
+      "start": 1979,
+      "end": null,
+      "desc": "和平公園(HepingPark)成立於民國68年，公園面積1,760平方公尺，本區無菸示範公園之ㄧ。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "和平公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-300",
+      "name": "四維公園",
+      "category": "park",
+      "latlng": [
+        25.03063,
+        121.545326
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "四維公園(SiweiPark)景觀美麗，充滿綠意，整齊清潔的公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "四維公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-414",
+      "name": "辛亥一號公園",
+      "category": "park",
+      "latlng": [
+        25.022711,
+        121.532661
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "辛亥一號公園(XinhaiParkNo.1)原為國防部所屬眷戶約百餘戶住於該地段，經多次協商眷戶遷離該地。因地形關係，形成前寬後窄三角型公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "辛亥一號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-476",
+      "name": "和安公園",
+      "category": "park",
+      "latlng": [
+        25.03451,
+        121.544479
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "和安公園(HeanPark)民國69年成立，面積1,541平方公尺，公園取意人和平安而命名為和安公園，園內環境優雅、遊憩設備齊全完備。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "和安公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-653",
+      "name": "瑠公公園",
+      "category": "park",
+      "latlng": [
+        25.04241,
+        121.545723
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "瑠公公園(LiugongPark)位於捷運忠孝復興站附近，為紀念郭錫瑠先生對民生水利的重要貢獻得名。因位處頂好商圈，公園造型佳，人潮眾多，使用率極高。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "瑠公公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-705",
+      "name": "大學公園",
+      "category": "park",
+      "latlng": [
+        25.02191,
+        121.532898
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "大學公園(DaxuePark)原名辛亥二號公園，民國86年申請臺北市錫瑠基金會公園環境改造計畫，並更名為大學公園。旁有瑠公圳支流遺址，是僅存未加蓋段落。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大學公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-721",
+      "name": "瑞安公園",
+      "category": "park",
+      "latlng": [
+        25.026131,
+        121.539352
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "瑞安公園(RuianPark)成立於民國69年，因位於瑞安街命名「瑞安公園」。公園面積約742平方公尺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "瑞安公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-779",
+      "name": "臨江公園",
+      "category": "park",
+      "latlng": [
+        25.02816,
+        121.55574
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "臨江公園(LinjiangPark)初命名為「文昌公園」，民國84年因眾多里民反映公園名稱未與實際情況符合，市府為順應民情，將公園名稱更改為「臨江公園」。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "臨江公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-248",
+      "name": "敦安公園",
+      "category": "park",
+      "latlng": [
+        25.03446,
+        121.553703
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "敦安公園(DunanPark）座落於信義路4段265巷12弄於民國70年成立，佔地為2,820平方公尺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "敦安公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-412",
+      "name": "瑠公圳公園",
+      "category": "park",
+      "latlng": [
+        25.04361,
+        121.543121
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "瑠公圳公園係於70年度開闢，面積約12,423平方公尺，鄰市民大道旁，自建國南路至復興南路，為一狹長帶狀公園。瑠公圳公園位處於市中心，附近商機活絡，周邊緊鄰住家、商號及學校，本公園不僅提供當地居民休憩晨運，亦有上班人士就近於園內作短暫休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "瑠公圳公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-550",
+      "name": "大安125號綠地",
+      "category": "park",
+      "latlng": [
+        25.04442,
+        121.533684
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "位於八德路一段，綠地緊鄰台北科技大學，位於台北科技、資訊匯集的區域，留下了一塊狹長的帶狀綠地，綠地上栽植鳳凰木、火焰樹、扶桑、紫背竹芋等樹木。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大安125號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
         "date": "2026-10-25"
       }
     },
@@ -605,6 +1151,734 @@
       }
     },
     {
+      "id": "tpark-105",
+      "name": "仁慈公園",
+      "category": "park",
+      "latlng": [
+        25.03413,
+        121.545708
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "仁慈公園(RenciPark)因本里為仁慈里因而命名，園內環境優美、遊憩設備齊全完備，深得本里里民喜愛。民國89年列入民政局「社區環境改造工程」。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "仁慈公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-13",
+      "name": "古莊公園",
+      "category": "park",
+      "latlng": [
+        25.02273,
+        121.528214
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "古莊公園(GuzhuangPark)原為日據時代臺灣銀行網球練習場，光復後因疏於管理導致違建林立，民國71年拆遷違建戶興建本公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "古莊公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-237",
+      "name": "龍圖公園",
+      "category": "park",
+      "latlng": [
+        25.030491,
+        121.541603
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "龍圖公園(LongtuPark)命名緣起北宋包拯因曾任龍圖閣學士，人稱「包龍圖」，並以清廉公正、不攀附權貴人稱「包青天」傳頌於世，故公園以此主題設計。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "龍圖公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-24",
+      "name": "龍陣一號公園",
+      "category": "park",
+      "latlng": [
+        25.02759,
+        121.542542
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "龍陣一號公園(LongzhenParkNo.1)內兒童遊樂設施，跑酷挑戰組及滾輪滑梯是大家的最愛，使用率極高。尤其園內設置雕塑家余燈銓的作品，讓鄰里公園更添藝術品味。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "龍陣一號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-752",
+      "name": "延吉公園",
+      "category": "park",
+      "latlng": [
+        25.04257,
+        121.555771
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "延吉公園(YanjiPark)成立於民國71年，面積2,284平方公尺。林木蒼蒼，曲徑通幽，常常是電視偶像劇取景的地方。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "延吉公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-195",
+      "name": "敦親公園",
+      "category": "park",
+      "latlng": [
+        25.022659,
+        121.540909
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "敦親公園(DunchinPark)成立於民國72年，公園面積1,593平方公尺。園內老樹(朴樹)是居民聊天講古好所在。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "敦親公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-549",
+      "name": "光信公園",
+      "category": "park",
+      "latlng": [
+        25.035561,
+        121.555801
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "光信公園(GuangxinPark)位於延吉街241巷旁，因臨里內中心點而命名為光信公園，環境幽雅，活動休憩設施，深得里民喜愛。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "光信公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-614",
+      "name": "大安公園",
+      "category": "park",
+      "latlng": [
+        25.042761,
+        121.542809
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "大安公園(DaanPark)位於安東街，面積2,913平方公尺，花草茂密，綠意盎然。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大安公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-73",
+      "name": "錦安公園",
+      "category": "park",
+      "latlng": [
+        25.027981,
+        121.527946
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "錦安公園(JinanPark)位於國立臺灣師範大學旁，高大黑板樹圍繞著公園，環境優雅，與周遭日式宿舍群融為一片，是都市中難得綠色歷史人文環境。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "錦安公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-252",
+      "name": "民輝公園",
+      "category": "park",
+      "latlng": [
+        25.039511,
+        121.535057
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "民輝公園(MinhuiPark)為違章聚落遷置後改建，現草木花卉豐富，為附近居民最佳休閒、聯誼的場所。現為無菸公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "民輝公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-336",
+      "name": "民榮公園",
+      "category": "park",
+      "latlng": [
+        25.0354,
+        121.535698
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "民榮公園(MinrongPark)位於新生南路1段157巷16號前，民國73年規劃成立，面積為2,896平方公尺。園內四時景緻優美，是鄰里藝文活動豐富的地方。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "民榮公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-208",
+      "name": "青峰公園",
+      "category": "park",
+      "latlng": [
+        25.015699,
+        121.551407
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "青峰公園(QingfengPark)建造於民國74年；本公園環境清幽，大樹滿園，因緊鄰辛亥路及福州山(入口旁即為步道入口)，遊客多為登山而來。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "青峰公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-210",
+      "name": "臥龍公園",
+      "category": "park",
+      "latlng": [
+        25.016701,
+        121.549889
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "臥龍公園(WolongPark)建於民國74年，面積3,133平方公尺，公園環境清幽，園內設有步道、石桌椅、涼亭等設施，是睦鄰聯誼、里民休憩嬉戲之理想場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "臥龍公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-244",
+      "name": "龍門公園",
+      "category": "park",
+      "latlng": [
+        25.02426,
+        121.536682
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "龍門公園(LongmenPark)因龍門里得名，原由國泰建設公司建造，後列入民政局社區環境改造工程始有今日景象，公園東西面緊臨住宅，南北各有一入口。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "龍門公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-270",
+      "name": "龍陣二號公園",
+      "category": "park",
+      "latlng": [
+        25.02924,
+        121.542488
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "龍陣二號公園(LongzhenParkNo.2)面積2,056平方公尺，園內花木扶疏，滿園綠意，環境幽雅，並設有石椅、木椅及遊樂設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "龍陣二號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-322",
+      "name": "居安公園",
+      "category": "park",
+      "latlng": [
+        25.02968,
+        121.549332
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "居安公園(JuanPark)為大安區首座民間出資重建的公園，原有的居安公園於74年興建，後由大陸工程公司認養並以「川」字為主題規劃重建，始有今日景象。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "居安公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-199",
+      "name": "群賢公園",
+      "category": "park",
+      "latlng": [
+        25.0254,
+        121.54657
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "群賢公園(QunxianPark)位於和平東路3段1巷10弄旁，面積869平方公尺，於民國75年以「群賢」為名，並由前財政部總務司長王紹齋題字成立此公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "群賢公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-345",
+      "name": "新龍公園",
+      "category": "park",
+      "latlng": [
+        25.027651,
+        121.540161
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "新龍公園(XinlongPark)本座公園位於瑞安街222巷、214巷、208巷交叉口，因本公園位於新龍、龍生、龍陣3里交界處，成為3里里民共同資產。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "新龍公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-361",
+      "name": "大安398號綠地",
+      "category": "park",
+      "latlng": [
+        25.040581,
+        121.54715
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "位於東區精華地段敦化南路1段236巷子內的三角綠地，種植著福木及木麻黃等常綠植物，提供鄰近金融機關和公司行號壓力大的上班族一個短暫休息放鬆心情的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大安398號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-642",
+      "name": "誠安公園",
+      "category": "park",
+      "latlng": [
+        25.04249,
+        121.540909
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "誠安公園(ChenganPark)位於忠孝東路3段237巷內，毗鄰昌隆里，面積1,816平方公尺，園內樹木茂盛，環境優美。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "誠安公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-109",
+      "name": "安祥公園",
+      "category": "park",
+      "latlng": [
+        25.03454,
+        121.542732
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "安祥公園(AnxiangPark)取其平安、祥和之意故命名為安祥公園。位於信義路3段157巷，相臨客家文化會館。綠意盎然，是和安里之肺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "安祥公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-130",
+      "name": "虎嘯公園",
+      "category": "park",
+      "latlng": [
+        25.02253,
+        121.549278
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "虎嘯公園(HusiaoPark)民國76年成立，面積2,019平方公尺。成立之初由地方人士命名為虎嘯公園，沿用至今。周邊辦公大樓林立，常可見上班族穿梭其中。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "虎嘯公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-227",
+      "name": "通化公園",
+      "category": "park",
+      "latlng": [
+        25.03216,
+        121.554558
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "通化公園(TonghuaPark)位於文昌街與通化街口，原名文通公園，周邊文昌街為臺北市著名家具街，附近又有臨江夜市，遊客絡繹不絕。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "通化公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-269",
+      "name": "黎和綠地",
+      "category": "park",
+      "latlng": [
+        25.01593,
+        121.56057
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "位於臺北市臥龍街324號的黎和綠地，是一個近捷運麟光站的小型綠地，在這個喧囂的台北市中，繁華的和平東路底，靠近台北盆地的邊緣，留下了一個讓附近居民稍稍喘息的小空間，綠地上栽種了小葉欖仁、黑板樹與羅比親王海棗等樹木，設有體健設施供居民使用，民眾也可以在涼亭乘涼聊天。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "黎和綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-298",
+      "name": "全安公園",
+      "category": "park",
+      "latlng": [
+        25.025459,
+        121.551209
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "全安公園(QuananPark)因位於全安里而得此名。民國91年藉由里民參與及針對人口結構及特性規劃進行「社區環境改造工程」，成為里民最佳休閒場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "全安公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-837",
+      "name": "金山公園",
+      "category": "park",
+      "latlng": [
+        25.03096,
+        121.524756
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "民國76年由郵政總局捐贈，107年規劃新建，已於108年12月18日正式開放。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "金山公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-451",
+      "name": "東豐公園",
+      "category": "park",
+      "latlng": [
+        25.03578,
+        121.544861
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "東豐公園(DongfengPark)民國77年成立，面積1,421平方公尺因臨東豐街，故命名為東豐公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "東豐公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-254",
+      "name": "德安公園",
+      "category": "park",
+      "latlng": [
+        25.03488,
+        121.547775
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "德安公園(DeanPark)位於四維路52巷，面積有1,617平方公尺，形狀成東西走向長方形。老樹、公共藝術、階梯廣場、花木寫意，是居民喜愛的地方。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "德安公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
       "id": "taipei-public-library-main",
       "name": "臺北市立圖書館總館",
       "category": "library",
@@ -626,6 +1900,58 @@
       },
       "verified": {
         "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-201",
+      "name": "平安公園",
+      "category": "park",
+      "latlng": [
+        25.03196,
+        121.549316
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "平安公園(PinganPark)原稱義安公園，在民國81年改名為平安公園，園中有國際獅子會長許晉昇暨全體獅友建贈之涼亭，其建地很高在市區鄰里公園少有。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "平安公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-543",
+      "name": "古風公園",
+      "category": "park",
+      "latlng": [
+        25.021971,
+        121.529053
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "古風公園(GufengPark)為大安區最小的公園，面積只有233平方公尺，可謂超級迷你公園，但因鄰近龍泉市場，使用率高。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "古風公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
         "date": "2026-10-25"
       }
     },
@@ -680,6 +2006,144 @@
       }
     },
     {
+      "id": "tpark-329",
+      "name": "環東公園",
+      "category": "park",
+      "latlng": [
+        25.04373,
+        121.542931
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "公園位於快速道路旁，以綠地、植栽觀賞為主。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "環東公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-689",
+      "name": "公館公園",
+      "category": "park",
+      "latlng": [
+        25.011427,
+        121.540791
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "公館公園(GongguanPark)於民國88年由公園處移撥區公所接管，位於埔山腳下(蟾蜍山)，緊鄰臺灣科技大學、臺大昆蟲館、臺電市區營業分處及軍營。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "公館公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-164",
+      "name": "錦華綠地",
+      "category": "park",
+      "latlng": [
+        25.029579,
+        121.529579
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "錦華綠地座落於金華街150號與永康街的交叉路口，面積約365平方公尺，附近即是充滿人文氣息的師大校園，再過去一點即是日本觀光客駐足的永康圈，南方還有瑠公圳遺址，在這個人文薈萃的環境下，錦華綠地上栽培了樟樹、玉蘭與茄冬等樹木，在夏秋之際玉蘭開花時芬芳馥郁，香味隨秋風拂來令來往之旅人與居民心曠神怡，市府更設置公佈欄，時時提供市民資訊，是一個兼具功能與遊憩的綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "錦華綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-46",
+      "name": "金華公園",
+      "category": "park",
+      "latlng": [
+        25.029591,
+        121.531174
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "金華公園(JinhuaPark)位於新生國小旁，面積4,390平方公尺，民國87年成立，另金華公園附設有地下停車場，為臺北市停車管理工程處管理。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q15931567",
+          "url": "https://www.wikidata.org/wiki/Q15931567"
+        },
+        {
+          "title": "維基百科〈金華公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E9%87%91%E8%8F%AF%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "金華公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-644",
+      "name": "附中公園",
+      "category": "park",
+      "latlng": [
+        25.036341,
+        121.542259
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "附中公園(FujongPark)因緊鄰師大附中故而為名，綠草如茵的空間及扶疏花木營造出都市中一片綠意。灰白相間石子地坪、亭柱相映成趣。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "附中公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
       "id": "mrt-zhongxiao-dunhua",
       "name": "捷運忠孝敦化站",
       "category": "transport",
@@ -705,6 +2169,62 @@
       }
     },
     {
+      "id": "tpark-728",
+      "name": "泰順公園",
+      "category": "park",
+      "latlng": [
+        25.02462,
+        121.531639
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "泰順公園(TaishunPark)民國89年完工。園內花木扶疏，設有涼亭及花架，提供里民相當完善之休閒遊憩場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "泰順公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-684",
+      "name": "福州山公園",
+      "category": "park",
+      "latlng": [
+        25.01589,
+        121.551613
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "公園處於90年間接管福州山公園，並於93年度編列預算辦理地上物拆除，陸續拆除地上物後以保持原始風貌方式綠美化，並參考山友意見增建涼亭，與原有公園連成一氣，讓臺北市民又添新衣，多一處休閒最佳去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q112231407",
+          "url": "https://www.wikidata.org/wiki/Q112231407"
+        }
+      ],
+      "photo": {
+        "query": "福州山公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
       "id": "ntu-sports-center",
       "name": "臺灣大學綜合體育館",
       "category": "sports",
@@ -726,6 +2246,32 @@
       },
       "verified": {
         "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-64",
+      "name": "昌隆198公園",
+      "category": "park",
+      "latlng": [
+        25.04376,
+        121.535713
+      ],
+      "start": 2006,
+      "end": null,
+      "desc": "昌隆198公園(Changlong198Park)位於建國南路與市民大道交叉口，面積3,807平方公尺。每當大花紫薇及阿勃勒盛開季節，搖曳生姿，美不勝收。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "昌隆198公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
         "date": "2026-10-25"
       }
     },
@@ -834,6 +2380,110 @@
       },
       "verified": {
         "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-376",
+      "name": "敦仁公園",
+      "category": "park",
+      "latlng": [
+        25.040402,
+        121.546909
+      ],
+      "start": 2017,
+      "end": null,
+      "desc": "本公園(含地下建物)於58年間由建設局簽報核准興建，屋頂公園及地下結構體於60年完工並由養工處申請使用執照，大安分局敦化南路派出所於62年進駐該址至今，目前已搬遷，106年規劃闢設為公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "敦仁公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-843",
+      "name": "金杭公園",
+      "category": "park",
+      "latlng": [
+        25.0329,
+        121.526877
+      ],
+      "start": 2017,
+      "end": null,
+      "desc": "金杭公園位於金山南路2段30巷，前身是荒廢已久的法務部臺北刑務所宿舍群，保留有市定古蹟臺北監獄北側圍牆遺址，整體公園改造依循著過去宿舍群紋理框架為配置，並將基地內對於獄政史具有深遠保存價值的監獄圍牆遺址，以及優質大樹資源予以妥善保留。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "金杭公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-964",
+      "name": "麗水公園",
+      "category": "park",
+      "latlng": [
+        25.031914,
+        121.528088
+      ],
+      "start": 2022,
+      "end": null,
+      "desc": "麗水公園屬於永康里獨一無二的休憩空間，111年重新將既有綠化植栽、基地鋪面及排水等設施重新整合配置，成為市民心中一塊「麗、水」後花園，共同記載美好的回憶。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "麗水公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-965",
+      "name": "龍鳳公園",
+      "category": "park",
+      "latlng": [
+        25.025611,
+        121.543274
+      ],
+      "start": 2022,
+      "end": null,
+      "desc": "龍鳳公園鄰近文湖線科技大樓站，在熱鬧繁華的大樓之間，小巧的公園不但有喜朋友喜愛的兒童遊戲場，還有富含教育的雨撲滿解說，提供大小朋友舒適休憩的環境。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "龍鳳公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
         "date": "2026-10-25"
       }
     }

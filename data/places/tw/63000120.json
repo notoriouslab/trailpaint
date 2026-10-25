@@ -1,0 +1,3672 @@
+{
+  "towncode": "63000120",
+  "county": "臺北市",
+  "town": "北投區",
+  "slug": "taipei-beitou",
+  "items": [
+    {
+      "id": "tpark-497",
+      "name": "陽明公園",
+      "category": "park",
+      "latlng": [
+        25.159017,
+        121.539011
+      ],
+      "start": 1950,
+      "end": null,
+      "desc": "陽明公園YangmingPark位於本市北投區北側，距市區約17公里。日據時期該地遍地茅草、人跡罕至，名為「草山」。臺灣光復後為紀念明代學者王陽明先生堪亂精神與知行合一學說，故於1950年3月31日將草山改為陽明山。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q49583454",
+          "url": "https://www.wikidata.org/wiki/Q49583454"
+        }
+      ],
+      "photo": {
+        "query": "陽明公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-597",
+      "name": "前山公園",
+      "category": "park",
+      "latlng": [
+        25.150577,
+        121.548444
+      ],
+      "start": 1974,
+      "end": null,
+      "desc": "前山公園位於陽明山區，由前山1-4號公園組成，緊鄰紗帽山東側、陽明山公車總站及教師研習中心旁，為臺北市郊重要的旅遊景點，佔地約3萬8,328平方公尺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q92721382",
+          "url": "https://www.wikidata.org/wiki/Q92721382"
+        }
+      ],
+      "photo": {
+        "query": "前山公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-875",
+      "name": "北投2號公園",
+      "category": "park",
+      "latlng": [
+        25.137179,
+        121.508149
+      ],
+      "start": 1974,
+      "end": null,
+      "desc": "北投二號公園(防空洞)北投地區由於靠山，早期利用自然地形挖設防空洞、防空壕溝等構造物，提供空襲時的避難場所。北投兒童樂園內也有幾處防空洞，現在一處做為臺北市警察局民防管制中心第12主臺，辦理警報系統管理，因目前尚有人員駐守及使用，結構相當良好。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投2號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q5933572",
+      "name": "臺北市立中正高級中學",
+      "category": "school",
+      "latlng": [
+        25.1044,
+        121.517
+      ],
+      "start": 1975,
+      "end": null,
+      "desc": "1946 年成立士林初級中學，1972 年奉令於北投石牌現址籌建校舍，1975 年 2 月 15 日完成遷校，原士林校區劃歸士林國中。",
+      "sources": [
+        {
+          "title": "Wikidata Q5933572",
+          "url": "https://www.wikidata.org/wiki/Q5933572"
+        },
+        {
+          "title": "維基百科〈臺北市立中正高級中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E4%B8%AD%E6%AD%A3%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立中正高級中學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1975年2月15日，由邵夢蘭校長完成遷校大事。"
+      }
+    },
+    {
+      "id": "tpark-826",
+      "name": "湖山綠地",
+      "category": "park",
+      "latlng": [
+        25.151787,
+        121.54383
+      ],
+      "start": 1977,
+      "end": null,
+      "desc": "湖山綠地位於前往陽明公園入口旁，園內有一自然生態水池園栽植各色的水生植栽錯落其中，臺灣萍蓬草於池中逐水漂流，池岸或見野薑、月桃、翠蘆莉臨水照影之景；荷葉田田如華蓋挺立，碩美的荷花於池中綻開,小魚水中悠遊，青蛙跳舞荷葉間，蜻蜓飛舞點水，這一方小小的水池，生態豐富，青空路過的白雲也忍不住為這一片美景駐足了下來，正是「一池方鑑照天開,天光雲影共徘徊」。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "湖山綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q15912453",
+      "name": "臺北市北投區立農國民小學",
+      "category": "school",
+      "latlng": [
+        25.119039,
+        121.504715
+      ],
+      "start": 1977,
+      "end": null,
+      "desc": "1977 年創立於立農街，因石牌地區人口快速成長，在現址新設學校以減輕附近學校負擔。",
+      "sources": [
+        {
+          "title": "Wikidata Q15912453",
+          "url": "https://www.wikidata.org/wiki/Q15912453"
+        },
+        {
+          "title": "維基百科〈臺北市北投區立農國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%8C%97%E6%8A%95%E5%8D%80%E7%AB%8B%E8%BE%B2%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市北投區立農國民小學"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1977年創立於台北市北投區立農街，當時於石牌地區實踐街、尊賢街與吉利街一帶新建公寓眾多，人口快速成長，為減輕附近學校負擔，因此在現址新設學校，將原就讀石牌、清江等國小部分學生歸入立農就讀，學區包含立農、立賢、尊賢、東華、八仙等里別。"
+      }
+    },
+    {
+      "id": "tpark-545",
+      "name": "北投90號綠地",
+      "category": "park",
+      "latlng": [
+        25.11862,
+        121.520332
+      ],
+      "start": 1978,
+      "end": null,
+      "desc": "北投90號綠地位於位於石牌路二段上，為臺北護理大學圍牆外(榮總對面)帶狀綠地，為著名的石牌路二段綠色隧道的一部分，主要樹種為榕樹，樹冠輻寬闊，長年下來與石牌路另一側之榕樹交疊，濃密的枝幹形成了綿延近100公尺的綠色隧道。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投90號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-906",
+      "name": "復興公園",
+      "category": "park",
+      "latlng": [
+        25.13969,
+        121.503227
+      ],
+      "start": 1978,
+      "end": null,
+      "desc": "復興公園位於北投中和街200號，面積26,356平方公尺，闢建於民國67年，磺港溪流貫穿公園，並有拱橋跨越其上，小橋流水，景緻秀麗；另園內有九曲道、各式涼亭，充滿中華文化的古典雅致，與園內林立樹木、附近環山林野，渾然天成。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "復興公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-228",
+      "name": "行義公園",
+      "category": "park",
+      "latlng": [
+        25.125389,
+        121.52523
+      ],
+      "start": 1979,
+      "end": null,
+      "desc": "行義公園位於北投區石牌路二段343巷內，公園依次開闢於68、83年，目前開闢面積約有3萬6千平方公尺，行義公園為北投第六公墓改建而成，保留了原本的地勢與原生植物，使行義公園具有豐富的生態環境，除了前山公園外，行義公園儼然已成為拍攝藍鵲飛行版的聖地，公園內常常可見拿著長鏡頭架著腳架的攝影愛好者，耐心的在獵取藍鵲美麗的身影，走到公園深處，更有一座槌球場，讓民眾可以在此優閒的運動話家常。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "行義公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-135",
+      "name": "北投165號綠地",
+      "category": "park",
+      "latlng": [
+        25.13176,
+        121.496239
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "大業路452巷兩側，因道路拓寬後綠地現址為柏油路及機車格。目前所指之北投165號綠地為大業路452巷中間之槽化島，為公園處代管之道路用地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投165號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-509",
+      "name": "地熱谷公園",
+      "category": "park",
+      "latlng": [
+        25.13756,
+        121.510979
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "地熱谷公園開闢於民國69年，面積約12950平方公尺，園區內硫磺煙霧繚繞，形成一幅人間仙境般的美景，地熱谷為北投溫泉的源頭之一，同時也是該區域內水溫最高的溫泉，溫度約在90度左右，水質是屬青磺泉，對於支氣管、筋骨關節等街有助益，適合全家大小一同前來體驗溫泉樂趣。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "地熱谷公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-579",
+      "name": "石牌公園",
+      "category": "park",
+      "latlng": [
+        25.11636,
+        121.510361
+      ],
+      "start": 1980,
+      "end": null,
+      "desc": "石牌公園坐落於北投區石牌路一段39巷內，公園開闢於民國69年，面積約有2萬3千平方公尺，石牌公園隱身於住宅區之間，非經巷內，不得窺其貌，公園內樹木扶疏，廣設座椅及涼亭，常常可見長輩在此休憩話家常，公園中心有北投運動中心，讓鄰里有最好的運動空間，再往前走有小朋友最喜愛的兒童遊憩區，兩側設有座椅供家長休息觀看小朋友活動使用，這是一座人情味濃厚的公園，更有熱心愛民的里長，讓整個公園滿溢歡樂與笑容，公園處已於102年公園更新完成，改造後將提供一個更完成的公園以享鄰里。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "石牌公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-484",
+      "name": "北投98號綠地",
+      "category": "park",
+      "latlng": [
+        25.11566,
+        121.515503
+      ],
+      "start": 1981,
+      "end": null,
+      "desc": "北投98號綠地位於石牌路二段上(東華街二段起至裕民三路口)之槽化島型綠地，綠地內種植多株榕樹及蒲葵，並無設置休憩設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投98號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-138",
+      "name": "北投106號綠地",
+      "category": "park",
+      "latlng": [
+        25.111082,
+        121.520905
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "106綠地位於建明路165之1及明德路旁，佔地不大，綠地內草木扶疏，但較接近花圃形式，其中並未設置休憩設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投106號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-14",
+      "name": "北投169號綠地",
+      "category": "park",
+      "latlng": [
+        25.12072,
+        121.499533
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "北投169綠地位於大度路一段，承德路口南側，為長條形帶狀綠地，綠地內設有自行車道，連結承德路七段至大度度路三段，沿途可見關渡平原之開闊田原風光。北投169、182、183、185、186、187、188、191、192綠地共同組成大度路兩側之帶狀綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投169號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-176",
+      "name": "北投138號綠地",
+      "category": "park",
+      "latlng": [
+        25.11442,
+        121.502739
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "本綠地位於立賢路南側，已劃為道路用地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投138號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-181",
+      "name": "北投122號綠地",
+      "category": "park",
+      "latlng": [
+        25.11307,
+        121.508926
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "北投122號綠地位於承德路七段，綠地型態為帶狀花槽，並無設置休憩設施，僅具有綠美化功能。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投122號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-234",
+      "name": "北投135號綠地",
+      "category": "park",
+      "latlng": [
+        25.111839,
+        121.510307
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "本綠地型態為帶狀植槽，並無設置休憩設施，僅具有綠美化功能。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投135號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-246",
+      "name": "北投192號綠地",
+      "category": "park",
+      "latlng": [
+        25.122089,
+        121.480911
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "北投192綠地位於大度路二段南側，為長條形帶狀綠地，綠地內設有自行車道，連結承德路七段至大度度路三段，沿途可見關渡平原之開闊田原風光。北投169、182、183、185、186、187、188、191、192綠地共同組成大度路兩側之帶狀綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投192號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-295",
+      "name": "北投121號綠地",
+      "category": "park",
+      "latlng": [
+        25.11664,
+        121.50499
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "北投121綠地位於承德路七段，綠地型態為帶狀花槽，並無設置休憩設施，僅具有綠美化功能。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投121號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-352",
+      "name": "北投183號綠地",
+      "category": "park",
+      "latlng": [
+        25.123011,
+        121.471863
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "北投183綠地位於大度路三段北側，為長條形帶狀綠地，連結承德路七段至大度度路三段，沿途可見關渡平原之開闊田原風光。北投169、182、183、185、186、187、188、191、192綠地共同組成大度路兩側之帶狀綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投183號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-417",
+      "name": "北投191號綠地",
+      "category": "park",
+      "latlng": [
+        25.12249,
+        121.480843
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "北投191綠地位於大度路二段北側，為長條形帶狀綠地，連結承德路七段至大度度路三段，沿途可見關渡平原之開闊田原風光。北投169、182、183、185、186、187、188、191、192綠地共同組成大度路兩側之帶狀綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投191號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-435",
+      "name": "北投188號綠地",
+      "category": "park",
+      "latlng": [
+        25.122749,
+        121.470558
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "北投188綠地位於大度路三段南側，為長條形帶狀綠地，綠地內設有自行車道，連結承德路七段至大度度路三段，沿途可見關渡平原之開闊田原風光。北投169、182、183、185、186、187、188、191、192綠地共同組成大度路兩側之帶狀綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投188號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-471",
+      "name": "北投187號綠地",
+      "category": "park",
+      "latlng": [
+        25.12291,
+        121.468292
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "北投187綠地位於大度路三段南側，為長條形帶狀綠地，綠地內種植成排之猢猻木，特殊之樹型及花果形成特色景緻。北投169、182、183、185、186、187、188、191、192綠地共同組成大度路兩側之帶狀綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投187號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-520",
+      "name": "北投124號綠地",
+      "category": "park",
+      "latlng": [
+        25.114865,
+        121.506329
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "北投124號綠地為承德路六段到承德路七段(福國路口起迄立賢西路口間)前西側之長條帶狀綠地，為無設置休憩設施之景觀用綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投124號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-531",
+      "name": "北投123號綠地",
+      "category": "park",
+      "latlng": [
+        25.117135,
+        121.503849
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "北投123號綠地為承德路七段前西側(尊賢街267巷口對面起迄立農公園對面)之道路旁帶狀綠地，為無設置休憩設施之景觀用綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投123號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-540",
+      "name": "北投120號綠地",
+      "category": "park",
+      "latlng": [
+        25.120132,
+        121.501115
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "北投120綠地位於承德路七段400號前(公館路至磺港溪間)，為長條形帶狀綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投120號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-622",
+      "name": "北投182號綠地",
+      "category": "park",
+      "latlng": [
+        25.1234,
+        121.467728
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "北投182綠地位於大度路三段274號北側，為長條形帶狀綠地，連結承德路七段至大度度路三段，沿途可見關渡平原之開闊田原風光。北投169、182、183、185、186、187、188、191、192綠地共同組成大度路兩側之帶狀綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投182號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-632",
+      "name": "北投185號綠地",
+      "category": "park",
+      "latlng": [
+        25.123425,
+        121.464987
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "北投185綠地位於大度路三段南側(關渡派出所後)，於磅空頂(北投242號)前之長條形帶狀綠地，連結承德路七段至大度度路三段，沿途可見關渡平原之開闊田原風光。北投169、182、183、185、186、187、188、191、192綠地共同組成大度路兩側之帶狀綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投185號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-729",
+      "name": "北投186號綠地",
+      "category": "park",
+      "latlng": [
+        25.12303,
+        121.46653
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "北投186綠地位於大度路三段南側，知行路314號旁，關渡派出所旁階梯綠地。北投169、182、183、185、186、187、188、191、192綠地共同組成大度路兩側之帶狀綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投186號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-16",
+      "name": "北投62號綠地",
+      "category": "park",
+      "latlng": [
+        25.129382,
+        121.503215
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "北投62號綠地位於磺港路上(清江路177巷口至清江路113巷口)延著磺港溪而建，窄而狹長與磺港溪畔其他綠地(北投62~66號綠地)合並成為一個溪畔步道系統，提供民眾一個散步休憩的好地點。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投62號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-483",
+      "name": "東華公園",
+      "category": "park",
+      "latlng": [
+        25.12184,
+        121.507072
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "東華公園坐落於北投區東華街二段300巷19號對面，公園依次開闢於72、80、87年，面積約有7萬5千平方公尺，搭乘捷運淡水線在「唭哩岸站」下車，越過東華街，便可來到東華公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q122165911",
+          "url": "https://www.wikidata.org/wiki/Q122165911"
+        }
+      ],
+      "photo": {
+        "query": "東華公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-628",
+      "name": "北投63號綠地",
+      "category": "park",
+      "latlng": [
+        25.12759,
+        121.503342
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "北投63號綠地位於磺港路上(三合橋旁至清江路177巷口)延著磺港溪而建，窄而狹長與磺港溪畔其他綠地(北投62~66號綠地)合並成為一個溪畔步道系統，提供民眾一個散步休憩的好地點。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投63號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-76",
+      "name": "北投64號綠地",
+      "category": "park",
+      "latlng": [
+        25.126383,
+        121.503285
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "北投64號綠地位於磺港路上(崇仁路一段131巷口至三合橋旁)延著磺港溪而建，窄而狹長與磺港溪畔其他綠地(北投62~66號綠地)合並成為一個溪畔步道系統，提供民眾一個散步休憩的好地點。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投64號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-907",
+      "name": "長安公園",
+      "category": "park",
+      "latlng": [
+        25.135559,
+        121.50016
+      ],
+      "start": 1983,
+      "end": null,
+      "desc": "長安公園位於育仁路109號對面(薇閣國小旁)，開闢於民國72年度，面積約為14,042平方公尺，園內設有籃球場、溜冰場、涼亭等設施，公園整體成L形的地形，提供民眾朋友良好的運動場所，公園牆面上畫有彩繪塗鴉，為附近居民及薇閣國小小朋友所共同創作，為公園增添一股鮮豔活潑的氣息。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "長安公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-574",
+      "name": "文化綠地",
+      "category": "park",
+      "latlng": [
+        25.137449,
+        121.498406
+      ],
+      "start": 1984,
+      "end": null,
+      "desc": "文化綠地(北投214號)位於大業路、永興路一段交叉口。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文化綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-467",
+      "name": "文化1號公園",
+      "category": "park",
+      "latlng": [
+        25.136535,
+        121.496462
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：2855平方公尺。公園位置：中央北路2段文化國小對面，座落文化里區內。公園沿革：於民國74年開闢。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文化1號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-585",
+      "name": "建民公園",
+      "category": "park",
+      "latlng": [
+        25.104744,
+        121.519809
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "建民公園位於文林北路16巷7號對面，開闢於民國74年度，面積約為3230平方公尺，緊鄰黃溪河堤，園內設有兒童組合遊具、涼亭、座椅等，園內樹蔭圍繞環境涼爽舒適，提供民眾良好的休憩場地，旁邊更有土地公廟是民眾信仰中心。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "建民公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-745",
+      "name": "振華公園",
+      "category": "park",
+      "latlng": [
+        25.11517,
+        121.518852
+      ],
+      "start": 1985,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：9073平方公尺。公園位置：振華街24號對面，座落振華里區內。公園沿革：於民國74年開闢，114年完成社改。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "振華公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-128",
+      "name": "豐年公園",
+      "category": "park",
+      "latlng": [
+        25.136009,
+        121.496658
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：1565平方公尺。公園位置：中央北路大業路口，座落豐年里區內。公園沿革：於民國75年開闢，91年完成社改。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "豐年公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-238",
+      "name": "北投65號綠地",
+      "category": "park",
+      "latlng": [
+        25.124689,
+        121.503052
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "北投65號綠地位於磺港路上(崇仁路一段155巷口至131巷口)延著磺港溪而建，窄而狹長與磺港溪畔其他綠地(北投62~66號綠地)合並成為一個溪畔步道系統，提供民眾一個散步休憩的好地點。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投65號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-522",
+      "name": "文化2號公園",
+      "category": "park",
+      "latlng": [
+        25.136431,
+        121.496841
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：1164平方公尺。公園位置：中央北路1段228巷，座落文化里區內。公園沿革：於民國75年開闢。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文化2號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-566",
+      "name": "榮光公園",
+      "category": "park",
+      "latlng": [
+        25.11472,
+        121.51429
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：3293平方公尺。公園位置：石牌路1段石牌國中對面，座落榮光里區內。公園沿革：於民國75年開闢，101年完成社改。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q92734731",
+          "url": "https://www.wikidata.org/wiki/Q92734731"
+        }
+      ],
+      "photo": {
+        "query": "榮光公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-908",
+      "name": "榮華公園",
+      "category": "park",
+      "latlng": [
+        25.11055,
+        121.521988
+      ],
+      "start": 1986,
+      "end": null,
+      "desc": "榮華公園坐落於北投區明德路150巷3弄附近，公園依次開闢於民國75、82年，面積約有1萬5千2百平方公尺，具有兒童遊具、體健設施、籃球、網球、羽球、溜冰場等設施，公園隱身於住宅區內，又具有完善的運動設施，是周邊重要的運動遊憩場所，公園內榕樹、第倫桃樹木茂密，提供晨運民眾與遊玩兒童良好的綠蔭，這裡有很多大樹是遮陽的好地方，尤其是夏天，公園內比周邊氣溫低了有2-3度，有很多地方可讓老人下棋、泡茶，裡面還有一座土地公廟，叫靈石福佑宮，香火鼎盛。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "榮華公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-139",
+      "name": "北投168號綠地",
+      "category": "park",
+      "latlng": [
+        25.124371,
+        121.499191
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "北投168號綠地，1987 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投168號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-351",
+      "name": "北投166號綠地",
+      "category": "park",
+      "latlng": [
+        25.13051,
+        121.496872
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "北投166號綠地，1987 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投166號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-446",
+      "name": "中庸1號公園",
+      "category": "park",
+      "latlng": [
+        25.138041,
+        121.501244
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：5049平方公尺。公園位置：雙全街50號對面，座落中庸里區內。公園沿革：於民國76年開闢。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "中庸1號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-58",
+      "name": "北投167號綠地",
+      "category": "park",
+      "latlng": [
+        25.128405,
+        121.497707
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "北投167號綠地，1987 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投167號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-576",
+      "name": "清江1公園",
+      "category": "park",
+      "latlng": [
+        25.123911,
+        121.50248
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：3292平方公尺。公園位置：崇仁路1段154號對面，座落清江里區內。公園沿革：於民國77年開闢，91年完成社改。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "清江1公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-742",
+      "name": "清江二公園",
+      "category": "park",
+      "latlng": [
+        25.12368,
+        121.501892
+      ],
+      "start": 1988,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：1161平方公尺。公園位置：崇仁路1段154號旁，座落清江里區內。公園沿革：於民國77年開闢，91年完成社改。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "清江二公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-141",
+      "name": "知行公園",
+      "category": "park",
+      "latlng": [
+        25.11973,
+        121.466652
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：2759平方公尺。公園位置：知行路225巷，座落關渡里區內。公園沿革：於民國78年開闢，92年完成社改。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "知行公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-397",
+      "name": "北投164號綠地",
+      "category": "park",
+      "latlng": [
+        25.13345,
+        121.495979
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "北投164號綠地，1989 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投164號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-44",
+      "name": "立農公園",
+      "category": "park",
+      "latlng": [
+        25.11879,
+        121.50351
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "立農公園坐落於北投區承德路七段與吉利街口，公園開闢於78、79年，面積約有1萬7千平方公尺，園內種植包括九重葛、矮仙丹花、茄苳、黑板樹及龍柏等植物，為公園內增添不少色彩，還設有一座環形露天廣場供民眾舉辦各類活動，讓民眾在欣賞美景之餘，可以運動與休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "立農公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-59",
+      "name": "崇仰公園",
+      "category": "park",
+      "latlng": [
+        25.12609,
+        121.51106
+      ],
+      "start": 1989,
+      "end": null,
+      "desc": "沿著唭哩岸山、奇岩山及磺港溪支流中巡仔溝闢建的崇仰公園，得天獨厚的環境，依山傍水的風景，在這個春寒料峭的時節，仍是綠蔭成林，不同於都市中熱鬧的公園景觀。這裡除了樹葉悉悉嗦嗦的磨擦聲，更有林間鳥兒傳來的問候聲，以及溪邊潺潺的流水聲，寧靜是這裡最貼切的形容詞。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "崇仰公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-676",
+      "name": "致遠公園",
+      "category": "park",
+      "latlng": [
+        25.111271,
+        121.515053
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：2503平方公尺。公園位置：致遠一路2段自強市場旁，座落榮光里區內。公園沿革：於民國79年開闢，91年完成社改。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "致遠公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-723",
+      "name": "稻香公園",
+      "category": "park",
+      "latlng": [
+        25.140949,
+        121.488579
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：839平方公尺。公園位置：新興路72號對面，座落稻香里區內。公園沿革：於民國79年開闢，91年完成社改。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "稻香公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-760",
+      "name": "吉利公園",
+      "category": "park",
+      "latlng": [
+        25.119011,
+        121.508369
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：5270平方公尺。公園位置：吉利街179號旁，座落立農里區內。公園沿革：於民國79年開闢，93年完成社改。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "吉利公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-180",
+      "name": "北投91號綠地",
+      "category": "park",
+      "latlng": [
+        25.11903,
+        121.521637
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "北投91號綠地位於石牌路二段上振興街口與天母西路口間，為榮總急診入口處對面之帶狀綠地，綠地內無休憩設施，僅有綠美化功能。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投91號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-330",
+      "name": "同德公園",
+      "category": "park",
+      "latlng": [
+        25.125071,
+        121.529449
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：6750平方公尺。公園位置：同德街27巷19號對面，座落永欣里區內。公園沿革：於民國81年開闢，90年完成社改。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "同德公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-418",
+      "name": "北投39號綠地",
+      "category": "park",
+      "latlng": [
+        25.121984,
+        121.462777
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "北投39號綠地位於於聖景路140~150號前，由市民謝先生捐贈，雖立地於社區外但為開放空間供民眾入內散步休息，綠地內設有雕像等景觀設施，呈現與其他綠地不同之文藝氣息。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投39號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-674",
+      "name": "健行公園",
+      "category": "park",
+      "latlng": [
+        25.12121,
+        121.508827
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "本公園屬中生代公園。公園面積：2367平方公尺。公園位置：致遠三路147巷二弄內，座落東華里區內。公園沿革：於民國81年開闢，93年完成社改，102年完成局部社改。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "健行公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-68",
+      "name": "北投160號綠地",
+      "category": "park",
+      "latlng": [
+        25.135316,
+        121.496586
+      ],
+      "start": 1992,
+      "end": null,
+      "desc": "本綠地位於大業路上，綠地型態為帶狀花槽，並無設置休憩設施，僅具有綠美化功能。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投160號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-11",
+      "name": "聖景三公園",
+      "category": "park",
+      "latlng": [
+        25.12046,
+        121.46382
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "聖景三公園開闢於民國82年度，緊鄰聖景ㄧ公園，面積約為329平方公尺，座落於聖景路102號內，園區範圍為一狹長型區域，供民眾散步休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "聖景三公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-174",
+      "name": "桃源公園",
+      "category": "park",
+      "latlng": [
+        25.138069,
+        121.482758
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "桃源公園位於北投區中央北路三段148巷，公園開闢於民國81年，面積約有1萬6千平方公尺，公園依山而建，保留原生的樹木植被，開闢出數條階梯步道環繞公園，是為原生植物公園，公園入口平面部分設有涼亭及兒童遊具等方便鄰里使用，體力較好的朋友建議您不妨來這邊一遊，挑戰一下這座原生植物公園，欣賞北投區原生植物之外，兼有健身的效果。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "桃源公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-249",
+      "name": "北投92號綠地",
+      "category": "park",
+      "latlng": [
+        25.119261,
+        121.522278
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "北投92號綠地為石牌路二段與天母西路、天母西路130巷間之三角形綠地，為槽化島型式僅有綠美化功能之綠地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投92號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-343",
+      "name": "北投69號綠地",
+      "category": "park",
+      "latlng": [
+        25.12602,
+        121.512039
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "本綠地位於崇仰一路11號與奇岩路間之山坡地，綠地內並未設有園路，僅於外圍經觀音寺(崇仰一路11號)步道可見左側綠地之平台供停留休息。步道右側為禪寺，左側靠河處方為綠地範圍。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投69號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-514",
+      "name": "開明公園",
+      "category": "park",
+      "latlng": [
+        25.14113,
+        121.505318
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "開明公園開闢於民國82年度，面積約5,574平方公尺，其坐落於珠海路與泉源路交叉口，旁邊緊鄰磺港溪流域，漫步於公園時，聽著潺潺的流水聲，呼吸新鮮的空氣，新賞美人樹開出的鮮艷紅花，都是民眾散步休憩的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "開明公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-523",
+      "name": "丹鳳公園",
+      "category": "park",
+      "latlng": [
+        25.12648,
+        121.510979
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "丹鳳公園開闢於民國82年，面積約8185平方公尺，其坐落於奇岩新社區旁，園內設有涼亭、座椅、兒童遊具、體建設施等設備，為社區增添一股綠意，並提供民眾良好的活動場所，同時中崙仔溝靜流本區，富含豐富之自然生態，時常可見珍奇野生動物，得以體驗人與大自然共處的獨特體驗。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "丹鳳公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-604",
+      "name": "北投3號廣場",
+      "category": "park",
+      "latlng": [
+        25.13196,
+        121.497841
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "北投3號廣場位於北投路二段，包含北投捷運站前半圓型廣場以及北投路樹穴，為舊北投車站舊址，於民國82年由捷運局代辦重建。廣場內多株猢猻木列為受保護老樹，另有一株老欖仁樹位於廣場中央亦是受保護樹木，據附近居民表示該欖仁樹於舊車站時代即存在了，相當有文化歷史義意。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投3號廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-661",
+      "name": "聖景二公園",
+      "category": "park",
+      "latlng": [
+        25.12038,
+        121.46381
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "聖景二公園開闢於民國82年度，面積約為184平方公尺，座落於聖景路101號旁，園區範圍為一狹長型區域設有涼亭，園內種有鳳凰木、羅漢松、楓香等大型樹木，供民眾欣賞散步。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "聖景二公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-769",
+      "name": "聖景一公園",
+      "category": "park",
+      "latlng": [
+        25.12045,
+        121.46351
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "聖景一公園開闢於民國82年度，面積約為247平方公尺，園區範圍為一狹長型區域，園區設置座椅供民眾休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "聖景一公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-904",
+      "name": "磺港公園",
+      "category": "park",
+      "latlng": [
+        25.130512,
+        121.50446
+      ],
+      "start": 1993,
+      "end": null,
+      "desc": "磺港公園位於磺港路旁，開闢於民國82年，面積約8657平方公尺，園內設有兒童組合遊具、涼亭、籃球場等設施，園內樹蔭圍繞環境涼爽舒適，提供民眾良好的休憩運動場地，更是許多銀髮族居民的最愛。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "磺港公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-1018",
+      "name": "北投6號廣場",
+      "category": "park",
+      "latlng": [
+        25.137035,
+        121.503824
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "北投6號廣場，1994 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投6號廣場"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-142",
+      "name": "泉源48號公園",
+      "category": "park",
+      "latlng": [
+        25.141939,
+        121.507156
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "48號泉源公園坐落於磺港溪上游兩岸，北側緊鄰珠海路與義方國小，為本市少數依溪流而建的公園，公園內更有本府產業發展局興建的溫泉泡腳池，免費提供給大眾泡腳使用，泉源48號公園樹木繁茂，行走在公園內的步道之間，享受綠蔭、聆聽潺潺流水聲，坐在園椅上看著孩童在兒童遊戲區內遊玩，更可使用溫泉泡腳池消除疲勞，讓公園提供您身心上全面的服務與享受。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "泉源48號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-157",
+      "name": "七虎公園",
+      "category": "park",
+      "latlng": [
+        25.136165,
+        121.50155
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "為位於育仁路上、薇閣小學及七虎泳池之間的小公園，於83，84年間開闢，面積10,098平方公尺，園內設施包括兒童遊樂設施及簡易涼亭各1座，植栽部份則有蜘蛛百合、洋紫荊等，公園中心樟樹群落綠意盎然，臨溪畔近來種有吉野櫻數株，3月期間櫻粉與林綠相互襯托，令人賞心悅目，為薇閣小學及鄰近住戶共享的1處優良綠蔭遊憩場地。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "七虎公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-480",
+      "name": "關渡公園",
+      "category": "park",
+      "latlng": [
+        25.11973,
+        121.46369
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "臺北市的公園類型豐富，有的適合登高遠眺，如文山區140高地公園；有的富涵自然生態，如富陽生態公園；有的適合鄰近居民休閒，如青年公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "關渡公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-542",
+      "name": "大豐公園",
+      "category": "park",
+      "latlng": [
+        25.131941,
+        121.503731
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "大豐公園位於北投區磺港路與公館路之間，對面為北投區公所，位居北投市中心住宅區內，公園分次開闢於83、88及89年，面積約有1萬2千3百平方公尺，公園內有籃球場、網球場、兒童遊戲區與地下停車場等設施，公園緊鄰住宅區，是當地里民良好的活動與休憩的場所，經常可以看到阿公阿媽帶著孫子在兒童遊憩區遊玩，長輩坐在旁邊的公園園椅上輕鬆歡樂的看著孩孫遊玩，少年三五成群的打著籃球，退休銀髮族招群引伴的打網球聯誼，這是一個相當具由人情味的一個公園，有機會，建議您到此一遊，不讓您失望。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大豐公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-171",
+      "name": "泉源47號公園",
+      "category": "park",
+      "latlng": [
+        25.142099,
+        121.512459
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "47號泉源公園位於北投區珠海路底，公園開闢於民國84年，面積約有1萬1千4百平方公尺，公園內具有涼亭、兒童遊具、體健設施與溪邊步道，公園內有磺港溪上游貫穿，公園內樹木扶疏，氣氛寧靜安逸，甚少人為噪音，三面環山，從公園向外眺望皆有山景，向內觀望有溪水潺潺，很適合緩慢步調的族群，往市區走過去不遠處，鄰近的泉源48號公園有觀光泡腳池可以紓解雙腳的疲勞，這是一座市區不可多得的靜懿公園。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "泉源47號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-382",
+      "name": "明德公園",
+      "category": "park",
+      "latlng": [
+        25.10726,
+        121.520981
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "明德綠地開闢於民國84年，面積約為665平方公尺，其坐落於東華街一段10號旁，緊鄰磺溪及東華橋，園區範圍為一三角型綠地，園內設有簡易遊具及座椅，提供小朋友遊玩及一般民眾朋友休憩，園內樹木高大茂密，提供民眾朋友良好的乘涼場所，是民眾傍晚聊天放鬆的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "明德公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-501",
+      "name": "北投203號綠地",
+      "category": "park",
+      "latlng": [
+        25.12065,
+        121.5031
+      ],
+      "start": 1995,
+      "end": null,
+      "desc": "北投203綠地開闢於民國84年，面積約為808平方公尺，座落於公館路423巷11-17號前，鄰近捷運唭哩岸站，園區範圍為一長型步道，步道兩側植有喬木，在樹蔭的遮蔽下，走在步道上格外涼爽，步道旁及樹下更設有座椅，提供民眾朋友良好的休息散步場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投203號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-251",
+      "name": "八仙公園",
+      "category": "park",
+      "latlng": [
+        25.120286,
+        121.502916
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "八仙公園開闢於民國85年度，面積約為2842平方公尺，座落於公館路423巷旁，園區範圍為一長型區域，園內設有體建設施及座椅，周遭鄰近籃球場，供民眾朋友們運動休憩，同時其為臺北市環保公園之ㄧ，目前園內綠化造景完善，櫻花等各樹種生長良好，每到開花時節美不勝收，適合闔家前來散步參觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "八仙公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-672",
+      "name": "忠義公園",
+      "category": "park",
+      "latlng": [
+        25.135152,
+        121.477771
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "忠義公園開闢於民國85年，面積約2,515平方公尺，其坐落於台北市北投區中央北路四段32號旁，西側為桃源國中，東側為新天地托兒所，園區範圍為一長條型，園內設有簡易遊具及涼亭座椅，適合附近居民朋友於查於飯後相約鄰居一同前來散步聊天。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "忠義公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-370",
+      "name": "天溪綠地",
+      "category": "park",
+      "latlng": [
+        25.13519,
+        121.5301
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "天溪綠地坐落於北投區行義路58巷33號附近，東面臨磺溪，與天母公園僅一橋之隔，具有廣場、游泳池、網球場等設施，開闢於民國86及87年，面積約有5萬平方公尺。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "天溪綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-738",
+      "name": "承仙綠地",
+      "category": "park",
+      "latlng": [
+        25.11968,
+        121.502632
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "屬小而美綠地，內植披草匹和水泥步道並種植數棵水黃皮，共民眾做健身操及簡易運動。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "承仙綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q698428",
+      "name": "捷運復興崗站",
+      "category": "station",
+      "latlng": [
+        25.137514,
+        121.485447
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "捷運淡水線車站，1997 年 3 月 28 日隨淡水線淡水至中山段正式通車而啟用，2018 年啟用半高式月台門。",
+      "sources": [
+        {
+          "title": "Wikidata Q698428",
+          "url": "https://www.wikidata.org/wiki/Q698428"
+        },
+        {
+          "title": "維基百科〈復興崗站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%BE%A9%E8%88%88%E5%B4%97%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運復興崗站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1997年3月28日：隨著淡水線「淡水－中山」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698432",
+      "name": "捷運北投站",
+      "category": "station",
+      "latlng": [
+        25.131903,
+        121.498597
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "捷運淡水線與新北投支線車站，1997 年 3 月 28 日正式通車啟用；原鐵路北投站設於 1901 年，1988 年停運並拆除。",
+      "sources": [
+        {
+          "title": "Wikidata Q698432",
+          "url": "https://www.wikidata.org/wiki/Q698432"
+        },
+        {
+          "title": "維基百科〈北投站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%8C%97%E6%8A%95%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運北投站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1997年3月28日：隨著捷運淡水線「淡水←→中山」與新北投支線「北投←→新北投」正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698438",
+      "name": "捷運明德站",
+      "category": "station",
+      "latlng": [
+        25.109825,
+        121.518724
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "捷運淡水線車站，1997 年 3 月 28 日隨淡水線淡水至中山段正式通車而啟用，2018 年啟用半高式月台門。",
+      "sources": [
+        {
+          "title": "Wikidata Q698438",
+          "url": "https://www.wikidata.org/wiki/Q698438"
+        },
+        {
+          "title": "維基百科〈明德站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%98%8E%E5%BE%B7%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運明德站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1997年3月28日：隨著捷運淡水線「淡水－中山」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698460",
+      "name": "捷運石牌站",
+      "category": "station",
+      "latlng": [
+        25.114519,
+        121.515644
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "捷運淡水線車站，1997 年 3 月 28 日隨淡水線淡水至中山段正式通車而啟用，2015 年啟用半高式月台門。",
+      "sources": [
+        {
+          "title": "Wikidata Q698460",
+          "url": "https://www.wikidata.org/wiki/Q698460"
+        },
+        {
+          "title": "維基百科〈石牌站 (臺北市)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E7%9F%B3%E7%89%8C%E7%AB%99%20(%E8%87%BA%E5%8C%97%E5%B8%82)"
+        }
+      ],
+      "photo": {
+        "query": "捷運石牌站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1997年3月28日：隨著捷運淡水線「淡水－中山」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698594",
+      "name": "捷運關渡站",
+      "category": "station",
+      "latlng": [
+        25.125806,
+        121.467339
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "捷運淡水線車站，1997 年 3 月 28 日啟用；前身為 1903 年啟用的鐵路江頭停車場，1988 年隨台鐵淡水線廢止。",
+      "sources": [
+        {
+          "title": "Wikidata Q698594",
+          "url": "https://www.wikidata.org/wiki/Q698594"
+        },
+        {
+          "title": "維基百科〈關渡站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E9%97%9C%E6%B8%A1%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運關渡站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1997年3月28日：隨著捷運淡水線「淡水－中山」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698655",
+      "name": "捷運忠義站",
+      "category": "station",
+      "latlng": [
+        25.131222,
+        121.473422
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "捷運淡水線車站，1997 年 3 月 28 日隨淡水線淡水至中山段正式通車而啟用，2021 年增設月台連絡天橋電扶梯。",
+      "sources": [
+        {
+          "title": "Wikidata Q698655",
+          "url": "https://www.wikidata.org/wiki/Q698655"
+        },
+        {
+          "title": "維基百科〈忠義站 (臺北市)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%BF%A0%E7%BE%A9%E7%AB%99%20(%E8%87%BA%E5%8C%97%E5%B8%82)"
+        }
+      ],
+      "photo": {
+        "query": "捷運忠義站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1997年3月28日：隨著捷運淡水線「淡水－中山」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698680",
+      "name": "捷運奇岩站",
+      "category": "station",
+      "latlng": [
+        25.125758,
+        121.501156
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "捷運淡水線車站，1997 年 3 月 28 日隨淡水線淡水至中山段正式通車而啟用，2023 年增建出口 2、3 及無障礙坡道。",
+      "sources": [
+        {
+          "title": "Wikidata Q698680",
+          "url": "https://www.wikidata.org/wiki/Q698680"
+        },
+        {
+          "title": "維基百科〈奇岩站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A5%87%E5%B2%A9%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運奇岩站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1997年3月28日：隨著捷運淡水線「淡水－中山」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698794",
+      "name": "捷運唭哩岸站",
+      "category": "station",
+      "latlng": [
+        25.120931,
+        121.506256
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "捷運淡水線車站，1997 年 3 月 28 日隨淡水線淡水至中山段正式通車而啟用，2018 年啟用半高式月台門。",
+      "sources": [
+        {
+          "title": "Wikidata Q698794",
+          "url": "https://www.wikidata.org/wiki/Q698794"
+        },
+        {
+          "title": "維基百科〈唭哩岸站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%94%AD%E5%93%A9%E5%B2%B8%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運唭哩岸站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1997年3月28日：隨著捷運淡水線「淡水－中山」段正式通車而啟用。"
+      }
+    },
+    {
+      "id": "wd-q698837",
+      "name": "捷運新北投站",
+      "category": "station",
+      "latlng": [
+        25.136956,
+        121.502368
+      ],
+      "start": 1997,
+      "end": null,
+      "desc": "1997 年 3 月 28 日隨淡水線與新北投支線通車而啟用；1916 年啟用的鐵路新北投停車場於 1988 年廢止。",
+      "sources": [
+        {
+          "title": "Wikidata Q698837",
+          "url": "https://www.wikidata.org/wiki/Q698837"
+        },
+        {
+          "title": "維基百科〈新北投站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E6%96%B0%E5%8C%97%E6%8A%95%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "捷運新北投站"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "1997年3月28日：隨著捷運淡水線「淡水－中山」與新北投支線「北投－新北投」正式通車而啟用。"
+      }
+    },
+    {
+      "id": "tpark-186",
+      "name": "永欣綠地",
+      "category": "park",
+      "latlng": [
+        25.12384,
+        121.52695
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "永新綠地開闢於民國87年，面積約為4676平方公尺，其坐落於石牌路2段371巷3號附近，緊鄰磺溪，園區範圍為狹長型綠地，園內設有簡易遊具及座椅，提供小朋友遊玩及一般民眾朋友休憩，並提供民眾朋友良好的乘涼場所，是民眾傍晚聊天放鬆的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "永欣綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-29",
+      "name": "林泉公園",
+      "category": "park",
+      "latlng": [
+        25.14133,
+        121.51482
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "林泉公園開闢於民國87年，面積約為2027平方公尺，其坐落於溫泉路168號旁，屬於邊坡型公園，是一小而美公園，園內種有芭樂、香蕉、竹子等，是民眾散步聊天放鬆的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "林泉公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-637",
+      "name": "櫻花崗公園",
+      "category": "park",
+      "latlng": [
+        25.12349,
+        121.52616
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "櫻花崗公園開闢於民國87年，面積約為4734平方公尺，坐落於石牌路2段與天母北路交叉口，緊鄰磺溪，園區範圍為狹長型公園，園內設有簡易遊具及座椅，提供小朋友遊玩及一般民眾朋友休憩，園內種有鳳凰木、小葉欖仁、榕樹、吉野櫻等樹木，提供民眾朋友良好的乘涼及聊天放鬆的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "櫻花崗公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-866",
+      "name": "線形公園-北投16號",
+      "category": "park",
+      "latlng": [
+        25.112373,
+        121.51714
+      ],
+      "start": 1998,
+      "end": null,
+      "desc": "線形公園-北投16號，1998 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "線形公園-北投16號"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-272",
+      "name": "學園公園",
+      "category": "park",
+      "latlng": [
+        25.128269,
+        121.466347
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "學園公園坐落於北投區學園路與國立臺北藝術大學門口之間，公園開闢於民國88年，公園依山勢而建，主要設施為涼亭、觀景平台及遊園踏石步道，公園內多自然環境的保留，與一般都會公園不同的是，設施稀少，公園內由幾條步道貫穿，行走在踏石步道上，有如臨登山步道之感，夏天公園內蟲鳴鳥叫聲不絕，陣風徐徐吹來，正是消暑的好去處。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "學園公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-305",
+      "name": "北投181號一德綠地",
+      "category": "park",
+      "latlng": [
+        25.12394,
+        121.464767
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "北投181號一德綠地位於大度路三段，中央北路四段(萬善宮旁)，本綠地皆為水泥舖面，無綠色植栽。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投181號一德綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-43",
+      "name": "溫泉綠地",
+      "category": "park",
+      "latlng": [
+        25.138933,
+        121.512342
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "57號溫泉綠地開闢於民國88年，面積約為3220平方公尺，坐落於溫泉路137號旁，緊鄰地熱谷，園區範圍為一帶狀型綠地，園內樹木高大茂密，提供民眾朋友良好的場所及遊玩休憩，並享受芬多精。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "溫泉綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-456",
+      "name": "大業綠地(北投163號)",
+      "category": "park",
+      "latlng": [
+        25.13624,
+        121.49054
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "大業綠地(北投163號)位於大業路西側，自大業路與大度路交叉口起之自行車道兩側，延伸至番仔厝綠地旁隱身於小巷中的長條形帶狀綠地(中央北路二段257巷)；景觀自大馬路旁加油站、農禪寺至田埂小綠及步道旁片的稻田及綠竹園，是騎車漫步休憩的好地點。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "大業綠地(北投163號)"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-648",
+      "name": "觀海公園",
+      "category": "park",
+      "latlng": [
+        25.123581,
+        121.463448
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "觀海公園開闢於民國88年度，面積約8,824平方公尺，座落於中央北路4段601巷及知行路旁，公園範圍為一遼闊之L型，園內設施包含網球場、體健器材等設施，適合民眾朋友前來運動遊樂，公園南側緊鄰關渡碼頭，得以遠眺關渡大橋以及淡水河岸，在享受公園悠閒的綠意之餘，也能順便見識到淡水河畔的夕陽之美。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "觀海公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-701",
+      "name": "振興公園",
+      "category": "park",
+      "latlng": [
+        25.117461,
+        121.522978
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "振興公園坐落於北投區天母西路與磺溪交叉口，公園開闢於民國88年，面積約有1萬平方公尺，設有地下停車場、兒童遊戲區及活動廣場，振興醫院長期認養此公園，對振興公園維護管理上貢獻良多，公園內有大片的草皮，廣場設計也相當特殊，緊鄰振興醫院，公園整體感覺上非常開闊通透，卻又不失典雅肅穆之情，與周邊醫療環境相當協調，是鄰里及醫病者的良好休憩場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "振興公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-747",
+      "name": "榮富公園",
+      "category": "park",
+      "latlng": [
+        25.114229,
+        121.524727
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "榮富公園開闢於民國88年，面積約9135平方公尺，座落於榮華三路旁，園內有涼亭、兒童組合遊具等設施，該園緊鄰磺溪健康步道，在您健走或騎完自行車之虞，不妨到榮富公園內稍做休息，感受樹木環繞的自然氣息，充分體驗磺溪之美。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "榮富公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-836",
+      "name": "安明綠地",
+      "category": "park",
+      "latlng": [
+        25.135616,
+        121.502133
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "安明綠地光(北投59號)位於七虎公園旁，內有公園椅及步道供散步休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "安明綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-268",
+      "name": "文化3號公園",
+      "category": "park",
+      "latlng": [
+        25.137699,
+        121.494713
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "文化3號公園位於中央北路2段42巷11弄旁(文化國小附近)，開闢於民國89年度，面積約為563平方公尺，園內設有遊戲區、體健設施，提供民眾朋友良好的休閒場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "文化3號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-602",
+      "name": "中和綠地",
+      "category": "park",
+      "latlng": [
+        25.14188,
+        121.498802
+      ],
+      "start": 2000,
+      "end": null,
+      "desc": "中和綠地(北投112號)位於中和街363號附近，佔地315平方公尺，綠地內設公園椅方便民眾休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "中和綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-638",
+      "name": "永和綠地",
+      "category": "park",
+      "latlng": [
+        25.127911,
+        121.527931
+      ],
+      "start": 2001,
+      "end": null,
+      "desc": "永和綠地(北投173號)位於行義路98號前，座落於山坡道路之夾角中，綠地內設有園道階梯方便民眾散步其中。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "永和綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-113",
+      "name": "新興公園",
+      "category": "park",
+      "latlng": [
+        25.13934,
+        121.48703
+      ],
+      "start": 2002,
+      "end": null,
+      "desc": "新興公園開闢於民國91年度，面積約為2,931平方公尺，座落於新興路145號的小巷道旁，園區範圍方正，園內步道為一環繞園區之設計，園內設有兒童組合遊具、涼亭、座椅、廣場等設施，園內樹蔭茂密，可以遮蔽酷暑，適合附近居民朋友前來休憩走動，或是攜帶小朋友一同前來運動遊玩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "新興公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-410",
+      "name": "北投161號綠地 (田心仔綠地)",
+      "category": "park",
+      "latlng": [
+        25.135139,
+        121.494926
+      ],
+      "start": 2002,
+      "end": null,
+      "desc": "田心仔綠地(北投161號)為一帶狀綠地，連結北投大業路與貴子坑溪的自行車道。綠地內植栽種類多變，當您踏著自行車行經田心仔綠地時，不妨停下來欣賞綠地旁的田園風光。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投161號綠地 (田心仔綠地)"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-625",
+      "name": "番仔厝綠地",
+      "category": "park",
+      "latlng": [
+        25.13413,
+        121.495903
+      ],
+      "start": 2002,
+      "end": null,
+      "desc": "番仔厝綠地(北投162號)位於大業路旁，十信高中對面，鄰近田心仔綠地，綠地內有涼亭、石椅及大片草皮可供休憩。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "番仔厝綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-717",
+      "name": "林投坑(一)綠地",
+      "category": "park",
+      "latlng": [
+        25.136749,
+        121.489372
+      ],
+      "start": 2002,
+      "end": null,
+      "desc": "林投坑(一)綠地(北投189號)隱身在綠竹林裡，彎延的步道邊緣簡單設置幾座公園椅，讓散步民眾有坐下休息的空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "林投坑(一)綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-905",
+      "name": "中央簡易公園",
+      "category": "park",
+      "latlng": [
+        25.128099,
+        121.499924
+      ],
+      "start": 2002,
+      "end": null,
+      "desc": "中央簡易公園開闢於民國85年，面積約為4,463平方公尺，其坐落於大興街與中央南路二段6巷口，園區範圍成一長條帶狀，園內設有籃球場、座椅、體建設施等設備，每當早晨或傍晚時分，都可見到當地老先生老太太及居民小朋友前來活動活動筋骨，為民眾朋友提供一塊良好的休憩交誼場所。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "中央簡易公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wd-q10896465",
+      "name": "凱達格蘭文化館",
+      "category": "museum",
+      "latlng": [
+        25.137222,
+        121.505278
+      ],
+      "start": 2002,
+      "end": null,
+      "desc": "以凱達格蘭族為名，2002 年 11 月開館，是全國第一座以原住民為主體的文化藝術及教育研習中心。",
+      "sources": [
+        {
+          "title": "Wikidata Q10896465",
+          "url": "https://www.wikidata.org/wiki/Q10896465"
+        },
+        {
+          "title": "維基百科〈凱達格蘭文化館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%87%B1%E9%81%94%E6%A0%BC%E8%98%AD%E6%96%87%E5%8C%96%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "凱達格蘭文化館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "該館於2002年11月開館，以凱達格蘭族為名，是全國第一座以原住民為主體的文化藝術及教育研習中心。"
+      }
+    },
+    {
+      "id": "wd-q618353",
+      "name": "臺北市立圖書館北投分館",
+      "category": "library",
+      "latlng": [
+        25.136389,
+        121.506389
+      ],
+      "start": 2006,
+      "end": null,
+      "desc": "舊館於 2002 年拆除重建，現行館舍選用木材抵抗硫磺氣侵蝕，於 2006 年年底啟用。",
+      "sources": [
+        {
+          "title": "Wikidata Q618353",
+          "url": "https://www.wikidata.org/wiki/Q618353"
+        },
+        {
+          "title": "維基百科〈臺北市立圖書館北投分館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%9C%96%E6%9B%B8%E9%A4%A8%E5%8C%97%E6%8A%95%E5%88%86%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立圖書館北投分館"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25",
+        "evidence": "現行館舍於2006年年底啟用，為與周遭自然環境融合以及因應北投硫磺氣之特殊地理環境，選擇木材抵抗硫磺氣的侵蝕。"
+      }
+    },
+    {
+      "id": "tpark-402",
+      "name": "七星公園",
+      "category": "park",
+      "latlng": [
+        25.13662,
+        121.503021
+      ],
+      "start": 2008,
+      "end": null,
+      "desc": "七星公園位於北投區新北投捷運站旁，光明路與中山路交叉口，面積12,056平方公尺，闢建於民國88年，屬一較年輕的公園，公園靠捷運站7岔路口方向主要景致為草坪，置身此處，視野開闊，滿目蒼翠，令人心曠神怡，草皮中央設有1小山丘，為草皮增添視覺景觀上的層次感及變化，100年初在地方人士、民意代表及本處等的努力下，在此新植百餘株之櫻花，為七星公園草坪增色不少，亦使公園景致更趨完善；預計櫻花群放時，將使北投溫泉飯店區蔚為驚豔。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "七星公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-50",
+      "name": "桂花公園",
+      "category": "park",
+      "latlng": [
+        25.137911,
+        121.510223
+      ],
+      "start": 2008,
+      "end": null,
+      "desc": "桂花公園開闢於民國97年度，面積約1396平方公尺，其坐落於中山路與中心街之間坡地，步道兩側樹木林立，除了大桂花樹外，更有大王椰子等樹種增添不同氣息，步道下方緊接著北投公民會館，館內設有導覽室，使民眾朋友在享受公園綠意之餘，更得以了解北投之歷史文化，深度的了解北投之美。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "桂花公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-232",
+      "name": "嗄嘮別公園",
+      "category": "park",
+      "latlng": [
+        25.14035,
+        121.484421
+      ],
+      "start": 2010,
+      "end": null,
+      "desc": "嘎嘮別公園是本市墓地公園化的成果之一，依地形興建的園道讓您可以輕鬆遊園，公園視野廣闊，天候好的時候，可向東南方眺望欣賞關渡平原及市區建築群之美。公園內還保留有1座土地公廟，可供民眾及遊客上香祈福。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q122002535",
+          "url": "https://www.wikidata.org/wiki/Q122002535"
+        }
+      ],
+      "photo": {
+        "query": "嗄嘮別公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-279",
+      "name": "稻中公園",
+      "category": "park",
+      "latlng": [
+        25.13863,
+        121.489281
+      ],
+      "start": 2012,
+      "end": null,
+      "desc": "稻中公園開闢於101年度，面積約1,592平方公尺，座落於中央北路二段334號北投福利站旁，園內設有健康步道、座椅等設施，提供居民朋友良好的運動場所，公園範圍為一長型步道，步道更鋪有五顏六色的琉璃珠，在陽光照射下十分美麗，步道兩側植有櫻花，每當開花時期，走在櫻花大道上別有一番風味。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "稻中公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-84",
+      "name": "重三公園",
+      "category": "park",
+      "latlng": [
+        25.14016,
+        121.489288
+      ],
+      "start": 2012,
+      "end": null,
+      "desc": "重三公園開闢於101年度，面積約為平方公尺，其坐落於新興路與重三路交叉口，園內設有座椅、廣場，是民眾朋友茶餘飯後閒談的好去處，其中園內步道規劃完善，綠化造景優美，更設有部分裝置藝術品，為整體社區提供一股藝術氣息。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "重三公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-214",
+      "name": "奇岩二號公園",
+      "category": "park",
+      "latlng": [
+        25.126499,
+        121.503693
+      ],
+      "start": 2013,
+      "end": null,
+      "desc": "奇岩2號公園位於北投區磺港路及三合街口奇岩重畫區內，公園面積為12,442平方公尺並於102年開闢。公園規劃時保留大量當地原生樹木(如榕樹、樟樹、血桐及構樹)，南側有中崙仔溝溪橫穿，溪邊及池內小島種植多樣水生植物豐富水池景觀，溪內亦有白鴨、魚及龜鱉等生活其中。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "奇岩二號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-261",
+      "name": "奇岩三號公園",
+      "category": "park",
+      "latlng": [
+        25.12598,
+        121.505219
+      ],
+      "start": 2013,
+      "end": null,
+      "desc": "奇岩3號公園位於北投區磺港路及三合街口奇岩重畫區內，開闢於102年度，公園面積為6154平方公尺，園內有中崙仔溝溪流經，溪內有魚及龜鱉等生活其中，涼亭旁種有梅花，每當開花時期，坐於庭內賞梅，格外雅致，周遭緊鄰奇岩1、2號公園及公館公園，形成臺北市公園密度最高之區域，歡迎各位朋友前來遊憩參觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "奇岩三號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-267",
+      "name": "公館公園",
+      "category": "park",
+      "latlng": [
+        25.127991,
+        121.506432
+      ],
+      "start": 2013,
+      "end": null,
+      "desc": "公館公園開闢於民國102年，面積約8960平方公尺，位於清江圖書館後方，園內為一環池步道之設計，景色優美，雖然公館公園不像大型公園各種設施齊備，但是園內池景搭配翠綠的草皮樹木，在悠閒的午後坐在涼亭一隅細細品味一本好書，也能夠使我們身心得到最佳的調劑。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "公館公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-360",
+      "name": "奇岩1號公園",
+      "category": "park",
+      "latlng": [
+        25.128339,
+        121.503698
+      ],
+      "start": 2013,
+      "end": null,
+      "desc": "奇岩1號公園位於北投區磺港路旁奇岩重劃區內，公園面積為18,729平方公尺並於102年開闢，奇岩1號公園規劃時保留大量當地原生樹木(如榕樹、樟樹及構樹)，並引中崙仔溝溪水設置生態池，池邊種植水生植物豐富水池景觀，目前亦有白鴨、魚及龜鱉等生活於池內，形成一個完整的生態。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "奇岩1號公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-368",
+      "name": "天狗庵遺址",
+      "category": "park",
+      "latlng": [
+        25.135929,
+        121.506668
+      ],
+      "start": 2013,
+      "end": null,
+      "desc": "台灣第一間民營溫泉旅館「天狗庵」藏身於台北市，見證北投溫泉發展史，北市府決定原址（現溫泉路73巷）打造「天狗庵史蹟公園」，營造最天然的日式庭園景觀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "天狗庵遺址"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-160",
+      "name": "磅空頂綠地",
+      "category": "park",
+      "latlng": [
+        25.12298,
+        121.465073
+      ],
+      "start": 2014,
+      "end": null,
+      "desc": "磅空頂綠地(北投242號)位於大度路三段301巷28弄底，馬偕護校東側。本綠地處台北市環境自然實屬難得，綠地內植物種類繁多，並呈現複層植栽狀態，為了維持自然山林感，兼顧生態與水土保持功能，基地內原有植栽都盡可能的保留下來，因此能保有自然複層植栽的多樣性。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        },
+        {
+          "title": "Wikidata Q122000349",
+          "url": "https://www.wikidata.org/wiki/Q122000349"
+        }
+      ],
+      "photo": {
+        "query": "磅空頂綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-675",
+      "name": "奇岩4號綠地",
+      "category": "park",
+      "latlng": [
+        25.12604,
+        121.505547
+      ],
+      "start": 2014,
+      "end": null,
+      "desc": "奇岩4號綠地(北投250號)位於清江國小外圍，佔地寬廣，並設有園路、涼亭及公園椅供民眾休憩。綠地外圍設有人行步道及腳踏車道。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "奇岩4號綠地"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-797",
+      "name": "軟橋公園",
+      "category": "park",
+      "latlng": [
+        25.103102,
+        121.517613
+      ],
+      "start": 2014,
+      "end": null,
+      "desc": "地處新興住宅社區內之兼具社區休閒、生態友善之堤岸花鳥公園面積約4,510平方公尺，除了強調公園旁的信仰中心福裕宮，並於福裕宮前設互動之團康活動廣場，亦可作為鄰里核心及防災避難所，園內同時加入生態、都市減洪價值，公園整體有9成以上是透水鋪面，公園內所有截流設施皆為生態草溝與生態沉沙池，儲水、保水的同時也增加生物棲息空間。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "軟橋公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-834",
+      "name": "北投257號綠地(承德3號)",
+      "category": "park",
+      "latlng": [
+        25.10442,
+        121.512199
+      ],
+      "start": 2014,
+      "end": null,
+      "desc": "北投257號承德3號綠地為北投士林科技園區(綠3，區段徵收)周邊綠地，目前週圍科技園區和道路尚在闢建中未對外開放。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投257號綠地(承德3號)"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-835",
+      "name": "北投258號綠地(承德4號)",
+      "category": "park",
+      "latlng": [
+        25.1019,
+        121.51245
+      ],
+      "start": 2014,
+      "end": null,
+      "desc": "北投258號承德4號綠地為北投士林科技園區(綠4，區段徵收)周邊綠地，目前週圍科技園區和道路尚在闢建中未對外開放。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "北投258號綠地(承德4號)"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-572",
+      "name": "洲美蜆仔港公園",
+      "category": "park",
+      "latlng": [
+        25.100997,
+        121.511186
+      ],
+      "start": 2016,
+      "end": null,
+      "desc": "位處承德路與福國路延伸段10米綠帶交叉處，亦即十字軸綠廊交會之重要位置，面積約30,818平方公尺歷經兩年規劃設計與一年3個月施工開闢一座兼顧滯洪、休憩與生態的濕地公園—洲美蜆仔港公園，總工程經費約5千9百萬元，於105年2月15日完工並於六月開放民眾使用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "洲美蜆仔港公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-867",
+      "name": "福星公園",
+      "category": "park",
+      "latlng": [
+        25.108828,
+        121.512326
+      ],
+      "start": 2021,
+      "end": null,
+      "desc": "福星公園全新的福星公園遊戲場，擁有火山滑梯、沈船沙坑、叢林攀爬、溜索、彈跳床、恐龍化石等主題式遊戲場任你玩，而最吸睛的恐龍化石造型遊具，能讓小朋友自由穿梭還能攀爬上去，滿足小朋友當英雄征服恐龍的滿足感。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "福星公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-871",
+      "name": "洲美公園",
+      "category": "park",
+      "latlng": [
+        25.100089,
+        121.506347
+      ],
+      "start": 2021,
+      "end": null,
+      "desc": "位於三王宮及洲美屈原宮旁的新闢公園，設有兒童遊戲場、體健設施區、多功能球場、動物友善空間、歷史廣場及龍舟展示棚等，其中兒童遊戲場提供能攀爬及旋轉等機能設施。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "洲美公園"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-975",
+      "name": "線形公園-北投34號（一德里）",
+      "category": "park",
+      "latlng": [
+        25.129796,
+        121.471619
+      ],
+      "start": 2022,
+      "end": null,
+      "desc": "線形公園-北投34號（一德里），2022 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "線形公園-北投34號（一德里）"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-976",
+      "name": "線形公園-北投34號（中央北路3段）",
+      "category": "park",
+      "latlng": [
+        25.13687,
+        121.48244
+      ],
+      "start": 2023,
+      "end": null,
+      "desc": "線形公園-北投34號（中央北路3段），2023 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "線形公園-北投34號（中央北路3段）"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-1044",
+      "name": "線形公園-北投19號",
+      "category": "park",
+      "latlng": [
+        25.116853,
+        121.514016
+      ],
+      "start": 2024,
+      "end": null,
+      "desc": "北投19號線形公園遊具設施包含有「循環式滑軌」、「幼兒爬管」、「旋轉台」、「造型搖搖樂」等，可訓練前庭覺、肌肉控制能力及平衡等，遊玩的同時循序漸進地強化孩童們身體協調能力。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "線形公園-北投19號"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-1045",
+      "name": "線形公園-北投22號",
+      "category": "park",
+      "latlng": [
+        25.120195,
+        121.510094
+      ],
+      "start": 2024,
+      "end": null,
+      "desc": "結合了滑梯及攀爬，透過攀爬訓練孩子手足部的肌肉發展；鑽爬遊戲培養孩子空間概念與肢體協調，搭配大肢體與前庭刺激的滑梯，獨特的設計結構提升了樂趣，讓孩子們忘了時間，孩子們樂不思蜀。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "線形公園-北投22號"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "tpark-1012",
+      "name": "線形公園-北投29號（大同里）",
+      "category": "park",
+      "latlng": [
+        25.133587,
+        121.497223
+      ],
+      "start": 2026,
+      "end": null,
+      "desc": "線形公園-北投29號（大同里），2026 年於現址啟用。",
+      "sources": [
+        {
+          "title": "臺北市公園基本資料（政府資料開放平臺）",
+          "url": "https://data.gov.tw/dataset/128366"
+        }
+      ],
+      "photo": {
+        "query": "線形公園-北投29號（大同里）"
+      },
+      "verified": {
+        "method": "auto",
+        "basis": "authority",
+        "date": "2026-10-25"
+      }
+    }
+  ]
+}
