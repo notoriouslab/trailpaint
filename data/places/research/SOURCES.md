@@ -1,0 +1,29 @@
+# 台灣歷史資料與照片：去哪找、能不能用
+
+給資料池（`data/places/tw/`）與故事（`stories/`）找史料、照片時先讀。每個故事的查證底稿放在本目錄（例如 `daan-park-phases.md`、`daan-park-photos.md`）。最後更新：2026-10-25。
+
+## 授權判定規則
+
+- 只認來源頁面明寫的授權：CC0、Public domain 標示、CC BY、CC BY-SA、政府資料開放授權條款（OGDL）。
+- CC BY-NC 系列：TrailPaint 是非營利個人專案，可否使用逐案由維護者決定，資料裡要保留 NC 字樣。
+- 「可能已過著作財產權期間」但頁面沒標的，不自行認定為公眾領域，另列待判斷。
+- 同一筆在不同平台授權標示不一致時，以典藏單位原頁為準，並在資料裡註明。
+- 只放連結、不轉載內文的參考（例如 taiwan.md 文章），放資料池的 `related` 欄位；年份與事實的證據放 `sources`。
+
+## 照片與圖像來源
+
+| 來源 | 網址 | 實況（2026-10-25） |
+|---|---|---|
+| Wikimedia Commons | commons.wikimedia.org | 今日樣貌多、授權清楚；歷史照片極少。日治地圖（堡圖、1932 都市計畫圖等）多標 Public domain。用 API 查 `extmetadata.LicenseShortName`。 |
+| 國家文化記憶庫 | tcmb.culture.tw（舊站 memory.culture.tw 已失效） | 聚合國史館、國家電影中心、中研院等；逐筆授權差異大，常見「僅限公開瀏覽」（不可用）。有搜尋 API（searchapi.culture.tw）。 |
+| 開放博物館 | openmuseum.tw | 逐筆標授權，國家電影中心新聞片多為 OGDL（影片，要自行截幀）。 |
+| 國史館 | ahonline.drnh.gov.tw | 臺灣新生報底片、總統照片輯等；縮圖有浮水印，原圖需登入。授權常標 OGDL 或 CC BY-NC。 |
+| Flickr | flickr.com | 篩選 CC 授權或 No known copyright restrictions 的機構帳號。 |
+
+不可用或查不到：中央社、聯合報老照片（版權）；國家圖書館臺灣記憶（All rights reserved）；臺北市立文獻館（須書面申請、授權圖檔不得公開展示）；國家檔案資訊網 aa.archives.gov.tw、典藏臺灣 digitalarchives.tw（2026-10-25 連線失敗）。
+
+## 文字史料來源
+
+- 維基百科：起點，但要對原始出處（例：國際學舍位置維基寫錯）。
+- 政府與機構文件、新聞報導、論文：逐句比對原文，不同來源年份不一致時在說明裡並陳。
+- 個人部落格轉貼：只在原站失效時使用，標題註明「（轉貼）」。
