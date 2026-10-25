@@ -124,6 +124,37 @@ a:hover { text-decoration: underline; }
   font-weight: bold;
 }
 
+/* ── Site nav (hub only; keep in sync with /styles.css .site-nav) ── */
+
+.site-nav {
+  background: rgba(253,248,239,0.92);
+  border-bottom: 1px solid #e9dcc6;
+  padding: 0.8rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.site-nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.site-nav a { text-decoration: none; }
+.site-nav .brand { font-weight: 700; font-size: 1.1rem; color: #3b1a06; white-space: nowrap; }
+.site-nav-links { display: flex; gap: 1.4rem; font-size: 0.95rem; }
+.site-nav-links a { color: #6b5440; white-space: nowrap; }
+.site-nav-links a:hover, .site-nav-links a.active { color: #3b1a06; }
+.site-nav-links a.active { border-bottom: 2px solid #92400e; }
+.site-nav .make { background: #3b1a06; color: #fdf8ef; padding: 0.45rem 1rem; border-radius: 999px; font-size: 0.9rem; white-space: nowrap; }
+.site-nav .make:hover { background: #5a2d0c; }
+@media (max-width: 720px) {
+  .site-nav { padding: 0.7rem 16px 0.5rem; }
+  .site-nav-inner { flex-wrap: wrap; row-gap: 0.4rem; }
+  .site-nav-links { order: 3; width: 100%; gap: 1.1rem; font-size: 0.9rem; overflow-x: auto; }
+}
+
+.stories-header--hub { padding: 28px 24px 4px; border-bottom: none; }
+.stories-header--hub .stories-header__title { font-size: 28px; font-weight: 400; color: #3b1a06; }
+.stories-header--hub .stories-header__subtitle { font-size: 15px; color: #6b5440; margin-top: 4px; }
+
 /* ── Level 0: Catalog Cards ── */
 
 .catalog-grid {
