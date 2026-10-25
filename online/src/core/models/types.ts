@@ -24,6 +24,13 @@ export interface PhotoMeta {
  */
 export type EraMode = 'fade' | 'cumulative';
 
+/**
+ * Player layout (021). 'site' = one place across eras: the map stays on the
+ * place, the side panel lists the phases that exist in the current year, and
+ * play advances the year. Absent = route player.
+ */
+export type Layout = 'site';
+
 export interface SpotEra {
   start: number;
   end: number;
@@ -67,6 +74,7 @@ export interface Project {
   routes: Route[];
   overlay?: OverlaySetting;
   eraMode?: EraMode;         // 019: absent = 'fade'
+  layout?: Layout;           // 021: absent = route player
 }
 
 /**

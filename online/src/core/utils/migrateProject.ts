@@ -276,6 +276,8 @@ export function migrateProject(data: Record<string, unknown>): Project {
   }
   // Validate optional eraMode (019) — whitelist; anything else drops the field (= 'fade')
   const eraMode = data.eraMode === 'fade' || data.eraMode === 'cumulative' ? data.eraMode : undefined;
+  // Validate optional layout (021) — whitelist, same as eraMode
+  const layout = data.layout === 'site' ? 'site' : undefined;
   // Explicit optional-field handling: ...p spread would carry raw input values through
   // even when validation rejects them. Delete = input overridden by sanitized result.
   const result: Project = { ...p, version: 5, routes };
@@ -283,5 +285,6 @@ export function migrateProject(data: Record<string, unknown>): Project {
   if (basemapId) result.basemapId = basemapId; else delete result.basemapId;
   if (music) result.music = music; else delete result.music;
   if (eraMode) result.eraMode = eraMode; else delete result.eraMode;
+  if (layout) result.layout = layout; else delete result.layout;
   return result;
 }

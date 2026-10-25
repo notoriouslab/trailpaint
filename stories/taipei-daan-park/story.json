@@ -1,0 +1,35 @@
+{
+  "id": "taipei-daan-park",
+  "title": "大安森林公園",
+  "subtitle": "1904—今 一個街廓的百年",
+  "description": "定點時間軸：地圖停在大安森林公園這個街廓，拉動時間軸或按播放，旁邊列出那一年這裡有什麼。從 1904 年堡圖上的柴竹圍與稻田、1932 年劃定的七號公園預定地、戰後的建華新村與岳廬新村、國際學舍，到 1992 年拆遷與 1994 年開放的森林公園。只收有原文出處的階段，每則附來源；位置為街廓內示意。底圖依年份切換為同時代的中研院歷史地圖。",
+  "locale": "zh-TW",
+  "cover": "cover.jpg",
+  "music": {
+    "src": "../music/voller-hoffnung.mp3",
+    "title": "Voller Hoffnung — Ronny Matthes",
+    "credit": "Ronny Matthes (Jamendo / Internet Archive)",
+    "license": "CC"
+  },
+  "og": {
+    "title": "大安森林公園 — TrailPaint Stories",
+    "description": "定點時間軸：同一個街廓，8 個有出處的歷史階段。從柴竹圍稻田、七號公園預定地、眷村與國際學舍，到 1994 年開放的大安森林公園。",
+    "image": "og.jpg"
+  },
+  "stories": [
+    {
+      "id": "daan-park",
+      "title": "大安森林公園",
+      "subtitle": "1904—今 一個街廓的百年",
+      "description": "定點時間軸：地圖停在大安森林公園這個街廓，拉動時間軸或按播放，旁邊列出那一年這裡有什麼。從 1904 年堡圖上的柴竹圍與稻田、1932 年劃定的七號公園預定地、戰後的建華新村與岳廬新村、國際學舍，到 1992 年拆遷與 1994 年開放的森林公園。只收有原文出處的階段，每則附來源；位置為街廓內示意。底圖依年份切換為同時代的中研院歷史地圖。",
+      "data": "daan-park.trailpaint.json",
+      "thumbnail": "daan-park-thumb.jpg",
+      "color": "#065f46",
+      "music": "../music/voller-hoffnung.mp3"
+    }
+  ],
+  "footer": {
+    "cta": "在 TrailPaint 中建立你自己的故事地圖",
+    "url": "https://trailpaint.org/app/"
+  }
+}

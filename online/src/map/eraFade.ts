@@ -11,7 +11,7 @@
  *   - 200 years: matches typical dynasty / mission-era horizons
  */
 
-import type { EraMode, SpotEra } from '../core/models/types';
+import type { EraMode, Project, SpotEra } from '../core/models/types';
 
 /** Minimum opacity for an out-of-era spot. Never fully invisible — keeps the route shape readable. */
 const MIN_OPACITY = 0.15;
@@ -53,6 +53,15 @@ export function eraVisible(
   if (mode !== 'cumulative' || !era) return true;
   if (!Number.isFinite(currentYear)) return true;
   return currentYear >= era.start && currentYear <= era.end;
+}
+
+/**
+ * Visibility mode the Player actually uses (021). The site layout only makes
+ * sense when phases that don't exist yet (or anymore) are hidden, so it always
+ * runs cumulative regardless of eraMode.
+ */
+export function effectiveEraMode(project: Pick<Project, 'layout' | 'eraMode'>): EraMode {
+  return project.layout === 'site' ? 'cumulative' : (project.eraMode ?? 'fade');
 }
 
 /**

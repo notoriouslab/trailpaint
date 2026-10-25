@@ -186,6 +186,38 @@ html, body {
   line-height: 1.4;
 }
 
+/* 021 site layout: "此地此時" — the phases existing in the current year, full text */
+
+.spot-panel--site {
+  width: 340px;
+}
+
+.spot-panel__year {
+  font-size: 28px;
+  font-weight: bold;
+  color: #7c3a0e;
+  font-family: Georgia, serif;
+  line-height: 1.1;
+}
+
+.spot-panel--site .spot-panel__name {
+  white-space: normal;
+}
+
+.spot-panel__desc--full {
+  font-size: 13px;
+  color: #5c4a1e;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.spot-panel__empty {
+  margin: 0;
+  padding: 16px;
+  font-size: 13px;
+  color: #8b6914;
+}
+
 /* ── Playback bar ── */
 
 .playback {
@@ -469,6 +501,31 @@ html, body {
 @media (max-width: 768px) {
   .spot-panel {
     display: none;
+  }
+
+  /* 021 site layout: the panel moves under the map instead of disappearing */
+  .player-app--site .player-main {
+    flex-direction: column;
+  }
+
+  .player-app--site .spot-panel {
+    display: flex;
+    order: 2;
+    width: auto;
+    height: 40vh;
+    border-right: none;
+    border-top: 1px solid #e5dcc8;
+  }
+
+  .player-app--site .spot-panel__header {
+    padding: 8px 16px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .player-app--site .spot-panel__year {
+    font-size: 22px;
   }
 
   .playback__dots {

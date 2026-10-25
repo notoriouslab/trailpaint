@@ -17,12 +17,17 @@ import { renderPostcard } from '../core/utils/postcardRenderer';
 import type { StampLocale } from '../core/utils/postcardStamp';
 import { getOverlayZoomCap, OVERLAYS } from '../map/overlays';
 import { usePlayerStore } from './usePlayerStore';
+import type { Spot } from '../core/models/types';
 
 interface PostcardButtonProps {
   /** Current calendar year on the TimeSlider (drives stamp era text). */
   currentYear: number;
   /** Active overlay id, used to cap the postcard zoom against the overlay's native pyramid. */
   overlayId: string | null;
+  /** Spot used when none is active (021 site: earliest phase existing this year). Default spots[0]. */
+  fallbackSpot?: Spot;
+  /** 021 site: the place itself is the subject — capture the current view instead of zooming out to the spot. */
+  keepView?: boolean;
 }
 
 /**
@@ -95,7 +100,7 @@ function resolveLocale(): StampLocale {
   return 'zh-TW';
 }
 
-export default function PostcardButton({ currentYear, overlayId }: PostcardButtonProps) {
+export default function PostcardButton({ currentYear, overlayId, fallbackSpot, keepView }: PostcardButtonProps) {
   const map = useMap();
   const project = usePlayerStore((s) => s.project);
   const activeIndex = usePlayerStore((s) => s.activeSpotIndex);
@@ -123,7 +128,7 @@ export default function PostcardButton({ currentYear, overlayId }: PostcardButto
       const spot =
         activeIndex !== null && activeIndex >= 0 && activeIndex < project.spots.length
           ? project.spots[activeIndex]
-          : project.spots[0];
+          : fallbackSpot ?? project.spots[0];
 
       // Zoom out + recenter on the spot so the postcard reads as a geographic
       // tableau, not a 13-zoom close-up that upscales tiles into mush.
@@ -150,7 +155,7 @@ export default function PostcardButton({ currentYear, overlayId }: PostcardButto
 
       // Close popups + recenter (without animation so capture is instant).
       map.closePopup();
-      if (spot && (target !== oldZoom || spot.latlng[0] !== oldCenter.lat || spot.latlng[1] !== oldCenter.lng)) {
+      if (spot && !keepView && (target !== oldZoom || spot.latlng[0] !== oldCenter.lat || spot.latlng[1] !== oldCenter.lng)) {
         map.setView(spot.latlng, target, { animate: false });
         zoomChanged = true;
       }

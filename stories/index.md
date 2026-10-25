@@ -13,7 +13,7 @@ TrailPaint Stories is a curated collection of interactive story maps. Each story
 
 ## 收錄故事 / Featured Collections
 
-截至 2026-10-25 共 26 個故事，分 5 個 collection。Tier 1+2+3 (2026-05-04) 新增 bible 6 / missions 4 / china 1 / exploration 3 故事完成「貫穿全本聖經 1500 年」+「西方宣教士東進 350 年」+「大航海時代 500 年」三條敘事軸。
+截至 2026-10-25 共 27 個故事，分 5 個 collection。Tier 1+2+3 (2026-05-04) 新增 bible 6 / missions 4 / china 1 / exploration 3 故事完成「貫穿全本聖經 1500 年」+「西方宣教士東進 350 年」+「大航海時代 500 年」三條敘事軸。
 
 ### 聖經地圖 / Bible (9 stories, BC 1446 — AD 95，按時序)
 
@@ -56,9 +56,10 @@ URLs: `/stories/{three-kingdoms|zhang-qian|xuanzang|wen-tianxiang|xu-xiake|yu-yo
 
 URLs: `/stories/{marco-polo|zheng-he|columbus|magellan|cook}/`
 
-### 台灣百年歷史 / Taiwan: A Century (1 story)
+### 台灣百年歷史 / Taiwan: A Century (2 stories)
 
 - **大安區百年 Da'an District, a Century** (1904–today, 24 spots) — 臺北大安區公共建設依「在現址啟用」年份累積出現：臺北刑務所、帝大與高校、國中國小、建國高架、大安森林公園、捷運與運動中心。時間軸為累積模式（未建成、已拆除不顯示），底圖隨年份切換中研院 1904 / 1945 / 1955 / 1966 / 1989 / 1993 歷史地圖。每點附來源。https://trailpaint.org/stories/taipei-daan/
+- **大安森林公園 Da'an Forest Park, One Block a Century** (1904–today, 8 phases) — 定點時間軸：地圖停在同一個街廓，拉時間軸或播放，側欄列出那一年這裡存在的階段：柴竹圍稻田、七號公園預定地、建華新村與岳廬新村、國際學舍、拆遷施工、大安森林公園。只收有原文出處的階段，位置為街廓內示意。https://trailpaint.org/stories/taipei-daan-park/
 
 ## 預設合輯 / Default Compilations (v1.4)
 

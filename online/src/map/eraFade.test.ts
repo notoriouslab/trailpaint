@@ -5,7 +5,7 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import { eraOpacity, eraVisible, sanitizeEra } from './eraFade';
+import { effectiveEraMode, eraOpacity, eraVisible, sanitizeEra } from './eraFade';
 
 describe('eraOpacity', () => {
   it('era undefined → opacity 1 (era-agnostic spots always visible)', () => {
@@ -142,5 +142,17 @@ describe('eraVisible (019 cumulative mode)', () => {
   it('cumulative: boundary years are inclusive', () => {
     expect(eraVisible(prison, 1904, 'cumulative')).toBe(true);
     expect(eraVisible(prison, 1963, 'cumulative')).toBe(true);
+  });
+});
+
+describe('effectiveEraMode (021)', () => {
+  it('site layout forces cumulative', () => {
+    expect(effectiveEraMode({ layout: 'site' })).toBe('cumulative');
+    expect(effectiveEraMode({ layout: 'site', eraMode: 'fade' })).toBe('cumulative');
+  });
+
+  it('otherwise follows eraMode, default fade', () => {
+    expect(effectiveEraMode({ eraMode: 'cumulative' })).toBe('cumulative');
+    expect(effectiveEraMode({})).toBe('fade');
   });
 });

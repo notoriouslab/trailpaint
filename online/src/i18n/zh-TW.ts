@@ -308,6 +308,7 @@ export default {
   'player.error.read': '讀取檔案失敗',
   'player.photo.prefix': '照片',
   'player.spots': '景點',
+  'player.site.empty': '這一年此地尚無記載',
   'player.playback.interval': '間隔',
   'player.playback.loop': '循環',
   'player.playback.settings': '播放設定',

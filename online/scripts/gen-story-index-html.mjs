@@ -3,7 +3,9 @@
  * Generate index.html for story groups by reading each story.json and filling
  * a template that mirrors passion-week / taiwan-missionaries layout.
  *
- *   Run: node online/scripts/gen-story-index-html.mjs
+ *   Run: node online/scripts/gen-story-index-html.mjs [group…]
+ *   With group ids, only those pages are regenerated — a full run rewrites
+ *   every page's datePublished to today.
  */
 import { readFile, writeFile, copyFile, access } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
@@ -13,7 +15,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..', '..');
 const STORIES = join(ROOT, 'stories');
-const GROUPS = ['paul', 'xuanzang', 'zheng-he', 'jesus-galilee', 'zhang-qian', 'wen-tianxiang', 'marco-polo', 'xu-xiake', 'revelation-churches', 'exodus-conquest', 'david-king', 'babylon-exile-return', 'jesus-birth', 'early-church', 'matteo-ricci', 'hudson-taylor', 'luther', 'william-carey', 'three-kingdoms', 'columbus', 'magellan', 'cook', 'yu-yonghe', 'taipei-daan'];
+const GROUPS = ['paul', 'xuanzang', 'zheng-he', 'jesus-galilee', 'zhang-qian', 'wen-tianxiang', 'marco-polo', 'xu-xiake', 'revelation-churches', 'exodus-conquest', 'david-king', 'babylon-exile-return', 'jesus-birth', 'early-church', 'matteo-ricci', 'hudson-taylor', 'luther', 'william-carey', 'three-kingdoms', 'columbus', 'magellan', 'cook', 'yu-yonghe', 'taipei-daan', 'taipei-daan-park'];
 const TODAY = new Date().toISOString().slice(0, 10);
 
 function esc(s) {
@@ -145,7 +147,14 @@ ${seoSubs}
 `;
 }
 
-for (const gid of GROUPS) {
+const only = process.argv.slice(2);
+const unknown = only.filter((g) => !GROUPS.includes(g));
+if (unknown.length) {
+  console.error(`unknown group: ${unknown.join(', ')}\nvalid: ${GROUPS.join(', ')}`);
+  process.exit(1);
+}
+
+for (const gid of only.length ? only : GROUPS) {
   const dir = join(STORIES, gid);
   const story = JSON.parse(await readFile(join(dir, 'story.json'), 'utf8'));
   const html = buildHtml(gid, story);

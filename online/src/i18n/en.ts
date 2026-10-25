@@ -308,6 +308,7 @@ export default {
   'player.error.read': 'Failed to read file',
   'player.photo.prefix': 'Photo',
   'player.spots': 'Spots',
+  'player.site.empty': 'Nothing recorded here for this year',
   'player.playback.interval': 'Interval',
   'player.playback.loop': 'Loop',
   'player.playback.settings': 'Playback settings',

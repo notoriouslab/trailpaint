@@ -75,6 +75,10 @@ export function compactProject(project: Project, includePhoto = false): Record<s
   if (project.eraMode === 'cumulative') {
     out.em = 'c';
   }
+  // 021: only the site layout travels; absent = route player
+  if (project.layout === 'site') {
+    out.ly = 's';
+  }
   return out;
 }
 
@@ -159,6 +163,9 @@ export function expandProject(c: Record<string, unknown>): Project {
   }
   if (c.em === 'c') {
     project.eraMode = 'cumulative';
+  }
+  if (c.ly === 's') {
+    project.layout = 'site';
   }
   return project;
 }

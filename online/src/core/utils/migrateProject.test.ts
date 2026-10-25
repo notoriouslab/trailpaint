@@ -613,3 +613,19 @@ describe('migrateProject — eraMode (019)', () => {
     expect(migrateProject({ ...validBase })).not.toHaveProperty('eraMode');
   });
 });
+
+describe('migrateProject — layout (021)', () => {
+  it('keeps site', () => {
+    expect(migrateProject({ ...validBase, layout: 'site' }).layout).toBe('site');
+  });
+
+  it('drops unknown / non-string values', () => {
+    for (const bad of ['bogus', 1, {}, null]) {
+      expect(migrateProject({ ...validBase, layout: bad })).not.toHaveProperty('layout');
+    }
+  });
+
+  it('absent stays absent', () => {
+    expect(migrateProject({ ...validBase })).not.toHaveProperty('layout');
+  });
+});

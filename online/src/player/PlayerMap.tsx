@@ -10,8 +10,9 @@ import TimeSlider from '../map/TimeSlider';
 import MapToast from '../map/MapToast';
 import PostcardButton from './PostcardButton';
 import { getOverlayZoomCap, getRelevantOverlayIds } from '../map/overlays';
-import { HISTORY_SCALE, MODERN_TICK, overlayForYear } from '../map/eraScales';
-import { eraOpacity, eraVisible } from '../map/eraFade';
+import { overlayForYear } from '../map/eraScales';
+import { effectiveEraMode, eraOpacity, eraVisible } from '../map/eraFade';
+import { siteVisibleSpots } from './siteStops';
 import { PhotoAttribution } from '../core/components/PhotoAttribution';
 import type { Spot } from '../core/models/types';
 import 'leaflet/dist/leaflet.css';
@@ -129,10 +130,10 @@ function ActiveMarker({
   );
 }
 
-/** Popup body — isolated so the broken-image fallback has local state */
+/** Popup body — isolated so the broken-image fallback has local state.
+ *  Keyed by photo at the call site, so a new photo starts with a fresh flag. */
 function SpotPopupContent({ spot }: { spot: Spot }) {
   const [imgFailed, setImgFailed] = useState(false);
-  useEffect(() => { setImgFailed(false); }, [spot.photo]);
 
   return (
     <div className="player-popup__body">
@@ -193,16 +194,10 @@ export default function PlayerMap() {
     project.overlay ?? null,
   );
 
-  // currentYear drives spot era fade. Initialised from the project's overlay (if any),
-  // falling back to modern. TimeSlider mutates this on drag.
-  const [currentYear, setCurrentYear] = useState<number>(() => {
-    const ovId = project.overlay?.id;
-    if (ovId) {
-      const tick = HISTORY_SCALE.find((t) => t.overlayId === ovId);
-      if (tick) return tick.year;
-    }
-    return MODERN_TICK.year;
-  });
+  // currentYear drives spot era fade. Lives in the store (021) so the spot panel
+  // and playback can read it; initialised by loadProject (initialYear).
+  const currentYear = usePlayerStore((s) => s.currentYear);
+  const setCurrentYear = usePlayerStore((s) => s.setCurrentYear);
 
   const hiddenSpotIds = useMemo(() => {
     const ids = new Set<string>();
@@ -213,8 +208,10 @@ export default function PlayerMap() {
   }, [project]);
 
   // 019 cumulative mode: content-first time axis (decade ticks, exact-year jumps).
-  const eraMode = project.eraMode ?? 'fade';
+  const eraMode = effectiveEraMode(project);
   const cumulative = eraMode === 'cumulative';
+  // 021 site layout: the map stays on the place, the panel carries the text.
+  const site = project.layout === 'site';
   const visibleLatLngs = useMemo(
     () => project.spots.filter((s) => !hiddenSpotIds.has(s.id)).map((s) => s.latlng),
     [project, hiddenSpotIds],
@@ -238,6 +235,18 @@ export default function PlayerMap() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeIndex, cumulative]);
 
+  // 021 site: the year is the only control (slider or playback) — the map
+  // follows it, and a selection that no longer exists is dropped.
+  useEffect(() => {
+    if (!site) return;
+    const ovId = overlayForYear(currentYear, getRelevantOverlayIds(visibleLatLngs));
+    setOverlay((prev) => (ovId ? { id: ovId, opacity: prev?.opacity ?? 0.5 } : null));
+    const active = activeIndex !== null ? project.spots[activeIndex] : undefined;
+    if (active && !eraVisible(active.era, currentYear, eraMode)) setActiveSpot(null);
+    // activeIndex intentionally omitted — selecting a visible phase must not re-run this
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [site, currentYear, visibleLatLngs]);
+
   return (
     <MapContainer
       center={project.center}
@@ -250,7 +259,7 @@ export default function PlayerMap() {
     >
       <ZoomControl position="bottomright" />
       <FitBounds overlayId={overlay?.id ?? null} />
-      <FlyToActive overlayId={overlay?.id ?? null} />
+      {!site && <FlyToActive overlayId={overlay?.id ?? null} />}
       <PlayerBasemapSwitcher
         overlayId={overlay?.id ?? null}
         opacity={overlay?.opacity ?? 0.5}
@@ -266,6 +275,12 @@ export default function PlayerMap() {
         earliestEraStart={earliestEraStart}
         currentYear={currentYear}
         onChange={(tick) => {
+          if (site) {
+            // overlay follows currentYear via the site effect above
+            setPlaying(false);
+            setCurrentYear(tick.year);
+            return;
+          }
           setCurrentYear(tick.year);
           if (!tick.overlayId) setOverlay(null);
           else setOverlay({ id: tick.overlayId, opacity: overlay?.opacity ?? 0.5 });
@@ -305,19 +320,26 @@ export default function PlayerMap() {
             opacity={eraOpacity(spot.era, currentYear)}
             onClick={() => { setPlaying(false); setActiveSpot(i); }}
           >
-            <Popup
-              maxWidth={480}
-              className="player-popup"
-              autoPanPaddingTopLeft={[10, 64]}
-              autoPanPaddingBottomRight={[10, 90]}
-            >
-              <SpotPopupContent spot={spot} />
-            </Popup>
+            {!site && (
+              <Popup
+                maxWidth={480}
+                className="player-popup"
+                autoPanPaddingTopLeft={[10, 64]}
+                autoPanPaddingBottomRight={[10, 90]}
+              >
+                <SpotPopupContent key={spot.photo ?? ''} spot={spot} />
+              </Popup>
+            )}
           </ActiveMarker>
         );
       })}
       <MapToast />
-      <PostcardButton currentYear={currentYear} overlayId={overlay?.id ?? null} />
+      <PostcardButton
+        currentYear={currentYear}
+        overlayId={overlay?.id ?? null}
+        fallbackSpot={site ? siteVisibleSpots(project.spots, currentYear)[0]?.spot : undefined}
+        keepView={site}
+      />
     </MapContainer>
   );
 }

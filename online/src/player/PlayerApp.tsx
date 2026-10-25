@@ -318,7 +318,7 @@ export default function PlayerApp() {
 
   // Map view (project loaded)
   return (
-    <div className="player-app">
+    <div className={`player-app${project.layout === 'site' ? ' player-app--site' : ''}`}>
       <div className="player-main">
         <SpotListPanel />
         <div className="player-map-area">

@@ -180,3 +180,21 @@ describe('compactProject / expandProject — eraMode (019)', () => {
     expect(expandProject(compact)).not.toHaveProperty('eraMode');
   });
 });
+
+describe('compactProject / expandProject — layout (021)', () => {
+  it('round-trips site via ly key', () => {
+    const original: Project = { ...mkProject([{ ...baseSpot }]), layout: 'site' };
+    const compact = compactProject(original);
+    expect(compact.ly).toBe('s');
+    expect(expandProject(compact).layout).toBe('site');
+  });
+
+  it('route player writes no ly key', () => {
+    expect(compactProject(mkProject([{ ...baseSpot }]))).not.toHaveProperty('ly');
+  });
+
+  it('ignores unknown ly values', () => {
+    const compact = { ...compactProject(mkProject([{ ...baseSpot }])), ly: 'x' };
+    expect(expandProject(compact)).not.toHaveProperty('layout');
+  });
+});

@@ -13,6 +13,7 @@ import { simplifiedLeftovers } from './lib/hanzi.mjs';
 const MIN_YEAR = 1600;
 const METHODS = new Set(['manual', 'auto']);
 const BASES = new Set(['authority', 'cross-source']);
+const KINDS = new Set(['place', 'event']); // 021: absent = 'place'
 
 export function checkPool(path, nowYear = new Date().getFullYear()) {
   const errors = [];
@@ -40,6 +41,17 @@ export function checkPool(path, nowYear = new Date().getFullYear()) {
     if (!Array.isArray(it.sources) || it.sources.length === 0) errors.push(`${at}: no sources`);
     for (const s of it.sources ?? []) {
       if (typeof s.url !== 'string' || !s.url.startsWith('https://')) errors.push(`${at}: non-https source ${s.url}`);
+    }
+    if (it.kind !== undefined && !KINDS.has(it.kind)) errors.push(`${at}: kind ${it.kind}`);
+    if (it.latlngPrecision !== undefined && it.latlngPrecision !== 'approx') {
+      errors.push(`${at}: latlngPrecision ${it.latlngPrecision}`);
+    }
+    if (it.related !== undefined) {
+      if (!Array.isArray(it.related)) errors.push(`${at}: related must be an array`);
+      else for (const r of it.related) {
+        if (typeof r?.title !== 'string' || !r.title.trim()) errors.push(`${at}: related item without title`);
+        if (typeof r?.url !== 'string' || !r.url.startsWith('https://')) errors.push(`${at}: non-https related ${r?.url}`);
+      }
     }
     if (typeof it.desc !== 'string' || !it.desc.trim()) errors.push(`${at}: empty desc`);
     else if (it.desc !== it.desc.normalize('NFC')) errors.push(`${at}: desc has CJK compatibility characters (not NFC)`);

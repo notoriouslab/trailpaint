@@ -2,6 +2,7 @@ import { useEffect, useRef, useCallback, useState, useMemo } from 'react';
 import { usePlayerStore } from './usePlayerStore';
 import { t } from '../i18n';
 import { buildProjectEmbedHtml, isAllowedMediaUrl } from '../core/utils/embedCode';
+import { nextStop, siteStops } from './siteStops';
 
 const FLY_DURATION = 800; // ms
 
@@ -39,6 +40,8 @@ export default function PlaybackControl() {
   const setActiveSpot = usePlayerStore((s) => s.setActiveSpot);
   const setDwellTime = usePlayerStore((s) => s.setDwellTime);
   const setLoopCount = usePlayerStore((s) => s.setLoopCount);
+  const currentYear = usePlayerStore((s) => s.currentYear);
+  const setCurrentYear = usePlayerStore((s) => s.setCurrentYear);
 
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const currentLoopRef = useRef(0);
@@ -106,6 +109,16 @@ export default function PlaybackControl() {
   const spots = project.spots;
   const total = spots.length;
 
+  // 021 site layout: play advances the year through the years where a phase
+  // appears or disappears, instead of stepping through spots.
+  const site = project.layout === 'site';
+  const stops = useMemo(() => siteStops(project.spots, new Date().getFullYear()), [project]);
+  const stopIdx = useMemo(() => {
+    let idx = -1;
+    stops.forEach((y, i) => { if (y <= currentYear) idx = i; });
+    return idx;
+  }, [stops, currentYear]);
+
   const clearTimer = useCallback(() => {
     if (timerRef.current) {
       clearTimeout(timerRef.current);
@@ -115,7 +128,7 @@ export default function PlaybackControl() {
 
   // Playback loop
   useEffect(() => {
-    if (!playing || total === 0) return;
+    if (site || !playing || total === 0) return;
 
     const currentIndex = activeIndex ?? -1;
     const nextIndex = currentIndex + 1;
@@ -144,14 +157,51 @@ export default function PlaybackControl() {
     }, delay);
 
     return () => clearTimer();
-  }, [playing, activeIndex, total, dwellTime, loopCount, setPlaying, setActiveSpot, clearTimer]);
+  }, [site, playing, activeIndex, total, dwellTime, loopCount, setPlaying, setActiveSpot, clearTimer]);
+
+  // Site playback loop (021): every stop — the first one included — stays on
+  // screen for dwellTime, then the year moves on. Re-arms on each year change.
+  useEffect(() => {
+    if (!site || !playing) return;
+    timerRef.current = setTimeout(() => {
+      const next = nextStop(stops, currentYear);
+      if (next !== null) {
+        setCurrentYear(next);
+        return;
+      }
+      currentLoopRef.current += 1;
+      if (loopCount !== 0 && currentLoopRef.current >= loopCount) {
+        setPlaying(false); // stays on the last stop
+      } else {
+        setCurrentYear(stops[0]); // stops.length >= 2, so this is a real change
+      }
+    }, dwellTime);
+    return () => clearTimer();
+  }, [site, playing, currentYear, stops, dwellTime, loopCount, setPlaying, setCurrentYear, clearTimer]);
 
   // Stop timer when paused
   useEffect(() => {
     if (!playing) clearTimer();
   }, [playing, clearTimer]);
 
+  const handleSitePlayPause = () => {
+    if (playing) {
+      setPlaying(false);
+      return;
+    }
+    if (stops.length < 2) return;
+    if (stopIdx === stops.length - 1) {
+      currentLoopRef.current = 0;
+      setCurrentYear(stops[0]);
+    }
+    setPlaying(true);
+  };
+
   const handlePlayPause = () => {
+    if (site) {
+      handleSitePlayPause();
+      return;
+    }
     if (playing) {
       setPlaying(false);
     } else {
@@ -163,6 +213,12 @@ export default function PlaybackControl() {
       }
       setPlaying(true);
     }
+  };
+
+  const handleStopClick = (year: number) => {
+    setPlaying(false);
+    currentLoopRef.current = 0;
+    setCurrentYear(year);
   };
 
   const handleDotClick = (index: number) => {
@@ -286,7 +342,14 @@ export default function PlaybackControl() {
           {playing ? '⏸' : '▶'}
         </button>
         <div className="playback__dots">
-          {spots.map((_, i) => (
+          {site ? stops.map((y, i) => (
+            <button
+              key={y}
+              className={`playback__dot${stopIdx === i ? ' playback__dot--active' : ''} ${i < stopIdx ? 'playback__dot--visited' : ''}`}
+              onClick={() => handleStopClick(y)}
+              title={String(y)}
+            />
+          )) : spots.map((_, i) => (
             <button
               key={i}
               className={`playback__dot${activeIndex === i ? ' playback__dot--active' : ''} ${i < (activeIndex ?? -1) ? 'playback__dot--visited' : ''}`}
@@ -296,7 +359,9 @@ export default function PlaybackControl() {
           ))}
         </div>
         <span className="playback__counter">
-          {activeIndex !== null && activeIndex >= 0 ? activeIndex + 1 : 0}/{total}
+          {site
+            ? `${stopIdx + 1}/${stops.length}`
+            : `${activeIndex !== null && activeIndex >= 0 ? activeIndex + 1 : 0}/${total}`}
         </span>
         <button
           className={`playback__btn${musicPlaying ? ' playback__btn--active' : ''}`}

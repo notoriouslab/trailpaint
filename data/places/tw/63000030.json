@@ -226,6 +226,37 @@
   },
   "items": [
     {
+      "id": "chaizhuwei",
+      "name": "柴竹圍聚落與稻田",
+      "category": "settlement",
+      "latlng": [
+        25.033,
+        121.5367
+      ],
+      "latlngPrecision": "approx",
+      "start": 1904,
+      "end": 1949,
+      "desc": "今大安森林公園一帶在日治初期以稻田為主，東北角（今信義路與建國南路口附近）有聚落「柴竹圍」，1904 年的臺灣堡圖上可見，清領時期已有林、蘇、周姓人家居住；清末土地多為板橋林本源家族所有。1949 年起眷村陸續建在田間，當時附近仍是一片稻田。",
+      "sources": [
+        {
+          "title": "環境資訊中心〈「樹」說往事憶當年〉2016",
+          "url": "https://www.e-info.org.tw/node/201135"
+        },
+        {
+          "title": "大安區公所新聞稿 2014（轉貼）",
+          "url": "https://5dollarscan.blogspot.com/2014/04/blog-post_13.html"
+        },
+        {
+          "title": "MOT TIMES〈看見消逝的眷村〉2020",
+          "url": "https://www.mottimes.com/article/detail/4721"
+        }
+      ],
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
       "id": "taihoku-prison",
       "name": "臺北刑務所",
       "category": "justice",
@@ -407,6 +438,33 @@
       }
     },
     {
+      "id": "park-no7-plan",
+      "name": "七號公園預定地",
+      "category": "plan",
+      "latlng": [
+        25.03,
+        121.535
+      ],
+      "latlngPrecision": "approx",
+      "start": 1932,
+      "end": 1991,
+      "desc": "1932 年（昭和 7 年）「大台北市區計畫」把這裡劃為七號公園用地，因戰爭拖延未能闢建。1956 年臺北市政府的都市計畫再次公告為七號公園預定地，計畫一直保留到 1992 年動工。",
+      "sources": [
+        {
+          "title": "李學〈都市之肺，城市新樂園〉（大安森林公園之友基金會）",
+          "url": "https://www.daanforestpark.org.tw/uploads/soft/260812/2-260Q2224353.pdf"
+        },
+        {
+          "title": "環境資訊中心〈「樹」說往事憶當年〉2016",
+          "url": "https://www.e-info.org.tw/node/201135"
+        }
+      ],
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
       "id": "third-middle-school",
       "name": "臺北第三中學校（今師大附中）",
       "category": "education",
@@ -449,6 +507,107 @@
         }
       ],
       "photo": null,
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "jianhua-village",
+      "name": "空軍眷村「建華新村」",
+      "category": "military-housing",
+      "latlng": [
+        25.0282,
+        121.536
+      ],
+      "latlngPrecision": "approx",
+      "start": 1949,
+      "end": 1991,
+      "desc": "空軍眷村，1949 年成立，以臺北通訊大隊的空軍眷戶為主，與通訊大隊大樓、汽車修理廠共同構成，位於今公園南側。建華、岳廬兩座眷村原本共約 439 戶，闢建公園前清查時，當地住戶已超過 2,600 戶、一萬兩千多人（其他來源記約 2,000 戶）。1992 年 4 月起拆遷。",
+      "sources": [
+        {
+          "title": "MOT TIMES〈看見消逝的眷村〉2020",
+          "url": "https://www.mottimes.com/article/detail/4721"
+        },
+        {
+          "title": "李學〈都市之肺，城市新樂園〉（大安森林公園之友基金會）",
+          "url": "https://www.daanforestpark.org.tw/uploads/soft/260812/2-260Q2224353.pdf"
+        }
+      ],
+      "related": [
+        {
+          "title": "taiwan.md〈台灣眷村歷史〉",
+          "url": "https://taiwan.md/history/%E5%8F%B0%E7%81%A3%E7%9C%B7%E6%9D%91%E6%AD%B7%E5%8F%B2"
+        }
+      ],
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "yuelu-village",
+      "name": "陸軍眷村「岳廬新村」",
+      "category": "military-housing",
+      "latlng": [
+        25.0268,
+        121.5338
+      ],
+      "latlngPrecision": "approx",
+      "start": 1952,
+      "end": 1991,
+      "desc": "陸軍眷村，1952 年 5 月 1 日建立，位於和平東路二段 35 巷，列管 36 戶。1992 年起隨公園闢建拆遷。",
+      "sources": [
+        {
+          "title": "MOT TIMES〈看見消逝的眷村〉2020",
+          "url": "https://www.mottimes.com/article/detail/4721"
+        },
+        {
+          "title": "維基百科〈大安森林公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%AE%89%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "related": [
+        {
+          "title": "taiwan.md〈台灣眷村歷史〉",
+          "url": "https://taiwan.md/history/%E5%8F%B0%E7%81%A3%E7%9C%B7%E6%9D%91%E6%AD%B7%E5%8F%B2"
+        }
+      ],
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "intl-house",
+      "name": "國際學舍",
+      "category": "culture",
+      "latlng": [
+        25.0331,
+        121.5332
+      ],
+      "latlngPrecision": "approx",
+      "start": 1957,
+      "end": 1991,
+      "desc": "位於信義路與新生南路口（信義路三段 38 號）。1955 年 11 月 3 日破土，1957 年落成，附設體育館。每年春、秋兩季在此舉辦全國圖書展。1992 年 4 月 1 日公園拆遷時第一個拆除，遷往今新北市新店區。",
+      "sources": [
+        {
+          "title": "中央社〈開箱老照片〉2024",
+          "url": "https://www.cna.com.tw/news/ahel/202411015006.aspx"
+        },
+        {
+          "title": "國立臺灣文學館",
+          "url": "https://tlvm.nmtl.gov.tw/zh/Theme/ExhibitionArticleCont?Exbid=272"
+        },
+        {
+          "title": "大安區公所新聞稿 2014（轉貼）",
+          "url": "https://5dollarscan.blogspot.com/2014/04/blog-post_13.html"
+        },
+        {
+          "title": "華視新聞 1992-04-02（Internet Archive）",
+          "url": "https://web.archive.org/web/20200805110254/https://news.cts.com.tw/cts/general/199204/199204021731886.html"
+        }
+      ],
       "verified": {
         "method": "manual",
         "date": "2026-10-25"
@@ -1385,6 +1544,34 @@
       }
     },
     {
+      "id": "daan-park-debate",
+      "name": "體育館或森林公園之爭",
+      "kind": "event",
+      "category": "event",
+      "latlng": [
+        25.0306,
+        121.5344
+      ],
+      "latlngPrecision": "approx",
+      "start": 1984,
+      "end": 1991,
+      "desc": "七號公園要蓋體育館還是森林公園，從 1984 年起爭論多年。定案年份有兩說：聯合報記 1989 年在行政院、市政府與市議會的共識下確認為自然森林公園；李學一文記 1991 年臺北市政府決定以森林公園型態闢建。",
+      "sources": [
+        {
+          "title": "李學〈都市之肺，城市新樂園〉（大安森林公園之友基金會）",
+          "url": "https://www.daanforestpark.org.tw/uploads/soft/260812/2-260Q2224353.pdf"
+        },
+        {
+          "title": "聯合報〈報時光〉2021",
+          "url": "https://time.udn.com/udntime/story/122835/5958297"
+        }
+      ],
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
       "id": "tpark-252",
       "name": "民輝公園",
       "category": "park",
@@ -1926,6 +2113,37 @@
       "verified": {
         "method": "auto",
         "basis": "authority",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "daan-park-construction",
+      "name": "拆遷與施工",
+      "kind": "event",
+      "category": "event",
+      "latlng": [
+        25.03,
+        121.5357
+      ],
+      "start": 1992,
+      "end": 1993,
+      "desc": "1992 年 4 月 1 日開始拆除地上建築物，首先拆除國際學舍，公園同時動工。預定地內除了眷村，還有憲兵營區、軍中廣播電台等單位。拆遷戶數各來源記載不一，約 2,000 至 2,600 多戶。1994 年 3 月 29 日完工開放。",
+      "sources": [
+        {
+          "title": "李學〈都市之肺，城市新樂園〉（大安森林公園之友基金會）",
+          "url": "https://www.daanforestpark.org.tw/uploads/soft/260812/2-260Q2224353.pdf"
+        },
+        {
+          "title": "華視新聞 1992-04-02（Internet Archive）",
+          "url": "https://web.archive.org/web/20200805110254/https://news.cts.com.tw/cts/general/199204/199204021731886.html"
+        },
+        {
+          "title": "自由時報 2024-03-01",
+          "url": "https://news.ltn.com.tw/news/life/paper/1633535"
+        }
+      ],
+      "verified": {
+        "method": "manual",
         "date": "2026-10-25"
       }
     },

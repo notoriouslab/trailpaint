@@ -308,6 +308,7 @@ export default {
   'player.error.read': 'ファイルの読み取りに失敗しました',
   'player.photo.prefix': '写真',
   'player.spots': 'スポット',
+  'player.site.empty': 'この年の記録はありません',
   'player.playback.interval': '間隔',
   'player.playback.loop': 'ループ',
   'player.playback.settings': '再生設定',
