@@ -3,7 +3,6 @@ Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 User-agent: *
 Allow: /
-Disallow: /app/assets/
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 Sitemap: https://trailpaint.org/sitemap.xml
