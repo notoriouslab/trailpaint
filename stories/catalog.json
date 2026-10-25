@@ -19,6 +19,11 @@
       "id": "exploration",
       "title": "大航海時代",
       "order": 4
+    },
+    {
+      "id": "taiwan",
+      "title": "台灣百年歷史",
+      "order": 5
     }
   ],
   "stories": [
@@ -270,6 +275,16 @@
       "description": "James Cook 三度環行太平洋：1768-71 觀金星凌日 + 紐澳測繪、1772-75 首船過南極圈、1776-79 西北通道尋找。現代精確航海開創者（用 chronometer 測經度），死於夏威夷 Kealakekua 灣。7 spots 含 Sahlins vs Obeyesekere「Cook 是神？」學術論戰。",
       "thumbnail": "cook/cover.jpg",
       "path": "cook/",
+      "count": 1
+    },
+    {
+      "id": "taipei-daan",
+      "collection": "taiwan",
+      "title": "大安區百年",
+      "subtitle": "1904—今 臺北大安區公共建設時空地圖",
+      "description": "拉動時間軸，看臺北大安區一百多年來的公共建設如何一個個出現：日治時期的監獄與學校、戰後的國中國小與高架道路、九〇年代以後的森林公園、捷運與運動中心。24 spots，底圖依年份切換為同時代的中研院歷史地圖（1904 臺灣堡圖、1945 美軍市街圖、1955 地形圖、1966 衛星影像、1993 經建版地形圖），年份為「在現址啟用」之年，每點附來源。",
+      "thumbnail": "taipei-daan/cover.jpg",
+      "path": "taipei-daan/",
       "count": 1
     }
   ],
