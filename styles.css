@@ -30,10 +30,11 @@ a { color: var(--accent-ink); text-decoration: none; border-bottom: 1px solid va
 a:hover { border-bottom-color: var(--accent); }
 
 /* ── Navigation ── */
+/* 兩組連結：小標在上、連結在下（策展 / TrailPaint）；手機隱藏小標 */
 .site-nav {
   background: rgba(253,248,239,0.92);
   border-bottom: 1px solid var(--line);
-  padding: 0.8rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -46,37 +47,40 @@ a:hover { border-bottom-color: var(--accent); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
 }
-.site-nav .brand {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--ink);
-  border-bottom: none;
-  white-space: nowrap;
-}
-.site-nav-links {
-  display: flex;
-  gap: 1.4rem;
-  font-size: 0.95rem;
-}
-.site-nav-links a { border-bottom: none; color: var(--ink-soft); white-space: nowrap; }
+.site-nav .brand { font-weight: 700; font-size: 1.2rem; line-height: 1.25; color: var(--ink); border-bottom: none; white-space: nowrap; }
+.site-nav .brand small { display: block; padding-left: 1.75rem; font-weight: 400; font-size: 0.75rem; letter-spacing: 0.06em; color: var(--muted); }
+.site-nav-links { display: flex; align-items: stretch; gap: 2.2rem; font-size: 1.02rem; }
+.nav-group { display: flex; flex-wrap: wrap; align-content: center; column-gap: 1.5rem; }
+.nav-group + .nav-group { border-left: 1px solid var(--line); padding-left: 2.2rem; }
+.nav-label { flex-basis: 100%; font-size: 0.68rem; line-height: 1; letter-spacing: 0.14em; color: var(--muted); margin-bottom: 0.3rem; white-space: nowrap; }
+.site-nav-links a { border-bottom: none; color: var(--ink-soft); white-space: nowrap; line-height: 1.5; }
 .site-nav-links a:hover, .site-nav-links a.active { color: var(--ink); }
-.site-nav-links a.active { border-bottom: 2px solid var(--accent); }
+.site-nav-links a.active { box-shadow: inset 0 -2px 0 var(--accent); }
 .site-nav .make {
   background: var(--btn);
   color: var(--btn-ink);
   border-bottom: none;
-  padding: 0.45rem 1rem;
+  padding: 0.55rem 1.2rem;
   border-radius: 999px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   white-space: nowrap;
 }
 .site-nav .make:hover { background: var(--btn-hover); }
+@media (max-width: 900px) {
+  .site-nav-links { gap: 1.4rem; font-size: 0.98rem; }
+  .nav-group { column-gap: 1.1rem; }
+  .nav-group + .nav-group { padding-left: 1.4rem; }
+}
 @media (max-width: 720px) {
-  .site-nav { padding: 0.7rem 16px 0.5rem; }
-  .site-nav-inner { flex-wrap: wrap; row-gap: 0.4rem; }
-  .site-nav-links { order: 3; width: 100%; gap: 1.1rem; font-size: 0.9rem; overflow-x: auto; }
+  .site-nav { padding: 0.7rem 16px 0.55rem; }
+  .site-nav-inner { flex-wrap: wrap; row-gap: 0.5rem; }
+  .site-nav .brand small, .nav-label { display: none; }
+  .site-nav .make { padding: 0.45rem 1rem; font-size: 0.9rem; }
+  .site-nav-links { order: 3; width: 100%; gap: 1rem; font-size: 0.95rem; overflow-x: auto; }
+  .nav-group { column-gap: 1rem; }
+  .nav-group + .nav-group { padding-left: 1rem; }
 }
 
 /* ── Buttons ── */
