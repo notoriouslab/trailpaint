@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Builder for stories/taipei-daan-park/ (021 大安森林公園 — first site-layout story).
+ * Builder for taiwan/taipei-daan-park/ (021 大安森林公園 — first site-layout story).
  * One place across eras: each spot = a phase of the Da'an Forest Park block,
  * era = [start, end ?? 3000]; layout 'site' makes the Player keep the map on the
  * block and list the phases existing in the current year. Content comes from the
@@ -18,7 +18,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..', '..', '..');
-const STORY_DIR = join(ROOT, 'stories', 'taipei-daan-park');
+const STORY_DIR = join(ROOT, 'taiwan', 'taipei-daan-park');
 const TMP = join(tmpdir(), 'tp-taipei-daan-park');
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const UA = 'TrailPaint-example-builder/1.0 (https://trailpaint.org; https://github.com/notoriouslab/trailpaint) build';
@@ -37,7 +37,7 @@ const SEGMENT = {
   center: [25.0300, 121.5352],
   zoom: 16,
   overlay: { id: 'tw_1904', opacity: 0.6 },
-  music: '../music/voller-hoffnung.mp3',
+  music: '/stories/music/voller-hoffnung.mp3',
 };
 
 const POOL = JSON.parse(readFileSync(join(ROOT, 'data', 'places', 'tw', '63000030.json'), 'utf8'));
@@ -206,7 +206,7 @@ for (const s of SPOTS) {
 
 await mkdir(TMP, { recursive: true });
 await mkdir(STORY_DIR, { recursive: true });
-console.log(`Building stories/taipei-daan-park/ — ${SPOTS.length} phases`);
+console.log(`Building taiwan/taipei-daan-park/ — ${SPOTS.length} phases`);
 
 const photos = [];
 for (let i = 0; i < SPOTS.length; i++) {

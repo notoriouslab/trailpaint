@@ -1,0 +1,22 @@
+# TrailPaint 台灣百年 / Taiwan Century
+
+URL: https://trailpaint.org/taiwan/
+Parent: https://trailpaint.org/
+Languages: zh-TW
+Version: 1.8.0
+
+## 這是什麼 / What is This
+
+同一個地方，一百年來換過幾種樣子。台灣百年是 TrailPaint 的策展專區：疊上 1904 年臺灣堡圖到今天的中研院歷史地圖，拉動時間軸看一個街廓、一個區的變化。只收有原文出處的資料，每一筆附來源；年份以「在現址啟用」為準，定點故事的位置為街廓內示意。
+
+Taiwan Century is a curated section of TrailPaint: one place across a hundred years, on Academia Sinica historical maps from the 1904 colonial survey to today. Every entry cites its source.
+
+## 故事 / Stories (2)
+
+- **大安區百年 Da'an District, a Century** (1904–today, 24 spots) — 臺北大安區公共建設依「在現址啟用」年份累積出現：臺北刑務所、帝大與高校、國中國小、建國高架、大安森林公園、捷運與運動中心。時間軸為累積模式（未建成、已拆除不顯示），底圖隨年份切換中研院 1904 / 1945 / 1955 / 1966 / 1989 / 1993 歷史地圖。每點附來源。https://trailpaint.org/taiwan/taipei-daan/
+- **大安森林公園 Da'an Forest Park, One Block a Century** (1904–today, 8 phases) — 定點時間軸：地圖停在同一個街廓，拉時間軸或播放，側欄列出那一年這裡存在的階段：柴竹圍稻田、七號公園預定地、建華新村與岳廬新村、國際學舍、拆遷施工、大安森林公園。只收有原文出處的階段，位置為街廓內示意。https://trailpaint.org/taiwan/taipei-daan-park/
+
+## 資料來源 / Sources
+
+- 歷史底圖：中央研究院人社中心 GIS 專題中心（1904 臺灣堡圖、1945 美軍市街圖、1955 地形圖、1966 衛星影像、1989 與 1993 經建版地形圖）。
+- 照片：Wikimedia Commons，授權見各故事頁 CREDITS.md。

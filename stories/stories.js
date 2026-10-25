@@ -142,8 +142,8 @@ async function renderStoryPage(opts) {
       // Story-level music overrides collection-level default
       var musicSrc = s.music || defaultMusic;
       if (!musicSrc) return '';
-      // Absolute URLs pass through, relative URLs resolve from storyBase
-      var url = musicSrc.startsWith('http') ? musicSrc : storyBase + musicSrc;
+      // Absolute URLs and site-root paths pass through, relative URLs resolve from storyBase
+      var url = (musicSrc.startsWith('http') || musicSrc.startsWith('/')) ? musicSrc : storyBase + musicSrc;
       return '&music=' + encodeURIComponent(url);
     }
 

@@ -1,6 +1,6 @@
 # 大安森林公園基地歷史分期（查證日 2026-10-25）
 
-> 用途：`stories/taipei-daan-park/` 定點時間軸的史料查證底稿。
+> 用途：`taiwan/taipei-daan-park/` 定點時間軸的史料查證底稿。
 > 收錄結果：CONFIRMED 的 8 期已寫入資料池 `data/places/tw/63000030.json`（id：chaizhuwei、park-no7-plan、jianhua-village、yuelu-village、intl-house、daan-park-debate、daan-park-construction，以及既有的 daan-forest-park）。PARTIAL / UNVERIFIED 的分期未收，留在本檔待補證據。
 > 收錄後的修正：柴竹圍 end 改為 1949（與建華新村並存一年，MOT 原文「當時附近仍是一片稻田」）；柴竹圍說明不寫死堡圖年份（環境資訊中心原文標 1898）。
 

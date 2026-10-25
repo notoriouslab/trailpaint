@@ -285,8 +285,8 @@
       "title": "大安區百年",
       "subtitle": "1904—今 臺北大安區公共建設時空地圖",
       "description": "拉動時間軸，看臺北大安區一百多年來的公共建設如何一個個出現：日治時期的監獄與學校、戰後的國中國小與高架道路、九〇年代以後的森林公園、捷運與運動中心。24 spots，底圖依年份切換為同時代的中研院歷史地圖（1904 臺灣堡圖、1945 美軍市街圖、1955 地形圖、1966 衛星影像、1989 與 1993 經建版地形圖），年份為「在現址啟用」之年，每點附來源。",
-      "thumbnail": "taipei-daan/card.jpg",
-      "path": "taipei-daan/",
+      "thumbnail": "/taiwan/taipei-daan/card.jpg",
+      "path": "/taiwan/taipei-daan/",
       "count": 1
     },
     {
@@ -295,8 +295,8 @@
       "title": "大安森林公園",
       "subtitle": "1904—今 一個街廓的百年",
       "description": "定點時間軸：地圖停在大安森林公園這個街廓，拉時間軸或播放，旁邊列出那一年這裡有什麼。從柴竹圍稻田、七號公園預定地、建華與岳廬眷村、國際學舍，到 1992 年拆遷與 1994 年開放的森林公園。8 個階段只收有原文出處者，每則附來源，位置為街廓內示意。",
-      "thumbnail": "taipei-daan-park/card.jpg",
-      "path": "taipei-daan-park/",
+      "thumbnail": "/taiwan/taipei-daan-park/card.jpg",
+      "path": "/taiwan/taipei-daan-park/",
       "count": 1
     }
   ],

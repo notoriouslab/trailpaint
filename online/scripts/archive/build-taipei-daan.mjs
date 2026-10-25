@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Builder for stories/taipei-daan/ (019 大安區百年 — first district time-map story).
+ * Builder for taiwan/taipei-daan/ (019 大安區百年 — first district time-map story).
  * One segment, cumulative eraMode: each spot = a public facility, era = [opened at
  * this site, demolished ?? 3000]. Content comes from the place pool
  * data/places/tw/63000030.json (verified items only); years were checked per
@@ -16,7 +16,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..', '..', '..');
-const STORY_DIR = join(ROOT, 'stories', 'taipei-daan');
+const STORY_DIR = join(ROOT, 'taiwan', 'taipei-daan');
 const TMP = join(tmpdir(), 'tp-taipei-daan');
 const UA = 'TrailPaint-example-builder/1.0 (https://trailpaint.org; https://github.com/notoriouslab/trailpaint) build';
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
@@ -34,7 +34,7 @@ const SEGMENT = {
   center: [25.027, 121.541],
   zoom: 14,
   overlay: { id: 'tw_1904', opacity: 0.6 },
-  music: '../music/voller-hoffnung.mp3',
+  music: '/stories/music/voller-hoffnung.mp3',
 };
 
 // Content lives in the place pool (data/places/tw/<TOWNCODE>.json) so other
@@ -244,7 +244,7 @@ await mkdir(STORY_DIR, { recursive: true });
 
 const credits = [];
 const failed = [];
-console.log(`Building stories/taipei-daan/ — ${SPOTS.length} spots`);
+console.log(`Building taiwan/taipei-daan/ — ${SPOTS.length} spots`);
 
 const projSpots = [];
 for (let i = 0; i < SPOTS.length; i++) {

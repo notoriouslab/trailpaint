@@ -6,7 +6,7 @@
 
 | 檔案 | 來源 | 截法 |
 |---|---|---|
-| daan-park.jpg | `/stories/taipei-daan-park/daan-park.trailpaint.json` | Player，起始年 1904（臺灣堡圖圖層） |
+| daan-park.jpg | `/taiwan/taipei-daan-park/daan-park.trailpaint.json` | Player，起始年 1904（臺灣堡圖圖層） |
 | mackay.jpg | `/stories/taiwan-missionaries/mackay.trailpaint.json` | Player，點開第 2 個景點 |
 | passion.jpg | `/stories/passion-week/entry.trailpaint.json` | Player，點開第 4 個景點 |
 | paul.jpg | `/stories/paul/second-journey.trailpaint.json` | Player，點開第 6 個景點 |
@@ -31,10 +31,10 @@
 - 當季特展：改 `/index.html` 的 `.hall--big` 連結、圖片與文字。
 - 每日一選：改 `/index.html` 內 `pool` 陣列（`[圖檔名, 標題, 說明, 連結]`），HTML 預設值同步改成陣列第一筆。
 
-## 故事地圖卡片圖（stories/<id>/card.jpg）
+## 故事地圖卡片圖（stories/<id>/card.jpg、taiwan/<id>/card.jpg）
 
 `/stories/` 總覽卡片用的圖，由 `stories/catalog.json` 的 `thumbnail` 指向。每個故事取第一條路線，Player 點開一個有照片的景點後截圖（1440×900、scale 2），中央裁 4:3 輸出 800×600。台灣宣教士、受難週、保羅、玄奘、大安森林公園五張由本目錄同名作品圖縮出。`cover.jpg` 不動，仍給社群分享圖與故事頁使用。
 
 ## 台灣百年專區（/taiwan/）
 
-新增一篇台灣百年故事時：故事放 `stories/<id>/`（Player 只接受 `/stories/` 底下的資料檔），在 `stories/catalog.json` 加一筆 `"collection": "taiwan"`，再到 `/taiwan/index.html` 手寫一張作品卡。/stories/ 總覽的台灣百年入口卡篇數會自動更新。
+新增一篇台灣百年故事時：故事放 `taiwan/<id>/`（頁面用絕對路徑引用 `/stories/stories.css`、`/stories/stories.js`，音樂用 `/stories/music/`；Player 白名單見 `online/src/player/isValidSrc.ts`），在 `stories/catalog.json` 加一筆 `"collection": "taiwan"`，`path`、`thumbnail` 寫絕對路徑 `/taiwan/<id>/`，再到 `/taiwan/index.html` 手寫一張作品卡，並更新 `taiwan/index.md`。/stories/ 總覽的台灣百年入口卡篇數會自動更新。

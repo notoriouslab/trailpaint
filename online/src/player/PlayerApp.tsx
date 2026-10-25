@@ -1,4 +1,5 @@
 import { useEffect, useCallback, useState } from 'react';
+import { isValidSrc } from './isValidSrc';
 import { usePlayerStore } from './usePlayerStore';
 import { migrateProject } from '../core/utils/migrateProject';
 import { decodeShareLink } from '../core/utils/shareLink';
@@ -12,15 +13,6 @@ import PlaybackControl from './PlaybackControl';
 /** Compilation id format: kebab-case alphanumerics, prevents path injection. */
 function isValidCompilationId(id: string): boolean {
   return /^[a-z0-9][a-z0-9-]{0,63}$/.test(id);
-}
-
-/** Validate ?src= param: allow curated same-origin JSON under /stories/ or
- *  /examples/routes/. Path components use [^/] so Chinese filenames work
- *  (e.g. /examples/routes/阿朗壹古道.trailpaint.json). `..` traversal blocked. */
-function isValidSrc(src: string): boolean {
-  if (src.includes('..')) return false;
-  return /^\/stories\/[^/]+\/[^/]+\.json$/.test(src)
-      || /^\/examples\/routes\/[^/]+\.json$/.test(src);
 }
 
 export default function PlayerApp() {
@@ -101,7 +93,7 @@ export default function PlayerApp() {
     const src = params.get('src');
     if (src) {
       if (!isValidSrc(src)) {
-        console.warn('Invalid embed source: only /stories/*.json allowed');
+        console.warn('Invalid embed source: only /stories/, /taiwan/ or /examples/routes/ JSON allowed');
         return;
       }
       fetch(src, { signal: AbortSignal.timeout(30000) })

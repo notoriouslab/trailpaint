@@ -6,7 +6,7 @@
   "locale": "zh-TW",
   "cover": "cover.jpg",
   "music": {
-    "src": "../music/voller-hoffnung.mp3",
+    "src": "/stories/music/voller-hoffnung.mp3",
     "title": "Voller Hoffnung — Ronny Matthes",
     "credit": "Ronny Matthes (Jamendo / Internet Archive)",
     "license": "CC"
@@ -25,7 +25,7 @@
       "data": "daan-park.trailpaint.json",
       "thumbnail": "daan-park-thumb.jpg",
       "color": "#065f46",
-      "music": "../music/voller-hoffnung.mp3"
+      "music": "/stories/music/voller-hoffnung.mp3"
     }
   ],
   "footer": {

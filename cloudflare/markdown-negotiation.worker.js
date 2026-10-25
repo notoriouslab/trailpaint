@@ -43,6 +43,7 @@ function shouldInjectLinkHeader(pathname) {
   if (pathname === '/features' || pathname === '/features/index.html') return true;
   if (pathname === '/stories/' || pathname === '/stories/index.html') return true;
   if (pathname.startsWith('/stories/') && (pathname.endsWith('/') || pathname.endsWith('.html'))) return true;
+  if (pathname === '/taiwan' || pathname === '/taiwan/' || pathname === '/taiwan/index.html') return true;
   return false;
 }
 
