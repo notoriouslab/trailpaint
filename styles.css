@@ -106,21 +106,33 @@ a:hover { border-bottom-color: var(--accent); }
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 4px;
-  height: min(76vh, 700px);
+  gap: 14px;
+  max-width: 1200px;
+  margin: 1.5rem auto 0;
+  padding: 0 2rem;
+  height: min(70vh, 640px);
 }
-.hall { position: relative; overflow: hidden; display: block; border-bottom: none; color: #fff; }
-.hall:hover { border-bottom: none; }
+.hall {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(59,26,6,0.12);
+  color: #fff;
+}
+.hall:hover { border-color: var(--line-strong); }
 .hall img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; display: block; }
 .hall:hover img { transform: scale(1.03); }
 .hall::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(20,10,2,0.78) 0%, rgba(20,10,2,0.2) 48%, rgba(20,10,2,0) 70%);
+  background: linear-gradient(0deg, rgba(20,10,2,0.88) 0%, rgba(20,10,2,0.55) 40%, rgba(20,10,2,0) 75%);
 }
 .hall--big { grid-row: span 2; }
-.hall-text { position: absolute; left: 2rem; right: 2rem; bottom: 2rem; z-index: 1; }
+.hall--big img { object-position: left center; } /* 主圖年代標題在各欄左上，裁右側較安全 */
+.hall-text { position: absolute; left: 2rem; right: 2rem; bottom: 2rem; z-index: 1; text-shadow: 0 1px 3px rgba(0,0,0,0.6), 0 0 12px rgba(0,0,0,0.35); }
 .hall-badge {
   display: inline-block;
   background: rgba(255,255,255,0.16);
@@ -139,8 +151,9 @@ a:hover { border-bottom-color: var(--accent); }
 .hall-go { display: inline-block; margin-top: 0.8rem; border-bottom: 1px solid #fff; padding-bottom: 2px; }
 .halls-note { text-align: center; padding: 2.2rem 16px 0; font-size: 1.05rem; color: var(--ink-soft); }
 @media (max-width: 720px) {
-  .halls { grid-template-columns: 1fr 1fr; grid-template-rows: auto; height: auto; }
+  .halls { grid-template-columns: 1fr 1fr; grid-template-rows: auto; height: auto; gap: 10px; margin-top: 1rem; padding: 0 16px; }
   .hall--big { grid-column: span 2; grid-row: auto; height: 56vh; }
+  .hall--big img { object-position: center; }
   .hall--small { height: 30vh; }
   .hall h1 { font-size: 1.9rem; }
   .hall h2 { font-size: 1.15rem; }
