@@ -1,6 +1,6 @@
 # 大安森林公園 — 來源與授權
 
-本故事為 **非營利個人展示** 使用。各階段文字為本站依下列來源改寫，未轉載原文；Cover/og/thumb 為 TrailPaint 程式生成 placeholder。
+本故事為 **非營利個人展示** 使用。各階段文字為本站依下列來源改寫，未轉載原文；階段圖片來自 Wikimedia Commons，依各檔案授權使用；Cover/og/thumb 為 TrailPaint 程式生成 placeholder。
 
 生成日期：2026-10-25
 
@@ -11,6 +11,14 @@
 - 位置為街廓內示意，不是精確地址。
 - 內容來源：資料池 `data/places/tw/63000030.json`。
 - 歷史底圖：中央研究院人社中心 GIS 專題中心「臺灣百年歷史地圖」。
+
+## 圖片
+
+| 階段 | 檔案 | 作者 | 授權 |
+|---|---|---|---|
+| 柴竹圍聚落與稻田 | [Taipei Daan 1898.jpg](https://commons.wikimedia.org/wiki/File:Taipei_Daan_1898.jpg) | 中央研究院人文社會科學研究中心地理資訊科學研究專題中心 | Public domain |
+| 七號公園預定地 | [1932 Taipei City Plan.jpg](https://commons.wikimedia.org/wiki/File:1932_Taipei_City_Plan.jpg)（裁切） | 臺北市役所 | Public domain |
+| 大安森林公園 | [Daan park from Taipei 101.jpg](https://commons.wikimedia.org/wiki/File:Daan_park_from_Taipei_101.jpg) | othree | CC BY 2.0 |
 
 ## 文字來源
 

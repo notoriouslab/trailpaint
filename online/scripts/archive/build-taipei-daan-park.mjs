@@ -21,6 +21,9 @@ const ROOT = join(__dirname, '..', '..', '..');
 const STORY_DIR = join(ROOT, 'stories', 'taipei-daan-park');
 const TMP = join(tmpdir(), 'tp-taipei-daan-park');
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const UA = 'TrailPaint-example-builder/1.0 (https://trailpaint.org; https://github.com/notoriouslab/trailpaint) build';
+/** Longest side of the embedded phase photo (panel thumbnail + click-to-enlarge). */
+const PHOTO_MAX = 800;
 
 /** Still standing — never the current year, or it vanishes next January. */
 const STANDING = 3000;
@@ -66,6 +69,7 @@ const SPOTS = PHASE_IDS
       era: { start: it.start, end: it.end ?? STANDING },
       desc: `${lines.join('')}\n\n${tail.join('\n')}`,
       refs: [...it.sources, ...(it.related ?? [])].map((x) => x.url),
+      photo: it.photo?.file ? it.photo : null, // exact Commons file only — no search guesses
     };
   });
 
@@ -107,6 +111,78 @@ body::after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 ${Math.rou
 </body></html>`;
 }
 
+/** Commons file → original URL + attribution (design: only Commons-hosted photos, see data/places/research/SOURCES.md). */
+async function fetchCommonsFile(file) {
+  const url = 'https://commons.wikimedia.org/w/api.php?' + new URLSearchParams({
+    action: 'query', format: 'json', origin: '*',
+    titles: `File:${file}`,
+    prop: 'imageinfo', iiprop: 'url|extmetadata', iiurlwidth: String(PHOTO_MAX),
+  }).toString();
+  const r = await fetch(url, { headers: { 'User-Agent': UA } });
+  if (!r.ok) throw new Error(`commons ${file} → ${r.status}`);
+  const page = Object.values((await r.json()).query?.pages ?? {})[0];
+  const ii = page?.imageinfo?.[0];
+  if (!ii?.url) throw new Error(`commons ${file}: no imageinfo`);
+  const meta = ii.extmetadata || {};
+  return {
+    originalUrl: ii.url,
+    thumbUrl: ii.thumburl ?? ii.url,
+    sourceUrl: ii.descriptionurl,
+    license: meta.LicenseShortName?.value || 'Unknown',
+    artistHtml: meta.Artist?.value || '',
+  };
+}
+
+function decodeEntities(s) {
+  return s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, ' ');
+}
+function stripHtml(s) {
+  return decodeEntities(s.replace(/<[^>]*>/g, '')).trim();
+}
+/** Author link kept only when it stays on Wikimedia (migrateProject whitelist). */
+function extractFirstHref(html) {
+  const m = html.match(/<a\b[^>]*\bhref\s*=\s*["']([^"']+)["']/i);
+  if (!m) return null;
+  let href = m[1];
+  if (href.startsWith('//')) href = `https:${href}`;
+  else if (href.startsWith('/')) href = `https://commons.wikimedia.org${href}`;
+  try {
+    return /(^|\.)(wikimedia|wikipedia)\.org$/.test(new URL(href).hostname) ? href : null;
+  } catch { return null; }
+}
+
+/**
+ * Pool photo { file, crop? } → JPEG data URL + photoMeta. crop = [left, top, width, height]
+ * in original pixels (e.g. the 公七 block on the 1932 city plan); the original is
+ * downloaded and cropped with sips, otherwise the Commons thumbnail is used.
+ */
+async function loadPhoto(photo, key) {
+  const hit = await fetchCommonsFile(photo.file);
+  const src = join(TMP, `${key}-src.jpg`);
+  const out = join(TMP, `${key}.jpg`);
+  const res = await fetch(photo.crop ? hit.originalUrl : hit.thumbUrl, { headers: { 'User-Agent': UA } });
+  if (!res.ok) throw new Error(`download ${photo.file} → ${res.status}`);
+  writeFileSync(src, Buffer.from(await res.arrayBuffer()));
+  if (photo.crop) {
+    const [left, top, w, h] = photo.crop;
+    await runSips(['--cropToHeightWidth', String(h), String(w), '--cropOffset', String(top), String(left), src, '--out', out]);
+    await runSips(['-Z', String(PHOTO_MAX), '-s', 'format', 'jpeg', '-s', 'formatOptions', '80', out, '--out', out]);
+  } else {
+    await runSips(['-Z', String(PHOTO_MAX), '-s', 'format', 'jpeg', '-s', 'formatOptions', '80', src, '--out', out]);
+  }
+  return {
+    photo: `data:image/jpeg;base64,${readFileSync(out).toString('base64')}`,
+    photoMeta: {
+      source: 'wikimedia-commons',
+      license: hit.license,
+      author: stripHtml(hit.artistHtml) || 'Unknown',
+      authorUrl: extractFirstHref(hit.artistHtml),
+      sourceUrl: hit.sourceUrl,
+    },
+  };
+}
+
 function runChrome(args) {
   return new Promise((resolve, reject) => {
     const p = spawn(CHROME, args, { stdio: 'pipe' });
@@ -132,6 +208,15 @@ await mkdir(TMP, { recursive: true });
 await mkdir(STORY_DIR, { recursive: true });
 console.log(`Building stories/taipei-daan-park/ — ${SPOTS.length} phases`);
 
+const photos = [];
+for (let i = 0; i < SPOTS.length; i++) {
+  const s = SPOTS[i];
+  if (!s.photo) { photos.push(null); continue; }
+  const p = await loadPhoto(s.photo, `p${i + 1}`);
+  console.log(`  📷 ${s.title}: ${s.photo.file}${s.photo.crop ? ' (cropped)' : ''} — ${p.photoMeta.license}`);
+  photos.push({ ...p, file: s.photo.file });
+}
+
 const project = {
   version: 5,
   name: SEGMENT.name,
@@ -144,10 +229,11 @@ const project = {
   layout: 'site',
   spots: SPOTS.map((s, i) => ({
     id: `p${i + 1}`, num: i + 1, latlng: s.latlng, title: s.title,
-    desc: s.desc, photo: null, iconId: 'pin',
+    desc: s.desc, photo: photos[i]?.photo ?? null, iconId: 'pin',
     cardOffset: { x: 0, y: -60 },
     historical_refs: s.refs,
     era: s.era,
+    ...(photos[i] && { photoMeta: photos[i].photoMeta }),
   })),
   routes: [{
     id: 'block',
@@ -223,7 +309,7 @@ for (const id of PHASE_IDS) {
 const lines = [
   '# 大安森林公園 — 來源與授權',
   '',
-  '本故事為 **非營利個人展示** 使用。各階段文字為本站依下列來源改寫，未轉載原文；Cover/og/thumb 為 TrailPaint 程式生成 placeholder。',
+  '本故事為 **非營利個人展示** 使用。各階段文字為本站依下列來源改寫，未轉載原文；階段圖片來自 Wikimedia Commons，依各檔案授權使用；Cover/og/thumb 為 TrailPaint 程式生成 placeholder。',
   '',
   `生成日期：${new Date().toISOString().slice(0, 10)}`,
   '',
@@ -234,6 +320,14 @@ const lines = [
   '- 位置為街廓內示意，不是精確地址。',
   '- 內容來源：資料池 `data/places/tw/63000030.json`。',
   '- 歷史底圖：中央研究院人社中心 GIS 專題中心「臺灣百年歷史地圖」。',
+  '',
+  '## 圖片',
+  '',
+  '| 階段 | 檔案 | 作者 | 授權 |',
+  '|---|---|---|---|',
+  ...SPOTS.flatMap((s, i) => (photos[i]
+    ? [`| ${s.title} | [${photos[i].file}](${photos[i].photoMeta.sourceUrl})${s.photo.crop ? '（裁切）' : ''} | ${photos[i].photoMeta.author} | ${photos[i].photoMeta.license} |`]
+    : [])),
   '',
   '## 文字來源',
   '',

@@ -251,6 +251,9 @@
           "url": "https://www.mottimes.com/article/detail/4721"
         }
       ],
+      "photo": {
+        "file": "Taipei Daan 1898.jpg"
+      },
       "verified": {
         "method": "manual",
         "date": "2026-10-25"
@@ -459,6 +462,15 @@
           "url": "https://www.e-info.org.tw/node/201135"
         }
       ],
+      "photo": {
+        "file": "1932 Taipei City Plan.jpg",
+        "crop": [
+          2200,
+          2950,
+          900,
+          900
+        ]
+      },
       "verified": {
         "method": "manual",
         "date": "2026-10-25"
@@ -2191,7 +2203,7 @@
         }
       ],
       "photo": {
-        "query": "大安森林公園|Daan Forest Park"
+        "file": "Daan park from Taipei 101.jpg"
       },
       "verified": {
         "method": "manual",
