@@ -27,6 +27,7 @@ const towns = readJson(join(POOL_DIR, 'towns.json'));
 for (const code of process.argv.slice(2)) {
   const decisions = readJson(join(CACHE_DIR, 'decisions', `${code}.json`));
   const queue = readJson(join(CACHE_DIR, 'review', `${code}.json`));
+  if (!decisions || !queue || !towns[code]) throw new Error(`${code}: needs a known TOWNCODE, decisions/${code}.json and review/${code}.json (run merge.mjs first)`);
   const file = join(POOL_DIR, `${code}.json`);
   const t = towns[code];
   const pool = existsSync(file)
