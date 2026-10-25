@@ -1,9 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { usePlayerStore } from './usePlayerStore';
 import { ICONS } from '../core/icons';
 import { t } from '../i18n';
 import { siteVisibleSpots } from './siteStops';
 import type { Spot } from '../core/models/types';
+import { PhotoAttribution } from '../core/components/PhotoAttribution';
 
 export default function SpotListPanel() {
   const project = usePlayerStore((s) => s.project)!;
@@ -12,6 +13,8 @@ export default function SpotListPanel() {
   const setActiveSpot = usePlayerStore((s) => s.setActiveSpot);
   const setPlaying = usePlayerStore((s) => s.setPlaying);
   const listRef = useRef<HTMLDivElement>(null);
+  // 021 site: a phase photo opened full size (thumbnail click)
+  const [viewing, setViewing] = useState<Spot | null>(null);
   // 021 site layout: only the phases that exist in currentYear, full text.
   const site = project.layout === 'site';
 
@@ -21,6 +24,13 @@ export default function SpotListPanel() {
     const el = listRef.current.querySelector<HTMLElement>(`[data-index="${activeIndex}"]`);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }, [activeIndex]);
+
+  useEffect(() => {
+    if (!viewing) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setViewing(null); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [viewing]);
 
   const items: { spot: Spot; index: number }[] = site
     ? siteVisibleSpots(project.spots, currentYear)
@@ -61,10 +71,28 @@ export default function SpotListPanel() {
                   </span>
                 )}
               </div>
+              {site && spot.photo && (
+                <img
+                  className="spot-panel__thumb"
+                  src={spot.photo}
+                  alt={spot.title}
+                  onClick={(e) => { e.stopPropagation(); setViewing(spot); }}
+                />
+              )}
             </button>
           );
         })}
       </div>
+      {viewing && (
+        <div className="photo-viewer" role="dialog" aria-label={viewing.title} onClick={() => setViewing(null)}>
+          <figure className="photo-viewer__figure" onClick={(e) => e.stopPropagation()}>
+            <img className="photo-viewer__img" src={viewing.photo ?? ''} alt={viewing.title} />
+            <figcaption className="photo-viewer__caption">{viewing.title}</figcaption>
+            <PhotoAttribution meta={viewing.photoMeta} />
+          </figure>
+          <button className="photo-viewer__close" onClick={() => setViewing(null)} aria-label="×">×</button>
+        </div>
+      )}
     </div>
   );
 }

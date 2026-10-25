@@ -211,6 +211,67 @@ html, body {
   white-space: pre-line;
 }
 
+.spot-panel__thumb {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #e5dcc8;
+  cursor: zoom-in;
+  margin-left: auto;
+}
+
+.photo-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(20, 12, 4, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  cursor: zoom-out;
+}
+
+.photo-viewer__figure {
+  margin: 0;
+  max-width: min(960px, 100%);
+  cursor: default;
+}
+
+.photo-viewer__img {
+  display: block;
+  max-width: 100%;
+  max-height: 80vh;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.photo-viewer__caption {
+  margin-top: 8px;
+  text-align: center;
+  color: #fdf8ef;
+  font-family: Georgia, serif;
+  font-size: 15px;
+}
+
+.photo-viewer .photo-attribution {
+  font-size: 11px;
+}
+
+.photo-viewer__close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  border: none;
+  background: none;
+  color: #fdf8ef;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+}
+
 .spot-panel__empty {
   margin: 0;
   padding: 16px;
