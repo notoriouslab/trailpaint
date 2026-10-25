@@ -629,3 +629,80 @@ describe('migrateProject — layout (021)', () => {
     expect(migrateProject({ ...validBase })).not.toHaveProperty('layout');
   });
 });
+
+describe('migrateProject — photoMeta maintainer / public-domain-archive (024)', () => {
+  const base = { name: 'Test', center: [25.03, 121.54], zoom: 14, routes: [] };
+  const withMeta = (pm: Record<string, unknown>) =>
+    migrateProject({ ...base, spots: [{ id: 's1', latlng: [25.03, 121.54], title: 'x', photoMeta: pm }] })
+      .spots[0].photoMeta;
+  const maintainer = { source: 'maintainer', license: 'CC BY 4.0', author: 'Jacob Mei', authorUrl: null, sourceUrl: null };
+  const archive = {
+    source: 'public-domain-archive',
+    license: '著作財產權已消滅（著作權法 §34）',
+    author: '佚名',
+    authorUrl: null,
+    sourceUrl: 'https://openmuseum.tw/muse/digi_object/abc',
+    origin: '臺北寫真帖 第 12 頁',
+    published: 1960,
+  };
+
+  it('keeps a maintainer photoMeta with null sourceUrl', () => {
+    expect(withMeta(maintainer)).toEqual(maintainer);
+  });
+
+  it('accepts a maintainer photoMeta with sourceUrl omitted', () => {
+    const noUrl: Record<string, unknown> = { ...maintainer };
+    delete noUrl.sourceUrl;
+    expect(withMeta(noUrl)?.sourceUrl).toBeNull();
+  });
+
+  it('drops a maintainer photoMeta that carries a link', () => {
+    expect(withMeta({ ...maintainer, sourceUrl: 'https://evil.example/' })).toBeUndefined();
+  });
+
+  it('keeps an archive photoMeta on an allow-listed host, with origin and published', () => {
+    expect(withMeta(archive)).toEqual(archive);
+  });
+
+  it.each([
+    'https://evil.example/x',
+    'http://openmuseum.tw/x',
+    'javascript:alert(1)',
+    'https://openmuseum.tw.evil.com/x',
+    'https://evil.com/?u=https://openmuseum.tw/',
+    'https://openmuseum.tw@evil.com/x',
+    'https://openmuseum.tw./x',
+    'not a url',
+  ])('drops an archive photoMeta whose sourceUrl is %s', (url) => {
+    expect(withMeta({ ...archive, sourceUrl: url })).toBeUndefined();
+  });
+
+  it('drops an archive photoMeta with no sourceUrl', () => {
+    expect(withMeta({ ...archive, sourceUrl: null })).toBeUndefined();
+  });
+
+  it.each([1700, 2999, '1960', 1960.5])('drops published %s but keeps the rest', (published) => {
+    const pm = withMeta({ ...archive, published });
+    expect(pm).toBeDefined();
+    expect(pm).not.toHaveProperty('published');
+  });
+
+  it('strips zero-width and RTL characters from origin, caps it at 200 chars', () => {
+    expect(withMeta({ ...archive, origin: '臺北​寫真帖‮' })?.origin).toBe('臺北寫真帖');
+    expect(withMeta({ ...archive, origin: 'x'.repeat(500) })?.origin).toHaveLength(200);
+  });
+
+  it('drops an origin that is empty once invisible characters are stripped', () => {
+    expect(withMeta({ ...archive, origin: '\u200b\u202e ' })).not.toHaveProperty('origin');
+  });
+
+  it('strips bidi overrides from license and tag characters from author', () => {
+    const pm = withMeta({ ...maintainer, license: 'CC BY 4.0\u202e', author: 'Jacob\u{E0041}\u{E0049} Mei' });
+    expect(pm?.license).toBe('CC BY 4.0');
+    expect(pm?.author).toBe('Jacob Mei');
+  });
+
+  it('drops an unknown source', () => {
+    expect(withMeta({ ...maintainer, source: 'unsplash' })).toBeUndefined();
+  });
+});

@@ -3,7 +3,7 @@
 > Hand-drawn style trail map maker. Build routes from photos, maps, or AI prompts, then export as PNG illustration, complete project backup, or GeoJSON / KML interop formats. Free, open-source (GPL-3.0), no account, no backend.
 
 Language: zh-TW / en / ja (auto-detected)
-Version: 1.4.0
+Version: 1.8.1
 License: GPL-3.0
 Source: https://github.com/notoriouslab/trailpaint
 Try it: https://trailpaint.org/app/
@@ -140,6 +140,10 @@ Embed code is one-click copy from Player ⚙ menu — paste into WordPress / Wix
 ### Spot Era Schema (v5)
 
 `Spot.era?: { start: number; end: number }` — calendar years, BC negative, AD positive, range [-3000, 3000]. Drives postcard era stamp + TimeSlider opacity fade. 17 historical segments / 150 spots already tagged: Paul × 3, Galilean ministry × 2, Passion Week × 3, Zhang Qian × 2, Xuanzang × 2, Marco Polo × 2, Wen Tianxiang × 2, Xu Xiake × 1. Modern stories (Taiwan hikes, 19th-century missionaries) stay era-agnostic intentionally — their spots remain visible at any TimeSlider position.
+
+## v1.8.1 Da'an District Enrichment (2026-10)
+
+[Da'an District, a Century](https://trailpaint.org/taiwan/taipei-daan/) grows from 24 to 33 places and now starts in 1762: the Liugong Canal, the Toad Mountain agricultural station, the Qingtian Street professors' houses, the Huanmin military village, Wistaria Tea House, Yin Hai-kuang's residence, the Horikawa drain under today's Xinsheng South Road, the rise of the East District and Fuyang Eco Park. When the earliest year would coarsen the whole slider it gets a tick of its own, and the first ticks show the 1904 map rather than an empire-wide one. Spot photos can now credit the maintainer's own photos or public-domain archive photos (Copyright Act §34) besides Wikimedia Commons.
 
 ## v1.8 Site Timeline (2026-10)
 

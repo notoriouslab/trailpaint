@@ -4,11 +4,15 @@ import type { Route } from './routes';
 // Only rendered by Player/Editor when spot.photoMeta is present; existing stories
 // with `📷 作者, 授權` embedded in spot.desc stay untouched.
 export interface PhotoMeta {
-  source: 'wikimedia-commons'; // 字面值聯合；未來擴來源時加 union member
+  // 024: 'maintainer' = the site maintainer's own photo (no source link);
+  // 'public-domain-archive' = a pre-1976 photo from an archive allow-list.
+  source: 'wikimedia-commons' | 'maintainer' | 'public-domain-archive';
   license: string;
   author: string;
   authorUrl: string | null;
-  sourceUrl: string;
+  sourceUrl: string | null; // null only for 'maintainer'
+  origin?: string; // 024 archive photos: book / periodical and page
+  published?: number; // 024 archive photos: year first published
 }
 
 /**

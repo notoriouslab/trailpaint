@@ -10,7 +10,7 @@ import TimeSlider from '../map/TimeSlider';
 import MapToast from '../map/MapToast';
 import PostcardButton from './PostcardButton';
 import { getOverlayZoomCap, getRelevantOverlayIds } from '../map/overlays';
-import { overlayForYear } from '../map/eraScales';
+import { overlayForJump, overlayForYear, scaleForProject } from '../map/eraScales';
 import { effectiveEraMode, eraOpacity, eraVisible } from '../map/eraFade';
 import { siteVisibleSpots } from './siteStops';
 import { PhotoAttribution } from '../core/components/PhotoAttribution';
@@ -216,20 +216,25 @@ export default function PlayerMap() {
     () => project.spots.filter((s) => !hiddenSpotIds.has(s.id)).map((s) => s.latlng),
     [project, hiddenSpotIds],
   );
-  const earliestEraStart = useMemo(() => {
-    const starts = project.spots.flatMap((s) => (s.era ? [s.era.start] : []));
-    return starts.length ? Math.min(...starts) : undefined;
-  }, [project]);
+  // 024: one scale for the slider and for playback jumps (D2b).
+  const historyScale = useMemo(
+    () => scaleForProject(
+      visibleLatLngs,
+      eraMode,
+      project.spots.flatMap((s) => (s.era ? [s.era.start] : [])),
+    ),
+    [visibleLatLngs, eraMode, project],
+  );
 
   // 019 D3: an active spot that doesn't exist yet (or anymore) at currentYear
-  // pulls the clock to its exact start year, with the latest map not later
-  // than that year. Playback in year order therefore reads as time moving on.
+  // pulls the clock to its exact start year, with the map of the tick that year
+  // falls in (024 D2b). Playback in year order therefore reads as time moving on.
   useEffect(() => {
     if (!cumulative || activeIndex === null) return;
     const era = project.spots[activeIndex]?.era;
     if (!era || eraVisible(era, currentYear, eraMode)) return;
     setCurrentYear(era.start);
-    const ovId = overlayForYear(era.start, getRelevantOverlayIds(visibleLatLngs));
+    const ovId = overlayForJump(historyScale, era.start);
     setOverlay(ovId ? { id: ovId, opacity: overlay?.opacity ?? 0.5 } : null);
     // Only re-run on spot change — a manual slider drag must not be overridden.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -272,7 +277,7 @@ export default function PlayerMap() {
         overlayId={overlay?.id ?? null}
         spotsLatLngs={visibleLatLngs}
         eraMode={eraMode}
-        earliestEraStart={earliestEraStart}
+        historyScale={historyScale}
         currentYear={currentYear}
         onChange={(tick) => {
           if (site) {

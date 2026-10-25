@@ -77,7 +77,7 @@ interface PlaceItem {
     '@type': 'ImageObject';
     license: string | { '@type': 'CreativeWork'; name: string };
     creator: { '@type': 'Person'; name: string; url?: string };
-    contentUrl: string;
+    contentUrl?: string; // 024: absent for maintainer photos (no source page)
     isAccessibleForFree: true;
   };
   citation?: string[];
@@ -108,7 +108,8 @@ function spotToPlaceItem(spot: Spot): PlaceItem {
       creator: spot.photoMeta.authorUrl
         ? { '@type': 'Person', name: spot.photoMeta.author, url: spot.photoMeta.authorUrl }
         : { '@type': 'Person', name: spot.photoMeta.author },
-      contentUrl: spot.photoMeta.sourceUrl,
+      // 024: maintainer photos have no source page
+      ...(spot.photoMeta.sourceUrl ? { contentUrl: spot.photoMeta.sourceUrl } : {}),
       isAccessibleForFree: true,
     };
   }

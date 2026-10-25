@@ -1,0 +1,142 @@
+{
+  "daan1904": [
+    {
+      "year": 2026,
+      "labelKey": "era.modern"
+    },
+    {
+      "year": 2020,
+      "labelKey": "era.modern",
+      "label": "2020"
+    },
+    {
+      "year": 2010,
+      "labelKey": "era.modern",
+      "label": "2010"
+    },
+    {
+      "year": 2000,
+      "labelKey": "era.modern",
+      "label": "2000"
+    },
+    {
+      "year": 1990,
+      "labelKey": "era.modern",
+      "label": "1990",
+      "overlayId": "tw_1989"
+    },
+    {
+      "year": 1980,
+      "labelKey": "era.modern",
+      "label": "1980",
+      "overlayId": "corona_1966"
+    },
+    {
+      "year": 1970,
+      "labelKey": "era.modern",
+      "label": "1970",
+      "overlayId": "corona_1966"
+    },
+    {
+      "year": 1960,
+      "labelKey": "era.modern",
+      "label": "1960",
+      "overlayId": "tw_1955"
+    },
+    {
+      "year": 1950,
+      "labelKey": "era.modern",
+      "label": "1950",
+      "overlayId": "tw_1945"
+    },
+    {
+      "year": 1940,
+      "labelKey": "era.modern",
+      "label": "1940",
+      "overlayId": "jm20k_1921"
+    },
+    {
+      "year": 1930,
+      "labelKey": "era.modern",
+      "label": "1930",
+      "overlayId": "jm20k_1921"
+    },
+    {
+      "year": 1920,
+      "labelKey": "era.modern",
+      "label": "1920",
+      "overlayId": "tw_1904"
+    },
+    {
+      "year": 1910,
+      "labelKey": "era.modern",
+      "label": "1910",
+      "overlayId": "tw_1904"
+    },
+    {
+      "year": 1900,
+      "labelKey": "era.modern",
+      "label": "1900",
+      "overlayId": "tw_1904"
+    }
+  ],
+  "tainan1624": [
+    {
+      "year": 2026,
+      "labelKey": "era.modern"
+    },
+    {
+      "year": 2000,
+      "labelKey": "era.modern",
+      "label": "2000"
+    },
+    {
+      "year": 1950,
+      "labelKey": "era.modern",
+      "label": "1950",
+      "overlayId": "tw_1945"
+    },
+    {
+      "year": 1900,
+      "labelKey": "era.modern",
+      "label": "1900",
+      "overlayId": "jm200k_1897"
+    },
+    {
+      "year": 1850,
+      "labelKey": "era.modern",
+      "label": "1850",
+      "overlayId": "qing_1820"
+    },
+    {
+      "year": 1800,
+      "labelKey": "era.modern",
+      "label": "1800",
+      "overlayId": "ming_1582"
+    },
+    {
+      "year": 1750,
+      "labelKey": "era.modern",
+      "label": "1750",
+      "overlayId": "ming_1582"
+    },
+    {
+      "year": 1700,
+      "labelKey": "era.modern",
+      "label": "1700",
+      "overlayId": "ming_1582"
+    },
+    {
+      "year": 1650,
+      "labelKey": "era.modern",
+      "label": "1650",
+      "overlayId": "ming_1582"
+    },
+    {
+      "year": 1600,
+      "labelKey": "era.modern",
+      "label": "1600",
+      "overlayId": "ming_1582"
+    }
+  ]
+}

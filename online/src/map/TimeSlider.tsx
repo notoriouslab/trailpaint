@@ -48,8 +48,11 @@ interface TimeSliderProps {
   spotsLatLngs: ReadonlyArray<readonly [number, number]>;
   /** 019: 'cumulative' switches to content-first decade ticks. Default 'fade'. */
   eraMode?: EraMode;
-  /** 019: earliest spot era start — first decade tick in cumulative mode. */
-  earliestEraStart?: number;
+  /**
+   * 024: history ticks computed once by the caller (scaleForProject) so playback
+   * jumps and the slider share one scale. Absent → computed here from spotsLatLngs.
+   */
+  historyScale?: Scale[];
   /**
    * 019: exact current year. In cumulative mode the thumb sits on the latest
    * tick <= currentYear and shows the exact year when it differs (e.g. "1994").
@@ -72,7 +75,7 @@ export default function TimeSlider({
   onChange,
   spotsLatLngs,
   eraMode = 'fade',
-  earliestEraStart,
+  historyScale,
   currentYear,
 }: TimeSliderProps) {
   const cumulative = eraMode === 'cumulative';
@@ -88,8 +91,8 @@ export default function TimeSlider({
     if (scaleGroup === 'bible') {
       return reverseChronological(BIBLE_SCALE);
     }
-    return reverseChronological(scaleForProject(spotsLatLngs, eraMode, earliestEraStart));
-  }, [spotsLatLngs, scaleGroup, eraMode, earliestEraStart]);
+    return reverseChronological(historyScale ?? scaleForProject(spotsLatLngs, eraMode));
+  }, [spotsLatLngs, scaleGroup, eraMode, historyScale]);
 
   const activeIndex = useMemo(() => {
     // Cumulative (019): content-first — thumb follows the year, not the overlay

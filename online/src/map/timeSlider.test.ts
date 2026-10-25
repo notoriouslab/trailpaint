@@ -7,6 +7,7 @@
  */
 
 import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'node:fs';
 import {
   HISTORY_SCALE,
   BIBLE_SCALE,
@@ -17,6 +18,7 @@ import {
   overlayForYear,
   tickStepFor,
   MAX_CONTENT_TICKS,
+  overlayForJump,
 } from './eraScales';
 import { getRelevantOverlayIds } from './overlays';
 
@@ -135,7 +137,7 @@ describe('scaleForProject (019 D7)', () => {
   const daan: [number, number][] = [[25.03, 121.54]];
 
   it('cumulative: one tick per decade from the earliest era, then modern', () => {
-    const scale = scaleForProject(daan, 'cumulative', 1904);
+    const scale = scaleForProject(daan, 'cumulative', [1904]);
     const decades = scale.slice(1).map((t) => t.year).reverse();
     expect(scale[0]).toBe(MODERN_TICK);
     expect(decades[0]).toBe(1900);
@@ -144,18 +146,18 @@ describe('scaleForProject (019 D7)', () => {
     expect(scale.some((t) => t.overlayId === 'han_bc7' || t.overlayId === 'qing_1820')).toBe(false);
     expect(scale.find((t) => t.year === 1970)?.overlayId).toBe('corona_1966');
     expect(scale.find((t) => t.year === 1970)?.label).toBe('1970');
-    // First tick borrows the map of the earliest event year (1904 堡圖, not 1897)
+    // First tick shows the latest map within its decade (1904 堡圖, not 1897)
     expect(scale.find((t) => t.year === 1900)?.overlayId).toBe('tw_1904');
   });
 
   it('fade mode keeps the overlay ticks (016 behaviour)', () => {
-    const scale = scaleForProject(daan, 'fade', 1904);
+    const scale = scaleForProject(daan, 'fade', [1904]);
     expect(scale.some((t) => t.overlayId === 'han_bc7')).toBe(true);
     expect(scale.some((t) => t.year === 1970)).toBe(false);
   });
 
   it('cumulative without any spot era falls back to fade ticks', () => {
-    expect(scaleForProject(daan, 'cumulative', undefined)).toEqual(scaleForProject(daan, 'fade'));
+    expect(scaleForProject(daan, 'cumulative', [])).toEqual(scaleForProject(daan, 'fade'));
   });
 });
 
@@ -171,8 +173,72 @@ describe('tickStepFor (019 D7, nationwide spans)', () => {
   });
 
   it('cumulative scale for a 1624 story has <= MAX_CONTENT_TICKS content ticks', () => {
-    const scale = scaleForProject([[22.99, 120.2]], 'cumulative', 1624);
+    const scale = scaleForProject([[22.99, 120.2]], 'cumulative', [1624]);
     expect(scale.length - 1).toBeLessThanOrEqual(MAX_CONTENT_TICKS);
     expect(scale[scale.length - 1].year).toBe(1600);
+  });
+});
+
+describe('scaleForProject lead tick + first-tick map (024 D2)', () => {
+  const daan: [number, number][] = [[25.03, 121.54]];
+  const tainan: [number, number][] = [[22.99, 120.2]];
+  const before = JSON.parse(readFileSync(new URL('./__fixtures__/scale-before-024.json', import.meta.url), 'utf8'));
+  // Ticks up to 2020 only: the modern tick (and any 2030+ decade) follows the
+  // current year, so comparing them would break when the calendar moves on.
+  const stable = (scale: { year: number }[]) => scale.filter((t) => t.year <= 2020);
+  const enriched = [1762, 1903, 1904, 1926, 1931, 1942, 1950, 1953, 1956, 1987, 1994, 2017];
+
+  it('大安 with 瑠公圳 1762: one lead tick, then decades from 1900', () => {
+    const scale = scaleForProject(daan, 'cumulative', enriched);
+    const years = scale.slice(1).map((t) => t.year).reverse();
+    expect(years[0]).toBe(1762);
+    expect(years.slice(1)).toEqual([1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020]);
+    expect(stable(scale)).toHaveLength(14);
+    expect(scale.find((t) => t.year === 1762)?.label).toBe('1762');
+    expect(scale.find((t) => t.year === 1762)?.overlayId).toBe('tw_1904');
+    expect(scale.find((t) => t.year === 1900)?.overlayId).toBe('tw_1904');
+  });
+
+  it('original 24-spot 大安 scale is unchanged (fixture from before 024)', () => {
+    expect(stable(scaleForProject(daan, 'cumulative', [1904, 1926, 1959, 1994, 2017]))).toEqual(stable(before.daan1904));
+  });
+
+  it('Tainan from 1624: no lead tick (both earliest years give 50-year steps), unchanged', () => {
+    const scale = scaleForProject(tainan, 'cumulative', [1624, 1661, 1700]);
+    expect(stable(scale)).toEqual(stable(before.tainan1624));
+    expect(scale[scale.length - 1].overlayId).toBe(overlayForYear(1600 + 50 - 1, getRelevantOverlayIds(tainan)));
+  });
+
+  it('duplicate earliest years still give a single lead tick', () => {
+    const scale = scaleForProject(daan, 'cumulative', [1762, 1762, 1904]);
+    expect(scale.filter((t) => t.year === 1762)).toHaveLength(1);
+    expect(scale[scale.length - 2].year).toBe(1900);
+  });
+
+  it('a single era start never makes a lead tick', () => {
+    const scale = scaleForProject(daan, 'cumulative', [1762]);
+    expect(scale[scale.length - 1].year).toBe(1760);
+    expect(scale[scale.length - 2].year).toBe(1780);
+  });
+});
+
+describe('overlayForJump (024 D2b)', () => {
+  const daan: [number, number][] = [[25.03, 121.54]];
+  const scale = scaleForProject(daan, 'cumulative', [1762, 1903, 1904, 1959, 2017]);
+
+  it('jumping to the 1762 spot shows the 1904 堡圖, not the Ming empire map', () => {
+    expect(overlayForJump(scale, 1762)).toBe('tw_1904');
+  });
+
+  it('jumping to 1903 shows the 1904 堡圖, not the 1897 map', () => {
+    expect(overlayForJump(scale, 1903)).toBe('tw_1904');
+  });
+
+  it('jumping to 1959 uses the 1950 tick map', () => {
+    expect(overlayForJump(scale, 1959)).toBe(scale.find((t) => t.year === 1950)?.overlayId);
+  });
+
+  it('jumping to 2017 is the modern basemap', () => {
+    expect(overlayForJump(scale, 2017)).toBeUndefined();
   });
 });

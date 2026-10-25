@@ -198,3 +198,33 @@ describe('compactProject / expandProject — layout (021)', () => {
     expect(expandProject(compact)).not.toHaveProperty('layout');
   });
 });
+
+describe('compactProject / expandProject — photoMeta sources (024)', () => {
+  const maintainer: PhotoMeta = {
+    source: 'maintainer', license: 'CC BY 4.0', author: 'Jacob Mei', authorUrl: null, sourceUrl: null,
+  };
+  const archive: PhotoMeta = {
+    source: 'public-domain-archive',
+    license: '著作財產權已消滅（著作權法 §34）',
+    author: '佚名',
+    authorUrl: null,
+    sourceUrl: 'https://openmuseum.tw/muse/digi_object/abc',
+    origin: '臺北寫真帖 第 12 頁',
+    published: 1960,
+  };
+
+  it.each([['commons', validMeta], ['maintainer', maintainer], ['archive', archive]])(
+    'round-trips a %s photoMeta',
+    (_name, meta) => {
+      const expanded = expandProject(compactProject(mkProject([{ ...baseSpot, photoMeta: meta }])));
+      expect(expanded.spots[0].photoMeta).toEqual(meta);
+    },
+  );
+
+  it('does not add og / pb keys for a Commons photo', () => {
+    const compact = compactProject(mkProject([{ ...baseSpot, photoMeta: validMeta }]));
+    const pm = (compact.s as Record<string, unknown>[])[0].pm as Record<string, unknown>;
+    expect(pm).not.toHaveProperty('og');
+    expect(pm).not.toHaveProperty('pb');
+  });
+});

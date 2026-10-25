@@ -307,6 +307,8 @@ export default {
   'player.error.parse': 'ファイル形式が正しくありません',
   'player.error.read': 'ファイルの読み取りに失敗しました',
   'player.photo.prefix': '写真',
+  'player.photo.maintainer': '撮影者本人',
+  'player.photo.archive': '所蔵元',
   'player.spots': 'スポット',
   'player.site.empty': 'この年の記録はありません',
   'player.playback.interval': '間隔',

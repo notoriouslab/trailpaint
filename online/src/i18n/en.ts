@@ -307,6 +307,8 @@ export default {
   'player.error.parse': 'Invalid file format',
   'player.error.read': 'Failed to read file',
   'player.photo.prefix': 'Photo',
+  'player.photo.maintainer': 'Own photo',
+  'player.photo.archive': 'Archive source',
   'player.spots': 'Spots',
   'player.site.empty': 'Nothing recorded here for this year',
   'player.playback.interval': 'Interval',

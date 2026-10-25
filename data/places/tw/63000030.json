@@ -2716,6 +2716,277 @@
         "basis": "authority",
         "date": "2026-10-25"
       }
+    },
+    {
+      "id": "liugong-ntu-canal",
+      "name": "瑠公圳大安支線（臺大段明渠）",
+      "category": "irrigation",
+      "latlng": [
+        25.0163398,
+        121.539097
+      ],
+      "start": 1762,
+      "end": null,
+      "desc": "郭錫瑠 1740 年開鑿瑠公圳，引新店溪水灌溉臺北盆地，1762 年景美到臺北段完工。圳水到公館分成第一幹線、第二幹線與大安支線，大安支線穿過今天的臺大校園，臺大水工試驗所旁還留著約 550 公尺的明渠，是大安區少數看得到的瑠公圳。另一條常被混為一談的水圳是更早的霧裡薛圳，它的分水樞紐「九汴頭」在今溫州街 46 巷口一帶，跟瑠公圳是兩套系統。",
+      "sources": [
+        {
+          "title": "國立臺灣大學〈瑠公圳(臺大段)復原整體規劃設計〉",
+          "url": "https://homepage.ntu.edu.tw/~cpo/plan/921013.pdf"
+        },
+        {
+          "title": "文山社區大學〈瑠公圳大事記〉",
+          "url": "https://www.wenshan.org.tw/wss/index.php/%E6%96%87%E5%8F%B2/item/965-2013-10-31-08-13-52"
+        },
+        {
+          "title": "自由時報〈瑠公圳密碼 藏身巷弄間〉2012",
+          "url": "https://news.ltn.com.tw/news/local/paper/572896"
+        }
+      ],
+      "photo": {
+        "file": "Liugongjun Pool and Astronomy Mathematics Building 20160316.jpg"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "agri-station-chanchu",
+      "name": "蟾蜍山農事試驗場（今農試所宿舍群）",
+      "category": "research",
+      "latlng": [
+        25.0100266,
+        121.5385713
+      ],
+      "start": 1903,
+      "end": null,
+      "desc": "1903 年，臺灣總督府把臺北、臺中、臺南三處農事試驗場合併，在公館蟾蜍山下（今羅斯福路四段）設立臺灣總督府農事試驗場，是臺灣最早的近代農業研究機關，比臺北帝國大學早 25 年。看中的是瑠公圳與霧裡薛圳的灌溉水源。研究人員的宿舍沿今羅斯福路四段 119 巷興建，1977 年農業試驗所遷往霧峰，2018 年八棟宿舍公告為臺北市歷史建築。",
+      "sources": [
+        {
+          "title": "農業部農業試驗所〈歷史沿革〉",
+          "url": "https://www.tari.gov.tw/content/index.asp?Parser=1%2C3%2C14"
+        },
+        {
+          "title": "蟾蜍山煥民新村〈農試農事〉",
+          "url": "https://huanminvillage.taipei/lifetrace-term/3"
+        }
+      ],
+      "photo": {
+        "file": "農業試驗所宿舍群74 76165214 B.jpg"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "qingtian-76",
+      "name": "青田街大學住宅組合（青田七六）",
+      "category": "residence",
+      "latlng": [
+        25.0279436,
+        121.5326317
+      ],
+      "start": 1931,
+      "end": null,
+      "desc": "臺北帝國大學的日本教授們自組「大學住宅組合」，在當時的昭和町（今青田街一帶）合力興建住宅，形成文教住宅區。青田街 7 巷 6 號由農學教授足立仁設計，1931 年落成，和洋折衷。戰後由臺大地質系首任系主任馬廷英入住，2006 年公告為市定古蹟，修復後以「青田七六」之名開放參觀。",
+      "sources": [
+        {
+          "title": "青田七六〈About Qingtian 76〉",
+          "url": "https://www.qingtian76.tw/about-qingtian-76-englis/"
+        }
+      ],
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "huanmin-village",
+      "name": "蟾蜍山煥民新村",
+      "category": "military-housing",
+      "latlng": [
+        25.0095307,
+        121.5400442
+      ],
+      "start": 1953,
+      "end": null,
+      "desc": "政府遷臺後，空軍把作戰司令部設在蟾蜍山，1953 年在山腳興建眷舍，初名克難甲、乙、丙、丁村，每戶只有三坪半，牆是竹子與稻草泥巴。1960 年代初以空軍將領徐煥昇、王衛民之名改稱煥民新村。沒分到房子的軍眷在山坡自力造屋，與農試所宿舍形成山城聚落。2016 年蟾蜍山登錄為臺北市文化景觀，是臺北保存最完整的空軍眷村。",
+      "sources": [
+        {
+          "title": "苦勞網轉載 臺大城鄉所好蟾蜍工作室 2013",
+          "url": "https://www.coolloud.org.tw/node/76116"
+        },
+        {
+          "title": "蟾蜍山煥民新村〈煥民新村〉",
+          "url": "https://huanminvillage.taipei/lifetrace-term/1"
+        },
+        {
+          "title": "輔導會《榮光雙周刊》2023",
+          "url": "https://epaper.vac.gov.tw/zh-tw/C/3109%7C22/32460/1/Publish.htm"
+        }
+      ],
+      "photo": {
+        "query": "煥民新村|Huanmin Village"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "zitenglu",
+      "name": "紫藤廬",
+      "category": "culture",
+      "latlng": [
+        25.0246294,
+        121.5342473
+      ],
+      "start": 1950,
+      "end": null,
+      "desc": "日治時期的高等官舍，1950 年起成為財政部關務署署長周德偉教授的公家宿舍，殷海光、張佛泉、夏道平等自由主義學者常在此聚會。周德偉之子周渝接手後，黨外人士與藝文人士在此出入，1981 年開設全臺第一家人文茶館，1997 年指定為臺北市市定古蹟。",
+      "sources": [
+        {
+          "title": "自由時報〈殷海光故居 就在紫藤廬旁〉2010",
+          "url": "https://ec.ltn.com.tw/article/paper/398852"
+        },
+        {
+          "title": "臺北市政府文化局〈紫藤廬茶館〉",
+          "url": "https://culture.gov.taipei/cp.aspx?n=6D8D9BF9A2E55CCC"
+        }
+      ],
+      "photo": {
+        "query": "紫藤廬|Wistaria Tea House"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "yin-haiguang-residence",
+      "name": "殷海光故居",
+      "category": "residence",
+      "latlng": [
+        25.0242571,
+        121.5319252
+      ],
+      "start": 1956,
+      "end": null,
+      "desc": "自由主義思想家殷海光 1949 年來臺，在臺大哲學系任教並為《自由中國》撰寫政論，1956 年住進溫州街的臺大宿舍。1960 年雷震案後他的作品被列為禁書，1966 年遭臺大解聘並受監控，1969 年病逝。院子裡的水池與假山是他親手堆的，故居今為市定古蹟，與紫藤廬只隔幾條巷子。",
+      "sources": [
+        {
+          "title": "臺灣文學虛擬博物館〈大師在臺北的雅舍與小品〉",
+          "url": "https://tlvmbk.nmtl.gov.tw/zh/Travel/TravelRouteCont?Routeid=27"
+        },
+        {
+          "title": "臺北市大安區公所〈殷海光故居〉",
+          "url": "https://dado.gov.taipei/News_Content.aspx?n=21D5522EA8F62D7A&s=E4695793FAB3F5AC&sms=FAEE8039E24A13A0"
+        }
+      ],
+      "photo": {
+        "query": "殷海光故居|Yin Hai-kuang residence"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "horikawa-drain",
+      "name": "特一號排水溝「堀川」（今新生南路）",
+      "category": "waterway",
+      "latlng": [
+        25.0224404,
+        121.5345101
+      ],
+      "start": 1942,
+      "end": 1972,
+      "desc": "1932 年臺北市擴大計畫為了防洪，規劃兩條大排水路，其中「特一號」1942 年完工，道路與排水溝並行，人稱「堀川」，兩岸種柳，就是今天新生南、北路的前身。1972 年新生南路拓寬，排水溝加蓋成為馬路。常有人說新生南路底下是瑠公圳，其實是這條日治時期的排水溝；瑠公圳本身的圳道則是戰後隨都市化陸續加蓋（瑠公農田水利會會史記 1968 年「瑠公圳加蓋，圳路成為馬路」），兩條水道不同。",
+      "sources": [
+        {
+          "title": "經典×原典〈新生南路3段水圳意象重現暨人行景觀美化工程〉",
+          "url": "https://www.classic1990.com/view/projects/environment-landscape/el9/"
+        },
+        {
+          "title": "自由時報〈新生南北路 師大教授：底是大排、非瑠公圳〉2015",
+          "url": "https://news.ltn.com.tw/news/politics/breakingnews/1546426"
+        },
+        {
+          "title": "文山社區大學〈瑠公圳大事記〉",
+          "url": "https://www.wenshan.org.tw/wss/index.php/%E6%96%87%E5%8F%B2/item/965-2013-10-31-08-13-52"
+        }
+      ],
+      "photo": {
+        "file": "2010 07 22670 7043 Da'an District, Taipei, Streets in Taipei, Traffic signals, Road signs, Buildings, Taiwan.JPG"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "sogo-zhongxiao",
+      "name": "東區崛起：太平洋 SOGO 忠孝館",
+      "category": "commerce",
+      "latlng": [
+        25.0421334,
+        121.5448661
+      ],
+      "start": 1987,
+      "end": null,
+      "desc": "1967 年臺北市升格後開闢忠孝東路等幹道，1970 年代忠孝東路三、四段完工，商家沿線向東聚集。1987 年 11 月 11 日太平洋崇光百貨（SOGO）在忠孝東路四段開幕，是臺灣第一家中日合資、由日方經營的百貨，帶動東區成為臺北新的商業中心，逐漸取代西門町的地位。",
+      "sources": [
+        {
+          "title": "聯合報系報時光〈太平洋崇光百貨拓荒東區商圈〉",
+          "url": "https://time.udn.com/udntime/story/122835/7895934"
+        },
+        {
+          "title": "臺北畫刊〈台北東區商圈 從大片稻田到精華都心〉2018",
+          "url": "https://www.travel.taipei/zh-tw/pictorial/article/13770"
+        }
+      ],
+      "photo": {
+        "query": "SOGO Zhongxiao Taipei"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "fuyang-eco-park",
+      "name": "富陽自然生態公園",
+      "category": "park",
+      "latlng": [
+        25.0159703,
+        121.5572182
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "日治時期起這片山谷就是軍方彈藥庫，戰後由聯勤續用，長年軍事管制反而保住了低海拔森林與溪流。1988 年彈藥庫撤守，1994 年在黎和里居民爭取下先開放為簡易的富陽公園，2006 年以生態保育為原則重新整建，成為臺北市第一座自然生態公園，園內還留著彈藥庫涵洞，現在住著蝙蝠。",
+      "sources": [
+        {
+          "title": "維基百科〈富陽自然生態公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%AF%8C%E9%99%BD%E8%87%AA%E7%84%B6%E7%94%9F%E6%85%8B%E5%85%AC%E5%9C%92"
+        },
+        {
+          "title": "臺北市公園路燈工程管理處新聞稿 2017",
+          "url": "https://pkl.gov.taipei/ct.asp?ctNode=88835&mp=106011&xItem=312166812"
+        },
+        {
+          "title": "荒野保護協會〈台北綠寶石─富陽自然生態公園開園〉2006",
+          "url": "https://www.sow.org.tw/blog/20061016/1189"
+        }
+      ],
+      "photo": {
+        "local": "data/places/photos/63000030/fuyang-eco-park.jpg",
+        "kind": "maintainer"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
     }
   ]
 }

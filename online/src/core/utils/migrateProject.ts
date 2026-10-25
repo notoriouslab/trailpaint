@@ -4,6 +4,7 @@ import type { Route } from '../models/routes';
 import { ROUTE_COLORS } from '../models/routes';
 import { isAllowedMediaUrl } from './embedCode';
 import { sanitizeEra } from '../../map/eraFade';
+import { stripUnsafeChars } from './textSanitize';
 
 /**
  * Validate and migrate raw JSON data to a Project.
@@ -11,25 +12,14 @@ import { sanitizeEra } from '../../map/eraFade';
  *
  * v3.1 (013-ai-photo-commons): Spot 新增 optional `photoMeta`（Commons attribution）
  * 與 `photo_query`（LLM 匯入關鍵字）。非 break change，v3 資料 migrate 後兩欄位皆
- * undefined。photoMeta 白名單驗證：source 必須 'wikimedia-commons'、authorUrl 必須
- * null 或 https://commons.wikimedia.org/* 開頭；驗證失敗則整個 photoMeta 設 undefined
- * （all-or-nothing，避免部分保留造成 UI 不一致）。
+ * undefined。photoMeta 白名單驗證：source 限 'wikimedia-commons' / 'maintainer' /
+ * 'public-domain-archive'（024），各有自己的 sourceUrl 規則；驗證失敗則整個 photoMeta
+ * 設 undefined（all-or-nothing，避免部分保留造成 UI 不一致）。
  */
 /** authorUrl 降級規則：只接受 https://{*.wikimedia.org, *.wikipedia.org}；其他 → null。
  *  Commons 的 Artist 欄位經常連外部（Wikipedia 其他語言、Flickr、個人站），
  *  但 attribution 義務比「author 可點連結」重要——寧可保留姓名不連結，也不因
  *  authorUrl 不合白名單丟掉整個 photoMeta（等於無 attribution）。 */
-/** Strip control chars + RTL overrides + zero-width chars from attribution text.
- *  Defence against display hijack where `author: "Alice‮gpj.live/"` would
- *  render as reversed text in AI agent output. */
-function sanitizeAttributionText(raw: string): string {
-  return raw.replace(
-    // eslint-disable-next-line no-control-regex
-    /[\u0000-\u001f\u007f-\u009f\u200b-\u200f\u202a-\u202e\u2066-\u2069\ufeff]/g,
-    '',
-  );
-}
-
 /** Remove JSON-LD decoration fields that may have leaked from a hand-crafted
  *  file where the attacker nested `@type` / `@id` inside a spot/route. Without
  *  this, the subsequent `{ ...s as Spot }` spread would carry them into store
@@ -43,6 +33,26 @@ function stripJsonLdKeys(obj: Record<string, unknown>): void {
   delete obj['@type'];
   delete obj['@id'];
   delete obj.itinerary;
+}
+
+/** 024: archives whose photos may carry a public-domain-archive photoMeta.
+ *  Exact hostname match only — no suffix match, so lookalike subdomains fail. */
+const ARCHIVE_HOSTS = new Set([
+  'commons.wikimedia.org',
+  'tcmb.culture.tw',
+  'openmuseum.tw',
+  'ahonline.drnh.gov.tw',
+  'www.flickr.com',
+  'archive.org',
+]);
+
+function isArchiveUrl(raw: unknown): raw is string {
+  if (typeof raw !== 'string' || !raw.startsWith('https://')) return false;
+  try {
+    return ARCHIVE_HOSTS.has(new URL(raw).hostname.toLowerCase());
+  } catch {
+    return false; // malformed URL
+  }
 }
 
 function sanitizeAuthorUrl(raw: unknown): string | null {
@@ -152,18 +162,35 @@ export function migrateProject(data: Record<string, unknown>): Project {
       const author = pm.author;
       const authorUrl = pm.authorUrl;
       const sourceUrl = pm.sourceUrl;
-      const validSource = source === 'wikimedia-commons';
-      const validSourceUrl = typeof sourceUrl === 'string' && sourceUrl.startsWith('https://commons.wikimedia.org/');
-      if (validSource && validSourceUrl
+      // 024: three sources, each with its own sourceUrl rule (all-or-nothing):
+      //   wikimedia-commons     → https://commons.wikimedia.org/…
+      //   maintainer            → sourceUrl must be null (own photo, nothing to link)
+      //   public-domain-archive → https URL on ARCHIVE_HOSTS
+      let validSourceUrl: string | null | undefined;
+      if (source === 'wikimedia-commons') {
+        if (typeof sourceUrl === 'string' && sourceUrl.startsWith('https://commons.wikimedia.org/')) validSourceUrl = sourceUrl;
+      } else if (source === 'maintainer') {
+        if (sourceUrl === null || sourceUrl === undefined) validSourceUrl = null;
+      } else if (source === 'public-domain-archive') {
+        if (isArchiveUrl(sourceUrl)) validSourceUrl = sourceUrl;
+      }
+      if (validSourceUrl !== undefined
           && typeof license === 'string' && typeof author === 'string') {
         photoMeta = {
-          source: 'wikimedia-commons',
-          license: license.slice(0, 80),
-          // sanitize: strip control / RTL / zero-width chars to prevent display hijack in AI output
-          author: sanitizeAttributionText(author.slice(0, 120)),
+          source: source as PhotoMeta['source'],
+          // sanitize: strip control / bidi / invisible chars to prevent display hijack in AI output
+          license: stripUnsafeChars(license.slice(0, 80)),
+          author: stripUnsafeChars(author.slice(0, 120)),
           authorUrl: sanitizeAuthorUrl(authorUrl),
-          sourceUrl: sourceUrl as string,
+          sourceUrl: validSourceUrl,
         };
+        const origin = typeof pm.origin === 'string' ? stripUnsafeChars(pm.origin.slice(0, 200)).trim() : '';
+        if (origin) photoMeta.origin = origin;
+        const published = pm.published;
+        if (typeof published === 'number' && Number.isInteger(published)
+            && published >= 1800 && published <= new Date().getFullYear()) {
+          photoMeta.published = published;
+        }
       }
     }
 

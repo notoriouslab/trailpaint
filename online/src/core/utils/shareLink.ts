@@ -35,6 +35,9 @@ export function compactProject(project: Project, includePhoto = false): Record<s
           uu: s.photoMeta.authorUrl,
           su: s.photoMeta.sourceUrl,
         };
+        // 024 archive photos: origin / published year
+        if (s.photoMeta.origin) (o.pm as Record<string, unknown>).og = s.photoMeta.origin;
+        if (s.photoMeta.published) (o.pm as Record<string, unknown>).pb = s.photoMeta.published;
       }
       // v3+ scripture_refs (009): keep so receivers can link to YouVersion etc.
       if (s.scripture_refs && s.scripture_refs.length > 0) {
@@ -106,6 +109,8 @@ export function expandProject(c: Record<string, unknown>): Project {
         author: pm.au,
         authorUrl: pm.uu,
         sourceUrl: pm.su,
+        origin: pm.og,
+        published: pm.pb,
       };
     }
     // v3+ scripture_refs (009): expand back as-is; migrateProject re-validates.

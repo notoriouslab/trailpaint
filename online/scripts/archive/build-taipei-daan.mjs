@@ -10,7 +10,7 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { spawn } from 'node:child_process';
-import { join, dirname } from 'node:path';
+import { join, dirname, resolve, sep } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 
@@ -28,8 +28,8 @@ const STANDING = 3000;
 const SEGMENT = {
   id: 'daan',
   name: '大安百年',
-  subtitle: '1904—今 從柴竹圍水田到都市之肺',
-  description: '拉動時間軸，看臺北大安區一百多年來的公共建設如何一個個出現：日治時期的監獄與學校、戰後的國中國小與高架道路、九〇年代以後的森林公園、捷運與運動中心。底圖依年份切換為同時代的中研院歷史地圖（1904 臺灣堡圖、1945 美軍市街圖、1955 地形圖、1966 衛星影像、1989 與 1993 經建版地形圖）。範圍以今日大安區界為準（1990 年行政區重劃後）；年份為「在現址啟用」之年，每點附來源。',
+  subtitle: '1762—今 從水圳稻田到都市之肺',
+  description: '拉動時間軸，看臺北大安區兩百多年來的公共建設與地方記憶如何一個個出現：清代的瑠公圳、日治時期的農事試驗場、監獄、學校與教授宿舍、戰後的眷村、紫藤廬與殷海光故居、高架道路與東區百貨，到九〇年代以後的森林公園、富陽生態公園、捷運與運動中心。底圖依年份切換為同時代的中研院歷史地圖（1904 臺灣堡圖、1945 美軍市街圖、1955 地形圖、1966 衛星影像、1989 與 1993 經建版地形圖）。範圍以今日大安區界為準（1990 年行政區重劃後）；年份為「在現址啟用」之年，每點附來源。',
   color: '#065f46',
   center: [25.027, 121.541],
   zoom: 14,
@@ -69,6 +69,16 @@ const STORY_IDS = new Set([
   'mrt-daan-park',
   'mrt-xinyi-anhe',
   'heping-basketball-gym',
+  // 024: water, farmland, houses and memory places
+  'liugong-ntu-canal',
+  'agri-station-chanchu',
+  'qingtian-76',
+  'huanmin-village',
+  'zitenglu',
+  'yin-haiguang-residence',
+  'horikawa-drain',
+  'sogo-zhongxiao',
+  'fuyang-eco-park',
 ]);
 const missing = [...STORY_IDS].filter((id) => !POOL.items.some((it) => it.id === id));
 if (missing.length) throw new Error(`STORY_IDS not in pool: ${missing.join(', ')}`);
@@ -82,6 +92,7 @@ const SPOTS = [...STORY_IDS]
     era: { start: it.start, end: it.end ?? STANDING },
     desc: `${it.desc}\n\n來源：${it.sources.map((x) => x.title).join('、')}`,
     refs: it.sources.map((x) => x.url),
+    photo_local: it.photo?.local ? it.photo : null,
     photo_file: it.photo?.file,
     photo_query: it.photo?.query ?? null,
   }));
@@ -89,8 +100,8 @@ const SPOTS = [...STORY_IDS]
 
 const COVER_HTML_SPEC = {
   title: '大安區百年',
-  subtitle: '從柴竹圍水田到都市之肺',
-  badge: '1904 — 今',
+  subtitle: '從水圳稻田到都市之肺',
+  badge: '1762 — 今',
 };
 
 /** Exact Commons file — used when search returns the wrong subject. */
@@ -186,6 +197,52 @@ function buildPhotoMeta(hit) {
   };
 }
 
+// 024 D3: photos kept in the repo (data/places/photos/), already resized and
+// EXIF-stripped. kind 'maintainer' = the maintainer's own photo;
+// 'public-domain-archive' = economic rights expired (著作權法 §34, published
+// 1975 or earlier), with author / sourceUrl / origin / published in the pool.
+const PHOTOS_DIR = join(ROOT, 'data', 'places', 'photos') + sep;
+const MAX_PHOTO_DATAURL = 1024 * 1024; // migrateProject SINGLE_PHOTO_LIMIT
+
+function loadLocalPhoto(p) {
+  const file = resolve(ROOT, p.local);
+  if (!file.startsWith(PHOTOS_DIR)) throw new Error(`photo.local outside data/places/photos: ${p.local}`);
+  const buf = readFileSync(file);
+  if (buf[0] !== 0xff || buf[1] !== 0xd8) throw new Error(`not a JPEG: ${p.local}`);
+  const photo = `data:image/jpeg;base64,${buf.toString('base64')}`;
+  if (photo.length >= MAX_PHOTO_DATAURL) throw new Error(`photo over 1 MB as data URL: ${p.local}`);
+  let meta;
+  if (p.kind === 'maintainer') {
+    meta = { source: 'maintainer', license: 'CC BY 4.0', author: 'Jacob Mei', authorUrl: null, sourceUrl: null };
+  } else if (p.kind === 'public-domain-archive') {
+    if (!p.sourceUrl || !Number.isInteger(p.published) || p.published > 1975) {
+      throw new Error(`archive photo needs sourceUrl and published <= 1975: ${p.local}`);
+    }
+    meta = {
+      source: 'public-domain-archive',
+      license: '著作財產權已消滅（著作權法 §34）',
+      author: p.author || '佚名',
+      authorUrl: null,
+      sourceUrl: p.sourceUrl,
+      ...(p.origin ? { origin: p.origin } : {}),
+      published: p.published,
+    };
+  } else {
+    throw new Error(`unknown photo.kind ${p.kind}: ${p.local}`);
+  }
+  return { photo, meta };
+}
+
+function creditLink(meta) {
+  if (meta.source === 'maintainer') return '自行拍攝';
+  if (meta.source === 'public-domain-archive') return `[典藏頁](${meta.sourceUrl})`;
+  return `[Commons File](${meta.sourceUrl})`;
+}
+
+function creditOrigin(meta) {
+  return [meta.origin, meta.published].filter(Boolean).join('，');
+}
+
 function makeCoverHtml(spec, w, h) {
   const titleSize = Math.round(h * 0.11);
   const subtitleSize = Math.round(h * 0.045);
@@ -258,6 +315,13 @@ for (let i = 0; i < SPOTS.length; i++) {
     historical_refs: s.refs,
     era: s.era,
   };
+  if (s.photo_local) {
+    const { photo, meta } = loadLocalPhoto(s.photo_local);
+    process.stdout.write(`✓ local ${s.photo_local.local} (${meta.license})\n`);
+    credits.push({ num, title: s.title, file: s.photo_local.local, meta });
+    projSpots.push({ ...baseSpot, photo, photoMeta: meta });
+    continue;
+  }
   if (!s.photo_file && !s.photo_query) {
     process.stdout.write('no photo (by design)\n');
     projSpots.push(baseSpot);
@@ -322,7 +386,7 @@ for (const [name, w, h] of [['cover', 1080, 1080], ['og', 1200, 630], [`${SEGMEN
 const storyJson = {
   id: 'taipei-daan',
   title: '大安區百年',
-  subtitle: '1904—今 臺北大安區公共建設時空地圖',
+  subtitle: '1762—今 臺北大安區公共建設與地方記憶時空地圖',
   description: SEGMENT.description,
   locale: 'zh-TW',
   cover: 'cover.jpg',
@@ -334,7 +398,7 @@ const storyJson = {
   },
   og: {
     title: '大安區百年 — TrailPaint Stories',
-    description: `互動時空地圖：拉動時間軸，看臺北大安區 ${SPOTS.length} 處公共建設從 1904 年到今天一個個出現，底圖隨年份切換為中研院 1904、1945、1955、1966、1989、1993 歷史地圖。`,
+    description: `互動時空地圖：拉動時間軸，看臺北大安區 ${SPOTS.length} 處公共建設與地方記憶從 1762 年的瑠公圳到今天一個個出現，底圖隨年份切換為中研院 1904、1945、1955、1966、1989、1993 歷史地圖。`,
     image: 'og.jpg',
   },
   stories: [{
@@ -357,15 +421,15 @@ await writeFile(join(STORY_DIR, 'story.json'), JSON.stringify(storyJson, null, 2
 const lines = [
   '# 大安區百年 — 圖片來源與授權',
   '',
-  '本故事為 **非營利個人展示** 使用。所有 spot 圖片來自 Wikimedia Commons，按各檔案 PD 或 CC BY/CC BY-SA 授權使用。Cover/og/thumb 為 TrailPaint 程式生成 placeholder。',
+  '本故事為 **非營利個人展示** 使用。spot 圖片有三種來源：Wikimedia Commons（按各檔案 PD 或 CC BY/CC BY-SA 授權使用）、維護者自行拍攝（CC BY 4.0），以及著作財產權已消滅（著作權法 §34，1975 年（含）以前公開）的老照片。Cover/og/thumb 為 TrailPaint 程式生成 placeholder。',
   '',
   `生成日期：${new Date().toISOString().slice(0, 10)}`,
   '',
   '## Spot 照片',
   '',
-  '| # | Spot | 作者 | 授權 | 來源 |',
-  '|---|---|---|---|---|',
-  ...credits.map((c) => `| ${c.num} | ${c.title} | ${c.meta.author} | ${c.meta.license} | [Commons File](${c.meta.sourceUrl}) |`),
+  '| # | Spot | 作者 | 授權 | 來源 | 出處／發表年 |',
+  '|---|---|---|---|---|---|',
+  ...credits.map((c) => `| ${c.num} | ${c.title} | ${c.meta.author} | ${c.meta.license} | ${creditLink(c.meta)} | ${creditOrigin(c.meta)} |`),
   '',
   '## 年份與位置考證',
   '',

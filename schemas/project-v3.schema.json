@@ -161,15 +161,15 @@
       }
     },
     "PhotoMeta": {
-      "description": "Attribution metadata for a CC-licensed photo (Wikimedia Commons). Rendered as small text under the photo in Player/Editor.",
+      "description": "Attribution metadata for an embedded photo: a CC-licensed Wikimedia Commons file, the site maintainer's own photo, or a public-domain archive photo. Rendered as small text under the photo in Player/Editor.",
       "type": "object",
-      "required": ["source", "license", "author", "sourceUrl"],
+      "required": ["source", "license", "author"],
       "additionalProperties": false,
       "properties": {
         "source": {
-          "description": "Origin of the photo. Currently only 'wikimedia-commons'; may extend in future.",
+          "description": "Origin of the photo. 'wikimedia-commons': sourceUrl is the Commons File: page. 'maintainer' (TrailPaint 1.8.1+): the maintainer's own photo, sourceUrl null. 'public-domain-archive' (TrailPaint 1.8.1+): a photo whose copyright has expired, sourceUrl is its catalogue page on an allow-listed archive.",
           "type": "string",
-          "enum": ["wikimedia-commons"]
+          "enum": ["wikimedia-commons", "maintainer", "public-domain-archive"]
         },
         "license": {
           "description": "License identifier (e.g. 'CC BY-SA 4.0', 'CC BY 2.0', 'Public Domain').",
@@ -187,9 +187,19 @@
           ]
         },
         "sourceUrl": {
-          "description": "URL to the Commons File: page (required for CC compliance).",
-          "type": "string",
-          "format": "uri"
+          "description": "URL to the photo's source page (required for CC compliance). Commons: a commons.wikimedia.org File: page. Archive: https on commons.wikimedia.org, tcmb.culture.tw, openmuseum.tw, ahonline.drnh.gov.tw, www.flickr.com or archive.org (exact hostname). Null for maintainer photos.",
+          "oneOf": [
+            { "type": "string", "format": "uri" },
+            { "type": "null" }
+          ]
+        },
+        "origin": {
+          "description": "TrailPaint 1.8.1+, archive photos. Book, periodical or postcard the photo was first published in (max 200 chars).",
+          "type": "string"
+        },
+        "published": {
+          "description": "TrailPaint 1.8.1+, archive photos. Year the photo was first published (1800 to the current year).",
+          "type": "integer"
         }
       }
     },

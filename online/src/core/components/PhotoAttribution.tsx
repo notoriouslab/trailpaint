@@ -12,8 +12,17 @@ export function PhotoAttribution({ meta }: { meta: PhotoMeta | undefined }) {
       {meta.authorUrl ? (
         <a href={meta.authorUrl} target="_blank" rel="noopener noreferrer">{meta.author}</a>
       ) : meta.author}
-      , {meta.license} —{' '}
-      <a href={meta.sourceUrl} target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>
+      , {meta.license}
+      {/* 024: own photos have nothing to link; archive photos link their catalogue page */}
+      {meta.source === 'maintainer' && <> — {t('player.photo.maintainer')}</>}
+      {meta.sourceUrl && (
+        <>
+          {' '}—{' '}
+          <a href={meta.sourceUrl} target="_blank" rel="noopener noreferrer">
+            {meta.source === 'public-domain-archive' ? t('player.photo.archive') : 'Wikimedia Commons'}
+          </a>
+        </>
+      )}
     </div>
   );
 }
