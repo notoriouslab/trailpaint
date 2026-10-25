@@ -3,7 +3,7 @@
 URL: https://trailpaint.org/stories/
 Parent: https://trailpaint.org/
 Languages: zh-TW / en / ja
-Version: 1.7.0
+Version: 1.8.0
 
 ## 這是什麼 / What is This
 

@@ -8,7 +8,7 @@
     "name": "NotoriousLab",
     "url": "https://github.com/notoriouslab"
   },
-  "version": "1.7.0",
+  "version": "1.8.0",
   "license": "GPL-3.0",
   "languages": ["zh-TW", "en", "ja"],
   "capabilities": {
@@ -84,7 +84,7 @@
     {
       "id": "story-player",
       "name": "Story Player Auto-Playback",
-      "description": "Standalone entry for auto-guided playback: fly-to animation through each spot, photo popups, playback interval and loop control, 5 basemaps plus 16 historical overlays (Taiwan 1897/1904/1921/1945/1955/1966/1989/1993 + China 7 dynasties from CCTS: Han BC7 / Three Kingdoms 262 / Tang 741 / Song 1208 / Yuan 1330 / Ming 1582 / Qing 1820 + DARE Roman Mediterranean), background music, fullscreen mode, one-click embed code. v1.4 adds time slider (drag to cross-fade historical maps and spot opacity by era), compilations (multi-story chronological dialogue), and electronic postcards (1080×1080 IG square downloads).",
+      "description": "Standalone entry for auto-guided playback: fly-to animation through each spot, photo popups, playback interval and loop control, 5 basemaps plus 16 historical overlays (Taiwan 1897/1904/1921/1945/1955/1966/1989/1993 + China 7 dynasties from CCTS: Han BC7 / Three Kingdoms 262 / Tang 741 / Song 1208 / Yuan 1330 / Ming 1582 / Qing 1820 + DARE Roman Mediterranean), background music, fullscreen mode, one-click embed code. v1.4 adds time slider (drag to cross-fade historical maps and spot opacity by era), compilations (multi-story chronological dialogue), and electronic postcards (1080×1080 IG square downloads). v1.8 adds a site layout: one place across eras, where the map stays on the place and a side panel lists the phases that existed in the slider year, with sources and photos.",
       "url": "https://trailpaint.org/app/player/",
       "tags": ["player", "playback", "narrative", "embed", "fullscreen", "compilation", "time-slider"]
     },

@@ -4,7 +4,7 @@
 
 > **Hand-drawn trail map maker** — turn a journey into an illustrated map that tells its story. No backend, installable PWA, auto-detected trilingual UI.
 
-[![Version](https://img.shields.io/badge/version-1.7.0-orange.svg)](https://github.com/notoriouslab/trailpaint/releases)
+[![Version](https://img.shields.io/badge/version-1.8.0-orange.svg)](https://github.com/notoriouslab/trailpaint/releases)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6.svg)](https://www.typescriptlang.org/)
 [![PWA Ready](https://img.shields.io/badge/PWA-ready-5a0fc8.svg)](https://trailpaint.org/features/install/)

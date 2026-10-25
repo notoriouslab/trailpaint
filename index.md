@@ -133,6 +133,10 @@ Embed code is one-click copy from Player ⚙ menu — paste into WordPress / Wix
 
 `Spot.era?: { start: number; end: number }` — calendar years, BC negative, AD positive, range [-3000, 3000]. Drives postcard era stamp + TimeSlider opacity fade. 17 historical segments / 150 spots already tagged: Paul × 3, Galilean ministry × 2, Passion Week × 3, Zhang Qian × 2, Xuanzang × 2, Marco Polo × 2, Wen Tianxiang × 2, Xu Xiake × 1. Modern stories (Taiwan hikes, 19th-century missionaries) stay era-agnostic intentionally — their spots remain visible at any TimeSlider position.
 
+## v1.8 Site Timeline (2026-10)
+
+A new player layout for one place across eras. The map stays on the place (no fly-to, no popups); dragging the era slider or pressing play lists, in a side panel (below the map on phones), every phase that existed in that year, with full text, sources and photos. Playback steps through the years where a phase appears or disappears. First story: [Da'an Forest Park](https://trailpaint.org/stories/taipei-daan-park/) — one Taipei block from the 1904 rice fields and Chaizhuwei hamlet, the 1932 "Park No. 7" plan, military villages and the International House, to the forest park opened in 1994. Only phases with a quoted source are included.
+
 ## v1.7 Cumulative Timeline + Taiwan Historical Maps (2026-10)
 
 The era slider gains a cumulative mode: at any year it shows only places that already existed (not yet built or already demolished = hidden), with tick spacing chosen from the story's own event span and playback stopping at each event year. Five Academia Sinica Taiwan maps join the overlays (1904 colonial map, 1945 US Army city plans, 1955, 1989 and 1993 topographic maps); in cumulative mode the basemap switches to the latest map not later than the slider year, and maps with no coverage at the story's location are skipped. First story: [Da'an District, a Century](https://trailpaint.org/stories/taipei-daan/) — 24 public facilities in Taipei's Da'an District, 1904 to today, each with its opening year at the current site and sources.
