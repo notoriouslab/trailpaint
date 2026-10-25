@@ -163,6 +163,7 @@ export default function PlaybackControl() {
   // screen for dwellTime, then the year moves on. Re-arms on each year change.
   useEffect(() => {
     if (!site || !playing) return;
+    if (stops.length < 2) { setPlaying(false); return; } // autoplay skips handleSitePlayPause
     timerRef.current = setTimeout(() => {
       const next = nextStop(stops, currentYear);
       if (next !== null) {

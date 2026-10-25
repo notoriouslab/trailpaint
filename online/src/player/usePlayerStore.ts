@@ -16,6 +16,8 @@ interface PlayerState {
   dwellTime: number;
   /** Loop count: 0 = infinite, 1+ = n times */
   loopCount: number;
+  /** Bumped on every loadProject — keys the map so its local state starts fresh */
+  loadSeq: number;
   /** Year shown on the TimeSlider; drives era visibility (shared by map, panel, playback) */
   currentYear: number;
 
@@ -38,8 +40,12 @@ export const usePlayerStore = create<PlayerState>()((set) => ({
   dwellTime: 4000,
   loopCount: 1,
   currentYear: MODERN_TICK.year,
+  loadSeq: 0,
 
-  loadProject: (project) => set({ project, error: null, activeSpotIndex: null, playing: false, currentYear: initialYear(project) }),
+  loadProject: (project) => set((s) => ({
+    project, error: null, activeSpotIndex: null, playing: false,
+    currentYear: initialYear(project), loadSeq: s.loadSeq + 1,
+  })),
   setError: (error) => set({ error, project: null }),
   setActiveSpot: (index) => set({ activeSpotIndex: index }),
   setPlaying: (playing) => set({ playing }),

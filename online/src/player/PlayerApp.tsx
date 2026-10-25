@@ -29,6 +29,7 @@ export default function PlayerApp() {
   const loadProject = usePlayerStore((s) => s.loadProject);
   const setError = usePlayerStore((s) => s.setError);
   const setPlaying = usePlayerStore((s) => s.setPlaying);
+  const loadSeq = usePlayerStore((s) => s.loadSeq);
 
   // URL params
   const [params] = useState(() => new URLSearchParams(window.location.search));
@@ -322,7 +323,7 @@ export default function PlayerApp() {
       <div className="player-main">
         <SpotListPanel />
         <div className="player-map-area">
-          <PlayerMap />
+          <PlayerMap key={loadSeq} />
         </div>
       </div>
       <PlaybackControl />
