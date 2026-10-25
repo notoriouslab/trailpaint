@@ -473,10 +473,29 @@ html, body {
 
   .playback__dots {
     gap: 4px;
+    /* Many spots used to wrap into a tall column once the buttons squeezed the
+       row (24 spots at 390px). One scrollable line instead. */
+    min-width: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
   }
 
   .playback__dot {
     width: 8px;
     height: 8px;
+    flex-shrink: 0;
+  }
+}
+
+/* Phones: no room left for dots between the buttons — the n/total counter
+   already shows progress. Counter takes over the dots' spacer role. */
+@media (max-width: 600px) {
+  .playback__dots {
+    display: none;
+  }
+
+  .playback__counter {
+    margin-left: auto;
   }
 }

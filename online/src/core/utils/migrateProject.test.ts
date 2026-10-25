@@ -593,3 +593,23 @@ describe('migrateProject — hidden and spotIds on routes (pr-6-fixes)', () => {
     expect(p.routes[1].spotIds).toBeUndefined(); // Not an array
   });
 });
+
+describe('migrateProject — eraMode (019)', () => {
+  it('keeps cumulative', () => {
+    expect(migrateProject({ ...validBase, eraMode: 'cumulative' }).eraMode).toBe('cumulative');
+  });
+
+  it('keeps explicit fade', () => {
+    expect(migrateProject({ ...validBase, eraMode: 'fade' }).eraMode).toBe('fade');
+  });
+
+  it('drops unknown / non-string values', () => {
+    for (const bad of ['ghost', 1, { mode: 'cumulative' }, null]) {
+      expect(migrateProject({ ...validBase, eraMode: bad })).not.toHaveProperty('eraMode');
+    }
+  });
+
+  it('absent stays absent', () => {
+    expect(migrateProject({ ...validBase })).not.toHaveProperty('eraMode');
+  });
+});

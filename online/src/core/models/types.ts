@@ -17,6 +17,13 @@ export interface PhotoMeta {
  *
  * Range: [-3000, 3000]. start ≤ end. Both finite numbers.
  */
+/**
+ * How the Player shows spots against the TimeSlider year (019).
+ *   - fade: out-of-era spots fade by distance (016 default)
+ *   - cumulative: only spots whose era contains the year are shown — "what existed then"
+ */
+export type EraMode = 'fade' | 'cumulative';
+
 export interface SpotEra {
   start: number;
   end: number;
@@ -59,6 +66,7 @@ export interface Project {
   spots: Spot[];
   routes: Route[];
   overlay?: OverlaySetting;
+  eraMode?: EraMode;         // 019: absent = 'fade'
 }
 
 /**

@@ -1,13 +1,19 @@
 /* ── Historical map overlay definitions (Academia Sinica 中研院) ── */
 
+import { COVERAGE_ZOOM, OVERLAY_COVERAGE } from './overlayCoverage';
+
 export type OverlayGroup = 'taiwan' | 'china' | 'ancient' | 'explore' | 'war';
 
 export interface OverlayDef {
   id: string;
   labelKey:
     | 'overlay.jm200k1897'
+    | 'overlay.tw1904'
     | 'overlay.jm20k1921'
+    | 'overlay.tw1945'
+    | 'overlay.tw1955'
     | 'overlay.corona1966'
+    | 'overlay.tw1993'
     | 'overlay.hanbc7'
     | 'overlay.threeKingdoms262'
     | 'overlay.tang741'
@@ -43,6 +49,14 @@ export function getOverlayZoomCap(overlayId: string | null | undefined): number 
   return ov?.maxNativeZoom;
 }
 
+/** z{COVERAGE_ZOOM} XYZ tile key "x,y" for a point — matches overlayCoverage.ts. */
+export function coverageTileKey(lat: number, lng: number): string {
+  const n = 2 ** COVERAGE_ZOOM;
+  const x = Math.floor(((lng + 180) / 360) * n);
+  const y = Math.floor(((1 - Math.asinh(Math.tan((lat * Math.PI) / 180)) / Math.PI) / 2) * n);
+  return `${x},${y}`;
+}
+
 /**
  * Return the set of overlay ids whose `bounds` intersect the given spot positions.
  *
@@ -52,6 +66,9 @@ export function getOverlayZoomCap(overlayId: string | null | undefined): number 
  * Edge cases:
  *   - `spotsLatLngs` empty → returns ALL overlay ids (no filtering possible)
  *   - overlay has no `bounds` → kept (treated as global / unbounded)
+ *   - overlay with a probed coverage table (019, overlayCoverage.ts) → kept only
+ *     if at least one spot falls in a ~20 km tile that has real map content
+ *     (the tileserver returns blank tiles where a sheet was never scanned)
  *
  * Pure function (no Leaflet runtime dependency) so it's safe in tests / SSR.
  * Uses simple AABB overlap on [south, west, north, east] rectangles.
@@ -74,7 +91,9 @@ export function getRelevantOverlayIds(
       if (!ov.bounds) return true;
       const [[ovSouth, ovWest], [ovNorth, ovEast]] = ov.bounds;
       // AABB overlap test — boxes overlap unless one is strictly outside the other on any axis
-      return !(ovEast < west || ovWest > east || ovNorth < south || ovSouth > north);
+      if (ovEast < west || ovWest > east || ovNorth < south || ovSouth > north) return false;
+      const covered = OVERLAY_COVERAGE[ov.id];
+      return !covered || spotsLatLngs.some(([lat, lng]) => covered.has(coverageTileKey(lat, lng)));
     }).map((o) => o.id),
   );
 }
@@ -105,6 +124,17 @@ export const OVERLAYS: OverlayDef[] = [
     year: 1897,
   },
   {
+    id: 'tw_1904',
+    labelKey: 'overlay.tw1904',
+    group: 'taiwan',
+    url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=JM20K_1904-jpg-{z}-{x}-{y}',
+    attribution: '中央研究院人社中心GIS專題中心',
+    maxZoom: 18,
+    maxNativeZoom: 17,
+    bounds: BOUNDS_TAIWAN,
+    year: 1904,
+  },
+  {
     id: 'jm20k_1921',
     labelKey: 'overlay.jm20k1921',
     group: 'taiwan',
@@ -116,6 +146,28 @@ export const OVERLAYS: OverlayDef[] = [
     year: 1921,
   },
   {
+    id: 'tw_1945',
+    labelKey: 'overlay.tw1945',
+    group: 'taiwan',
+    url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=AMCityPlan_1945-png-{z}-{x}-{y}',
+    attribution: '中央研究院人社中心GIS專題中心',
+    maxZoom: 18,
+    maxNativeZoom: 17,
+    bounds: BOUNDS_TAIWAN,
+    year: 1945,
+  },
+  {
+    id: 'tw_1955',
+    labelKey: 'overlay.tw1955',
+    group: 'taiwan',
+    url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=TM25K_1955-png-{z}-{x}-{y}',
+    attribution: '中央研究院人社中心GIS專題中心',
+    maxZoom: 18,
+    maxNativeZoom: 15,
+    bounds: BOUNDS_TAIWAN,
+    year: 1955,
+  },
+  {
     id: 'corona_1966',
     labelKey: 'overlay.corona1966',
     group: 'taiwan',
@@ -125,6 +177,17 @@ export const OVERLAYS: OverlayDef[] = [
     maxNativeZoom: 14,
     bounds: BOUNDS_TAIWAN,
     year: 1966,
+  },
+  {
+    id: 'tw_1993',
+    labelKey: 'overlay.tw1993',
+    group: 'taiwan',
+    url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=TM25K_1993-jpg-{z}-{x}-{y}',
+    attribution: '中央研究院人社中心GIS專題中心',
+    maxZoom: 18,
+    maxNativeZoom: 17,
+    bounds: BOUNDS_TAIWAN,
+    year: 1993,
   },
   {
     id: 'han_bc7',

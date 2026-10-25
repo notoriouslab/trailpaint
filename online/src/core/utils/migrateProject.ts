@@ -274,11 +274,14 @@ export function migrateProject(data: Record<string, unknown>): Project {
       music = { url: m.url, autoplay: !!m.autoplay };
     }
   }
+  // Validate optional eraMode (019) — whitelist; anything else drops the field (= 'fade')
+  const eraMode = data.eraMode === 'fade' || data.eraMode === 'cumulative' ? data.eraMode : undefined;
   // Explicit optional-field handling: ...p spread would carry raw input values through
   // even when validation rejects them. Delete = input overridden by sanitized result.
   const result: Project = { ...p, version: 5, routes };
   if (overlay) result.overlay = overlay; else delete result.overlay;
   if (basemapId) result.basemapId = basemapId; else delete result.basemapId;
   if (music) result.music = music; else delete result.music;
+  if (eraMode) result.eraMode = eraMode; else delete result.eraMode;
   return result;
 }

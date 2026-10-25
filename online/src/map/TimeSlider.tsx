@@ -26,8 +26,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import L from 'leaflet';
 import { t } from '../i18n';
-import { HISTORY_SCALE, BIBLE_SCALE, type Scale, type ScaleGroupId } from './eraScales';
-import { getRelevantOverlayIds } from './overlays';
+import { BIBLE_SCALE, scaleForProject, type Scale, type ScaleGroupId } from './eraScales';
+import type { EraMode } from '../core/models/types';
 
 /** Payload delivered to onChange when a tick is selected. */
 export interface TimeSliderTick {
@@ -46,6 +46,20 @@ interface TimeSliderProps {
   onChange: (tick: TimeSliderTick) => void;
   /** Spot positions used to filter ticks down to geographically relevant overlays. */
   spotsLatLngs: ReadonlyArray<readonly [number, number]>;
+  /** 019: 'cumulative' switches to content-first decade ticks. Default 'fade'. */
+  eraMode?: EraMode;
+  /** 019: earliest spot era start — first decade tick in cumulative mode. */
+  earliestEraStart?: number;
+  /**
+   * 019: exact current year. In cumulative mode the thumb sits on the latest
+   * tick <= currentYear and shows the exact year when it differs (e.g. "1994").
+   */
+  currentYear?: number;
+}
+
+/** Tick label: decade ticks carry a literal year label; others use t(labelKey). */
+function tickLabel(tick: Scale): string {
+  return tick.label ?? t(tick.labelKey as Parameters<typeof t>[0]);
 }
 
 /** Sort newest→oldest scale into oldest→newest for left-to-right rendering. */
@@ -53,7 +67,15 @@ function reverseChronological(scale: Scale[]): Scale[] {
   return [...scale].reverse();
 }
 
-export default function TimeSlider({ overlayId, onChange, spotsLatLngs }: TimeSliderProps) {
+export default function TimeSlider({
+  overlayId,
+  onChange,
+  spotsLatLngs,
+  eraMode = 'fade',
+  earliestEraStart,
+  currentYear,
+}: TimeSliderProps) {
+  const cumulative = eraMode === 'cumulative';
   const containerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const draggingRef = useRef(false);
@@ -66,18 +88,21 @@ export default function TimeSlider({ overlayId, onChange, spotsLatLngs }: TimeSl
     if (scaleGroup === 'bible') {
       return reverseChronological(BIBLE_SCALE);
     }
-    const relevantIds = getRelevantOverlayIds(spotsLatLngs);
-    const filtered = HISTORY_SCALE.filter(
-      (tick) => !tick.overlayId || relevantIds.has(tick.overlayId),
-    );
-    return reverseChronological(filtered);
-  }, [spotsLatLngs, scaleGroup]);
+    return reverseChronological(scaleForProject(spotsLatLngs, eraMode, earliestEraStart));
+  }, [spotsLatLngs, scaleGroup, eraMode, earliestEraStart]);
 
   const activeIndex = useMemo(() => {
+    // Cumulative (019): content-first — thumb follows the year, not the overlay
+    // (several decade ticks share one map). Latest tick <= currentYear.
+    if (cumulative && currentYear !== undefined) {
+      let idx = 0;
+      scale.forEach((tick, i) => { if (tick.year <= currentYear) idx = i; });
+      return idx;
+    }
     if (!overlayId) return scale.length - 1; // modern is rightmost after reversal
     const idx = scale.findIndex((tick) => tick.overlayId === overlayId);
     return idx === -1 ? scale.length - 1 : idx;
-  }, [overlayId, scale]);
+  }, [overlayId, scale, cumulative, currentYear]);
 
   const lastFiredIndexRef = useRef<number>(activeIndex);
   useEffect(() => {
@@ -119,7 +144,10 @@ export default function TimeSlider({ overlayId, onChange, spotsLatLngs }: TimeSl
   };
 
   const fireChangeIfNew = (idx: number) => {
-    if (idx === lastFiredIndexRef.current) return;
+    // Cumulative (019): the thumb can rest on a tick while the exact year differs
+    // (e.g. 1904 on the 1900 tick) — tapping that tick must still snap to 1900.
+    const offTick = cumulative && currentYear !== undefined && currentYear !== scale[idx].year;
+    if (idx === lastFiredIndexRef.current && !offTick) return;
     lastFiredIndexRef.current = idx;
     const tick = scale[idx];
     onChange({
@@ -150,11 +178,16 @@ export default function TimeSlider({ overlayId, onChange, spotsLatLngs }: TimeSl
   };
 
   const activeTick = scale[activeIndex];
+  // Exact year when a spot jump landed between ticks (e.g. 1994 on the 1990 tick).
+  const thumbLabel = cumulative && currentYear !== undefined && currentYear !== activeTick.year
+    ? String(currentYear)
+    : tickLabel(activeTick);
   const activeRatio = scale.length === 1 ? 0 : activeIndex / (scale.length - 1);
 
   return (
     <div className="time-slider time-slider--horizontal" ref={containerRef}>
       <div className="time-slider__pill">
+        {!cumulative && (
         <div className="time-slider__group-toggle" role="radiogroup" aria-label={t('timeSlider.scaleGroup')}>
           <button
             type="button"
@@ -179,6 +212,7 @@ export default function TimeSlider({ overlayId, onChange, spotsLatLngs }: TimeSl
             📖
           </button>
         </div>
+        )}
         <div
           className="time-slider__track"
           ref={trackRef}
@@ -191,7 +225,7 @@ export default function TimeSlider({ overlayId, onChange, spotsLatLngs }: TimeSl
           aria-valuemin={0}
           aria-valuemax={scale.length - 1}
           aria-valuenow={activeIndex}
-          aria-valuetext={t(activeTick.labelKey as Parameters<typeof t>[0])}
+          aria-valuetext={thumbLabel}
           tabIndex={0}
         >
           <div className="time-slider__rail" />
@@ -199,7 +233,7 @@ export default function TimeSlider({ overlayId, onChange, spotsLatLngs }: TimeSl
             const ratio = scale.length === 1 ? 0 : i / (scale.length - 1);
             return (
               <span
-                key={`${tick.year}-${tick.labelKey}`}
+                key={`${tick.year}-${tick.labelKey}-${tick.label ?? ''}`}
                 className={`time-slider__tick${i === activeIndex ? ' time-slider__tick--active' : ''}`}
                 style={{ left: `${ratio * 100}%` }}
                 aria-hidden="true"
@@ -211,7 +245,7 @@ export default function TimeSlider({ overlayId, onChange, spotsLatLngs }: TimeSl
             style={{ left: `${activeRatio * 100}%` }}
           >
             <span className="time-slider__thumb-label">
-              {t(activeTick.labelKey as Parameters<typeof t>[0])}
+              {thumbLabel}
             </span>
           </div>
         </div>

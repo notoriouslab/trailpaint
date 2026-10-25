@@ -5,7 +5,7 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import { eraOpacity, sanitizeEra } from './eraFade';
+import { eraOpacity, eraVisible, sanitizeEra } from './eraFade';
 
 describe('eraOpacity', () => {
   it('era undefined → opacity 1 (era-agnostic spots always visible)', () => {
@@ -112,5 +112,35 @@ describe('sanitizeEra', () => {
     expect(sanitizeEra({ start: -3000, end: -3000 })).toEqual({ start: -3000, end: -3000 });
     expect(sanitizeEra({ start: 3000, end: 3000 })).toEqual({ start: 3000, end: 3000 });
     expect(sanitizeEra({ start: -3000, end: 3000 })).toEqual({ start: -3000, end: 3000 });
+  });
+});
+
+describe('eraVisible (019 cumulative mode)', () => {
+  const prison = { start: 1904, end: 1963 };
+
+  it('fade mode is always visible (opacity handles fading)', () => {
+    expect(eraVisible(prison, 1800, 'fade')).toBe(true);
+    expect(eraVisible(prison, 2000)).toBe(true);
+  });
+
+  it('cumulative: spot without era is always visible', () => {
+    expect(eraVisible(undefined, 1800, 'cumulative')).toBe(true);
+  });
+
+  it('cumulative: visible inside the era window', () => {
+    expect(eraVisible(prison, 1945, 'cumulative')).toBe(true);
+  });
+
+  it('cumulative: hidden before it was built', () => {
+    expect(eraVisible(prison, 1897, 'cumulative')).toBe(false);
+  });
+
+  it('cumulative: hidden after it was demolished', () => {
+    expect(eraVisible(prison, 1966, 'cumulative')).toBe(false);
+  });
+
+  it('cumulative: boundary years are inclusive', () => {
+    expect(eraVisible(prison, 1904, 'cumulative')).toBe(true);
+    expect(eraVisible(prison, 1963, 'cumulative')).toBe(true);
   });
 });

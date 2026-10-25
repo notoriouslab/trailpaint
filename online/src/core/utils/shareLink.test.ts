@@ -161,3 +161,22 @@ describe('compactProject / expandProject — hidden and spotIds on routes (pr-6-
     expect(r.spotIds).toEqual(['s1', 's2']);
   });
 });
+
+describe('compactProject / expandProject — eraMode (019)', () => {
+  it('round-trips cumulative via em key', () => {
+    const original: Project = { ...mkProject([{ ...baseSpot }]), eraMode: 'cumulative' };
+    const compact = compactProject(original);
+    expect(compact.em).toBe('c');
+    expect(expandProject(compact).eraMode).toBe('cumulative');
+  });
+
+  it('fade (or absent) writes no em key', () => {
+    expect(compactProject({ ...mkProject([{ ...baseSpot }]), eraMode: 'fade' })).not.toHaveProperty('em');
+    expect(compactProject(mkProject([{ ...baseSpot }]))).not.toHaveProperty('em');
+  });
+
+  it('ignores unknown em values', () => {
+    const compact = { ...compactProject(mkProject([{ ...baseSpot }])), em: 'x' };
+    expect(expandProject(compact)).not.toHaveProperty('eraMode');
+  });
+});

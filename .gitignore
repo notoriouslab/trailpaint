@@ -11,3 +11,7 @@ dist/
 stories/**/photos/
 .claude-memory
 opencode.json
+
+# patch leftovers
+*.rej
+*.orig

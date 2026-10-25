@@ -118,4 +118,22 @@ describe('getRelevantOverlayIds', () => {
     // Roman Mediterranean bounds (east edge 55) does not reach Taipei (lng 121.5)
     expect(result.has('rome_200')).toBe(false);
   });
+
+  it('019 island-wide overlays match both Taipei and Tainan', () => {
+    const twIds = ['tw_1904', 'tw_1945', 'tw_1955', 'tw_1993'];
+    const daan = getRelevantOverlayIds([[25.03, 121.54]]);
+    const tainan = getRelevantOverlayIds([[22.99, 120.2]]);
+    for (const id of twIds) {
+      expect(daan.has(id)).toBe(true);
+      expect(tainan.has(id)).toBe(true);
+    }
+  });
+
+  it('coverage table drops overlays with blank tiles at every spot', () => {
+    // Corona 1966 imagery covers Taipei but not Kaohsiung (overlayCoverage.ts)
+    expect(getRelevantOverlayIds([[25.03, 121.54]]).has('corona_1966')).toBe(true);
+    expect(getRelevantOverlayIds([[22.63, 120.3]]).has('corona_1966')).toBe(false);
+    // One covered spot is enough to keep the overlay for a multi-region story
+    expect(getRelevantOverlayIds([[22.63, 120.3], [25.03, 121.54]]).has('corona_1966')).toBe(true);
+  });
 });

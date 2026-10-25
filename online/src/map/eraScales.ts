@@ -6,7 +6,8 @@
  * Design ref: openspec/changes/2026-05-03-016-time-slider-postcard/design.md D7
  */
 
-import { OVERLAYS } from './overlays';
+import { OVERLAYS, getRelevantOverlayIds } from './overlays';
+import type { EraMode } from '../core/models/types';
 
 export type ScaleGroupId = 'history' | 'bible';
 
@@ -21,6 +22,12 @@ export interface Scale {
    * - string = overlay shown when slider snaps here
    */
   overlayId?: string;
+  /**
+   * Literal label (019 decade ticks, e.g. "1970"); when set the slider shows it
+   * instead of t(labelKey). A plain year, not "1970s": the tick means "in 1970",
+   * so a 1975 building correctly appears only from the 1980 tick on.
+   */
+  label?: string;
 }
 
 /** Tick representing "modern day / no historical overlay". Always at top of slider. */
@@ -91,4 +98,74 @@ export function snapToNearestTick(year: number, scale: Scale[]): Scale {
     }
   }
   return nearest;
+}
+
+/** From this year on, cumulative mode shows the modern basemap instead of an old map (019 D7). */
+export const MODERN_BASEMAP_FROM = 2000;
+
+/**
+ * Basemap for a given year in cumulative mode (019 D7): the latest geographically
+ * relevant overlay not later than `year` — never show a map from the future.
+ * Returns undefined (modern basemap) for years >= MODERN_BASEMAP_FROM or when no
+ * relevant overlay is old enough.
+ */
+export function overlayForYear(year: number, relevantIds: ReadonlySet<string>): string | undefined {
+  if (year >= MODERN_BASEMAP_FROM) return undefined;
+  // HISTORY_SCALE is newest → oldest, so the first match is the latest map <= year.
+  const tick = HISTORY_SCALE.find(
+    (t) => t.overlayId !== undefined && relevantIds.has(t.overlayId) && t.year <= year,
+  );
+  return tick?.overlayId;
+}
+
+/** Most content ticks a cumulative slider shows (plus modern) — fits a 390px phone. */
+export const MAX_CONTENT_TICKS = 15;
+const TICK_STEPS = [10, 20, 25, 50, 100];
+
+/**
+ * Tick spacing for a cumulative story spanning [startYear, nowYear] (019 D7):
+ * the smallest round step keeping the slider within MAX_CONTENT_TICKS.
+ * Taipei 大安 from 1904 → 10 years; a Tainan story from 1624 → 50 years.
+ */
+export function tickStepFor(startYear: number, nowYear: number): number {
+  for (const step of TICK_STEPS) {
+    const count = Math.ceil((nowYear - Math.floor(startYear / step) * step) / step);
+    if (count <= MAX_CONTENT_TICKS) return step;
+  }
+  return TICK_STEPS[TICK_STEPS.length - 1];
+}
+
+/**
+ * Time scale for a given project, newest → oldest (019 D7).
+ *   - fade (016 default): one tick per geographically relevant overlay.
+ *   - cumulative: content-first — evenly spaced ticks (tickStepFor: 10 years
+ *     for a century, wider for older stories) from the earliest spot era start
+ *     up to now, then modern. Each tick carries the
+ *     basemap from overlayForYear. Maps follow content, not the other way round.
+ * TimeSlider and PlayerMap must both use this so they agree on the ticks.
+ */
+export function scaleForProject(
+  spotsLatLngs: ReadonlyArray<readonly [number, number]>,
+  eraMode: EraMode = 'fade',
+  earliestEraStart?: number,
+): Scale[] {
+  const relevantIds = getRelevantOverlayIds(spotsLatLngs);
+  if (eraMode !== 'cumulative' || earliestEraStart === undefined) {
+    return HISTORY_SCALE.filter((tick) => !tick.overlayId || relevantIds.has(tick.overlayId));
+  }
+  const step = tickStepFor(earliestEraStart, MODERN_TICK.year);
+  const ticks: Scale[] = [];
+  const first = Math.floor(earliestEraStart / step) * step;
+  for (let year = first; year < MODERN_TICK.year; year += step) {
+    ticks.push({
+      year,
+      labelKey: 'era.modern', // unused for display (label wins); keeps Scale.labelKey a valid key
+      label: String(year),
+      // First tick = "just before the story starts": show the map of the first
+      // event's year (e.g. Taipei 1904 堡圖 on the 1900 tick, not the coarse
+      // 1897 island map). The only place a map may be a few years "ahead".
+      overlayId: overlayForYear(year === first ? earliestEraStart : year, relevantIds),
+    });
+  }
+  return [MODERN_TICK, ...ticks.reverse()];
 }

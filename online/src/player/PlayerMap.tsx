@@ -9,9 +9,9 @@ import LocateButton from '../map/LocateButton';
 import TimeSlider from '../map/TimeSlider';
 import MapToast from '../map/MapToast';
 import PostcardButton from './PostcardButton';
-import { getOverlayZoomCap } from '../map/overlays';
-import { HISTORY_SCALE, MODERN_TICK } from '../map/eraScales';
-import { eraOpacity } from '../map/eraFade';
+import { getOverlayZoomCap, getRelevantOverlayIds } from '../map/overlays';
+import { HISTORY_SCALE, MODERN_TICK, overlayForYear } from '../map/eraScales';
+import { eraOpacity, eraVisible } from '../map/eraFade';
 import { PhotoAttribution } from '../core/components/PhotoAttribution';
 import type { Spot } from '../core/models/types';
 import 'leaflet/dist/leaflet.css';
@@ -212,6 +212,32 @@ export default function PlayerMap() {
     return ids;
   }, [project]);
 
+  // 019 cumulative mode: content-first time axis (decade ticks, exact-year jumps).
+  const eraMode = project.eraMode ?? 'fade';
+  const cumulative = eraMode === 'cumulative';
+  const visibleLatLngs = useMemo(
+    () => project.spots.filter((s) => !hiddenSpotIds.has(s.id)).map((s) => s.latlng),
+    [project, hiddenSpotIds],
+  );
+  const earliestEraStart = useMemo(() => {
+    const starts = project.spots.flatMap((s) => (s.era ? [s.era.start] : []));
+    return starts.length ? Math.min(...starts) : undefined;
+  }, [project]);
+
+  // 019 D3: an active spot that doesn't exist yet (or anymore) at currentYear
+  // pulls the clock to its exact start year, with the latest map not later
+  // than that year. Playback in year order therefore reads as time moving on.
+  useEffect(() => {
+    if (!cumulative || activeIndex === null) return;
+    const era = project.spots[activeIndex]?.era;
+    if (!era || eraVisible(era, currentYear, eraMode)) return;
+    setCurrentYear(era.start);
+    const ovId = overlayForYear(era.start, getRelevantOverlayIds(visibleLatLngs));
+    setOverlay(ovId ? { id: ovId, opacity: overlay?.opacity ?? 0.5 } : null);
+    // Only re-run on spot change — a manual slider drag must not be overridden.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeIndex, cumulative]);
+
   return (
     <MapContainer
       center={project.center}
@@ -235,7 +261,10 @@ export default function PlayerMap() {
       <LocateButton />
       <TimeSlider
         overlayId={overlay?.id ?? null}
-        spotsLatLngs={project.spots.filter(s => !hiddenSpotIds.has(s.id)).map((s) => s.latlng)}
+        spotsLatLngs={visibleLatLngs}
+        eraMode={eraMode}
+        earliestEraStart={earliestEraStart}
+        currentYear={currentYear}
         onChange={(tick) => {
           setCurrentYear(tick.year);
           if (!tick.overlayId) setOverlay(null);
@@ -264,6 +293,9 @@ export default function PlayerMap() {
       {/* Spots */}
       {project.spots.map((spot, i) => {
         if (hiddenSpotIds.has(spot.id)) return null;
+        // 019 cumulative: not built yet / demolished → no marker at all (not
+        // opacity 0, which would leave an invisible click target).
+        if (!eraVisible(spot.era, currentYear, eraMode)) return null;
         return (
           <ActiveMarker
             key={spot.id}

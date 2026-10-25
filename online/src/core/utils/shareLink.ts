@@ -71,6 +71,10 @@ export function compactProject(project: Project, includePhoto = false): Record<s
   if (project.music) {
     out.mu = { u: project.music.url, a: project.music.autoplay ? 1 : 0 };
   }
+  // 019: only the non-default mode travels; absent = 'fade'
+  if (project.eraMode === 'cumulative') {
+    out.em = 'c';
+  }
   return out;
 }
 
@@ -152,6 +156,9 @@ export function expandProject(c: Record<string, unknown>): Project {
     if (typeof mu.u === 'string') {
       project.music = { url: mu.u, autoplay: !!mu.a };
     }
+  }
+  if (c.em === 'c') {
+    project.eraMode = 'cumulative';
   }
   return project;
 }

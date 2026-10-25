@@ -1,0 +1,841 @@
+{
+  "towncode": "63000030",
+  "county": "臺北市",
+  "town": "大安區",
+  "slug": "taipei-daan",
+  "boundary": {
+    "source": "內政部國土測繪中心 鄉鎮市區界（今日行政區，mapshaper simplify 8%）",
+    "ring": [
+      [
+        25.0449,
+        121.5438
+      ],
+      [
+        25.0446,
+        121.5416
+      ],
+      [
+        25.0447,
+        121.5375
+      ],
+      [
+        25.0449,
+        121.5356
+      ],
+      [
+        25.0455,
+        121.5329
+      ],
+      [
+        25.0337,
+        121.5327
+      ],
+      [
+        25.0337,
+        121.5304
+      ],
+      [
+        25.0341,
+        121.5272
+      ],
+      [
+        25.0354,
+        121.5246
+      ],
+      [
+        25.0354,
+        121.5243
+      ],
+      [
+        25.0325,
+        121.5226
+      ],
+      [
+        25.028,
+        121.5217
+      ],
+      [
+        25.0232,
+        121.5253
+      ],
+      [
+        25.0204,
+        121.5285
+      ],
+      [
+        25.0156,
+        121.5335
+      ],
+      [
+        25.013,
+        121.5361
+      ],
+      [
+        25.0113,
+        121.5371
+      ],
+      [
+        25.0086,
+        121.5379
+      ],
+      [
+        25.0086,
+        121.5391
+      ],
+      [
+        25.0081,
+        121.541
+      ],
+      [
+        25.0086,
+        121.5436
+      ],
+      [
+        25.008,
+        121.5442
+      ],
+      [
+        25.008,
+        121.545
+      ],
+      [
+        25.0085,
+        121.5467
+      ],
+      [
+        25.0094,
+        121.548
+      ],
+      [
+        25.0098,
+        121.5493
+      ],
+      [
+        25.0098,
+        121.5513
+      ],
+      [
+        25.0089,
+        121.5524
+      ],
+      [
+        25.0092,
+        121.5535
+      ],
+      [
+        25.0101,
+        121.5545
+      ],
+      [
+        25.0116,
+        121.5553
+      ],
+      [
+        25.012,
+        121.5565
+      ],
+      [
+        25.0119,
+        121.5585
+      ],
+      [
+        25.0103,
+        121.5604
+      ],
+      [
+        25.0101,
+        121.5611
+      ],
+      [
+        25.008,
+        121.5631
+      ],
+      [
+        25.0078,
+        121.5643
+      ],
+      [
+        25.0081,
+        121.566
+      ],
+      [
+        25.01,
+        121.5653
+      ],
+      [
+        25.0113,
+        121.5636
+      ],
+      [
+        25.0134,
+        121.5633
+      ],
+      [
+        25.0137,
+        121.5627
+      ],
+      [
+        25.015,
+        121.5618
+      ],
+      [
+        25.0161,
+        121.5607
+      ],
+      [
+        25.0173,
+        121.5601
+      ],
+      [
+        25.0189,
+        121.5585
+      ],
+      [
+        25.0244,
+        121.5526
+      ],
+      [
+        25.0278,
+        121.5564
+      ],
+      [
+        25.0294,
+        121.5574
+      ],
+      [
+        25.0452,
+        121.5577
+      ],
+      [
+        25.0445,
+        121.5547
+      ],
+      [
+        25.0445,
+        121.5529
+      ],
+      [
+        25.0452,
+        121.5465
+      ],
+      [
+        25.0449,
+        121.5438
+      ]
+    ]
+  },
+  "items": [
+    {
+      "id": "taihoku-prison",
+      "name": "臺北刑務所",
+      "category": "justice",
+      "latlng": [
+        25.032787,
+        121.526697
+      ],
+      "start": 1904,
+      "end": 1963,
+      "desc": "日治時期的臺北監獄，監獄建築建於 1904 年，戰後沿用至 1963 年桃園龜山的新臺北監獄啟用後遷出。圍牆以拆下的臺北府城城牆石材砌成，今僅存金山南路二段北牆與司法新村（榕錦時光生活園區）南牆，列市定古蹟。",
+      "sources": [
+        {
+          "title": "維基百科〈臺北刑務所〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%88%91%E5%8B%99%E6%89%80"
+        },
+        {
+          "title": "維基百科〈臺北監獄圍牆遺蹟〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E7%9B%A3%E7%8D%84%E5%9C%8D%E7%89%86%E9%81%BA%E8%B9%9F"
+        }
+      ],
+      "photo": {
+        "query": "臺北監獄圍牆遺蹟|Taihoku Prison wall"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "taihoku-tech-red-house",
+      "name": "臺北工業學校紅樓（今臺北科技大學）",
+      "category": "education",
+      "latlng": [
+        25.043183,
+        121.534582
+      ],
+      "start": 1926,
+      "end": null,
+      "desc": "臺北科技大學前身為日治時期的臺北州立臺北工業學校。校內紅樓建於 1926 年，初名「御大婚禮二十五周年紀念文庫附屬書庫」，1998 年登錄為市定古蹟「台北工業學校紅樓」，2016 年依原貌修復。",
+      "sources": [
+        {
+          "title": "維基百科〈國立臺北科技大學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E8%87%BA%E5%8C%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北科技大學 紅樓|Taipei Tech red house"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "second-normal-school",
+      "name": "臺北第二師範學校（今臺北教育大學）",
+      "category": "education",
+      "latlng": [
+        25.023385,
+        121.544066
+      ],
+      "start": 1927,
+      "end": null,
+      "desc": "1926 年臺北師範學校的臺灣學生與日本學生衝突爆發學潮，總督府於 1927 年將學校分割，在大安設立臺北第二師範學校，即今國立臺北教育大學前身。1943 年兩校合併時，這裡稱為「芳蘭校區」。",
+      "sources": [
+        {
+          "title": "維基百科〈國立臺北教育大學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E8%87%BA%E5%8C%97%E6%95%99%E8%82%B2%E5%A4%A7%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "國立臺北教育大學|National Taipei University of Education"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "taihoku-imperial-university",
+      "name": "臺北帝國大學（今臺灣大學）",
+      "category": "education",
+      "latlng": [
+        25.016904,
+        121.53384
+      ],
+      "start": 1928,
+      "end": null,
+      "desc": "1928 年創立的臺北帝國大學，是當時日本 9 所帝國大學之一，也是臺灣第一所現代高等教育機構。1945 年後改制易名為國立臺灣大學，今日校總區位於公館。",
+      "sources": [
+        {
+          "title": "維基百科〈國立臺灣大學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E5%A4%A7%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "國立臺灣大學 校門|National Taiwan University gate"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "taihoku-high-school-auditorium",
+      "name": "臺北高等學校講堂（今臺灣師範大學）",
+      "category": "education",
+      "latlng": [
+        25.026294,
+        121.526775
+      ],
+      "start": 1929,
+      "end": null,
+      "desc": "臺灣總督府臺北高等學校的講堂與主體校舍於 1929 年完成。1946 年臺灣省立師範學院借用校舍成立，1949 年臺北高級中學停辦，師範學院接收資源，逐步發展為今日的國立臺灣師範大學。",
+      "sources": [
+        {
+          "title": "維基百科〈臺灣總督府臺北高等學校〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E7%B8%BD%E7%9D%A3%E5%BA%9C%E8%87%BA%E5%8C%97%E9%AB%98%E7%AD%89%E5%AD%B8%E6%A0%A1"
+        },
+        {
+          "title": "維基百科〈國立臺灣師範大學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺灣師範大學 禮堂|National Taiwan Normal University auditorium"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "nishiki-elementary",
+      "name": "錦尋常小學校（今龍安國小）",
+      "category": "education",
+      "latlng": [
+        25.0239,
+        121.53484
+      ],
+      "start": 1929,
+      "end": null,
+      "desc": "1929 年 4 月 1 日創立，校名為臺北市錦尋常小學校，專供臺北帝國大學日籍教授子弟就讀。戰後附近仍有許多臺大、師大教職員宿舍，學生中依然不少教授子弟。",
+      "sources": [
+        {
+          "title": "維基百科〈臺北市大安區龍安國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E9%BE%8D%E5%AE%89%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "file": "Red Building of the Taipei Municipal Longan Elementary School 20260628.jpg"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "daan-public-school",
+      "name": "大安公學校（今大安國小）",
+      "category": "education",
+      "latlng": [
+        25.01995,
+        121.54998
+      ],
+      "start": 1929,
+      "end": null,
+      "desc": "同樣在 1929 年，以臺灣人子弟為對象的「大安公學校」成立，以所在地大安為名。開校時校舍尚未完成，借富田町、龍安坡兩地民房招收兩班學生。1967 年改為今名大安國民小學。和同年的錦尋常小學校對照，可以看見日治時期日臺分校的教育制度。",
+      "sources": [
+        {
+          "title": "維基百科〈臺北市大安區大安國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%A4%A7%E5%AE%89%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": null,
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "third-middle-school",
+      "name": "臺北第三中學校（今師大附中）",
+      "category": "education",
+      "latlng": [
+        25.035164,
+        121.540672
+      ],
+      "start": 1937,
+      "end": null,
+      "desc": "1937 年 4 月 1 日，總督府在今附中原址設立臺北州立臺北第三中學校。戰後改名臺灣省立臺北第三中學、臺北和平中學，1947 年成為師範學院附屬中學，是臺灣第一所國立高級中學。",
+      "sources": [
+        {
+          "title": "維基百科〈國立臺灣師範大學附屬高級中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8%E9%99%84%E5%B1%AC%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "師大附中|The Affiliated Senior High School of National Taiwan Normal University"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "jinhua-junior-high",
+      "name": "金華國中現址",
+      "category": "education",
+      "latlng": [
+        25.031354,
+        121.532788
+      ],
+      "start": 1944,
+      "end": null,
+      "desc": "前身是 1937 年設於西門町的臺北市立家政女學校。1944 年遷至「大安字十二甲」，即今新生南路二段現址；1946 年一度遷往仁愛路，1958 年因校舍不敷使用再遷回新生南路。",
+      "sources": [
+        {
+          "title": "維基百科〈臺北市立金華國民中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E9%87%91%E8%8F%AF%E5%9C%8B%E6%B0%91%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": null,
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "renai-elementary",
+      "name": "仁愛國小",
+      "category": "education",
+      "latlng": [
+        25.035899,
+        121.551347
+      ],
+      "start": 1959,
+      "end": null,
+      "desc": "1959 年創校。當時這一帶住家漸多，鄰近的建安國小已無法負荷，因而增設。學校位於安和路一段。",
+      "sources": [
+        {
+          "title": "維基百科〈臺北市大安區仁愛國民小學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E4%BB%81%E6%84%9B%E5%9C%8B%E6%B0%91%E5%B0%8F%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市仁愛國小|Ren-Ai Elementary School Taipei"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "daan-junior-high",
+      "name": "大安國中",
+      "category": "education",
+      "latlng": [
+        25.031103,
+        121.546207
+      ],
+      "start": 1961,
+      "end": null,
+      "desc": "1961 年 7 月 3 日正式成立，首任校長聶鍾杉，初名臺北市立大安初級中學。",
+      "sources": [
+        {
+          "title": "維基百科〈臺北市立大安國民中學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%A4%A7%E5%AE%89%E5%9C%8B%E6%B0%91%E4%B8%AD%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立大安國中|Da-an Junior High School Taipei"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "ntust",
+      "name": "臺灣工業技術學院（今臺灣科技大學）",
+      "category": "education",
+      "latlng": [
+        25.013686,
+        121.540535
+      ],
+      "start": 1974,
+      "end": null,
+      "desc": "1974 年成立的國立臺灣工業技術學院，是臺灣第一所技術實務型高等教育機構，1997 年改名國立臺灣科技大學，主校區位於公館。",
+      "sources": [
+        {
+          "title": "維基百科〈國立臺灣科技大學〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%B8"
+        }
+      ],
+      "photo": {
+        "query": "國立臺灣科技大學|National Taiwan University of Science and Technology"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "cathay-general-hospital",
+      "name": "國泰綜合醫院",
+      "category": "medical",
+      "latlng": [
+        25.037779,
+        121.55335
+      ],
+      "start": 1977,
+      "end": null,
+      "desc": "1975 年 6 月於仁愛路四段動土，1977 年 2 月 15 日落成開幕，開院時設本館與分館、病床 300 床，並與臺大醫學院及附設醫院建教合作。",
+      "sources": [
+        {
+          "title": "維基百科〈國泰醫療財團法人〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E6%B3%B0%E9%86%AB%E7%99%82%E8%B2%A1%E5%9C%98%E6%B3%95%E4%BA%BA"
+        }
+      ],
+      "photo": {
+        "query": "國泰綜合醫院|Cathay General Hospital Taipei"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "second-funeral-parlor",
+      "name": "臺北市第二殯儀館（今懷愛館）",
+      "category": "civic",
+      "latlng": [
+        25.01358,
+        121.55275
+      ],
+      "start": 1978,
+      "end": null,
+      "desc": "戰後社會快速發展，原有殯葬設施不勝負荷。1978 年市府在辛亥隧道口設立第二殯儀館，今名懷愛館。",
+      "sources": [
+        {
+          "title": "維基百科〈臺北市懷愛館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E6%87%B7%E6%84%9B%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "file": "Taipei Huai Ai Funeral Parlor.jpg"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "jianguo-elevated-road",
+      "name": "建國高架道路",
+      "category": "road",
+      "latlng": [
+        25.0335,
+        121.5375
+      ],
+      "start": 1982,
+      "end": null,
+      "desc": "1977 年市長林洋港決定徵購用地拓寬建國南北路，並改建高架橋。大安段的和平東路至辛亥路段於 1982 年 9 月 1 日通車，1989 年 11 月 30 日全線舉行通車典禮。",
+      "sources": [
+        {
+          "title": "維基百科〈建國南北路〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%BB%BA%E5%9C%8B%E5%8D%97%E5%8C%97%E8%B7%AF"
+        }
+      ],
+      "photo": {
+        "query": "建國高架道路|Jianguo Elevated Road"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "taipei-public-library-main",
+      "name": "臺北市立圖書館總館",
+      "category": "library",
+      "latlng": [
+        25.02895,
+        121.5379
+      ],
+      "start": 1990,
+      "end": null,
+      "desc": "1990 年 11 月 10 日，總館自原古亭圖書館館舍遷至建國南路二段現址，臺北市立圖書館的發展進入新的里程碑。",
+      "sources": [
+        {
+          "title": "維基百科〈臺北市立圖書館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%9C%96%E6%9B%B8%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "臺北市立圖書館 總館|Taipei Public Library main"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "daan-forest-park",
+      "name": "大安森林公園",
+      "category": "park",
+      "latlng": [
+        25.030178,
+        121.535692
+      ],
+      "start": 1994,
+      "end": null,
+      "desc": "位於傳統地名「柴竹圍」一帶，把時間拉回 1904 年，堡圖上就看得到「柴竹圍」三個字。興建前稱為「七號公園」，1994 年 3 月 29 日正式開放，佔地約 25.9 公頃，曾是臺北市區最大的公園，被譽為「都市之肺」。",
+      "sources": [
+        {
+          "title": "維基百科〈大安森林公園〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%AE%89%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92"
+        }
+      ],
+      "photo": {
+        "query": "大安森林公園|Daan Forest Park"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "mrt-daan",
+      "name": "捷運大安站",
+      "category": "transport",
+      "latlng": [
+        25.032969,
+        121.543614
+      ],
+      "start": 1996,
+      "end": null,
+      "desc": "1996 年 3 月 28 日隨捷運木柵線通車啟用；2013 年 11 月 24 日信義線大安站啟用後，成為文湖線與淡水信義線的轉乘站。",
+      "sources": [
+        {
+          "title": "維基百科〈大安站 (臺灣)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%AE%89%E7%AB%99%20(%E8%87%BA%E7%81%A3)"
+        }
+      ],
+      "photo": {
+        "query": "捷運大安站|Daan metro station"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "mrt-zhongxiao-dunhua",
+      "name": "捷運忠孝敦化站",
+      "category": "transport",
+      "latlng": [
+        25.041553,
+        121.550594
+      ],
+      "start": 1999,
+      "end": null,
+      "desc": "1999 年 12 月 24 日隨南港線市政府至西門段通車啟用，是東區商圈的聯外車站，也是板南線運量最高的非轉乘站。",
+      "sources": [
+        {
+          "title": "維基百科〈忠孝敦化站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%BF%A0%E5%AD%9D%E6%95%A6%E5%8C%96%E7%AB%99"
+        }
+      ],
+      "photo": {
+        "query": "忠孝敦化站|Zhongxiao Dunhua station"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "ntu-sports-center",
+      "name": "臺灣大學綜合體育館",
+      "category": "sports",
+      "latlng": [
+        25.021609,
+        121.535176
+      ],
+      "start": 2002,
+      "end": null,
+      "desc": "位於辛亥路與新生南路口，取代臺大舊體育館，2002 年 3 月舉行啟用典禮，也常外借舉辦大型活動，俗稱「台大小巨蛋」。",
+      "sources": [
+        {
+          "title": "維基百科〈國立臺灣大學綜合體育館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E5%A4%A7%E5%AD%B8%E7%B6%9C%E5%90%88%E9%AB%94%E8%82%B2%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "臺大綜合體育館|National Taiwan University Sports Center"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "daan-sports-center",
+      "name": "大安運動中心",
+      "category": "sports",
+      "latlng": [
+        25.0207304,
+        121.5460095
+      ],
+      "start": 2010,
+      "end": null,
+      "desc": "位於辛亥路三段，2010 年 4 月 2 日試營運、4 月 10 日正式營運，是臺北市各行政區市民運動中心之一。",
+      "sources": [
+        {
+          "title": "維基百科〈大安運動中心〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%AE%89%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83"
+        }
+      ],
+      "photo": {
+        "query": "大安運動中心|Daan Sports Center"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "mrt-daan-park",
+      "name": "捷運大安森林公園站",
+      "category": "transport",
+      "latlng": [
+        25.033056,
+        121.535278
+      ],
+      "start": 2013,
+      "end": null,
+      "desc": "2013 年 11 月 24 日隨捷運信義線中正紀念堂至象山段通車啟用，位於大安森林公園地下。",
+      "sources": [
+        {
+          "title": "維基百科〈大安森林公園站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%AE%89%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92%E7%AB%99"
+        },
+        {
+          "title": "維基百科〈大安站 (臺灣)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%AE%89%E7%AB%99%20(%E8%87%BA%E7%81%A3)"
+        }
+      ],
+      "photo": {
+        "query": "大安森林公園站|Daan Park station"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "mrt-xinyi-anhe",
+      "name": "捷運信義安和站",
+      "category": "transport",
+      "latlng": [
+        25.03316,
+        121.551649
+      ],
+      "start": 2013,
+      "end": null,
+      "desc": "位於大安區傳統地名「坡心」一帶，2013 年 11 月 24 日隨捷運信義線通車啟用。",
+      "sources": [
+        {
+          "title": "維基百科〈信義安和站〉",
+          "url": "https://zh.wikipedia.org/wiki/%E4%BF%A1%E7%BE%A9%E5%AE%89%E5%92%8C%E7%AB%99"
+        },
+        {
+          "title": "維基百科〈大安站 (臺灣)〉",
+          "url": "https://zh.wikipedia.org/wiki/%E5%A4%A7%E5%AE%89%E7%AB%99%20(%E8%87%BA%E7%81%A3)"
+        }
+      ],
+      "photo": {
+        "query": "信義安和站|Xinyi Anhe station"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "heping-basketball-gym",
+      "name": "臺北和平籃球館",
+      "category": "sports",
+      "latlng": [
+        25.021444,
+        121.545472
+      ],
+      "start": 2017,
+      "end": null,
+      "desc": "郝龍斌市府任內規劃興建，位於和平實驗國小、大安運動中心旁。2017 年夏季世界大學運動會籃球賽在此舉行，之後也承辦瓊斯盃等國際賽事。",
+      "sources": [
+        {
+          "title": "維基百科〈臺北和平籃球館〉",
+          "url": "https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%92%8C%E5%B9%B3%E7%B1%83%E7%90%83%E9%A4%A8"
+        }
+      ],
+      "photo": {
+        "query": "臺北和平籃球館|Taipei Heping Basketball Gymnasium"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-25"
+      }
+    }
+  ]
+}

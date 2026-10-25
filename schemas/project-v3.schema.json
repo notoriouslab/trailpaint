@@ -40,6 +40,12 @@
       "$ref": "#/$defs/OverlaySetting",
       "description": "Optional historical tile overlay (e.g. CCTS Tang/Song/Yuan/Ming-era China, DARE Roman-era Mediterranean)."
     },
+    "eraMode": {
+      "type": "string",
+      "enum": ["fade", "cumulative"],
+      "default": "fade",
+      "description": "How the Story Player time slider treats spot `era` windows. `fade` (default): out-of-era spots fade by distance, ticks follow the historical overlays. `cumulative`: content-first 'what existed then' view — a spot is shown only while the slider year is inside its era (built ≤ year ≤ demolished; use end 3000 for still-standing), ticks are decades, and each decade shows the latest overlay not later than it."
+    },
     "spots": {
       "description": "Numbered story points (景點). Rendered as pins + cards on the map.",
       "type": "array",

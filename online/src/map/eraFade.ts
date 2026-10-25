@@ -11,7 +11,7 @@
  *   - 200 years: matches typical dynasty / mission-era horizons
  */
 
-import type { SpotEra } from '../core/models/types';
+import type { EraMode, SpotEra } from '../core/models/types';
 
 /** Minimum opacity for an out-of-era spot. Never fully invisible — keeps the route shape readable. */
 const MIN_OPACITY = 0.15;
@@ -37,6 +37,22 @@ export function eraOpacity(
   if (currentYear >= start && currentYear <= end) return 1;
   const dist = currentYear < start ? start - currentYear : currentYear - end;
   return Math.max(MIN_OPACITY, 1 - (dist / decay) ** 2);
+}
+
+/**
+ * Whether a spot is rendered at all for the given year (019).
+ *   - fade mode → always true (visibility handled by eraOpacity)
+ *   - cumulative → true only inside [start, end] (not yet built / demolished = hidden)
+ *   - era undefined → always true (era-agnostic spots)
+ */
+export function eraVisible(
+  era: SpotEra | undefined,
+  currentYear: number,
+  mode: EraMode = 'fade',
+): boolean {
+  if (mode !== 'cumulative' || !era) return true;
+  if (!Number.isFinite(currentYear)) return true;
+  return currentYear >= era.start && currentYear <= era.end;
 }
 
 /**
