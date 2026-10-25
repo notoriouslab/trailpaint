@@ -17,6 +17,13 @@ TrailPaint 是一個純瀏覽器端的手繪風路線地圖工具，適合登山
 
 TrailPaint is a browser-only hand-drawn style trail map maker, designed for hikers, cyclists, travel bloggers, ecology guides, educators, and churches/NGOs. All data is stored locally in the browser; PWA-installable on phones, tablets, and desktops.
 
+## 網站導覽 / Site Sections
+
+- **首頁 /**：當季特展（目前是「大安森林公園」定點時間軸）、每日一選（從歷史故事與旅行路線依日期輪替）、出門走走入口，下方是「走進歷史」與「出門走走」兩排作品。Homepage: a featured story, a daily pick, and two rows of finished maps (history and travel).
+- **故事地圖 /stories/**：聖經、宣教、中國歷史、大航海、台灣百年等互動故事。Curated story maps.
+- **出門走走 /examples/**：登山步道、古道、親子散步與海外旅行路線，可播放或下載 `.trailpaint.json`。Hiking and travel routes, playable or downloadable.
+- **功能 /features/**、**FAQ /faq/**、**教會應用 /church/**、**編輯器 /app/**。
+
 ## 三種建立路線的方式 / Three Ways to Build a Trail
 
 1. **從照片建立（v1.3 新能力）**：拖 20 張照片 → EXIF GPS 自動建景點。支援 iPhone HEIC、Android JPEG。無 GPS 照片歸入「待定位」分組。Nominatim 反向地理編碼自動補地名。
