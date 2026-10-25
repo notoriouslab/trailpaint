@@ -171,10 +171,12 @@ a:hover { text-decoration: underline; }
   .site-nav { padding: 0.7rem 16px 0.55rem; }
   .site-nav-inner { flex-wrap: wrap; row-gap: 0.5rem; }
   .site-nav .brand small, .nav-label { display: none; }
+  .site-nav .brand { font-size: 1.05rem; }
   .site-nav .make { padding: 0.45rem 1rem; font-size: 0.9rem; }
-  .site-nav-links { order: 3; width: 100%; gap: 1rem; font-size: 0.95rem; overflow-x: auto; }
-  .nav-group { column-gap: 1rem; }
-  .nav-group + .nav-group { padding-left: 1rem; }
+  .site-nav-links { order: 3; width: 100%; gap: 0.85rem; font-size: 0.95rem; overflow-x: auto; }
+  .nav-group { flex-wrap: nowrap; column-gap: 0.85rem; }
+  .nav-group + .nav-group { padding-left: 0.85rem; }
+  .nav-group a[href^="https://github.com"] { display: none; } /* 頁尾仍有 GitHub */
 }
 
 .stories-header--hub { padding: 28px 24px 4px; border-bottom: none; }

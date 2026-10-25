@@ -37,7 +37,7 @@ async function renderCatalog(containerId) {
     // Group stories by collection id (keeps only non-empty groups)
     var grouped = collections
       .map(function (c) {
-        return { id: c.id, title: c.title, items: stories.filter(function (s) { return s.collection === c.id; }) };
+        return { id: c.id, title: c.title, href: c.href, description: c.description, items: stories.filter(function (s) { return s.collection === c.id; }) };
       })
       .filter(function (g) { return g.items.length > 0; });
 
@@ -63,7 +63,7 @@ async function renderCatalog(containerId) {
     container.innerHTML = grouped.map(function (g) {
       return '<section class="catalog-group">' +
         '<h2 class="catalog-group__title">' + escapeHtml(g.title) + '</h2>' +
-        '<div class="catalog-grid catalog-grid--nested">' + renderCards(g.items) + '</div>' +
+        '<div class="catalog-grid catalog-grid--nested">' + (g.href ? renderEntryCard(g) : renderCards(g.items)) + '</div>' +
       '</section>';
     }).join('');
   } catch (e) {
@@ -83,6 +83,18 @@ function renderCards(items) {
       '</div>' +
     '</a>';
   }).join('');
+}
+
+// A collection with its own curated section (e.g. 台灣百年 /taiwan/) shows one entry card instead of its stories
+function renderEntryCard(g) {
+  return '<a class="catalog-card catalog-card--entry" href="' + escapeAttr(g.href) + '">' +
+    '<img class="catalog-card__img" src="' + escapeAttr(g.items[0].thumbnail) + '" alt="' + escapeAttr(g.title) + '" />' +
+    '<div class="catalog-card__body">' +
+      '<h2 class="catalog-card__title">' + escapeHtml(g.title) + ' 專區 →</h2>' +
+      '<p class="catalog-card__desc">' + escapeHtml(g.description || '') + '</p>' +
+      '<span class="catalog-card__count">' + g.items.length + ' 個故事</span>' +
+    '</div>' +
+  '</a>';
 }
 
 /* ── Level 1: Story page ── */

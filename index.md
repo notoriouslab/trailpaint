@@ -20,7 +20,8 @@ TrailPaint is a browser-only hand-drawn style trail map maker, designed for hike
 ## 網站導覽 / Site Sections
 
 - **首頁 /**：當季特展（目前是「大安森林公園」定點時間軸）、每日一選（從歷史故事與旅行路線依日期輪替）、出門走走入口，下方是「走進歷史」與「出門走走」兩排作品。Homepage: a featured story, a daily pick, and two rows of finished maps (history and travel).
-- **故事地圖 /stories/**：聖經、宣教、中國歷史、大航海、台灣百年等互動故事。Curated story maps.
+- **故事地圖 /stories/**：聖經、宣教、中國歷史、大航海等互動故事。Curated story maps.
+- **台灣百年 /taiwan/**：同一個地方的一百年，疊上 1904 年臺灣堡圖到今天的歷史地圖（大安區百年、大安森林公園）。Taiwan Century: one place across a hundred years on historical maps.
 - **出門走走 /examples/**：登山步道、古道、親子散步與海外旅行路線，可播放或下載 `.trailpaint.json`。Hiking and travel routes, playable or downloadable.
 - **功能 /features/**、**FAQ /faq/**、**教會應用 /church/**、**編輯器 /app/**。
 

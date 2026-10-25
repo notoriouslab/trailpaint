@@ -34,3 +34,7 @@
 ## 故事地圖卡片圖（stories/<id>/card.jpg）
 
 `/stories/` 總覽卡片用的圖，由 `stories/catalog.json` 的 `thumbnail` 指向。每個故事取第一條路線，Player 點開一個有照片的景點後截圖（1440×900、scale 2），中央裁 4:3 輸出 800×600。台灣宣教士、受難週、保羅、玄奘、大安森林公園五張由本目錄同名作品圖縮出。`cover.jpg` 不動，仍給社群分享圖與故事頁使用。
+
+## 台灣百年專區（/taiwan/）
+
+新增一篇台灣百年故事時：故事放 `stories/<id>/`（Player 只接受 `/stories/` 底下的資料檔），在 `stories/catalog.json` 加一筆 `"collection": "taiwan"`，再到 `/taiwan/index.html` 手寫一張作品卡。/stories/ 總覽的台灣百年入口卡篇數會自動更新。
