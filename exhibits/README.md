@@ -6,7 +6,7 @@
 
 | 檔案 | 來源 | 截法 |
 |---|---|---|
-| daan-park.jpg | `/taiwan/taipei-daan-park/daan-park.trailpaint.json` | Player，起始年 1904（臺灣堡圖圖層） |
+| daan-park-hero.jpg | 合成圖（不是截圖）：1904 臺灣堡圖（中研院人社中心 GIS 專題中心圖磚，z17 拼接）、[1932 臺北市區計畫街路並公園圖](https://commons.wikimedia.org/wiki/File:1932_Taipei_City_Plan.jpg)（公有領域）、[Daan park from Taipei 101](https://commons.wikimedia.org/wiki/File:Daan_park_from_Taipei_101.jpg)（othree，CC BY 2.0，首頁與 /taiwan/ 頁尾已標示） | 三欄斜切並排，同一街廓以綠色虛線框出；年份字 Georgia、中文宋體。首頁特展大格與 /taiwan/ 卡片用 |
 | mackay.jpg | `/stories/taiwan-missionaries/mackay.trailpaint.json` | Player，點開第 2 個景點 |
 | passion.jpg | `/stories/passion-week/entry.trailpaint.json` | Player，點開第 4 個景點 |
 | paul.jpg | `/stories/paul/second-journey.trailpaint.json` | Player，點開第 6 個景點 |
@@ -17,7 +17,7 @@
 
 - 瀏覽器 device scale 2；Editor 視窗 1180×820，Player 視窗 1440×900（daan-park 1600×1000）。
 - 截 `.leaflet-container`，截前隱藏地圖控制鈕。
-- 一般作品裁 4:3 輸出 1200×900；daan-park 輸出 2000×1429（首頁大格）。JPEG quality 78、progressive。
+- 一般作品裁 4:3 輸出 1200×900；daan-park-hero 輸出 2000×1429（首頁大格）。JPEG quality 78、progressive。
 - Editor 沒有 URL 載入參數，用 localStorage `trailpaint-editor-restore`（`{project, savedAt}`，一小時內有效）把路線帶進去。
 
 ## 授權
@@ -33,7 +33,7 @@
 
 ## 故事地圖卡片圖（stories/<id>/card.jpg、taiwan/<id>/card.jpg）
 
-`/stories/` 總覽卡片用的圖，由 `stories/catalog.json` 的 `thumbnail` 指向。每個故事取第一條路線，Player 點開一個有照片的景點後截圖（1440×900、scale 2），中央裁 4:3 輸出 800×600。台灣宣教士、受難週、保羅、玄奘、大安森林公園五張由本目錄同名作品圖縮出。`cover.jpg` 不動，仍給社群分享圖與故事頁使用。
+`/stories/` 總覽卡片用的圖，由 `stories/catalog.json` 的 `thumbnail` 指向。每個故事取第一條路線，Player 點開一個有照片的景點後截圖（1440×900、scale 2），中央裁 4:3 輸出 800×600。台灣宣教士、受難週、保羅、玄奘四張由本目錄同名作品圖縮出，大安森林公園由 daan-park-hero.jpg 中央裁切。`cover.jpg` 不動，仍給社群分享圖與故事頁使用。
 
 ## 台灣百年專區（/taiwan/）
 
