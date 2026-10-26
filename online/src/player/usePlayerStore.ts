@@ -40,7 +40,7 @@ export const usePlayerStore = create<PlayerState>()((set) => ({
   error: null,
   activeSpotIndex: null,
   playing: false,
-  dwellTime: 4000,
+  dwellTime: 6000,
   loopCount: 1,
   currentYear: MODERN_TICK.year,
   loadSeq: 0,
@@ -57,5 +57,5 @@ export const usePlayerStore = create<PlayerState>()((set) => ({
   setLoopCount: (count) => set({ loopCount: count }),
   setCurrentYear: (year) => set({ currentYear: year }),
   setShareBase: (base) => set({ shareBase: base }),
-  reset: () => set({ project: null, error: null, activeSpotIndex: null, playing: false, dwellTime: 4000, loopCount: 1, currentYear: MODERN_TICK.year, shareBase: null }),
+  reset: () => set({ project: null, error: null, activeSpotIndex: null, playing: false, dwellTime: 6000, loopCount: 1, currentYear: MODERN_TICK.year, shareBase: null }),
 }));
