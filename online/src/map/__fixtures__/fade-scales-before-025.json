@@ -1,0 +1,424 @@
+{
+  "stories/taiwan-missionaries/mackay.trailpaint.json": [
+    {
+      "year": 1993,
+      "overlayId": "tw_1993"
+    },
+    {
+      "year": 1989,
+      "overlayId": "tw_1989"
+    },
+    {
+      "year": 1966,
+      "overlayId": "corona_1966"
+    },
+    {
+      "year": 1955,
+      "overlayId": "tw_1955"
+    },
+    {
+      "year": 1945,
+      "overlayId": "tw_1945"
+    },
+    {
+      "year": 1921,
+      "overlayId": "jm20k_1921"
+    },
+    {
+      "year": 1904,
+      "overlayId": "tw_1904"
+    },
+    {
+      "year": 1897,
+      "overlayId": "jm200k_1897"
+    },
+    {
+      "year": 1820,
+      "overlayId": "qing_1820"
+    },
+    {
+      "year": 1582,
+      "overlayId": "ming_1582"
+    },
+    {
+      "year": 1330,
+      "overlayId": "yuan_1330"
+    },
+    {
+      "year": 1208,
+      "overlayId": "song_1208"
+    },
+    {
+      "year": 741,
+      "overlayId": "tang_741"
+    },
+    {
+      "year": 262,
+      "overlayId": "three_kingdoms_262"
+    },
+    {
+      "year": -7,
+      "overlayId": "han_bc7"
+    }
+  ],
+  "stories/taiwan-missionaries/barclay.trailpaint.json": [
+    {
+      "year": 1993,
+      "overlayId": "tw_1993"
+    },
+    {
+      "year": 1989,
+      "overlayId": "tw_1989"
+    },
+    {
+      "year": 1955,
+      "overlayId": "tw_1955"
+    },
+    {
+      "year": 1945,
+      "overlayId": "tw_1945"
+    },
+    {
+      "year": 1921,
+      "overlayId": "jm20k_1921"
+    },
+    {
+      "year": 1904,
+      "overlayId": "tw_1904"
+    },
+    {
+      "year": 1897,
+      "overlayId": "jm200k_1897"
+    },
+    {
+      "year": 1820,
+      "overlayId": "qing_1820"
+    },
+    {
+      "year": 1582,
+      "overlayId": "ming_1582"
+    },
+    {
+      "year": 1330,
+      "overlayId": "yuan_1330"
+    },
+    {
+      "year": 1208,
+      "overlayId": "song_1208"
+    },
+    {
+      "year": 741,
+      "overlayId": "tang_741"
+    },
+    {
+      "year": 262,
+      "overlayId": "three_kingdoms_262"
+    },
+    {
+      "year": -7,
+      "overlayId": "han_bc7"
+    }
+  ],
+  "stories/taiwan-missionaries/maxwell.trailpaint.json": [
+    {
+      "year": 1993,
+      "overlayId": "tw_1993"
+    },
+    {
+      "year": 1989,
+      "overlayId": "tw_1989"
+    },
+    {
+      "year": 1955,
+      "overlayId": "tw_1955"
+    },
+    {
+      "year": 1945,
+      "overlayId": "tw_1945"
+    },
+    {
+      "year": 1921,
+      "overlayId": "jm20k_1921"
+    },
+    {
+      "year": 1904,
+      "overlayId": "tw_1904"
+    },
+    {
+      "year": 1897,
+      "overlayId": "jm200k_1897"
+    },
+    {
+      "year": 1820,
+      "overlayId": "qing_1820"
+    },
+    {
+      "year": 1582,
+      "overlayId": "ming_1582"
+    },
+    {
+      "year": 1330,
+      "overlayId": "yuan_1330"
+    },
+    {
+      "year": 1208,
+      "overlayId": "song_1208"
+    },
+    {
+      "year": 741,
+      "overlayId": "tang_741"
+    },
+    {
+      "year": 262,
+      "overlayId": "three_kingdoms_262"
+    },
+    {
+      "year": -7,
+      "overlayId": "han_bc7"
+    }
+  ],
+  "stories/taiwan-missionaries/landsborough.trailpaint.json": [
+    {
+      "year": 1993,
+      "overlayId": "tw_1993"
+    },
+    {
+      "year": 1989,
+      "overlayId": "tw_1989"
+    },
+    {
+      "year": 1966,
+      "overlayId": "corona_1966"
+    },
+    {
+      "year": 1955,
+      "overlayId": "tw_1955"
+    },
+    {
+      "year": 1945,
+      "overlayId": "tw_1945"
+    },
+    {
+      "year": 1921,
+      "overlayId": "jm20k_1921"
+    },
+    {
+      "year": 1904,
+      "overlayId": "tw_1904"
+    },
+    {
+      "year": 1897,
+      "overlayId": "jm200k_1897"
+    },
+    {
+      "year": 1820,
+      "overlayId": "qing_1820"
+    },
+    {
+      "year": 1582,
+      "overlayId": "ming_1582"
+    },
+    {
+      "year": 1330,
+      "overlayId": "yuan_1330"
+    },
+    {
+      "year": 1208,
+      "overlayId": "song_1208"
+    },
+    {
+      "year": 741,
+      "overlayId": "tang_741"
+    },
+    {
+      "year": 262,
+      "overlayId": "three_kingdoms_262"
+    },
+    {
+      "year": -7,
+      "overlayId": "han_bc7"
+    }
+  ],
+  "stories/taiwan-missionaries/brougham.trailpaint.json": [
+    {
+      "year": 1993,
+      "overlayId": "tw_1993"
+    },
+    {
+      "year": 1989,
+      "overlayId": "tw_1989"
+    },
+    {
+      "year": 1966,
+      "overlayId": "corona_1966"
+    },
+    {
+      "year": 1955,
+      "overlayId": "tw_1955"
+    },
+    {
+      "year": 1945,
+      "overlayId": "tw_1945"
+    },
+    {
+      "year": 1921,
+      "overlayId": "jm20k_1921"
+    },
+    {
+      "year": 1904,
+      "overlayId": "tw_1904"
+    },
+    {
+      "year": 1897,
+      "overlayId": "jm200k_1897"
+    },
+    {
+      "year": 1820,
+      "overlayId": "qing_1820"
+    },
+    {
+      "year": 1582,
+      "overlayId": "ming_1582"
+    },
+    {
+      "year": 1330,
+      "overlayId": "yuan_1330"
+    },
+    {
+      "year": 1208,
+      "overlayId": "song_1208"
+    },
+    {
+      "year": 741,
+      "overlayId": "tang_741"
+    },
+    {
+      "year": 262,
+      "overlayId": "three_kingdoms_262"
+    },
+    {
+      "year": -7,
+      "overlayId": "han_bc7"
+    }
+  ],
+  "stories/yu-yonghe/northbound.trailpaint.json": [
+    {
+      "year": 1993,
+      "overlayId": "tw_1993"
+    },
+    {
+      "year": 1989,
+      "overlayId": "tw_1989"
+    },
+    {
+      "year": 1966,
+      "overlayId": "corona_1966"
+    },
+    {
+      "year": 1955,
+      "overlayId": "tw_1955"
+    },
+    {
+      "year": 1945,
+      "overlayId": "tw_1945"
+    },
+    {
+      "year": 1921,
+      "overlayId": "jm20k_1921"
+    },
+    {
+      "year": 1904,
+      "overlayId": "tw_1904"
+    },
+    {
+      "year": 1897,
+      "overlayId": "jm200k_1897"
+    },
+    {
+      "year": 1820,
+      "overlayId": "qing_1820"
+    },
+    {
+      "year": 1582,
+      "overlayId": "ming_1582"
+    },
+    {
+      "year": 1330,
+      "overlayId": "yuan_1330"
+    },
+    {
+      "year": 1208,
+      "overlayId": "song_1208"
+    },
+    {
+      "year": 741,
+      "overlayId": "tang_741"
+    },
+    {
+      "year": 262,
+      "overlayId": "three_kingdoms_262"
+    },
+    {
+      "year": -7,
+      "overlayId": "han_bc7"
+    }
+  ],
+  "stories/yu-yonghe/crossing.trailpaint.json": [
+    {
+      "year": 1993,
+      "overlayId": "tw_1993"
+    },
+    {
+      "year": 1989,
+      "overlayId": "tw_1989"
+    },
+    {
+      "year": 1955,
+      "overlayId": "tw_1955"
+    },
+    {
+      "year": 1945,
+      "overlayId": "tw_1945"
+    },
+    {
+      "year": 1921,
+      "overlayId": "jm20k_1921"
+    },
+    {
+      "year": 1904,
+      "overlayId": "tw_1904"
+    },
+    {
+      "year": 1897,
+      "overlayId": "jm200k_1897"
+    },
+    {
+      "year": 1820,
+      "overlayId": "qing_1820"
+    },
+    {
+      "year": 1582,
+      "overlayId": "ming_1582"
+    },
+    {
+      "year": 1330,
+      "overlayId": "yuan_1330"
+    },
+    {
+      "year": 1208,
+      "overlayId": "song_1208"
+    },
+    {
+      "year": 741,
+      "overlayId": "tang_741"
+    },
+    {
+      "year": 262,
+      "overlayId": "three_kingdoms_262"
+    },
+    {
+      "year": -7,
+      "overlayId": "han_bc7"
+    }
+  ]
+}

@@ -37,4 +37,4 @@
 
 ## 台灣百年專區（/taiwan/）
 
-新增一篇台灣百年故事時：故事放 `taiwan/<id>/`（頁面用絕對路徑引用 `/stories/stories.css`、`/stories/stories.js`，音樂用 `/stories/music/`；Player 白名單見 `online/src/player/isValidSrc.ts`），在 `stories/catalog.json` 加一筆 `"collection": "taiwan"`，`path`、`thumbnail` 寫絕對路徑 `/taiwan/<id>/`，再到 `/taiwan/index.html` 手寫一張作品卡，並更新 `taiwan/index.md`。/stories/ 總覽的台灣百年入口卡篇數會自動更新。
+新增一篇台灣百年故事時：寫 `data/stories/<id>.json` 設定檔（景點從 `data/places/tw/` 資料池挑），跑 `node online/scripts/build-taiwan-story.mjs <id>` 產生 `taiwan/<id>/`，再跑 `node online/scripts/gen-taiwan-index.mjs` 更新專區頁、`taiwan/index.md`、`llms.txt`、`sitemap.xml` 與 `stories/catalog.json`，最後 `cd online && npm run check:stories`。卡片圖照上一節做法另截。

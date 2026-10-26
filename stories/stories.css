@@ -409,3 +409,12 @@ a:hover { text-decoration: underline; }
   font-size: 14px;
   color: #92400e;
 }
+
+/* 025 D8: "report an error" link on Taiwan story pages */
+.stories-header__report {
+  font-size: 12px;
+  color: #78716c;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.stories-header__report:hover { color: #92400e; }

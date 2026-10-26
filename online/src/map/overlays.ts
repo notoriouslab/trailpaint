@@ -38,6 +38,11 @@ export interface OverlayDef {
    * 用於 TimeSlider 對應 overlay + spot era fade 計算。
    */
   year: number | [number, number];
+  /**
+   * 025 D2b: 'street' = readable at district zoom (堡圖 and later Taiwan maps).
+   * Absent = regional (1:200k, empire maps): cumulative and site stories skip it.
+   */
+  detail?: 'street';
 }
 
 /** Ordered list of groups for UI rendering (groups absent from OVERLAYS are skipped). */
@@ -58,6 +63,27 @@ export function coverageTileKey(lat: number, lng: number): string {
   return `${x},${y}`;
 }
 
+export interface RelevanceOptions {
+  /**
+   * 'any' (default, fade): an overlay counts if at least one spot has content.
+   * 'majority' (025 D2b, cumulative / site): more than two thirds of the spots
+   * must have content — a district story shouldn't switch to a map that is
+   * blank under most of its places (1945 city plans stop at 公館).
+   */
+  mode?: 'any' | 'majority';
+  /** 025 D2b: keep only `detail: 'street'` overlays (cumulative / site). */
+  streetOnly?: boolean;
+}
+
+/** Does `ov` have scanned content at this point? The z11 table if probed, else bounds. */
+function hasContentAt(ov: OverlayDef, lat: number, lng: number): boolean {
+  const covered = OVERLAY_COVERAGE[ov.id];
+  if (covered) return covered.has(coverageTileKey(lat, lng));
+  if (!ov.bounds) return true;
+  const [[s, w], [n, e]] = ov.bounds;
+  return lat >= s && lat <= n && lng >= w && lng <= e;
+}
+
 /**
  * Return the set of overlay ids whose `bounds` intersect the given spot positions.
  *
@@ -76,9 +102,19 @@ export function coverageTileKey(lat: number, lng: number): string {
  */
 export function getRelevantOverlayIds(
   spotsLatLngs: ReadonlyArray<readonly [number, number]>,
+  { mode = 'any', streetOnly = false }: RelevanceOptions = {},
 ): Set<string> {
+  const pool = streetOnly ? OVERLAYS.filter((ov) => ov.detail === 'street') : OVERLAYS;
   if (spotsLatLngs.length === 0) {
-    return new Set(OVERLAYS.map((o) => o.id));
+    return new Set(pool.map((o) => o.id));
+  }
+  if (mode === 'majority') {
+    return new Set(
+      pool.filter((ov) => {
+        const hits = spotsLatLngs.filter(([lat, lng]) => hasContentAt(ov, lat, lng)).length;
+        return hits * 3 > spotsLatLngs.length * 2;
+      }).map((o) => o.id),
+    );
   }
   let south = Infinity, west = Infinity, north = -Infinity, east = -Infinity;
   for (const [lat, lng] of spotsLatLngs) {
@@ -88,7 +124,7 @@ export function getRelevantOverlayIds(
     if (lng > east) east = lng;
   }
   return new Set(
-    OVERLAYS.filter((ov) => {
+    pool.filter((ov) => {
       if (!ov.bounds) return true;
       const [[ovSouth, ovWest], [ovNorth, ovEast]] = ov.bounds;
       // AABB overlap test — boxes overlap unless one is strictly outside the other on any axis
@@ -134,6 +170,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxNativeZoom: 17,
     bounds: BOUNDS_TAIWAN,
     year: 1904,
+    detail: 'street',
   },
   {
     id: 'jm20k_1921',
@@ -145,6 +182,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxNativeZoom: 14,
     bounds: BOUNDS_TAIWAN,
     year: 1921,
+    detail: 'street',
   },
   {
     id: 'tw_1945',
@@ -156,6 +194,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxNativeZoom: 17,
     bounds: BOUNDS_TAIWAN,
     year: 1945,
+    detail: 'street',
   },
   {
     id: 'tw_1955',
@@ -167,6 +206,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxNativeZoom: 15,
     bounds: BOUNDS_TAIWAN,
     year: 1955,
+    detail: 'street',
   },
   {
     id: 'corona_1966',
@@ -178,6 +218,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxNativeZoom: 14,
     bounds: BOUNDS_TAIWAN,
     year: 1966,
+    detail: 'street',
   },
   {
     id: 'tw_1989',
@@ -189,6 +230,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxNativeZoom: 16,
     bounds: BOUNDS_TAIWAN,
     year: 1989,
+    detail: 'street',
   },
   {
     id: 'tw_1993',
@@ -200,6 +242,7 @@ export const OVERLAYS: OverlayDef[] = [
     maxNativeZoom: 17,
     bounds: BOUNDS_TAIWAN,
     year: 1993,
+    detail: 'street',
   },
   {
     id: 'han_bc7',

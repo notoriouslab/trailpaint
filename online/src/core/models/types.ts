@@ -55,6 +55,7 @@ export interface Spot {
   photoMeta?: PhotoMeta;     // v3.1+ (013): Commons attribution；Player render 角落小字
   era?: SpotEra;             // v5+ (016): year window for TimeSlider-driven opacity fade
   takenAt?: string;          // v5.1+ (018): ISO 8601 EXIF capture time; drives chronological sort + connect-by-day routes
+  placeId?: string;          // 025: data/places pool id of a curated story spot (kebab-case)
 }
 
 export interface OverlaySetting {

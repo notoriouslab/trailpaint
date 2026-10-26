@@ -59,7 +59,7 @@ function pickPostcardZoom(overlayId: string | null): number {
 }
 /** Tile-load grace period after setView before captureMap. CCTS / DARE remote
  *  tile servers + fresh viewport extent → 1500ms is the floor that stops the
- *  "rapid-click → patchy postcard" issue 主公 hit. captureMap's own internal
+ *  "rapid-click → patchy postcard" issue the maintainer hit. captureMap's own internal
  *  poll covers vector tiles but not raster tiles, so we wait here. */
 const POSTCARD_TILE_LOAD_MS = 1500;
 

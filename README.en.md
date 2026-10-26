@@ -4,7 +4,7 @@
 
 > **Hand-drawn trail map maker** — turn a journey into an illustrated map that tells its story. No backend, installable PWA, auto-detected trilingual UI.
 
-[![Version](https://img.shields.io/badge/version-1.8.1-orange.svg)](https://github.com/notoriouslab/trailpaint/releases)
+[![Version](https://img.shields.io/badge/version-1.8.2-orange.svg)](https://github.com/notoriouslab/trailpaint/releases)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6.svg)](https://www.typescriptlang.org/)
 [![PWA Ready](https://img.shields.io/badge/PWA-ready-5a0fc8.svg)](https://trailpaint.org/features/install/)
@@ -96,7 +96,7 @@ Three curated sections:
 
 - **[Story maps](https://trailpaint.org/stories/)** — the Bible, mission history, Chinese history and the age of exploration, each with historical maps and a time slider
 - **[Trails & travel](https://trailpaint.org/examples/)** — hiking trails, old roads, family walks and trips abroad; play them or download the route file to make it your own
-- **[Taiwan Century](https://trailpaint.org/taiwan/)** — one place across a hundred years, on Academia Sinica historical maps from the 1904 colonial survey to today; first up is Da'an Forest Park
+- **[Taiwan Century](https://trailpaint.org/taiwan/)** — one place across a hundred years, on Academia Sinica historical maps from the 1904 colonial survey to today; so far Da'an Forest Park, Da'an District and Gongguan to Jingmei
 
 ## Story Player: maps that tell stories
 

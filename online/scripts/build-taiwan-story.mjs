@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 /**
- * Builder for taiwan/taipei-daan/ (019 大安區百年 — first district time-map story).
- * One segment, cumulative eraMode: each spot = a public facility, era = [opened at
- * this site, demolished ?? 3000]. Content comes from the place pool
- * data/places/tw/63000030.json (verified items only); years were checked per
- * item against zh.wikipedia because Wikidata inception mixes "institution
- * founded" with "opened here". The district outline is drawn as a route.
+ * Shared builder for taiwan/<id>/ district and theme time-map stories (025 D3).
+ * One segment, cumulative eraMode: each spot = a place-pool item, era = [start at
+ * this site, end ?? 3000]. Everything story-specific lives in
+ * data/stories/<id>.json; content comes from the place pools
+ * data/places/tw/<TOWNCODE>.json (verified items only).
+ *
+ *   Run: node online/scripts/build-taiwan-story.mjs <id>
  */
 import { mkdir, writeFile } from 'node:fs/promises';
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -15,78 +16,40 @@ import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = join(__dirname, '..', '..', '..');
-const STORY_DIR = join(ROOT, 'taiwan', 'taipei-daan');
-const TMP = join(tmpdir(), 'tp-taipei-daan');
+const ROOT = join(__dirname, '..', '..');
 const UA = 'TrailPaint-example-builder/1.0 (https://trailpaint.org; https://github.com/notoriouslab/trailpaint) build';
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-/** Still standing — see design D5: never the current year, or it vanishes next January. */
+/** Still standing — see 019 design D5: never the current year, or it vanishes next January. */
 const STANDING = 3000;
 
-const SEGMENT = {
-  id: 'daan',
-  name: '大安百年',
-  subtitle: '1762—今 從水圳稻田到都市之肺',
-  description: '拉動時間軸，看臺北大安區兩百多年來的公共建設與地方記憶如何一個個出現：清代的瑠公圳、日治時期的農事試驗場、監獄、學校與教授宿舍、戰後的眷村、紫藤廬與殷海光故居、高架道路與東區百貨，到九〇年代以後的森林公園、富陽生態公園、捷運與運動中心。底圖依年份切換為同時代的中研院歷史地圖（1904 臺灣堡圖、1945 美軍市街圖、1955 地形圖、1966 衛星影像、1989 與 1993 經建版地形圖）。範圍以今日大安區界為準（1990 年行政區重劃後）；年份為「在現址啟用」之年，每點附來源。',
-  color: '#065f46',
-  center: [25.027, 121.541],
-  zoom: 14,
-  overlay: { id: 'tw_1904', opacity: 0.6 },
-  music: '/stories/music/voller-hoffnung.mp3',
-};
+const STORY_ID = process.argv[2];
+if (!STORY_ID || !/^[a-z0-9-]+$/.test(STORY_ID)) {
+  console.error('usage: node online/scripts/build-taiwan-story.mjs <id>');
+  process.exit(1);
+}
+const CFG = JSON.parse(readFileSync(join(ROOT, 'data', 'stories', `${STORY_ID}.json`), 'utf8'));
+if (CFG.id !== STORY_ID) throw new Error(`config id ${CFG.id} != ${STORY_ID}`);
+if (CFG.builder === 'legacy') throw new Error(`${STORY_ID} is built by its own legacy script`);
+const SEGMENT = CFG.segment;
+const STORY_DIR = join(ROOT, 'taiwan', STORY_ID);
+const TMP = join(tmpdir(), `tp-${STORY_ID}`);
 
-// Content lives in the place pool (data/places/tw/<TOWNCODE>.json) so other
-// districts reuse the same pipeline; this script only turns it into a story.
-const POOL = JSON.parse(readFileSync(join(ROOT, 'data', 'places', 'tw', '63000030.json'), 'utf8'));
-/**
- * Pool items shown in the story (020 T8). The pool keeps growing from the
- * places pipeline; a new item enters the story only when its id is added here.
- */
-const STORY_IDS = new Set([
-  'taihoku-prison',
-  'taihoku-tech-red-house',
-  'second-normal-school',
-  'taihoku-imperial-university',
-  'taihoku-high-school-auditorium',
-  'nishiki-elementary',
-  'daan-public-school',
-  'third-middle-school',
-  'jinhua-junior-high',
-  'renai-elementary',
-  'daan-junior-high',
-  'ntust',
-  'cathay-general-hospital',
-  'second-funeral-parlor',
-  'jianguo-elevated-road',
-  'taipei-public-library-main',
-  'daan-forest-park',
-  'mrt-daan',
-  'mrt-zhongxiao-dunhua',
-  'ntu-sports-center',
-  'daan-sports-center',
-  'mrt-daan-park',
-  'mrt-xinyi-anhe',
-  'heping-basketball-gym',
-  // 024: water, farmland, houses and memory places
-  'liugong-ntu-canal',
-  'agri-station-chanchu',
-  'qingtian-76',
-  'huanmin-village',
-  'zitenglu',
-  'yin-haiguang-residence',
-  'horikawa-drain',
-  'sogo-zhongxiao',
-  'fuyang-eco-park',
-]);
-const missing = [...STORY_IDS].filter((id) => !POOL.items.some((it) => it.id === id));
-if (missing.length) throw new Error(`STORY_IDS not in pool: ${missing.join(', ')}`);
-// List order breaks same-year ties; the pool file's own order changes as it grows.
-const SPOTS = [...STORY_IDS]
-  .map((id) => POOL.items.find((it) => it.id === id))
+const readPool = (file) => JSON.parse(readFileSync(join(ROOT, 'data', 'places', 'tw', file), 'utf8'));
+/** Pool items shown in the story: listed per pool file in the config; list order breaks same-year ties. */
+const ITEMS = CFG.pools.flatMap(({ file, ids }) => {
+  const pool = readPool(file);
+  const missing = ids.filter((id) => !pool.items.some((it) => it.id === id));
+  if (missing.length) throw new Error(`${file}: ids not in pool: ${missing.join(', ')}`);
+  return ids.map((id) => pool.items.find((it) => it.id === id));
+});
+const dup = ITEMS.map((it) => it.id).filter((id, i, a) => a.indexOf(id) !== i);
+if (dup.length) throw new Error(`duplicate ids: ${dup.join(', ')}`);
+const SPOTS = ITEMS
   .sort((a, b) => a.start - b.start) // Player plays in order → time moves forward
   .map((it) => ({
+    placeId: it.id,
     title: it.name,
     latlng: it.latlng,
     era: { start: it.start, end: it.end ?? STANDING },
@@ -96,13 +59,6 @@ const SPOTS = [...STORY_IDS]
     photo_file: it.photo?.file,
     photo_query: it.photo?.query ?? null,
   }));
-
-
-const COVER_HTML_SPEC = {
-  title: '大安區百年',
-  subtitle: '從水圳稻田到都市之肺',
-  badge: '1762 — 今',
-};
 
 /** Exact Commons file — used when search returns the wrong subject. */
 async function fetchCommonsFile(file) {
@@ -301,7 +257,7 @@ await mkdir(STORY_DIR, { recursive: true });
 
 const credits = [];
 const failed = [];
-console.log(`Building taiwan/taipei-daan/ — ${SPOTS.length} spots`);
+console.log(`Building taiwan/${STORY_ID}/ — ${SPOTS.length} spots`);
 
 const projSpots = [];
 for (let i = 0; i < SPOTS.length; i++) {
@@ -309,7 +265,7 @@ for (let i = 0; i < SPOTS.length; i++) {
   const num = i + 1;
   process.stdout.write(`    ${num}. ${s.title}... `);
   const baseSpot = {
-    id: `s${num}`, num, latlng: s.latlng, title: s.title,
+    id: `s${num}`, placeId: s.placeId, num, latlng: s.latlng, title: s.title,
     desc: s.desc, photo: null, iconId: 'pin',
     cardOffset: { x: 0, y: -60 },
     historical_refs: s.refs,
@@ -350,20 +306,23 @@ for (let i = 0; i < SPOTS.length; i++) {
 
 const project = {
   version: 5,
-  name: `大安區百年 — ${SEGMENT.name}`,
+  name: CFG.projectName,
   center: SEGMENT.center,
   zoom: SEGMENT.zoom,
   overlay: SEGMENT.overlay,
   eraMode: 'cumulative',
   spots: projSpots,
-  // Today's district outline (design 3a) — a plain route, no spots attached.
-  routes: [{
-    id: 'boundary',
-    name: `${POOL.town}界（今日行政區）`,
-    pts: [...POOL.boundary.ring, POOL.boundary.ring[0]],
-    color: 'green', // ROUTE_COLORS id — hex values are reset to orange by migrateProject
-    elevations: null,
-  }],
+  // Today's district outlines (019 design 3a) — plain routes, no spots attached.
+  routes: CFG.boundaries.map((file, i, all) => {
+    const pool = readPool(file);
+    return {
+      id: all.length === 1 ? 'boundary' : `boundary-${pool.towncode}`,
+      name: `${pool.town}界（今日行政區）`,
+      pts: [...pool.boundary.ring, pool.boundary.ring[0]],
+      color: 'green', // ROUTE_COLORS id — hex values are reset to orange by migrateProject
+      elevations: null,
+    };
+  }),
 };
 await writeFile(join(STORY_DIR, `${SEGMENT.id}.trailpaint.json`), JSON.stringify(project, null, 2));
 
@@ -371,7 +330,7 @@ console.log(`\n  cover: generating TrailPaint placeholder...`);
 for (const [name, w, h] of [['cover', 1080, 1080], ['og', 1200, 630], [`${SEGMENT.id}-thumb`, 400, 400]]) {
   const htmlPath = join(TMP, `${name}.html`);
   const pngPath = join(TMP, `${name}.png`);
-  writeFileSync(htmlPath, makeCoverHtml(COVER_HTML_SPEC, w, h));
+  writeFileSync(htmlPath, makeCoverHtml(CFG.cover, w, h));
   await runChrome([
     '--headless=new', '--disable-gpu', '--hide-scrollbars',
     `--window-size=${w},${h}`,
@@ -384,21 +343,19 @@ for (const [name, w, h] of [['cover', 1080, 1080], ['og', 1200, 630], [`${SEGMEN
 }
 
 const storyJson = {
-  id: 'taipei-daan',
-  title: '大安區百年',
-  subtitle: '1762—今 臺北大安區公共建設與地方記憶時空地圖',
+  id: STORY_ID,
+  title: CFG.title,
+  subtitle: CFG.subtitle,
   description: SEGMENT.description,
   locale: 'zh-TW',
   cover: 'cover.jpg',
   music: {
     src: SEGMENT.music,
-    title: 'Voller Hoffnung — Ronny Matthes',
-    credit: 'Ronny Matthes (Jamendo / Internet Archive)',
-    license: 'CC',
+    ...CFG.music,
   },
   og: {
-    title: '大安區百年 — TrailPaint Stories',
-    description: `互動時空地圖：拉動時間軸，看臺北大安區 ${SPOTS.length} 處公共建設與地方記憶從 1762 年的瑠公圳到今天一個個出現，底圖隨年份切換為中研院 1904、1945、1955、1966、1989、1993 歷史地圖。`,
+    title: CFG.og.title,
+    description: CFG.og.description.replace('{count}', String(SPOTS.length)),
     image: 'og.jpg',
   },
   stories: [{
@@ -418,8 +375,126 @@ const storyJson = {
 };
 await writeFile(join(STORY_DIR, 'story.json'), JSON.stringify(storyJson, null, 2));
 
+// 025 D4: the story page is generated too (static HTML so search engines see the text).
+const REPO_ISSUES = 'https://github.com/notoriouslab/trailpaint/issues/new';
+function storyPageHtml() {
+  const esc = (v) => String(v).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  // `<` escaped so config text can never close the <script> it is embedded in.
+  const json = (v) => JSON.stringify(v, null, 2).replace(/</g, '\\u003c');
+  const url = `https://trailpaint.org/taiwan/${STORY_ID}/`;
+  const desc = SEGMENT.description;
+  const pageTitle = CFG.og.title;
+  const report = `${REPO_ISSUES}?${new URLSearchParams({
+    title: `[${STORY_ID}] `,
+    body: '哪一點（名稱）：\n哪裡有誤：\n正確內容與出處（網址或書名）：\n',
+  }).toString()}`;
+  const article = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${CFG.title} — ${CFG.subtitle}`,
+    description: desc,
+    image: `${url}og.jpg`,
+    datePublished: CFG.published,
+    dateModified: CFG.updated,
+    author: { '@type': 'Organization', name: 'NotoriousLab', url: 'https://github.com/notoriouslab' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'TrailPaint 路小繪',
+      url: 'https://trailpaint.org/',
+      logo: { '@type': 'ImageObject', url: 'https://trailpaint.org/app/favicon.svg' },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    inLanguage: 'zh-TW',
+    hasPart: [{ '@type': 'CreativeWork', name: `${SEGMENT.name} — ${SEGMENT.subtitle}`, description: desc }],
+  };
+  const crumbs = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'TrailPaint 路小繪', item: 'https://trailpaint.org/' },
+      { '@type': 'ListItem', position: 2, name: '台灣百年', item: 'https://trailpaint.org/taiwan/' },
+      { '@type': 'ListItem', position: 3, name: CFG.title, item: url },
+    ],
+  };
+  return `<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${esc(pageTitle)}</title>
+  <meta name="description" content="${esc(desc)}" />
+  <meta property="og:title" content="${esc(pageTitle)}" />
+  <meta property="og:description" content="${esc(desc)}" />
+  <meta property="og:image" content="${url}og.jpg" />
+  <meta property="og:url" content="${url}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:site_name" content="TrailPaint 路小繪" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${esc(pageTitle)}" />
+  <meta name="twitter:description" content="${esc(desc)}" />
+  <meta name="twitter:image" content="${url}og.jpg" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="NotoriousLab" />
+  <link rel="icon" type="image/svg+xml" href="/app/favicon.svg" />
+  <link rel="canonical" href="${url}" />
+  <link rel="stylesheet" href="/stories/stories.css" />
+
+  <script type="application/ld+json">
+${json(article)}
+  </script>
+  <script type="application/ld+json">
+${json(crumbs)}
+  </script>
+</head>
+<body>
+  <div class="stories-page stories-page--fixed">
+    <header class="stories-header stories-header--compact">
+      <a class="stories-header__back" href="/taiwan/">← 台灣百年</a>
+      <h1 class="stories-header__title">${esc(CFG.title)}</h1>
+      <p class="stories-header__subtitle">${esc(CFG.subtitle)}</p>
+      <a class="stories-header__report" href="${esc(report)}" target="_blank" rel="noopener">發現錯誤？</a>
+    </header>
+
+    <div id="tabs" class="story-tabs"></div>
+    <div id="desc" class="story-desc"></div>
+    <div class="story-content">
+      <iframe id="player" class="story-iframe" title="TrailPaint Story Player"></iframe>
+    </div>
+  </div>
+
+  <section class="story-seo-content" hidden>
+    <h2>${esc(CFG.title)} 互動地圖介紹</h2>
+    <p>${esc(desc)}</p>
+
+    <h3>${esc(SEGMENT.name)}</h3>
+    <p>${esc(SEGMENT.subtitle)} ${esc(desc)}</p>
+
+    <p>在 <a href="https://trailpaint.org/app/">TrailPaint 路小繪</a> 中建立你自己的故事地圖。</p>
+  </section>
+
+  <script src="/stories/stories.js"></script>
+  <script>
+    renderStoryPage({
+      tabsId: 'tabs',
+      iframeId: 'player',
+      descId: 'desc',
+      playerBase: '/app/player/',
+      storyBase: '/taiwan/${STORY_ID}/',
+      autoplay: true
+    });
+  </script>
+</body>
+</html>
+`;
+}
+await writeFile(join(STORY_DIR, 'index.html'), storyPageHtml());
+
+
 const lines = [
-  '# 大安區百年 — 圖片來源與授權',
+  CFG.credits.heading,
   '',
   '本故事為 **非營利個人展示** 使用。spot 圖片有三種來源：Wikimedia Commons（按各檔案 PD 或 CC BY/CC BY-SA 授權使用）、維護者自行拍攝（CC BY 4.0），以及著作財產權已消滅（著作權法 §34，1975 年（含）以前公開）的老照片。Cover/og/thumb 為 TrailPaint 程式生成 placeholder。',
   '',
@@ -433,10 +508,7 @@ const lines = [
   '',
   '## 年份與位置考證',
   '',
-  '- 年份為設施「在現址啟用」之年，逐筆對驗維基百科條目（各 spot 說明末附來源）；Wikidata 僅作候選池（其 inception 常混用機構創立年，例：金華國中標 1937，實為 1944 遷入現址）。',
-  '- 內容來源：資料池 `data/places/tw/63000030.json`（僅收已對驗項目）。',
-  '- 範圍以今日大安區界為準（內政部國土測繪中心鄉鎮市區界；1990 年行政區重劃併入原古亭區羅斯福路以東等地）；地圖上的虛線為今日區界。',
-  '- 歷史底圖：中央研究院人社中心 GIS 專題中心「臺灣百年歷史地圖」— 1904 臺灣堡圖、1945 美軍繪製臺灣城市地圖、1955 二萬五千分一臺灣省圖、1966 Corona 衛星影像、1989 經建版地形圖、1993 經建二版地形圖。',
+  ...CFG.credits.notes,
 ];
 await writeFile(join(STORY_DIR, 'CREDITS.md'), lines.join('\n'));
 

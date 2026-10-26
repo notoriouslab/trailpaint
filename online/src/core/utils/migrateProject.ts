@@ -232,6 +232,9 @@ export function migrateProject(data: Record<string, unknown>): Project {
     if (era) spot.era = era; else delete spot.era;
     // v5.1+ takenAt (018): explicit set-or-delete
     if (takenAt) spot.takenAt = takenAt; else delete spot.takenAt;
+    // placeId (025 D5): place-pool id, kebab-case only — set-or-delete like the rest
+    const placeId = (s as Record<string, unknown>).placeId;
+    if (typeof placeId === 'string' && /^[a-z0-9-]{1,80}$/.test(placeId)) spot.placeId = placeId; else delete spot.placeId;
     spots.push(spot);
   }
 

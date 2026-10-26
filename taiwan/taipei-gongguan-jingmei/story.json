@@ -1,0 +1,35 @@
+{
+  "id": "taipei-gongguan-jingmei",
+  "title": "公館到景美：水圳兩百年",
+  "subtitle": "1724—今 公館、景美的水圳、古厝與山邊生態時空地圖",
+  "description": "拉動時間軸，看公館到景美兩百多年來的水與山邊如何改變：清代的霧裡薛圳、瑠公圳與梘尾木梘把景美溪與新店溪的水送進稻田，安溪移民在芳蘭、景美、十五份蓋起古厝與廟宇；日治的臺北水道水源地讓臺北有了自來水，煤礦與萬新鐵路沿著仙跡岩、興隆山開發；戰後溪圳加蓋、校園擴張，滯洪池取代了淹水的低地。今天這些水邊與山邊是白鷺鷥、蕨類與昆蟲的棲地。路線依益人學苑「家園生態探索」課程延伸，底圖依年份切換為中研院歷史地圖；年份為「在現址出現」之年，每點附來源。",
+  "locale": "zh-TW",
+  "cover": "cover.jpg",
+  "music": {
+    "src": "/stories/music/voller-hoffnung.mp3",
+    "title": "Voller Hoffnung — Ronny Matthes",
+    "credit": "Ronny Matthes (Jamendo / Internet Archive)",
+    "license": "CC"
+  },
+  "og": {
+    "title": "公館到景美：水圳兩百年 — TrailPaint Stories",
+    "description": "互動時空地圖：拉動時間軸，看公館、景美一帶 29 處水圳、古厝、煤礦與山邊生態從 1724 年的霧裡薛圳到今天一個個出現，底圖隨年份切換為中研院 1904、1921、1955、1966、1989、1993 歷史地圖。",
+    "image": "og.jpg"
+  },
+  "stories": [
+    {
+      "id": "gongguan-jingmei",
+      "title": "水圳兩百年",
+      "subtitle": "1724—今 從霧裡薛圳到萬盛溪",
+      "description": "拉動時間軸，看公館到景美兩百多年來的水與山邊如何改變：清代的霧裡薛圳、瑠公圳與梘尾木梘把景美溪與新店溪的水送進稻田，安溪移民在芳蘭、景美、十五份蓋起古厝與廟宇；日治的臺北水道水源地讓臺北有了自來水，煤礦與萬新鐵路沿著仙跡岩、興隆山開發；戰後溪圳加蓋、校園擴張，滯洪池取代了淹水的低地。今天這些水邊與山邊是白鷺鷥、蕨類與昆蟲的棲地。路線依益人學苑「家園生態探索」課程延伸，底圖依年份切換為中研院歷史地圖；年份為「在現址出現」之年，每點附來源。",
+      "data": "gongguan-jingmei.trailpaint.json",
+      "thumbnail": "gongguan-jingmei-thumb.jpg",
+      "color": "#0e7490",
+      "music": "/stories/music/voller-hoffnung.mp3"
+    }
+  ],
+  "footer": {
+    "cta": "在 TrailPaint 中建立你自己的故事地圖",
+    "url": "https://trailpaint.org/app/"
+  }
+}

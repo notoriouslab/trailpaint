@@ -1,0 +1,39 @@
+{
+  "id": "taipei-daan-park",
+  "builder": "legacy",
+  "published": "2026-10-25",
+  "updated": "2026-10-25",
+  "title": "大安森林公園",
+  "data": "daan-park.trailpaint.json",
+  "towns": [
+    "63000030"
+  ],
+  "themes": [
+    "park",
+    "military-housing",
+    "heritage"
+  ],
+  "series": "site-century",
+  "listing": {
+    "rank": 1,
+    "kind": "定點",
+    "titleEn": "Da'an Forest Park, One Block a Century",
+    "unit": "phases",
+    "periodLabel": "1904—今",
+    "periodEn": "1904–today",
+    "card": {
+      "img": "/exhibits/daan-park-hero.jpg",
+      "alt": "大安森林公園一百年：1904 年臺灣堡圖上的稻田、1932 年都市計畫的七號公園預定地、今天從台北 101 看到的森林公園",
+      "width": 2000,
+      "height": 1429,
+      "meta": "一個街廓的百年：柴竹圍稻田、七號公園預定地、建華與岳廬眷村、國際學舍，到 1994 年開放的森林公園。"
+    },
+    "catalog": {
+      "subtitle": "1904—今 一個街廓的百年",
+      "description": "定點時間軸：地圖停在大安森林公園這個街廓，拉時間軸或播放，旁邊列出那一年這裡有什麼。從柴竹圍稻田、七號公園預定地、建華與岳廬眷村、國際學舍，到 1992 年拆遷與 1994 年開放的森林公園。8 個階段只收有原文出處者，每則附來源，位置為街廓內示意。",
+      "thumbnail": "/taiwan/taipei-daan-park/card.jpg"
+    },
+    "md": "定點時間軸：地圖停在同一個街廓，拉時間軸或播放，側欄列出那一年這裡存在的階段：柴竹圍稻田、七號公園預定地、建華新村與岳廬新村、國際學舍、拆遷施工、大安森林公園。只收有原文出處的階段，位置為街廓內示意。",
+    "llms": "定點時間軸，地圖停在大安森林公園這個街廓，拉時間軸列出當年這裡有什麼：柴竹圍稻田、七號公園預定地、建華與岳廬眷村、國際學舍、拆遷與 1994 年開放的公園；只收有原文出處的 8 個階段，每則附來源"
+  }
+}

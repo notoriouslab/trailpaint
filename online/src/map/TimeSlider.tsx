@@ -247,7 +247,8 @@ export default function TimeSlider({
             className="time-slider__thumb"
             style={{ left: `${activeRatio * 100}%` }}
           >
-            <span className="time-slider__thumb-label">
+            <span className={`time-slider__thumb-label${activeIndex === 0 ? ' time-slider__thumb-label--start'
+              : activeIndex === scale.length - 1 ? ' time-slider__thumb-label--end' : ''}`}>
               {thumbLabel}
             </span>
           </div>

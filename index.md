@@ -3,7 +3,7 @@
 > Hand-drawn style trail map maker. Build routes from photos, maps, or AI prompts, then export as PNG illustration, complete project backup, or GeoJSON / KML interop formats. Free, open-source (GPL-3.0), no account, no backend.
 
 Language: zh-TW / en / ja (auto-detected)
-Version: 1.8.1
+Version: 1.8.2
 License: GPL-3.0
 Source: https://github.com/notoriouslab/trailpaint
 Try it: https://trailpaint.org/app/
@@ -140,6 +140,10 @@ Embed code is one-click copy from Player ⚙ menu — paste into WordPress / Wix
 ### Spot Era Schema (v5)
 
 `Spot.era?: { start: number; end: number }` — calendar years, BC negative, AD positive, range [-3000, 3000]. Drives postcard era stamp + TimeSlider opacity fade. 17 historical segments / 150 spots already tagged: Paul × 3, Galilean ministry × 2, Passion Week × 3, Zhang Qian × 2, Xuanzang × 2, Marco Polo × 2, Wen Tianxiang × 2, Xu Xiake × 1. Modern stories (Taiwan hikes, 19th-century missionaries) stay era-agnostic intentionally — their spots remain visible at any TimeSlider position.
+
+## v1.8.2 Gongguan to Jingmei (2026-10)
+
+[Gongguan to Jingmei: Two Centuries of Canals](https://trailpaint.org/taiwan/taipei-gongguan-jingmei/), 29 places along the Liugong and Wulixue canals from 1724 to today, following an eco-tour course route. Early years before the decade grid fold into one lead tick ("1724–1876"); each tick shows the latest street-scale map drawn within its span; during playback the clock shows each place's own year. Taiwan century stories now come from one shared generator, and a story check script guards sources, Traditional Chinese copy and listings.
 
 ## v1.8.1 Da'an District Enrichment (2026-10)
 

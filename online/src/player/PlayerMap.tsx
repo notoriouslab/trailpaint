@@ -232,7 +232,12 @@ export default function PlayerMap() {
   useEffect(() => {
     if (!cumulative || activeIndex === null) return;
     const era = project.spots[activeIndex]?.era;
-    if (!era || eraVisible(era, currentYear, eraMode)) return;
+    if (!era) return;
+    // 025 D2: during playback the clock always shows the spot's own year, so
+    // places already visible at the opening year (Qing places under 1904) still
+    // read as time moving on. A manual pick only moves it when hidden.
+    const playing = usePlayerStore.getState().playing;
+    if (playing ? era.start === currentYear : eraVisible(era, currentYear, eraMode)) return;
     setCurrentYear(era.start);
     const ovId = overlayForJump(historyScale, era.start);
     setOverlay(ovId ? { id: ovId, opacity: overlay?.opacity ?? 0.5 } : null);
@@ -244,7 +249,8 @@ export default function PlayerMap() {
   // follows it, and a selection that no longer exists is dropped.
   useEffect(() => {
     if (!site) return;
-    const ovId = overlayForYear(currentYear, getRelevantOverlayIds(visibleLatLngs));
+    // Same street-map rule as cumulative ticks (025 D2b).
+    const ovId = overlayForYear(currentYear, getRelevantOverlayIds(visibleLatLngs, { mode: 'majority', streetOnly: true }));
     setOverlay((prev) => (ovId ? { id: ovId, opacity: prev?.opacity ?? 0.5 } : null));
     const active = activeIndex !== null ? project.spots[activeIndex] : undefined;
     if (active && !eraVisible(active.era, currentYear, eraMode)) setActiveSpot(null);

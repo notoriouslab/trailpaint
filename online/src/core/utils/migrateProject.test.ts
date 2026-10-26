@@ -706,3 +706,23 @@ describe('migrateProject — photoMeta maintainer / public-domain-archive (024)'
     expect(withMeta({ ...maintainer, source: 'unsplash' })).toBeUndefined();
   });
 });
+
+describe('migrateProject — placeId (025 D5)', () => {
+  const spotWith = (placeId: unknown) => migrateProject({
+    ...validBase,
+    spots: [{ id: 's1', latlng: [25, 121.5], num: 1, title: 't', desc: '', photo: null, iconId: 'pin', placeId }],
+  }).spots[0];
+
+  it('keeps a kebab-case pool id', () => {
+    expect(spotWith('jingmei-jiying-temple').placeId).toBe('jingmei-jiying-temple');
+  });
+
+  it.each([
+    ['spaces / capitals', 'A B'],
+    ['81 characters', 'a'.repeat(81)],
+    ['a number', 42],
+    ['markup', '<img src=x>'],
+  ])('drops %s', (_label, value) => {
+    expect(spotWith(value)).not.toHaveProperty('placeId');
+  });
+});

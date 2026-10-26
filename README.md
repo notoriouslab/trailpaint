@@ -4,7 +4,7 @@
 
 > **手繪風路線地圖工具** — 把一趟旅程變成一張會說故事的插畫地圖。零後端、PWA 可裝機、三語自動偵測。
 
-[![Version](https://img.shields.io/badge/version-1.8.1-orange.svg)](https://github.com/notoriouslab/trailpaint/releases)
+[![Version](https://img.shields.io/badge/version-1.8.2-orange.svg)](https://github.com/notoriouslab/trailpaint/releases)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6.svg)](https://www.typescriptlang.org/)
 [![PWA Ready](https://img.shields.io/badge/PWA-ready-5a0fc8.svg)](https://trailpaint.org/features/install/)
@@ -96,7 +96,7 @@ TrailPaint 的使用節奏是三步：**先收集，再編輯，最後分享**�
 
 - **[故事地圖](https://trailpaint.org/stories/)** — 聖經、宣教史、中國歷史、大航海，每個故事附老地圖與時間軸
 - **[出門走走](https://trailpaint.org/examples/)** — 登山步道、古道、親子散步與海外旅行，可直接播放或下載路線檔改成自己的行程
-- **[台灣百年](https://trailpaint.org/taiwan/)** — 同一個地方的一百年，疊上 1904 年臺灣堡圖到今天的中研院歷史地圖；第一篇是大安森林公園
+- **[台灣百年](https://trailpaint.org/taiwan/)** — 同一個地方的一百年，疊上 1904 年臺灣堡圖到今天的中研院歷史地圖；目前有大安森林公園、大安區百年、公館到景美三篇
 
 ## Story Player：讓地圖說故事
 

@@ -1,0 +1,123 @@
+{
+  "id": "taipei-daan",
+  "published": "2026-10-25",
+  "updated": "2026-10-26",
+  "title": "大安區百年",
+  "subtitle": "1762—今 臺北大安區公共建設與地方記憶時空地圖",
+  "segment": {
+    "id": "daan",
+    "name": "大安百年",
+    "subtitle": "1762—今 從水圳稻田到都市之肺",
+    "description": "拉動時間軸，看臺北大安區兩百多年來的公共建設與地方記憶如何一個個出現：清代的瑠公圳、日治時期的農事試驗場、監獄、學校與教授宿舍、戰後的眷村、紫藤廬與殷海光故居、高架道路與東區百貨，到九〇年代以後的森林公園、富陽生態公園、捷運與運動中心。底圖依年份切換為同時代的中研院歷史地圖（1904 臺灣堡圖、1945 美軍市街圖、1955 地形圖、1966 衛星影像、1989 與 1993 經建版地形圖）。範圍以今日大安區界為準（1990 年行政區重劃後）；年份為「在現址啟用」之年，每點附來源。",
+    "color": "#065f46",
+    "center": [
+      25.027,
+      121.541
+    ],
+    "zoom": 14,
+    "overlay": {
+      "id": "tw_1904",
+      "opacity": 0.6
+    },
+    "music": "/stories/music/voller-hoffnung.mp3"
+  },
+  "projectName": "大安區百年",
+  "cover": {
+    "title": "大安區百年",
+    "subtitle": "從水圳稻田到都市之肺",
+    "badge": "1762 — 今"
+  },
+  "music": {
+    "title": "Voller Hoffnung — Ronny Matthes",
+    "credit": "Ronny Matthes (Jamendo / Internet Archive)",
+    "license": "CC"
+  },
+  "og": {
+    "title": "大安區百年 — TrailPaint Stories",
+    "description": "互動時空地圖：拉動時間軸，看臺北大安區 {count} 處公共建設與地方記憶從 1762 年的瑠公圳到今天一個個出現，底圖隨年份切換為中研院 1904、1945、1955、1966、1989、1993 歷史地圖。"
+  },
+  "pools": [
+    {
+      "file": "63000030.json",
+      "ids": [
+        "taihoku-prison",
+        "taihoku-tech-red-house",
+        "second-normal-school",
+        "taihoku-imperial-university",
+        "taihoku-high-school-auditorium",
+        "nishiki-elementary",
+        "daan-public-school",
+        "third-middle-school",
+        "jinhua-junior-high",
+        "renai-elementary",
+        "daan-junior-high",
+        "ntust",
+        "cathay-general-hospital",
+        "second-funeral-parlor",
+        "jianguo-elevated-road",
+        "taipei-public-library-main",
+        "daan-forest-park",
+        "mrt-daan",
+        "mrt-zhongxiao-dunhua",
+        "ntu-sports-center",
+        "daan-sports-center",
+        "mrt-daan-park",
+        "mrt-xinyi-anhe",
+        "heping-basketball-gym",
+        "liugong-ntu-canal",
+        "agri-station-chanchu",
+        "qingtian-76",
+        "huanmin-village",
+        "zitenglu",
+        "yin-haiguang-residence",
+        "horikawa-drain",
+        "sogo-zhongxiao",
+        "fuyang-eco-park"
+      ]
+    }
+  ],
+  "boundaries": [
+    "63000030.json"
+  ],
+  "credits": {
+    "heading": "# 大安區百年：圖片來源與授權",
+    "notes": [
+      "- 年份為設施「在現址啟用」之年，逐筆對驗維基百科條目（各 spot 說明末附來源）；Wikidata 僅作候選池（其 inception 常混用機構創立年，例：金華國中標 1937，實為 1944 遷入現址）。",
+      "- 內容來源：資料池 `data/places/tw/63000030.json`（僅收已對驗項目）。",
+      "- 範圍以今日大安區界為準（內政部國土測繪中心鄉鎮市區界；1990 年行政區重劃併入原古亭區羅斯福路以東等地）；地圖上的虛線為今日區界。",
+      "- 歷史底圖：中央研究院人社中心 GIS 專題中心「臺灣百年歷史地圖」：1904 臺灣堡圖、1945 美軍繪製臺灣城市地圖、1955 二萬五千分一臺灣省圖、1966 Corona 衛星影像、1989 經建版地形圖、1993 經建二版地形圖。"
+    ]
+  },
+  "towns": [
+    "63000030"
+  ],
+  "themes": [
+    "water",
+    "heritage",
+    "campus",
+    "public-works"
+  ],
+  "series": "district-century",
+  "listing": {
+    "rank": 2,
+    "kind": "區域",
+    "titleEn": "Da'an District, a Century",
+    "unit": "spots",
+    "periodLabel": "1762—今",
+    "periodEn": "1762–today",
+    "card": {
+      "img": "/taiwan/taipei-daan/card.jpg",
+      "alt": "大安區百年時空地圖",
+      "width": 800,
+      "height": 600,
+      "meta": "{count} 處公共建設與地方記憶依年份一個個出現：清代瑠公圳、日治的農事試驗場與學校、戰後的眷村與故居、東區百貨、捷運與運動中心。"
+    },
+    "catalog": {
+      "subtitle": "1762—今 臺北大安區公共建設與地方記憶時空地圖",
+      "description": "拉動時間軸，看臺北大安區兩百多年來的公共建設與地方記憶如何一個個出現：清代的瑠公圳、日治時期的農事試驗場、監獄、學校與教授宿舍、戰後的眷村、紫藤廬與殷海光故居、高架道路與東區百貨，到九〇年代以後的森林公園、富陽生態公園、捷運與運動中心。{count} spots，底圖依年份切換為同時代的中研院歷史地圖（1904 臺灣堡圖、1945 美軍市街圖、1955 地形圖、1966 衛星影像、1989 與 1993 經建版地形圖），年份為「在現址啟用」之年，每點附來源。",
+      "thumbnail": "/taiwan/taipei-daan/card.jpg"
+    },
+    "md": "臺北大安區公共建設與地方記憶依「在現址啟用」年份累積出現：瑠公圳、農事試驗場、臺北刑務所、帝大與高校、青田街教授宿舍、煥民新村、紫藤廬與殷海光故居、建國高架、東區百貨、大安森林公園、富陽生態公園、捷運與運動中心。時間軸為累積模式（未建成、已拆除不顯示），底圖隨年份切換中研院 1904 / 1945 / 1955 / 1966 / 1989 / 1993 歷史地圖。每點附來源。",
+    "llms": "臺北大安區 {count} 處公共建設與地方記憶依「在現址啟用」年份累積出現（瑠公圳、農事試驗場、監獄、學校、教授宿舍、眷村、紫藤廬與殷海光故居、高架道路、東區百貨、森林公園、捷運、運動中心），時間軸拉到哪年就只顯示當年已存在的建設，底圖同步切換中研院 1904 / 1945 / 1955 / 1966 / 1989 / 1993 歷史地圖"
+  }
+}

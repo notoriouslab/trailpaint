@@ -1,0 +1,134 @@
+{
+  "id": "taipei-gongguan-jingmei",
+  "published": "2026-10-26",
+  "updated": "2026-10-26",
+  "title": "公館到景美：水圳兩百年",
+  "subtitle": "1724—今 公館、景美的水圳、古厝與山邊生態時空地圖",
+  "segment": {
+    "id": "gongguan-jingmei",
+    "name": "水圳兩百年",
+    "subtitle": "1724—今 從霧裡薛圳到萬盛溪",
+    "description": "拉動時間軸，看公館到景美兩百多年來的水與山邊如何改變：清代的霧裡薛圳、瑠公圳與梘尾木梘把景美溪與新店溪的水送進稻田，安溪移民在芳蘭、景美、十五份蓋起古厝與廟宇；日治的臺北水道水源地讓臺北有了自來水，煤礦與萬新鐵路沿著仙跡岩、興隆山開發；戰後溪圳加蓋、校園擴張，滯洪池取代了淹水的低地。今天這些水邊與山邊是白鷺鷥、蕨類與昆蟲的棲地。路線依益人學苑「家園生態探索」課程延伸，底圖依年份切換為中研院歷史地圖；年份為「在現址出現」之年，每點附來源。",
+    "color": "#0e7490",
+    "center": [
+      25.006,
+      121.545
+    ],
+    "zoom": 14,
+    "overlay": {
+      "id": "tw_1904",
+      "opacity": 0.6
+    },
+    "music": "/stories/music/voller-hoffnung.mp3"
+  },
+  "projectName": "公館到景美：水圳兩百年",
+  "cover": {
+    "title": "公館到景美",
+    "subtitle": "水圳兩百年",
+    "badge": "1724 — 今"
+  },
+  "music": {
+    "title": "Voller Hoffnung — Ronny Matthes",
+    "credit": "Ronny Matthes (Jamendo / Internet Archive)",
+    "license": "CC"
+  },
+  "og": {
+    "title": "公館到景美：水圳兩百年 — TrailPaint Stories",
+    "description": "互動時空地圖：拉動時間軸，看公館、景美一帶 {count} 處水圳、古厝、煤礦與山邊生態從 1724 年的霧裡薛圳到今天一個個出現，底圖隨年份切換為中研院 1904、1921、1955、1966、1989、1993 歷史地圖。"
+  },
+  "pools": [
+    {
+      "file": "63000030.json",
+      "ids": [
+        "wulixue-canal-branch2",
+        "liugong-ntu-canal",
+        "fanglan-mansion",
+        "yifangju-house",
+        "lianrangju",
+        "agri-station-chanchu",
+        "iso-house-ntu-farm",
+        "taihoku-high-school-auditorium",
+        "ntu-insect-museum",
+        "huanmin-village",
+        "zuiyue-lake"
+      ]
+    },
+    {
+      "file": "63000050.json",
+      "ids": [
+        "baozangyan-temple",
+        "taipei-waterworks-pump-room",
+        "gongguan-river-intake"
+      ]
+    },
+    {
+      "file": "63000080.json",
+      "ids": [
+        "jianwei-mujian",
+        "xizaikou-wanqingyan",
+        "shiwufen-fuxing-temple",
+        "jingmei-jiying-temple",
+        "wansheng-creek",
+        "shiwufen-station",
+        "yongfeng-mine",
+        "shiwufen-site",
+        "xingfu-burial-stele",
+        "xianjiyan",
+        "fangchuan-mine",
+        "tanyaokeng-xinyi",
+        "ntnu-gongguan-campus",
+        "wansheng-bridge",
+        "xinhai-detention-park"
+      ]
+    }
+  ],
+  "boundaries": [],
+  "credits": {
+    "heading": "# 公館到景美 圖片來源與授權",
+    "notes": [
+      "- 年份為這個地方「在現址出現」之年（建成、開工、發現或啟用），逐筆對照主管機關、文化資產登錄、區志與研究文章原文；說法不一時在說明並陳。查證底稿：`data/places/research/gongguan-jingmei.md`。",
+      "- 內容來源：資料池 `data/places/tw/63000030.json`（大安）、`63000050.json`（中正）、`63000080.json`（文山）。",
+      "- 路線依台北靈糧堂益人學苑「家園生態探索」課程（大安／文山）延伸，加入公館水源地與景美、興隆一帶的水圳、煤礦與信仰地點。",
+      "- 歷史底圖：中央研究院人社中心 GIS 專題中心「臺灣百年歷史地圖」：1904 臺灣堡圖、1921 臺灣堡圖、1955 二萬五千分一臺灣省圖、1966 Corona 衛星影像、1989 經建版地形圖、1993 經建二版地形圖。1945 美軍市街圖只畫到公館一帶，本故事不採用。"
+    ]
+  },
+  "towns": [
+    "63000030",
+    "63000050",
+    "63000080"
+  ],
+  "themes": [
+    "water",
+    "heritage",
+    "mining",
+    "ecology",
+    "campus"
+  ],
+  "series": "eco-tour-courses",
+  "course": {
+    "name": "家園生態探索2",
+    "url": "https://gvcschool.breadoflife.taipei/courses/1340"
+  },
+  "listing": {
+    "rank": 3,
+    "kind": "主題",
+    "titleEn": "Gongguan to Jingmei, Two Centuries of Canals",
+    "unit": "spots",
+    "periodLabel": "1724—今",
+    "periodEn": "1724–today",
+    "card": {
+      "img": "/taiwan/taipei-gongguan-jingmei/card.jpg",
+      "alt": "公館到景美水圳兩百年時空地圖",
+      "width": 800,
+      "height": 600,
+      "meta": "{count} 處水圳、古厝、煤礦與山邊生態依年份出現：霧裡薛圳、梘尾木梘、芳蘭大厝、自來水水源地、十五份煤礦，到今天的滯洪池。"
+    },
+    "md": "公館到景美一帶的水圳、古厝、廟宇、煤礦、鐵路與校園依年份累積出現：霧裡薛圳、梘尾大木梘、芳蘭大厝、景美集應廟、臺北水道水源地、萬盛溪、仙跡岩與興隆山煤礦、辛亥滯洪池，每點附一句今天看得到的生態。依益人學苑「家園生態探索」課程路線延伸，時間軸為累積模式，底圖隨年份切換中研院 1904 / 1921 / 1955 / 1966 / 1989 / 1993 歷史地圖。每點附來源。",
+    "llms": "公館、景美一帶 {count} 處水圳、古厝、廟宇、煤礦、鐵路與校園依「在現址出現」年份累積出現（霧裡薛圳、梘尾大木梘、瑠公圳、芳蘭大厝、景美集應廟、臺北水道水源地、萬盛溪、仙跡岩與興隆山煤礦、十五份遺址、辛亥滯洪池），每點附今日生態與來源；依益人學苑生態導覽課程路線延伸，底圖同步切換中研院歷史地圖",
+    "catalog": {
+      "subtitle": "1724—今 公館、景美的水圳、古厝與山邊生態時空地圖",
+      "description": "拉動時間軸，看公館到景美兩百多年來的水與山邊如何改變：清代的霧裡薛圳、瑠公圳與木梘，安溪移民的古厝與廟宇，日治的自來水水源地、煤礦與鐵路，到戰後加蓋的溪圳與今天的滯洪池。{count} spots，每點附一句今天看得到的生態與來源，路線依益人學苑生態導覽課程延伸。",
+      "thumbnail": "/taiwan/taipei-gongguan-jingmei/card.jpg"
+    }
+  }
+}

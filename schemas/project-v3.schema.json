@@ -157,6 +157,11 @@
           "description": "v5.1+. ISO 8601 capture time (from photo EXIF, or supplied for multi-day itineraries). Spots are sorted chronologically on photo import, and 'connect spots as route' groups spots by local calendar day — one route per day. Optional; spots without it keep their relative order and group together.",
           "type": "string",
           "format": "date-time"
+        },
+        "placeId": {
+          "description": "TrailPaint 1.8.2+. Id of the place in TrailPaint's place pool (data/places/tw/) for curated story spots; lets the same place be linked across stories. Kebab-case, max 80 chars; anything else is dropped on import.",
+          "type": "string",
+          "pattern": "^[a-z0-9-]{1,80}$"
         }
       }
     },

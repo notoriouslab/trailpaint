@@ -1,0 +1,12 @@
+# Characters OpenCC flags as simplified when checked one at a time, but which are
+# correct in Traditional Chinese (check-stories.mjs item 3). One per line, # reason.
+台 # 台/臺 both standard in Taiwan; OpenCC prefers 臺
+岳 # 岳廬新村 is the proper name; OpenCC maps to 嶽
+床 # standard form; OpenCC maps to variant 牀
+里 # 里 (village, 公里) is correct; OpenCC maps to 裏
+群 # standard form; OpenCC maps to variant 羣
+峰 # standard form; OpenCC maps to variant 峯
+岩 # 仙跡岩 and other place names use 岩; OpenCC maps to 巖
+游 # 上游/下游 is correct; OpenCC maps to 遊
+庄 # 興福庄 is the official place name; OpenCC maps to 莊
+准 # 准許 is correct; OpenCC maps to 準

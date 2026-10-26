@@ -472,9 +472,10 @@
   transition: left 0.18s ease-out;
 }
 
+/* Below the pill: above it the label ran off the top of the screen (025). */
 .time-slider__thumb-label {
   position: absolute;
-  top: -28px;
+  top: calc(100% + 12px);
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.95);
@@ -487,6 +488,17 @@
   box-shadow: 0 1px 3px rgba(0,0,0,0.15);
   pointer-events: none;
 }
+/* First / last tick: align to the thumb's edge so a long label ("1724–1876")
+   stays on screen instead of centring past the edge (025). */
+.time-slider__thumb-label--start {
+  left: 0;
+  transform: none;
+}
+.time-slider__thumb-label--end {
+  left: auto;
+  right: 0;
+  transform: none;
+}
 
 /* Mobile: tighter pill, label larger for touch readability */
 @media (max-width: 767px) {
@@ -497,7 +509,6 @@
     padding: 0 18px;
   }
   .time-slider__thumb-label {
-    top: -24px;
     font-size: 10.5px;
   }
 }

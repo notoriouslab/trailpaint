@@ -421,7 +421,7 @@
       ],
       "start": 1929,
       "end": null,
-      "desc": "臺灣總督府臺北高等學校的講堂與主體校舍於 1929 年完成。1946 年臺灣省立師範學院借用校舍成立，1949 年臺北高級中學停辦，師範學院接收資源，逐步發展為今日的國立臺灣師範大學。",
+      "desc": "臺灣總督府臺北高等學校的講堂與主體校舍於 1929 年完成。1946 年臺灣省立師範學院借用校舍成立，1949 年臺北高級中學停辦，師範學院接收資源，逐步發展為今日的國立臺灣師範大學。霧裡薛圳第二支線當年從校園穿過，人稱「誠溪」，師大路一帶還有過它的調節埤塘。",
       "sources": [
         {
           "title": "維基百科〈臺灣總督府臺北高等學校〉",
@@ -430,6 +430,10 @@
         {
           "title": "維基百科〈國立臺灣師範大學〉",
           "url": "https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8"
+        },
+        {
+          "title": "師大藝文中心〈理水．理園〉2025",
+          "url": "https://www.artmuse.ntnu.edu.tw/index.php/2025/07/31/waterwaywonderland1/"
         }
       ],
       "photo": {
@@ -2811,7 +2815,7 @@
       ],
       "start": 1953,
       "end": null,
-      "desc": "政府遷臺後，空軍把作戰司令部設在蟾蜍山，1953 年在山腳興建眷舍，初名克難甲、乙、丙、丁村，每戶只有三坪半，牆是竹子與稻草泥巴。1960 年代初以空軍將領徐煥昇、王衛民之名改稱煥民新村。沒分到房子的軍眷在山坡自力造屋，與農試所宿舍形成山城聚落。2016 年蟾蜍山登錄為臺北市文化景觀，是臺北保存最完整的空軍眷村。",
+      "desc": "政府遷臺後，空軍把作戰司令部設在蟾蜍山，1953 年在山腳興建眷舍，初名克難甲、乙、丙、丁村，每戶只有三坪半，牆是竹子與稻草泥巴。1960 年代初以空軍將領徐煥昇、王衛民之名改稱煥民新村。沒分到房子的軍眷在山坡自力造屋，與農試所宿舍形成山城聚落。2016 年蟾蜍山登錄為臺北市文化景觀，是臺北保存最完整的空軍眷村。蟾蜍山至今棲居著橡實蝸牛、面天樹蛙、大冠鷲、臺灣藍鵲、白鼻心等物種。",
       "sources": [
         {
           "title": "苦勞網轉載 臺大城鄉所好蟾蜍工作室 2013",
@@ -2824,6 +2828,10 @@
         {
           "title": "輔導會《榮光雙周刊》2023",
           "url": "https://epaper.vac.gov.tw/zh-tw/C/3109%7C22/32460/1/Publish.htm"
+        },
+        {
+          "title": "蟾蜍山煥民新村〈自然生態〉",
+          "url": "https://huanminvillage.taipei/about/landscape"
         }
       ],
       "photo": {
@@ -2986,6 +2994,237 @@
       "verified": {
         "method": "manual",
         "date": "2026-10-25"
+      }
+    },
+    {
+      "id": "wulixue-canal-branch2",
+      "name": "霧裡薛圳第二支線明渠",
+      "category": "irrigation",
+      "latlng": [
+        25.02154,
+        121.53324
+      ],
+      "start": 1724,
+      "end": null,
+      "desc": "霧裡薛圳 1724 年開工、乾隆初年完工，在霧裡薛溪（今景美溪）取水，大體沿今景興路、萬盛街到公館，再接汀州路、溫州街，在九汴頭分出支線灌溉臺北盆地。溫州街 45 巷這一小段是僅存露天的霧裡薛圳圳道，2025 年指定為市定古蹟；渠中長滿水生植物，旁邊是居民耕作的菜地。",
+      "sources": [
+        {
+          "title": "臺北文化小旅行〈霧裡薛圳〉",
+          "url": "https://miniculturaltrips.gov.taipei/News_Content.aspx?n=0DA7E7A7A1EA5C19&s=B8377DBD22595B0F&sms=337199328131CB54"
+        },
+        {
+          "title": "國立臺灣大學校園規劃報告第二章",
+          "url": "http://homepage.ntu.edu.tw/%7Ecpo/download/2020plan/chap_02.pdf"
+        },
+        {
+          "title": "中央社 2025-05-26",
+          "url": "https://www.cna.com.tw/news/acul/202505260226.aspx"
+        }
+      ],
+      "photo": {
+        "file": "Wulixue Canel 01 20261020.jpg"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-26"
+      }
+    },
+    {
+      "id": "fanglan-mansion",
+      "name": "芳蘭大厝",
+      "category": "residence",
+      "latlng": [
+        25.01332,
+        121.548
+      ],
+      "start": 1806,
+      "end": null,
+      "desc": "1806 年，在艋舺經營「芳蘭記」船頭行致富的安溪移民陳振師，在芳蘭山腳蓋了這座三合院。大厝面對瑠公圳、背靠芳蘭山，是臺北盆地邊緣少數留下來的清代古宅，1988 年土地徵收後由臺大管理，1999 年指定為市定古蹟。背後的蟾蜍山、芳蘭山一線仍是淺山林地，記錄過面天樹蛙、臺灣藍鵲、大冠鷲。",
+      "sources": [
+        {
+          "title": "大安區公所〈芳蘭大厝〉",
+          "url": "https://dado.gov.taipei/News_Content.aspx?n=21D5522EA8F62D7A&s=AFFE36261B7C6407"
+        },
+        {
+          "title": "臺大校史館〈富田望水〉",
+          "url": "https://historygallery.ntu.edu.tw/%E5%AF%8C%E7%94%B0%E6%9C%9B%E6%B0%B4/qingditch.html"
+        },
+        {
+          "title": "國立臺灣大學校園規劃報告第二章",
+          "url": "http://homepage.ntu.edu.tw/%7Ecpo/download/2020plan/chap_02.pdf"
+        },
+        {
+          "title": "蟾蜍山煥民新村〈自然生態〉",
+          "url": "https://huanminvillage.taipei/about/landscape"
+        }
+      ],
+      "photo": {
+        "file": "2021 Fanglan Mansion.jpg"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-26"
+      }
+    },
+    {
+      "id": "yifangju-house",
+      "name": "義芳居古厝",
+      "category": "residence",
+      "latlng": [
+        25.01162,
+        121.54736
+      ],
+      "start": 1876,
+      "end": null,
+      "desc": "芳蘭大厝陳家的後人，1876 年在芳蘭山西側山腳另建三合院「義芳居」，外牆開有銃眼，看得出當年墾區邊緣的治安。陳家三座大宅合稱芳蘭三塊厝，玉芳居原址已成臺大宿舍，義芳居 1989 年公告為古蹟而留下。古厝背倚蟾蜍山、芳蘭山與中埔山相連的山腳，山上至今有臺灣藍鵲、白鼻心等淺山動物。",
+      "sources": [
+        {
+          "title": "大安區公所〈義芳居古厝〉",
+          "url": "https://dado.gov.taipei/ct.asp?CtNode=38543&mp=124021&xItem=28528"
+        },
+        {
+          "title": "臺大校史館〈富田望水〉",
+          "url": "https://historygallery.ntu.edu.tw/%E5%AF%8C%E7%94%B0%E6%9C%9B%E6%B0%B4/qingditch.html"
+        },
+        {
+          "title": "蟾蜍山煥民新村〈自然生態〉",
+          "url": "https://huanminvillage.taipei/about/landscape"
+        }
+      ],
+      "photo": {
+        "file": "義芳居古厝4291.jpg"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-26"
+      }
+    },
+    {
+      "id": "lianrangju",
+      "name": "龍安坡黃宅濂讓居",
+      "category": "residence",
+      "latlng": [
+        25.02388,
+        121.53916
+      ],
+      "start": 1897,
+      "end": null,
+      "desc": "安溪移民黃氏的後代在 1897 年合建這座紅磚三合院，建成時坐北朝南、四周都是稻田。今天它在龍門國中校園內，1999 年指定為市定古蹟，是大安區少數還在原地的清末農家宅第。",
+      "sources": [
+        {
+          "title": "文化部文化資產局 國家文化資產網〈龍安坡黃宅濂讓居〉",
+          "url": "https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19990629000003"
+        }
+      ],
+      "photo": {
+        "file": "龍安坡黃宅濂讓居.jpg"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-26"
+      }
+    },
+    {
+      "id": "iso-house-ntu-farm",
+      "name": "臺大農場與磯永吉小屋",
+      "category": "research",
+      "latlng": [
+        25.01589,
+        121.54118
+      ],
+      "start": 1925,
+      "end": null,
+      "desc": "1924 年臺北高等農林學校在芳蘭山腳的水田設實習農場，隔年蓋了這間木造作業室，「蓬萊米之父」磯永吉在這裡選育稻種，戰後成了他的紀念室，2009 年指定為市定古蹟。農場至今保留創建時的田區，2004 年完工的農場生態池（瑠公圳水源池）成了校園鳥類、蛙類與爬蟲類的棲地。",
+      "sources": [
+        {
+          "title": "磯永吉小屋",
+          "url": "https://www.isohouse.org.tw/"
+        },
+        {
+          "title": "臺大校史館 建築史網站",
+          "url": "https://historygallery.ntu.edu.tw/2018%E5%BB%BA%E7%AF%89%E5%8F%B2%E7%B6%B2%E7%AB%99/"
+        },
+        {
+          "title": "臺大校史館〈富田望水〉復原篇",
+          "url": "https://historygallery.ntu.edu.tw/%E5%AF%8C%E7%94%B0%E6%9C%9B%E6%B0%B4/restore.html"
+        }
+      ],
+      "photo": {
+        "file": "Workshop of Advanced Academy of Agronomy and Forestry.jpg"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-26"
+      }
+    },
+    {
+      "id": "ntu-insect-museum",
+      "name": "臺大昆蟲館",
+      "category": "research",
+      "latlng": [
+        25.01108,
+        121.54065
+      ],
+      "start": 1936,
+      "end": null,
+      "desc": "1936 年落成的臺北帝大昆蟲學及養蠶學教室，主持的素木得一 1907 年來臺，帶領全臺昆蟲調查。館內收藏三十多萬件標本，其中一千多件是新種命名依據的模式標本，2017 年指定為市定古蹟。建築就在蟾蜍山腳，山上至今仍有斑蛾、橡實蝸牛、面天樹蛙等物種。",
+      "sources": [
+        {
+          "title": "臺大昆蟲學系〈歷史沿革〉",
+          "url": "https://entomol.ntu.edu.tw/cp_n_46841.html"
+        },
+        {
+          "title": "臺大校史館 建築史網站",
+          "url": "https://historygallery.ntu.edu.tw/2018%E5%BB%BA%E7%AF%89%E5%8F%B2%E7%B6%B2%E7%AB%99/"
+        },
+        {
+          "title": "蟾蜍山煥民新村〈自然生態〉",
+          "url": "https://huanminvillage.taipei/about/landscape"
+        }
+      ],
+      "photo": {
+        "file": "2021 National Taiwan University Insect Museum.jpg"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-26"
+      }
+    },
+    {
+      "id": "zuiyue-lake",
+      "name": "醉月湖",
+      "category": "waterway",
+      "latlng": [
+        25.02017,
+        121.53779
+      ],
+      "start": 1972,
+      "end": null,
+      "desc": "醉月湖原是瑠公圳大安支線上的調節水塘「牛湳池」。1972 年校方把它整成一大二小三個池子，加了湖心亭，隔年才有「醉月湖」這個名字；瑠公圳改道後湖水只剩雨水與地下水，近年再從新店溪引水補充。湖邊大樹是黑冠麻鷺築巢的地方，紅冠水雞在湖心草叢繁殖。",
+      "sources": [
+        {
+          "title": "臺大訪客中心〈醉月湖〉",
+          "url": "https://visitorcenter.ntu.edu.tw/News_Content_n_74842_s_81631.html"
+        },
+        {
+          "title": "臺大總務處 黑冠麻鷺族群調查 2010",
+          "url": "http://homepage.ntu.edu.tw/~cpo/environ/malay2010report.pdf"
+        },
+        {
+          "title": "臺大電子報 2016",
+          "url": "https://host.cc.ntu.edu.tw/sec/schinfo/epaper/article.asp?num=1288&sn=14906"
+        },
+        {
+          "title": "臺大焦點新聞 2016",
+          "url": "https://www.ntu.edu.tw/spotlight/2016/752_20160225.html"
+        }
+      ],
+      "photo": {
+        "file": "Drunken Moon Lake 20240704.jpg"
+      },
+      "verified": {
+        "method": "manual",
+        "date": "2026-10-26"
       }
     }
   ]

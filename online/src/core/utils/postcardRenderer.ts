@@ -6,7 +6,7 @@
  *
  * Design ref: openspec/changes/2026-05-03-016-time-slider-postcard/design.md B4
  *
- * Spec drift (2026-05-03 主公 hotfix): original 720/360 felt flat — no spot
+ * Spec drift (2026-05-03 maintainer hotfix): original 720/360 felt flat — no spot
  * identity. Amended to 540/360/180 with photo + title + scripture + desc in
  * the middle band, so the postcard reads as "this place, this time".
  */

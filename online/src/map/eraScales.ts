@@ -139,48 +139,65 @@ export function tickStepFor(startYear: number, nowYear: number): number {
  * Time scale for a given project, newest → oldest (019 D7).
  *   - fade (016 default): one tick per geographically relevant overlay.
  *   - cumulative: content-first — evenly spaced ticks (tickStepFor: 10 years
- *     for a century, wider for older stories) from the earliest spot era start
- *     up to now, then modern. Each tick carries the
- *     basemap from overlayForYear. Maps follow content, not the other way round.
- *   - 024 lead tick: when the earliest year alone would coarsen the step (大安
- *     瑠公圳 1762 turns decades into 20 years), it gets its own tick and the
- *     even ticks start from the next distinct year. At most one lead tick.
+ *     for a century, wider for older stories) up to now, then modern. Each tick
+ *     carries the latest street-scale map drawn within its span (025 D2b).
+ *   - lead tick (024 D2, generalised in 025 D2): years too early for the grid
+ *     fold into one lead tick, so 瑠公圳 1762 or nine Qing places don't coarsen
+ *     the twentieth century. Its year is the latest folded year (dragging there
+ *     shows them all); its label is that year, or "earliest–latest".
  * TimeSlider and PlayerMap must both use this so they agree on the ticks.
  */
 export function scaleForProject(
   spotsLatLngs: ReadonlyArray<readonly [number, number]>,
   eraMode: EraMode = 'fade',
   eraStarts: readonly number[] = [],
+  nowYear: number = MODERN_TICK.year,
 ): Scale[] {
-  const relevantIds = getRelevantOverlayIds(spotsLatLngs);
+  const modern: Scale = nowYear === MODERN_TICK.year ? MODERN_TICK : { ...MODERN_TICK, year: nowYear };
   const years = [...new Set(eraStarts)].sort((a, b) => a - b);
   if (eraMode !== 'cumulative' || years.length === 0) {
+    const relevantIds = getRelevantOverlayIds(spotsLatLngs);
     return HISTORY_SCALE.filter((tick) => !tick.overlayId || relevantIds.has(tick.overlayId));
   }
-  const lead = years.length > 1
-    && tickStepFor(years[0], MODERN_TICK.year) > tickStepFor(years[1], MODERN_TICK.year)
-    ? years[0]
-    : undefined;
-  const gridStart = lead === undefined ? years[0] : years[1];
-  const step = tickStepFor(gridStart, MODERN_TICK.year);
-  const first = Math.floor(gridStart / step) * step;
-  // 024: the first tick shows the latest map within its span (1900 tick →
-  // 1904 堡圖 even when a 1903 spot exists) — the only place a map may be a few
-  // years "ahead". A lead tick reuses it: no street-scale map predates 1897, and
-  // overlayForYear(1762) would pick the Ming empire map.
-  const firstOverlay = overlayForYear(first + step - 1, relevantIds);
+  const relevantIds = getRelevantOverlayIds(spotsLatLngs, { mode: 'majority', streetOnly: true });
+  const gridCount = (start: number, step: number) => Math.ceil((nowYear - Math.floor(start / step) * step) / step);
+  // Grid start: the earliest year whose own step matches the story's median year
+  // (upper median, so two years [1762, 1904] still get a lead tick); if earlier years remain they need a lead tick, so the grid
+  // must leave room for it. No such year → the whole span sets the step (019).
+  const target = tickStepFor(years[Math.floor(years.length / 2)], nowYear);
+  let gridIdx = years.findIndex((y, i) => {
+    const step = tickStepFor(y, nowYear);
+    return step === target && (i === 0 || gridCount(y, step) <= MAX_CONTENT_TICKS - 1);
+  });
+  if (gridIdx === -1) gridIdx = 0;
+  const lead = years.slice(0, gridIdx);
+  const step = tickStepFor(years[gridIdx], nowYear);
+  const first = Math.floor(years[gridIdx] / step) * step;
+  // Each tick shows the latest map drawn within its span (1950 tick → 1955
+  // map, 1900 tick → 1904 堡圖 even with a 1903 spot), never one from a later
+  // span (025 D2b). The lead tick reuses the first tick's map.
+  const earliestStreet = [...HISTORY_SCALE].reverse()
+    .find((t) => t.overlayId !== undefined && relevantIds.has(t.overlayId))?.overlayId;
+  // Before the oldest street map, every tick borrows it (a Qing-era story
+  // would otherwise flip to the modern basemap).
+  const mapFor = (year: number) => (year >= MODERN_BASEMAP_FROM ? undefined
+    : overlayForYear(Math.min(year + step - 1, MODERN_BASEMAP_FROM - 1), relevantIds) ?? earliestStreet);
+  const firstOverlay = mapFor(first);
   const ticks: Scale[] = [];
-  const tickAt = (year: number, overlayId: string | undefined): Scale => ({
+  const tickAt = (year: number, overlayId: string | undefined, label = String(year)): Scale => ({
     year,
     labelKey: 'era.modern', // unused for display (label wins); keeps Scale.labelKey a valid key
-    label: String(year),
+    label,
     overlayId,
   });
-  if (lead !== undefined) ticks.push(tickAt(lead, firstOverlay));
-  for (let year = first; year < MODERN_TICK.year; year += step) {
-    ticks.push(tickAt(year, year === first ? firstOverlay : overlayForYear(year, relevantIds)));
+  if (lead.length) {
+    const last = lead[lead.length - 1];
+    ticks.push(tickAt(last, firstOverlay, lead.length === 1 ? String(last) : `${lead[0]}–${last}`));
   }
-  return [MODERN_TICK, ...ticks.reverse()];
+  for (let year = first; year < nowYear; year += step) {
+    ticks.push(tickAt(year, mapFor(year)));
+  }
+  return [modern, ...ticks.reverse()];
 }
 
 /**
@@ -189,5 +206,7 @@ export function scaleForProject(
  * `scale` is newest → oldest, as returned by scaleForProject.
  */
 export function overlayForJump(scale: readonly Scale[], year: number): string | undefined {
-  return scale.find((tick) => tick.year <= year)?.overlayId;
+  // Before every tick (a Qing place under a "1724–1876" lead tick dated 1876):
+  // the oldest tick's map, not the modern basemap (025 D2).
+  return (scale.find((tick) => tick.year <= year) ?? scale[scale.length - 1])?.overlayId;
 }

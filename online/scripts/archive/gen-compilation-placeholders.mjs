@@ -9,7 +9,7 @@
  * Pipeline: HTML template → Chrome headless --screenshot (PNG) →
  * sips conversion (JPG q=85) → final destination.
  *
- * Designed to be replaced wholesale once 主公 hands off real artwork.
+ * Designed to be replaced wholesale once the maintainer hands off real artwork.
  */
 import { execSync } from 'node:child_process';
 import { writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';

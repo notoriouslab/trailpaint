@@ -280,6 +280,16 @@
       "count": 1
     },
     {
+      "id": "taipei-daan-park",
+      "collection": "taiwan",
+      "title": "大安森林公園",
+      "subtitle": "1904—今 一個街廓的百年",
+      "description": "定點時間軸：地圖停在大安森林公園這個街廓，拉時間軸或播放，旁邊列出那一年這裡有什麼。從柴竹圍稻田、七號公園預定地、建華與岳廬眷村、國際學舍，到 1992 年拆遷與 1994 年開放的森林公園。8 個階段只收有原文出處者，每則附來源，位置為街廓內示意。",
+      "thumbnail": "/taiwan/taipei-daan-park/card.jpg",
+      "path": "/taiwan/taipei-daan-park/",
+      "count": 1
+    },
+    {
       "id": "taipei-daan",
       "collection": "taiwan",
       "title": "大安區百年",
@@ -290,13 +300,13 @@
       "count": 1
     },
     {
-      "id": "taipei-daan-park",
+      "id": "taipei-gongguan-jingmei",
       "collection": "taiwan",
-      "title": "大安森林公園",
-      "subtitle": "1904—今 一個街廓的百年",
-      "description": "定點時間軸：地圖停在大安森林公園這個街廓，拉時間軸或播放，旁邊列出那一年這裡有什麼。從柴竹圍稻田、七號公園預定地、建華與岳廬眷村、國際學舍，到 1992 年拆遷與 1994 年開放的森林公園。8 個階段只收有原文出處者，每則附來源，位置為街廓內示意。",
-      "thumbnail": "/taiwan/taipei-daan-park/card.jpg",
-      "path": "/taiwan/taipei-daan-park/",
+      "title": "公館到景美：水圳兩百年",
+      "subtitle": "1724—今 公館、景美的水圳、古厝與山邊生態時空地圖",
+      "description": "拉動時間軸，看公館到景美兩百多年來的水與山邊如何改變：清代的霧裡薛圳、瑠公圳與木梘，安溪移民的古厝與廟宇，日治的自來水水源地、煤礦與鐵路，到戰後加蓋的溪圳與今天的滯洪池。29 spots，每點附一句今天看得到的生態與來源，路線依益人學苑生態導覽課程延伸。",
+      "thumbnail": "/taiwan/taipei-gongguan-jingmei/card.jpg",
+      "path": "/taiwan/taipei-gongguan-jingmei/",
       "count": 1
     }
   ],
