@@ -1,5 +1,6 @@
-import { useEffect, useCallback, useState } from 'react';
+import { useEffect, useCallback, useState, useRef } from 'react';
 import { isValidSrc } from './isValidSrc';
+import { parseDeepLink, resolveFocus, shareBase } from './deepLink';
 import { usePlayerStore } from './usePlayerStore';
 import { migrateProject } from '../core/utils/migrateProject';
 import { decodeShareLink } from '../core/utils/shareLink';
@@ -21,12 +22,21 @@ export default function PlayerApp() {
   const loadProject = usePlayerStore((s) => s.loadProject);
   const setError = usePlayerStore((s) => s.setError);
   const setPlaying = usePlayerStore((s) => s.setPlaying);
+  const setActiveSpot = usePlayerStore((s) => s.setActiveSpot);
+  const setCurrentYear = usePlayerStore((s) => s.setCurrentYear);
+  const setShareBase = usePlayerStore((s) => s.setShareBase);
   const loadSeq = usePlayerStore((s) => s.loadSeq);
 
   // URL params
   const [params] = useState(() => new URLSearchParams(window.location.search));
   const isEmbed = params.get('embed') === '1';
-  const autoplay = params.get('autoplay') === '1';
+  // 027: ?spot= / ?year= open the story on one spot at one year (no autoplay).
+  const [deepLink] = useState(() => parseDeepLink(params));
+  // Only ?src= loads apply a deep link, so only they skip autoplay for one.
+  const hasDeepLink = params.has('src') && (deepLink.spot !== null || deepLink.year !== null);
+  const autoplay = params.get('autoplay') === '1' && !hasDeepLink;
+  const focusTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
+  useEffect(() => () => clearTimeout(focusTimer.current), []);
 
   // Strip load-time params/hash from the URL once a project is in memory. Keeps
   // the standalone player address bar as clean as the Editor's /s/:id shares —
@@ -104,6 +114,15 @@ export default function PlayerApp() {
         .then((raw) => {
           const data = migrateProject(raw);
           loadProject(data);
+          setShareBase(shareBase(window.location.origin, params, isValidSrc));
+          // The year applies before the map mounts, so it opens on that year's
+          // map; the spot follows after the same 1s the autoplay waits, so the
+          // whole story shows first and then the map flies in.
+          const focus = resolveFocus(data, deepLink);
+          if (focus.year !== null) setCurrentYear(focus.year);
+          const idx = focus.index;
+          clearTimeout(focusTimer.current);
+          if (idx !== null) focusTimer.current = setTimeout(() => setActiveSpot(idx), 1000);
           cleanUrl();
         })
         .catch((e) => {
@@ -220,7 +239,7 @@ export default function PlayerApp() {
         return () => cleanups.forEach((c) => c());
       }
     }
-  }, [params, loadProject, setError, isEmbed, cleanUrl]);
+  }, [params, loadProject, setError, isEmbed, cleanUrl, deepLink, setShareBase, setCurrentYear, setActiveSpot]);
 
   // Autoplay: trigger 1s after project loads so FitBounds has time to show
   // the whole route before FlyToActive zooms in on spot 1.

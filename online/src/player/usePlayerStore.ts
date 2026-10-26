@@ -20,6 +20,8 @@ interface PlayerState {
   loadSeq: number;
   /** Year shown on the TimeSlider; drives era visibility (shared by map, panel, playback) */
   currentYear: number;
+  /** 027: base of the spot links the share button builds; null = this load can't be linked */
+  shareBase: string | null;
 
   // Actions
   loadProject: (project: Project) => void;
@@ -29,6 +31,7 @@ interface PlayerState {
   setDwellTime: (ms: number) => void;
   setLoopCount: (count: number) => void;
   setCurrentYear: (year: number) => void;
+  setShareBase: (base: string | null) => void;
   reset: () => void;
 }
 
@@ -41,10 +44,11 @@ export const usePlayerStore = create<PlayerState>()((set) => ({
   loopCount: 1,
   currentYear: MODERN_TICK.year,
   loadSeq: 0,
+  shareBase: null,
 
   loadProject: (project) => set((s) => ({
     project, error: null, activeSpotIndex: null, playing: false,
-    currentYear: initialYear(project), loadSeq: s.loadSeq + 1,
+    currentYear: initialYear(project), loadSeq: s.loadSeq + 1, shareBase: null,
   })),
   setError: (error) => set({ error, project: null }),
   setActiveSpot: (index) => set({ activeSpotIndex: index }),
@@ -52,5 +56,6 @@ export const usePlayerStore = create<PlayerState>()((set) => ({
   setDwellTime: (ms) => set({ dwellTime: ms }),
   setLoopCount: (count) => set({ loopCount: count }),
   setCurrentYear: (year) => set({ currentYear: year }),
-  reset: () => set({ project: null, error: null, activeSpotIndex: null, playing: false, dwellTime: 4000, loopCount: 1, currentYear: MODERN_TICK.year }),
+  setShareBase: (base) => set({ shareBase: base }),
+  reset: () => set({ project: null, error: null, activeSpotIndex: null, playing: false, dwellTime: 4000, loopCount: 1, currentYear: MODERN_TICK.year, shareBase: null }),
 }));

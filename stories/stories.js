@@ -147,9 +147,31 @@ async function renderStoryPage(opts) {
       return '&music=' + encodeURIComponent(url);
     }
 
-    function activate(index) {
+    // 027: ?seg=&spot=&year= opens one segment on one spot at one year. Values
+    // are checked here and again by the Player. page + seg let the Player's
+    // share button link back to this page.
+    var query = new URLSearchParams(location.search);
+    var focus = null;
+    var startIndex = 0;
+    var focusSeg = query.get('seg');
+    var focusSpot = query.get('spot');
+    var focusYear = query.get('year');
+    if (focusSpot && !/^[A-Za-z0-9_-]{1,80}$/.test(focusSpot)) focusSpot = null;
+    if (focusYear && !(/^-?\d{1,4}$/.test(focusYear) && Math.abs(Number(focusYear)) <= 3000)) focusYear = null;
+    var segIndex = focusSeg ? stories.findIndex(function (s) { return s.id === focusSeg; }) : 0;
+    if (segIndex >= 0) {
+      startIndex = segIndex;
+      if (focusSpot || focusYear) focus = { spot: focusSpot, year: focusYear };
+    }
+
+    function activate(index, deep) {
       var s = stories[index];
-      var src = playerBase + '?embed=1&src=' + storyBase + s.data + useAutoplay + getMusicParam(s);
+      var back = s.id && /^[a-z0-9-]{1,80}$/.test(s.id)
+        ? '&page=' + encodeURIComponent(storyBase) + '&seg=' + s.id : '';
+      var at = deep
+        ? (deep.spot ? '&spot=' + deep.spot : '') + (deep.year ? '&year=' + deep.year : '')
+        : useAutoplay;
+      var src = playerBase + '?embed=1&src=' + storyBase + s.data + at + getMusicParam(s) + back;
       iframe.src = src;
 
       // Update description (collapse when switching)
@@ -170,7 +192,7 @@ async function renderStoryPage(opts) {
     // Render tabs
     if (tabsEl) {
       tabsEl.innerHTML = stories.map(function (s, i) {
-        return '<button class="story-tab' + (i === 0 ? ' story-tab--active' : '') + '" data-index="' + i + '">' +
+        return '<button class="story-tab' + (i === startIndex ? ' story-tab--active' : '') + '" data-index="' + i + '">' +
           '<img class="story-tab__thumb" src="' + escapeAttr(s.thumbnail) + '" alt="" />' +
           '<span>' + escapeHtml(s.title) + '</span>' +
         '</button>';
@@ -189,8 +211,12 @@ async function renderStoryPage(opts) {
       });
     }
 
-    // Load first story
-    activate(0);
+    // Load the linked segment, or the first one. Like the Player, the address
+    // bar drops the link params once used; the share button rebuilds them.
+    activate(startIndex, focus);
+    if (focusSeg || query.has('spot') || query.has('year')) {
+      try { history.replaceState(null, '', location.pathname + location.hash); } catch (e) { /* sandboxed */ }
+    }
 
     // Music is now handled by Player via ?music= parameter
 

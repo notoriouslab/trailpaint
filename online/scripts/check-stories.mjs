@@ -9,7 +9,8 @@
  *   4. data/stories/*.json ↔ catalog / sitemap / llms.txt / taiwan hub
  *   5. version numbers agree
  *   6. gen-story-index-html.mjs GROUPS all exist
- *   7. bundled story files: photos are files that exist, each file ≤ 200 KB
+ *   7. bundled story files ≤ 200 KB; photos are files that exist, ≤ 1 MB, on
+ *      paths migrateProject accepts (same regex as SAFE_PHOTO_PATH_RE)
  *
  *   Run: cd online && npm run check:stories
  */
@@ -125,6 +126,8 @@ for (const g of groups) if (!existsSync(join(ROOT, 'stories', g, 'story.json')))
 
 // ── 7. bundled story files (026) ──
 const MAX_STORY_BYTES = 200 * 1024;
+const MAX_PHOTO_BYTES = 1024 * 1024;
+const PHOTO_PATH_RE = /^\/(stories|taiwan|examples)\/(?:[A-Za-z0-9_-]+\/){1,4}[A-Za-z0-9_-]{1,64}\.(jpe?g|png|webp)$/;
 const storyFiles = (dir) => readdirSync(dir, { withFileTypes: true }).flatMap((d) => {
   const p = join(dir, d.name);
   if (d.isDirectory()) return d.name === 'spot-photos' ? [] : storyFiles(p);
@@ -136,7 +139,9 @@ for (const file of ['stories', 'taiwan', join('examples', 'routes')].flatMap((d)
   for (const s of JSON.parse(readFileSync(file, 'utf8')).spots ?? []) {
     if (typeof s.photo !== 'string' || !s.photo) continue;
     if (s.photo.startsWith('data:')) fail(7, `${rel} ${s.title}: inline photo (run extract-story-photos.mjs)`);
+    else if (!PHOTO_PATH_RE.test(s.photo)) fail(7, `${rel} ${s.title}: ${s.photo} not an accepted photo path`);
     else if (!existsSync(join(ROOT, s.photo))) fail(7, `${rel} ${s.title}: ${s.photo} missing`);
+    else if (statSync(join(ROOT, s.photo)).size > MAX_PHOTO_BYTES) fail(7, `${rel} ${s.title}: ${s.photo} over 1 MB`);
   }
 }
 

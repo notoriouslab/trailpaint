@@ -400,10 +400,10 @@ export default function PlaybackControl() {
               // T9 / CP4: compilation embed — iframe re-fetches catalog.json + segments,
               // no inline data needed (small embed snippet, large compilation playback).
               const musicParam = effectiveMusicUrl ? `&music=${encodeURIComponent(effectiveMusicUrl)}` : '';
-              html = `<iframe src="${origin}/app/player/?embed=1&compilation=${encodeURIComponent(compId)}${musicParam}" width="100%" height="500" style="border:none;border-radius:8px" allowfullscreen></iframe>`;
+              html = `<iframe src="${origin}/app/player/?embed=1&compilation=${encodeURIComponent(compId)}${musicParam}" width="100%" height="500" style="border:none;border-radius:8px" allow="web-share; clipboard-write" allowfullscreen></iframe>`;
             } else if (src) {
               const musicParam = effectiveMusicUrl ? `&music=${encodeURIComponent(effectiveMusicUrl)}` : '';
-              html = `<iframe src="${origin}/app/player/?embed=1&src=${encodeURIComponent(src)}${musicParam}" width="100%" height="500" style="border:none;border-radius:8px" allowfullscreen></iframe>`;
+              html = `<iframe src="${origin}/app/player/?embed=1&src=${encodeURIComponent(src)}${musicParam}" width="100%" height="500" style="border:none;border-radius:8px" allow="web-share; clipboard-write" allowfullscreen></iframe>`;
             } else {
               html = buildProjectEmbedHtml(project, origin);
             }

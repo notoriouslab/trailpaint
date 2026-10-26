@@ -99,7 +99,7 @@
 | `passion-thumb.jpg` | Leonardo《The Last Supper》 | 400×208, 20 KB |
 | `resurrection-thumb.jpg` | Piero《Resurrection》 | 400×425, 43 KB |
 
-Spot popup 配圖：每個 spot 的 `photo` 欄位塞入 400px JPEG base64（quality 75），段內 2 張畫作輪替。共 24 spot × ~30 KB ≈ 720 KB 分散於 3 個 .trailpaint.json。
+Spot popup 配圖：400px JPEG（quality 75），3 段共 17 個 spot、15 張圖，放在 `spot-photos/`，每個 spot 的 `photo` 欄位存檔案路徑（1.8.3 以前是 base64 內嵌在 .trailpaint.json）。
 
 ## 授權原則
 

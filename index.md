@@ -3,7 +3,7 @@
 > Hand-drawn style trail map maker. Build routes from photos, maps, or AI prompts, then export as PNG illustration, complete project backup, or GeoJSON / KML interop formats. Free, open-source (GPL-3.0), no account, no backend.
 
 Language: zh-TW / en / ja (auto-detected)
-Version: 1.8.2
+Version: 1.8.3
 License: GPL-3.0
 Source: https://github.com/notoriouslab/trailpaint
 Try it: https://trailpaint.org/app/
@@ -140,6 +140,10 @@ Embed code is one-click copy from Player ⚙ menu — paste into WordPress / Wix
 ### Spot Era Schema (v5)
 
 `Spot.era?: { start: number; end: number }` — calendar years, BC negative, AD positive, range [-3000, 3000]. Drives postcard era stamp + TimeSlider opacity fade. 17 historical segments / 150 spots already tagged: Paul × 3, Galilean ministry × 2, Passion Week × 3, Zhang Qian × 2, Xuanzang × 2, Marco Polo × 2, Wen Tianxiang × 2, Xu Xiake × 1. Modern stories (Taiwan hikes, 19th-century missionaries) stay era-agnostic intentionally — their spots remain visible at any TimeSlider position.
+
+## v1.8.3 Lighter Stories and Spot Links (2026-10)
+
+Bundled stories now keep their photos as separate image files instead of inline base64, so all story files together shrink from 78 MB to about 0.6 MB and a story opens on a phone without downloading every photo first; the Player loads a photo when its popup opens and fetches the next one during playback. A new 🔗 button shares a link to the current spot at the current year, on the story page or in the Player (`?spot=` and `?year=`). Photos can now also come from named contributors under CC BY 4.0.
 
 ## v1.8.2 Gongguan to Jingmei (2026-10)
 

@@ -9,6 +9,8 @@ import LocateButton from '../map/LocateButton';
 import TimeSlider from '../map/TimeSlider';
 import MapToast from '../map/MapToast';
 import PostcardButton from './PostcardButton';
+import ShareSpotButton from './ShareSpotButton';
+import { initialYear } from './initialYear';
 import { getOverlayZoomCap, getRelevantOverlayIds } from '../map/overlays';
 import { overlayForJump, overlayForYear, scaleForProject } from '../map/eraScales';
 import { effectiveEraMode, eraOpacity, eraVisible } from '../map/eraFade';
@@ -258,6 +260,16 @@ export default function PlayerMap() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [site, currentYear, visibleLatLngs]);
 
+  // 027: a link that opens on another year brings that year's map. The initial
+  // overlay is the one for initialYear, so only a different year needs this.
+  // Runs once per load (the map is keyed by loadSeq); site mode has its own.
+  useEffect(() => {
+    if (site || currentYear === initialYear(project)) return;
+    const ovId = overlayForJump(historyScale, currentYear);
+    setOverlay(ovId ? { id: ovId, opacity: overlay?.opacity ?? 0.5 } : null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <MapContainer
       center={project.center}
@@ -345,6 +357,7 @@ export default function PlayerMap() {
         );
       })}
       <MapToast />
+      <ShareSpotButton />
       <PostcardButton
         currentYear={currentYear}
         overlayId={overlay?.id ?? null}

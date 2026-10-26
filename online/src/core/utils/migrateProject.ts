@@ -95,6 +95,7 @@ export function migrateProject(data: Record<string, unknown>): Project {
   // 026: bundled stories keep photos as files next to the story and store a
   // site-root path. Same-origin only (no scheme, no host); ASCII path segments
   // without dots, so `..` and `//` can't appear; raster extensions only.
+  // check-stories.mjs item 7 repeats this regex; keep the two in step.
   const SAFE_PHOTO_PATH_RE = /^\/(stories|taiwan|examples)\/(?:[A-Za-z0-9_-]+\/){1,4}[A-Za-z0-9_-]{1,64}\.(jpe?g|png|webp)$/;
   const SINGLE_PHOTO_LIMIT = 1 * 1024 * 1024; // 1 MB per photo (Editor outputs ~300KB)
   const TOTAL_PHOTO_LIMIT = 50 * 1024 * 1024; // 50 MB aggregate cap (DoS defense)

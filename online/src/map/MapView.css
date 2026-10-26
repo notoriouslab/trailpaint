@@ -583,6 +583,43 @@
   cursor: progress;
 }
 
+/* 027: share link button, one slot above the postcard button */
+.share-spot-button {
+  position: absolute;
+  bottom: calc(296px + env(safe-area-inset-bottom, 0px));
+  right: 10px;
+  z-index: 700;
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  border: 2px solid rgba(0,0,0,0.2);
+  background: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.15);
+}
+
+.share-spot-button:hover {
+  background: #fef3d8;
+}
+
+.share-spot-note {
+  position: absolute;
+  bottom: calc(302px + env(safe-area-inset-bottom, 0px));
+  right: 56px;
+  z-index: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  font-size: 13px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
 .postcard-modal-backdrop {
   position: fixed;
   inset: 0;
@@ -675,6 +712,16 @@
     height: 36px;
     font-size: 18px;
     bottom: calc(250px + env(safe-area-inset-bottom, 0px));
+  }
+  .share-spot-button {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    bottom: calc(294px + env(safe-area-inset-bottom, 0px));
+  }
+  .share-spot-note {
+    bottom: calc(300px + env(safe-area-inset-bottom, 0px));
+    right: 54px;
   }
   .postcard-modal__preview {
     max-width: calc(100vw - 64px);

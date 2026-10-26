@@ -193,6 +193,8 @@ export async function captureMap(pixelRatio = 2): Promise<CapturedMap> {
         if (el.classList?.contains('time-slider')) return false;
         if (el.classList?.contains('map-toast')) return false;
         if (el.classList?.contains('postcard-button')) return false;
+        if (el.classList?.contains('share-spot-button')) return false;
+        if (el.classList?.contains('share-spot-note')) return false;
         if (el.classList?.contains('postcard-modal-backdrop')) return false;
         // Exclude card photos — they are drawn directly to overlaysCanvas below
         // to avoid iOS Safari foreignObject decode failures at high pixelRatio.
