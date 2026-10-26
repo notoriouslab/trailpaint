@@ -301,8 +301,8 @@ describe('migrateProject — passion-week v3 fixtures', () => {
       // Every spot should keep its scripture_refs
       const withRefs = p.spots.filter((s) => s.scripture_refs && s.scripture_refs.length > 0);
       expect(withRefs.length).toBe(raw.spots.length);
-      // Every spot should keep its photo (base64 data URL)
-      p.spots.forEach((s) => expect(s.photo).toMatch(/^data:image\/jpeg;base64,/));
+      // Every spot keeps its photo, a file next to the story since 026.
+      p.spots.forEach((s) => expect(s.photo).toMatch(/^\/stories\/passion-week\/spot-photos\/[0-9a-f]{16}\.jpg$/));
     });
   }
 
@@ -724,5 +724,65 @@ describe('migrateProject — placeId (025 D5)', () => {
     ['markup', '<img src=x>'],
   ])('drops %s', (_label, value) => {
     expect(spotWith(value)).not.toHaveProperty('placeId');
+  });
+});
+
+describe('migrateProject — photo file paths (026 D1)', () => {
+  const photoOf = (photo: unknown) => migrateProject({
+    ...validBase,
+    spots: [{ id: 's1', latlng: [25, 121.5], num: 1, title: 't', desc: '', photo, iconId: 'pin' }],
+  }).spots[0].photo;
+
+  it.each([
+    '/taiwan/taipei-daan/spot-photos/3fa2c19e0b7d.jpg',
+    '/stories/paul/photos/ab12.webp',
+    '/examples/routes/photos/0f1e2d3c.png',
+  ])('keeps %s', (path) => {
+    expect(photoOf(path)).toBe(path);
+  });
+
+  it.each([
+    ['another site', 'https://evil.example/x.jpg'],
+    ['protocol-relative', '//evil.example/stories/x.jpg'],
+    ['traversal', '/stories/../app/x.jpg'],
+    ['outside the story roots', '/app/assets/x.jpg'],
+    ['no folder', '/stories/x.jpg'],
+    ['svg', '/stories/paul/photos/x.svg'],
+    ['query string', '/stories/paul/photos/x.jpg?track=1'],
+    ['javascript', 'javascript:alert(1)//.jpg'],
+    ['non-ASCII', '/stories/保羅/photos/x.jpg'],
+  ])('drops %s', (_label, path) => {
+    expect(photoOf(path)).toBeNull();
+  });
+
+  it('a path is kept after inline photos have used up the 50 MB cap', () => {
+    const big = 'data:image/jpeg;base64,' + 'A'.repeat(1024 * 1024 - 100);
+    const spots = Array.from({ length: 52 }, (_, i) => ({
+      id: `s${i}`, latlng: [25, 121.5], num: i + 1, title: 't', desc: '', iconId: 'pin', photo: big,
+    }));
+    spots.push({ ...spots[0], id: 'last', photo: '/stories/paul/photos/p1.jpg' });
+    const out = migrateProject({ ...validBase, spots }).spots;
+    expect(out[51].photo).toBeNull(); // over the inline cap
+    expect(out[52].photo).toBe('/stories/paul/photos/p1.jpg');
+  });
+});
+
+describe('migrateProject — contributor photos (026 D3)', () => {
+  const metaOf = (photoMeta: unknown) => migrateProject({
+    ...validBase,
+    spots: [{ id: 's1', latlng: [25, 121.5], num: 1, title: 't', desc: '', photo: null, iconId: 'pin', photoMeta }],
+  }).spots[0].photoMeta;
+  const ok = { source: 'contributor', license: 'CC BY 4.0', author: '王小明', authorUrl: null, sourceUrl: null };
+
+  it('keeps a named CC BY 4.0 contribution', () => {
+    expect(metaOf(ok)).toMatchObject({ source: 'contributor', author: '王小明', sourceUrl: null });
+  });
+
+  it.each([
+    ['another license', { ...ok, license: 'CC BY-SA 4.0' }],
+    ['no author', { ...ok, author: '  ' }],
+    ['a source link', { ...ok, sourceUrl: 'https://commons.wikimedia.org/wiki/File:x.jpg' }],
+  ])('drops %s', (_label, meta) => {
+    expect(metaOf(meta)).toBeUndefined();
   });
 });

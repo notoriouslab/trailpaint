@@ -309,6 +309,7 @@ export default {
   'player.photo.prefix': '照片',
   'player.photo.maintainer': '自行拍攝',
   'player.photo.archive': '典藏來源',
+  'player.photo.contributor': '投稿',
   'player.spots': '景點',
   'player.site.empty': '這一年此地尚無記載',
   'player.playback.interval': '間隔',

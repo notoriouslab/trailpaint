@@ -11,6 +11,8 @@ import { migrateProject } from './migrateProject';
  * - `true` for the backend `/s/:id` path — KV has 1MB payload room, so photos
  *   ride along and friends see the full visual story.
  * Key `p` on spots stores the photo data URL when included; absent otherwise.
+ * A bundled story's photo file path (026) is a few dozen characters, so it is
+ * always kept.
  */
 export function compactProject(project: Project, includePhoto = false): Record<string, unknown> {
   const out: Record<string, unknown> = {
@@ -24,7 +26,7 @@ export function compactProject(project: Project, includePhoto = false): Record<s
       };
       if (s.desc) o.d = s.desc;
       if (s.cardOffset.x !== 0 || s.cardOffset.y !== 0) o.o = [s.cardOffset.x, s.cardOffset.y];
-      if (includePhoto && s.photo) o.p = s.photo;
+      if (s.photo && (includePhoto || !s.photo.startsWith('data:'))) o.p = s.photo;
       // v3.1 photoMeta (013): 內層 key 改用 sc/lc/au/uu/su 避免與其他物件的 short keys
       // 視覺重複（runtime namespace 不同無衝突，但 debug 時看得清楚）
       if (s.photoMeta) {

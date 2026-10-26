@@ -309,6 +309,7 @@ export default {
   'player.photo.prefix': '写真',
   'player.photo.maintainer': '撮影者本人',
   'player.photo.archive': '所蔵元',
+  'player.photo.contributor': '提供写真',
   'player.spots': 'スポット',
   'player.site.empty': 'この年の記録はありません',
   'player.playback.interval': '間隔',

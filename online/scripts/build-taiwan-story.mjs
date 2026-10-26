@@ -9,7 +9,8 @@
  *   Run: node online/scripts/build-taiwan-story.mjs <id>
  */
 import { mkdir, writeFile } from 'node:fs/promises';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { spawn } from 'node:child_process';
 import { join, dirname, resolve, sep } from 'node:path';
 import { tmpdir } from 'node:os';
@@ -115,11 +116,25 @@ async function searchCommonsTopHit(query) {
   return null;
 }
 
-async function fetchAsBase64(url) {
+async function fetchBuffer(url) {
   const r = await fetch(url, { headers: { 'User-Agent': UA } });
   if (!r.ok) throw new Error(`fetch ${url} → ${r.status}`);
-  const buf = Buffer.from(await r.arrayBuffer());
-  return `data:image/jpeg;base64,${buf.toString('base64')}`;
+  return Buffer.from(await r.arrayBuffer());
+}
+
+// 026 D1: photos are files next to the story (spot-photos/<sha256 16 hex>.<ext>,
+// same naming as extract-story-photos.mjs) and the spot keeps the site path.
+const MAX_PHOTO_BYTES = 1024 * 1024;
+function savePhoto(buf, label) {
+  const ext = buf[0] === 0xff && buf[1] === 0xd8 ? 'jpg'
+    : buf[0] === 0x89 && buf[1] === 0x50 ? 'png' : null;
+  if (!ext) throw new Error(`not a JPEG or PNG: ${label}`);
+  if (buf.length > MAX_PHOTO_BYTES) throw new Error(`photo over 1 MB: ${label}`);
+  const name = `${createHash('sha256').update(buf).digest('hex').slice(0, 16)}.${ext}`;
+  mkdirSync(join(STORY_DIR, 'spot-photos'), { recursive: true });
+  const file = join(STORY_DIR, 'spot-photos', name);
+  if (!existsSync(file)) writeFileSync(file, buf);
+  return `/taiwan/${STORY_ID}/spot-photos/${name}`;
 }
 
 function decodeEntities(s) {
@@ -155,21 +170,24 @@ function buildPhotoMeta(hit) {
 
 // 024 D3: photos kept in the repo (data/places/photos/), already resized and
 // EXIF-stripped. kind 'maintainer' = the maintainer's own photo;
+// 'contributor' (026 D3) = a named contributor's photo under CC BY 4.0, consent
+// on file per data/places/photos/CONTRIBUTING.md;
 // 'public-domain-archive' = economic rights expired (著作權法 §34, published
 // 1975 or earlier), with author / sourceUrl / origin / published in the pool.
 const PHOTOS_DIR = join(ROOT, 'data', 'places', 'photos') + sep;
-const MAX_PHOTO_DATAURL = 1024 * 1024; // migrateProject SINGLE_PHOTO_LIMIT
 
 function loadLocalPhoto(p) {
   const file = resolve(ROOT, p.local);
   if (!file.startsWith(PHOTOS_DIR)) throw new Error(`photo.local outside data/places/photos: ${p.local}`);
   const buf = readFileSync(file);
   if (buf[0] !== 0xff || buf[1] !== 0xd8) throw new Error(`not a JPEG: ${p.local}`);
-  const photo = `data:image/jpeg;base64,${buf.toString('base64')}`;
-  if (photo.length >= MAX_PHOTO_DATAURL) throw new Error(`photo over 1 MB as data URL: ${p.local}`);
+  const photo = savePhoto(buf, p.local);
   let meta;
   if (p.kind === 'maintainer') {
     meta = { source: 'maintainer', license: 'CC BY 4.0', author: 'Jacob Mei', authorUrl: null, sourceUrl: null };
+  } else if (p.kind === 'contributor') {
+    if (typeof p.author !== 'string' || !p.author.trim()) throw new Error(`contributor photo needs author: ${p.local}`);
+    meta = { source: 'contributor', license: 'CC BY 4.0', author: p.author.trim(), authorUrl: null, sourceUrl: null };
   } else if (p.kind === 'public-domain-archive') {
     if (!p.sourceUrl || !Number.isInteger(p.published) || p.published > 1975) {
       throw new Error(`archive photo needs sourceUrl and published <= 1975: ${p.local}`);
@@ -191,6 +209,7 @@ function loadLocalPhoto(p) {
 
 function creditLink(meta) {
   if (meta.source === 'maintainer') return '自行拍攝';
+  if (meta.source === 'contributor') return '投稿';
   if (meta.source === 'public-domain-archive') return `[典藏頁](${meta.sourceUrl})`;
   return `[Commons File](${meta.sourceUrl})`;
 }
@@ -291,7 +310,7 @@ for (let i = 0; i < SPOTS.length; i++) {
     continue;
   }
   try {
-    const photo = await fetchAsBase64(hit.thumbUrl);
+    const photo = savePhoto(await fetchBuffer(hit.thumbUrl), hit.file);
     const meta = buildPhotoMeta(hit);
     process.stdout.write(`✓ ${hit.file} (${meta.license})\n`);
     credits.push({ num, title: s.title, file: hit.file, meta });

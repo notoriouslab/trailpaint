@@ -150,14 +150,17 @@ export default function PlaybackControl() {
       return () => clearTimer();
     }
 
-    // Move to next spot after dwell
+    // Move to next spot after dwell. 026 D2: start loading its photo now, so a
+    // photo file is in the cache by the time the popup opens on a slow phone.
+    const nextPhoto = spots[nextIndex]?.photo;
+    if (nextPhoto && !nextPhoto.startsWith('data:')) new Image().src = nextPhoto;
     const delay = currentIndex === -1 ? 0 : FLY_DURATION + dwellTime;
     timerRef.current = setTimeout(() => {
       setActiveSpot(nextIndex);
     }, delay);
 
     return () => clearTimer();
-  }, [site, playing, activeIndex, total, dwellTime, loopCount, setPlaying, setActiveSpot, clearTimer]);
+  }, [site, playing, activeIndex, total, spots, dwellTime, loopCount, setPlaying, setActiveSpot, clearTimer]);
 
   // Site playback loop (021): every stop — the first one included — stays on
   // screen for dwellTime, then the year moves on. Re-arms on each year change.

@@ -15,6 +15,7 @@ export function PhotoAttribution({ meta }: { meta: PhotoMeta | undefined }) {
       , {meta.license}
       {/* 024: own photos have nothing to link; archive photos link their catalogue page */}
       {meta.source === 'maintainer' && <> — {t('player.photo.maintainer')}</>}
+      {meta.source === 'contributor' && <> — {t('player.photo.contributor')}</>}
       {meta.sourceUrl && (
         <>
           {' '}—{' '}

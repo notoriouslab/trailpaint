@@ -9,12 +9,13 @@
  *   4. data/stories/*.json ↔ catalog / sitemap / llms.txt / taiwan hub
  *   5. version numbers agree
  *   6. gen-story-index-html.mjs GROUPS all exist
+ *   7. bundled story files: photos are files that exist, each file ≤ 200 KB
  *
  *   Run: cd online && npm run check:stories
  */
-import { readFileSync, readdirSync, existsSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
-import { join, dirname } from 'node:path';
+import { join, dirname, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -121,6 +122,23 @@ const gen = read('online/scripts/gen-story-index-html.mjs');
 const groups = [...(gen.match(/const GROUPS = \[([^\]]*)\]/)?.[1] ?? '').matchAll(/'([^']+)'/g)].map((m) => m[1]);
 if (!groups.length) fail(6, 'GROUPS not found');
 for (const g of groups) if (!existsSync(join(ROOT, 'stories', g, 'story.json'))) fail(6, `GROUPS ${g}: stories/${g}/story.json missing`);
+
+// ── 7. bundled story files (026) ──
+const MAX_STORY_BYTES = 200 * 1024;
+const storyFiles = (dir) => readdirSync(dir, { withFileTypes: true }).flatMap((d) => {
+  const p = join(dir, d.name);
+  if (d.isDirectory()) return d.name === 'spot-photos' ? [] : storyFiles(p);
+  return d.name.endsWith('.trailpaint.json') ? [p] : [];
+});
+for (const file of ['stories', 'taiwan', join('examples', 'routes')].flatMap((d) => storyFiles(join(ROOT, d)))) {
+  const rel = relative(ROOT, file).split(sep).join('/');
+  if (statSync(file).size > MAX_STORY_BYTES) fail(7, `${rel}: over 200 KB`);
+  for (const s of JSON.parse(readFileSync(file, 'utf8')).spots ?? []) {
+    if (typeof s.photo !== 'string' || !s.photo) continue;
+    if (s.photo.startsWith('data:')) fail(7, `${rel} ${s.title}: inline photo (run extract-story-photos.mjs)`);
+    else if (!existsSync(join(ROOT, s.photo))) fail(7, `${rel} ${s.title}: ${s.photo} missing`);
+  }
+}
 
 if (failures.length) {
   console.error(failures.join('\n'));

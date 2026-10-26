@@ -39,7 +39,7 @@ const FONT_STACK = '"EB Garamond", "Cormorant Garamond", "Noto Serif TC", "Noto 
 
 export interface PostcardSpotInput {
   title?: string;
-  /** base64 data URL or null. */
+  /** base64 data URL, same-origin photo file path (026), or null. */
   photo?: string | null;
   desc?: string;
   scriptureRef?: string;
@@ -299,9 +299,9 @@ function roundedRectPath(
 function loadImage(src: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const img = new Image();
-    // Defence in depth: today spot.photo is always a base64 data: URL (no CORS
-    // implications), but if a future schema allows external photo URLs the
-    // canvas would taint without crossOrigin set, breaking toBlob silently.
+    // spot.photo is a base64 data: URL or a same-origin file path (026), so no
+    // CORS today; crossOrigin stays as defence in depth, since an external URL
+    // would taint the canvas without it and break toBlob silently.
     img.crossOrigin = 'anonymous';
     img.onload = () => resolve(img);
     img.onerror = () => reject(new Error('image load failed'));

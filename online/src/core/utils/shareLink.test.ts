@@ -228,3 +228,16 @@ describe('compactProject / expandProject — photoMeta sources (024)', () => {
     expect(pm).not.toHaveProperty('pb');
   });
 });
+
+describe('compactProject — photo files (026)', () => {
+  const path = '/taiwan/taipei-daan/spot-photos/0123456789abcdef.jpg';
+  it('keeps a photo file path in the short link', () => {
+    const compact = compactProject(mkProject([{ ...baseSpot, photo: path }]));
+    expect((compact.s as Record<string, unknown>[])[0].p).toBe(path);
+    expect(expandProject(compact).spots[0].photo).toBe(path);
+  });
+  it('still drops an inline photo from the short link', () => {
+    const compact = compactProject(mkProject([{ ...baseSpot, photo: 'data:image/jpeg;base64,AAAA' }]));
+    expect((compact.s as Record<string, unknown>[])[0]).not.toHaveProperty('p');
+  });
+});

@@ -92,6 +92,10 @@ export function migrateProject(data: Record<string, unknown>): Project {
   // Photo safety: raster image MIME whitelist (no SVG, no unknown formats).
   // Editor always outputs data:image/jpeg; these five cover all legitimate encoders.
   const SAFE_PHOTO_RE = /^data:image\/(jpeg|jpg|png|webp|gif);base64,/i;
+  // 026: bundled stories keep photos as files next to the story and store a
+  // site-root path. Same-origin only (no scheme, no host); ASCII path segments
+  // without dots, so `..` and `//` can't appear; raster extensions only.
+  const SAFE_PHOTO_PATH_RE = /^\/(stories|taiwan|examples)\/(?:[A-Za-z0-9_-]+\/){1,4}[A-Za-z0-9_-]{1,64}\.(jpe?g|png|webp)$/;
   const SINGLE_PHOTO_LIMIT = 1 * 1024 * 1024; // 1 MB per photo (Editor outputs ~300KB)
   const TOTAL_PHOTO_LIMIT = 50 * 1024 * 1024; // 50 MB aggregate cap (DoS defense)
   let totalPhotoBytes = 0;
@@ -106,6 +110,7 @@ export function migrateProject(data: Record<string, unknown>): Project {
       || !isFinite(s.latlng[0] as number) || !isFinite(s.latlng[1] as number)) continue;
     // Only allow whitelisted raster data URLs (blocks SVG scripts, external URLs, tracking pixels)
     const rawPhoto = (s as Record<string, unknown>).photo;
+    const photoPath = typeof rawPhoto === 'string' && SAFE_PHOTO_PATH_RE.test(rawPhoto) ? rawPhoto : null;
     const safePhoto = typeof rawPhoto === 'string' && SAFE_PHOTO_RE.test(rawPhoto) ? rawPhoto : null;
 
     // Clamp string lengths to prevent data bombs. Empirical max across all
@@ -116,7 +121,9 @@ export function migrateProject(data: Record<string, unknown>): Project {
 
     // Per-photo size cap + aggregate cap (prevent 200 × 2MB memory bomb)
     let clampedPhoto: string | null = safePhoto && safePhoto.length <= SINGLE_PHOTO_LIMIT ? safePhoto : null;
-    if (clampedPhoto) {
+    if (photoPath) {
+      clampedPhoto = photoPath; // fetched by the browser on demand; no inline bytes to cap
+    } else if (clampedPhoto) {
       if (totalPhotoBytes + clampedPhoto.length > TOTAL_PHOTO_LIMIT) {
         clampedPhoto = null; // Remaining spots in a huge import lose photos (data preserved otherwise)
       } else {
@@ -166,6 +173,7 @@ export function migrateProject(data: Record<string, unknown>): Project {
       //   wikimedia-commons     → https://commons.wikimedia.org/…
       //   maintainer            → sourceUrl must be null (own photo, nothing to link)
       //   public-domain-archive → https URL on ARCHIVE_HOSTS
+      //   contributor (026)     → sourceUrl null, CC BY 4.0 only, named author
       let validSourceUrl: string | null | undefined;
       if (source === 'wikimedia-commons') {
         if (typeof sourceUrl === 'string' && sourceUrl.startsWith('https://commons.wikimedia.org/')) validSourceUrl = sourceUrl;
@@ -173,6 +181,9 @@ export function migrateProject(data: Record<string, unknown>): Project {
         if (sourceUrl === null || sourceUrl === undefined) validSourceUrl = null;
       } else if (source === 'public-domain-archive') {
         if (isArchiveUrl(sourceUrl)) validSourceUrl = sourceUrl;
+      } else if (source === 'contributor') {
+        if ((sourceUrl === null || sourceUrl === undefined) && license === 'CC BY 4.0'
+            && typeof author === 'string' && author.trim()) validSourceUrl = null;
       }
       if (validSourceUrl !== undefined
           && typeof license === 'string' && typeof author === 'string') {

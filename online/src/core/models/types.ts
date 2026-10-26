@@ -6,11 +6,12 @@ import type { Route } from './routes';
 export interface PhotoMeta {
   // 024: 'maintainer' = the site maintainer's own photo (no source link);
   // 'public-domain-archive' = a pre-1976 photo from an archive allow-list.
-  source: 'wikimedia-commons' | 'maintainer' | 'public-domain-archive';
+  // 026: 'contributor' = a photo given by a named contributor under CC BY 4.0.
+  source: 'wikimedia-commons' | 'maintainer' | 'public-domain-archive' | 'contributor';
   license: string;
   author: string;
   authorUrl: string | null;
-  sourceUrl: string | null; // null only for 'maintainer'
+  sourceUrl: string | null; // null for 'maintainer' and 'contributor'
   origin?: string; // 024 archive photos: book / periodical and page
   published?: number; // 024 archive photos: year first published
 }

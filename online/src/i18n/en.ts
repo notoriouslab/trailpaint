@@ -309,6 +309,7 @@ export default {
   'player.photo.prefix': 'Photo',
   'player.photo.maintainer': 'Own photo',
   'player.photo.archive': 'Archive source',
+  'player.photo.contributor': 'Contributed',
   'player.spots': 'Spots',
   'player.site.empty': 'Nothing recorded here for this year',
   'player.playback.interval': 'Interval',

@@ -120,7 +120,7 @@
           "type": "string"
         },
         "photo": {
-          "description": "Embedded photo as a base64 data URL (typically resized/compressed), or null if no photo. External URLs are not auto-fetched at render time for privacy/offline reasons.",
+          "description": "Embedded photo as a base64 data URL (typically resized/compressed), or null if no photo. TrailPaint 1.8.3+: curated stories may instead give a same-origin path to a photo file published next to the story (/stories/, /taiwan/ or /examples/ only, .jpg/.png/.webp). External URLs are not accepted, for privacy and offline reasons.",
           "type": ["string", "null"]
         },
         "iconId": {
@@ -172,9 +172,9 @@
       "additionalProperties": false,
       "properties": {
         "source": {
-          "description": "Origin of the photo. 'wikimedia-commons': sourceUrl is the Commons File: page. 'maintainer' (TrailPaint 1.8.1+): the maintainer's own photo, sourceUrl null. 'public-domain-archive' (TrailPaint 1.8.1+): a photo whose copyright has expired, sourceUrl is its catalogue page on an allow-listed archive.",
+          "description": "Origin of the photo. 'wikimedia-commons': sourceUrl is the Commons File: page. 'maintainer' (TrailPaint 1.8.1+): the maintainer's own photo, sourceUrl null. 'public-domain-archive' (TrailPaint 1.8.1+): a photo whose copyright has expired, sourceUrl is its catalogue page on an allow-listed archive. 'contributor' (TrailPaint 1.8.3+): a photo given by a named contributor under CC BY 4.0 (license must be 'CC BY 4.0'), sourceUrl null.",
           "type": "string",
-          "enum": ["wikimedia-commons", "maintainer", "public-domain-archive"]
+          "enum": ["wikimedia-commons", "maintainer", "public-domain-archive", "contributor"]
         },
         "license": {
           "description": "License identifier (e.g. 'CC BY-SA 4.0', 'CC BY 2.0', 'Public Domain').",
@@ -192,7 +192,7 @@
           ]
         },
         "sourceUrl": {
-          "description": "URL to the photo's source page (required for CC compliance). Commons: a commons.wikimedia.org File: page. Archive: https on commons.wikimedia.org, tcmb.culture.tw, openmuseum.tw, ahonline.drnh.gov.tw, www.flickr.com or archive.org (exact hostname). Null for maintainer photos.",
+          "description": "URL to the photo's source page (required for CC compliance). Commons: a commons.wikimedia.org File: page. Archive: https on commons.wikimedia.org, tcmb.culture.tw, openmuseum.tw, ahonline.drnh.gov.tw, www.flickr.com or archive.org (exact hostname). Null for maintainer and contributor photos.",
           "oneOf": [
             { "type": "string", "format": "uri" },
             { "type": "null" }

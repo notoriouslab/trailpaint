@@ -76,6 +76,8 @@ export default function SpotListPanel() {
                   className="spot-panel__thumb"
                   src={spot.photo}
                   alt={spot.title}
+                  loading="lazy"
+                  decoding="async"
                   onClick={(e) => { e.stopPropagation(); setViewing(spot); }}
                 />
               )}
