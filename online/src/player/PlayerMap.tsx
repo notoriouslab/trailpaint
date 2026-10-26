@@ -132,9 +132,41 @@ function ActiveMarker({
   );
 }
 
+/** Popup that pans clear of the time slider, and pans again once its photo has
+ *  loaded: photos are files fetched on open (026), so the popup grows after
+ *  Leaflet's first pan and would otherwise run off the top of the map. */
+function SpotPopup({ spot }: { spot: Spot }) {
+  const map = useMap();
+  const ref = useRef<L.Popup>(null);
+  const fit = () => {
+    const popup = ref.current;
+    if (!popup) return;
+    const container = map.getContainer();
+    const top = container.getBoundingClientRect().top;
+    let clear = 64;
+    container.querySelectorAll('.time-slider, .time-slider__thumb-label').forEach((el) => {
+      clear = Math.max(clear, el.getBoundingClientRect().bottom - top + 10);
+    });
+    popup.options.autoPanPaddingTopLeft = [10, clear];
+    popup.update();
+  };
+  return (
+    <Popup
+      ref={ref}
+      maxWidth={480}
+      className="player-popup"
+      autoPanPaddingTopLeft={[10, 64]}
+      autoPanPaddingBottomRight={[10, 90]}
+      eventHandlers={{ add: fit }}
+    >
+      <SpotPopupContent key={spot.photo ?? ''} spot={spot} onImgLoad={fit} />
+    </Popup>
+  );
+}
+
 /** Popup body — isolated so the broken-image fallback has local state.
  *  Keyed by photo at the call site, so a new photo starts with a fresh flag. */
-function SpotPopupContent({ spot }: { spot: Spot }) {
+function SpotPopupContent({ spot, onImgLoad }: { spot: Spot; onImgLoad: () => void }) {
   const [imgFailed, setImgFailed] = useState(false);
 
   return (
@@ -146,6 +178,7 @@ function SpotPopupContent({ spot }: { spot: Spot }) {
             src={spot.photo}
             alt={spot.title}
             className="player-popup__img"
+            onLoad={onImgLoad}
             onError={() => setImgFailed(true)}
           />
           <PhotoAttribution meta={spot.photoMeta} />
@@ -343,16 +376,7 @@ export default function PlayerMap() {
             opacity={eraOpacity(spot.era, currentYear)}
             onClick={() => { setPlaying(false); setActiveSpot(i); }}
           >
-            {!site && (
-              <Popup
-                maxWidth={480}
-                className="player-popup"
-                autoPanPaddingTopLeft={[10, 64]}
-                autoPanPaddingBottomRight={[10, 90]}
-              >
-                <SpotPopupContent key={spot.photo ?? ''} spot={spot} />
-              </Popup>
-            )}
+            {!site && <SpotPopup spot={spot} />}
           </ActiveMarker>
         );
       })}

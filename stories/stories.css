@@ -382,7 +382,10 @@ a:hover { text-decoration: underline; }
   .stories-header { padding: 8px 16px; }
   /* phone: the subtitle repeats the description below; give the room to the title and the hand-off */
   .stories-header--compact .stories-header__subtitle { display: none; }
-  .stories-header--compact { gap: 12px; }
+  .stories-header--compact { gap: 12px; flex-wrap: wrap; row-gap: 2px; align-items: center; }
+  /* phone: links on the first row, the title on its own full-width row below */
+  .stories-header--compact .stories-header__title { order: 1; flex-basis: 100%; font-size: 16px; }
+  .stories-header__cta-made { display: none; }
 
   .catalog-grid {
     grid-template-columns: 1fr;
