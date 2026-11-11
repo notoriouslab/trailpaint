@@ -44,6 +44,8 @@ function shouldInjectLinkHeader(pathname) {
   if (pathname === '/stories/' || pathname === '/stories/index.html') return true;
   if (pathname.startsWith('/stories/') && (pathname.endsWith('/') || pathname.endsWith('.html'))) return true;
   if (pathname === '/taiwan' || pathname === '/taiwan/' || pathname === '/taiwan/index.html') return true;
+  if (pathname.startsWith('/taiwan/') && (pathname.endsWith('/') || pathname.endsWith('.html'))) return true;
+  if (pathname === '/church' || pathname === '/church/' || pathname === '/church/index.html') return true;
   return false;
 }
 
