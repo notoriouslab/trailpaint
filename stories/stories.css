@@ -421,3 +421,110 @@ a:hover { text-decoration: underline; }
   flex-shrink: 0;
 }
 .stories-header__report:hover { color: #92400e; }
+
+/* ── 028: visible spot list below the player ── */
+
+.stories-header__spots {
+  font-size: 12px;
+  color: #92400e;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.story-spots {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 24px 56px;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.story-spots h2 {
+  font-size: 20px;
+  color: #78350f;
+  margin: 0 0 8px;
+}
+
+.story-spots p { margin: 0 0 12px; }
+
+.story-spots__segment {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 2px solid #e5dcc8;
+}
+
+.story-spots__period {
+  font-size: 13px;
+  color: #92400e;
+}
+
+.story-spots__segment ol {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.story-spot {
+  padding: 20px 0;
+  border-top: 1px solid #e5dcc8;
+  /* anchor jumps (#spot-…) land below the top edge */
+  scroll-margin-top: 12px;
+}
+
+.story-spot h3 {
+  font-size: 17px;
+  color: #3b1a06;
+  margin: 0 0 10px;
+}
+
+.story-spot__year {
+  margin-left: 6px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #92400e;
+  white-space: nowrap;
+}
+
+.story-spot figure { margin: 0 0 12px; }
+
+.story-spot img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #efe6d3;
+}
+
+.story-spot figcaption,
+.story-spot__refs {
+  font-size: 12px;
+  color: #78716c;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.story-spot figcaption { margin-top: 4px; }
+
+.story-spot__map {
+  display: inline-block;
+  font-size: 13px;
+  color: #92400e;
+}
+
+.story-spots__cta {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 2px solid #e5dcc8;
+  font-size: 14px;
+}
+
+/* hand-written English / Japanese summaries after the list (passion-week, taiwan-missionaries) */
+.story-spots--intl { padding-top: 0; }
+.story-spots--intl h2 { margin-top: 28px; }
+.story-spots--intl h3 { font-size: 16px; color: #3b1a06; margin: 18px 0 6px; }
+
+@media (max-width: 768px) {
+  .story-spots { padding: 24px 16px 48px; }
+  .story-spots--intl { padding-top: 0; }
+}

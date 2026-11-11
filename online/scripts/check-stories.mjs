@@ -11,6 +11,9 @@
  *   6. gen-story-index-html.mjs GROUPS all exist
  *   7. bundled story files ≤ 200 KB; photos are files that exist, ≤ 1 MB, on
  *      paths migrateProject accepts (same regex as SAFE_PHOTO_PATH_RE)
+ *   8. every text/markdown alternate link points at an existing file
+ *   9. spot lists, their JSON-LD and index.md are up to date and complete (028)
+ *  10. the static cards of /stories/ match catalog.json and link every story
  *
  *   Run: cd online && npm run check:stories
  */
@@ -18,6 +21,9 @@ import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { join, dirname, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { PHOTO_PATH_RE } from './story-spots.mjs';
+import { storyDirs, writeStorySpots } from './gen-story-spots.mjs';
+import { writeStoriesHub } from './gen-stories-hub.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..', '..');
@@ -127,7 +133,6 @@ for (const g of groups) if (!existsSync(join(ROOT, 'stories', g, 'story.json')))
 // ── 7. bundled story files (026) ──
 const MAX_STORY_BYTES = 200 * 1024;
 const MAX_PHOTO_BYTES = 1024 * 1024;
-const PHOTO_PATH_RE = /^\/(stories|taiwan|examples)\/(?:[A-Za-z0-9_-]+\/){1,4}[A-Za-z0-9_-]{1,64}\.(jpe?g|png|webp)$/;
 const storyFiles = (dir) => readdirSync(dir, { withFileTypes: true }).flatMap((d) => {
   const p = join(dir, d.name);
   if (d.isDirectory()) return d.name === 'spot-photos' ? [] : storyFiles(p);
@@ -142,6 +147,46 @@ for (const file of ['stories', 'taiwan', join('examples', 'routes')].flatMap((d)
     else if (!PHOTO_PATH_RE.test(s.photo)) fail(7, `${rel} ${s.title}: ${s.photo} not an accepted photo path`);
     else if (!existsSync(join(ROOT, s.photo))) fail(7, `${rel} ${s.title}: ${s.photo} missing`);
     else if (statSync(join(ROOT, s.photo)).size > MAX_PHOTO_BYTES) fail(7, `${rel} ${s.title}: ${s.photo} over 1 MB`);
+  }
+}
+
+// ── 8. markdown mirrors ──
+// Every <link rel="alternate" type="text/markdown"> must point at a file that exists.
+const htmlPages = (dir) => readdirSync(join(ROOT, dir), { withFileTypes: true }).flatMap((d) => {
+  const rel = dir ? `${dir}/${d.name}` : d.name;
+  if (d.isDirectory()) return ['node_modules', 'online', 'old', 'app', '.git'].includes(d.name) || d.name.startsWith('.') ? [] : htmlPages(rel);
+  return d.name === 'index.html' ? [rel] : [];
+});
+for (const page of htmlPages('')) {
+  for (const [link] of read(page).matchAll(/<link\b[^>]*type="text\/markdown"[^>]*>/g)) {
+    // Whatever the attribute order; only absolute site URLs or root-relative paths resolve to a file here.
+    const href = link.match(/\shref="([^"]*)"/)?.[1];
+    const path = href?.match(/^(?:https:\/\/trailpaint\.org)?\/([^?#]+)$/)?.[1];
+    if (!path) fail(8, `${page}: markdown alternate has no checkable href (${href ?? 'missing'})`);
+    else if (!existsSync(join(ROOT, path))) fail(8, `${page}: markdown alternate /${path} does not exist`);
+  }
+}
+
+// ── 9. spot lists (028) ──
+// The list, JSON-LD and index.md on disk are what gen-story-spots.mjs would write
+// now, and every spot of the story is on its page.
+for (const dir of storyDirs()) {
+  const rel = relative(ROOT, dir).split(sep).join('/');
+  for (const file of writeStorySpots(dir, { check: true })) {
+    fail(9, `${file}: out of date (run node online/scripts/gen-story-spots.mjs)`);
+  }
+  const expected = readJson(`${rel}/story.json`).stories
+    .reduce((n, s) => n + readJson(`${rel}/${s.data}`).spots.length, 0);
+  const listed = (read(`${rel}/index.html`).match(/<li class="story-spot"/g) ?? []).length;
+  if (listed !== expected) fail(9, `${rel}/index.html: lists ${listed} spots, story has ${expected}`);
+}
+
+// ── 10. /stories/ static cards ──
+if (writeStoriesHub({ check: true })) fail(10, 'stories/index.html: cards out of date (run node online/scripts/gen-stories-hub.mjs)');
+{
+  const hubPage = read('stories/index.html');
+  for (const s of catalog.stories.filter((x) => x.collection !== 'taiwan')) {
+    if (!hubPage.includes(`href="${s.path}"`)) fail(10, `stories/index.html: no link to ${s.path}`);
   }
 }
 

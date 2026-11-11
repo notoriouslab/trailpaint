@@ -15,6 +15,8 @@ import { spawn } from 'node:child_process';
 import { join, dirname, resolve, sep } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
+import { metaDescription } from './meta-description.mjs';
+import { writeStorySpots } from './gen-story-spots.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..', '..');
@@ -402,6 +404,7 @@ function storyPageHtml() {
   const json = (v) => JSON.stringify(v, null, 2).replace(/</g, '\\u003c');
   const url = `https://trailpaint.org/taiwan/${STORY_ID}/`;
   const desc = SEGMENT.description;
+  const shortDesc = metaDescription(desc);
   const pageTitle = CFG.og.title;
   const report = `${REPO_ISSUES}?${new URLSearchParams({
     title: `[${STORY_ID}] `,
@@ -441,9 +444,9 @@ function storyPageHtml() {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${esc(pageTitle)}</title>
-  <meta name="description" content="${esc(desc)}" />
+  <meta name="description" content="${esc(shortDesc)}" />
   <meta property="og:title" content="${esc(pageTitle)}" />
-  <meta property="og:description" content="${esc(desc)}" />
+  <meta property="og:description" content="${esc(shortDesc)}" />
   <meta property="og:image" content="${url}og.jpg" />
   <meta property="og:url" content="${url}" />
   <meta property="og:type" content="website" />
@@ -453,7 +456,7 @@ function storyPageHtml() {
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${esc(pageTitle)}" />
-  <meta name="twitter:description" content="${esc(desc)}" />
+  <meta name="twitter:description" content="${esc(shortDesc)}" />
   <meta name="twitter:image" content="${url}og.jpg" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="NotoriousLab" />
@@ -467,6 +470,8 @@ ${json(article)}
   <script type="application/ld+json">
 ${json(crumbs)}
   </script>
+<!-- gen:spots-head:start -->
+<!-- gen:spots-head:end -->
 </head>
 <body>
   <div class="stories-page stories-page--fixed">
@@ -484,15 +489,8 @@ ${json(crumbs)}
     </div>
   </div>
 
-  <section class="story-seo-content" hidden>
-    <h2>${esc(CFG.title)} 互動地圖介紹</h2>
-    <p>${esc(desc)}</p>
-
-    <h3>${esc(SEGMENT.name)}</h3>
-    <p>${esc(SEGMENT.subtitle)} ${esc(desc)}</p>
-
-    <p>在 <a href="https://trailpaint.org/app/">TrailPaint 路小繪</a> 中建立你自己的故事地圖。</p>
-  </section>
+  <!-- gen:spots:start -->
+  <!-- gen:spots:end -->
 
   <script src="/stories/stories.js"></script>
   <script>
@@ -510,6 +508,8 @@ ${json(crumbs)}
 `;
 }
 await writeFile(join(STORY_DIR, 'index.html'), storyPageHtml());
+// 028: the template only carries empty gen:spots markers; fill them.
+writeStorySpots(STORY_DIR);
 
 
 const lines = [

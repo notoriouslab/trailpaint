@@ -21,6 +21,51 @@ function escapeAttr(str) {
 
 /* ── Level 0: Catalog page ── */
 
+/**
+ * Class and inner HTML of the catalog container for a parsed catalog.json.
+ * Pure, no DOM: online/scripts/gen-stories-hub.mjs runs this same function to
+ * write the cards into stories/index.html, so crawlers that do not run
+ * JavaScript still find every story link.
+ */
+function catalogHtml(catalog) {
+  var stories = catalog.stories || [];
+  var collections = Array.isArray(catalog.collections) ? catalog.collections.slice() : [];
+  collections.sort(function (a, b) { return (a.order || 0) - (b.order || 0); });
+
+  // Group stories by collection id (keeps only non-empty groups)
+  var grouped = collections
+    .map(function (c) {
+      return { id: c.id, title: c.title, href: c.href, description: c.description, items: stories.filter(function (s) { return s.collection === c.id; }) };
+    })
+    .filter(function (g) { return g.items.length > 0; });
+
+  // Uncategorized (stories without a collection, or collection not defined in collections[])
+  var definedIds = collections.map(function (c) { return c.id; });
+  var uncategorized = stories.filter(function (s) {
+    return !s.collection || definedIds.indexOf(s.collection) === -1;
+  });
+  if (uncategorized.length > 0) {
+    grouped.push({ id: '_uncategorized', title: '其他', items: uncategorized });
+  }
+
+  // Fallback: ≤ 1 effective group → flat layout (matches 008 behaviour)
+  if (grouped.length <= 1) {
+    return { className: 'catalog-grid', html: renderCards(stories) };
+  }
+
+  // Grouped layout: container is a block (sections stack vertically),
+  // nested grids hold cards inside each group
+  return {
+    className: 'catalog-groups',
+    html: grouped.map(function (g) {
+      return '<section class="catalog-group">' +
+        '<h2 class="catalog-group__title">' + escapeHtml(g.title) + '</h2>' +
+        '<div class="catalog-grid catalog-grid--nested">' + (g.href ? renderEntryCard(g) : renderCards(g.items)) + '</div>' +
+      '</section>';
+    }).join('')
+  };
+}
+
 async function renderCatalog(containerId) {
   var container = document.getElementById(containerId);
   if (!container) return;
@@ -28,53 +73,21 @@ async function renderCatalog(containerId) {
   try {
     var res = await fetch('catalog.json');
     if (!res.ok) throw new Error('Failed to load catalog');
-    var catalog = await res.json();
-
-    var stories = catalog.stories || [];
-    var collections = Array.isArray(catalog.collections) ? catalog.collections.slice() : [];
-    collections.sort(function (a, b) { return (a.order || 0) - (b.order || 0); });
-
-    // Group stories by collection id (keeps only non-empty groups)
-    var grouped = collections
-      .map(function (c) {
-        return { id: c.id, title: c.title, href: c.href, description: c.description, items: stories.filter(function (s) { return s.collection === c.id; }) };
-      })
-      .filter(function (g) { return g.items.length > 0; });
-
-    // Uncategorized (stories without a collection, or collection not defined in collections[])
-    var definedIds = collections.map(function (c) { return c.id; });
-    var uncategorized = stories.filter(function (s) {
-      return !s.collection || definedIds.indexOf(s.collection) === -1;
-    });
-    if (uncategorized.length > 0) {
-      grouped.push({ id: '_uncategorized', title: '其他', items: uncategorized });
-    }
-
-    // Fallback: ≤ 1 effective group → flat layout (matches 008 behaviour)
-    if (grouped.length <= 1) {
-      container.className = 'catalog-grid';
-      container.innerHTML = renderCards(stories);
-      return;
-    }
-
-    // Grouped layout: swap container to block (stack sections vertically),
-    // nested grids hold cards inside each group
-    container.className = 'catalog-groups';
-    container.innerHTML = grouped.map(function (g) {
-      return '<section class="catalog-group">' +
-        '<h2 class="catalog-group__title">' + escapeHtml(g.title) + '</h2>' +
-        '<div class="catalog-grid catalog-grid--nested">' + (g.href ? renderEntryCard(g) : renderCards(g.items)) + '</div>' +
-      '</section>';
-    }).join('');
+    var out = catalogHtml(await res.json());
+    container.className = out.className;
+    container.innerHTML = out.html;
   } catch (e) {
-    container.innerHTML = '<p class="stories-loading">無法載入故事列表</p>';
+    // The page ships with the cards already in it; keep them if the refresh fails.
+    if (!container.querySelector('.catalog-card')) {
+      container.innerHTML = '<p class="stories-loading">無法載入故事列表</p>';
+    }
   }
 }
 
 function renderCards(items) {
   return items.map(function (s) {
     return '<a class="catalog-card" href="' + escapeAttr(s.path) + '">' +
-      '<img class="catalog-card__img" src="' + escapeAttr(s.thumbnail) + '" alt="' + escapeAttr(s.title) + '" />' +
+      '<img class="catalog-card__img" src="' + escapeAttr(s.thumbnail) + '" alt="' + escapeAttr(s.title) + '" loading="lazy" />' +
       '<div class="catalog-card__body">' +
         '<h2 class="catalog-card__title">' + escapeHtml(s.title) + '</h2>' +
         '<p class="catalog-card__subtitle">' + escapeHtml(s.subtitle) + '</p>' +
@@ -88,7 +101,7 @@ function renderCards(items) {
 // A collection with its own curated section (e.g. 台灣百年 /taiwan/) shows one entry card instead of its stories
 function renderEntryCard(g) {
   return '<a class="catalog-card catalog-card--entry" href="' + escapeAttr(g.href) + '">' +
-    '<img class="catalog-card__img" src="' + escapeAttr(g.items[0].thumbnail) + '" alt="' + escapeAttr(g.title) + '" />' +
+    '<img class="catalog-card__img" src="' + escapeAttr(g.items[0].thumbnail) + '" alt="' + escapeAttr(g.title) + '" loading="lazy" />' +
     '<div class="catalog-card__body">' +
       '<h2 class="catalog-card__title">' + escapeHtml(g.title) + ' 專區 →</h2>' +
       '<p class="catalog-card__desc">' + escapeHtml(g.description || '') + '</p>' +
@@ -208,6 +221,37 @@ async function renderStoryPage(opts) {
     if (descEl) {
       descEl.addEventListener('click', function () {
         descEl.classList.toggle('story-desc--expanded');
+      });
+    }
+
+    // 028: the spot list below the player. A header link jumps to it (on a
+    // phone the map takes the swipe, so the page needs another way down), and
+    // "在地圖上看" opens the spot in the player above instead of reloading.
+    var spotsEl = document.getElementById('spots');
+    var header = document.querySelector('.stories-header--compact');
+    if (spotsEl && header) {
+      var jump = document.createElement('a');
+      jump.className = 'stories-header__spots';
+      jump.href = '#spots';
+      jump.textContent = '景點列表 ↓';
+      header.insertBefore(jump, header.querySelector('.stories-header__cta'));
+    }
+    if (spotsEl) {
+      spotsEl.addEventListener('click', function (e) {
+        var a = e.target.closest('.story-spot__map');
+        if (!a) return;
+        var q = new URLSearchParams((a.getAttribute('href') || '').replace(/^\?/, ''));
+        var seg = q.get('seg');
+        var spot = q.get('spot');
+        var year = q.get('year');
+        var index = stories.findIndex(function (s) { return s.id === seg; });
+        // Anything unexpected: leave the link alone, it is a normal deep link.
+        if (index < 0 || !spot || !/^[A-Za-z0-9_-]{1,80}$/.test(spot)) return;
+        if (year && !(/^-?\d{1,4}$/.test(year) && Math.abs(Number(year)) <= 3000)) year = null;
+        e.preventDefault();
+        activate(index, { spot: spot, year: year });
+        var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: calm ? 'auto' : 'smooth' });
       });
     }
 

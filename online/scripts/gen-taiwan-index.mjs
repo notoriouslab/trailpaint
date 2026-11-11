@@ -12,6 +12,7 @@
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { writeStoriesHub } from './gen-stories-hub.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..', '..');
@@ -72,7 +73,7 @@ rewrite('taiwan/index.md', [
 // llms.txt
 rewrite('llms.txt', [
   '### 台灣百年 (taiwan，策展專區 https://trailpaint.org/taiwan/)',
-  ...STORIES.map(({ cfg, L, fill }) => `- **${cfg.title}** (${L.periodLabel})：${fill(L.llms)}`),
+  ...STORIES.map(({ cfg, L, fill, url }) => `- **${cfg.title}** (${L.periodLabel})：${fill(L.llms)} ${url}`),
   '',
 ].join('\n'));
 
@@ -112,3 +113,6 @@ rewrite('sitemap.xml', [
   if (out !== src) writeFileSync(path, out);
   console.log(`${out === src ? '=' : '✓'} stories/catalog.json`);
 }
+
+// The /stories/ page carries its cards as static HTML built from catalog.json.
+console.log(`${writeStoriesHub() ? '✓' : '='} stories/index.html`);

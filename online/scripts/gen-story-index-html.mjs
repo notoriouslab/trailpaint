@@ -4,13 +4,18 @@
  * a template that mirrors passion-week / taiwan-missionaries layout.
  *
  *   Run: node online/scripts/gen-story-index-html.mjs [group…]
- *   With group ids, only those pages are regenerated — a full run rewrites
- *   every page's datePublished to today.
+ *   With group ids, only those pages are regenerated. datePublished is kept
+ *   from the existing page; dateModified is the last commit that touched the
+ *   story's data (story.json / *.trailpaint.json). The spot list, its JSON-LD
+ *   and index.md are filled in by writeStorySpots() (gen-story-spots.mjs).
  */
-import { readFile, writeFile, copyFile, access } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
+import { readFile, writeFile, copyFile } from 'node:fs/promises';
+import { existsSync, readFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { metaDescription } from './meta-description.mjs';
+import { writeStorySpots } from './gen-story-spots.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..', '..');
@@ -34,9 +39,23 @@ function jsonLdSafe(obj) {
   return JSON.stringify(obj, null, 2).replace(/</g, '\\u003c');
 }
 
+/** Dates for the Article JSON-LD: published stays what the page already says. */
+function pageDates(groupId) {
+  const dir = join(STORIES, groupId);
+  const page = join(dir, 'index.html');
+  const published = existsSync(page)
+    ? readFileSync(page, 'utf8').match(/"datePublished": "(\d{4}-\d{2}-\d{2})"/)?.[1]
+    : undefined;
+  const modified = execFileSync('git', ['log', '-1', '--format=%cs', '--', 'story.json', '*.trailpaint.json'],
+    { cwd: dir, encoding: 'utf8' }).trim();
+  return { published: published ?? TODAY, modified: modified || TODAY };
+}
+
 function buildHtml(groupId, story) {
   const url = `https://trailpaint.org/stories/${groupId}/`;
   const ogImg = `${url}og.jpg`;
+  const dates = pageDates(groupId);
+  const shortDesc = metaDescription(story.description);
   const hasParts = story.stories.map((s) => ({
     '@type': 'CreativeWork',
     name: `${s.title} — ${s.subtitle || ''}`.trim(),
@@ -48,8 +67,8 @@ function buildHtml(groupId, story) {
     headline: `${story.title} — ${story.subtitle}`,
     description: story.description,
     image: ogImg,
-    datePublished: TODAY,
-    dateModified: TODAY,
+    datePublished: dates.published,
+    dateModified: dates.modified < dates.published ? dates.published : dates.modified,
     author: { '@type': 'Organization', name: 'NotoriousLab', url: 'https://github.com/notoriouslab' },
     publisher: {
       '@type': 'Organization',
@@ -70,9 +89,6 @@ function buildHtml(groupId, story) {
       { '@type': 'ListItem', position: 3, name: story.title, item: url },
     ],
   };
-  const seoSubs = story.stories
-    .map((s) => `    <h3>${esc(s.title)}</h3>\n    <p>${esc(s.subtitle || s.description)}${s.description && s.description !== s.subtitle ? ` ${esc(s.description)}` : ''}</p>`)
-    .join('\n\n');
 
   return `<!DOCTYPE html>
 <html lang="zh-TW">
@@ -80,9 +96,9 @@ function buildHtml(groupId, story) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${esc(story.title)} — TrailPaint Stories</title>
-  <meta name="description" content="${esc(story.description)}" />
+  <meta name="description" content="${esc(shortDesc)}" />
   <meta property="og:title" content="${esc(story.title)} — TrailPaint Stories" />
-  <meta property="og:description" content="${esc(story.description)}" />
+  <meta property="og:description" content="${esc(shortDesc)}" />
   <meta property="og:image" content="${ogImg}" />
   <meta property="og:url" content="${url}" />
   <meta property="og:type" content="website" />
@@ -92,7 +108,7 @@ function buildHtml(groupId, story) {
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${esc(story.title)} — TrailPaint Stories" />
-  <meta name="twitter:description" content="${esc(story.description)}" />
+  <meta name="twitter:description" content="${esc(shortDesc)}" />
   <meta name="twitter:image" content="${ogImg}" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="NotoriousLab" />
@@ -106,6 +122,8 @@ ${jsonLdSafe(articleLd)}
   <script type="application/ld+json">
 ${jsonLdSafe(breadcrumb)}
   </script>
+<!-- gen:spots-head:start -->
+<!-- gen:spots-head:end -->
 </head>
 <body>
   <div class="stories-page stories-page--fixed">
@@ -122,14 +140,8 @@ ${jsonLdSafe(breadcrumb)}
     </div>
   </div>
 
-  <section class="story-seo-content" hidden>
-    <h2>${esc(story.title)} 互動地圖介紹</h2>
-    <p>${esc(story.description)}</p>
-
-${seoSubs}
-
-    <p>在 <a href="https://trailpaint.org/app/">TrailPaint 路小繪</a> 中建立你自己的故事地圖。</p>
-  </section>
+  <!-- gen:spots:start -->
+  <!-- gen:spots:end -->
 
   <script src="../stories.js"></script>
   <script>
@@ -159,6 +171,8 @@ for (const gid of only.length ? only : GROUPS) {
   const story = JSON.parse(await readFile(join(dir, 'story.json'), 'utf8'));
   const html = buildHtml(gid, story);
   await writeFile(join(dir, 'index.html'), html);
+  // 028: the template only carries empty gen:spots markers; fill them.
+  writeStorySpots(dir);
   // og.jpg: copy cover.jpg if no og.jpg yet
   const og = join(dir, 'og.jpg');
   const cover = join(dir, 'cover.jpg');

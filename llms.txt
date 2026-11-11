@@ -178,6 +178,7 @@ TrailPaint（路小繪）是一個純瀏覽器端的**手繪風路線地圖工�
 - [AI 提示詞生成地圖](https://trailpaint.org/features/ai-prompt/index.md)
 - [安裝到主畫面](https://trailpaint.org/features/install/index.md)
 - [故事地圖總覽](https://trailpaint.org/stories/index.md)
+- 每個故事頁網址加 `index.md` 就是含全部景點（名稱、年份、座標、說明、出處）的 Markdown 版，例如 https://trailpaint.org/stories/yu-yonghe/index.md
 - [台灣百年](https://trailpaint.org/taiwan/index.md)
 - [出門走走路線](https://trailpaint.org/examples/index.md)
 - [教會應用](https://trailpaint.org/church/index.md)
