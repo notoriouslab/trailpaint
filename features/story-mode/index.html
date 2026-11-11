@@ -4,16 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>故事地圖 Story Player — TrailPaint 路小繪</title>
-  <meta name="description" content="TrailPaint Story Player：地圖自動導覽（fly-to、popup、循環）、背景音樂、中研院 1897/1921/1966 台灣歷史地圖疊加、全螢幕展場模式、iframe 嵌入碼給部落格與教會網站。">
+  <meta name="description" content="TrailPaint Story Player：地圖自動導覽（fly-to、popup、循環）、背景音樂、16 張歷史地圖疊加與年代滑桿、全螢幕展場模式、iframe 嵌入碼給部落格與教會網站。">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:title" content="故事地圖 Story Player — TrailPaint">
   <meta property="og:description" content="把地圖變成自動導覽的故事 — fly-to 動畫、歷史地圖疊加、全螢幕、嵌入碼。">
-  <meta property="og:url" content="https://trailpaint.org/features/story-mode">
+  <meta property="og:url" content="https://trailpaint.org/features/story-mode/">
   <meta property="og:type" content="article">
-  <link rel="canonical" href="https://trailpaint.org/features/story-mode">
-  <link rel="alternate" type="text/markdown" href="https://trailpaint.org/features/story-mode.md">
+  <link rel="canonical" href="https://trailpaint.org/features/story-mode/">
+  <link rel="alternate" type="text/markdown" href="https://trailpaint.org/features/story-mode/index.md">
   <link rel="icon" type="image/svg+xml" href="/app/favicon.svg">
   <link rel="stylesheet" href="/styles.css">
+  <meta property="og:image" content="https://trailpaint.org/examples/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:site_name" content="TrailPaint 路小繪">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "TrailPaint 路小繪",
+      "item": "https://trailpaint.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "功能",
+      "item": "https://trailpaint.org/features/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "故事地圖 Story Player",
+      "item": "https://trailpaint.org/features/story-mode/"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <nav class="site-nav">
@@ -47,9 +76,10 @@
     <ul>
       <li><strong>Fly-to 動畫</strong>：逐個景點飛過去，Leaflet 平滑 pan + zoom</li>
       <li><strong>Popup 展示</strong>：景點卡自動開合，顯示照片與說明</li>
-      <li><strong>播放控制</strong>：可設定每點停留時間、是否循環、是否自動播放</li>
+      <li><strong>播放控制</strong>：每點停留 2 / 4 / 6 / 8 秒（預設 6 秒），循環 1× / 2× / 3× / ∞，在 Player 設定面板調整</li>
       <li><strong>背景音樂</strong>：專案內設定 MP3 URL，播放時自動 loop</li>
-      <li><strong>歷史地圖疊加</strong>：中研院 1897（台灣堡圖）/ 1921（日治地形圖）/ 1966（經建版）三種老地圖圖磚，疊在現代底圖上</li>
+      <li><strong>歷史地圖疊加</strong>：16 張老地圖圖磚疊在現代底圖上。中研院臺灣百年歷史地圖 8 張（1897、1904、1921、1945、1955、1966、1989、1993）、中研院 CCTS 中國七朝（西漢、三國、唐、南宋、元、明、清）、DARE 羅馬帝國 AD 200</li>
+      <li><strong>年代滑桿</strong>：拖動切換同時代的歷史地圖，景點依年代出現</li>
       <li><strong>全螢幕模式</strong>：適合展場、教學投影、電視屏</li>
       <li><strong>多底圖切換</strong>：Voyager、Positron、Dark Matter、OSM Standard、Protomaps</li>
     </ul>
@@ -64,22 +94,24 @@
     <h2>URL 參數</h2>
     <p>Player 支援以下 query string：</p>
     <ul>
-      <li><code>?src=&lt;url&gt;</code> — 自動載入指定的 <code>.trailpaint.json</code>（同源或 CORS 允許的外部 URL）</li>
-      <li><code>?embed=1</code> — 嵌入模式，隱藏控制列，適合 iframe</li>
+      <li><code>?src=&lt;path&gt;</code> — 載入本站的故事檔，限 <code>/stories/</code>、<code>/taiwan/</code>、<code>/examples/routes/</code> 底下的 <code>.trailpaint.json</code>（不接受外部網址）</li>
+      <li><code>?compilation=&lt;id&gt;</code> — 載入合輯（多個故事疊在同一張地圖），例如 <code>silk-road-2000</code></li>
+      <li><code>?embed=1</code> — 嵌入模式，適合 iframe</li>
       <li><code>?autoplay=1</code> — 自動開始播放</li>
-      <li><code>?interval=&lt;seconds&gt;</code> — 每點停留時間（預設 3 秒）</li>
-      <li><code>?loop=1</code> — 結束後重頭播</li>
+      <li><code>?spot=&lt;key&gt;&amp;year=&lt;year&gt;</code> — 搭配 <code>?src=</code>，直接開在指定景點與年份（這時不自動播放）；連結由 Player 的分享按鈕產生</li>
+      <li><code>?music=&lt;url&gt;</code> — 指定背景音樂（https 網址或本站路徑）</li>
     </ul>
 
     <h2>iframe 嵌入範例</h2>
     <pre><code>&lt;iframe
-  src="https://trailpaint.org/app/player/?src=https://example.com/my-trail.trailpaint.json&amp;embed=1&amp;autoplay=1&amp;interval=4&amp;loop=1"
+  src="https://trailpaint.org/app/player/?src=/stories/passion-week/passion.trailpaint.json&amp;embed=1&amp;autoplay=1"
   width="100%"
   height="500"
   frameborder="0"
   allow="autoplay"&gt;
 &lt;/iframe&gt;</code></pre>
     <p>可直接貼到 WordPress、Notion、Ghost、HackMD（支援 HTML）、教會網站等。</p>
+    <p>要嵌入自己做的地圖，在 Editor「匯出 → 互通分享」或 Player 控制列按「複製 Player 嵌入碼」，地圖資料會直接包在嵌入碼裡，不需要另外放檔案。</p>
 
     <h2>Story Page 故事集合</h2>
     <p>官方策展的故事集合入口在 <a href="/stories/">/stories/</a>，目前有：</p>

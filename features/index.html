@@ -14,6 +14,29 @@
   <link rel="alternate" type="text/markdown" href="https://trailpaint.org/features/index.md">
   <link rel="icon" type="image/svg+xml" href="/app/favicon.svg">
   <link rel="stylesheet" href="/styles.css">
+  <meta property="og:image" content="https://trailpaint.org/examples/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:site_name" content="TrailPaint 路小繪">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "TrailPaint 路小繪",
+      "item": "https://trailpaint.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "功能",
+      "item": "https://trailpaint.org/features/"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <nav class="site-nav">
@@ -32,19 +55,19 @@
     <p class="subtitle">每個功能獨立一頁，方便 Cmd+F 搜尋或直接 link。五大主題：匯入、匯出、故事地圖、AI 提示詞、PWA 安裝。</p>
 
     <div class="card-grid">
-      <a class="card" href="/features/import">
+      <a class="card" href="/features/import/">
         <h3>📥 匯入</h3>
         <p>照片 EXIF GPS（JPEG / HEIC）、KML、GeoJSON、GPX、.trailpaint、截圖底圖。最多拖 20 張照片自動建景點。</p>
       </a>
-      <a class="card" href="/features/export">
+      <a class="card" href="/features/export/">
         <h3>📤 匯出 / 分享</h3>
         <p>PNG 多比例（IG 1:1、限動 9:16、4:3、原比例）、.trailpaint 備份、GeoJSON、KML、Cloudflare 短網址。</p>
       </a>
-      <a class="card" href="/features/story-mode">
+      <a class="card" href="/features/story-mode/">
         <h3>📖 故事地圖 Story Player</h3>
         <p>地圖變自動導覽：fly-to 動畫、popup、循環、背景音樂、中研院歷史地圖疊加、嵌入碼。</p>
       </a>
-      <a class="card" href="/features/ai-prompt">
+      <a class="card" href="/features/ai-prompt/">
         <h3>🤖 AI 提示詞生成地圖</h3>
         <p>把景點描述丟給 ChatGPT / Claude 產 <code>.trailpaint.json</code>，匯入即成地圖。4 種風格提示詞內建。</p>
       </a>
@@ -62,7 +85,7 @@
       <li><strong>歷史地圖疊加</strong> — 中研院 1897 台灣堡圖、1921 日治地形圖、1966 經建版地形圖</li>
       <li><strong>海拔剖面</strong> — 從 GPX 軌跡或手動查詢 open-elevation 繪製</li>
       <li><strong>多比例 PNG 匯出</strong> — 1:1 IG feed、9:16 限動、4:3 列印、原比例</li>
-      <li><strong>3 種邊框 + 2 種濾鏡</strong> — 經典雙邊、紙張素描、最小細邊 × 原始、素描化</li>
+      <li><strong>3 種邊框 + 2 種濾鏡</strong> — 經典雙邊、紙張素描、最小細邊 × 原始、極簡線條</li>
       <li><strong>多語</strong> — 繁中、英、日自動偵測或 <code>?lang=</code> 強制</li>
     </ul>
 

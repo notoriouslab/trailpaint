@@ -10,7 +10,7 @@ TrailPaint（路小繪）是一個純瀏覽器端的**手繪風路線地圖工�
 
 ## 三種建立路線的方式
 
-1. **從照片建立（v1.3 新能力）**：拖曳 20 張照片進 TrailPaint，EXIF GPS 自動建景點。支援 iPhone HEIC、Android JPEG。無 GPS 照片自動歸入「待定位」分組，拖一下就到位。Nominatim 反向地理編碼自動補地名。
+1. **從照片建立**：拖曳 20 張照片進 TrailPaint，EXIF GPS 自動建景點。支援 iPhone HEIC、Android JPEG。無 GPS 照片自動歸入「待定位」分組，拖一下就到位。Photon（主）/ Nominatim（備援）反向地理編碼自動補地名。
 2. **在地圖上手動建**：搜尋地點、畫路線、放景點卡片。3 步新手引導教學。8 條範例路線一鍵試玩。
 3. **用 AI 生成**：複製內建提示詞模板給 ChatGPT / Claude，描述行程，AI 產出可匯入的 JSON 檔。
 
@@ -23,18 +23,16 @@ TrailPaint（路小繪）是一個純瀏覽器端的**手繪風路線地圖工�
 - **GPX**（登山 App、Garmin 等 GPS 軌跡）
 - 截圖底圖（Google Maps / Apple Maps 截圖）
 
-## 輸出格式（v1.3 統一 ExportWizard）
+## 輸出格式（統一 ExportWizard）
 
 所有輸出收進單一「匯出」對話框，三個 tab：
 
 ### 🖼️ 圖片 tab
 - PNG 多比例（1:1 IG feed / 9:16 Story / 4:3 / 原始）
 - 3 種邊框（經典雙框、紙感手繪、極簡細框）
-- 2 種風格濾鏡（原始、素描）
+- 2 種風格濾鏡（原始、極簡線條）
 - 即時預覽 + 構圖微調（pan / zoom）
-- 分享連結（Cloudflare Workers + KV 短網址，TTL 90 天，可帶 Open Graph 封面照）
 - AI 提示詞 4 種風格（日系手繪、藏寶圖、療癒卡通、極簡線條），複製貼到 Midjourney / Gemini / ChatGPT 圖像生成
-- Player 嵌入碼（一鍵複製含專案資料的 `<iframe>`）
 
 ### 💾 備份 tab
 - .trailpaint 完整專案檔（保留所有景點、路線、照片）
@@ -44,53 +42,62 @@ TrailPaint（路小繪）是一個純瀏覽器端的**手繪風路線地圖工�
 - GeoJSON（geojson.io、Mapbox、D3）
 - KML（Google My Maps、Google Earth、Gaia GPS）
 - 純地理結構，不含照片（open data 邊界）
+- 分享連結（Cloudflare Workers + KV 短網址，TTL 90 天，可帶 Open Graph 封面照）
+- Player 嵌入碼（一鍵複製含專案資料的 `<iframe>`）
 
 ## Story Player 故事播放器
 
 獨立入口 `/app/player/` 專門做自動導覽播放：
 - fly-to 動畫逐點飛過去，popup 展示照片與說明
 - 播放間隔 2s/4s/6s/8s，循環 1×/2×/3×/∞
-- 5 種底圖 + 中研院 1897 / 1921 / 1966 台灣歷史地圖疊加
+- 5 種底圖 + 16 張歷史地圖疊加：中研院臺灣百年歷史地圖 1897 / 1904 / 1921 / 1945 / 1955 / 1966 / 1989 / 1993、中研院 CCTS 中國七朝（西漢、三國、唐、南宋、元、明、清）、DARE 羅馬帝國 AD 200
+- 年代滑桿：拖動切換歷史地圖，景點依年代出現
 - 背景音樂（MP3/M4A 直連 URL）
 - 全螢幕適合展場、教學投影
 - Editor 一鍵跳到 Player 播放當前專案
 
 ## Story Page 故事集合
 
-`/stories/` 展示 25 個精選故事地圖（截至 2026-10-25），分 4 個 collection；台灣百年另有策展專區 `/taiwan/`（見下）：
+`/stories/` 展示 25 個精選故事地圖，分 4 個 collection；台灣百年另有策展專區 `/taiwan/`（見下）。每個故事頁都是一張可播放的互動地圖：
 
-### 宣教史 (missions, 5 故事按時序)
-- **馬丁路德宗教改革** (1517-1546)：威騰堡 95 條 → 沃姆斯議會 → 瓦特堡譯德文聖經 → 艾斯雷本葬地 7 spots
-- **利瑪竇明清來華** (1582-1610)：澳門 → 北京 7 spots，耶穌會文化適應宣教典範
-- **威廉凱瑞印度宣教** (1792-1834)：諾丁罕 → Serampore 7 spots，「現代宣教之父」41 年印度事工
-- **戴德生中國內地會** (1853-1905)：倫敦 → 鎮江 10 spots / 2 segments，含 1900 義和團殉道紀錄
-- **台灣宣教士腳蹤** (1865-1923)：馬偕、巴克禮、蘭大衛、馬雅各、彭蒙惠 5 位宣教士路線
+### 宣教史 (missions，5 個故事)
+- **馬丁路德宗教改革**（AD 1517 — 1546 從 95 條到艾斯雷本）：奥古斯丁修士 Martin Luther 1517 釘 95 條於威騰堡啟動宗教改革，1521 沃姆斯議會「我立此處」拒絕收回；瓦特堡譯德文聖經塑造現代德語。29 年改革神學遺產含「因信稱義」「唯獨聖經」「萬民皆祭司」。 https://trailpaint.org/stories/luther/
+- **利瑪竇明清來華**（AD 1582 — 1610 從澳門到北京 28 年）：義大利耶穌會士 Matteo Ricci 從澳門入華，學中文書畫《山海輿地全圖》、改穿儒服自稱「西儒」、北上 1601 入京覲見萬曆獻自鳴鐘。 https://trailpaint.org/stories/matteo-ricci/
+- **威廉凱瑞印度宣教**（AD 1792 — 1834 從諾丁罕到 Serampore 41 年）：「現代宣教之父」William Carey 1792 諾丁罕啟動 Particular Baptist Society，1793 抵加爾各答，1800 Serampore Trio 創立 Mission：譯印度六大語系… https://trailpaint.org/stories/william-carey/
+- **戴德生中國內地會**（AD 1853 — 1905 從倫敦到鎮江 50 年）：英國宣教士 James Hudson Taylor 1853 抵滬，1865 倫敦布萊頓海岸異象創立中國內地會（CIM）。 https://trailpaint.org/stories/hudson-taylor/
+- **台灣宣教士腳蹤**（1865-1923）：探索十九世紀宣教士在台灣的足跡 https://trailpaint.org/stories/taiwan-missionaries/
 
-### 聖經地圖 (bible，按時序 7 故事)
-- **出埃及進迦南** (BC 1446-1406)：歌珊 → 西奈山 → 耶利哥 → 示劍 13 spots / 2 segments
-- **大衛王生平** (BC 1010-970)：伯利恆 → 耶路撒冷 → 王朝悲劇 11 spots / 2 segments
-- **巴比倫被擄歸回** (BC 605-432)：卡爾凱米 → 巴比倫 → Pasargadae → 城牆重建 9 spots / 2 segments
-- **耶穌降生** (BC 6-AD 12)：拿撒勒受報 → 12 歲聖殿問道 7 spots
-- **耶穌加利利事工** (AD 27-30)：受洗 → 變像山 16 spots / 2 segments
-- **受難週** (AD 33)：榮耀進城 → 復活顯現 17 spots / 3 segments
-- **使徒行傳早期教會** (AD 30-46)：五旬節 → 安提阿基督徒首稱 7 spots
-- **保羅宣教三次旅行** (AD 46-62)：三次差遣 + 押解羅馬 34 spots / 3 segments
-- **啟示錄七教會** (AD 95)：拔摩島 → 7 教會 8 spots
+### 聖經地圖 (bible，9 個故事)
+- **出埃及進迦南**（BC 1446 — 1406 從歌珊到示劍）：以色列人在埃及為奴 430 年後，摩西帶領他們離開蘭塞、過紅海、頒律法於西奈山；40 年後新世代從加低斯北上，渡過約旦河，征服迦南中央山地，在示劍立約。 https://trailpaint.org/stories/exodus-conquest/
+- **大衛王生平**（BC 1010 — 970 從伯利恆到耶路撒冷）：少年牧羊人從伯利恆受撒母耳膏立，在以拉谷以彈弓擊敗歌利亞名震以色列；流亡曠野召聚 400 人，於希伯崙作猶大王 7 年，最終攻克錫安建立耶路撒冷為京都。 https://trailpaint.org/stories/david-king/
+- **巴比倫被擄歸回**（BC 605 — 432 從聖殿被毀到城牆重建）：BC 586 尼布甲尼撒焚燒聖殿開啟猶大 70 年被擄；BC 539 居魯士滅巴比倫頒詔允許歸回。三波歸回（所羅巴伯/以斯拉/尼希米）跨越 100 年完成聖殿（BC 516）與城牆（BC 445）重建。 https://trailpaint.org/stories/babylon-exile-return/
+- **耶穌降生**（BC 6 — AD 12 從拿撒勒到聖殿）：加百列向馬利亞報訊，與約瑟在伯利恆生下嬰孩耶穌；逃亡埃及避希律屠殺、返拿撒勒成長、12 歲於聖殿與教師問答。本路線採 BC 6 早期年代論，補完 jesus-galilee 受洗前的童年敘事。 https://trailpaint.org/stories/jesus-birth/
+- **耶穌受難週**（從榮耀進城到復活顯現）：七天敘事：進城、受難、復活——耶路撒冷的互動地圖 https://trailpaint.org/stories/passion-week/
+- **使徒行傳早期教會**（AD 30 — 46 從耶路撒冷到安提阿）：耶穌升天後 10 日五旬節聖靈降臨於馬可樓 120 門徒，當日 3000 人受洗誕生耶路撒冷教會。司提反殉道引發逼迫使福音擴散至撒馬利亞、海岸、敘利亞。 https://trailpaint.org/stories/early-church/
+- **啟示錄七教會**（AD 95 約翰書信巡迴小亞細亞）：使徒約翰在拔摩島受啟示，書信沿羅馬郵差路線送往小亞細亞 7 座城——以弗所、士每拿、別迦摩、推雅推喇、撒狄、非拉鐵非、老底嘉。每封書信責備或稱讚呼應該城的歷史與地理特性，是啟示錄 1-3 章的地理底本。 https://trailpaint.org/stories/revelation-churches/
+- **使徒保羅宣教路線**（AD 46-62 使徒行傳三次旅行與押解羅馬）：使徒保羅一生四度橫渡地中海，從敘利亞安提阿三次差遣出航，把福音帶進小亞細亞、馬其頓、亞該亞，最後押解羅馬受審。三段互動地圖沿使徒行傳 13-28 章的足跡，配合文藝復興聖經畫作與古典遺址，重走這段奠定歐洲教會的壯遊。 https://trailpaint.org/stories/paul/
+- **耶穌加利利事工**（AD 27-30 從受洗到登上變像山）：公元 27 至 30 年間，拿撒勒人耶穌離開木匠鋪，走下約旦河接受洗禮，隨即被聖靈引入曠野受試探。 https://trailpaint.org/stories/jesus-galilee/
 
-### 中國歷史 (china, 6 故事)
-- **三國蜀漢北伐** (AD 207-234)：隆中對 → 赤壁 → 漢中王 → 白帝託孤 → 街亭 → 五丈原 6 spots（CCTS 三國 262 古地圖底圖）
-- **三國** vs **鄭和** 的 1200 年中國對外視野對比可在「大航海時代 500 年」合輯比對
-- **張騫通西域** (BC 139-126)、**玄奘西行** (AD 629-645)、**文天祥南逃** (1275-1283)、**徐霞客西南壯遊** (1636-1640)
-- **郁永河裨海紀遊** (1697)：福州渡黑水溝 → 鹿耳門 → 牛車縱貫西台灣 → 北投硫穴 17 spots / 2 segments，路線對齊中研院 THCTS 考證，疊 CCTS 清 1820 + 臺灣百年歷史地圖 1897
+### 中國歷史 (china，6 個故事)
+- **三國蜀漢北伐**（AD 207 — 234 從隆中對到五丈原）：三顧茅廬陳隆中對天下三分；208 赤壁火攻；219 漢中王；223 白帝託孤；228 街亭揮淚斬馬謖；234 諸葛亮卒於五丈原。沿陳壽《三國志》主線蜀漢核心 6 spots 涵蓋 27 年「鞠躬盡瘁」之軌。 https://trailpaint.org/stories/three-kingdoms/
+- **玄奘西行**（AD 629-645 大唐西域記）：唐代高僧玄奘 629 年自長安偷渡出關，歷五萬里、百餘國，入天竺求法十七年，於 645 年攜六百五十七部梵本佛經歸長安。兩段互動地圖涵蓋西行與歸程，沿途搭配敦煌莫高窟、高昌故城、那爛陀遺址等實景影像。 https://trailpaint.org/stories/xuanzang/
+- **張騫通西域**（BC 139-126 鑿空之旅）：漢武帝建元二年（BC 139），張騫受命出使西域，要聯合大月氏夾擊匈奴。他從長安出發，才進河西走廊便被匈奴截獲，扣留十餘年、娶妻生子，始終持漢節未失。 https://trailpaint.org/stories/zhang-qian/
+- **文天祥南逃**（1275-1283 正氣留千古）：德祐元年（1275）元軍渡江，南宋殘局如風中殘燭。廬陵書生文天祥散盡家財勤王，入衛臨安，使元議和被拘；脫身輾轉閩粵擁立二王，兵敗五坡嶺被俘。押解經伶仃洋寫下「人生自古誰無死，留取丹心照汗青」，親眼見崖山蹈海。 https://trailpaint.org/stories/wen-tianxiang/
+- **徐霞客西南壯遊**（1636-1640 最後壯遊）：崇禎九年（1636）秋，五十歲的徐霞客從江陰出發踏上最後一次壯遊，經浙、贛、湘、粵西、黔、滇，歷時四年，行程逾兩萬里。他在桂林探獨秀峰、在貴州記下黃果樹瀑布，深入雲南考察石林、滇池、洱海，登上雞足山金頂。 https://trailpaint.org/stories/xu-xiake/
+- **郁永河裨海紀遊**（AD 1697 康熙採硫紀行）：康熙三十六年（1697）郁永河渡黑水溝赴台採硫：二月二十五日鹿耳門登岸，四月初七乘牛車自府城北上縱貫西部諸番社，四月二十七日抵淡水，於北投勘硫煉硫，十月工竣返棹。 https://trailpaint.org/stories/yu-yonghe/
 
-### 大航海時代 (exploration)
-- **馬可波羅東來** (1271-1295)、**鄭和下西洋** (1405-1433)
+### 大航海時代 (exploration，5 個故事)
+- **馬可波羅東來**（1271-1295 The Travels）：1271 年，十七歲的威尼斯少年馬可波羅隨父叔從威尼斯啟航，經阿卡、大不里士、荷姆茲，折返陸路翻越巴達克尚、帕米爾、塔克拉瑪干至上都覲見忽必烈。 https://trailpaint.org/stories/marco-polo/
+- **鄭和下西洋**（AD 1405-1433 明代寶船七下西洋（首 + 中 + 末三段））：永樂至宣德年間，明廷七次派鄭和率寶船隊遠航西洋，足跡達東南亞、印度、阿拉伯、東非。兩段互動地圖呈現「首航」與「遺作」——1405 年的龍江寶船初啟 vs 1433 年鄭和卒於古里的最後一航——跨越二十八年的壯舉收束。 https://trailpaint.org/stories/zheng-he/
+- **哥倫布四次航海**（AD 1492 — 1506）：Cristóbal Colón 1492 西班牙天主教雙王資助下從 Palos 出航尋亞洲新航路；首登巴哈馬 San Salvador 開啟「大西洋世界」。 https://trailpaint.org/stories/columbus/
+- **麥哲倫環球航行**（AD 1519 — 1522）：Fernão de Magalhães 葡萄牙人轉投西班牙王室，1519 率 5 艘船 270 人尋香料群島西航路 — 史上首次環球航行。 https://trailpaint.org/stories/magellan/
+- **庫克船長太平洋三航**（AD 1768 — 1779）：James Cook 三度環行太平洋：1768-71 觀金星凌日 + 紐澳測繪、1772-75 首船過南極圈、1776-79 西北通道尋找。 https://trailpaint.org/stories/cook/
 
 <!-- gen:taiwan-stories:start -->
 ### 台灣百年 (taiwan，策展專區 https://trailpaint.org/taiwan/)
-- **大安森林公園** (1904—今)：定點時間軸，地圖停在大安森林公園這個街廓，拉時間軸列出當年這裡有什麼：柴竹圍稻田、七號公園預定地、建華與岳廬眷村、國際學舍、拆遷與 1994 年開放的公園；只收有原文出處的 8 個階段，每則附來源
-- **大安區百年** (1762—今)：臺北大安區 33 處公共建設與地方記憶依「在現址啟用」年份累積出現（瑠公圳、農事試驗場、監獄、學校、教授宿舍、眷村、紫藤廬與殷海光故居、高架道路、東區百貨、森林公園、捷運、運動中心），時間軸拉到哪年就只顯示當年已存在的建設，底圖同步切換中研院 1904 / 1945 / 1955 / 1966 / 1989 / 1993 歷史地圖
-- **公館到景美：水圳兩百年** (1724—今)：公館、景美一帶 29 處水圳、古厝、廟宇、煤礦、鐵路與校園依「在現址出現」年份累積出現（霧裡薛圳、梘尾大木梘、瑠公圳、芳蘭大厝、景美集應廟、臺北水道水源地、萬盛溪、仙跡岩與興隆山煤礦、十五份遺址、辛亥滯洪池），每點附今日生態與來源；依益人學苑生態導覽課程路線延伸，底圖同步切換中研院歷史地圖
+- **大安森林公園** (1904—今)：定點時間軸，地圖停在大安森林公園這個街廓，拉時間軸列出當年這裡有什麼：柴竹圍稻田、七號公園預定地、建華與岳廬眷村、國際學舍、拆遷與 1994 年開放的公園；只收有原文出處的 8 個階段，每則附來源 https://trailpaint.org/taiwan/taipei-daan-park/
+- **大安區百年** (1762—今)：臺北大安區 33 處公共建設與地方記憶依「在現址啟用」年份累積出現（瑠公圳、農事試驗場、監獄、學校、教授宿舍、眷村、紫藤廬與殷海光故居、高架道路、東區百貨、森林公園、捷運、運動中心），時間軸拉到哪年就只顯示當年已存在的建設，底圖同步切換中研院 1904 / 1945 / 1955 / 1966 / 1989 / 1993 歷史地圖 https://trailpaint.org/taiwan/taipei-daan/
+- **公館到景美：水圳兩百年** (1724—今)：公館、景美一帶 29 處水圳、古厝、廟宇、煤礦、鐵路與校園依「在現址出現」年份累積出現（霧裡薛圳、梘尾大木梘、瑠公圳、芳蘭大厝、景美集應廟、臺北水道水源地、萬盛溪、仙跡岩與興隆山煤礦、十五份遺址、辛亥滯洪池），每點附今日生態與來源；依益人學苑生態導覽課程路線延伸，底圖同步切換中研院歷史地圖 https://trailpaint.org/taiwan/taipei-gongguan-jingmei/
 <!-- gen:taiwan-stories:end -->
 
 ### 合輯 / Compilations
@@ -158,6 +165,23 @@ TrailPaint（路小繪）是一個純瀏覽器端的**手繪風路線地圖工�
 - 版本發佈：https://github.com/notoriouslab/trailpaint/releases
 - PWA 安裝教學：https://trailpaint.org/features/install/
 
+## Markdown 文件
+
+每個說明頁都有 Markdown 版（網址加 `index.md`，或以 `Accept: text/markdown` 請求原網址）：
+
+- [首頁](https://trailpaint.org/index.md)
+- [常見問題](https://trailpaint.org/faq/index.md)
+- [功能一覽](https://trailpaint.org/features/index.md)
+- [匯入](https://trailpaint.org/features/import/index.md)
+- [匯出與分享](https://trailpaint.org/features/export/index.md)
+- [Story Player 與 URL 參數](https://trailpaint.org/features/story-mode/index.md)
+- [AI 提示詞生成地圖](https://trailpaint.org/features/ai-prompt/index.md)
+- [安裝到主畫面](https://trailpaint.org/features/install/index.md)
+- [故事地圖總覽](https://trailpaint.org/stories/index.md)
+- [台灣百年](https://trailpaint.org/taiwan/index.md)
+- [出門走走路線](https://trailpaint.org/examples/index.md)
+- [教會應用](https://trailpaint.org/church/index.md)
+
 ## 常見問題（FAQ）
 
 **Q: 資料會上傳到伺服器嗎？**
@@ -182,4 +206,4 @@ A: 線上版在第一次開啟後透過 PWA 快取可離線編輯。安裝為 PW
 A: 點「匯入」→「匯入照片」→ 選取或拖曳最多 20 張照片（JPEG/HEIC）。TrailPaint 會讀取 EXIF GPS 座標自動建立景點，無 GPS 的照片放在「待定位」分組，拖曳即可設定位置。
 
 **Q: 可以把地圖放進部落格或網站嗎？**
-A: 可以。匯出對話框的「圖片」tab 有「複製 Player 嵌入碼」按鈕，一鍵複製含專案資料的 `<iframe>` 標籤，貼到 WordPress、Notion、Substack、教會網站等任何可嵌入 HTML 的平台。
+A: 可以。匯出對話框的「互通分享」tab 有「複製 Player 嵌入碼」按鈕，一鍵複製含專案資料的 `<iframe>` 標籤，貼到 WordPress、Notion、Substack、教會網站等任何可嵌入 HTML 的平台。

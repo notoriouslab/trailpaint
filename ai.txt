@@ -1,6 +1,6 @@
 # ai.txt — TrailPaint AI Usage Policy
 # https://aitxt.org/ | https://llmstxt.org/
-# Last updated: 2026-04-19
+# Last updated: 2026-11-11
 
 Purpose: Hand-drawn style trail map maker. Browser-only tool for building route maps from photos (EXIF GPS), KML, GeoJSON, GPX, or AI prompts, with export to PNG illustration, project backup, or geographic interop formats.
 
@@ -8,32 +8,26 @@ License: GPL-3.0
 Open-source: Yes
 Repository: https://github.com/notoriouslab/trailpaint
 
-# Access policy for AI crawlers
+# Access policy for AI crawlers (mirrors robots.txt)
 User-agent: *
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: Claude-Web
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bytespider
+User-agent: CCBot
 Allow: /
 Disallow: /app/assets/
-
-# Per-crawler allow-list (mirrors robots.txt)
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Bytespider
-Allow: /
+Disallow: /old/
+Disallow: /online/
+Disallow: /examples/coffee.html
 
 # Machine-readable resources
 LLMs: https://trailpaint.org/llms.txt

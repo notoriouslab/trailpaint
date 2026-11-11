@@ -9,11 +9,11 @@
   <meta property="og:title" content="常見問題 — TrailPaint 路小繪">
   <meta property="og:description" content="TrailPaint 路小繪常見問題：免費？隱私？支援哪些格式？手機可用？分享連結過期？開源授權？">
   <meta property="og:image" content="https://trailpaint.org/examples/og-image.jpg">
-  <meta property="og:url" content="https://trailpaint.org/faq">
+  <meta property="og:url" content="https://trailpaint.org/faq/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://trailpaint.org/faq">
-  <link rel="alternate" type="text/markdown" href="https://trailpaint.org/faq.md">
+  <link rel="canonical" href="https://trailpaint.org/faq/">
+  <link rel="alternate" type="text/markdown" href="https://trailpaint.org/faq/index.md">
   <link rel="icon" type="image/svg+xml" href="/app/favicon.svg">
   <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
@@ -38,7 +38,7 @@
       { "@type": "Question", "name": "分享連結的預覽圖是什麼？",
         "acceptedAnswer": { "@type": "Answer", "text": "分享到 LINE、Facebook、Threads、X、Slack 等平台時，預覽圖是該專案裡第一個有照片的景點。若專案沒有任何照片，會 fallback 到 TrailPaint 的品牌預覽圖。" } },
       { "@type": "Question", "name": "Story Player 是什麼？",
-        "acceptedAnswer": { "@type": "Answer", "text": "Story Player 是 TrailPaint 的獨立入口（/app/player/），把地圖變成自動導覽故事：fly-to 動畫逐點飛過去、popup 展示照片與說明、可設定播放間隔與循環、支援背景音樂、中研院 1897/1921/1966 台灣歷史地圖疊加、全螢幕模式適合展場與教學投影。一鍵複製嵌入碼可貼到部落格、教會網站、Notion。" } },
+        "acceptedAnswer": { "@type": "Answer", "text": "Story Player 是 TrailPaint 的獨立入口（/app/player/），把地圖變成自動導覽故事：fly-to 動畫逐點飛過去、popup 展示照片與說明、可設定播放間隔與循環、支援背景音樂、16 張歷史地圖疊加（中研院臺灣百年歷史地圖 1897 至 1993、CCTS 中國七朝、羅馬帝國 AD 200）、全螢幕模式適合展場與教學投影。一鍵複製嵌入碼可貼到部落格、教會網站、Notion。" } },
       { "@type": "Question", "name": "手機可以用嗎？離線能用嗎？",
         "acceptedAnswer": { "@type": "Answer", "text": "手機：iOS Safari、Android Chrome 都支援響應式設計。可安裝為 PWA（Progressive Web App）加到主畫面當原生 App 使用，包含離線啟動能力。離線：PWA 快取可以離線開啟 Editor，但新照片匯入的反向地理編碼、地圖圖磚需要網路才能取得最新內容。" } },
       { "@type": "Question", "name": "可以商業使用嗎？",
@@ -49,6 +49,27 @@
         "acceptedAnswer": { "@type": "Answer", "text": "到 GitHub 開 issue：https://github.com/notoriouslab/trailpaint/issues。 附上重現步驟、截圖、瀏覽器與版本資訊最有幫助。" } }
     ]
   }
+  </script>
+  <meta property="og:site_name" content="TrailPaint 路小繪">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "TrailPaint 路小繪",
+      "item": "https://trailpaint.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "常見問題",
+      "item": "https://trailpaint.org/faq/"
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -106,7 +127,7 @@
       <details class="faq-item">
         <summary>如何從照片批次建立景點？</summary>
         <div class="faq-body">
-          點「匯入」→「匯入照片」→ 選取或拖曳最多 20 張照片（JPEG / HEIC 皆可）。TrailPaint 會讀取 EXIF GPS 座標自動建立景點，無 GPS 的照片會放在「待定位」分組，拖曳即可設定位置。Photon 或 Nominatim 反向地理編碼會自動補上地名作為景點標題。詳見 <a href="/features/import">匯入功能</a>。
+          點「匯入」→「匯入照片」→ 選取或拖曳最多 20 張照片（JPEG / HEIC 皆可）。TrailPaint 會讀取 EXIF GPS 座標自動建立景點，無 GPS 的照片會放在「待定位」分組，拖曳即可設定位置。Photon 或 Nominatim 反向地理編碼會自動補上地名作為景點標題。詳見 <a href="/features/import/">匯入功能</a>。
         </div>
       </details>
 
@@ -115,7 +136,7 @@
         <div class="faq-body">
           <p><strong>匯入</strong>：.trailpaint 專案檔、照片 EXIF（JPEG / HEIC）、KML（Google My Maps）、GeoJSON（geojson.io / Google Takeout）、GPX（登山 App）、截圖底圖。</p>
           <p><strong>匯出</strong>：PNG 多比例插畫、.trailpaint 完整備份、GeoJSON / KML 純地理結構（給 Google My Maps、Google Earth、Gaia GPS 用）、分享連結、Player 嵌入 HTML。</p>
-          <p>詳見 <a href="/features/import">匯入功能</a> 與 <a href="/features/export">匯出功能</a>。</p>
+          <p>詳見 <a href="/features/import/">匯入功能</a> 與 <a href="/features/export/">匯出功能</a>。</p>
         </div>
       </details>
 
@@ -141,10 +162,10 @@
             <li>Fly-to 動畫逐點飛過去、popup 展示照片與說明</li>
             <li>可設定播放間隔與循環</li>
             <li>支援背景音樂</li>
-            <li>中研院 1897 / 1921 / 1966 台灣歷史地圖疊加</li>
+            <li>16 張歷史地圖疊加（中研院臺灣百年歷史地圖 1897 至 1993、CCTS 中國七朝、羅馬帝國 AD 200）</li>
             <li>全螢幕模式適合展場與教學投影</li>
           </ul>
-          一鍵複製嵌入碼可貼到部落格、教會網站、Notion。詳見 <a href="/features/story-mode">故事地圖</a>。
+          一鍵複製嵌入碼可貼到部落格、教會網站、Notion。詳見 <a href="/features/story-mode/">故事地圖</a>。
         </div>
       </details>
 

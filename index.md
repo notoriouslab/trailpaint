@@ -27,8 +27,8 @@ TrailPaint is a browser-only hand-drawn style trail map maker, designed for hike
 
 ## 三種建立路線的方式 / Three Ways to Build a Trail
 
-1. **從照片建立（v1.3 新能力）**：拖 20 張照片 → EXIF GPS 自動建景點。支援 iPhone HEIC、Android JPEG。無 GPS 照片歸入「待定位」分組。Nominatim 反向地理編碼自動補地名。
-   _From Photos (new in v1.3): drag up to 20 photos; EXIF GPS auto-creates spots. iPhone HEIC and Android JPEG supported._
+1. **從照片建立**：拖 20 張照片 → EXIF GPS 自動建景點。支援 iPhone HEIC、Android JPEG。無 GPS 照片歸入「待定位」分組。Photon（主）/ Nominatim（備援）反向地理編碼自動補地名。
+   _From Photos: drag up to 20 photos; EXIF GPS auto-creates spots. iPhone HEIC and Android JPEG supported._
 
 2. **在地圖上手動建**：搜尋地點、畫路線、放景點卡片。3 步引導教學 + 8 條範例路線試玩。
    _Manually on the Map: search locations, draw routes, place spot cards. 3-step tutorial, 8 sample trails._
@@ -45,7 +45,7 @@ TrailPaint is a browser-only hand-drawn style trail map maker, designed for hike
 - GPX (hiking apps, Garmin)
 - Screenshot basemap (drag any image)
 
-## 輸出格式 / Output Formats (unified ExportWizard v1.3)
+## 輸出格式 / Output Formats (unified ExportWizard)
 
 Three tabs for three use cases:
 
