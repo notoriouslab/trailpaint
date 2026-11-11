@@ -3,7 +3,7 @@
 URL: https://trailpaint.org/taiwan/
 Parent: https://trailpaint.org/
 Languages: zh-TW
-Version: 1.8.3
+Version: 1.8.4
 
 ## 這是什麼 / What is This
 

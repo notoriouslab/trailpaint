@@ -4,7 +4,7 @@
 
 > **Hand-drawn trail map maker** — turn a journey into an illustrated map that tells its story. No backend, installable PWA, auto-detected trilingual UI.
 
-[![Version](https://img.shields.io/badge/version-1.8.3-orange.svg)](https://github.com/notoriouslab/trailpaint/releases)
+[![Version](https://img.shields.io/badge/version-1.8.4-orange.svg)](https://github.com/notoriouslab/trailpaint/releases)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6.svg)](https://www.typescriptlang.org/)
 [![PWA Ready](https://img.shields.io/badge/PWA-ready-5a0fc8.svg)](https://trailpaint.org/features/install/)
@@ -102,7 +102,7 @@ Three curated sections:
 
 **[Story Player](https://trailpaint.org/app/player/)** turns a static map into a guided tour: fly-to animations, photo cards, background music, and fullscreen mode — built for exhibitions, classrooms, and web embeds.
 
-- **⏱ Era slider** — drag to cross-fade historical basemaps (Academia Sinica Han/Tang/Song/Yuan/Ming China + Taiwan 1897/1921/1966 + Roman Empire AD 200) while spots fade by era
+- **⏱ Era slider** — drag to cross-fade historical basemaps (16 overlays: seven Chinese dynasties from Han to Qing and eight Taiwan maps from 1897 to 1993 by Academia Sinica, plus Roman Empire AD 200) while spots fade by era
 - **📚 Compilations** — bundle story chapters into one player, ordered by narrative or by global chronology
 - **📮 Postcards** — one-tap 1080×1080 square per spot (map + spot card + era stamp)
 

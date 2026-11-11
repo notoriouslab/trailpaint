@@ -4,7 +4,7 @@
 
 > **手繪風路線地圖工具** — 把一趟旅程變成一張會說故事的插畫地圖。零後端、PWA 可裝機、三語自動偵測。
 
-[![Version](https://img.shields.io/badge/version-1.8.3-orange.svg)](https://github.com/notoriouslab/trailpaint/releases)
+[![Version](https://img.shields.io/badge/version-1.8.4-orange.svg)](https://github.com/notoriouslab/trailpaint/releases)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6.svg)](https://www.typescriptlang.org/)
 [![PWA Ready](https://img.shields.io/badge/PWA-ready-5a0fc8.svg)](https://trailpaint.org/features/install/)
@@ -102,7 +102,7 @@ TrailPaint 的使用節奏是三步：**先收集，再編輯，最後分享**�
 
 **[Story Player](https://trailpaint.org/app/player/)** 把靜態地圖變成自動導覽：逐點 fly-to、照片與說明卡展示、背景音樂、全螢幕模式，適合展場、教學投影與網頁嵌入。
 
-- **⏱ 年代滑桿** — 拖動即 cross-fade 切換歷史底圖（中研院西漢/唐/南宋/元/明 + 台灣 1897/1921/1966 + AD 200 羅馬），景點依年代漸隱
+- **⏱ 年代滑桿** — 拖動即 cross-fade 切換歷史底圖（16 張：中研院中國七朝（西漢至清）、臺灣百年歷史地圖 1897 至 1993 共 8 張、AD 200 羅馬），景點依年代漸隱
 - **📚 合輯** — 多個故事段落綁成一個播放器，可依故事順序或跨故事年代排序
 - **📮 明信片** — 每個景點一鍵生成 1080×1080 方圖（地圖 + 景點卡 + 年代印章）
 

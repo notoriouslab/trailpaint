@@ -3,7 +3,7 @@
 > Hand-drawn style trail map maker. Build routes from photos, maps, or AI prompts, then export as PNG illustration, complete project backup, or GeoJSON / KML interop formats. Free, open-source (GPL-3.0), no account, no backend.
 
 Language: zh-TW / en / ja (auto-detected)
-Version: 1.8.3
+Version: 1.8.4
 License: GPL-3.0
 Source: https://github.com/notoriouslab/trailpaint
 Try it: https://trailpaint.org/app/
@@ -140,6 +140,10 @@ Embed code is one-click copy from Player ⚙ menu — paste into WordPress / Wix
 ### Spot Era Schema (v5)
 
 `Spot.era?: { start: number; end: number }` — calendar years, BC negative, AD positive, range [-3000, 3000]. Drives postcard era stamp + TimeSlider opacity fade. 17 historical segments / 150 spots already tagged: Paul × 3, Galilean ministry × 2, Passion Week × 3, Zhang Qian × 2, Xuanzang × 2, Marco Polo × 2, Wen Tianxiang × 2, Xu Xiake × 1. Modern stories (Taiwan hikes, 19th-century missionaries) stay era-agnostic intentionally — their spots remain visible at any TimeSlider position.
+
+## v1.8.4 Story Pages You Can Read (2026-11)
+
+Every story page now lists its spots below the map: name, year, photo with credit, full description, sources and scripture references, each with a link that opens the spot on the map above. The same content is available as Markdown (add `index.md` to a story URL) and as `ItemList` structured data with coordinates. 每個故事頁在地圖下方列出全部景點（名稱、年份、照片與授權、說明、出處與經文），可點「在地圖上看」跳到該景點；同一份內容另有 Markdown 版（故事網址加 `index.md`）與帶座標的結構化資料。The `/stories/` page links to every story without JavaScript, help pages have Markdown mirrors, and the Story Player URL parameter reference was corrected against the code.
 
 ## v1.8.3 Lighter Stories and Spot Links (2026-10)
 

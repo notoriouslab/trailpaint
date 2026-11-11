@@ -4,7 +4,7 @@
 
 > **手描き風ルートマップ作成ツール** — 旅をひとつの物語る地図に。バックエンド不要、PWA インストール対応、三言語自動判定。
 
-[![Version](https://img.shields.io/badge/version-1.8.3-orange.svg)](https://github.com/notoriouslab/trailpaint/releases)
+[![Version](https://img.shields.io/badge/version-1.8.4-orange.svg)](https://github.com/notoriouslab/trailpaint/releases)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6.svg)](https://www.typescriptlang.org/)
 [![PWA Ready](https://img.shields.io/badge/PWA-ready-5a0fc8.svg)](https://trailpaint.org/features/install/)
@@ -92,7 +92,7 @@ GPS 付きで撮影 → ドラッグ＆ドロップ → 座標・時系列・逆
 
 **[Story Player](https://trailpaint.org/app/player/)** は静的な地図を自動ツアーに変えます：fly-to アニメーション、写真カード、BGM、フルスクリーン — 展示・授業・ウェブ埋め込みに。
 
-- **⏱ 年代スライダー** — ドラッグで歴史地図をクロスフェード切替（中央研究院の前漢/唐/南宋/元/明 + 台湾 1897/1921/1966 + ローマ帝国 AD 200）、スポットも年代で明滅
+- **⏱ 年代スライダー** — ドラッグで歴史地図をクロスフェード切替（全 16 種：中央研究院の中国七王朝（前漢〜清）と台湾歴史地図 1897〜1993 の 8 枚、ローマ帝国 AD 200）、スポットも年代で明滅
 - **📚 コンピレーション** — 複数の物語を 1 つのプレイヤーに束ね、物語順・年代順で再生
 - **📮 ポストカード** — スポットごとにワンタップで 1080×1080 の正方形画像（地図 + カード + 年代スタンプ）
 
