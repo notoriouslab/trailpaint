@@ -1,0 +1,436 @@
+# 公館到景美：水圳兩百年
+
+> 拉動時間軸，看公館到景美兩百多年來的水與山邊如何改變：清代的霧裡薛圳、瑠公圳與梘尾木梘把景美溪與新店溪的水送進稻田，安溪移民在芳蘭、景美、十五份蓋起古厝與廟宇；日治的臺北水道水源地讓臺北有了自來水，煤礦與萬新鐵路沿著仙跡岩、興隆山開發；戰後溪圳加蓋、校園擴張，滯洪池取代了淹水的低地。今天這些水邊與山邊是白鷺鷥、蕨類與昆蟲的棲地。路線依益人學苑「家園生態探索」課程延伸，底圖依年份切換為中研院歷史地圖；年份為「在現址出現」之年，每點附來源。
+
+URL: https://trailpaint.org/taiwan/taipei-gongguan-jingmei/
+Parent: https://trailpaint.org/taiwan/
+Language: zh-TW
+
+<!-- gen:spots:start -->
+## 景點列表 / Spots
+
+### 水圳兩百年（1724—今 從霧裡薛圳到萬盛溪）
+
+#### 1. 霧裡薛圳第二支線明渠（1724 至今）
+
+位置：25.02154, 121.53324
+
+霧裡薛圳 1724 年開工、乾隆初年完工，在霧裡薛溪（今景美溪）取水，大體沿今景興路、萬盛街到公館，再接汀州路、溫州街，在九汴頭分出支線灌溉臺北盆地。溫州街 45 巷這一小段是僅存露天的霧裡薛圳圳道，2025 年指定為市定古蹟；渠中長滿水生植物，旁邊是居民耕作的菜地。
+
+來源：臺北文化小旅行〈霧裡薛圳〉、國立臺灣大學校園規劃報告第二章、中央社 2025-05-26
+
+出處：
+- https://miniculturaltrips.gov.taipei/News_Content.aspx?n=0DA7E7A7A1EA5C19&s=B8377DBD22595B0F&sms=337199328131CB54
+- http://homepage.ntu.edu.tw/%7Ecpo/download/2020plan/chap_02.pdf
+- https://www.cna.com.tw/news/acul/202505260226.aspx
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/5f08710e80cf8e4e.jpg（阿道，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:Wulixue_Canel_01_20261020.jpg）
+
+#### 2. 梘尾大木梘（今景美橋）（1761 至今）
+
+位置：24.9882, 121.54084
+
+1761 年郭錫瑠用木製水槽「木梘」讓瑠公圳跨過景美溪（第十河川分署作 1760 年），木槽尾端這一岸因此叫「梘尾」，就是景美地名的由來。1908 年木梘改建為上走人車、下通圳水的瑠公橋，1963 年改為交通橋並更名景美橋。景美溪岸是賞鳥點，常見鷺鷥在溪邊捕食吳郭魚。
+
+來源：農業部農田水利署瑠公管理處〈景美古地名因水圳設施而來〉、經濟部水利署第十河川分署〈景美〉、臺北市文山區志 卷一
+
+出處：
+- https://www.ialgo.nat.gov.tw/zh-TW/fun/Articles?a=20399
+- https://www.wra.gov.tw/wra10/cp.aspx?n=26902
+- https://www-ws.gov.taipei/001/Upload/public/MMO/WSDO/book1.pdf
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/fd1b0123a8dbb065.jpg（Ianbu，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E6%99%AF%E7%BE%8E%E6%A9%8B.JPG）
+
+#### 3. 瑠公圳大安支線（臺大段明渠）（1762 至今）
+
+位置：25.0163398, 121.539097
+
+郭錫瑠 1740 年開鑿瑠公圳，引新店溪水灌溉臺北盆地，1762 年景美到臺北段完工。圳水到公館分成第一幹線、第二幹線與大安支線，大安支線穿過今天的臺大校園，臺大水工試驗所旁還留著約 550 公尺的明渠，是大安區少數看得到的瑠公圳。另一條常被混為一談的水圳是更早的霧裡薛圳，它的分水樞紐「九汴頭」在今溫州街 46 巷口一帶，跟瑠公圳是兩套系統。
+
+來源：國立臺灣大學〈瑠公圳(臺大段)復原整體規劃設計〉、文山社區大學〈瑠公圳大事記〉、自由時報〈瑠公圳密碼 藏身巷弄間〉2012
+
+出處：
+- https://homepage.ntu.edu.tw/~cpo/plan/921013.pdf
+- https://www.wenshan.org.tw/wss/index.php/%E6%96%87%E5%8F%B2/item/965-2013-10-31-08-13-52
+- https://news.ltn.com.tw/news/local/paper/572896
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/c7247704c630ed6c.jpg（lienyuan lee，CC BY 3.0 https://commons.wikimedia.org/wiki/File:Liugongjun_Pool_and_Astronomy_Mathematics_Building_20160316.jpg）
+
+#### 4. 寶藏巖（1791 至今）
+
+位置：25.01061, 121.5324
+
+寶藏巖倚著小觀音山南麓、面對新店溪，是安溪移民開墾公館一帶的信仰中心，內政部資料記至遲在 1791 年已建成，另有 1702 年康熙年間創建之說。戰後寺旁山坡長出寶藏巖聚落；背後的小觀音山因長年軍事管制，留下臺北少見的原生林相。
+
+來源：內政部 臺灣宗教文化地圖〈寶藏巖〉、數位典藏聯合目錄〈寶藏巖〉、臺北自來水園區環境教育中心〈小觀音山生態步道〉
+
+出處：
+- https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=120
+- https://catalog.digitalarchives.tw/item/00/2f/ea/e7.html
+- https://twpeec.water.gov.taipei/News_Content.aspx?n=C7A9554735654002&s=A615C77D14C47A1E&sms=1A9C98D712B400E8
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/5a7d810b4f7227ab.jpg（Allervous，CC BY 4.0 https://commons.wikimedia.org/wiki/File:Treasure_Hill_Temple_(20250130143835).jpg）
+
+#### 5. 芳蘭大厝（1806 至今）
+
+位置：25.01332, 121.548
+
+1806 年，在艋舺經營「芳蘭記」船頭行致富的安溪移民陳振師，在芳蘭山腳蓋了這座三合院。大厝面對瑠公圳、背靠芳蘭山，是臺北盆地邊緣少數留下來的清代古宅，1988 年土地徵收後由臺大管理，1999 年指定為市定古蹟。背後的蟾蜍山、芳蘭山一線仍是淺山林地，記錄過面天樹蛙、臺灣藍鵲、大冠鷲。
+
+來源：大安區公所〈芳蘭大厝〉、臺大校史館〈富田望水〉、國立臺灣大學校園規劃報告第二章、蟾蜍山煥民新村〈自然生態〉
+
+出處：
+- https://dado.gov.taipei/News_Content.aspx?n=21D5522EA8F62D7A&s=AFFE36261B7C6407
+- https://historygallery.ntu.edu.tw/%E5%AF%8C%E7%94%B0%E6%9C%9B%E6%B0%B4/qingditch.html
+- http://homepage.ntu.edu.tw/%7Ecpo/download/2020plan/chap_02.pdf
+- https://huanminvillage.taipei/about/landscape
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/4368a2efd4ab1baa.jpg（Taiwankengo，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:2021_Fanglan_Mansion.jpg）
+
+#### 6. 溪仔口萬慶巖（1838 至今）
+
+位置：24.99507, 121.53667
+
+溪仔口是景美溪匯入新店溪的東岸，乾隆初年安溪移民在此開墾，清代設有渡船頭，1838 年建清水祖師廟萬慶巖。今天溪邊築起高堤，堤外是河濱公園與自行車道；景美溪下游以吳郭魚等耐汙魚類為主，常引來鷺鷥捕食。
+
+來源：臺北市文山區志 卷五、臺北市文山區志 卷一
+
+出處：
+- https://www-ws.gov.taipei/001/Upload/public/MMO/WSDO/book5.pdf
+- https://www-ws.gov.taipei/001/Upload/public/MMO/WSDO/book1.pdf
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/e3273dd905195fb1.jpg（Outlookxp，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E8%90%AC%E6%85%B6%E5%B7%96%E6%96%9C%E9%9D%A2%E7%85%A7.jpg）
+
+#### 7. 十五份福興宮（1859 至今）
+
+位置：25.00226, 121.55138
+
+興福庄因安溪移民合十五股開墾，俗稱十五份，1761 年的契約已出現「興福庄」地名。福興宮 1859 年創建，所在小坡舊稱「土地公坡」，是十五份的信仰中心。早年十五份山坡以產茶出名，1951 年尚有 83 公頃茶園，到 1977 年完全消失，改種綠竹筍。
+
+來源：文化部文化資產局 國家文化資產網〈福興宮〉、何文賢〈文山十五分庄(興福庄)地景環境變遷研究〉文山社大 2013、臺北市文山區志 卷四
+
+出處：
+- https://nchdb.boch.gov.tw/assets/advanceSearch/historicalBuilding/20181212000001
+- https://wenshan.org.tw/wss/index.php/%E6%96%87%E5%8F%B2/item/865-2013-09-24-14-42-19
+- https://www-ws.gov.taipei/001/Upload/public/MMO/WSDO/book4.pdf
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/a53a7a95f37ddccb.jpg（靖天子，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E6%99%AF%E7%BE%8E%E7%A6%8F%E8%88%88%E5%AE%AE.jpg）
+
+#### 8. 景美集應廟（1867 至今）
+
+位置：24.99179, 121.54178
+
+安溪高姓族人奉祀原鄉守護神保儀尊王，1860 年建廟，1867 年遷到今景美街現址，現存建築為 1924 年重修，是景美安溪人的信仰中心，1985 年指定為古蹟。廟就在景美夜市裡，往東走幾分鐘是仙跡岩登山口。
+
+來源：文化部文化資產局 國家文化資產網〈景美集應廟〉、臺北市文山區志 卷五
+
+出處：
+- https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19850819000024
+- https://www-ws.gov.taipei/001/Upload/public/MMO/WSDO/book5.pdf
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/2e7f222938041fb8.jpg（Outlookxp，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E6%99%AF%E7%BE%8E%E9%9B%86%E6%87%89%E5%BB%9F.jpg）
+
+#### 9. 義芳居古厝（1876 至今）
+
+位置：25.01162, 121.54736
+
+芳蘭大厝陳家的後人，1876 年在芳蘭山西側山腳另建三合院「義芳居」，外牆開有銃眼，看得出當年墾區邊緣的治安。陳家三座大宅合稱芳蘭三塊厝，玉芳居原址已成臺大宿舍，義芳居 1989 年公告為古蹟而留下。古厝背倚蟾蜍山、芳蘭山與中埔山相連的山腳，山上至今有臺灣藍鵲、白鼻心等淺山動物。
+
+來源：大安區公所〈義芳居古厝〉、臺大校史館〈富田望水〉、蟾蜍山煥民新村〈自然生態〉
+
+出處：
+- https://dado.gov.taipei/ct.asp?CtNode=38543&mp=124021&xItem=28528
+- https://historygallery.ntu.edu.tw/%E5%AF%8C%E7%94%B0%E6%9C%9B%E6%B0%B4/qingditch.html
+- https://huanminvillage.taipei/about/landscape
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/437d7f60fcf445ea.jpg（林高志，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E7%BE%A9%E8%8A%B3%E5%B1%85%E5%8F%A4%E5%8E%9D4291.jpg）
+
+#### 10. 龍安坡黃宅濂讓居（1897 至今）
+
+位置：25.02388, 121.53916
+
+安溪移民黃氏的後代在 1897 年合建這座紅磚三合院，建成時坐北朝南、四周都是稻田。今天它在龍門國中校園內，1999 年指定為市定古蹟，是大安區少數還在原地的清末農家宅第。
+
+來源：文化部文化資產局 國家文化資產網〈龍安坡黃宅濂讓居〉
+
+出處：
+- https://nchdb.boch.gov.tw/assets/advanceSearch/monument/19990629000003
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/a81c0190926917e5.jpg（寺人孟子，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E9%BE%8D%E5%AE%89%E5%9D%A1%E9%BB%83%E5%AE%85%E6%BF%82%E8%AE%93%E5%B1%85.jpg）
+
+#### 11. 蟾蜍山農事試驗場（今農試所宿舍群）（1903 至今）
+
+位置：25.0100266, 121.5385713
+
+1903 年，臺灣總督府把臺北、臺中、臺南三處農事試驗場合併，在公館蟾蜍山下（今羅斯福路四段）設立臺灣總督府農事試驗場，是臺灣最早的近代農業研究機關，比臺北帝國大學早 25 年。看中的是瑠公圳與霧裡薛圳的灌溉水源。研究人員的宿舍沿今羅斯福路四段 119 巷興建，1977 年農業試驗所遷往霧峰，2018 年八棟宿舍公告為臺北市歷史建築。
+
+來源：農業部農業試驗所〈歷史沿革〉、蟾蜍山煥民新村〈農試農事〉
+
+出處：
+- https://www.tari.gov.tw/content/index.asp?Parser=1%2C3%2C14
+- https://huanminvillage.taipei/lifetrace-term/3
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/fe99c1fea4aedaca.jpg（林高志，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E8%BE%B2%E6%A5%AD%E8%A9%A6%E9%A9%97%E6%89%80%E5%AE%BF%E8%88%8D%E7%BE%A474_76165214_B.jpg）
+
+#### 12. 萬盛溪明渠（1904 至今）
+
+位置：25.00718, 121.53841
+
+萬盛溪舊稱大溝，北支流源自中埔山、南支流源自仙跡岩，會合後穿過十五份，1904 年的臺灣堡圖上已畫出這條溪。1926 年地方倡議以石砌溝，天然溪流變成人工圳溝；戰後大部分加蓋成路，只在羅斯福路五段留下兩小段明渠，裡面看得到吳郭魚，偶爾有白鷺鷥守在一旁。
+
+來源：何文賢〈文山十五分庄(興福庄)地景環境變遷研究〉文山社大 2013、PeoPo〈萬盛溪追憶和維護認養〉2022、台北村落之聲〈依山小綠洲：尋找水圳的公共性（下）〉2017
+
+出處：
+- https://wenshan.org.tw/wss/index.php/%E6%96%87%E5%8F%B2/item/865-2013-09-24-14-42-19
+- https://www.peopo.org/news/589553
+- https://www.villagetaipei.net/Post?PId=13979
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/ea06f99c880216f1.jpg（靖天子，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E8%90%AC%E7%9B%9B%E6%BA%AA%E6%98%8E%E6%B8%A0.jpg）
+
+#### 13. 臺北水道水源地唧筒室（今自來水博物館）（1908 至今）
+
+位置：25.01257, 121.53
+
+總督府在小觀音山腳的新店溪畔設取水口，1908 年唧筒室（抽水機房）完工，隔年臺北第一套現代自來水供水：溪水在這裡抽起、淨化後送上山頂的觀音山蓄水池，再靠重力流進城裡。1977 年取水口移往上游青潭堰，機房退役，後來修成自來水博物館，館旁步道可走上小觀音山。
+
+來源：臺北自來水園區〈自來水博物館誕生〉、臺北自來水園區環境教育中心〈唧筒室〉、臺北自來水園區〈觀音山蓄水池〉
+
+出處：
+- https://waterpark.water.gov.taipei/cp.aspx?n=0873D01E4124E52B
+- https://twpeec.water.gov.taipei/News_Content.aspx?n=7B451BF7FC875D62&s=7232214CA0E91850
+- https://waterpark.water.gov.taipei/News_Content.aspx?n=713FED9C4D8BF1F2&s=7FB9C2CA1182F787&sms=DA15A9580AAF492F
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/3c5039b11cc5f625.jpg（林高志，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E8%87%BA%E5%8C%97%E6%B0%B4%E9%81%93%E6%B0%B4%E6%BA%90%E5%9C%B02984.jpg）
+
+#### 14. 萬新鐵路十五分站（今萬隆）（1921–1965）
+
+位置：25.00188, 121.53903
+
+1921 年萬華到新店的鐵路通車，在今羅斯福路五、六段交界設十五分站，1955 年改名萬隆站。仙跡岩、興隆山各煤礦的煤由輕便台車運到站旁儲煤場再裝火車，清明節掃墓的人也在這裡換乘台車上山。1965 年鐵路拆除改為道路，今天地下是捷運萬隆站。
+
+來源：臺北市文山區志 卷五、何文賢〈文山十五分庄(興福庄)地景環境變遷研究〉文山社大 2013
+
+出處：
+- https://www-ws.gov.taipei/001/Upload/public/MMO/WSDO/book5.pdf
+- https://wenshan.org.tw/wss/index.php/%E6%96%87%E5%8F%B2/item/865-2013-09-24-14-42-19
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/7bd8e3fbc17349e8.jpg（玄史生，CC BY-SA 3.0 https://commons.wikimedia.org/wiki/File:Wanlong_Station_Exit1.jpg）
+
+#### 15. 臺大農場與磯永吉小屋（1925 至今）
+
+位置：25.01589, 121.54118
+
+1924 年臺北高等農林學校在芳蘭山腳的水田設實習農場，隔年蓋了這間木造作業室，「蓬萊米之父」磯永吉在這裡選育稻種，戰後成了他的紀念室，2009 年指定為市定古蹟。農場至今保留創建時的田區，2004 年完工的農場生態池（瑠公圳水源池）成了校園鳥類、蛙類與爬蟲類的棲地。
+
+來源：磯永吉小屋、臺大校史館 建築史網站、臺大校史館〈富田望水〉復原篇
+
+出處：
+- https://www.isohouse.org.tw/
+- https://historygallery.ntu.edu.tw/2018%E5%BB%BA%E7%AF%89%E5%8F%B2%E7%B6%B2%E7%AB%99/
+- https://historygallery.ntu.edu.tw/%E5%AF%8C%E7%94%B0%E6%9C%9B%E6%B0%B4/restore.html
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/2f4335ff6eaf3ab5.jpg（Ianbu，CC BY-SA 3.0 https://commons.wikimedia.org/wiki/File:Workshop_of_Advanced_Academy_of_Agronomy_and_Forestry.jpg）
+
+#### 16. 永豐煤礦坑口與仙通橋（1927–1974）
+
+位置：24.99636, 121.55018
+
+1927 年在仙跡岩東側開採的重興炭坑，1933 年改名永豐炭礦，坑口就在今興安宮，煤由台車沿仙岩路運到十五分火車站，1974 年停業。運煤台車在仙岩路六巷口跨過萬盛溪南支流的「仙通橋」；溪加蓋後橋被拆，橋墩 2013 年由地方爭取立回原址。
+
+來源：臺北市文山區志 卷四、何文賢〈文山十五分庄(興福庄)地景環境變遷研究〉文山社大 2013、文山社大〈仙通橋橋碑原地重現〉2013
+
+出處：
+- https://www-ws.gov.taipei/001/Upload/public/MMO/WSDO/book4.pdf
+- https://wenshan.org.tw/wss/index.php/%E6%96%87%E5%8F%B2/item/865-2013-09-24-14-42-19
+- https://wenshan.org.tw/wss/index.php/%E6%96%87%E5%8F%B2/item/63-2013-09-12-14-50-22
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/420bc0c687651357.jpg（靖天子，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E4%BB%99%E9%80%9A%E6%A9%8B%E6%A9%8B%E5%A2%A9.jpg）
+
+#### 17. 十五份遺址（1928 至今）
+
+位置：25.00237, 121.54361
+
+1928 年臺北帝國大學建校取土時，在十五份的小山丘挖出史前石器，1934 年移川子之藏據此研究「巴圖」形石器，年代約距今 2500 至 1800 年。戰後遺址位置失傳，2007 年文化局會勘暫列疑似遺址，2016 年在景美運動公園立碑。這裡曾是化學工廠，2003 年整治汞汙染後才改為公園，遺址南方十公尺原有萬盛溪流過。
+
+來源：劉益昌〈十五份遺址：一段學術史的議題〉、何文賢〈文山十五分庄(興福庄)地景環境變遷研究〉文山社大 2013、中國時報 2016-05-08
+
+出處：
+- https://wenshan.org.tw/index.php/%E6%96%87%E5%B1%B1%E6%99%BA%E5%BA%AB/%E8%80%81%E5%B8%AB%E8%A7%80%E9%BB%9E/item/212-%E5%8A%89%E7%9B%8A%E6%98%8C%EF%BC%9A%E5%8D%81%E4%BA%94%E4%BB%BD%E9%81%BA%E5%9D%80%EF%BC%9A%E4%B8%80%E6%AE%B5%E5%AD%B8%E8%A1%93%E5%8F%B2%E7%9A%84%E8%AD%B0%E9%A1%8C
+- https://wenshan.org.tw/wss/index.php/%E6%96%87%E5%8F%B2/item/865-2013-09-24-14-42-19
+- https://www.chinatimes.com/newspapers/20160508000403-260107
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/844f8d89c849b6f3.jpg（靖天子，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E5%8D%81%E4%BA%94%E4%BB%BD%E9%81%BA%E5%9D%80%E7%B4%80%E5%BF%B5%E7%A2%91%E6%AD%A3%E9%9D%A2.jpg）
+
+#### 18. 臺北高等學校講堂（今臺灣師範大學）（1929 至今）
+
+位置：25.026294, 121.526775
+
+臺灣總督府臺北高等學校的講堂與主體校舍於 1929 年完成。1946 年臺灣省立師範學院借用校舍成立，1949 年臺北高級中學停辦，師範學院接收資源，逐步發展為今日的國立臺灣師範大學。霧裡薛圳第二支線當年從校園穿過，人稱「誠溪」，師大路一帶還有過它的調節埤塘。
+
+來源：維基百科〈臺灣總督府臺北高等學校〉、維基百科〈國立臺灣師範大學〉、師大藝文中心〈理水．理園〉2025
+
+出處：
+- https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E7%B8%BD%E7%9D%A3%E5%BA%9C%E8%87%BA%E5%8C%97%E9%AB%98%E7%AD%89%E5%AD%B8%E6%A0%A1
+- https://zh.wikipedia.org/wiki/%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8
+- https://www.artmuse.ntnu.edu.tw/index.php/2025/07/31/waterwaywonderland1/
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/dc3faa04c7d13b93.jpg（阿道，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E5%9C%8B%E7%AB%8B%E8%87%BA%E7%81%A3%E5%B8%AB%E7%AF%84%E5%A4%A7%E5%AD%B8%E7%A6%AE%E5%A0%82%E5%A4%A7%E9%96%80_20251222.jpg）
+
+#### 19. 興福庄建塚記念碑（1929 至今）
+
+位置：25.00288, 121.54579
+
+1929 年臺北州准許民間捐款購地，在興福庄闢建公共墓地，讓萬華、古亭一帶貧苦人家有地安葬，捐款人包括辜顯榮、陳天來、林柏壽、許丙等，立碑記事，2008 年指定為市定古蹟。早年清明節，掃墓的人從十五分火車站換乘運煤台車上山。
+
+來源：文化部文化資產局 國家文化資產網〈興福庄建塚記念碑〉、何文賢〈文山十五分庄(興福庄)地景環境變遷研究〉文山社大 2013
+
+出處：
+- https://nchdb.boch.gov.tw/assets/advanceSearch/monument/20080915000001
+- https://wenshan.org.tw/wss/index.php/%E6%96%87%E5%8F%B2/item/865-2013-09-24-14-42-19
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/fc90e44ca1b4a9ae.jpg（林高志，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E8%88%88%E7%A6%8F%E5%BA%84%E5%BB%BA%E5%A1%9A%E7%B4%80%E5%BF%B5%E7%A2%91143.jpg）
+
+#### 20. 臺大昆蟲館（1936 至今）
+
+位置：25.01108, 121.54065
+
+1936 年落成的臺北帝大昆蟲學及養蠶學教室，主持的素木得一 1907 年來臺，帶領全臺昆蟲調查。館內收藏三十多萬件標本，其中一千多件是新種命名依據的模式標本，2017 年指定為市定古蹟。建築就在蟾蜍山腳，山上至今仍有斑蛾、橡實蝸牛、面天樹蛙等物種。
+
+來源：臺大昆蟲學系〈歷史沿革〉、臺大校史館 建築史網站、蟾蜍山煥民新村〈自然生態〉
+
+出處：
+- https://entomol.ntu.edu.tw/cp_n_46841.html
+- https://historygallery.ntu.edu.tw/2018%E5%BB%BA%E7%AF%89%E5%8F%B2%E7%B6%B2%E7%AB%99/
+- https://huanminvillage.taipei/about/landscape
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/169263b4d287eb5b.jpg（Taiwankengo，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:2021_National_Taiwan_University_Insect_Museum.jpg）
+
+#### 21. 仙跡岩仙巖廟（1946 至今）
+
+位置：24.99263, 121.54799
+
+景美山頂有一塊大石，傳說留有呂洞賓的腳印，1946 年地方發起建仙巖廟。山頂只有 144 公尺，稜線上的三角點是日治時期為繪製臺灣堡圖所設的基準點。步道沿線有近 50 種蕨類，仙巖廟旁的龍眼樹上長著伏石蕨、崖薑蕨。
+
+來源：臺北市文山區志 卷六、臺北市大地工程處〈臺北市登山步道的小問號「蕨」妙好景〉2016、臺北市大地工程處 新聞稿 2026
+
+出處：
+- https://www-ws.gov.taipei/001/Upload/public/MMO/WSDO/book6.pdf
+- https://www.geo.gov.taipei/ct.asp?ctNode=28438&xItem=237245477
+- https://www.geo.gov.taipei/News_Content.aspx?n=23285747C0511EC4&s=43461B028EFDE910&sms=72544237BBE4C5F6
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/4a2c92389816dae1.jpg（阿道，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:Xianjiyan_01._20250118.jpg）
+
+#### 22. 芳川煤礦遺跡（興隆山）（1949 至今）
+
+位置：24.99634, 121.57076
+
+1949 年陳其志等人在興隆山東側的抱子坑成立芳川礦業社採煤，煤用台車、後改卡車運到萬隆車站，「萬芳」一名據說取自萬隆與芳川兩座煤礦。停採年份各來源不一（1980、1984、1997），TVBS 2010 年報導稱它是大臺北保存最完整的礦業遺跡。
+
+來源：臺北市文山區志 卷四、文山社大〈文山區的煤礦業〉、TVBS 2010-01-20
+
+出處：
+- https://www-ws.gov.taipei/001/Upload/public/MMO/WSDO/book4.pdf
+- https://www.wenshan.org.tw/index.php/%E9%97%9C%E6%96%BC%E6%88%91%E5%80%91/%E8%B3%87%E8%A8%8A%E6%8F%AD%E9%9C%B2/item/1035-2013-10-12-14-15-39
+- https://news.tvbs.com.tw/life/79837
+
+#### 23. 蟾蜍山煥民新村（1953 至今）
+
+位置：25.0095307, 121.5400442
+
+政府遷臺後，空軍把作戰司令部設在蟾蜍山，1953 年在山腳興建眷舍，初名克難甲、乙、丙、丁村，每戶只有三坪半，牆是竹子與稻草泥巴。1960 年代初以空軍將領徐煥昇、王衛民之名改稱煥民新村。沒分到房子的軍眷在山坡自力造屋，與農試所宿舍形成山城聚落。2016 年蟾蜍山登錄為臺北市文化景觀，是臺北保存最完整的空軍眷村。蟾蜍山至今棲居著橡實蝸牛、面天樹蛙、大冠鷲、臺灣藍鵲、白鼻心等物種。
+
+來源：苦勞網轉載 臺大城鄉所好蟾蜍工作室 2013、蟾蜍山煥民新村〈煥民新村〉、輔導會《榮光雙周刊》2023、蟾蜍山煥民新村〈自然生態〉
+
+出處：
+- https://www.coolloud.org.tw/node/76116
+- https://huanminvillage.taipei/lifetrace-term/1
+- https://epaper.vac.gov.tw/zh-tw/C/3109%7C22/32460/1/Publish.htm
+- https://huanminvillage.taipei/about/landscape
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/26685c2d9713458d.jpg（臺北市政府文化局，Attribution https://commons.wikimedia.org/wiki/File:Huan_Min_Village,_The_Toad_Hill_community_20220823.jpg）
+
+#### 24. 炭窯坑新益煤礦與萬盛溪南支流（1955–1980）
+
+位置：24.99518, 121.55835
+
+海巡署後方的山谷舊名「炭窯坑」，1904 年的臺灣堡圖已標出這個燒炭地名，1955 年在此開坑採煤（長興煤礦，後稱新益），1980 年停採。今天海巡署步道從仙跡岩稜線下到興隆路三段 304 巷，背風潮濕的坡地長滿筆筒樹、雙扇蕨，萬盛溪南支流就從這一帶山坡流下。
+
+來源：臺北市文山區志 卷四、何文賢〈文山十五分庄(興福庄)地景環境變遷研究〉文山社大 2013、臺北市大地工程處 新聞稿 2026
+
+出處：
+- https://www-ws.gov.taipei/001/Upload/public/MMO/WSDO/book4.pdf
+- https://wenshan.org.tw/wss/index.php/%E6%96%87%E5%8F%B2/item/865-2013-09-24-14-42-19
+- https://www.geo.gov.taipei/News_Content.aspx?n=23285747C0511EC4&s=43461B028EFDE910&sms=72544237BBE4C5F6
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/3b0382065ad15047.jpg（靖天子，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E8%90%AC%E7%9B%9B%E6%BA%AA%E5%8D%97%E6%94%AF%E6%B5%81.jpg）
+
+#### 25. 新店溪渾水抽水站（今公館水岸廣場）（1964 至今）
+
+位置：25.01095, 121.52871
+
+1908 年臺北水道在新店溪轉彎、水深又能自清的「虎穴口」設取水口，原取水口今已不存。1964 年用水增加，在這裡加蓋渾水抽水站；1977 年取水口移到上游青潭堰，抽水站停機，後來整修成公館水岸廣場。往下游到華中橋一段是臺北市野雁保護區，每年 9 月到隔年 3 月有小水鴨、琵嘴鴨停在河面。
+
+來源：臺北自來水園區〈公館水岸廣場〉、臺北自來水園區〈自來水博物館誕生〉、臺北市中正區誌
+
+出處：
+- https://waterpark.water.gov.taipei/cp.aspx?n=458F994D4BBBC779
+- https://waterpark.water.gov.taipei/cp.aspx?n=0873D01E4124E52B
+- https://www-ws.gov.taipei/Download.ashx?icon=.pdf&n=5Lit5q2j5Y2A6KqMLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvMzE4L3JlbGZpbGUvMC8xMzM5OC8xMWM3ZmViYS1iNGJlLTRlNTMtOTc3MS02ZmEzNmFjOGJiMDIucGRm
+
+#### 26. 蠶業改良場桑園（今師大公館校區）（1967 至今）
+
+位置：25.00823, 121.53577
+
+這片校地原屬省農林廳蠶業改良場，改良場的前身是 1910 年在公館設立的桑苗養成所。1967 年省府把約 8.5 公頃撥給師大，交接時大部分桑樹被移走，校地一度光禿；改良場本部 1977 年遷往苗栗。今天校區的人工濕地種了臺灣萍蓬草、印度莕菜等原生水生植物，鳳頭蒼鷹曾在池邊戲水。
+
+來源：師大圖書館〈師大七十特展〉、苗栗區農業改良場〈沿革〉、內政部建築研究所 綠廳舍專書、師大秘書室 2026-06-12
+
+出處：
+- https://www.lib.ntnu.edu.tw/exhibitions/ntnu70/gongguan01.jsp
+- https://www.mdares.gov.tw/ws.php?id=19
+- https://ws.moi.gov.tw/001/Upload/436/relfile/12414/218731/2fd23d7a-bb8e-440f-b0cb-6c5a29f352bd.pdf
+- https://pr.ntnu.edu.tw/ntnunews/index.php?id=24666&mode=data
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/2b981e2d1059a742.jpg（Foxy Who \(^∀^)/，CC BY-SA 3.0 https://commons.wikimedia.org/wiki/File:%E5%B8%AB%E5%A4%A7%E5%85%AC%E9%A4%A8%E5%88%86%E9%83%A8_Taiwan_Normal_University_-_panoramio.jpg）
+
+#### 27. 醉月湖（1972 至今）
+
+位置：25.02017, 121.53779
+
+醉月湖原是瑠公圳大安支線上的調節水塘「牛湳池」。1972 年校方把它整成一大二小三個池子，加了湖心亭，隔年才有「醉月湖」這個名字；瑠公圳改道後湖水只剩雨水與地下水，近年再從新店溪引水補充。湖邊大樹是黑冠麻鷺築巢的地方，紅冠水雞在湖心草叢繁殖。
+
+來源：臺大訪客中心〈醉月湖〉、臺大總務處 黑冠麻鷺族群調查 2010、臺大電子報 2016、臺大焦點新聞 2016
+
+出處：
+- https://visitorcenter.ntu.edu.tw/News_Content_n_74842_s_81631.html
+- http://homepage.ntu.edu.tw/~cpo/environ/malay2010report.pdf
+- https://host.cc.ntu.edu.tw/sec/schinfo/epaper/article.asp?num=1288&sn=14906
+- https://www.ntu.edu.tw/spotlight/2016/752_20160225.html
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/c1b43b64253e81bd.jpg（Allervous，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:Drunken_Moon_Lake_20240704.jpg）
+
+#### 28. 萬盛橋與小木梘（1975 至今）
+
+位置：25.00348, 121.54173
+
+瑠公圳經過萬盛庄時，要用「小木梘」跨過萬盛溪，這是清代方志記下的第二座木梘。興隆路一段 83 巷還留著一座 1975 年 7 月建的萬盛橋，橋下的溪已加蓋，只剩兩側綠化小巷；附近的萬盛公園比路面低，被認為是當年溪邊的河階地。
+
+來源：文山社大〈小木梘：當瑠公圳遇到萬盛溪〉2015
+
+出處：
+- https://www.wenshan.org.tw/index.php/%E6%95%99%E5%B8%AB%E5%B0%88%E5%8D%80/%E7%95%B6%E6%9C%9F%E6%95%99%E5%B8%AB%E9%A0%88%E7%9F%A5/item/291-2015-04-14-10-32-03
+
+照片：https://trailpaint.org/taiwan/taipei-gongguan-jingmei/spot-photos/3d0199b90dea9d08.jpg（靖天子，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:%E8%90%AC%E7%9B%9B%E6%A9%8B20190107.jpg）
+
+#### 29. 辛亥生態公園滯洪池（2017 至今）
+
+位置：25.00313, 121.55655
+
+興隆路一帶地勢低窪，萬盛溪北支流的山谷一下大雨就淹水。2017 年水利處完成全國第一座都會型地下滯洪池，大雨時把雨水暫存在地底，當年就讓這一帶從易淹水名單剔除；2020 年地面開闢為辛亥生態公園。
+
+來源：臺北市水利工程處〈文山區滯洪池〉、自由時報 2017-10-05
+
+出處：
+- https://heo.gov.taipei/cp.aspx?n=DB0A1EC73D985D80
+- https://news.ltn.com.tw/news/life/breakingnews/2214555
+<!-- gen:spots:end -->

@@ -1,0 +1,110 @@
+# 庫克船長太平洋三航
+
+> James Cook 約克郡農夫之子，皇家海軍升至上尉後率 HMS Endeavour 三度環行太平洋：1768-71 觀金星凌日 + 紐澳測繪、1772-75 首船過南極圈、1776-79 西北通道尋找。Cook 是現代精確航海的開創者（用 chronometer 測經度、強制食酸菜防壞血病）— 後死於夏威夷 Kealakekua 灣與原住民衝突。
+
+URL: https://trailpaint.org/stories/cook/
+Parent: https://trailpaint.org/stories/
+Language: zh-TW
+
+<!-- gen:spots:start -->
+## 景點列表 / Spots
+
+### 太平洋三航（AD 1768 — 1779 從 Plymouth 到 Kealakekua）
+
+#### 1. Plymouth（1768 第一航出發）
+
+位置：50.3755, -4.1427
+
+1768 年 8 月 26 日 Cook 39 歲率 HMS Endeavour 從 Plymouth 出航 — 表面任務是抵 Tahiti 觀測 1769 年 6 月 3 日金星凌日（皇家學會 + 海軍部聯合科學項目），暗中持密令尋找「Terra Australis Incognita」(未知南方大陸)。船員 94 人含博物學家 Joseph Banks（後皇家學會主席 41 年）+ 畫家 Sydney Parkinson + 瑞典植物學家 Daniel Solander。Cook 強制每日食 sauerkraut（德式酸菜，含維他命 C）防壞血病 — 整個三年航程僅 1 人因壞血病死，前所未見。
+
+學者引用：J. C. Beaglehole《The Life of Captain James Cook》(Stanford UP, 1974) 終極傳記章 5；Richard Hough《Captain James Cook》(Hodder, 1994)。
+
+出處：
+- Cook《Endeavour Journal》(1768-71)，Beaglehole 1955 編輯
+
+照片：https://trailpaint.org/stories/cook/spot-photos/27e9a8bcbc021dae.jpg（Partonez，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:Swans_Swimming_in_Sutton_Harbour,_Plymouth.jpg）
+
+#### 2. Tahiti（1769 金星凌日）
+
+位置：-17.6797, -149.4068
+
+1769 年 4 月 13 日抵 Tahiti，建立「Fort Venus」(金星堡壘)。6 月 3 日 Cook、Green、Solander 三隊分組同步觀測金星凌日（測太陽系尺度的 18 世紀關鍵實驗）— 但因「黑滴效應」(black drop) 視覺現象使精確測量受限。Banks 詳細記載 Tahitian 文化、tattoo 詞源（tatau 即源自 Tahitian）、breadfruit 引入西方視野。離開時帶上 Tahitian 祭司 Tupaia — 他繪製含 74 個太平洋島嶼的航海圖（最早 Polynesian 航海地理一手資料），對後續紐西蘭抵達極關鍵。
+
+學者引用：Beaglehole 同上書章 7；Anne Salmond《The Trial of the Cannibal Dog》(Yale UP, 2003) 詳論 Tupaia 角色。
+
+出處：
+- Cook 1769-06-03 entry; Banks《Endeavour Journal》
+
+照片：https://trailpaint.org/stories/cook/spot-photos/78b3bceec8b74327.jpg（John Cleveley the Younger
+
+https://en.wikipedia.org/wiki/John_Cleveley_the_Younger，Public domain https://commons.wikimedia.org/wiki/File:Captain_James_Cook_in_Matavai_Bay,_Tahiti;_by_John_Cleveley_the_Younger.jpg）
+
+#### 3. New Zealand（1769-70 環島測繪）
+
+位置：-41.2865, 174.7762
+
+1769 年 10 月 6 日抵紐西蘭東岸 Poverty Bay（今 Gisborne）— 1642 Tasman 後第二位歐洲人抵達。後 6 個月環繞紐西蘭兩島測繪 3,860 公里海岸線，誤差 < 5 公里 — Cook 製圖學里程碑。1769 年 10 月 9 日首遇 Māori 的衝突誤傷致死 9 人。Tupaia 翻譯（Tahitian 與 Māori 語言相近）使後續接觸較和平。「Endeavour Strait」(庫克海峽) 確認南北兩島不相連 — 否定 Tasman 推測的「Staten Land 大陸」。
+
+學者引用：Beaglehole 同上書章 8；Salmond 同上書詳論 Cook 與 Māori 第一次接觸；Vincent O'Malley《The New Zealand Wars》(Bridget Williams, 2019) 整理當代 Māori 視角重審 Cook 抵達意義。
+
+出處：
+- Cook 1769-10-08 first landing; 1770-03-31 departure
+
+照片：https://trailpaint.org/stories/cook/spot-photos/144539226768450b.jpg（Phillip Capper from Wellington, New Zealand，CC BY 2.0 https://commons.wikimedia.org/wiki/File:Gisborne_arrival,_Poverty_Bay,_New_Zealand,_13th._Dec_2010_-_Flickr_-_PhillipC.jpg）
+
+#### 4. Botany Bay（1770 澳洲東岸）
+
+位置：-33.9926, 151.2295
+
+1770 年 4 月 29 日 Cook 在 Botany Bay 首登澳洲東岸 — 命名因 Banks 與 Solander 在此採集大量新物種植物。Cook 沿東岸北上測繪 3,000 公里至 Cape York，於 Possession Island 1770-08-22 宣告整個東岸為英王屬地，命名「New South Wales」。但與 Eora 原住民幾無正式接觸（多次被警告性投擲長矛驅離）。Cook 寫「他們生活簡單但快樂；對歐洲衣物毫無興趣；不窺探我們的科學儀器；安於現狀」— 1788 年第一艦隊在此 Sydney Cove 建殖民地。
+
+爭議：「terra nullius」(無主之地) 法律虛構 — Cook 1770 主張 vs 原住民既有 50,000 年文明；1992 Mabo case 澳洲高院推翻 terra nullius 確立原住民地權。Cook Day 紀念在當代澳洲含義轉為複雜。
+
+學者引用：Beaglehole 同上書章 9；Henry Reynolds《The Other Side of the Frontier》(UNSW Press, 1981) 經典原住民視角史學；Mark McKenna《Looking for Blackfellas' Point》(UNSW Press, 2002)。
+
+出處：
+- Cook 1770-04-29 entry
+
+照片：https://trailpaint.org/stories/cook/spot-photos/eac3da1f237a8301.jpg（John Alexander Gilfillan，Public domain https://commons.wikimedia.org/wiki/File:Captain_Cook_takes_formal_possession_of_New_South_Wales_1770.jpg）
+
+#### 5. Antarctic Circle（1773 南極圈首航）
+
+位置：-66.5, 0
+
+1772-1775 第二航 HMS Resolution + Adventure。1773 年 1 月 17 日 Cook 駕 Resolution 首船穿越南極圈 — 「我們已抵達 71° 10' S 緯度，比任何人去過的更南」(1774-01-30 entry)。三度進出南極圈，繞南極大陸近一周，徹底否定「Terra Australis 富庶南方大陸」傳說 — Cook 結論「即便存在，也是無人可居的冰封荒地」。同航附帶發現 South Georgia + South Sandwich Islands。本航全程 1,100 天無一人壞血病死亡 — Cook 獲皇家學會 Copley 獎章。
+
+學者引用：Beaglehole 同上書章 12；Glyn Williams《The Death of Captain Cook》(Profile, 2008) 章 2 整理第二航科學意義。
+
+出處：
+- Cook《Resolution Journal》1773-01-17 entry
+
+照片：https://trailpaint.org/stories/cook/spot-photos/cb206be70ccfd804.jpg（Godot13，CC BY-SA 4.0 https://commons.wikimedia.org/wiki/File:South_Shetland-2016-Southern_Ocean_(off_Elephant_Island)%E2%80%93Iceberg_02.jpg）
+
+#### 6. Hawaii（1778 首位歐人抵達）
+
+位置：19.6398, -155.9968
+
+1776-1779 第三航尋「西北通道」(連接大西洋與太平洋的北冰洋海路)。1778 年 1 月 18 日 Cook 抵 Kauai 島成為首位記載抵 Hawaii 群島的歐洲人，命名為「Sandwich Islands」紀念第四代 Sandwich 伯爵（海軍部長）。Cook 1778 年北上至 Bering Strait 測繪阿拉斯加海岸，遭冰阻折返。冬季回 Hawaii 大島 Kealakekua 灣 — 適逢 Hawaiian 歲時祭 Makahiki，Cook 被島民誤認為神 Lono 化身（部分學者爭議此說，見 Marshall Sahlins vs Gananath Obeyesekere 1990s 學術論戰）。
+
+學者引用：Beaglehole 同上書章 17；Marshall Sahlins《How "Natives" Think: About Captain Cook, For Example》(U of Chicago, 1995) vs Gananath Obeyesekere《The Apotheosis of Captain Cook》(Princeton UP, 1992)。
+
+出處：
+- Cook《Resolution Journal》1778-01-18 entry
+
+照片：https://trailpaint.org/stories/cook/spot-photos/5c253cf0e037bb0c.jpg（Robert Linsdell from St. Andrews, Canada，CC BY 2.0 https://commons.wikimedia.org/wiki/File:Waimea_State_Recreation_Pier,_Waimea_Bay,_Waimea_(502787)_(16790820956).jpg）
+
+#### 7. Kealakekua Bay（1779 Cook 戰死）
+
+位置：19.4761, -155.9264
+
+1779 年 2 月 4 日 Cook 離 Kealakekua Bay 北上續尋西北通道；6 日後 Resolution 船桅損壞被迫返航 — 此次返回適逢 Makahiki 祭結束、Cook 不再被視為 Lono 神。2 月 14 日早晨小艇被島民偷走，Cook 帶 9 名陸戰隊登陸打算挾持酋長 Kalaniʻōpuʻu 換船。海灘衝突中 Cook 被棍棒擊倒、長刀刺死 — 屍體被島民按 Hawaiian 王族禮節分割（部分骨頭視為神聖物保留 + 心臟祭禮）。船員後取回部分遺骨海葬於 Kealakekua 灣。今 Cook Monument（白色方尖碑）立於海灘，技術上仍是英國領土（1877 夏威夷王室贈地）。
+
+爭議：Cook 死亡原因 — 傳統英國敘事「英雄遇害」vs 1990s 後 Hawaiian 視角「侵略者被本地慣例正當處決」（Cook 違反 kapu 神聖禁忌進入聖區）。
+
+學者引用：Beaglehole 同上書終章；Williams 同上書章 5-6；Sahlins 同上書整理 Hawaiian 視角；Tony Horwitz《Blue Latitudes》(Henry Holt, 2002) 通俗讀本含現代造訪 Cook 三航地點。
+
+出處：
+- William Bligh《Notes on Cook's Death》(1779-02-14)
+
+照片：https://trailpaint.org/stories/cook/spot-photos/a027814938acea79.jpg（Robert Linsdell from St. Andrews, Canada，CC BY 2.0 https://commons.wikimedia.org/wiki/File:Captain_Cook_Monument._Kealakekua_Bay,_Captain_Cook_(504561)_(24018805535).jpg）
+<!-- gen:spots:end -->
